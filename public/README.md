@@ -1,4 +1,4 @@
-# Šeptanda 5.0 — denní vydání 5.0.9
+# Šeptanda 5.0 — denní vydání 5.0.11
 
 Úvod: „Tichá pošta. Poznáš, co bylo na začátku?“ Prázdná historie už není vidět. Vpravo je dnešní žebříček a přihlášení hráčským účtem s přezdívkou a heslem.
 
@@ -34,7 +34,7 @@ Hodnocení běží pouze v prohlížeči, **nejde o AI**. Slovní shoda tvoří 
 1. Rozbal ZIP.
 2. V Netlify otevři **existující projekt**, jehož adresu chceš zachovat, a sekci **Deploys**.
 3. Do oblasti pro ruční nahrání přetáhni rozbalenou složku. Přímo v ní musí ležet `index.html` a `_headers`.
-4. Po publikování obnov web. Patička ukazuje **5.0.9**. Pokud vidíš starou verzi, v Safari použij Option + Command + R.
+4. Po publikování obnov web. Patička ukazuje **5.0.11**. Pokud vidíš starou verzi, v Safari použij Option + Command + R.
 
 Pro původní web vyber projekt s adresou [fascinating-babsousa-5b2ee7.netlify.app](https://fascinating-babsousa-5b2ee7.netlify.app). Obecná stránka Netlify Drop může založit nový projekt s jinou adresou, proto pro aktualizaci použij Deploys konkrétního projektu. Na pozdějším snímku byla adresa dazzling-kleicha-efa517.netlify.app; zvol projekt, který chceš skutečně aktualizovat. Automaticky se nic nenasazuje.
 
@@ -63,10 +63,20 @@ Nadpisy a značka používají Barlow Condensed, delší texty, výroky a ovlád
 
 WOFF2 písma včetně českých znaků jsou přímo v `index.html`; pro hraní nejsou potřeba externí fontové služby. Licence a autorství jsou v přehledu zdrojů ve hře i v souboru `FONTY-LICENCE.txt` (u kompletního projektu ve složce `public`). Tento soubor je nově součástí ZIPu.
 
-## Industriál a archiv v 5.0.9
+## Industriál a archiv v 5.0.10
 
 Vzhled spojuje kartotéční list s industriální typografií: teplý papírový podklad s jemnou sítí, tmavý tisk, ostré rámečky a střídmé rezavě červené akcenty. Dnešní datum v razítku vychází ze stejného českého dne jako herní sada. Záložka na herní kartě otevírá skutečný seznam dnešních výroků. Čísla postupu mají podobu rejstříkových polí, vstup pro tip připomíná linkovaný formulář a boční přehled i dialogy používají stejné linky a sazbu.
 
 Odhalení autora má podobu evidenční karty s černobílým zobrazením existujícího portrétu. Původní zdroje a licence zůstávají dostupné. Na telefonu se vedlejší panely skládají pod hru; razítko se schová, aby zůstala priorita zprávě a tipu. Všechny nové detaily tvoří přímo HTML/CSS, bez stahování obrázků zvenku.
 
 Jde o změnu vzhledu. Herní pravidla, tolerance tipů, body, nápovědy, účty, dnešní pořadí a místní historie se nemění. Uložený postup zůstává zachovaný. Pro tento vzhled nahraj opět celý aktuální balíček včetně `_headers`; změnilo se i vložené zobrazení data, proto jsou aktualizované otisky skriptů.
+
+
+## Účty v 5.0.10
+
+V hlavičce jsou viditelné vstupy Vytvořit účet a Přihlásit se. Nová registrace vyžaduje neveřejný e-mail. Stávající přihlášení přezdívkou a heslem zůstává; e-mail lze doplnit v Můj účet po potvrzení heslem. Adresy se neposílají do veřejného žebříčku. Zatím se neodesílají potvrzovací zprávy ani obnova hesla. Tato funkce vyžaduje odpovídající serverovou část 5.0.10 z kompletního projektu, nejen statické HTML.
+
+
+## Body po přihlášení v 5.0.11
+
+Vlastní počet bodů a jeho přehled se zobrazují až po potvrzeném přihlášení nebo registraci. Při načítání účtu jsou skryté už v HTML; po odhlášení zmizí a otevřený přehled se zavře. Host může dál hrát. Dosavadní body a historie zůstávají uložené a pravidla odměn i cen nápověd se nemění. Veřejné pořadí a informace o ceně nápovědy či odměně popisují pravidla hry; osobní zůstatek host nevidí.

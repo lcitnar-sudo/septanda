@@ -1,0 +1,23 @@
+ŠEPTANDA 5.0.11 — AKTUALIZACE PŘES GITHUB
+
+1. Rozbal tento ZIP a otevři rozbalenou složku.
+2. V repozitáři lcitnar-sudo/septanda klikni Add file → Upload files.
+3. Přetáhni celý OBSAH této složky do GitHubu a potvrď Commit changes.
+   Nahoře musí být netlify.toml, package.json a service.mjs,
+   vedle nich složky public a netlify. Struktura složek zůstává stejná.
+4. Netlify už je propojené a spustí nové nasazení. Počkej na Published.
+5. Obnov svůj web. Verze v patičce má být 5.0.11.
+
+CO JE NOVÉ
+V horní liště je Vytvořit účet a Přihlásit se. Nová registrace vyžaduje
+neveřejný e-mail. Přihlášení zůstává přes přezdívku a heslo.
+Stávající účty dál fungují; svůj e-mail doplníš přes tlačítko s přezdívkou
+nahoře (Můj účet / Doplň e-mail). Uložení potvrdíš současným heslem.
+Body a účty se touto aktualizací nemažou.
+
+E-mail zatím není ověřovaný potvrzovací zprávou a obnova hesla není zapojená.
+
+Nahrávej celý projekt přes GitHub, aby se aktualizovala i serverová část.
+Tento ZIP neobsahuje soukromé účty ani data z místního náhledu.
+
+Vlastní počet bodů se zobrazí až po přihlášení a po odhlášení se opět skryje.

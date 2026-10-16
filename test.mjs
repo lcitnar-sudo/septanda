@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import {mkdtemp,readFile,readdir,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import path from 'node:path';
@@ -19,10 +20,14 @@ const win=(body,n)=>{const r=body.rounds[n];r.status='won';r.answer=puzzles.find
 try {
   eq((await call(blank())).status,401,'anonymous cannot sync');
   eq((await call(null)).data.entries,[],'no invented players');
-  const a=await call({action:'register',name:'První hráč',password:'test password A'});
-  eq(a.status,200,'account created');ok(a.cookie,'session cookie');ok(a.headers.get('set-cookie').includes('HttpOnly; SameSite=Lax'),'HttpOnly');ok(a.headers.get('set-cookie').includes('Secure'),'secure on https');
-  const b=await call({action:'register',name:'Druhý hráč',password:'test password B'});eq(b.status,200);
-  eq((await call({action:'register',name:'PRVNÍ HRÁČ',password:'duplicate password'})).status,409,'case-insensitive duplicate account');
+  for(const email of [undefined,'neni-email','a@-domena.cz','a..b@example.cz','x'.repeat(65)+'@example.cz']) {
+    eq((await call({action:'register',name:'Neplatný email',email,password:'test password X'})).status,400,'registration requires valid email');
+  }
+  eq((await call({action:'update-email',email:'novy@example.cz',password:'test password A'})).status,401,'anonymous cannot edit email');
+  const a=await call({action:'register',name:'První hráč',email:' Prvni@Example.CZ ',password:'test password A'});
+  eq(a.status,200,'account created');eq(a.data.account.email,'prvni@example.cz','email normalized and returned only to owner');ok(a.cookie,'session cookie');ok(a.headers.get('set-cookie').includes('HttpOnly; SameSite=Lax'),'HttpOnly');ok(a.headers.get('set-cookie').includes('Secure'),'secure on https');
+  const b=await call({action:'register',name:'Druhý hráč',email:'druhy@example.cz',password:'test password B'});eq(b.status,200);
+  eq((await call({action:'register',name:'PRVNÍ HRÁČ',email:'duplicate@example.cz',password:'duplicate password'})).status,409,'case-insensitive duplicate account');
   eq((await call({action:'login',name:'První hráč',password:'wrong password'})).status,401);
   const secondDevice=await call({action:'login',name:'První hráč',password:'test password A'});eq(secondDevice.data.account.id,a.data.account.id,'same account on another device');
   const bodyA=blank();win(bodyA,0);bodyA.rounds[0].hint=true;bodyA.points=999999999;
@@ -40,14 +45,30 @@ try {
   const wrong=blank();wrong.rounds[0].status='won';wrong.rounds[0].answer='neznámý nesmysl';eq((await call(wrong,b.cookie)).status,400,'winning answer verified');
   const past=blank();past.date='2026-10-14';eq((await call(past,b.cookie)).status,409,'server owns day');
   eq((await call(blank(),b.cookie,'https://evil.example')).status,403,'cross origin writes rejected');
-  const c=await call({action:'register',name:'Třetí hráč',password:'test password C'});
+  const c=await call({action:'register',name:'Třetí hráč',email:'treti@example.cz',password:'test password C'});
   const tie=blank();win(tie,0);win(tie,1);
   result=await call(tie,c.cookie);eq(result.data.entries.map(e=>e.rank),[1,1,3],'shared rank for equal points');
   const a4=structuredClone(bodyA);win(a4,3);a4.rounds[2].status='revealed';delete a4.rounds[2].answer;
   const aHint=structuredClone(bodyA);aHint.rounds[2].status='revealed';delete aHint.rounds[2].answer;aHint.rounds[3].hint=true;
   await Promise.all([call(a4,a.cookie),call(aHint,a.cookie)]);
   eq((await call(null,a.cookie)).data.me.points,500,'concurrent updates retain award and hint');
-  const publicJSON=JSON.stringify((await call(null)).data);ok(!/password|hash|salt|session|answer/.test(publicJSON),'public output contains no credentials or answers');
+  const publicJSON=JSON.stringify((await call(null)).data);ok(!/password|hash|salt|session|answer|email|example.cz/.test(publicJSON),'public output contains no credentials, email or answers');
+  eq((await call({action:'update-email',email:'nove@example.cz',password:'incorrect password'},a.cookie)).status,401,'email change requires correct password');
+  eq((await call(null,a.cookie)).data.account.email,'prvni@example.cz','wrong password leaves email untouched');
+  eq((await call({action:'update-email',email:'wrong',password:'test password A'},a.cookie)).status,400,'profile validates email');
+  const changed=await call({action:'update-email',email:'Nove@Example.CZ',password:'test password A'},a.cookie);
+  eq(changed.data.account.id,a.data.account.id,'email edit keeps existing account');
+  eq(changed.data.me.points,500,'email edit preserves score');
+  eq((await call(null,secondDevice.cookie)).data.account.email,'nove@example.cz','existing session on another device reads new email');
+  const legacyKey='accounts/'+createHash('sha256').update('druhý hráč').digest('hex');
+  const legacyAccount=await store.get(legacyKey);delete legacyAccount.email;await store.setJSON(legacyKey,legacyAccount);
+  eq((await call(null,b.cookie)).data.account.email,null,'old account and session remain usable without email');
+  const legacyLogin=await call({action:'login',name:'Druhý hráč',password:'test password B'});
+  eq(legacyLogin.data.account.id,b.data.account.id,'legacy nickname login unchanged');
+  const completed=await call({action:'update-email',email:'doplneny@example.cz',password:'test password B'},b.cookie);
+  eq(completed.data.account.email,'doplneny@example.cz','legacy account can add email');
+  eq(completed.data.me.points,400,'legacy score preserved');
+  ok(!JSON.stringify((await call(null,a.cookie)).data.entries).includes('email'),'other players never receive email');
   const disk=(await Promise.all((await readdir(folder)).map(f=>readFile(path.join(folder,f),'utf8')))).join('');ok(!disk.includes('test password A'),'password not stored in plaintext');
   const restarted=createHandler(fileStore(folder),{now:()=>time});
   const persistent=await restarted(new Request('https://example.netlify.app/.netlify/functions/leaderboard',{headers:{Cookie:secondDevice.cookie}}));eq((await persistent.json()).me.points,500,'persistent after server restart');
@@ -56,5 +77,5 @@ try {
   ok((await call(null,secondDevice.cookie)).data.account,'other device remains signed in');
   time=new Date('2026-10-16T12:00:00Z');eq((await call(null,b.cookie)).data.entries,[],'new day board resets');
   time=new Date('2026-12-01T12:00:00Z');eq((await call(null,b.cookie)).data.account,null,'session expiration');
-  console.log(JSON.stringify({checks,result:'all passed',accounts:'register, login, persistent session, logout',ranking:'server scoring, ties, five rounds, concurrency, rollover'},null,2));
+  console.log(JSON.stringify({checks,result:'all passed',accounts:'required email, private email, legacy accounts, profile password check, persistent session, logout',ranking:'server scoring, ties, five rounds, concurrency, rollover'},null,2));
 }finally{await rm(folder,{recursive:true,force:true});}
