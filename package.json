@@ -1,0 +1,16 @@
+{
+  "name": "septanda-leaderboard",
+  "private": true,
+  "type": "module",
+  "version": "5.0.9",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test.mjs && node test-scoring.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.4"
+  }
+}
