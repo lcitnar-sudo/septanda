@@ -1,4 +1,5 @@
 [build]
+  command = "npm run build"
   publish = "public"
   functions = "netlify/functions"
 
@@ -7,3 +8,9 @@
 
 [functions]
   node_bundler = "esbuild"
+
+[context.deploy-preview.environment]
+  SEPTANDA_STORE = "septanda-players-preview-v1"
+
+[context.branch-deploy.environment]
+  SEPTANDA_STORE = "septanda-players-branch-v1"

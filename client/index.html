@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8e6dc">
+  <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
+  <title>Šeptanda — Pět výroků na každý den</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=5.0.0">
+  <script defer src="puzzles.js?v=5.0.0"></script>
+  <script defer src="engine.js?v=5.0.0"></script>
+  <script defer src="daily.js?v=5.0.0"></script>
+  <script defer src="app.js?v=5.0.0"></script>
+  <script defer src="cloud.js"></script>
+  <script defer src="leaderboard.js?v=5.0.0"></script>
+  <script defer src="community.js"></script>
+  <script defer src="mascot-assets.js"></script>
+  <script defer src="mascot.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#guess">Přeskočit ke hře</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="./" aria-label="Šeptanda, úvod">šeptanda<span class="wordmark-dot">.</span></a>
+      <span class="edition">ARCHIV SLOV &nbsp; / &nbsp; VYDÁNÍ 5.0</span>
+      <nav aria-label="Hlavní nabídka">
+        <button class="text-button" data-open="rules-dialog">Jak se hraje</button>
+        <button class="text-button" data-open="collection-dialog">Dnešní sada <span class="nav-count">05</span></button>
+        <button class="balance-button" id="balance-control" data-open="stats-dialog" aria-label="Body a přehled hry" hidden><span id="balance"></span> <span>bodů</span></button>
+      </nav>
+      <div class="header-account" aria-label="Hráčský účet">
+        <button class="text-button header-login" id="header-login" type="button">Přihlásit se</button>
+        <button class="account-button" id="header-register" type="button">Uložit postup <span aria-hidden="true">→</span></button>
+        <button class="account-button account-profile" id="header-profile" type="button" hidden><span id="header-player-name"></span><small id="header-account-label">Můj účet</small></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="introduction intro-instructions" aria-labelledby="intro-title">
+        <div>
+          <h1 id="intro-title">Tichá pošta.<br><em>Poznáš, co bylo na začátku?</em></h1>
+        </div>
+        <div class="edition-slip" aria-label="Dnešní vydání"><span>DNEŠNÍ VYDÁNÍ</span><time id="edition-date"></time><span>05 VÝROKŮ</span></div>
+      </section>
+
+      <div id="storage-warning" class="notice" role="status" hidden>Prohlížeč nepovoluje ukládání. Hra funguje, ale po zavření stránky se může pokrok ztratit.</div>
+
+      <div class="game-layout">
+        <div class="main-column">
+          <section class="puzzle-sheet" aria-labelledby="puzzle-heading">
+            <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category">HISTORICKÝ VÝROK</p><h2 id="puzzle-heading">Co zaznělo na začátku?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
+            <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 5</span><div class="route-line" id="daily-route"></div></nav>
+            <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow">ZACHYCENÁ ZPRÁVA</p><blockquote id="distorted-message">Dorazil jsem na místo, trochu se rozhlédl a už mi všichni gratulovali.</blockquote></div>
+            <form id="guess-form" novalidate>
+              <div class="input-label-row"><label for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
+              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tady začíná cesta zpátky ke slovům…" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
+              <div class="form-bottom"><p id="input-help">Na čárkách ani diakritice nezáleží.<br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button></div>
+              <p id="form-message" class="form-message" role="status"></p>
+            </form>
+          </section>
+
+          <section id="result-panel" class="result-panel" aria-labelledby="result-title" hidden></section>
+          <section id="reveal-panel" class="reveal-panel" aria-labelledby="reveal-title" hidden></section>
+
+          <section class="history-section" id="history-section" aria-labelledby="history-title" hidden>
+            <div class="section-heading"><h2 id="history-title">Cesta tvých tipů</h2><span id="attempt-count" class="small muted">0 pokusů</span></div>
+            <div id="history"></div>
+          </section>
+        </div>
+
+        <aside class="side-column" aria-label="Nápovědy a postup">
+          <section id="mascot-guide" class="mascot-guide" aria-label="Šeptík, průvodce hrou" hidden><img id="mascot-image" alt="" width="192" height="192"><div><p class="eyebrow">ŠEPTÍK</p><p id="mascot-copy">Prozkoumáme, co se cestou změnilo.</p></div></section>
+          <section class="hint-section" aria-labelledby="hints-title"><h2 id="hints-title">Nech si napovědět.</h2><p class="side-intro">Občas stačí malá stopa,<br>aby všechno zapadlo.</p>
+            <button class="hint-button" id="hint-clue" data-hint="clue"><span><strong>Nápověda</strong><small>Jemné vodítko k přemýšlení.</small></span><span class="price">50 <small>bodů</small></span></button>
+            <div id="hint-clue-content" class="hint-content" hidden></div>
+            <p id="hint-status" class="hint-status" aria-live="polite">Jedna nápověda ke každé hádance.</p>
+          </section>
+          <section class="leaderboard-section" aria-labelledby="leaderboard-title"><div class="progress-header"><h2 id="leaderboard-title">Žebříček</h2><button class="text-button leaderboard-refresh" id="leaderboard-refresh" aria-label="Obnovit žebříček">Obnovit</button></div><p class="leaderboard-period">Dnes <span id="leaderboard-date"></span></p><div id="leaderboard-preview" aria-live="polite"><p class="leaderboard-note">Načítání pořadí…</p></div><div class="leaderboard-actions"><button class="text-button underlined" id="leaderboard-join">Přihlásit se</button><button class="text-button underlined" data-open="leaderboard-dialog">Celé pořadí <span aria-hidden="true">→</span></button></div><p class="leaderboard-note" id="leaderboard-status" role="status"></p></section>
+          <section class="goal-note"><div class="goal-top"><span class="eyebrow">TAK BLÍZKO TO STAČÍ</span><strong>97<span>%</span></strong></div><p>Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
+          <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 5</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Pět výroků na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
+          <div class="local-note"><span class="local-indicator" aria-hidden="true"></span><p>Vyhodnocováno v prohlížeči.<br><button class="text-button underlined" data-open="scoring-dialog">Jak číst místní odhad</button></p></div>
+          <button class="give-up text-button" id="give-up">Odhalit výrok bez odměny</button>
+        </aside>
+      </div>
+    </main>
+
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.0 · Lokální vydání</span></div></footer>
+  </div>
+
+  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky se vybírají z připravené sbírky a mohou se v dalších dnech opakovat.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
+
+  <dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><p class="eyebrow">PĚT VÝROKŮ NA DEN</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="collection-title">Dnešní sada.</h2><p class="muted" id="collection-date"></p><div id="collection-list"></div><p class="small muted">Další výrok se otevře po rozluštění nebo odhalení předchozího. Nová pětice přijde o půlnoci podle českého času.</p></dialog>
+
+  <dialog id="scoring-dialog" aria-labelledby="scoring-title"><div class="dialog-head"><p class="eyebrow">O PROCENTECH OTEVŘENĚ</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="scoring-title">Dvě stopy. Místní odhad.</h2><p><strong>Slovní shoda (60 %)</strong> porovnává slova a podobu věty se známými variantami. Ignoruje velikost písmen, interpunkci i diakritiku a částečně zohledňuje překlepy.</p><p><strong>Významová shoda (40 %)</strong> je pravidlový odhad podle připravených motivů, synonym, parafrází a několika rozporů. Ve hře neběží AI ani jazykový model.</p><p><strong>Od 97 % vyhráváš.</strong> Přesné známé varianty dostávají 100 %. Poznané původní znění s drobnými překlepy, vynechanou spojkou nebo ojedinělou odchylkou získá 97 %. Správný úryvek uznáme i s pokračováním básně navíc. Pouhá parafráze zůstává nejvýše na 96 %.</p><p>Procenta nejsou pravděpodobnost ani objektivní měření porozumění. Neobvyklou správnou formulaci může hra podhodnotit; ironii, slovosled a negace rozpozná jen omezeně. Při pochybnostech zkus přímé známé znění.</p><p class="dialog-note">Bez přihlášení se tipy nikam neposílají. Při připojeném účtu Supabase se do soukromého účtu ukládá historie tipů, rozepsané odpovědi, nápovědy a výsledky pro obnovení na dalším zařízení. Veřejný žebříček obsahuje pouze přezdívku a herní skóre. Starší typ účtu ukládá jen ověřené denní skóre. Pro plné AI hodnocení by byla potřeba samostatná serverová služba a ověření kvality na českých odpovědích.</p></dialog>
+
+  <dialog id="stats-dialog" aria-labelledby="stats-title"><div class="dialog-head"><p class="eyebrow">TVOJE CESTA</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="stats-title">Slova se počítají.</h2><div id="stats-content"></div><p class="dialog-note">Body jsou herní a za nápovědy se nic neplatí skutečnými penězi. Bez účtu zůstává hra v tomto prohlížeči. U připojeného účtu Supabase se postup synchronizuje mezi zařízeními. Při výpadku spojení můžeš hrát dál; stav spojení najdeš v účtu. Starší typ účtu ukládá jen denní skóre do žebříčku.</p></dialog>
+
+  <dialog id="sources-dialog" aria-labelledby="sources-title"><div class="dialog-head"><p class="eyebrow">SLOVA NĚKOMU PATŘILA</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="sources-title">Původ uvádíme poctivě.</h2><p>Historické výroky opíráme o dochované prameny a rozlišujeme připsání od doslovného záznamu. U přísloví bez doloženého autora uvádíme lidový původ.</p><p>Verše a knižní úryvky pocházejí z veřejně volných děl uvedených u konkrétní hádanky. Krátká česká znění cizojazyčných výroků jsou vlastní převody. Překroucené zprávy, nápovědy a výklady byly připraveny pro tuto hru.</p><p>U každého odhaleného výroku najdeš autora či původ, kontext, význam i odkaz na zdroj. Odkazy vedou na externí weby.</p><p><a class="underlined" href="ZDROJE.md" target="_blank" rel="noopener">Úplný přehled pramenů</a></p><details class="source-details"><summary>Písma a licence</summary><p>Barlow a Barlow Condensed · The Barlow Project Authors. SIL Open Font License 1.1.</p><pre class="font-license">Barlow / Barlow Condensed
+Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+Source: https://github.com/google/fonts/tree/main/ofl/barlow
+Source: https://github.com/google/fonts/tree/main/ofl/barlowcondensed
+
+Copyright 2017 The Barlow Project Authors (https://github.com/jpt/barlow)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).
+
+&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+</pre></details><p class="dialog-note">Pět předání je součástí autorského herního obsahu. Nejde o výstup skutečného experimentu s hráči ani o živé generování AI.</p></dialog>
+
+  <dialog id="leaderboard-dialog" aria-labelledby="leaderboard-full-title"><div class="dialog-head"><p class="eyebrow">DNEŠNÍ PĚTICE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="leaderboard-full-title">Žebříček hráčů.</h2><p class="muted">Body za dnešní výroky: +200 za rozluštění, −50 za nápovědu. Při shodě bodů se místo sdílí.</p><div id="leaderboard-table"></div><p class="dialog-note">Celkové body na nápovědy ti zůstávají. Tady porovnáváme dnešní přírůstek.</p></dialog>
+
+  <dialog id="player-dialog" aria-labelledby="player-title">
+    <div class="dialog-head"><p class="eyebrow">ULOŽIT A POKRAČOVAT</p><button class="close-button" data-close aria-label="Zavřít">×</button></div>
+    <h2 id="player-title">Přihlas se do hry.</h2>
+    <div class="account-tabs" role="group" aria-label="Přihlášení nebo nový účet"><button type="button" id="mode-login" aria-pressed="true">Přihlášení</button><button type="button" id="mode-register" aria-pressed="false">Nový účet</button></div>
+    <form id="player-form">
+      <div id="player-name-field"><label for="player-name" class="player-label">Přezdívka</label><input id="player-name" name="username" type="text" minlength="2" maxlength="24" autocomplete="nickname" placeholder="Tvoje jméno v žebříčku" required></div>
+      <div id="registration-email" hidden><label for="player-email" class="player-label">E-mail</label><input id="player-email" name="email" type="email" maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="email-help" disabled><p class="field-note" id="email-help">E-mail je neveřejný. V žebříčku se objeví jen přezdívka.</p></div>
+      <div id="player-password-field"><label for="player-password" class="player-label">Heslo</label><input id="player-password" name="password" type="password" minlength="10" maxlength="128" autocomplete="current-password" required aria-describedby="password-help player-message"><p class="field-note" id="password-help">Alespoň 10 znaků.</p></div>
+      <label class="check-field" id="registration-consent" hidden><input id="marketing-opt-in" name="marketing" type="checkbox"><span id="marketing-consent-text">Chci e-mailem dostávat novinky o Šeptandě, nových hrách a tematických vydáních. Souhlas mohu kdykoli odvolat v nastavení účtu.</span></label>
+      <p class="dialog-note" id="player-help">Účet je dobrovolný. Hrát můžeš i bez něj.</p><p id="player-message" class="form-message" role="status"></p>
+      <button class="primary-button" type="submit" id="player-submit">Přihlásit se <span aria-hidden="true">→</span></button><button type="button" class="text-button underlined recovery-link" id="player-forgot" hidden>Zapomenuté heslo</button>
+    </form>
+    <p class="field-note"><button class="text-button underlined" data-open="privacy-dialog">Jak ukládáme údaje</button> · Registrace neznamená souhlas s novinkami.</p>
+  </dialog>
+  <dialog id="profile-dialog" aria-labelledby="profile-title">
+    <div class="dialog-head"><p class="eyebrow">TVŮJ HRÁČSKÝ ÚČET</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="profile-title">Můj účet.</h2><p class="profile-name" id="profile-name"></p><p id="cloud-status" class="field-note" role="status"></p>
+    <form id="profile-form"><div id="profile-name-edit" hidden><label for="profile-display-name" class="player-label">Přezdívka v žebříčku</label><input id="profile-display-name" type="text" minlength="2" maxlength="24" autocomplete="nickname"></div><label for="profile-email" class="player-label">E-mail</label><input id="profile-email" name="email" type="email" maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="profile-email-help" required><p class="field-note" id="profile-email-help">E-mail je neveřejný. Přihlašuješ se dál přezdívkou.</p><div id="profile-password-field"><label for="profile-password" class="player-label">Současné heslo</label><input id="profile-password" name="password" type="password" minlength="10" maxlength="128" autocomplete="current-password" required aria-describedby="profile-password-help profile-message"><p class="field-note" id="profile-password-help">Heslem potvrdíš uložení e-mailu.</p></div><p id="profile-message" class="form-message" role="status"></p><button class="primary-button" type="submit" id="profile-submit">Uložit e-mail <span aria-hidden="true">→</span></button></form>
+    <section id="profile-marketing" class="profile-section" hidden><h3>Novinky o Šeptandě</h3><label class="check-field"><input id="profile-marketing-opt-in" type="checkbox"><span id="profile-consent-text"></span></label><p class="field-note" id="profile-consent-status"></p><button type="button" class="secondary-button" id="profile-consent-save">Uložit volbu</button><p class="form-message" id="consent-message" role="status"></p></section>
+    <section id="cloud-import" class="profile-section" hidden><h3>Postup z tohoto prohlížeče</h3><p class="field-note">Našel se postup odehraný bez účtu. Přidej ho pouze, pokud patří tobě. Záznamy v účtu se zachovají.</p><button type="button" class="secondary-button" id="cloud-import-button">Přidat můj místní postup</button><p class="form-message" id="import-message" role="status"></p></section>
+    <section id="profile-progress-transfer" class="profile-section"><h3>Přenos místního postupu</h3><p class="field-note">Soubor obsahuje herní historii a rozepsané tipy. Heslo, přihlášení ani e-mail v něm nejsou.</p><button type="button" class="secondary-button" id="profile-export">Exportovat místní postup</button><div id="profile-file-import" hidden><label class="player-label" for="progress-file">Přidat postup ze souboru</label><input id="progress-file" type="file" accept=".json,application/json"><p class="field-note" id="progress-file-preview"></p><button type="button" class="secondary-button" id="progress-file-confirm" hidden>Sloučit vybraný postup s účtem</button></div><p class="form-message" id="progress-transfer-status" role="status"></p></section>
+    <div class="profile-actions"><button type="button" class="text-button underlined" id="profile-sync" hidden>Synchronizovat teď</button><button type="button" class="text-button underlined" id="profile-admin" hidden>Správa hráčů</button><button type="button" class="text-button underlined" id="profile-logout">Odhlásit se</button></div>
+  </dialog>
+  <dialog id="recovery-dialog" aria-labelledby="recovery-title"><div class="dialog-head"><p class="eyebrow">OBNOVENÍ PŘÍSTUPU</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="recovery-title">Zvol nové heslo.</h2><form id="recovery-form"><label class="player-label" for="recovery-password">Nové heslo</label><input id="recovery-password" type="password" minlength="10" maxlength="128" autocomplete="new-password" required><label class="player-label" for="recovery-password-again">Nové heslo znovu</label><input id="recovery-password-again" type="password" minlength="10" maxlength="128" autocomplete="new-password" required><p id="recovery-message" class="form-message" role="status"></p><button class="primary-button" id="recovery-submit" type="submit">Uložit nové heslo</button></form></dialog>
+  <dialog id="admin-dialog" class="admin-dialog" aria-labelledby="admin-title"><div class="dialog-head"><p class="eyebrow">POUZE PRO SPRÁVCE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="admin-title">Registrovaní hráči.</h2><div class="admin-toolbar"><label for="admin-filter">Zobrazit</label><select id="admin-filter"><option value="all">Všechny hráče</option><option value="marketing">Potvrzený e-mail a souhlas s novinkami</option></select><button class="text-button underlined" id="admin-refresh">Obnovit</button></div><p id="admin-status" class="field-note" role="status"></p><div id="admin-users"></div><div class="admin-pagination"><button class="secondary-button" id="admin-previous">Předchozí</button><button class="secondary-button" id="admin-next">Další</button></div><section id="admin-audit" hidden><h3>Historie souhlasu</h3><div id="admin-audit-list"></div></section><p class="dialog-note">E-maily jsou přístupné pouze oprávněným správcům. Souhlas s novinkami je nezávislý na registraci.</p></dialog>
+  <dialog id="contact-dialog" aria-labelledby="contact-title"><div class="dialog-head"><p class="eyebrow">NAPIŠTE NÁM</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="contact-title">Co můžeme vylepšit?</h2><form id="contact-form" name="septanda-contact" method="POST" action="/" data-netlify="true" netlify-honeypot="website"><input type="hidden" name="form-name" value="septanda-contact"><p class="contact-honeypot" aria-hidden="true"><label>Nechte toto pole prázdné <input name="website" tabindex="-1" autocomplete="off"></label></p><label class="player-label" for="contact-category">Téma</label><select id="contact-category" name="category" required><option value="bug">Chyba ve hře</option><option value="suggestion">Návrh citátu nebo výroku</option><option value="general">Připomínka nebo dotaz</option></select><label class="player-label" for="contact-email">E-mail pro odpověď <span class="muted">(nepovinný)</span></label><input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email"><label class="player-label" for="contact-message">Zpráva</label><textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="3000" required placeholder="U návrhu výroku přidejte i jeho původ nebo odkaz na pramen."></textarea><p class="field-note">Údaje slouží k vyřízení zprávy. Odeslání vás nepřihlásí k novinkám.</p><p id="contact-status" class="form-message" role="status"></p><button class="primary-button" id="contact-submit" type="submit">Odeslat zprávu <span aria-hidden="true">→</span></button></form></dialog>
+  <dialog id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-head"><p class="eyebrow">SOUKROMÍ</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="privacy-title">Tvůj postup, tvůj účet.</h2><p>Bez registrace se hra ukládá pouze v tomto prohlížeči. Neodesíláme tvoje tipy ani rozepsané odpovědi.</p><p>U účtu Supabase uchováváme e-mail, přezdívku, herní postup, historii tipů a nápověd a statistiky, aby šlo pokračovat na dalším zařízení. Přihlášení zůstává uložené v tomto prohlížeči, dokud se neodhlásíš. Na sdíleném zařízení se po hraní odhlas.</p><p>Veřejné pořadí zobrazuje přezdívku a skóre. E-mail, soukromé tipy a historie souhlasů se do žebříčku nedostávají. Oprávněný správce má přístup k registrovaným účtům a jejich e-mailům.</p><p>Novinky jsou dobrovolné. U souhlasu ukládáme jeho přesné znění, verzi, datum a odvolání; volbu změníš v účtu. Registrace ani hraní nejsou souhlasem podmíněné.</p><p>Zprávu z formuláře zpracujeme pro vyřízení dotazu. Pro žádost týkající se účtu použij „Napište nám“ a uveď e-mail účtu. Kontaktní formulář nepoužívá marketingový souhlas.</p><p class="dialog-note">Podrobné informace o provozovateli, poskytovatelích a době uchování: <a class="underlined" href="SOUKROMI.md" target="_blank" rel="noopener">Informace o zpracování údajů</a>.</p></dialog>
+
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-head"><p class="eyebrow">JEŠTĚ NEŽ POKRAČUJEŠ</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="confirm-title"></h2><p id="confirm-copy"></p><div class="confirm-actions"><button class="secondary-button" data-close>Zpět ke hře</button><button class="primary-button" id="confirm-action">Potvrdit</button></div></dialog>
+  <div class="sr-only" id="announcement" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript">Pro hraní Šeptandy je potřeba zapnout JavaScript v prohlížeči.</div></noscript>
+</body>
+</html>

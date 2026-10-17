@@ -1,0 +1,5002 @@
+[
+  {
+    "id": "quote-boethius-love-law",
+    "original": "Kdo může dát zákon milujícím? Láska je sama sobě vyšším zákonem.",
+    "masked": "U brány stojí zákaz a oddaný návštěvník; jeho vnitřní velitel má však vyšší hodnost než veškerá místní stráž.",
+    "total": 30,
+    "words": 28,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-confucius-thinking",
+    "original": "Učení bez přemýšlení je marné; přemýšlení bez učení je nebezpečné.",
+    "masked": "Jeden spolykal učebnici bez rozmyslu, druhý filozofuje nad prázdným sešitem.",
+    "total": 12,
+    "words": 18,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-dante-hope",
+    "original": "Zanechte vší naděje, vy, kdo vstupujete.",
+    "masked": "Na poslední vstupní kontrole nezajímají stráž mince ani zavazadla; odevzdat se musí úplně každé očekávání, že to ještě dobře dopadne.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-confucius-courage",
+    "original": "Vidět, co je správné, a neudělat to znamená nemít odvahu.",
+    "masked": "Na tabuli měl správný postup, jen se bál vůbec vstát ze židle.",
+    "total": 24,
+    "words": 19,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-dante-knowledge",
+    "original": "Nebyli jste stvořeni k životu zvířat, ale k následování ctnosti a poznání.",
+    "masked": "Velitel posádce roztrhal plán složený jen z krmení a dřímání; lidské vybavení prý vyžaduje také výpravu za porozuměním a lepším charakterem.",
+    "total": 26,
+    "words": 12,
+    "meaning": 48,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-confucius-teachers",
+    "original": "Jdu-li se dvěma dalšími, vždy mezi nimi najdu učitele.",
+    "masked": "Tři lidé vyrazili pěšky a cestou nečekaně otevřeli školu bez lavic.",
+    "total": 27,
+    "words": 28,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-hus-truth",
+    "original": "Hledaj pravdy, slyš pravdu, uč se pravdě, miluj pravdu, prav pravdu, drž pravdu, braň pravdy až do smrti.",
+    "masked": "Do jedné služby se hlásí pátrač, posluchač, žák, milovník, mluvčí, strážce i obránce; jejich společný svěřenec se nesmí opustit ani při poslední zkoušce.",
+    "total": 14,
+    "words": 8,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-confucius-self-examination",
+    "original": "Když vidíš dobrého člověka, snaž se mu vyrovnat; když špatného, zkoumej sebe.",
+    "masked": "Po setkání se dvěma sousedy si člověk pořídil žebřík i zrcadlo.",
+    "total": 10,
+    "words": 14,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-petrarch-peace",
+    "original": "Mír nenacházím a do války se nemám.",
+    "masked": "Uvnitř obyvatele pořád houká poplach, jenže když se chce vypravit proti nepříteli, nenajde na bojišti nikoho, s kým by mohl začít.",
+    "total": 22,
+    "words": 33,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-confucius-reciprocity",
+    "original": "Co nechceš, aby druzí dělali tobě, nedělej ty jim.",
+    "masked": "Kdo nechce dostat studenou sprchu, nemá ostatním otevírat kohoutek.",
+    "total": 26,
+    "words": 27,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-more-property",
+    "original": "Dokud trvá soukromé vlastnictví, nemůže být majetek rozdělen spravedlivě.",
+    "masked": "Na poradě o rovných porcích někdo prohlásil, že se nejprve musí odevzdat vlastní uzamčené truhlice, jinak férová výdejna vůbec nevznikne.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-confucius-mistake",
+    "original": "Chybovat a nenapravit to, teprve to je chyba.",
+    "masked": "V sešitě není nejhorší kaňka, ale zamčená zásuvka s opravnou gumou.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-shakespeare-hamlet",
+    "original": "Být, či nebýt, to je otázka.",
+    "masked": "U jediné osobní přepážky leží žádost o pokračování pobytu vedle definitivního odhlášení; žadatel nedokáže rozhodnout, který formulář vlastně zvolit.",
+    "total": 8,
+    "words": 4,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-confucius-education",
+    "original": "Ve vzdělávání nemají být rozdíly mezi třídami.",
+    "masked": "U dveří školy odebrali vrátnému seznam bohatých rodin.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-shakespeare-rose",
+    "original": "Co je po jméně? Růže by pod jiným jménem voněla stejně sladce.",
+    "masked": "Zahradník vyměnil cedulku na nejvoňavějším záhonu; vzduch kolem něj o žádné administrativní změně nevěděl a pokračoval úplně stejně.",
+    "total": 21,
+    "words": 18,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-lao-way",
+    "original": "Cesta, kterou lze vyslovit, není věčná cesta.",
+    "masked": "Navigace oznámila cestu, ale věčnost jí neuznala platnost jízdenky.",
+    "total": 21,
+    "words": 19,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-montaigne-knowing",
+    "original": "Co já vím?",
+    "masked": "Zkoušející zastavil celé představení sebejistoty, otočil lampu k vlastní hlavě a požádal o seznam toho, co v ní opravdu může zaručit.",
+    "total": 62,
+    "words": 60,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-lao-wheel",
+    "original": "Třicet paprsků sdílí náboj, ale užitek kola dává jeho prázdný střed.",
+    "masked": "Kolaři prodali třicet dřívek a jako nejcennější součást přibalili díru.",
+    "total": 19,
+    "words": 15,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-cervantes-freedom",
+    "original": "Svoboda, Sancho, je jeden z nejvzácnějších darů, které nebesa dala lidem.",
+    "masked": "Cestující opustil plné zámecké stoly a našel venku dar bez hmotného obalu; právě možnost jít vlastní cestou prý nemůže vyvážit žádná pokladnice.",
+    "total": 18,
+    "words": 14,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-lao-tiptoe",
+    "original": "Kdo stojí na špičkách, nestojí pevně.",
+    "masked": "U fotografie se natáhl o tři centimetry a málem převrátil celou řadu.",
+    "total": 6,
+    "words": 5,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-comenius-return",
+    "original": "Vláda věcí tvých k tobě se zase navrátí, ó lide český!",
+    "masked": "Obyvatelům země někdo slibuje, že po vichřici dostanou zpátky klíče od vlastní správní místnosti a o svém chodu už rozhodnou sami.",
+    "total": 16,
+    "words": 6,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-lao-self-victory",
+    "original": "Kdo vítězí nad druhými, je silný; kdo vítězí nad sebou, je mocný.",
+    "masked": "Mistr porazil celé družstvo, ale finále se odehrálo uvnitř jeho hlavy.",
+    "total": 13,
+    "words": 5,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-galileo-mathematics",
+    "original": "Kniha vesmíru je psána jazykem matematiky.",
+    "masked": "Čtenář otevřel svazek veliký jako celý svět, jenže tiskárna do něj místo písmen vysázela kružnice, trojúhelníky a vztahy mezi čísly.",
+    "total": 41,
+    "words": 4,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-lao-enough",
+    "original": "Kdo ví, že má dost, má vždy dost.",
+    "masked": "Host odložil naběračku a prohlásil svůj skromný oběd za nevyčerpatelný.",
+    "total": 12,
+    "words": 18,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-newton-giants",
+    "original": "Viděl-li jsem dále, bylo to proto, že jsem stál na ramenou obrů.",
+    "masked": "Pozorovatel se nechlubí vlastníma nohama: přes vzdálený obzor zahlédl jen proto, že jej pod sebou nesla celá výška jeho mohutných předchůdců.",
+    "total": 23,
+    "words": 22,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-lao-silence",
+    "original": "Kdo ví, nemluví; kdo mluví, neví.",
+    "masked": "Na poradě se všech znalostí chopil muž, který nechal mikrofon vypnutý.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-voltaire-garden",
+    "original": "Musíme pěstovat svou zahradu.",
+    "masked": "Rozprava o napravování celého světa se rozešla; účastníkům místo dalších velkých vysvětlení rozdali nástroje a ukázali na vlastní kus země před domem.",
+    "total": 9,
+    "words": 3,
+    "meaning": 18,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-lao-first-step",
+    "original": "Cesta dlouhá tisíc mil začíná jediným krokem.",
+    "masked": "Výprava přes půl mapy začala tím, že někdo posunul podrážku o kousek dál.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-wollstonecraft-self-rule",
+    "original": "Nechci, aby ženy měly moc nad muži, ale samy nad sebou.",
+    "masked": "Na rozdělování kormidel odmítla ženám přidělit cizí lodě; požaduje, aby konečně směly držet volant té, ve které samy žijí.",
+    "total": 18,
+    "words": 26,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-lao-true-words",
+    "original": "Pravdivá slova nejsou krásná, krásná slova nejsou pravdivá.",
+    "masked": "Ošklivá obálka donesla pravdu a pozlacená pouze vymyšlený vzkaz.",
+    "total": 7,
+    "words": 8,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-control",
+    "original": "Některé věci jsou v naší moci, jiné nejsou.",
+    "masked": "Člověk dostal klíče k sobě, ale ne k celému městu.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-epictetus-opinions",
+    "original": "Lidi nezneklidňují věci, ale názory, které o nich mají.",
+    "masked": "Tichý balík dorazil v pořádku, poplašná poznámka na obalu však probudila celý dům.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-events",
+    "original": "Nechtěj, aby se věci děly podle tebe; chtěj je takové, jaké se dějí.",
+    "masked": "Muž přepsal reklamaci na déšť na souhlas s oblohou.",
+    "total": 4,
+    "words": 5,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-return",
+    "original": "Neříkej: ztratil jsem to, ale: vrátil jsem to.",
+    "masked": "Ztracený kufr se v hlášení změnil na řádně odevzdanou věc z půjčovny.",
+    "total": 7,
+    "words": 7,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-banquet",
+    "original": "V životě se chovej jako na hostině.",
+    "masked": "Celý svět usedl k večeři a ty máš počkat, až přinesou tác k tobě.",
+    "total": 16,
+    "words": 23,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-actor",
+    "original": "Jsi herec ve hře; tvým úkolem je dobře zahrát přidělenou roli.",
+    "masked": "V šatně mu nechali cizí kostým a vzkaz, že potlesk závisí na jeho provedení.",
+    "total": 8,
+    "words": 10,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-epictetus-invincible",
+    "original": "Můžeš být nepřemožitelný, nevstoupíš-li do zápasu, v němž nemáš vítězství ve své moci.",
+    "masked": "Neporažený šampion vyškrtl turnaje, v nichž se jeho výkon měnil cizím tlačítkem.",
+    "total": 16,
+    "words": 11,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-epictetus-speak-little",
+    "original": "Většinou mlč, a mluvíš-li, říkej jen to nutné a několika slovy.",
+    "masked": "Moderátor dostal na celý večer tři věty a povolení zbytek vynechat.",
+    "total": 8,
+    "words": 8,
+    "meaning": 8,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-handles",
+    "original": "Každá věc má dvě držadla: za jedno ji uneseš, za druhé ne.",
+    "masked": "Stěhovák objevil na témže břemeni použitelné ucho i rukojeť pro zaručené rozčilení.",
+    "total": 19,
+    "words": 16,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-epictetus-practice",
+    "original": "Nenazývej se filosofem; raději jednej podle toho, co učíš.",
+    "masked": "Na hostině zakázali přednášku o dobrém stolování a nechali řečníka prostě jíst.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-marcus-revenge",
+    "original": "Nejlepší pomsta je nepodobat se tomu, kdo ti ublížil.",
+    "masked": "Při vyřizování účtů odmítl jeho stejnokroj a ponechal si vlastní tvář.",
+    "total": 9,
+    "words": 5,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-marcus-bee",
+    "original": "Co neprospívá roji, neprospívá ani včele.",
+    "masked": "Jedna včela chtěla prémii za rozbitý úl, účetní ji však odmítl.",
+    "total": 38,
+    "words": 20,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-marcus-do-say",
+    "original": "Co není správné, nedělej; co není pravdivé, neříkej.",
+    "masked": "Rukám se zamkly špatné úkoly a ústům nepoctivá oznámení.",
+    "total": 6,
+    "words": 8,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-marcus-good-man",
+    "original": "Přestaň rozprávět o tom, jaký má být dobrý člověk, a staň se jím.",
+    "masked": "Komise přestala kreslit vzorného člověka a konečně jednoho vyslala do terénu.",
+    "total": 31,
+    "words": 19,
+    "meaning": 48,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-marcus-obstacle",
+    "original": "Co stálo v cestě, stává se cestou.",
+    "masked": "Řidič vystoupil u překážky a použil ji jako nový chodník.",
+    "total": 30,
+    "words": 29,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-marcus-within",
+    "original": "Nikde nenajde člověk klidnější útočiště než ve vlastní duši.",
+    "masked": "Na dovolenou do nejtiššího místa nemusel balit kufr, jen na chvíli zavřel oči.",
+    "total": 19,
+    "words": 21,
+    "meaning": 17,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-marcus-present",
+    "original": "Člověk žije jen přítomností; ostatní už minulo, nebo je nejisté.",
+    "masked": "Pokladna času odmítla staré i budoucí jízdenky a vydala jen jednu právě platnou.",
+    "total": 20,
+    "words": 17,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-marcus-change",
+    "original": "Svět je změna, život je názor.",
+    "masked": "Divadlo světa neustále přestavuje dekorace a divák si zároveň píše vlastní hodnocení.",
+    "total": 25,
+    "words": 26,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-lincoln-democracy",
+    "original": "Vláda lidu, lidem a pro lid nezmizí ze země.",
+    "masked": "Zakladatel, obsluha i příjemce služby mají tentokrát tutéž občanskou adresu; právě takto vystavěný dům rozhodování se prý nesmí ze světa ztratit.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-seneca-everywhere",
+    "original": "Kdo je všude, není nikde.",
+    "masked": "Pošťák jej hledal v každé ulici a v žádné nenašel jeho jmenovku.",
+    "total": 6,
+    "words": 4,
+    "meaning": 8,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-douglass-struggle",
+    "original": "Není-li zápasu, není pokroku.",
+    "masked": "Společenský povoz marně čekal na další kus cesty; kola se podle řečníka nepohnou, dokud cestující nepřestanou jen sedět a nepostaví se odporu.",
+    "total": 10,
+    "words": 4,
+    "meaning": 20,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-seneca-examples",
+    "original": "Dlouhá je cesta přes poučky, krátká a účinná přes příklady.",
+    "masked": "Učeň obešel hromadu návodů a naučil se to jediným pohledem na mistra.",
+    "total": 5,
+    "words": 7,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-nietzsche-stronger",
+    "original": "Co mě nezabije, to mě posílí.",
+    "masked": "Útočník přišel ukončit celý příběh, ale obyvatel vydržel; podle provokativní zápisky odchází z téhle nevítané lekce s větší zásobou sil.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-seneca-time",
+    "original": "Všechno je cizí, jen čas je náš.",
+    "masked": "Exekutor odnesl vše kromě právě probíhající minuty.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-seneca-rest",
+    "original": "Odpočívající má také jednat a jednající také odpočívat.",
+    "masked": "Továrna si objednala přestávku a pohovka dostala pracovní rozpis.",
+    "total": 18,
+    "words": 9,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-tagore-fearless",
+    "original": "Kde je mysl beze strachu a hlava se drží vzpřímeně.",
+    "masked": "V vysněné zemi nikdo nenosí v hlavě vystrašeného dozorce a krk nemusí před okolím zůstávat pokorně ohnutý.",
+    "total": 21,
+    "words": 19,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-seneca-waste",
+    "original": "Nemáme málo času, ale mnoho ho promarníme.",
+    "masked": "Pokladník našel času dost, ale většina ležela pod stolem mezi odpadky.",
+    "total": 27,
+    "words": 37,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-masaryk-discussion",
+    "original": "Demokracie je diskuse.",
+    "masked": "Správní místnost svobodných občanů má podle řečníka fungovat jako stůl, u něhož si rovní účastníci navzájem odpovídají a také skutečně naslouchají.",
+    "total": 11,
+    "words": 2,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-socrates-examined",
+    "original": "Nezkoumaný život nestojí člověku za to žít.",
+    "masked": "Životní kniha potřebuje čtenáře, který se zeptá, co vlastně dělá hlavní postava.",
+    "total": 13,
+    "words": 5,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-socrates-ignorance",
+    "original": "Co nevím, ani si nemyslím, že vím.",
+    "masked": "Profesor našel díru ve vědomostech a poctivě na ni nevydal diplom.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-socrates-wrongdoing",
+    "original": "Není těžké uniknout smrti; mnohem těžší je uniknout špatnosti.",
+    "masked": "Na závodech unikl pomalému kostlivci, jenže rychlá nepoctivost ho dohnala.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-plato-worse-ruler",
+    "original": "Největší trest za odmítnutí vlády je být ovládán někým horším.",
+    "masked": "Zkušený kormidelník odmítl směnu a pak musel poslouchat lodního nešiku.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-plato-philosopher-kings",
+    "original": "Dokud filosofové nebudou králi, státy se nezbaví svých běd.",
+    "masked": "Královská koruna čeká na člověka, který se místo rodokmenu prokáže promyšleným názorem na dobro.",
+    "total": 14,
+    "words": 7,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-aristotle-political",
+    "original": "Člověk je od přirozenosti tvor politický.",
+    "masked": "I osamělému trosečníkovi se na písku záhy objevil plán náměstí s místem pro ostatní.",
+    "total": 6,
+    "words": 5,
+    "meaning": 8,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-aristotle-law",
+    "original": "Zákon je rozum zbavený žádostivosti.",
+    "masked": "V soudní síni zůstala chladná hlava, zatímco hladové ruce musely čekat za dveřmi.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-aristotle-knowledge",
+    "original": "Všichni lidé od přirozenosti touží po vědění.",
+    "masked": "Výrobce nás vybavil neustálým tlačítkem proč, které nikdo nemusel dodatečně instalovat.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-aristotle-poetry",
+    "original": "Poezie je filosofičtější a závažnější než dějepisectví.",
+    "masked": "Na stole leží protokol o jediném pádu a vedle příběh o tom, proč klopýtáme všichni.",
+    "total": 11,
+    "words": 9,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-cicero-times",
+    "original": "Ó časy, ó mravy!",
+    "masked": "Inspektor se podíval na kalendář, potom na chování obyvatel a nad obojím hlasitě zalomil rukama.",
+    "total": 21,
+    "words": 3,
+    "meaning": 48,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-cicero-welfare",
+    "original": "Blaho lidu budiž nejvyšším zákonem.",
+    "masked": "Všechny paragrafy dostaly nadřízeného: aby se obyvatelům společného domu vedlo dobře.",
+    "total": 8,
+    "words": 4,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-cicero-history",
+    "original": "Dějiny jsou učitelkou života.",
+    "masked": "Žáci odložili učebnice a do třídy přišly staré události rozdávat rady do dalších dnů.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-cicero-laws-arms",
+    "original": "Mezi zbraněmi zákony mlčí.",
+    "masked": "Při rachotu výstřelů zůstal právník u pultu a nedokázal doříct ani první odstavec.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-cicero-error",
+    "original": "Mýlit se může každý, setrvávat v omylu jen hlupák.",
+    "masked": "Řidič projel špatnou odbočku a místo otočení prohlásil svou zabloudilou trasu za věrnost přesvědčení.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-horace-day",
+    "original": "Užívej dne a co nejméně věř zítřku.",
+    "masked": "Host nechal utéct hotový oběd, protože důvěřoval jídelnímu lístku, který kuchař ještě ani nenapsal.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-horace-wise",
+    "original": "Odvaž se být moudrý.",
+    "masked": "Žák přestal čekat na cizí svolení a poprvé vytáhl z kapsy vlastní úsudek.",
+    "total": 9,
+    "words": 3,
+    "meaning": 17,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-horace-mouse",
+    "original": "Hory budou rodit a narodí se směšná myš.",
+    "masked": "Celé pohoří se otřásalo kvůli novorozenci, kterého pak zvážili na kuchyňské lžičce.",
+    "total": 18,
+    "words": 8,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-horace-homer",
+    "original": "I dobrý Homér občas zdřímne.",
+    "masked": "Nejuznávanější vypravěč v sále na chvíli vypnul a v dokonalé epopeji se objevila drobná mezera.",
+    "total": 4,
+    "words": 3,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-ovid-change",
+    "original": "Všechno se mění, nic nezaniká.",
+    "masked": "V zákulisí vesmíru se pořád převléká, přitom se z celého souboru nikdo definitivně neodhlásil.",
+    "total": 9,
+    "words": 12,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-ovid-friends",
+    "original": "Dokud se ti daří, budeš mít mnoho přátel; přijdou-li těžké časy, zůstaneš sám.",
+    "masked": "Dokud pršely mince, zvonek nepřestával; po první upomínce zůstala před prahem jen pošta.",
+    "total": 11,
+    "words": 15,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-ovid-beginnings",
+    "original": "Braň se počátkům; pozdě se chystá lék, když zlo otálením zesílí.",
+    "masked": "Správce ignoroval první vlhký flek a pak už objednával záchranné čluny místo hadru.",
+    "total": 9,
+    "words": 12,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-ovid-better-worse",
+    "original": "Vidím a schvaluji lepší, následuji však horší.",
+    "masked": "Na mapě si pečlivě zakroužkoval bezpečnou silnici a potom vědomě zabočil do rozbahněného příkopu.",
+    "total": 7,
+    "words": 8,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-virgil-love",
+    "original": "Všechno přemáhá láska; i my ustupme lásce.",
+    "masked": "Generálové podepsali příměří s něčím, co nevlastní jediný kanón, jen rozhazuje zamilované pohledy.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-virgil-fortune",
+    "original": "Štěstí pomáhá odvážným.",
+    "masked": "Pořadatel náhod rozdával pomoc přednostně těm, kteří se už odhodlali opustit bezpečnou tribunu.",
+    "total": 7,
+    "words": 3,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-virgil-memory",
+    "original": "Snad i na toto bude jednou radost vzpomínat.",
+    "masked": "Teď z něj kape slaná voda, ale už si představuje, jak tuto příhodu bude doma s úsměvem líčit.",
+    "total": 22,
+    "words": 33,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-terence-human",
+    "original": "Jsem člověk a nic lidského mi není cizí.",
+    "masked": "Přes plot zaznělo, že starosti za ním nejsou z jiného druhu světa než ty na této zahradě.",
+    "total": 6,
+    "words": 5,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-terence-food-love",
+    "original": "Bez jídla a vína láska chladne.",
+    "masked": "Na rande dorazila prázdná mísa i suché sklenice a mezi hosty náhle někdo vypnul topení.",
+    "total": 9,
+    "words": 9,
+    "meaning": 8,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-juvenal-healthy",
+    "original": "Je třeba prosit o zdravou mysl ve zdravém těle.",
+    "masked": "Při reklamaci lidské soupravy žádal zákazník v pořádku nejen obal, ale také to, co se odehrává uvnitř.",
+    "total": 6,
+    "words": 8,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-juvenal-bread-games",
+    "original": "Lid teď touží jen po dvou věcech: chlebu a hrách.",
+    "masked": "Náměstí opustilo porady o vládě a přestěhovalo se mezi výdejnu porcí a vchod na stadion.",
+    "total": 16,
+    "words": 20,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-bacon-books",
+    "original": "Některé knihy se ochutnávají, jiné polykají a jen málokteré se mají rozžvýkat a strávit.",
+    "masked": "U literárního stolu stačí občas sousto, ale některé porce tě zaměstnají ještě dlouho po zavření obálky.",
+    "total": 16,
+    "words": 19,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-bacon-reading",
+    "original": "Čtení člověka naplňuje, rozhovor ho činí pohotovým a psaní přesným.",
+    "masked": "V dílně myšlenek stojí zásobník obsahu, trenažér rychlé reakce a bruska na každou nepřesnost.",
+    "total": 7,
+    "words": 8,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-bacon-truth-time",
+    "original": "Pravda je dcerou času, nikoli autority.",
+    "masked": "Na rodném listu správného zjištění chybí slavný profesor; místo něj je podepsané postupné ověřování.",
+    "total": 8,
+    "words": 10,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-hobbes-life",
+    "original": "Život člověka je osamělý, chudý, odporný, zvířecký a krátký.",
+    "masked": "V táboře bez dohody se obyvatelé skrývají odděleně, nemají zásoby a datum dalšího rána jim nikdo neslíbil.",
+    "total": 10,
+    "words": 7,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-pascal-heart",
+    "original": "Srdce má své důvody, o nichž rozum nic neví.",
+    "masked": "V jedné osobě sídlí dvě kanceláře a ta s kalkulačkou nedostala klíč od té druhé.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-pascal-reed",
+    "original": "Člověk je jen třtina, nejslabší v přírodě, ale třtina myslící.",
+    "masked": "Vítr má snadnou práci s tenkým stonkem, jenže ten drobeček na rozdíl od vichru rozumí vlastnímu ohrožení.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-machiavelli-feared",
+    "original": "Je bezpečnější být obáván než milován, musíš-li se jednoho z obojího vzdát.",
+    "masked": "Správce trůnu vyměnil blahopřejné pohlednice za obavy poddaných, ale musel hlídat, aby z nich nevznikla nenávist.",
+    "total": 14,
+    "words": 7,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-machiavelli-appearance",
+    "original": "Lidé obecně soudí více očima než rukama.",
+    "masked": "Návštěvníci oznámkovali výrobek přes sklo, do skladu ani k jeho skutečnému použití se skoro nikdo nedostal.",
+    "total": 9,
+    "words": 12,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "quote-spinoza-persist",
+    "original": "Každá věc se, nakolik je v ní samé, snaží setrvat ve svém bytí.",
+    "masked": "V inventáři světa se každá položka ze všech sil brání tomu, aby ji někdo vymazal z evidence.",
+    "total": 22,
+    "words": 20,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-spinoza-life",
+    "original": "Svobodný člověk myslí nejméně na smrt; jeho moudrost je rozjímáním o životě.",
+    "masked": "Mysl zbavená dozoru strachu zavřela pohřební katalog a začala plánovat, co smysluplného udělá během dne.",
+    "total": 9,
+    "words": 13,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-kant-heavens",
+    "original": "Hvězdné nebe nade mnou a mravní zákon ve mně.",
+    "masked": "Na střeše měří vzdálená světla, po návratu se stejně vážně ptá, zda se dnes zachoval poctivě.",
+    "total": 5,
+    "words": 5,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-rousseau-chains",
+    "original": "Člověk se narodil svobodný, a všude je v okovech.",
+    "masked": "Z porodního pokoje vyšel bez jediné přezky, další úřady mu však postupně připevnily celé svazky zákazů.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "quote-mill-sovereign",
+    "original": "Nad sebou samým, nad svým tělem a myslí, je jednotlivec svrchovaný.",
+    "masked": "Cizí radnice nedostala rozhodovací razítko pro pokoj, v němž si obyvatel zařizuje pouze své vlastní záležitosti.",
+    "total": 19,
+    "words": 19,
+    "meaning": 19,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-e52461e58866",
+    "original": "Kdo ráno vstává, tomu Pán Bůh dává.",
+    "masked": "Výdejna příležitostí otevírá ještě před prvním zvoněním; opozdilci pak zjišťují, že nejštědřejší příděly už někdo odnesl.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-187c5bbab978",
+    "original": "Každá liška svůj ocas chválí.",
+    "masked": "Rezavý obyvatel lesa pořádá přehlídku a největší potlesk si sám uděluje za ozdobu, kterou nosí za sebou.",
+    "total": 5,
+    "words": 3,
+    "meaning": 9,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-c9e1f1836b8c",
+    "original": "Liška srst změní, ale obyčejů nezmění.",
+    "masked": "Rezavá návštěvnice přišla s jiným kabátem; kdo s ní ale vyjednával o večeři, poznal všechny její staré triky.",
+    "total": 41,
+    "words": 25,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4a649ec7d600",
+    "original": "Není všecko zlato, co se třpytí.",
+    "masked": "Kupec nechal zářit celou výlohu, ale skutečnou cenu zboží měl znalec ověřit až po zhasnutí světel.",
+    "total": 7,
+    "words": 4,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-fbba1f988819",
+    "original": "Dva kohouti na jednom smetišti se nesnášejí.",
+    "masked": "Na malém dvoře jmenovali dva opeřené velitele se stejnou hodností a od té chvíle se tam nedalo klidně snídat.",
+    "total": 20,
+    "words": 17,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-229946c51616",
+    "original": "Řemeslo má zlaté dno.",
+    "masked": "Učeň si neodnesl truhlu mincí, jen dovednost v rukou; přesto mu tenhle neviditelný majetek pravidelně platil živobytí.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-937fb00007f8",
+    "original": "Mnoho řemesel, málo chleba.",
+    "masked": "Na dveřích vyvěsil deset profesních cedulí, ale mezi přebíháním od jedné k druhé nestihl vydělat ani na večeři.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-c63b1d435474",
+    "original": "Kdo dva zajíce honí, žádného nechytí.",
+    "masked": "Lovec se vydal zároveň za dvěma páry dlouhých uší; od každé odbočky si nakonec odnášel jen větší prázdno.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-230d147aaaa2",
+    "original": "Nekupuj zajíce v pytli.",
+    "masked": "Obchodník nabízí zabalený budoucí oběd a naléhá na rychlou platbu; rozumný zákazník nejdřív požaduje rozvázat obal.",
+    "total": 14,
+    "words": 2,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-3a4ae7405313",
+    "original": "Když Pán Bůh dopustí, i motyka spustí.",
+    "masked": "Na zahradě se ozvala nečekaná salva: shora prý přišlo povolení, aby i nástroj na obdělávání začal fungovat jako puška.",
+    "total": 15,
+    "words": 8,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-4f10ad2d056b",
+    "original": "I slepá slepice někdy zrnko najde.",
+    "masked": "Na dvorku dostala svačinu i účastnice bez funkčního výhledu, která kolem sebe celé dopoledne jen naslepo klovala.",
+    "total": 18,
+    "words": 9,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-77241f00dd6b",
+    "original": "Jaký strom, také ovoce.",
+    "masked": "Ochutnávač přinesl plný košík a podle každého sousta si okamžitě udělal obrázek o dřevěném dodavateli na zahradě.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-438a9c4a3e4b",
+    "original": "Nepadne jablko daleko od stromu.",
+    "masked": "Kulatý potomek se vydal z rodného větvoví na samostatnou cestu; po prvním přistání byl pořád skoro u rodiče.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4c70a0bb8055",
+    "original": "S chutí do toho, půl je hotovo.",
+    "masked": "Pracovník přišel s opravdovým nadšením a mistr zjistil, že mu tím odpadla přibližně polovina námahy s celou zakázkou.",
+    "total": 32,
+    "words": 10,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-7e51697c5bca",
+    "original": "Nové koště dobře mete.",
+    "masked": "Úklidová četa přijala nového člena a prach se nestačil divit, jak důkladnou premiéru si příchozí naplánoval.",
+    "total": 11,
+    "words": 2,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-6ef9fa564c68",
+    "original": "Rané ptáče dál doskáče.",
+    "masked": "Drobný účastník závodu vyrazil ještě před ostatními; na konci se ukázalo, že časný start převážil i jejich větší velikost.",
+    "total": 3,
+    "words": 3,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-94f5f2d515fe",
+    "original": "Host a ryba třetího dne smrdí.",
+    "masked": "Domácí kalendář přidělil příjemné návštěvě stejně krátkou lhůtu jako čerstvému úlovku; potom se jejich společnost začne kazit.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-fd04ef60f422",
+    "original": "Od hlavy ryba smrdí.",
+    "masked": "Kontrola se snažila vyvětrat celé oddělení, dokud nezjistila, že zdroj zkažené pověsti sídlí přímo v nejvyšší kanceláři.",
+    "total": 11,
+    "words": 2,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-2bbc786a0e65",
+    "original": "Tiché vody břehy berou.",
+    "masked": "Soused si pochvaloval bezhlučný proud; až při další návštěvě zjistil, že mu odnesl kus pozemku pod nohama.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-dd041d0a21a3",
+    "original": "Stojaté vody hnijí.",
+    "masked": "Malý bazén přerušil výměnu i pohyb a po čase se do něj nikomu nechtělo ani vložit prst.",
+    "total": 7,
+    "words": 3,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-43cc61082273",
+    "original": "Častá krůpěj i kámen prorazí.",
+    "masked": "Nejmenší návštěvník neměl sílu na jediný úder, jenže chodil tak vytrvale, až tvrdá překážka ukázala průchozí otvor.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-a7f2df12d661",
+    "original": "Dva tvrdé kameny řídko dobré mouky námelou.",
+    "masked": "V obilní dílně pracují dva stejně nepoddajní spolupracovníci; každý tlačí proti druhému a pekař marně čeká na jemný výsledek.",
+    "total": 23,
+    "words": 21,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-1a393640bb8d",
+    "original": "Kde provaz tenký, tu se trhá.",
+    "masked": "Závěsná výprava měla mnoho pevných částí, ale celý náklad se rozhodl poslechnout jediné vyhublé místo uprostřed.",
+    "total": 10,
+    "words": 10,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-62e7708f2f7d",
+    "original": "Trojnásobný provaz nesnadno se přetrhne.",
+    "masked": "Tři slabší spolupracovníci se propletli dohromady; rozdělené by je síla přemohla, společný úchyt však odolal.",
+    "total": 32,
+    "words": 11,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-89e295bc23e6",
+    "original": "Topící se i slámy se chytá.",
+    "masked": "Hladina se zavírala nad jeho hlavou a v nouzi začal považovat i plovoucí stéblo za nabídku záchranné dopravy.",
+    "total": 46,
+    "words": 13,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-bfc3a53dc624",
+    "original": "Pečené holuby, nelítají do huby.",
+    "masked": "Hladový čekatel otevřel ústa směrem k obloze, ale hotová večeře odmítla převzít vlastní dopravu až k jeho jazyku.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0e1821c8335a",
+    "original": "Kde nic není, ani čert nebere.",
+    "masked": "Výběrčí s pověstí největšího darebáka prohledal kapsu a musel odejít; nenalezl v ní ani materiál pro svou lstivost.",
+    "total": 25,
+    "words": 25,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-3c16b50a38ab",
+    "original": "Já pán, ty pán, kdo bude svině pásti?",
+    "masked": "Oba uchazeči trvali na nejvyšší funkci; péče o chrochtající osazenstvo zatím zůstala bez jediného ochotného zaměstnance.",
+    "total": 5,
+    "words": 4,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-b2431d986819",
+    "original": "Čas růže přináší.",
+    "masked": "Zahrada odpověděla na netrpělivou žádost květinami až po delším čekání; zahradník tentokrát potřeboval spíš kalendář než nářadí.",
+    "total": 11,
+    "words": 2,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-a4613f8523a2",
+    "original": "Žádná růže, není bez trní.",
+    "masked": "Florista přibalil ke kráse také ostré podmínky a odmítl zákazníkovi slíbit, že půvab půjde získat bez jediného píchnutí.",
+    "total": 47,
+    "words": 35,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e8d780776aa7",
+    "original": "Růži trhej, když kvete.",
+    "masked": "Zahradní šperk má krátkou otevírací dobu; kdo jej chce získat, musí přijít během jeho nejlepšího představení.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-57caea6481db",
+    "original": "Co kdo seje, to bude žíti.",
+    "masked": "Podzimní výdejna vydala hospodáři přesně ten druh zásilky, který před několika měsíci sám uložil do zemního skladu.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-fd3fa63ea449",
+    "original": "Přetočená struna praská.",
+    "masked": "Hudebník pořád přitahoval napnutý tón; místo dalšího zlepšení se nakonec z nástroje ozvalo definitivní lupnutí.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-ef7a2e5be920",
+    "original": "Prázdný pytel nestojí.",
+    "masked": "Pracovník bez snídaně se snažil držet rovně stejně marně jako látkový obal, ze kterého předtím vysypali všechen obsah.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-2632766a59cf",
+    "original": "Darovanému koni na zuby se nedívej.",
+    "masked": "Oslavenec dostal čtyřnohý dopravní prostředek a místo poděkování hned zkoumal jeho věk podle chrupu; ostatní se na něj podívali rozpačitě.",
+    "total": 8,
+    "words": 11,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e01c0c7dc475",
+    "original": "Koně nekupuj ušima, ale očima.",
+    "masked": "Obchodník vychvaloval svého čtyřnohého pomocníka; zákazník ale vypnul poslech a nejdřív chtěl skutečně vidět nabízené zvíře.",
+    "total": 19,
+    "words": 29,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-33902c174d6f",
+    "original": "Někdy i kůň o čtyřech nohách klesne.",
+    "masked": "Nejspolehlivější obyvatel stáje měl opor hned několik, přesto se mu dnes při cestě stalo totéž co občas každému chodci.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-9a082078db25",
+    "original": "Ani kůň netáhne víc než může.",
+    "masked": "Povozník chtěl další výkon od největšího siláka stáje, ale ani více nohou neposunulo jeho skutečnou hranici možností.",
+    "total": 35,
+    "words": 41,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-131270b20812",
+    "original": "Každé hrábě k sobě hrabou.",
+    "masked": "Rozdělovači úrody se tvářili jako neutrální pomocníci, jenže každý jejich pohyb končil hromádkou přímo před vlastníma nohama.",
+    "total": 25,
+    "words": 25,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-b4899a351416",
+    "original": "Líná huba holé neštěstí.",
+    "masked": "Na přepážce nechal zavřené řečnické okénko a pak se divil, že potřebná nabídka bez povšimnutí odjela k někomu jinému.",
+    "total": 4,
+    "words": 3,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-84a1fb257f48",
+    "original": "Nebezpečno olejem oheň hasiti.",
+    "masked": "Zasahující přinesl láhev z kuchyně s úmyslem zklidnit plameny; po jeho pomoci si sousedé začali hledat nový úkryt.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e26a6b5ee661",
+    "original": "Kdo dřív přijde, ten dřív mele.",
+    "masked": "U obilní dílny rozhodovalo pořadí vstupu: kdo stál u dveří jako první, měl také první hotovou zásilku pro pekaře.",
+    "total": 33,
+    "words": 12,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0c6af067ed8f",
+    "original": "Nechoď se vším na trh.",
+    "masked": "Domácí archivář dostal pozvánku na veřejné tržiště; k vystavení si však nemá automaticky odnést i poslední soukromou zásuvku.",
+    "total": 18,
+    "words": 14,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-75a85fff5dfa",
+    "original": "Kdo do mlýna chodí, zamoučí se.",
+    "masked": "Návštěvník obilní dílny tvrdil, že s ní nemá nic společného, ale oblečení mu cestou domů všude nechávalo drobné bílé svědectví.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-d948cfb7a35e",
+    "original": "Víno není vinno, že se lidé opíjí.",
+    "masked": "Láhev stanula před soudem za lidské chování a hájila se tím, že o počtu vypitých sklenic nerozhodovala ona.",
+    "total": 15,
+    "words": 9,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-9c23bbeeb2ef",
+    "original": "Vinice nechce modlitby, ale motyky.",
+    "masked": "Pěstitelská návštěva přinesla vznešené prosby, jenže zelení svěřenci začali prospívat teprve po příchodu člověka s pracovním nástrojem.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0c96ed19f961",
+    "original": "Co vlk schvátí, nerad vrátí.",
+    "masked": "Lesní dravec má u všech přijatých zásilek stejný obchodní dodatek: jakmile jsou uvnitř jeho tlamy, zpětné vydávání se nekoná.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-a846995b6ac6",
+    "original": "Kdo chce s vlky býti, musí s nimi výti.",
+    "masked": "Nový člen zubaté lesní party zjistil, že samotná přítomnost nestačí; večer musí spolu s ostatními zvládnout společný hlasový projev.",
+    "total": 26,
+    "words": 26,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-112b88a7b156",
+    "original": "Rána se zhojí, ale slovo ne.",
+    "masked": "Po střetu se tělesné poškození pod obvazem spravilo, ale to, co útočník pustil z úst, zůstávalo uvnitř dál.",
+    "total": 21,
+    "words": 14,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-bad02901ad71",
+    "original": "Nehraď se plotem, ale přáteli.",
+    "masked": "Obyvatel zrušil objednávku dalších zábran a začal kolem sebe shromažďovat lidi, kteří mu v nouzi přijdou otevřít dveře.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-00f9edc2f0b4",
+    "original": "Opatrnosti nikdy nezbývá.",
+    "masked": "Kontrolor si odnesl všechny zásoby rozvahy na výpravu a nikdo mu nemohl říci, že si téhle výbavy vzal zbytečně příliš.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-891b77f6e398",
+    "original": "S každým pěkně, s nemnohými důvěrně.",
+    "masked": "V domě je pro návštěvníky otevřená vstřícná předsíň, ale do pokoje osobních tajemství rozdává majitel pouze několik klíčů.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-f1958e414934",
+    "original": "V každé věci hleď konce.",
+    "masked": "Ještě před prvním krokem chtěl plánovač nahlédnout na poslední stránku: zajímalo ho, kam se celý podnik jednou skutečně dostane.",
+    "total": 4,
+    "words": 3,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-d45f9b9ac9b9",
+    "original": "Nepouštěj se bez vesla na moře.",
+    "masked": "Přístav odmítl pustit cestujícího na velikou vodní plochu, protože jeho plavidlo sice plavalo, ale nedalo se vlastními silami řídit.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-8f297c15e8fd",
+    "original": "Pole má oči, les uši: chovej se všude jak sluší.",
+    "masked": "Výletník se cítil v krajině úplně sám; okolní plochy a kmeny však podle staré rady vedou neviditelný dohled nad jeho chováním.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-03df672625aa",
+    "original": "Kdo chce v domě škody zbýti, nedej jiskře ohněm býti.",
+    "masked": "Domácnost odmítla maličkému žhavému návštěvníkovi prodloužit pobyt, protože jeho příští povýšení by stálo celý obývací pokoj.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-1b83f09a60df",
+    "original": "Zároveň zle jest i všechněm věřiti, i nikomu.",
+    "masked": "Správce lidských vztahů měl dva chybné přepínače: jeden pouštěl dovnitř úplně všechny, druhý natrvalo zazdil vstupní dveře.",
+    "total": 13,
+    "words": 5,
+    "meaning": 24,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-82b576c19bc9",
+    "original": "Dvě věci vždy jsou hojnější, nežli myslíme: naše léta a naše chyby.",
+    "masked": "Osobní inventura překvapila majitele dvěma přebytky: svíčky na dortu a kolonky označené k opravě nečekaně přesáhly jeho odhad.",
+    "total": 14,
+    "words": 6,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-f89c64464484",
+    "original": "Kdo nemá v hlavě, musí míti v nohou.",
+    "masked": "Paměťové oddělení zapomnělo část nákupu a zbytek těla za něj odpracoval druhou cestu přes celé město.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-2651565befb0",
+    "original": "Myš jest malé zvíře, a nevěří jedné díře.",
+    "masked": "Nejmenší obyvatel spíže odmítl podepsat nájemní plán, dokud v něm neměl aspoň dvě různé cesty při náhlé návštěvě nebezpečí.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-631cb2842bc5",
+    "original": "Zajíc v lese, a on rožeň strouže.",
+    "masked": "Budoucí oběd zatím vesele utíká mezi kmeny, zatímco nedočkavý kuchař už pro něj pilně vyrábí zařízení nad ohniště.",
+    "total": 27,
+    "words": 29,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-e19811629700",
+    "original": "Nespouštěj se silnice pro nejistou pěšinku.",
+    "masked": "Cestovatel měl jistou známou trasu, ale opustil ji kvůli zkratce, u které zatím nikdo nepotvrdil ani bezpečný konec.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-4ea7ad163f72",
+    "original": "Lépe pozdě, nežli nikdy.",
+    "masked": "Pořadatel nakonec přijal i opozdilou zásilku; prázdné místo bez jakéhokoli doručení by mu posloužilo ještě méně.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-6be02ce36a46",
+    "original": "Kvapky mívají hapky.",
+    "masked": "Pracovník přeskočil polovinu opatrných kroků, aby byl rychlejší; podlaha mu pak připravila velmi důkladnou závěrečnou kontrolu.",
+    "total": 14,
+    "words": 2,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-55448b172a1f",
+    "original": "Lepší jedna rozmyšlená, nežli sto učiněných.",
+    "masked": "Poradce s jediným dobře prověřeným plánem zachránil víc než celá dílna, která už měla za sebou stovku náhodných pokusů.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4cb96988adae",
+    "original": "Horké železo nejlépe se kuje.",
+    "masked": "Dílna má zvláštní termín zakázky: materiál musí na pracovní stůl přijít dřív, než ztratí svou zářivou ochotu měnit tvar.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-71c490e450c2",
+    "original": "Co dnes propustíš, zítra nedohoníš.",
+    "masked": "Uvolněné místo v kalendáři právě odjíždí a zítřejší jezdec zjistí, že ani nejrychlejším během už stejný vůz nezastihne.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-44253061a2b1",
+    "original": "Ztracený čas nikdy se nenavrátí.",
+    "masked": "Zákazník se dožadoval vrácení použitých minut; hodinář mu vysvětlil, že právě tenhle výrobek nevede vůbec žádnou zpáteční dopravu.",
+    "total": 17,
+    "words": 12,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-f64007c6c608",
+    "original": "Večer ukáže, jaký den byl.",
+    "masked": "Porota odmítla vydat vysvědčení uprostřed směny; konečnou známku mohl její účastník získat až po posledním světle za oknem.",
+    "total": 7,
+    "words": 3,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-3d73c3384b2a",
+    "original": "Co koho nepálí, toho nehas.",
+    "masked": "Sousedé nechali záchranný kbelík odložený, dokud se horká potíž netýkala přímo jejich vlastních prahů.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-259c3d12d81b",
+    "original": "Všude dobře, doma nejlépe.",
+    "masked": "Procestoval výborné pokoje po celém světě; při závěrečném hodnocení však nejvyšší místo přidělil vlastnímu známému prahu.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7f6dfbf5d948",
+    "original": "Lepší doma krajíc chleba, než v cizině kráva celá.",
+    "masked": "Nabídli mu celé zvíře za vzdálenou hranicí, jenže on dal přednost obyčejnému malému soustu na vlastním stole.",
+    "total": 10,
+    "words": 14,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-9480e2e1b60c",
+    "original": "Kde se kdo zrodí, tam se i hodí.",
+    "masked": "První adresa v životním seznamu dostala zároveň doporučení, že právě tam zapadne její obyvatel nejpřirozeněji mezi ostatní.",
+    "total": 27,
+    "words": 28,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7d5b37d77f6c",
+    "original": "Kde jest peníz bit, tam nejvíc platí.",
+    "masked": "Kovový cestovatel měl jinde potíže se svou cenou; největší uznání nakonec dostal tam, kde jej kdysi vyrazili do oběhu.",
+    "total": 15,
+    "words": 22,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-af0af9be1852",
+    "original": "V cizím kraji i sokola za vránu mají.",
+    "masked": "Na neznámém dvoře přistál vznešený letec, ale místní mu hned přidělili stejnou bezvýznamnou cedulku jako obyčejným krákavým sousedům.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-c75c44fa54fd",
+    "original": "Kdo činí, co chce, utrpí, co nechce.",
+    "masked": "Zákazník si v objednávce nechal úplně volné ruce a pak odmítal převzít důsledky, které jeho vlastní svévole poslala zpátky.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-c21ec56b73df",
+    "original": "Cizí jmění strachem ohrazeno.",
+    "masked": "U věcí, které patří jinému, nestojí jen fyzická zábrana; nepovolaný návštěvník už předem cítí neklid z překročení hranice.",
+    "total": 26,
+    "words": 26,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-61b4a715159a",
+    "original": "Svoje svato, a cizí nejsvětější.",
+    "masked": "O vlastních věcech vedl velmi přísná pravidla a u zásob patřících jinému přidal ještě vyšší stupeň nedotknutelnosti.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-40c04f1b3af6",
+    "original": "Každá věc za svým pánem křičí.",
+    "masked": "Ztracený předmět bydlí dočasně u nálezce, ale podle staré představy celou dobu nahlas připomíná jméno skutečného vlastníka.",
+    "total": 40,
+    "words": 3,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-1fb5bdd0bb27",
+    "original": "Našel a neohlásil, jakby ukradl.",
+    "masked": "Cestující zvedl cizí věc z cesty a rozhodl se o ní mlčet; právě tím se jeho zdánlivě nevinná role změnila.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-755c78487885",
+    "original": "Po niti klubka se doviješ.",
+    "masked": "Vyšetřovatel našel jen nepatrný konec příze, ale nepustil jej a postupně došel až k celé ukryté zásobě.",
+    "total": 6,
+    "words": 3,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-0c96214c5a9f",
+    "original": "Pomsta i na chromém dojede.",
+    "masked": "Opožděný vyřizovač účtů kráčí s poraněnou nohou; adresát by přesto neměl spoléhat, že kvůli tomu nikdy nedorazí.",
+    "total": 7,
+    "words": 3,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-8a156ea0364c",
+    "original": "Co se vleče, neuteče.",
+    "masked": "Pomalý doručovatel může cestovat nečekaně dlouho, jenže přijatou zásilku nenechá po cestě zmizet ani ztratit její adresu.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-3ab773da4703",
+    "original": "Lepší kůrka v pokoji, nežli bochník v rozbroji.",
+    "masked": "Nabídl mu obrovskou večeři v hlučném sporu, ale host si raději odnesl pouhé malé sousto tam, kde může být v klidu.",
+    "total": 30,
+    "words": 8,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-a2d141cd65d6",
+    "original": "Dobré svědomí nade všecko jmění.",
+    "masked": "Majitel odmítl výměnu za plnou pokladnici: chtěl si ponechat hlavně možnost ohlédnout se za vlastními činy bez úzkosti.",
+    "total": 4,
+    "words": 3,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-a0ed9dea6834",
+    "original": "Zlé svědomí ustavičná poprava.",
+    "masked": "Vnitřní trestnice nemusí najímat dozorce; za provinilým člověkem se přestěhuje do každého pokoje a nezavírá ani v noci.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-ed55c6243dce",
+    "original": "Čiň, co jest pravého, neboj se žádného.",
+    "masked": "Při vstupu do davu si místo ochranného doprovodu vzal poctivé jednání a zjistil, že se nemusí nikoho předem obávat.",
+    "total": 15,
+    "words": 8,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-44c040cd9fc3",
+    "original": "Zdraví na všecko vystačí.",
+    "masked": "Cestovatel s tělem v pořádku dostal ve staré radě výbavu, která mu má posloužit ke všem ostatním životním úkolům.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-c7a194c57538",
+    "original": "Prostě-li žiješ, sta let dožiješ.",
+    "masked": "Obyčejný způsob života bez zbytečných nároků dostal ve staré radě odměnu v podobě mimořádně dlouhé platnosti lidského pobytu.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-61cb520b6a01",
+    "original": "Sladkosti se nedobírej až do hořkosti.",
+    "masked": "Host nechtěl skončit u příjemného sousta; pokračoval tak dlouho, až mu další příděl převrátil požitek v přesný chuťový opak.",
+    "total": 28,
+    "words": 30,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-e796fe73fddc",
+    "original": "Veselá mysl půl zdraví.",
+    "masked": "V ordinaci ponechali velkou část léčebné práce náladě, s níž pacient přichází; její světlá podoba prý zvládne přibližně polovinu.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-443eb52ff330",
+    "original": "Kam střídmost nechodí, tam chodí lékař.",
+    "masked": "Domácnost trvale odmítala návštěvu rozumné míry, a tak její místo musel pravidelně obsazovat člověk s léčebnou brašnou.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-2a46b561f9a9",
+    "original": "Na lože o deváté, s lože o páté.",
+    "masked": "Starý domácí rozvrh ukládá tělu přestávku od jedné večerní hodiny do časné ranní; na nástěnce mezi nimi napočítáš osm.",
+    "total": 19,
+    "words": 10,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-b09f553ee120",
+    "original": "V čem není skladu, v tom není ladu.",
+    "masked": "Skladník rozházel zásoby bez systému a pak se divil, že z takového uspořádání nedokáže vzniknout ani příjemný soulad.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-3c9deb17f6bf",
+    "original": "Zlaté časy — mladá léta.",
+    "masked": "Prohlížeč životního alba označil nejranější dospívající stránky za nejvzácnější kov celé sbírky, přestože na nich nebyla jediná mince.",
+    "total": 3,
+    "words": 2,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-ad4b210b0790",
+    "original": "Mladým náleží budoucnost.",
+    "masked": "Klíče od příštích směn dostali lidé, jejichž osobní kronika má zatím nejmenší počet popsaných listů.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-f9d6cfa7ae86",
+    "original": "Mlád jsa pamatuj, že stár budeš.",
+    "masked": "Začátečníkovi připomněli, aby při dnešním plánování počítal i s návštěvníkem, kterým se po mnoha dalších sezonách sám stane.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e10ac9cc1772",
+    "original": "Letům ani cvalem neutečeš.",
+    "masked": "Cestovatel vybral nejrychlejší dopravní zvíře, ale kalendář jej přesto po cestě dohnal a bez potíží mu přidal další svíčku.",
+    "total": 3,
+    "words": 3,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-76111a1da429",
+    "original": "Dnes jsme zde, a zítra kde!",
+    "masked": "Návštěvník potvrdil dnešní přítomnost, ale na dotaz po příštím přenocování nedokázal dodat ani bezpečně platnou adresu.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-8aa8b7714526",
+    "original": "Konec dílo chválí.",
+    "masked": "Mistr odmítl chválit rozpracovaný výrobek: pochvalný podpis na celou zakázku mu mohla vystavit teprve poslední hotová část.",
+    "total": 62,
+    "words": 40,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e34efc5a49fd",
+    "original": "Kdo své zahazuje, cizího nezasluhuje.",
+    "masked": "Žadatel o sousedův oběd právě vyhodil svoji spíž.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-7b57d12b94e7",
+    "original": "Dokud co máš, nechť o to dbáš.",
+    "masked": "Inventář poslal majiteli prosbu o péči ještě před rozloučením.",
+    "total": 18,
+    "words": 9,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-fa1661d9f552",
+    "original": "Kdo se rád hádá, v posměch se dává.",
+    "masked": "Pravidelný výrobce sporů dostal od publika místo důvěry smích.",
+    "total": 41,
+    "words": 5,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-950593b5aba4",
+    "original": "Od včely máš medu, od hada však jedu.",
+    "masked": "Jeden návštěvník naplní čaj, druhý zruší bezpečný odpolední program.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-8af9ca0a1897",
+    "original": "Mladí ležáci, staří žebráci.",
+    "masked": "Životní dopoledne strávené na gauči nechalo poslední kapitolu bez zásob.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-2ce402b830d8",
+    "original": "Kdo neseje, ten nevěje.",
+    "masked": "Podzimní směna nemá materiál, protože jarní kolegové vůbec nepřišli.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-856bb342e4fe",
+    "original": "Chceš-li s pole bráti, musíš na ně dáti.",
+    "masked": "Zemědělský bankomat vydává zásoby jen po předchozím vložení péče.",
+    "total": 13,
+    "words": 4,
+    "meaning": 27,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-6b41023fbd87",
+    "original": "Brázda hluboká, sláma vysoká.",
+    "masked": "Čím níž zamířila příprava, tím výš se potom ukázal výsledek.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-495687c548a8",
+    "original": "Široké brázdy, prázdné stodoly.",
+    "masked": "Jarní mezery na pracovním listě se změnily v podzimní volná místa v regálu.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-d91a8f97efb5",
+    "original": "Hnůj na dvoře, zlato na poli.",
+    "masked": "Dvorní nevítaný host se po stěhování stal nejcennějším pracovníkem pozemku.",
+    "total": 6,
+    "words": 4,
+    "meaning": 8,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-3beea40a787e",
+    "original": "Záhy vstávej, příklad dávej.",
+    "masked": "Člověk vpředu nastavuje tempo tím, že přijde ještě před ranní výmluvou.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-7ff51c5e36f2",
+    "original": "Čím výše stoupáš, tím víc vidíš.",
+    "masked": "Každé další patro otevřelo cestovateli dosud skrytou část mapy.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e9817062cd8f",
+    "original": "Není každý oráč, kdo se pluhu drží.",
+    "masked": "Nový držitel páky se teprve musí naučit, proč se zařízení pohybuje.",
+    "total": 7,
+    "words": 9,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-38bba390184c",
+    "original": "Co můžeš zhotoviti dnes, neodkládej na zítřek.",
+    "masked": "Zadní stránka diáře odmítla další zásilku od svého línějšího předchůdce.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e40da3c2d078",
+    "original": "Stará liška těžce se dá uštvati.",
+    "masked": "Zkušený rezident revíru už má pro každou cizí lest uloženou zadní cestu.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e460a544e9f2",
+    "original": "Hojná píce, plný krajáč.",
+    "masked": "Když přibyla pořádná zásoba večeře, ranní nádoba přestala mít volné místo.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-761da47474bf",
+    "original": "Kdo lépe krmen, lépe táhne.",
+    "masked": "Dopravní podnik zlepšil výsledky teprve po doplnění zásob pro své největší tahouny.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-d09ba2fe5704",
+    "original": "Jesle ke stolu nechodí.",
+    "masked": "Výdejna svačiny oznámila návštěvníkům, že příchod stále zůstává jejich úkolem.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-fe4d73d28e0a",
+    "original": "Lepší dnes malý kus než zítra celá hus.",
+    "masked": "Ruka s dnešní drobností odmítla vyměnit obsah za zítřejší neověřený příslib nadbytku.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-04e1ca26d134",
+    "original": "Nerovná spřež nerada spolu dobře táhne.",
+    "masked": "Dopravní dvojice má jedinou objednávku a dva zcela odlišné jízdní řády.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-ce11724f24ce",
+    "original": "Není na světě jedu, aby neměl v sobě medu.",
+    "masked": "Nejhorší návštěvník měl nakonec v kapse i maličkost, která domácnosti prospěla.",
+    "total": 9,
+    "words": 8,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-0c906f7442e7",
+    "original": "Velký zvon nemůže se najednou rozkolébati.",
+    "masked": "Největší hlasatel náměstí požádal před vystoupením o delší čas na probuzení.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-9b8e62afb4cd",
+    "original": "Když se páni rvou, pouštějí sedláci chlupy.",
+    "masked": "Ředitelská hádka skončila tím, že lidem pod schody začala mizet zimní výbava.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-e15ae9ee6159",
+    "original": "Kohout na svém smetišti rád kokrhá a zpívá.",
+    "masked": "Doma si i obyčejný opeřenec objednal vlastní velkou scénu a obecenstvo.",
+    "total": 30,
+    "words": 8,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0f411f8c854d",
+    "original": "Není dům bez dýmu.",
+    "masked": "Žádná domácí adresa nedostala trvalé potvrzení, že u ní bude navždy dokonale jasno.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-65815c58fd08",
+    "original": "Z cizí kůže dobře jest široký řemínek krájeti.",
+    "masked": "Rozdavač náhle rozšířil své sliby, když zjistil, že účet zaplatí někdo za ním.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0df5eeed9001",
+    "original": "Běda té slepici, na kteréž se jestřáb učí.",
+    "masked": "Výukové oddělení lovce si vypůjčilo bezbranného účastníka, který se na lekci vůbec nehlásil.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-b77c3850ff07",
+    "original": "Kuře učí slepici.",
+    "masked": "Nový návštěvník ještě hledá dveře a už vysvětluje provoz jejich dlouholetému správci.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-251b2427d081",
+    "original": "Ani slepice darmo nehrabe.",
+    "masked": "Nejmenší účastnice provozu nezvedá prach jen pro krásu okolí, čeká nějaký užitek.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-4d773c928da3",
+    "original": "Kam strom ohýbáš, tam roste.",
+    "masked": "Raná ruka ukazuje cestu a budoucí stín se pak rozloží stejným směrem.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-07ff8af8eaab",
+    "original": "Jeden strom nečiní háj.",
+    "masked": "Jeden obyvatel pozemku požádal o množné číslo a úřad jeho žádost vrátil.",
+    "total": 25,
+    "words": 37,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-45d6a53a04a5",
+    "original": "Jaký plat, taká práce.",
+    "masked": "Směna si nastavila rychlost podle toho, jak se k ní zachovala firemní pokladna.",
+    "total": 29,
+    "words": 27,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-d8322bd96847",
+    "original": "Práce bezděčná nebývá vděčná.",
+    "masked": "Nedobrovolný pracovník přišel na adresu zadání, ale radost se s ním na cestu nevydala.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-338de409b9ab",
+    "original": "Práce kvapná, málo platná.",
+    "masked": "Pracovní seznam byl rychle prázdný, zato opravářský stůl získal plnou novou směnu.",
+    "total": 41,
+    "words": 4,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-9113adab98a8",
+    "original": "Ustavičná práce vše přemáhá.",
+    "masked": "Kalendář po malých dávkách dokončil úkol, před kterým jednorázový silák dávno utekl.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-d7f094eb3a81",
+    "original": "Kdo z rána políhá, večer pobíhá.",
+    "masked": "Pohodlný start dne poslal jeho pozdější část na závod bez možnosti přestávky.",
+    "total": 8,
+    "words": 4,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-78de3eb3da2f",
+    "original": "Neštěstí nechodí po horách, ale po lidech.",
+    "masked": "Nepříjemný návštěvník nepoužívá turistické značky, protože hledá konkrétního obyvatele domu.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-ba369f12eeeb",
+    "original": "Hory s horami se nesejdou, za to však lidé s lidmi.",
+    "masked": "Dva neměnní sousedé čekají věčně, ale jejich pohybliví obyvatelé už se objali na cestě.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7d8ee8c614b4",
+    "original": "Kopřivu mráz nespálí.",
+    "masked": "Nejotravnější obyvatel záhonu měl proti chladnému vyhazovači překvapivě dobrou výbavu.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-e1fc6c4ecb66",
+    "original": "Chutnější chléb ve svobodě než koláč ve službě.",
+    "masked": "Chudá svačina s vlastním klíčem porazila slavnostní stůl, od kterého se nesmí vstát.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-1aa296aafe68",
+    "original": "Lenoch i pod svou střechou zmokne.",
+    "masked": "Majitel úkrytu dostal vodní pozdrav přímo do křesla, protože pořád odkládal drobnou údržbu.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-587079a0ef7c",
+    "original": "Na dubu nerostou než žaludy.",
+    "masked": "Dodavatel ze zahrady nepřijal novou zakázku, protože jeho provoz zná pouze vlastní druh zboží.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-33ec43926878",
+    "original": "V čas nouze i brambory pochoutkou.",
+    "masked": "Když v regálu skoro nic nezbylo, každodenní příloha byla povýšena na hlavní hvězdu večera.",
+    "total": 16,
+    "words": 10,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-3eeb2426969a",
+    "original": "Kdo maže, ten jede.",
+    "masked": "Stojící kola přijala drobnou pomoc a náhle našla cestu kolem dosavadních překážek.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-6bd0dfb2f801",
+    "original": "Podobného peří ptáci k sobě se táhnou.",
+    "masked": "Návštěvníci s podobnou výbavou sami od sebe vytvořili společný klub na vedlejší větvi.",
+    "total": 24,
+    "words": 18,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4d6c83449d98",
+    "original": "Každý pták zpívá, jak mu narostl zob.",
+    "masked": "Pěvecký spolek odmítl jednotný repertoár, protože si každý přinesl jiné vrozené ozvučení.",
+    "total": 19,
+    "words": 23,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-5477644e7df4",
+    "original": "Kdo chce jádro jísti, musí ořech rozlousknouti.",
+    "masked": "Malá zásobárna s tvrdými dveřmi odmítla vydat odměnu člověku, který nechtěl nic otevírat.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7c9492cc4f22",
+    "original": "Každý řetěz tlačí, byť i články jeho zlaté byly.",
+    "masked": "Drahý doplněk dostal mnoho obdivu, ale jeho majitel pořád nemohl odejít podle vlastní vůle.",
+    "total": 21,
+    "words": 19,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-b069815bc5ee",
+    "original": "S velkými pány není dobře třešně jísti.",
+    "masked": "Slavnostní stůl nabídl stejnou misku, ale jen jeden člověk směl rozhodnout o posledním soustu.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-7685199a54e1",
+    "original": "Vrána vráně oči nevyklube.",
+    "masked": "Členové tmavého klubu si při sporu nechávají svůj nejcennější výhled navzájem nedotčený.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7a8b149cd6be",
+    "original": "Šetrnost jest jistý výdělek.",
+    "masked": "Peněženka slavila příjem, přestože do ní nikdo nic nevložil a jen z ní méně zmizelo.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-56aab4016dae",
+    "original": "Kdo mála si neváží, po mnohu ať nebaží.",
+    "masked": "Příjemce mrští jedinou mincí do bláta a pak se diví, že mu nikdo nesvěří pokladnici.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-0847ef72f6da",
+    "original": "Dělej, jak ti řemen stačí.",
+    "masked": "Krejčí plánů má stříhat jen do vzdálenosti, kam dosáhne jeho vlastní zásoba materiálu.",
+    "total": 8,
+    "words": 4,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-1ae88597941d",
+    "original": "Kdo rukama med mícha, prsty olizuje.",
+    "masked": "Správce sladké zásoby nečekal na výplatu; drobnou odměnu si pokaždé odnášel na vlastních dlaních.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-9b395932cf1e",
+    "original": "Poruč psu, pes ocasu, pes si lehne, ocas se nehne.",
+    "masked": "Poslíček předal rozkaz svému vlastnímu konci, pak si zdříml a celá výprava zůstala přesně tam, kde byla.",
+    "total": 6,
+    "words": 7,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-272b1cddd84a",
+    "original": "Pes, který mnoho štěká, málo kouše.",
+    "masked": "Poplašná siréna u brány běží celý den, zatímco její útočné oddělení má skoro pořád dovolenou.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-bad2ba04678d",
+    "original": "Kdo chce psa bít, snadno hůl najde.",
+    "masked": "Kat už si vyhrnul rukávy a teprve potom požádal okolí, aby mu dodalo vhodné zdůvodnění.",
+    "total": 9,
+    "words": 10,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-7218e68c79c4",
+    "original": "Mnoho psů zajícova smrt.",
+    "masked": "Jediný uprchlík byl sebeobratnější, ale když mu do každé možné uličky postavili dalšího lovce, závod pro něj skončil.",
+    "total": 14,
+    "words": 2,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-5670b07a8eb5",
+    "original": "Nebuď psa, když spí.",
+    "masked": "V pokoji konečně utichl hlučný hlídač; návštěvník má nejlepší šanci na klid, pokud ho nezačne šťouchat do žeber.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-22bf9676e4b2",
+    "original": "Kocour rád ryby jídá, nerad však pro ně do vody lízá.",
+    "masked": "Chlupatý labužník by si nechal přinést celý úlovek, jen aby kvůli večeři nemusel ztratit suché ponožky.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-d14ce561026b",
+    "original": "Když kocour není doma, myši mají posvícení.",
+    "masked": "Jakmile majitel ostrých drápů vyrazil za pochůzkami, podlahové podnájemnictvo zrušilo večerku a rozbalilo slavnostní stoly.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4d5cfdb8f3ed",
+    "original": "Čím více s kočkou zahráváš, tím spíše tě škrábne.",
+    "masked": "Chlupatému hostiteli dochází trpělivost; každé další pošťouchnutí posouvá návštěvníka blíž k podpisu provedenému ostrou tlapkou.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-0e531b4f6e6e",
+    "original": "Neplet se mezi smetí, abys nebyl vymeten.",
+    "masked": "Zatoulaný knoflík si ustlal v hromadě odpadu a ranní úklid ho bez dalších otázek poslal stejnou cestou jako okolí.",
+    "total": 40,
+    "words": 3,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-549ea55869df",
+    "original": "Rozumí tomu jako koza petrželi.",
+    "masked": "Za botanického znalce se vydává rohatý návštěvník, jehož jediná výzkumná metoda spočívá v sežrání celého záhonu.",
+    "total": 40,
+    "words": 3,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-f7ea58eab08e",
+    "original": "Mnoho křiku, málo vlny.",
+    "masked": "Po celé vesnici se ozýval pracovní rámus, ale hotovou zakázku nakonec odnesli ve velikosti jediné hrsti.",
+    "total": 40,
+    "words": 3,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-5251015623ce",
+    "original": "Nesmělé srdce cti nedochází.",
+    "masked": "Na slavnostním pódiu zůstalo místo prázdné, protože jeho budoucí držitel se ze strachu nikdy nepřihlásil do zkoušky.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-c66cf10fb67c",
+    "original": "Jaké srdce, takový jazyk.",
+    "masked": "Rozhlasová budka v lidské hlavě vysílá podle programu, který se píše o patro níž v nejvnitřnější místnosti.",
+    "total": 4,
+    "words": 3,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-6b14049dfd5d",
+    "original": "Raději kováře než kováříčka.",
+    "masked": "Složitou zakázku neodevzdal poslíčkovi u dveří; šel za člověkem, který vede dílnu a opravdu drží hlavní kladivo.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-eebf3e214a43",
+    "original": "Šetrnost nad bohatství.",
+    "masked": "Ve zkoušce přežití vyhrál skromný sklad s dobrým správcem nad pokladnicí, jejíž majitel rozhazoval plnými hrstmi.",
+    "total": 39,
+    "words": 43,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-59c744d1d677",
+    "original": "Kdo šetří, má.",
+    "masked": "U pokladny zůstala zavřená branka a při příští návštěvě nouze bylo stále z čeho vydávat.",
+    "total": 4,
+    "words": 3,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4722424562bd",
+    "original": "Neudržíš-li za uzdu, za ocas neudržíš.",
+    "masked": "Jezdec zahodil řídicí řemínky a až při útěku zkusil brzdit zatažením za něco, co nikdy nebylo určeno k ovládání.",
+    "total": 23,
+    "words": 21,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-96f67b589001",
+    "original": "Není hospůdky, by nebylo půtky.",
+    "masked": "Mapa výčepních sálů má zvláštní vlastnost: ke každému společnému stolu se dříve či později posadí také menší rozepře.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-b526dcd45ec5",
+    "original": "Kde co čpí a kde co hnije, pole, luka z toho sílu pije.",
+    "masked": "Zatímco návštěvníci prchají se zacpaným nosem, zelení obyvatelé okolních pozemků si z téže zásoby berou posilující oběd.",
+    "total": 7,
+    "words": 7,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-4156605c5ddd",
+    "original": "Nekoukej na vrata, ale za ně.",
+    "masked": "Kupec odmítl zaplatit za naleštěný vstup; nejdřív požadoval prohlídku prostoru, který výstavní brána obvykle schovává.",
+    "total": 55,
+    "words": 27,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-964bcb70ceaa",
+    "original": "Meť před svými dveřmi.",
+    "masked": "Horlivý kontrolor ulice odložil seznam cizích vad, když zjistil, že nejbližší hromada k odklizení leží právě u jeho prahu.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-39fbf97fa280",
+    "original": "Hrnec se pozná po klepání, blázen po štěbetání.",
+    "masked": "Trhovec má dvě podobné zkoušky kvality: do zboží jednou ťukne, zájemce o chytré rady nechá chvíli vyprávět.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-68d00f3e7cc3",
+    "original": "Kdo ví, co v hrnci vře, když jest pod pokličkou?",
+    "masked": "Zvědavý návštěvník poslouchá kuchyňské bublání, skutečnou zprávu o dění uvnitř však překrývá kovový zákaz výhledu.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-d2150c697346",
+    "original": "Malý hrnek rád překypí.",
+    "masked": "V nejmenší kuchyňské nádobě se sotva zvedla teplota a už předváděla celý obsah po sousedních plotnách.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-62df628d894a",
+    "original": "Drž se břehu, nechceš-li utonouti.",
+    "masked": "Začínající plavec si ponechal na dosah pevnou zem, protože návštěvu dna neměl v cestovním plánu.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-2f36cc9cb282",
+    "original": "Podemletému břehu nevěř.",
+    "masked": "Pod zeleným okrajem už dávno schází nosné patro; zdvořilé pozvání k posezení proto není dobré brát vážně.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-6542d0bd9c8b",
+    "original": "Čím jsou vody kalnější, tím jsou lovy valnější.",
+    "masked": "Když se pod hladinou ztratila všechna okénka s výhledem, majiteli sítě se náhle začalo dařit mnohem lépe.",
+    "total": 19,
+    "words": 11,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-6175210b5e07",
+    "original": "Na ptáky musí se lepem a ne cepem.",
+    "masked": "Lovec okřídlených návštěvníků musel odložit nástroj na mlácení obilí a přichystat něco tichého, na čem se nožky zdrží.",
+    "total": 36,
+    "words": 17,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-fce6dad3bc9f",
+    "original": "Kdo jednou ptáka z ruky pustí, na střeše ho těžko lapne.",
+    "masked": "Stačilo otevřít dlaň; pro návrat stejného opeřeného úlovku už musel majitel shánět žebřík a přemlouvat nebe.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-4e724b7bf281",
+    "original": "Ptáka zpěv prozrazuje.",
+    "masked": "Listnatá opona schovala malého obyvatele úplně, jenže on si pustil vlastní zvukovou jmenovku a tajemství bylo pryč.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-aa22fb60d22b",
+    "original": "Malý pták, malé hnízdo.",
+    "masked": "Opeřený stavitel si nechal zmenšit projekt na větvi; budoucí domácnost měla pojmout jeho míry, ne plnit cizí sny o paláci.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-8054f23aedad",
+    "original": "Vrabci se hádají o cizí proso.",
+    "masked": "Drobní hladovci si hlučně rozdělují pole na porce, přestože skutečný vlastník obilí je k žádnému rozhodování nepozval.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-7d5d0e461d49",
+    "original": "Lepší pták jeden v ruce nežli dva letící.",
+    "masked": "Výměnná nabídka slibovala dvojnásobnou porci, jenže ta menší už čekala na stole a větší dosud kroužila vysoko nad ním.",
+    "total": 18,
+    "words": 8,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-fcf2fd0a92cf",
+    "original": "Nesluší za vrabcem vejce házeti.",
+    "masked": "Hospodář se chystal vystřelit vlastní snídani za drobným opeřencem, který mu v nejlepším případě vydá jen menší oběd.",
+    "total": 27,
+    "words": 28,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-2008df90af63",
+    "original": "Těžko z kamene olej vytlačiti.",
+    "masked": "Lisovna pracuje naplno, ale do zásobníku někdo místo olejnatých plodů nasypal obyčejnou suť a očekává tekutou odměnu.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-754bd342f6f1",
+    "original": "Na tvrdý špalek tvrdý klín.",
+    "masked": "Dřevěný obr odmítl všechno měkké přemlouvání; do jeho středu se nakonec pustil až ocelový soupeř s odpovídající povahou.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-43bae73427a3",
+    "original": "Ze špatného semene nečekej dobrého plemene.",
+    "masked": "Pěstitel svěřil záhon nekvalitnímu začátku a pak se podivoval, proč se mu nevrací prvotřídní potomstvo.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-74ad1f8bce9a",
+    "original": "Jediná prašivá ovce celé stádo nakaziti může.",
+    "masked": "Za branku vpustili jediného svědivého hosta a brzy se stejným problémem zabývali všichni vlnění obyvatelé dvora.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-8f58c15b0f38",
+    "original": "Čí chléb jíš a pivo piješ, toho píseň zpívej.",
+    "masked": "Hostitel zaplatil celou večeři a s účtem přinesl hostům i notový list; za nasycení očekával společný hlas ve svém rytmu.",
+    "total": 16,
+    "words": 6,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-078abbd44c8a",
+    "original": "Zlatý klíč všecky zámky otevře.",
+    "masked": "Vrátnice odmítala všechny správně vyřezané nástroje, ale před lesklým platidlem náhle otevřela i dveře bez povolené návštěvy.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-695448a19b17",
+    "original": "Chovej tele, bude z něho vůl.",
+    "masked": "Budoucí síla na tahání vozů dnes ještě sotva dosáhne ke krmítku; dobrý hospodář jí přesto každý den chystá potravu.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-634be44ad358",
+    "original": "Jazyk bez kostí, ale kosti láme.",
+    "masked": "Měkký hlasatel bez vlastní pevné konstrukce způsobil člověku takový náraz, jaký by se čekal od těžkého kladiva.",
+    "total": 28,
+    "words": 25,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-48fba77ae6c3",
+    "original": "Když se jedna husa napije, pijou jiné všecky.",
+    "masked": "U napajedla nebyla vyhlášena žádná společná přestávka; stačilo, aby se sklonil první dlouhý krk, a celý dvůr udělal totéž.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-a1f1787f2d85",
+    "original": "Když nemáš křídel, nelítej.",
+    "masked": "Uchazeč o vzdušnou cestu přišel bez jakéhokoli nosného zařízení, přesto se dožadoval svolení skočit z odletové věže.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "proverb-archive-c487bd88d414",
+    "original": "Není krávy, která by telátkem nebývala.",
+    "masked": "Největší obyvatel stáje se posmívá nováčkům, jenže stará fotografie ho zachycuje ve stejných drobných rozměrech jako je.",
+    "total": 6,
+    "words": 3,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "proverb-archive-4a5ba0900615",
+    "original": "Kam voda má spád, tam teče.",
+    "masked": "Průhledný průvod nepotřebuje ukazatele; stačí mu nakloněná zem a všichni jeho účastníci sami vyrazí týmž směrem.",
+    "total": 12,
+    "words": 3,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-vodnik-01",
+    "original": "Na topole nad jezerem\nseděl vodník podvečerem:",
+    "masked": "Správce potopených domácností si po zavírací době vyšplhal do zelené rozhledny na břehu.",
+    "total": 8,
+    "words": 8,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-vodnik-02",
+    "original": "Šiju, šiju si botičky\ndo sucha i do vodičky:",
+    "masked": "Obyvatel utopené čtvrti chystá vlastní obojživelnou kolekci a nehodlá se nikde přezouvat.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-vodnik-03",
+    "original": "Zelené šaty, botky rudé,\nzejtra moje svatba bude:",
+    "masked": "Pozvánka na zítřejší obřad dorazila od ženicha, který sladí trávový kabát s třešňovými podrážkami.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-vodnik-04",
+    "original": "Nevesely truchlivy\njsou ty vodní kraje,",
+    "masked": "Dole pod plovoucí zahradou je velký dům, jen veškerá radost zůstala na břehu.",
+    "total": 9,
+    "words": 4,
+    "meaning": 16,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-svatebni-kosile-01",
+    "original": "Již jedenáctá odbila,\na lampa ještě svítila,",
+    "masked": "Noční služba má hodinu do konce, ale světelný strážce v pokoji ještě nezhasl oči.",
+    "total": 24,
+    "words": 24,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-svatebni-kosile-02",
+    "original": "Sestra do roka nežila,\nbratra mi koule zabila.",
+    "masked": "U jednoho sourozeneckého místa se zastavil kalendář, druhé vymazala olověná zpráva z dálky.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-svatebni-kosile-03",
+    "original": "Zasej, má milá, zasej len,\nvzpomínej na mne každý den,",
+    "masked": "Odjíždějící předepsal zůstavší partnerce políčko textilní úrody a pravidelnou vnitřní poštu adresovanou jen jemu.",
+    "total": 5,
+    "words": 4,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-svatebni-kosile-04",
+    "original": "Pohnul se obraz na stěně —\ni vzkřikla panna zděšeně;",
+    "masked": "Zarámovaná společnost na omítce nečekaně ožila a jediná přítomná dívka odpověděla hlasitým zděšením.",
+    "total": 12,
+    "words": 8,
+    "meaning": 19,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-stedry-den-01",
+    "original": "Tma jako v hrobě, mráz v okna duje,\nv světnici teplo u kamen;",
+    "masked": "Příroda venku zavřela oči a nasadila ledové rukavice, ale domácnost ji ke zdroji žáru nepustila.",
+    "total": 6,
+    "words": 5,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-stedry-den-02",
+    "original": "Hoj, ty Štědrý večere,\nty tajemný svátku,",
+    "masked": "Slavnostní poslední předvánoční návštěva přichází zahalená a odmítá předem ukázat, co přinese jednotlivým hostům.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-stedry-den-03",
+    "original": "stojí vrby stařeny,\nsníh na šedé hlavě.",
+    "masked": "Břeh sezval klub dřevěných babiček a čerstvá nadílka každé načesala stejný světlý účes.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-stedry-den-04",
+    "original": "všecko ve světě jen na obrátku\na život lidský jako sen!",
+    "masked": "Velký kolotoč světa půjčuje cestujícím místo tak krátce, že po probuzení pochybují, zda vůbec jeli.",
+    "total": 22,
+    "words": 15,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-holoubek-01",
+    "original": "Okolo hřbitova\ncesta úvozová;",
+    "masked": "Stará kola vyhloubila průchod kolem zahrady posledních adres a poutník jím musí pokračovat dál.",
+    "total": 7,
+    "words": 4,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-holoubek-02",
+    "original": "Běží časy, běží,\nvšecko s sebou mění:",
+    "masked": "Kalendářní parta odmítá konzervovat jedinou podobu okolí a při každé návštěvě po sobě nechá přestavbu.",
+    "total": 6,
+    "words": 4,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-holoubek-03",
+    "original": "jedno však nemizí:\npevně stojí vina.",
+    "masked": "Archiv nepromlčeného provinění odmítl skartaci a jeho jediná složka přestála všechny nové životní inventury.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-holoubek-04",
+    "original": "na doubku sedává\nběloučký holoubek.",
+    "masked": "Malá rozhledna s žaludy dostala stálého nájemníka v čistém peří, který okolí vyřizuje smutná hlášení.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-vrba-01",
+    "original": "Večer lehneš zdráva, svěží,\nv noci tělo mrtvo leží.",
+    "masked": "Domácí provoz po setmění odpojí zdravou obyvatelku tak důkladně, že pozorovatelé pochybují o ranním zapnutí.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-vrba-02",
+    "original": "Co souzeno při zrození,\ntomu nikdež léku není.",
+    "masked": "Opravna lidských příběhů vrátila zakázku: proti ustanovením zapsaným už na začátku existence nemá účinný přípravek.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-vrba-03",
+    "original": "Ve dne s tebou živa v domě,\nv noci duše její v stromě.",
+    "masked": "Denní spolubydlící po setmění stěhuje své nehmotné já do dřevěné budovy, aniž si odnáší tělo.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-vrba-04",
+    "original": "Vzal sekeru na ramena,\nuťal vrbu od kořena;",
+    "masked": "Rodinná poradna doporučení nevydala, a tak manžel s ostrým nástrojem zrušil své ženě její druhé bydliště.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-poklad-01",
+    "original": "Na pahorku mezi buky\nkostelíček s věží nízkou;",
+    "masked": "Mezi hladkými listnatými sousedy se na kopci krčí modlitební domek s velmi skromnou rozhlednou.",
+    "total": 24,
+    "words": 23,
+    "meaning": 26,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-poklad-02",
+    "original": "v kůru tam se právě pěje\nKrista Pána umučení.",
+    "masked": "Chrámový balkon vysílá do krajiny velikonoční tragédii a její průběh odměřuje mimořádné otevření lesních dveří.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-poklad-03",
+    "original": "Snad ji vábí stříbro, zlato? —\nAch, již ona nedbá na to!",
+    "masked": "Výloha nejdražších lesklých surovin přišla o zákaznici, protože ztracenou blízkost v žádné přihrádce nenabízí.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-poklad-04",
+    "original": "žetě velmi málo zlato,\navšak dítě nade všecko!",
+    "masked": "Rodinná směnárna odmítá porovnávat náruč s drahými kovy, i kdyby jí bohatství přivezli plné vozy.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-lilie-01",
+    "original": "Umřela panna v době jarních let,\njako když uschne mladé růže květ;",
+    "masked": "Zahradník existence předčasně uzavřel právě otevřený ženský život a jeho podobizna zůstala v povadlém růžovém záhonu.",
+    "total": 10,
+    "words": 8,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-lilie-02",
+    "original": "Pochovejte mne vpod zelený les,\ntam na mém hrobě kvésti bude vřes;",
+    "masked": "Dívka si objednala pobyt na věčnost mimo vesnici, v dřevěném sousedství s nachovou přírodní přikrývkou.",
+    "total": 12,
+    "words": 6,
+    "meaning": 20,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-lilie-03",
+    "original": "Lilie bílá — kdo ji uviděl,\nkaždého divný pojal srdce žel;",
+    "masked": "Zahradní výstava nabízí jediný světlý exponát, po jehož prohlédnutí návštěvníci odcházejí s nečekaně sevřenou hrudí.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-lilie-04",
+    "original": "Zdviženo rámě, jež ji probije —\ntu místo laňky — bílá lilie.",
+    "masked": "Myslivec zvedl zbraň, ale honitba mu místo bílé srsti nastrčila rostlinu a zásah už nedával smysl.",
+    "total": 26,
+    "words": 27,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-erben-zlaty-kolovrat-01",
+    "original": "Okolo lesa pole lán,\nhoj jede, jede z lesa pán,",
+    "masked": "Po boku rozlehlé úrody se objevil jezdec s panským nárokem, kterého právě propustilo stromové město.",
+    "total": 29,
+    "words": 5,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-zlaty-kolovrat-02",
+    "original": "zbloudil jsem při lovení zvěře,\ndejte vody pít!",
+    "masked": "Venkovská recepce přijala ztraceného zákazníka honitby, který místo úlovku žádá obyčejné naplnění prázdného hrnku.",
+    "total": 7,
+    "words": 4,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-zlaty-kolovrat-03",
+    "original": "Vyšla dívčina jako květ,\nneviděl také krásy svět;",
+    "masked": "Chalupa představila mladou obyvatelku a celý dosavadní světový katalog půvabu tím podle návštěvníka zastaral.",
+    "total": 29,
+    "words": 5,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-erben-zlaty-kolovrat-04",
+    "original": "Pojď se, má paní, posadit,\nupřeď mi z lásky zlatou nit.",
+    "masked": "Panovník zadal domácí dílně drobnou citovou zakázku: usednout a vyrobit jediné zářivé vlákno oddanosti.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-1-01",
+    "original": "Letní Ty noci zářivá,\njakž Tebou srdce okřívá —",
+    "masked": "Teplá tmavá směna nad krajinou otevřela bezplatnou ozdravovnu pro lidské nitro a nepotřebovala ani denní světlo.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-1-02",
+    "original": "S oblohy bílý měsíček,\nstarobný nebes tatíček,",
+    "masked": "Noční školka má kulatého bělovlasého vedoucího, který ze svého vysokého místa dohlíží na všechny malé lampičky.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-1-03",
+    "original": "Dokola jeho dětičky,\ndrobounké, smavé hvězdičky,",
+    "masked": "Bledý vychovatel pustil na večerní procházku celé hejno rozesmátých jiskřiček a ony mu krouží kolem hlavy.",
+    "total": 7,
+    "words": 4,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-2-01",
+    "original": "Když k Vám vesel hledím, zlatá Vy kuřátka,\nslyším naše písně, česká zřím děvčátka.",
+    "masked": "Při prohlídce zlatého vesmírného dvorku zaslechl návštěvník dívčí sbor, který mu připomněl rodný jazyk.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-2-02",
+    "original": "Naše dívky slunce rannější bývají,\nve potoku chladném oči si mývají.",
+    "masked": "Denní nebeský zaměstnanec přišel pozdě: děvčata už měla zrak osvěžený v proudící přírodní umývárně.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-2-03",
+    "original": "V noci krásné hvězdy do vody naprší —\nběda hochu, na nějž oči ty zasrší!",
+    "masked": "Nebeská nadílka naplnila přírodní zrcadlo a pak se odrazila z tváře tak prudce, že mladík ztratil jistotu.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-3-01",
+    "original": "Ach, jaké to blaho: poležet\nzde na drnu poblíž boru",
+    "masked": "Host udělil pětihvězdičkové hodnocení zemnímu polštáři u jehličnatého personálu a odmítl nabídnutou skutečnou postel.",
+    "total": 5,
+    "words": 4,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-3-02",
+    "original": "Ty třepotné, smavé hvězdičky\ntak čiperně na mne hledí —",
+    "masked": "Nad osamělým pozorovatelem se otevřelo obří hlediště plné veselých jiskřivých diváků, kteří zkoumají právě jeho.",
+    "total": 29,
+    "words": 5,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-3-03",
+    "original": "Že maličké vy prý hvězdičky\njste obrovská samá těla —",
+    "masked": "Nebeská galerie vystavuje své nejrozměrnější objekty ve zmenšených náhledech a návštěvník jí tu velikost nechce uvěřit.",
+    "total": 5,
+    "words": 4,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-3-04",
+    "original": "když vesele prstem zaluskám,\nje věru v tom více šumu!",
+    "masked": "Vesmírný orchestr prohrál zvukovou zkoušku s člověkem v trávě, kterému stačily dva rychle spojené prsty.",
+    "total": 30,
+    "words": 7,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-7-01",
+    "original": "Po nebi hvězdic je rozseto\nlesem jak zvonců vřesných,",
+    "masked": "Noční zahradník přesadil lesní zvonečky na nejvyšší záhon a nechal jejich záři volně pokračovat za obzor.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-7-02",
+    "original": "Vidíme plesu jenom cíp -\nzkoumej a čítej sebelíp,",
+    "masked": "Nejlepší počtář zůstává u dveří kosmického tanečního sálu a z každého výpočtu mu vyjde jen kousek parketu.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-7-03",
+    "original": "Mysli se nejvýš - a nad tebou\nhvězd jako vřesných zvonců -",
+    "masked": "Vnitřní výtah vyjel tak vysoko, jak uměl, ale květinový strop vesmíru odtud stále utíká dál.",
+    "total": 21,
+    "words": 14,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-7-04",
+    "original": "myšlénka letí světům vstříc -\nvysoko - převysoko -",
+    "masked": "Člověk vypustil nehmotného posla nad běžné výškové povolení a ten pokračuje k adresám mimo dosavadní mapy.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-21-01",
+    "original": "Jak lvové bijem o mříže,\njak lvové v kleci jatí,",
+    "masked": "Správa kosmické zoologické zahrady hlásí neklid myslících šelem, které zkoušejí, zda plot udrží jejich touhu po dálce.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-21-02",
+    "original": "my bychom vzhůru k nebesům,\na jsme zde Zemí spjatí.",
+    "masked": "Výletníci už mají hlavy u vzdálených lampiček, jen jejich nohy dosud neuvolnil pronajímatel pozemského nádraží.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-21-03",
+    "original": "My přijdem! Odpusť, matičko,\njiž jsi nám, Země, malá,",
+    "masked": "Rodina planety žádá matku o omluvení odchodu, protože v jejím kulatém bytě už nelze narovnat všechny nové sny.",
+    "total": 10,
+    "words": 5,
+    "meaning": 17,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-21-04",
+    "original": "my blesk k myšlénkám spřaháme\na noha parou cválá.",
+    "masked": "Dopravní stáj dostala koně z vroucího kotle a oddělení zpráv zapřáhlo krátkou bouřku místo unavených poslů.",
+    "total": 16,
+    "words": 6,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-21-05",
+    "original": "My přijdem! Duch náš roste v výš\na tepny touhou bijí,",
+    "masked": "Kosmická výprava získala dva netrpělivé motory: rozpínající se vědomí a tělesné čerpadlo, které nedokáže čekat v klidu.",
+    "total": 8,
+    "words": 8,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-22-01",
+    "original": "Seděly žáby v kaluži,\nhleděly vzhůru k nebi,",
+    "masked": "Obojživelná společnost změnila silniční důlek ve hvězdárnu a zahájila večerní přednášku, aniž musela vyschnout.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-22-02",
+    "original": "mluvil o pánech hvězdářích\nzove je „Světa krtky“.",
+    "masked": "Astronomický ústav dostal v obojživelném slovníku nové jméno podle zvířat, která běžně prozkoumávají opačný směr než nebe.",
+    "total": 21,
+    "words": 18,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-22-03",
+    "original": "dvacet že milionů mil\nteprv jim loket jeden.",
+    "masked": "Galaktický krejčí přijal zakázku, ale jeho jediná délková jednotka překračuje vzdálenost, kterou člověk nikdy pěšky neprojde.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-neruda-22-04",
+    "original": "ze Slunce že by nastrouhal\nna tři sta tisíc Zemí.",
+    "masked": "Obojživelná učebnice navrhuje postrouhat centrální světelný kotel na statisíce porcí velikosti celého našeho bydliště.",
+    "total": 30,
+    "words": 8,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-neruda-22-05",
+    "original": "jsou-li tam tvoři jako my,\njsou-li tam žáby taky!",
+    "masked": "Meziplanetární publikum ignorovalo velká čísla a konečně se zeptalo, jestli se za obzorem také ozývá domácí kvákání.",
+    "total": 11,
+    "words": 13,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-postovni-schranka-01",
+    "original": "Poštovní schránka na rohu ulice,\nto není nějaká lecjaká věc.",
+    "masked": "Na křižovatce stojí nenápadná veřejná zpovědnice, která přijímá papírové důvěrnosti a rozesílá je bez vlastního komentáře dál.",
+    "total": 8,
+    "words": 7,
+    "meaning": 9,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-postovni-schranka-02",
+    "original": "Psaníčka jsou bílá jako pel\na čekají na vlaky, lodě a člověka,",
+    "masked": "Citový pyl čeká v obálkách na dopravní prostředky, aby mohl opustit své místo a oplodnit něčí vzdálené nitro.",
+    "total": 15,
+    "words": 9,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-postovni-schranka-03",
+    "original": "psaníčka do ní házejí ze dvou stran,\nz jedné smutná a z druhé veselá.",
+    "masked": "Rohová podatelna má dvě zásobovací cesty: jedna přiváží slzy, druhá radost, přesto všechno končí ve stejném boxu.",
+    "total": 35,
+    "words": 15,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-pokora-01",
+    "original": "Stanu se menším a ještě menším,\naž budu nejmenším na celém světě.",
+    "masked": "Uchazeč o rekord ve skromnosti odkládá rozměry tak dlouho, až se vejde mezi nejdrobnější obyvatele existence.",
+    "total": 17,
+    "words": 15,
+    "meaning": 21,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-pokora-02",
+    "original": "Po ránu, na louce, v létě\npo kvítku vztáhnu se nejmenším.",
+    "masked": "V časné hodině letní návštěvník opustí lidskou výšku a jde se na trávníku představit úplně nepatrnému kvetoucímu sousedovi.",
+    "total": 17,
+    "words": 11,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-veci-01",
+    "original": "Miluji věci, mlčenlivé soudruhy,\nprotože všichni nakládají s nimi,",
+    "masked": "Obyvatel bytu přijal do svého nejbližšího kruhu i všechen inventář, který při návštěvách nikdy nepronese ani vlastní jméno.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-veci-02",
+    "original": "a ony zatím žijí a dívají se na nás\njak věrni psi pohledy soustředěnými",
+    "masked": "Domácí inventář absolvoval kurz psí věrnosti a nyní beze slova sleduje každý pohyb toho, komu slouží.",
+    "total": 21,
+    "words": 14,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-veci-03",
+    "original": "Ostýchají se první dát do řeči,\nmlčí, čekají, mlčí",
+    "masked": "Stůl se židlí přerušily schůzi do chvíle, než někdo z přítomných překoná jejich rozpaky a osloví je jako první.",
+    "total": 14,
+    "words": 16,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-kamna-01",
+    "original": "Myslím, že v poledne každý den\nby mohl být květnově tichý a slavný,",
+    "masked": "Ručičky v nejvyšším bodě žádají nový denní režim: místo spěchu klidnou oslavu s příjemným počasím v kuchyni.",
+    "total": 7,
+    "words": 7,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-kamna-02",
+    "original": "Maminky-sluníčka\nv kuchyních by se nad nimi točily a smály,",
+    "masked": "Obědová předpověď hlásí osobní oběžnou dráhu usmívající se ženy, která svým žárem nechává růst budoucí rodinné porce.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-kamna-03",
+    "original": "Vezměte z našich rukou, moji nejmilejší,\nkytici!",
+    "masked": "Domácí květinářství vydalo teplý dárek určený k rozebrání u stolu a personál se sklání s mateřskou něhou.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-okno-01",
+    "original": "Okno je skleněná loď,\npřipoutaná k břehům mé světnice.",
+    "masked": "Bytová loděnice postavila průzračný člun, připoutala ho k omítce a přesto v něm dovoluje objíždět celý svět.",
+    "total": 32,
+    "words": 32,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-okno-02",
+    "original": "Našli jsme i nové světa díly,\nze všech světa dílů nejmladší,",
+    "masked": "Cestující z pokoje podali reklamaci atlasu: jejich právě objevený kus planety je mladší než poslední zeměpisné vydání.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-okno-03",
+    "original": "U rozviklaného stolu mezi dvěma vysychajícími kalamáři\nnejlépe uplatníš povídku s polární září.",
+    "masked": "Výprava za severním světlem odevzdává nejpůsobivější hlášení v kanceláři, kde se viklá nábytek a zasychá poslední psací tekutina.",
+    "total": 14,
+    "words": 6,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-wolker-okno-04",
+    "original": "Vše bude tiché a šťastné, — ty sám nejvíce.\nOči své položíš doprostřed světnice:",
+    "masked": "Dlouhá vyhlídková expedice skončila doma, kde si její spokojený účastník odložil zrak mezi staré důvěrně známé předměty.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-zne-01",
+    "original": "Slunce je veliký básník\na napsalo krásnou báseň",
+    "masked": "Spisovatel bez rukou podepsal teplým světlem celý kraj a čtenáři teď musejí jeho rukopis postupně sklízet.",
+    "total": 17,
+    "words": 7,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-zne-02",
+    "original": "ale slova jsou tak veliká,\nže neprojdou mými ústy,",
+    "masked": "Řečová podatelna vrátila zásilku z pole: obsah vnitřního úžasu přesahuje povolené rozměry otvoru mezi lidskými rty.",
+    "total": 5,
+    "words": 5,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-wolker-zne-03",
+    "original": "a jen cítím, že jsem:\nklas v řadě,",
+    "masked": "Zemědělský soupis přijal nového tichého účastníka, který sám sebe vidí jako jedinou obilnou položku společné fronty.",
+    "total": 27,
+    "words": 3,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-1-01",
+    "original": "Přilítlo jaro z daleka,\na všude plno touhy,",
+    "masked": "Roční cestovatel přivezl odjinud plný kufr nepojmenovaných žádostí a rozbalil je po celé právě procitající přírodě.",
+    "total": 13,
+    "words": 18,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-1-02",
+    "original": "Vylítly z hnízda pěnkavy\na drobné děti z chýše,",
+    "masked": "Jarní otevřený den vypustil mladé obyvatele z větvených kolébek i z malých domků a poslal je ven společně.",
+    "total": 19,
+    "words": 11,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-1-03",
+    "original": "Z větví se lístek tlačí ven\na ptáčkům z hrdla hlásky,",
+    "masked": "Rostlinná dílna vydává nový kabát a opeřená dílna zvuk, oba provozy se ve stejném okamžiku tlačí na svět.",
+    "total": 22,
+    "words": 15,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-2-01",
+    "original": "Já jsem ten rytíř z pohádky,\njenž hrdě vyjel do světa,",
+    "masked": "Vypravěč si vypůjčil jezdecké povolání ze starých kouzelných příběhů a s hrdým postojem zamířil za dosavadní mapu.",
+    "total": 29,
+    "words": 5,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-2-02",
+    "original": "O ní šla věsť: kdo spatří ji —\nten s kletbou prý to odnese,",
+    "masked": "Pohádkový turistický průvodce nedoporučuje prohlídku jedné mladé ženy, protože její půvab má automaticky přibalené nebezpečné následky.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-2-03",
+    "original": "A vyjel jsem, a za ten hřích\nteď — v zpěváka jsem zakletý!",
+    "masked": "Personální oddělení pohádky za neposlušnou výpravu zrušilo jezdecké místo a udělilo viníkovi povinnou celoživotní hudební kariéru.",
+    "total": 16,
+    "words": 19,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-3-01",
+    "original": "Umlklo stromů šumění,\na lístek sotva dýše,",
+    "masked": "Noční dirigent rozpustil dřevěné hudební těleso a ponechal nahoře jediného zeleného posluchače, který sotva znatelně nabírá vzduch.",
+    "total": 17,
+    "words": 24,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-3-02",
+    "original": "jenom v těch ňadrech teskno tak\na u srdce tak bolno.",
+    "masked": "Venkovní noční provoz probíhá bez závad, jedinou nevyřešenou reklamaci podává osobní oddělení citů uvnitř osamělého člověka.",
+    "total": 11,
+    "words": 5,
+    "meaning": 20,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-3-03",
+    "original": "můj Bože, a ta rosa též\nse v moje oči vkrádá.",
+    "masked": "Závlahová služba krajiny provedla nehlášenou přípojku a člověk poznal vlhkost zahrady najednou ve svém vlastním zraku.",
+    "total": 6,
+    "words": 7,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-60-01",
+    "original": "Kdo v zlaté struny zahrát zná,\njej ctěte víc než sebe,",
+    "masked": "Místní společnost přesadila svého nejlepšího hráče drahého nástroje do čela a každému přikázala ubrat trochu vlastní důležitosti.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-60-02",
+    "original": "však ze všech trestů největší,\nkdyž národ nemá písně.",
+    "masked": "Krizový štáb uznal za nejhorší pohromu stav, kdy si obyvatelé jedné vlasti nedovedou nic společného ani zazpívat.",
+    "total": 15,
+    "words": 14,
+    "meaning": 17,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-60-03",
+    "original": "Ten národ ještě nezhynul,\ndokud mu věštec zpívá,",
+    "masked": "Lékař země ponechal úmrtní list prázdný, protože od jejího básnického proroka stále přichází slyšitelná známka existence.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-61-01",
+    "original": "Nekamenujte proroky!\nNeb pěvci jsou jak ptáci:",
+    "masked": "Správa veřejné kultury prosí, aby občané nepoužívali proti tvůrcům střelivo z dlažby, jinak se melodický personál odstěhuje navždy.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-halek-61-02",
+    "original": "Soud boží na se národ zve,\njenž pěvce své ctít neví,",
+    "masked": "Kulturní odbor celé země dostal předvolání shora za soustavné zanedbávání lidí, kteří jí dávají slyšitelnou duši.",
+    "total": 7,
+    "words": 5,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-halek-61-03",
+    "original": "a co vám zpíval od srdce,\nto ve svém srdci noste!",
+    "masked": "Citový archiv přijímá k trvalé úschově každou melodickou zásilku, kterou autor vydal z nejupřímnější osobní zásoby.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-celakovsky-toman-01",
+    "original": "Večer před svatým Janem\nmluví sestra s Tomanem:",
+    "masked": "Mladíkovo rodinné zastavení se odehrálo za soumraku před svátkem, kdy se očekává zvýšený výskyt kouzel mezi stromy.",
+    "total": 25,
+    "words": 21,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-celakovsky-toman-02",
+    "original": "Slyš, Tománku, radu mou,\nnedávej se doubravou:",
+    "masked": "Příbuzná vydala mladému jezdci zákaz zkratky mezi žaludovými velikány a doporučila bezpečnější boční trasu kolem posvátného vršku.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-celakovsky-toman-03",
+    "original": "Jedna li tě opustila.\nnahradí to stokrát jiná.",
+    "masked": "Noční seznamovací služba nabízí zklamanému klientovi velkorysou kompenzaci za nevěru, ale zamlčuje cenu následné společné cesty.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-celakovsky-toman-04",
+    "original": "Tomanovi srdce plesá,\nuzdu pouští, s koně klesá",
+    "masked": "Osobní oddělení nadšení převzalo velení nad cestujícím tak důkladně, že ruce pustily brzdu a sedlo přišlo o obyvatele.",
+    "total": 8,
+    "words": 5,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-celakovsky-pocestny-01",
+    "original": "sotva přejdeš jedny hory,\nhned se najdou jiné.",
+    "masked": "Životní navigace odmítá vydat poslední úsek trasy a po zdolaném převýšení automaticky připočte další nepohodlné stoupání.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-celakovsky-pocestny-02",
+    "original": "jen když já mám zdravé nohy,\nk tomu dobré boty!",
+    "masked": "Poutník zamítl luxusní dopravní nabídku a schválil si pouze vlastní pohon v pořádku a poctivě vyrobený ochranný obal chodidel.",
+    "total": 5,
+    "words": 4,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-celakovsky-pocestny-03",
+    "original": "jednou se jim kolo zláme,\njindy vůz se zvrhne.",
+    "masked": "Dopravce zámožných ruší záruku bezpečného dojezdu: některý kruhový díl občas nevydrží a kabina může skončit vzhůru podlahou.",
+    "total": 5,
+    "words": 4,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-celakovsky-pocestny-04",
+    "original": "v jedné hospodě na nocleh\npán nepán se sejdem.",
+    "masked": "Cílová recepce existence nevede luxusní rezervace: zámožný cestující i unavený pěší dostanou nakonec stejně tichý společný pokoj.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-vrchlicky-podobenstvi-01",
+    "original": "Když zřím plnou číši vína, myslím na tvé vlasy:\nv obou tolik zlatých svitů míhá se a hrá si.",
+    "masked": "Zamilovaný návštěvník našel v průsvitném nápoji kadeřnický katalog, který místo fotografií nabízí známé zlatavé odlesky.",
+    "total": 29,
+    "words": 6,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "poem-vrchlicky-podobenstvi-02",
+    "original": "Když zřím plnou číši vína, myslím na tvá ústa,\nrubín vína vstříc mi kyne a jak rty dva vzrůstá.",
+    "masked": "Plná sklenka otevřela obdivovateli červené okénko do paměti a z něho se náhle vynořila tvář těsně před polibkem.",
+    "total": 15,
+    "words": 9,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "poem-vrchlicky-podobenstvi-03",
+    "original": "A ten žár, jejž v srdci vznítí, nelze ztišit pěním,\nleda novou číší vína, novým políbením.",
+    "masked": "Osobní hasičský sbor ukončil hudební zásah a na citové hoření objednal jednu sklenku s čerstvým dotykem milované tváře.",
+    "total": 6,
+    "words": 7,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bab-01",
+    "original": "Babička měla syna a dvě dcery.",
+    "masked": "Rodinný archiv staré paní uvádí jedno mužské a dvě ženská pokračování jejího rodu.",
+    "total": 29,
+    "words": 35,
+    "meaning": 20,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bab-02",
+    "original": "Babička si hned první hodinu srdce svých vnoučátek zcela osvojila, však se jim ale hned také všecka vzdala.",
+    "masked": "Rodina při seznamovací návštěvě provedla okamžitou oboustrannou výměnu citových klíčů bez ponechání náhradních kopií.",
+    "total": 7,
+    "words": 4,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bab-03",
+    "original": "Co se dětem v babiččině sedničce nejlépe líbilo, byla malovaná její truhla.",
+    "masked": "V soukromém pokojovém muzeu získal nejvíc mladých příznivců dřevěný archiv ozdobený obrázky.",
+    "total": 10,
+    "words": 7,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-04",
+    "original": "Přej nám tu radost, Terezko, vždyť jsme rády, že se máme",
+    "masked": "Při domácí návštěvě požádala starší příbuzná, aby jim nikdo nekazil potěšení z toho, že mohou být zase všichni spolu.",
+    "total": 14,
+    "words": 7,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-05",
+    "original": "První, co si babička v hospodářství zcela na starost vzala, bylo pečení chleba.",
+    "masked": "Zkušená příbuzná se v novém hospodářství nejdřív ujala proměny vykynutého těsta v základ každodenního jídelníčku.",
+    "total": 25,
+    "words": 20,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bab-06",
+    "original": "Dokud ale žiju a Pánbůh mi zdraví popřává, náleží, abych pracovala.",
+    "masked": "Stará pracovnice odmítla složit ruce do klína, dokud jí život a neporušené tělesné síly dovolují pokračovat s ostatními.",
+    "total": 20,
+    "words": 17,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-07",
+    "original": "Ale člověk mnoho vydrží, milostivá paní!",
+    "masked": "Ani po několika ranách osudu obyčejná lidská nádoba nepraskla, což překvapilo i zámecké posluchačstvo.",
+    "total": 14,
+    "words": 19,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-08",
+    "original": "Babička neopustila malé údolíčko, kde našla druhý domov.",
+    "masked": "Po dlouhém stěhování nalezla starší obyvatelka další místo k životu mezi okolními svahy a z tohoto náhradního domova už nikam neodešla.",
+    "total": 20,
+    "words": 16,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-09",
+    "original": "každé zvíře, když je má člověk rád, je vděčné",
+    "masked": "Domácí zoologická poradna tvrdí, že upřímná náklonnost nezůstane bez odpovědi ani u svěřenců, kteří neumějí mluvit lidským hlasem.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bab-10",
+    "original": "Včeličky, včeličky, babička nám umřela!",
+    "masked": "Smuteční posel zaklepal na dřevěnou medovou dílnu a jejím drobným pracovnicím ohlásil konec hospodyně.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bar-01",
+    "original": "Obecní pastýř jmenoval se Jakub a zůstával se svou dcerou Bárou v té poslední chalupě.",
+    "masked": "Adresář končí domem správce zvířat a jeho jediné mladší spolubydlící.",
+    "total": 6,
+    "words": 7,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bar-02",
+    "original": "Bára si to pamatovala a tak dlouho zkoušela udržet se nad vodou, až to dokázala.",
+    "masked": "Dívka tak dlouho odmítala nabídku říčního dna, až se naučila držet nad ním bez pomoci.",
+    "total": 36,
+    "words": 38,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bar-03",
+    "original": "Bára nedala s sebou vládnout, aniž si dala pěknými slovy oči zasypat.",
+    "masked": "Cizí ruce ani sladké řeči nedostaly klíč od hlavy dívky, která si chtěla rozhodovat sama.",
+    "total": 17,
+    "words": 12,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-bar-04",
+    "original": "Nesnižuj sebe, nepovyšuj mne, jsme si rovny.",
+    "masked": "Dvě kamarádky odmítly stupně vítězů a postavily se vedle sebe na společnou rovnou podlahu.",
+    "total": 27,
+    "words": 24,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-bar-05",
+    "original": "„Nevěřte takovým báchorám, lidé,“ káral pan farář.",
+    "masked": "Duchovní správce vyvěsil na náves výzvu, aby občané přestali přijímat strašidelné zprávy bez ověření.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kar-01",
+    "original": "Od Lesního Mnichova k českým hranicím blížila se tlupa vojáků.",
+    "masked": "Skupina uniforem nechávala bavorský les za sebou a konečně se přibližovala k čáře, za kterou pro ni začínal rodný kraj.",
+    "total": 14,
+    "words": 14,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kar-02",
+    "original": "Vojáci házeli čapkami do povětří, smáli se, výskali a mnohý stál v němém pohnutí.",
+    "masked": "Uniformovaní cestující poslali svůj textil nad sebe, ale část výpravy při setkání s krajem úplně ztratila hlas.",
+    "total": 6,
+    "words": 6,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kar-03",
+    "original": "Jeho jediná žádost byla, ještě jednou se podívat domů.",
+    "masked": "Vyčerpaný navrátilec už nežádal nic pro další cestu; zbývalo mu jediné přání ještě zahlédnout místo, odkud kdysi odešel.",
+    "total": 29,
+    "words": 32,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kar-04",
+    "original": "Abychom ho uchránili od stavu vojenského, obelhali jsme dobré lidi a vydali ho za děvče.",
+    "masked": "Odvodová komise hledala chlapce, kterého domácí registr dlouhodobě vedl v dívčím oddělení.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kar-05",
+    "original": "No, ztratil jsem nevěstu, hale našel hodného kamaráda",
+    "masked": "Nápadníkovi se rozpadla představa svatby, když odhalil skutečnost o milované osobě; na jejím místě mu ale přibylo poctivé mužské přátelství.",
+    "total": 14,
+    "words": 16,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-lab-01",
+    "original": "aniž mi se hrubě chtělo s někým se raditi, mysle, že mi každý svou věc chváliti bude",
+    "masked": "Poutník nevěřil nestrannosti poradců: každý zřejmě vyhlásí za nejlepší právě ten obor, v němž má vystavenou vlastní vizitku.",
+    "total": 18,
+    "words": 13,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-lab-02",
+    "original": "I vstrčil mi brylle na nos, skrze něž já hledě, hned všecko před sebou jinak vidím.",
+    "masked": "Průvodce nasadil návštěvníkovi optickou pomůcku a známá skutečnost za jejími skly se okamžitě převlékla do úplně jiné podoby.",
+    "total": 5,
+    "words": 6,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-lab-03",
+    "original": "Ač ste mi usta sevřeli a oči zastřeli, věřím však svému Bohu, že mi rozumu a mysli nesvážete.",
+    "masked": "Dozor mu vyřadil řeč i výhled, jenže zajatec dál spoléhá na nedosažitelnou vnitřní místnost, ve které ještě může svobodně uvažovat.",
+    "total": 15,
+    "words": 9,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-lab-04",
+    "original": "Půjduť a podívám se, co pak ten svět jest",
+    "masked": "Poutník se rozhodl nezůstat u cizího popisu; chce vyrazit ven a osobně zjistit, jaké zařízení je vlastně tenhle lidský svět.",
+    "total": 19,
+    "words": 15,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-lab-05",
+    "original": "Navrať se, odkuds vyšel, do domu srdce svého, a zavři po sobě dvéře.",
+    "masked": "Poutník dostal pokyn přestěhovat se do sebe a uzamknout vstup pro okolní hluk.",
+    "total": 18,
+    "words": 21,
+    "meaning": 14,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-ner-01",
+    "original": "A po těch jedenáct let nepromluvili na sebe ani slova, ba ani si jeden druhého nevšimnul.",
+    "masked": "Dvě sousední židle v hostinci vedly už přes deset sezon úplnou blokádu: žádný hlasový přenos, dokonce ani potvrzení, že ten druhý existuje.",
+    "total": 17,
+    "words": 12,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-ner-02",
+    "original": "Divné zvěsti začaly se najednou šourat Malou Stranou.",
+    "masked": "Městskou čtvrtí se v trepkách vydaly podezřelé informace, které si sousedé bez kontroly pouštěli do bytů.",
+    "total": 10,
+    "words": 7,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-ner-03",
+    "original": "A když šel jakýkoli, vyšla dobrá paní Ruska vždycky před dům a srdečně plakala.",
+    "masked": "Kdykoli ulicí procházel další smuteční průvod, jedna místní obyvatelka už čekala u vlastního vchodu s pohotovou zásobou upřímných slz.",
+    "total": 28,
+    "words": 4,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-ner-04",
+    "original": "Měli jsme jednou spolek na večeře, každý den měl večeři platit někdo jiný.",
+    "masked": "Přátelský stravovací klub zavedl denní střídání čestné funkce hlavního držitele otevřené peněženky.",
+    "total": 29,
+    "words": 5,
+    "meaning": 64,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-ner-05",
+    "original": "Teď ho rychle doneste někam do domu, ať zkusíme pomoci!",
+    "masked": "Muž u průvodu zastavil pohřební dopravu a nařídil přesunout její náklad pod střechu; místo pohřbívání se chce ještě pokusit o záchranu.",
+    "total": 6,
+    "words": 5,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-ner-06",
+    "original": "Vypravovalo se, že pan Rybář je až báječně bohat.",
+    "masked": "Sousedská burza vyhlásila penzistu milionářem na základě několika zavřených krabiček.",
+    "total": 5,
+    "words": 5,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-ner-07",
+    "original": "Jedinou těšitelkou páně Vorlovou byla jeho pěnovka.",
+    "masked": "Obchodníkovu samotu neuměl utišit žádný zákazník; posledním společníkem zůstala drobná kuřácká pomůcka, ze které vycházel uklidňující kouř.",
+    "total": 6,
+    "words": 4,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-ner-08",
+    "original": "Seděl jsem pod dřevěnými arkádami hostince U tří lilií, poblíž Strahovské brány.",
+    "masked": "Návštěvník obsadil dřevěnou krytou čekárnu občerstvení, jehož cedule nesla trojici květin u městského vstupu.",
+    "total": 7,
+    "words": 7,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-ner-09",
+    "original": "Jasně zaznělo as dvoje zapadnutí železa a já byl v kostele sám a zavřen.",
+    "masked": "Návštěvník svatostánku uslyšel dvě kovová potvrzení a zjistil, že po odchodu ostatních nemá oprávnění odejít ani on sám.",
+    "total": 18,
+    "words": 14,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-ner-10",
+    "original": "Od těch dob jsem už věděla, že se nevdám nikdy a mým ženichem že je smrt.",
+    "masked": "Po dávné události si žena vyškrtla všechny budoucí sňatky; za jediného konečného nápadníka už považuje toho, který ukončuje každé vyprávění.",
+    "total": 12,
+    "words": 13,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-01",
+    "original": "Do školy chodím každý den kolem jednopatrového domu, na kterém je štít s nápisem Martin Bejval.",
+    "masked": "Denní vzdělávací trasa malého vypravěče míjí dům o patro vyšší než přízemí a čitelný rodinný štít jeho kamaráda.",
+    "total": 20,
+    "words": 12,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-02",
+    "original": "Avšak já se peru porád, když mě nenechají.",
+    "masked": "Školák označil vlastní pěstní provoz za reakci na chybějící tlačítko nerušit.",
+    "total": 9,
+    "words": 5,
+    "meaning": 16,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-pol-03",
+    "original": "Až budu velký, tak budu porád cestovat a budu mít kožený kufr.",
+    "masked": "Plán na budoucnost počítá s nekonečnou služební cestou a jedním voňavým kusem zavazadla.",
+    "total": 15,
+    "words": 8,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-pol-04",
+    "original": "Bejval Antonín odvětil, že by se ani trochu nebál, že by tam všecko sežral.",
+    "masked": "Jeden z kluků slíbil, že by se v cukrářské noční hlídce vůbec nebál; bezpečnostní problém by vyřešil úplným odstraněním všech jedlých zásob.",
+    "total": 28,
+    "words": 25,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-05",
+    "original": "Přidal se k nám Zilvar z chudobince, protože viděl, že máme s sebou buchty.",
+    "masked": "Kamarád bez domácího přepychu se přidal k výpravě teprve po zjištění, že účastníci vezou něco sladkého a pečeného na cestu.",
+    "total": 28,
+    "words": 26,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-06",
+    "original": "Od té doby, co se narodila Mančinka, dostal jsem kalhoty a tak jsem se stal doopravdy klukem.",
+    "masked": "S příchodem mladšího miminka rodina povýšila dosavadního člena ze společné dětské kategorie do mužského oddělení pomocí nového kusu oblečení.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-07",
+    "original": "Veškerá dědina lehla popelem a Éda Kemlink si propálil kalhoty a brečel, že takhle nemůže domů.",
+    "masked": "Celá klukovská vesnice shořela a jeden její účastník odložil návrat k rodičům, protože mu ohnivý pokus navíc udělal okno do nohavic.",
+    "total": 9,
+    "words": 7,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-08",
+    "original": "My totiž chodíme do houslí tři, já, Čenda Jirsáků a Éda Kemlink.",
+    "masked": "Evidence kulturních povinností vykazuje trojici školáků pravidelně docházejících na tahání žíní přes napnuté struny.",
+    "total": 6,
+    "words": 5,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-pol-09",
+    "original": "Myslím, že to byl Zilvar, jelikož se koukal jinam hned.",
+    "masked": "Malý vyšetřovatel neviděl samotný čin, ale jako hlavní důkaz mu stačil podezřelý prudký obrat kamarádova výhledu jinam.",
+    "total": 23,
+    "words": 21,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-pol-10",
+    "original": "Kdo má plavky, ten si oblékne plavky, Zilvar z chudobince nemá plavky, pročež se koupá jenom tak.",
+    "masked": "Parta u řeky se oblékala podle dostupnosti koupací výbavy; nejchudší účastník žádnou neměl, a tak do proudu vyrazil bez ní.",
+    "total": 17,
+    "words": 12,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-01",
+    "original": "Protože všechno vím, nemohu vůbec soudit.",
+    "masked": "Soudní síň vyřadila dokonale informovaného uchazeče, protože se pod tíhou porozumění nedokázal chopit kladívka.",
+    "total": 26,
+    "words": 26,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-02",
+    "original": "Pane, nás nezajímá zločin, protože je záhadný, ale protože je zakázaný.",
+    "masked": "Strážný odložil zajímavé luštění stranou; do případu se nepouští pro jeho tajemnost, nýbrž pro překročení společně platné hranice.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-03",
+    "original": "Víte, já nedávám vůbec na podrobnosti pozor.",
+    "masked": "Vypravěč si vybavil dojem z celé události, ale jednotlivé malé součásti mu unikly, protože jim při pozorování nevěnoval svůj zájem.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-04",
+    "original": "Žádný ze svědků nebyl podroben křížovému výslechu.",
+    "masked": "Předsedající převzal všechna svědectví, aniž jejich nositele nechal projít obvyklým prověřováním z druhé strany jednacího stolu.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-05",
+    "original": "Čím víc na to myslím, tím míň do toho vidím.",
+    "masked": "Vyšetřovatel přidává další a další úvahy, jenže případ se mu místo vyjasnění za každým novým nápadem zahaluje do hustší mlhy.",
+    "total": 7,
+    "words": 7,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kap-06",
+    "original": "To je ten celý trik: mluvit tak, že by se v tom každý mohl poznat.",
+    "masked": "Zázračný přístroj rozdával totožný posudek, který si každý příjemce odnášel jako překvapivě osobní objev.",
+    "total": 22,
+    "words": 16,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kap-07",
+    "original": "Dobrá, ráno nato byla první věc, že mi Klára zase přinesla pugét modrých chryzantém.",
+    "masked": "Botanická pošta doručila další kytici v barvě, kterou místní odborníci neuměli vypátrat.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-kap-08",
+    "original": "Za jednu guineu mají lidé právo na pořádnou věštbu.",
+    "masked": "Návštěvník zaplatil slušnou zlatou mincí a teď trvá na tom, aby za ni dostal odpovídající podrobnou předpověď svého osudu.",
+    "total": 10,
+    "words": 14,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kap-09",
+    "original": "To se tak někdy stane, když člověk píše víc dopisů, že je strčí do nepravých obálek.",
+    "masked": "Pisatel vypravil dvě papírové zprávy ven, ale každé omylem přidělil adresní kabát té druhé.",
+    "total": 4,
+    "words": 4,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-kap-10",
+    "original": "Vy musíte říkat, co vás první napadne.",
+    "masked": "Hlava dostala pokyn otevřít dveře nahlas tomu, kdo zrovna klepe, bez vybírání vhodnějších návštěvníků.",
+    "total": 8,
+    "words": 5,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-tov-01",
+    "original": "Řekni sám, Bondy, co je největší problém moderní techniky?",
+    "masked": "Vynálezce se obrátil na svého bohatého známého s otázkou, která překážka dnes nejvíc brzdí rozvoj strojů a lidských technických možností.",
+    "total": 7,
+    "words": 5,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-tov-02",
+    "original": "Spálíš jeden atom, a máš najednou plný sklep Absolutna.",
+    "masked": "Technik rozložil jedinou částečku a v podzemním skladu došlo místo pro nevážitelné zásoby.",
+    "total": 6,
+    "words": 8,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-tov-03",
+    "original": "Lidi mají nejdřív věřit v lidi, a to ostatní se už najde.",
+    "masked": "Před pátráním po velkých neviditelných jistotách je potřeba zprovoznit obyčejnou důvěru mezi dvěma lidskými sousedy; zbytek se pak prý ukáže.",
+    "total": 14,
+    "words": 6,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-tov-04",
+    "original": "Tebe zabiju, ale lidstvo spasím.",
+    "masked": "Projekt zachraňující všechny obyvatele světa má děsivou první podmínku: právě přítomný jednotlivý soused v něm musí přijít o život.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-tov-05",
+    "original": "Víte, čím větší věci někdo věří, tím vzteklejc pohrdá těma, co v ně nevěří.",
+    "masked": "Člověk vyzdvihl své přesvědčení na nejvyšší místo a s každým dalším patrem z něj shlížel na nesouhlasící sousedy ještě vztekleji.",
+    "total": 17,
+    "words": 12,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-das-01",
+    "original": "Když se to narodilo, bylo to jenom takové bílé nic, do hrsti se to vešlo",
+    "masked": "Při narození dorazil bílý zkušební model domácího zvířete v balení pro jednu dlaň.",
+    "total": 10,
+    "words": 11,
+    "meaning": 9,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-das-02",
+    "original": "Taková psí maminka, pánové, nemá snadný život: lidí je mnoho a všechny pokousat nemůže.",
+    "masked": "Ostraha psí porodnice oznámila, že počet podezřelých návštěvníků přesáhl její zubní možnosti.",
+    "total": 20,
+    "words": 12,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-das-03",
+    "original": "Ale život štěněte je ukrutně složitý: teď zase mu rostou zuby.",
+    "masked": "Drobný psí začátečník si sotva zvykl na okolní provoz, a už mu vlastní tělo zavedlo další starost: montáž ostrých součástek do tlamy.",
+    "total": 12,
+    "words": 15,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-das-04",
+    "original": "To byste, pánové, nevěřili, jak je takového štěněte všude plno.",
+    "masked": "Jediný drobný čtyřnohý obyvatel překročil svou kapacitou rozlohu všech pokojů.",
+    "total": 4,
+    "words": 5,
+    "meaning": 3,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-das-05",
+    "original": "Víte, mládí rádo tak trochu přepíná.",
+    "masked": "Mladý účastník provozu si zkouší rozsah svých sil a docela běžně přitom vytáhne páku o kousek za rozumnou hranici.",
+    "total": 25,
+    "words": 21,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-01",
+    "original": "Vizte, to je ta země, kterou jste hledali.",
+    "masked": "Vedoucí putujícího lidu ukázal z vysoké vyhlídky na krajinu pod sebou: dlouho hledaná adresa se prý konečně stala skutečností.",
+    "total": 41,
+    "words": 4,
+    "meaning": 96,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-02",
+    "original": "Krok pak českou zemí vládl, ji všecku soudil a moudrosti učil.",
+    "masked": "Starý správce českého kraje měl spojené tři úkoly: vést všechny obyvatele, rozhodovat jejich pře a předávat jim vlastní životní rozvahu.",
+    "total": 6,
+    "words": 6,
+    "meaning": 7,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-03",
+    "original": "Tu nesu to zlé škodné zvíře, divokého kance z Kavčí hory.",
+    "masked": "Na hrad přišla reklamace škod z polí rovnou s těžkým štětinatým pachatelem.",
+    "total": 6,
+    "words": 7,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-04",
+    "original": "Můj kůň vás povede; za tím jeti neváhejte.",
+    "masked": "Dvorské poselstvo mělo odložit vlastní navigaci a bez pochyb následovat čtyřnohého bílého průvodce před sebou.",
+    "total": 15,
+    "words": 3,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-05",
+    "original": "Kdybych byl mohl tuto roli doorati, byla by po všecky časy hojnost chleba.",
+    "masked": "Předčasné povýšení oráče na knížete zastavilo výrobu dlouhodobé obilní jistoty.",
+    "total": 3,
+    "words": 3,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-06",
+    "original": "Město vidím veliké, jehož sláva hvězd se bude dotýkat.",
+    "masked": "Věštecký úřad oznámil budoucí metropoli s prestiží měřenou astronomickou výškou.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-07",
+    "original": "Vše vedla Vlasta, někdy nejpřednější v družině Libušině.",
+    "masked": "Archiv povýšení zapsal zkušenou členku ženského dvora do čela samostatné bojové skupiny.",
+    "total": 8,
+    "words": 5,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-jir-08",
+    "original": "Skokem byl Horymír v stáji, kdež stál jeho nejmilejší kůň, Šemík.",
+    "masked": "Odsouzený jezdec v jediném okamžiku zmizel pod střechou čtyřnohého ubytování; tam už čekal jeho nejvěrnější a jménem oslovovaný pomocník.",
+    "total": 10,
+    "words": 13,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-jir-09",
+    "original": "A více ho pak dvořané a nikdo již nespatřil.",
+    "masked": "Po králově zmizení nevyšel z dvorské evidence už ani jediný nový záznam o setkání; žádný z bývalých podřízených ho znovu neuviděl.",
+    "total": 22,
+    "words": 20,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-jir-10",
+    "original": "Svatováclavské vojsko spí. Ještě není čas, aby vstalo.",
+    "masked": "Horská kasárna ponechávají obránce v nočním režimu až do vyhlášení nejvyššího poplachu.",
+    "total": 8,
+    "words": 5,
+    "meaning": 13,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-01",
+    "original": "Veliká doba žádá velké lidi.",
+    "masked": "Dějiny vypsaly nábor pro mimořádnou epochu a tvrdí, že se do ní mají hlásit lidé stejného vnitřního rozměru jako okolní události.",
+    "total": 15,
+    "words": 23,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-02",
+    "original": "Jsou nepoznaní hrdinové, skromní, bez slávy a historie Napoleona.",
+    "masked": "Kronika světových vítězů nechala prázdné místo pro několik skromných hrdinů: jejich činy existují, ale nevznikla z nich slavná císařská legenda.",
+    "total": 13,
+    "words": 5,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-03",
+    "original": "„Tak nám zabili Ferdinanda,“ řekla posluhovačka panu Švejkovi",
+    "masked": "Pokojová služba doručila hostiteli politickou novinu s tragicky zkráceným následnickým seznamem.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-04",
+    "original": "Ale disciplína na vojně musí být, jinak by si nikdo nedělal z ničeho nic.",
+    "masked": "Kasárna trvají na poslušném řádu, protože po jeho zrušení by se každá další povinnost setkala už jen s bezstarostným mávnutím ruky.",
+    "total": 10,
+    "words": 13,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-05",
+    "original": "Pro nás živnostníky neplatí žádná politika.",
+    "masked": "Majitel malé živnosti odmítá při obsluze rozdělovat zákazníky podle veřejných přesvědčení; jeho obchod se takovou příslušností řídit nechce.",
+    "total": 12,
+    "words": 4,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-06",
+    "original": "Zaplať si pivo a seď v hospodě a žvaň si, co chceš.",
+    "masked": "Výčepní provoz uděluje řečnickou licenci po uhrazení tekutého členského příspěvku.",
+    "total": 4,
+    "words": 4,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-07",
+    "original": "Soudní lékaři jsou lidi, a lidi mají svoje chyby.",
+    "masked": "Vyšetřující komise dostala prostou připomínku, že ani lidé v odborných pláštích nepřestali patřit k omylnému lidskému druhu.",
+    "total": 20,
+    "words": 16,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-08",
+    "original": "To už je tak v přirozenosti lidský, že se člověk mejlí až do svý smrti.",
+    "masked": "Průvodce lidským provozem nepřipouští bezchybné období; chybná odbočení se u jeho uživatele objevují až do úplně posledního dne.",
+    "total": 23,
+    "words": 21,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-09",
+    "original": "„Já ho prosím nevážil,“ se svým milým úsměvem odpověděl Švejk.",
+    "masked": "Uchazeč o vědecký posudek odmítl teoretické srovnání pro chybějící domácí měření.",
+    "total": 5,
+    "words": 4,
+    "meaning": 6,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-10",
+    "original": "Jsme biti jako žito, kam se podíváme, a proto mě volají na vojnu.",
+    "masked": "Vojenské náborové oddělení po sérii výprasků pozvalo i dosud odloženého kandidáta.",
+    "total": 9,
+    "words": 5,
+    "meaning": 16,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-11",
+    "original": "„Odneste toho simulanta!“ řekl Bautze, když zjistil, že je muž mrtev.",
+    "masked": "Armádní kontrola označila úmrtí za další nepovedený pokus vyhnout se službě.",
+    "total": 7,
+    "words": 4,
+    "meaning": 11,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-sve-12",
+    "original": "Švejk šel o berlích a s hrůzou pozoroval, že jeho revmatismus začíná mizet.",
+    "masked": "Rekrut s oporou oznámil znepokojivý ústup vlastní omluvenky na vojenskou službu.",
+    "total": 6,
+    "words": 6,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-13",
+    "original": "Mašírovat pořád kupředu, tomu se říká anabaze.",
+    "masked": "Učený vojenský slovník přilepil velkolepé antické označení na docela prostou věc: dál a dál pokračovat při pochodu před sebe.",
+    "total": 15,
+    "words": 4,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-14",
+    "original": "Stejně vedou také všechny cesty do Českých Budějovic.",
+    "masked": "Navigační systém anabaze přesměroval veškeré světové trasy do jednoho jihočeského uzlu.",
+    "total": 7,
+    "words": 8,
+    "meaning": 5,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-sve-15",
+    "original": "Všichni měli naději, že válka musí za měsíc, dva skončit.",
+    "masked": "Všichni vyhlíželi mír s nadějnou krátkou rezervací; velkému válčení v duchu přidělili už jen jednu nebo dvě další kalendářní stránky.",
+    "total": 24,
+    "words": 18,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-mlo-01",
+    "original": "Musíme být básníky, chceme-li udržet svět v chodu.",
+    "masked": "Planeta se má udržet v pohybu pomocí lidí, kteří dovedou tvořit nové obrazy; pouhé praktické počítání na její chod podle výroku nestačí.",
+    "total": 25,
+    "words": 25,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-mlo-02",
+    "original": "Potřebujeme jenom víc vody, víc břehů, víc mělčin pro svůj život.",
+    "masked": "Noví podmořští obyvatelé žádají větší mokrou obytnou plochu a rozšíření okrajových mělkých parcel, kde mohou pohodlně dál existovat.",
+    "total": 5,
+    "words": 5,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-mlo-03",
+    "original": "Budete s námi pracovat na odbourání vašeho světa.",
+    "masked": "Dodavatel byl přizván k výhodnému společnému projektu, jehož výsledkem mělo být odstranění jeho vlastní provozovny.",
+    "total": 16,
+    "words": 5,
+    "meaning": 32,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-mlo-04",
+    "original": "U nás to není, tak co; jen kdyby nebyla taková drahota!",
+    "masked": "Komentátor pustil zprávu o ničení vzdálené planety z hlavy; osobně ho teď znepokojuje hlavně to, kolik zaplatí při nejbližším nákupu.",
+    "total": 10,
+    "words": 6,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-mlo-05",
+    "original": "To je báječná výhoda, že my nemáme žádné mořské břehy, víš?",
+    "masked": "Vnitrozemský obyvatel si blahopřeje k absenci pobřežních pozemků; domnívá se, že mokré nebezpečí tím dostalo definitivní zákaz vstupu.",
+    "total": 9,
+    "words": 7,
+    "meaning": 12,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-zah-01",
+    "original": "Proti všemu zdání zahradník se nerodí ze semene, výhonku, cibule, hlízy ani štupru, nýbrž vzniká zkušeností, okolím a přírodními podmínkami.",
+    "masked": "V pěstitelském obchodě neseženeš osivo hotového člověka se zahradnickými schopnostmi; ten prý musí vyrůst z prostředí a opakovaného vlastního zkoušení.",
+    "total": 11,
+    "words": 8,
+    "meaning": 15,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-zah-02",
+    "original": "Žádný zázrak slunce nevyrovná se zázraku požehnaného deště.",
+    "masked": "Pěstitel při pohledu na dopadající kapky odložil všechny chvály jasného dne; nad takto darovanou vláhou už žádný světelný zázrak nestaví.",
+    "total": 32,
+    "words": 37,
+    "meaning": 25,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-zah-03",
+    "original": "To pravé, to nejlepší je před námi.",
+    "masked": "Dnešní úroda je pouhá ukázka; hlavní cena zatím čeká v příštích sezonách na otevření.",
+    "total": 8,
+    "words": 10,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": false
+  },
+  {
+    "id": "prose-zah-04",
+    "original": "Říkám vám, zkrotit pár sáhů půdy je veliké vítězství.",
+    "masked": "Pěstitelský velitel ohlásil nečekaně veliký triumf; na mapě přitom ovládl jen drobný kousek tvrdohlavé země mezi několika záhony.",
+    "total": 11,
+    "words": 16,
+    "meaning": 4,
+    "accepted": false,
+    "conflict": true
+  },
+  {
+    "id": "prose-zah-05",
+    "original": "Je to tak: čím horší neřád, tím víc se má k světu.",
+    "masked": "Zahradník zjistil podezřelou zákonitost: nejméně vítaní zelení podnájemníci předvádějí právě tu největší chuť pokračovat v životě.",
+    "total": 6,
+    "words": 4,
+    "meaning": 10,
+    "accepted": false,
+    "conflict": true
+  }
+]

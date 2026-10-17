@@ -1,0 +1,142 @@
+# Próza:100 zdrojově ověřených úryvků
+
+Ověřeno 16.10.2026. Přesně100 nových hádanek,7 autorů,13 knih/sbírek. Každý `answer` má5–22slov a byl automaticky ověřen jako přesná souvislá podsekvence původního textu odkazu (HTML odstraněno, pouze bílé znaky sjednoceny). Nejde o parafráze vydávané za citát. Závěrečná předání jsou redakční fikce, nikoli slova autorů.
+
+Úryvky zachovávají pravopis zdroje; několik variant přidává pouze výslovně modernizovaný pravopis. Krátké řečové úseky mohou mít ponechanou uvozovku nebo doprovodnou uvozovací větu, aby zůstaly přesné. Záměrně nejsou použity překlady ani filmové repliky.
+
+## Autoři a veřejná volnost
+
+- [Božena Němcová](https://cs.wikisource.org/wiki/Autor%3ABo%C5%BEena_N%C4%9Bmcov%C3%A1) (1820–1862). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Jan Amos Komenský](https://cs.wikisource.org/wiki/Autor%3AJan_Amos_Komensk%C3%BD) (1592–1670). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Jan Neruda](https://cs.wikisource.org/wiki/Autor%3AJan_Neruda) (1834–1891). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Karel Poláček](https://cs.wikisource.org/wiki/Autor%3AKarel_Pol%C3%A1%C4%8Dek) (1892–1945). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Karel Čapek](https://cs.wikisource.org/wiki/Autor%3AKarel_%C4%8Capek) (1890–1938). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Alois Jirásek](https://cs.wikisource.org/wiki/Autor%3AAlois_Jir%C3%A1sek) (1851–1930). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+- [Jaroslav Hašek](https://cs.wikisource.org/wiki/Autor%3AJaroslav_Ha%C5%A1ek) (1883–1923). Původní české autorské texty; úmrtí nejpozději1945. Stránky použitých děl uvádějí PD-old-70.
+
+## Použitá vydání a limity bibliografie
+
+- **Babička**: NĚMCOVÁ, Božena. Babička. 7. vydání. Praha: Česká grafická unie, 1924. Úryvků: 10.
+- **Divá Bára**: Wikizdroje, přepis uvádějící Literární doupě; konkrétní knižní vydání neuvedeno. Úryvků: 5.
+- **Karla**: Wikizdroje, přepis uvádějící Literární doupě; konkrétní knižní vydání neuvedeno. Úryvků: 5.
+- **Labyrint světa a ráj srdce**: Wikizdroje, přepis uvádějící James Naughton’s Pages a znění z roku 1663. Úryvků: 5.
+- **Povídky malostranské**: NERUDA, Jan. Povídky malostranské. 2. vydání. Praha: Ed. Valečka, 1885. Úryvků: 10.
+- **Bylo nás pět**: POLÁČEK, Karel. Bylo nás pět. Praha: Svobodné noviny, 1946, 1. vydání. Úryvků: 10.
+- **Povídky z jedné kapsy**: Wikizdroje podle elektronického vydání Městské knihovny v Praze; přepis rok uvádí neurčitě jako 200x. Úryvků: 10.
+- **Továrna na absolutno**: Wikizdroje podle elektronického vydání Městské knihovny v Praze; přepis samostatný rok této edice neuvádí. Úryvků: 5.
+- **Dášeňka čili život štěněte**: ČAPEK, Karel. Zahradníkův rok; Měl jsem psa a kočku; Kalendář. Praha: Československý spisovatel, 1983; elektronický přepis MKP/Wikizdroje. Úryvků: 5.
+- **Staré pověsti české**: JIRÁSEK, Alois. Staré pověsti české. 3. vydání. Praha: Státní pedagogické nakladatelství, 1959. Úryvků: 10.
+- **Osudy dobrého vojáka Švejka za světové války**: Wikizdroje, český přepis uvádějící vydání 1925; nakladatel v přepisu neuveden. Úryvků: 15.
+- **Válka s mloky**: ČAPEK, Karel. Válka s mloky. Praha: Československý spisovatel, 1981. Spisy, sv. 9; elektronický přepis MKP/Wikizdroje. Úryvků: 5.
+- **Zahradníkův rok**: ČAPEK, Karel. Zahradníkův rok; Měl jsem psa a kočku; Kalendář. Praha: Československý spisovatel, 1983; elektronický přepis MKP/Wikizdroje. Úryvků: 5.
+
+U Divé Báry, Karly a Labyrintu poskytují Wikizdroje jen elektronický přepis bez úplné bibliografie knižního vydání; tato neúplnost je výslovně uvedena i u jednotlivých položek. U Továrny na absolutno a Povídek z jedné kapsy rovněž nedoplňujeme rok elektronické edice odhadem. Jiráskovo znění sleduje přepis vydání1959, nikoli domnělou přesnou rekonstrukci historických výroků.
+
+## Kontrolní seznam všech úryvků
+
+- `prose-bab-01` — Božena Němcová, [Babička — I](https://cs.wikisource.org/wiki/Babi%C4%8Dka/I): „Babička měla syna a dvě dcery.“
+- `prose-bab-02` — Božena Němcová, [Babička — I](https://cs.wikisource.org/wiki/Babi%C4%8Dka/I): „Babička si hned první hodinu srdce svých vnoučátek zcela osvojila, však se jim ale hned také všecka vzdala.“
+- `prose-bab-03` — Božena Němcová, [Babička — I](https://cs.wikisource.org/wiki/Babi%C4%8Dka/I): „Co se dětem v babiččině sedničce nejlépe líbilo, byla malovaná její truhla.“
+- `prose-bab-04` — Božena Němcová, [Babička — I](https://cs.wikisource.org/wiki/Babi%C4%8Dka/I): „Přej nám tu radost, Terezko, vždyť jsme rády, že se máme“
+- `prose-bab-05` — Božena Němcová, [Babička — I](https://cs.wikisource.org/wiki/Babi%C4%8Dka/I): „První, co si babička v hospodářství zcela na starost vzala, bylo pečení chleba.“
+- `prose-bab-06` — Božena Němcová, [Babička — VII](https://cs.wikisource.org/wiki/Babi%C4%8Dka/VII): „Dokud ale žiju a Pánbůh mi zdraví popřává, náleží, abych pracovala.“
+- `prose-bab-07` — Božena Němcová, [Babička — VII](https://cs.wikisource.org/wiki/Babi%C4%8Dka/VII): „Ale člověk mnoho vydrží, milostivá paní!“
+- `prose-bab-08` — Božena Němcová, [Babička — XVIII](https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII): „Babička neopustila malé údolíčko, kde našla druhý domov.“
+- `prose-bab-09` — Božena Němcová, [Babička — XVIII](https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII): „každé zvíře, když je má člověk rád, je vděčné“
+- `prose-bab-10` — Božena Němcová, [Babička — XVIII](https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII): „Včeličky, včeličky, babička nám umřela!“
+- `prose-bar-01` — Božena Němcová, [Divá Bára — I](https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/I): „Obecní pastýř jmenoval se Jakub a zůstával se svou dcerou Bárou v té poslední chalupě.“
+- `prose-bar-02` — Božena Němcová, [Divá Bára — I](https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/I): „Bára si to pamatovala a tak dlouho zkoušela udržet se nad vodou, až to dokázala.“
+- `prose-bar-03` — Božena Němcová, [Divá Bára — II](https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/II): „Bára nedala s sebou vládnout, aniž si dala pěknými slovy oči zasypat.“
+- `prose-bar-04` — Božena Němcová, [Divá Bára — II](https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/II): „Nesnižuj sebe, nepovyšuj mne, jsme si rovny.“
+- `prose-bar-05` — Božena Němcová, [Divá Bára — III](https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/III): „„Nevěřte takovým báchorám, lidé,“ káral pan farář.“
+- `prose-kar-01` — Božena Němcová, [Karla — I](https://cs.wikisource.org/wiki/Karla/I): „Od Lesního Mnichova k českým hranicím blížila se tlupa vojáků.“
+- `prose-kar-02` — Božena Němcová, [Karla — I](https://cs.wikisource.org/wiki/Karla/I): „Vojáci házeli čapkami do povětří, smáli se, výskali a mnohý stál v němém pohnutí.“
+- `prose-kar-03` — Božena Němcová, [Karla — II](https://cs.wikisource.org/wiki/Karla/II): „Jeho jediná žádost byla, ještě jednou se podívat domů.“
+- `prose-kar-04` — Božena Němcová, [Karla — VIII](https://cs.wikisource.org/wiki/Karla/VIII): „Abychom ho uchránili od stavu vojenského, obelhali jsme dobré lidi a vydali ho za děvče.“
+- `prose-kar-05` — Božena Němcová, [Karla — VIII](https://cs.wikisource.org/wiki/Karla/VIII): „No, ztratil jsem nevěstu, hale našel hodného kamaráda“
+- `prose-lab-01` — Jan Amos Komenský, [Labyrint světa a ráj srdce — I. O příčinách v svět putování](https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/I._O_p%C5%99%C3%AD%C4%8Din%C3%A1ch_v_sv%C4%9Bt_putov%C3%A1n%C3%AD): „aniž mi se hrubě chtělo s někým se raditi, mysle, že mi každý svou věc chváliti bude“
+- `prose-lab-02` — Jan Amos Komenský, [Labyrint světa a ráj srdce — IV. Poutník uzdy a bryllí dostal](https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal): „I vstrčil mi brylle na nos, skrze něž já hledě, hned všecko před sebou jinak vidím.“
+- `prose-lab-03` — Jan Amos Komenský, [Labyrint světa a ráj srdce — IV. Poutník uzdy a bryllí dostal](https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal): „Ač ste mi usta sevřeli a oči zastřeli, věřím však svému Bohu, že mi rozumu a mysli nesvážete.“
+- `prose-lab-04` — Jan Amos Komenský, [Labyrint světa a ráj srdce — IV. Poutník uzdy a bryllí dostal](https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal): „Půjduť a podívám se, co pak ten svět jest“
+- `prose-lab-05` — Jan Amos Komenský, [Labyrint světa a ráj srdce — XXXVII. Poutník domu trefil](https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/XXXVII._Poutn%C3%ADk_domu_trefil): „Navrať se, odkuds vyšel, do domu srdce svého, a zavři po sobě dvéře.“
+- `prose-ner-01` — Jan Neruda, [Povídky malostranské — Pan Ryšánek a pan Schlegl](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Pan_Ry%C5%A1%C3%A1nek_a_pan_Schlegl): „A po těch jedenáct let nepromluvili na sebe ani slova, ba ani si jeden druhého nevšimnul.“
+- `prose-ner-02` — Jan Neruda, [Povídky malostranské — Přivedla žebráka na mizinu](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/P%C5%99ivedla_%C5%BEebr%C3%A1ka_na_mizinu): „Divné zvěsti začaly se najednou šourat Malou Stranou.“
+- `prose-ner-03` — Jan Neruda, [Povídky malostranské — O měkkém srdci paní Rusky](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/O_m%C4%9Bkk%C3%A9m_srdci_pan%C3%AD_Rusky): „A když šel jakýkoli, vyšla dobrá paní Ruska vždycky před dům a srdečně plakala.“
+- `prose-ner-04` — Jan Neruda, [Povídky malostranské — Večerní šplechty](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Ve%C4%8Dern%C3%AD_%C5%A1plechty): „Měli jsme jednou spolek na večeře, každý den měl večeři platit někdo jiný.“
+- `prose-ner-05` — Jan Neruda, [Povídky malostranské — Doktor Kazisvět](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Doktor_Kazisv%C4%9Bt): „Teď ho rychle doneste někam do domu, ať zkusíme pomoci!“
+- `prose-ner-06` — Jan Neruda, [Povídky malostranské — Hastrman](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Hastrman): „Vypravovalo se, že pan Rybář je až báječně bohat.“
+- `prose-ner-07` — Jan Neruda, [Povídky malostranské — Jak si nakouřil pan Vorel pěnovku](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Jak_si_nakou%C5%99il_pan_Vorel_p%C4%9Bnovku): „Jedinou těšitelkou páně Vorlovou byla jeho pěnovka.“
+- `prose-ner-08` — Jan Neruda, [Povídky malostranské — U tří lilií](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/U_t%C5%99%C3%AD_lili%C3%AD): „Seděl jsem pod dřevěnými arkádami hostince U tří lilií, poblíž Strahovské brány.“
+- `prose-ner-09` — Jan Neruda, [Povídky malostranské — Svatováclavská mše](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Svatov%C3%A1clavsk%C3%A1_m%C5%A1e): „Jasně zaznělo as dvoje zapadnutí železa a já byl v kostele sám a zavřen.“
+- `prose-ner-10` — Jan Neruda, [Povídky malostranské — Psáno o letošních Dušičkách](https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Ps%C3%A1no_o_leto%C5%A1n%C3%ADch_Du%C5%A1i%C4%8Dk%C3%A1ch): „Od těch dob jsem už věděla, že se nevdám nikdy a mým ženichem že je smrt.“
+- `prose-pol-01` — Karel Poláček, [Bylo nás pět — kapitola 1](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#1): „Do školy chodím každý den kolem jednopatrového domu, na kterém je štít s nápisem Martin Bejval.“
+- `prose-pol-02` — Karel Poláček, [Bylo nás pět — kapitola 5](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#5): „Avšak já se peru porád, když mě nenechají.“
+- `prose-pol-03` — Karel Poláček, [Bylo nás pět — kapitola 7](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#7): „Až budu velký, tak budu porád cestovat a budu mít kožený kufr.“
+- `prose-pol-04` — Karel Poláček, [Bylo nás pět — kapitola 2](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#2): „Bejval Antonín odvětil, že by se ani trochu nebál, že by tam všecko sežral.“
+- `prose-pol-05` — Karel Poláček, [Bylo nás pět — kapitola 3](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#3): „Přidal se k nám Zilvar z chudobince, protože viděl, že máme s sebou buchty.“
+- `prose-pol-06` — Karel Poláček, [Bylo nás pět — kapitola 2](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#2): „Od té doby, co se narodila Mančinka, dostal jsem kalhoty a tak jsem se stal doopravdy klukem.“
+- `prose-pol-07` — Karel Poláček, [Bylo nás pět — kapitola 4](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#4): „Veškerá dědina lehla popelem a Éda Kemlink si propálil kalhoty a brečel, že takhle nemůže domů.“
+- `prose-pol-08` — Karel Poláček, [Bylo nás pět — kapitola 10](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#10): „My totiž chodíme do houslí tři, já, Čenda Jirsáků a Éda Kemlink.“
+- `prose-pol-09` — Karel Poláček, [Bylo nás pět — kapitola 8](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#8): „Myslím, že to byl Zilvar, jelikož se koukal jinam hned.“
+- `prose-pol-10` — Karel Poláček, [Bylo nás pět — kapitola 6](https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#6): „Kdo má plavky, ten si oblékne plavky, Zilvar z chudobince nemá plavky, pročež se koupá jenom tak.“
+- `prose-kap-01` — Karel Čapek, [Povídky z jedné kapsy — Poslední soud](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Posledn%C3%AD_soud): „Protože všechno vím, nemohu vůbec soudit.“
+- `prose-kap-02` — Karel Čapek, [Povídky z jedné kapsy — Šlépěje](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/%C5%A0l%C3%A9p%C4%9Bje): „Pane, nás nezajímá zločin, protože je záhadný, ale protože je zakázaný.“
+- `prose-kap-03` — Karel Čapek, [Povídky z jedné kapsy — Básník](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/B%C3%A1sn%C3%ADk): „Víte, já nedávám vůbec na podrobnosti pozor.“
+- `prose-kap-04` — Karel Čapek, [Povídky z jedné kapsy — Případ Selvinův](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/P%C5%99%C3%ADpad_Selvin%C5%AFv): „Žádný ze svědků nebyl podroben křížovému výslechu.“
+- `prose-kap-05` — Karel Čapek, [Povídky z jedné kapsy — Případ dr. Mejzlíka](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/P%C5%99%C3%ADpad_dr._Mejzl%C3%ADka): „Čím víc na to myslím, tím míň do toho vidím.“
+- `prose-kap-06` — Karel Čapek, [Povídky z jedné kapsy — Jasnovidec](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Jasnovidec): „To je ten celý trik: mluvit tak, že by se v tom každý mohl poznat.“
+- `prose-kap-07` — Karel Čapek, [Povídky z jedné kapsy — Modrá chryzantéma](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Modr%C3%A1_chryzant%C3%A9ma): „Dobrá, ráno nato byla první věc, že mi Klára zase přinesla pugét modrých chryzantém.“
+- `prose-kap-08` — Karel Čapek, [Povídky z jedné kapsy — Věštkyně](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/V%C4%9B%C5%A1tkyn%C4%9B): „Za jednu guineu mají lidé právo na pořádnou věštbu.“
+- `prose-kap-09` — Karel Čapek, [Povídky z jedné kapsy — Naprostý důkaz](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Naprost%C3%BD_d%C5%AFkaz): „To se tak někdy stane, když člověk píše víc dopisů, že je strčí do nepravých obálek.“
+- `prose-kap-10` — Karel Čapek, [Povídky z jedné kapsy — Experiment profesora Rousse](https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Experiment_profesora_Rousse): „Vy musíte říkat, co vás první napadne.“
+- `prose-tov-01` — Karel Čapek, [Továrna na absolutno — Kapitola 2](https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_2): „Řekni sám, Bondy, co je největší problém moderní techniky?“
+- `prose-tov-02` — Karel Čapek, [Továrna na absolutno — Kapitola 3](https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_3): „Spálíš jeden atom, a máš najednou plný sklep Absolutna.“
+- `prose-tov-03` — Karel Čapek, [Továrna na absolutno — Kapitola 30](https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_30): „Lidi mají nejdřív věřit v lidi, a to ostatní se už najde.“
+- `prose-tov-04` — Karel Čapek, [Továrna na absolutno — Kapitola 30](https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_30): „Tebe zabiju, ale lidstvo spasím.“
+- `prose-tov-05` — Karel Čapek, [Továrna na absolutno — Kapitola 30](https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_30): „Víte, čím větší věci někdo věří, tím vzteklejc pohrdá těma, co v ně nevěří.“
+- `prose-das-01` — Karel Čapek, [Dášeňka čili život štěněte — 1](https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/1): „Když se to narodilo, bylo to jenom takové bílé nic, do hrsti se to vešlo“
+- `prose-das-02` — Karel Čapek, [Dášeňka čili život štěněte — 1](https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/1): „Taková psí maminka, pánové, nemá snadný život: lidí je mnoho a všechny pokousat nemůže.“
+- `prose-das-03` — Karel Čapek, [Dášeňka čili život štěněte — 2](https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/2): „Ale život štěněte je ukrutně složitý: teď zase mu rostou zuby.“
+- `prose-das-04` — Karel Čapek, [Dášeňka čili život štěněte — 3](https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/3): „To byste, pánové, nevěřili, jak je takového štěněte všude plno.“
+- `prose-das-05` — Karel Čapek, [Dášeňka čili život štěněte — 4](https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/4): „Víte, mládí rádo tak trochu přepíná.“
+- `prose-jir-01` — Alois Jirásek, [Staré pověsti české — O Čechovi](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_%C4%8Cechovi): „Vizte, to je ta země, kterou jste hledali.“
+- `prose-jir-02` — Alois Jirásek, [Staré pověsti české — O Krokovi a jeho dcerách](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Krokovi_a_jeho_dcer%C3%A1ch): „Krok pak českou zemí vládl, ji všecku soudil a moudrosti učil.“
+- `prose-jir-03` — Alois Jirásek, [Staré pověsti české — O Bivoji](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Bivoji): „Tu nesu to zlé škodné zvíře, divokého kance z Kavčí hory.“
+- `prose-jir-04` — Alois Jirásek, [Staré pověsti české — O Libuši](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Libu%C5%A1i): „Můj kůň vás povede; za tím jeti neváhejte.“
+- `prose-jir-05` — Alois Jirásek, [Staré pověsti české — O Přemyslovi](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_P%C5%99emyslovi): „Kdybych byl mohl tuto roli doorati, byla by po všecky časy hojnost chleba.“
+- `prose-jir-06` — Alois Jirásek, [Staré pověsti české — Libušina proroctví](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/Libu%C5%A1ina_proroctv%C3%AD): „Město vidím veliké, jehož sláva hvězd se bude dotýkat.“
+- `prose-jir-07` — Alois Jirásek, [Staré pověsti české — Dívčí válka](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/D%C3%ADv%C4%8D%C3%AD_v%C3%A1lka): „Vše vedla Vlasta, někdy nejpřednější v družině Libušině.“
+- `prose-jir-08` — Alois Jirásek, [Staré pověsti české — O Křesomyslu a Horymírovi](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_K%C5%99esomyslu_a_Horym%C3%ADrovi): „Skokem byl Horymír v stáji, kdež stál jeho nejmilejší kůň, Šemík.“
+- `prose-jir-09` — Alois Jirásek, [Staré pověsti české — O králi Svatoplukovi](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_kr%C3%A1li_Svatoplukovi): „A více ho pak dvořané a nikdo již nespatřil.“
+- `prose-jir-10` — Alois Jirásek, [Staré pověsti české — Blaničtí rytíři](https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/Blani%C4%8Dt%C3%AD_ryt%C3%AD%C5%99i): „Svatováclavské vojsko spí. Ještě není čas, aby vstalo.“
+- `prose-sve-01` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Úvod](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C3%9Avod): „Veliká doba žádá velké lidi.“
+- `prose-sve-02` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Úvod](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C3%9Avod): „Jsou nepoznaní hrdinové, skromní, bez slávy a historie Napoleona.“
+- `prose-sve-03` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Zasáhnutí dobrého vojáka Švejka do světové války](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky): „„Tak nám zabili Ferdinanda,“ řekla posluhovačka panu Švejkovi“
+- `prose-sve-04` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Zasáhnutí dobrého vojáka Švejka do světové války](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky): „Ale disciplína na vojně musí být, jinak by si nikdo nedělal z ničeho nic.“
+- `prose-sve-05` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Zasáhnutí dobrého vojáka Švejka do světové války](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky): „Pro nás živnostníky neplatí žádná politika.“
+- `prose-sve-06` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Zasáhnutí dobrého vojáka Švejka do světové války](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky): „Zaplať si pivo a seď v hospodě a žvaň si, co chceš.“
+- `prose-sve-07` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk před soudními lékaři](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i): „Soudní lékaři jsou lidi, a lidi mají svoje chyby.“
+- `prose-sve-08` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk před soudními lékaři](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i): „To už je tak v přirozenosti lidský, že se člověk mejlí až do svý smrti.“
+- `prose-sve-09` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk před soudními lékaři](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i): „„Já ho prosím nevážil,“ se svým milým úsměvem odpověděl Švejk.“
+- `prose-sve-10` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk jde na vojnu](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu): „Jsme biti jako žito, kam se podíváme, a proto mě volají na vojnu.“
+- `prose-sve-11` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk jde na vojnu](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu): „„Odneste toho simulanta!“ řekl Bautze, když zjistil, že je muž mrtev.“
+- `prose-sve-12` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejk jde na vojnu](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu): „Švejk šel o berlích a s hrůzou pozoroval, že jeho revmatismus začíná mizet.“
+- `prose-sve-13` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejkova budějovická anabaze](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze): „Mašírovat pořád kupředu, tomu se říká anabaze.“
+- `prose-sve-14` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejkova budějovická anabaze](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze): „Stejně vedou také všechny cesty do Českých Budějovic.“
+- `prose-sve-15` — Jaroslav Hašek, [Osudy dobrého vojáka Švejka za světové války — Švejkova budějovická anabaze](https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze): „Všichni měli naději, že válka musí za měsíc, dva skončit.“
+- `prose-mlo-01` — Karel Čapek, [Válka s mloky — Salamander-Syndicate](https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Salamander-Syndicate): „Musíme být básníky, chceme-li udržet svět v chodu.“
+- `prose-mlo-02` — Karel Čapek, [Válka s mloky — Chief Salamander klade požadavky](https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Chief_Salamander_klade_po%C5%BEadavky): „Potřebujeme jenom víc vody, víc břehů, víc mělčin pro svůj život.“
+- `prose-mlo-03` — Karel Čapek, [Válka s mloky — Chief Salamander klade požadavky](https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Chief_Salamander_klade_po%C5%BEadavky): „Budete s námi pracovat na odbourání vašeho světa.“
+- `prose-mlo-04` — Karel Čapek, [Válka s mloky — Pan Povondra to bere na sebe](https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Pan_Povondra_to_bere_na_sebe): „U nás to není, tak co; jen kdyby nebyla taková drahota!“
+- `prose-mlo-05` — Karel Čapek, [Válka s mloky — Pan Povondra to bere na sebe](https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Pan_Povondra_to_bere_na_sebe): „To je báječná výhoda, že my nemáme žádné mořské břehy, víš?“
+- `prose-zah-01` — Karel Čapek, [Zahradníkův rok — Jak vzniká zahradník](https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Jak_vznik%C3%A1_zahradn%C3%ADk): „Proti všemu zdání zahradník se nerodí ze semene, výhonku, cibule, hlízy ani štupru, nýbrž vzniká zkušeností, okolím a přírodními podmínkami.“
+- `prose-zah-02` — Karel Čapek, [Zahradníkův rok — Požehnaný déšť](https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Po%C5%BEehnan%C3%BD_d%C3%A9%C5%A1%C5%A5): „Žádný zázrak slunce nevyrovná se zázraku požehnaného deště.“
+- `prose-zah-03` — Karel Čapek, [Zahradníkův rok — O životě zahradnickém](https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/O_%C5%BEivot%C4%9B_zahradnick%C3%A9m): „To pravé, to nejlepší je před námi.“
+- `prose-zah-04` — Karel Čapek, [Zahradníkův rok — Půda](https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/P%C5%AFda): „Říkám vám, zkrotit pár sáhů půdy je veliké vítězství.“
+- `prose-zah-05` — Karel Čapek, [Zahradníkův rok — Jak se zakládají zahrádky](https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Jak_se_zakl%C3%A1daj%C3%AD_zahr%C3%A1dky): „Je to tak: čím horší neřád, tím víc se má k světu.“
+
+## Obtížnost a redakční poznámky
+
+Každá položka obsahuje5 různých předání s postupným odklonem. Poslední má10–22slov a používá jinou situaci či obraz, přitom se snaží zachovat vztahy původního významu. Nejsou použita originální autorská jména jako pomocné vodítko ve finále. Nejde o ověření obtížnosti na reprezentativním vzorku hráčů; u méně známých knižních vět bude vhodné následné hráčské testování a případné doplnění uznávaných jazykových variant.
+
+Položky původně citující přísloví o pírku, chlebu a domově byly nahrazeny vypravěčskými větami, aby nedublovaly přísloví-banku. Libušino proroctví je přesně Jiráskovo literární znění, nikoli doklad historické promluvy. Krátké obecné autorské věty z Čapka a Haška lze poznávat i jako citáty; při spojování bank porovnat cíle po normalizaci.

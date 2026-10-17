@@ -1,5 +1,5 @@
 import {getStore} from '@netlify/blobs';
-import {createHandler} from '../../service.mjs';
+import {createHandler} from '../../legacy-server/service.mjs';
 export default async (request,context) => {
   try {
     const store=getStore({name:process.env.SEPTANDA_STORE || 'septanda-players-v1',consistency:'strong',region:'eu-central-1'});

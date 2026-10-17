@@ -1,0 +1,34 @@
+{
+  "puzzles": 500,
+  "dailySets": 100,
+  "newTargetsUnique": true,
+  "legacyTargetsReused": 0,
+  "categoryCounts": {
+    "quote": 100,
+    "proverb": 200,
+    "poem": 100,
+    "prose": 100
+  },
+  "exactPrimaryTextMatches": {
+    "proverbs": 200,
+    "poetry": 100,
+    "prose": 100
+  },
+  "historicalOwnTranslationsWithSources": 100,
+  "historicalWithAlternateFormulations": 100,
+  "dates": {
+    "start": "2026-10-17",
+    "end": "2027-01-24",
+    "timeZone": "Europe/Prague"
+  },
+  "allDailyIdsUnique": true,
+  "sourceLinks": 163,
+  "checks": 1000,
+  "limits": [
+    "Historical Czech texts are editorial translations of named primary texts, not mechanically verified quotations from a canonical Czech edition.",
+    "Lexical overlap is diagnostic, not player-calibrated difficulty.",
+    "Source availability and later external page edits are not guaranteed."
+  ],
+  "historicalCoverageReplacements": 20,
+  "checked": "2026-10-17"
+}
