@@ -1899,8 +1899,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 
 /* Masivní úvodní sazba archivního vydání. */
 .intro-instructions { position: relative; display: block; padding: 45px 0 54px; }
-.intro-instructions h1 { font: 700 clamp(58px, 7.15vw, 90px)/.98 var(--display); letter-spacing: -.025em; max-width: 100%; }
-.intro-instructions h1 em { font-style: normal; font-weight: 700; }
+.intro-instructions h1 { font: 900 clamp(58px, 7.15vw, 90px)/.98 var(--display); font-synthesis: none; letter-spacing: -.025em; max-width: 100%; }
+.intro-instructions h1 em { font-style: normal; font-weight: 900; }
 .intro-instructions .edition-slip { position: absolute; right: 0; top: 45px; width: 164px; }
 @media (max-width: 1100px) {
   .intro-instructions h1 { font-size: clamp(58px, 7.1vw, 78px); }

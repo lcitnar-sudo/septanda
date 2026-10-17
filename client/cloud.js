@@ -78,6 +78,12 @@
     if (applying || !ready || !session || !profile) return;
     clearTimeout(timer); timer = setTimeout(() => sync(), 700);
   }
+  function resume() {
+    // A failed initial profile request must be retried after reconnecting as well.
+    if (session && (!ready || !profile)) return loadAccount(session);
+    if (session) sync(true);
+    refreshBoard();
+  }
   async function sync(force = false, importState = null) {
     if (!ready || !session || !profile) return;
     if (syncing) { pending = true; return; }
@@ -242,13 +248,14 @@
     $('player-dialog').addEventListener('close', () => { $('player-password').value = ''; });
     $('recovery-dialog').addEventListener('close', () => { $('recovery-password').value = ''; $('recovery-password-again').value = ''; });
     document.addEventListener('septanda:progress', scheduleSync);
-    window.addEventListener('focus', () => { if (session) sync(true); refreshBoard(); });
-    document.addEventListener('visibilitychange', () => { if (!document.hidden) { if (session) sync(true); refreshBoard(); } });
-    setInterval(() => { if (!document.hidden) { if (session) sync(true); refreshBoard(); } },60000);
+    window.addEventListener('focus', resume);
+    window.addEventListener('online', resume);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) resume(); });
+    setInterval(() => { if (!document.hidden) resume(); },60000);
     sdk.auth.onAuthStateChange((event, nextSession) => {
       if (event === 'PASSWORD_RECOVERY') setTimeout(() => open('recovery-dialog'),0);
       if (authAction) return;
-      if (event === 'TOKEN_REFRESHED' && nextSession?.user.id === session?.user.id) { session = nextSession; return; }
+      if (event === 'TOKEN_REFRESHED' && nextSession?.user.id === session?.user.id) { session = nextSession; if (!ready) setTimeout(resume,0); return; }
       if (event === 'SIGNED_IN' && nextSession?.user.id === session?.user.id && ready) { session = nextSession; return; }
       setTimeout(() => loadAccount(nextSession),0);
     });

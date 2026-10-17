@@ -128,6 +128,7 @@
   $('profile-dialog').addEventListener('close',()=>{$('profile-password').value='';$('profile-email').value='';});
   document.addEventListener('septanda:progress',()=>{if(!account)return;clearTimeout(timer);timer=setTimeout(refresh,400);});
   window.addEventListener('focus',()=>{if(data)refresh();});
+  window.addEventListener('online',refresh);
   document.addEventListener('visibilitychange',()=>{if(!document.hidden && data)refresh();});
   setInterval(()=>{if(!document.hidden && data)refresh();},60000);
   refresh();
