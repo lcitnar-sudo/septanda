@@ -1,11 +1,11 @@
 {
   "version": "septanda-100days-v2",
   "timeZone": "Europe/Prague",
-  "startDate": "2026-10-18",
-  "endDate": "2027-01-25",
+  "startDate": "2026-10-19",
+  "endDate": "2027-01-26",
   "days": [
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "ids": [
         "proverb-archive-3beea40a787e",
         "quote-seneca-rest",
@@ -15,7 +15,7 @@
       ]
     },
     {
-      "date": "2026-10-19",
+      "date": "2026-10-20",
       "ids": [
         "quote-nietzsche-stronger",
         "poem-erben-stedry-den-03",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "ids": [
         "poem-erben-lilie-03",
         "proverb-archive-d45f9b9ac9b9",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "date": "2026-10-21",
+      "date": "2026-10-22",
       "ids": [
         "proverb-archive-4722424562bd",
         "prose-sve-10",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-23",
       "ids": [
         "prose-sve-15",
         "proverb-archive-e26a6b5ee661",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "date": "2026-10-23",
+      "date": "2026-10-24",
       "ids": [
         "proverb-archive-fce6dad3bc9f",
         "quote-marcus-obstacle",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "date": "2026-10-24",
+      "date": "2026-10-25",
       "ids": [
         "quote-machiavelli-appearance",
         "poem-wolker-postovni-schranka-03",
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "date": "2026-10-25",
+      "date": "2026-10-26",
       "ids": [
         "poem-erben-zlaty-kolovrat-02",
         "proverb-archive-fd3fa63ea449",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "date": "2026-10-26",
+      "date": "2026-10-27",
       "ids": [
         "proverb-archive-e34efc5a49fd",
         "prose-das-02",
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "date": "2026-10-27",
+      "date": "2026-10-28",
       "ids": [
         "prose-ner-07",
         "proverb-archive-0e1821c8335a",
@@ -105,7 +105,7 @@
       ]
     },
     {
-      "date": "2026-10-28",
+      "date": "2026-10-29",
       "ids": [
         "proverb-archive-0c906f7442e7",
         "quote-marcus-change",
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "ids": [
         "quote-horace-day",
         "poem-neruda-2-02",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "date": "2026-10-30",
+      "date": "2026-10-31",
       "ids": [
         "poem-wolker-pokora-02",
         "proverb-archive-3d73c3384b2a",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "date": "2026-10-31",
+      "date": "2026-11-01",
       "ids": [
         "proverb-archive-7218e68c79c4",
         "prose-bar-05",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "date": "2026-11-01",
+      "date": "2026-11-02",
       "ids": [
         "prose-mlo-04",
         "proverb-archive-b09f553ee120",
@@ -155,7 +155,7 @@
       ]
     },
     {
-      "date": "2026-11-02",
+      "date": "2026-11-03",
       "ids": [
         "proverb-archive-6bd0dfb2f801",
         "quote-epictetus-opinions",
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "ids": [
         "quote-petrarch-peace",
         "poem-erben-holoubek-02",
@@ -175,7 +175,7 @@
       ]
     },
     {
-      "date": "2026-11-04",
+      "date": "2026-11-05",
       "ids": [
         "poem-wolker-okno-02",
         "proverb-archive-bad2ba04678d",
@@ -185,7 +185,7 @@
       ]
     },
     {
-      "date": "2026-11-05",
+      "date": "2026-11-06",
       "ids": [
         "proverb-archive-8a156ea0364c",
         "prose-kap-06",
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "date": "2026-11-06",
+      "date": "2026-11-07",
       "ids": [
         "prose-pol-02",
         "proverb-archive-495687c548a8",
@@ -205,7 +205,7 @@
       ]
     },
     {
-      "date": "2026-11-07",
+      "date": "2026-11-08",
       "ids": [
         "proverb-archive-761da47474bf",
         "quote-confucius-teachers",
@@ -215,7 +215,7 @@
       ]
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-09",
       "ids": [
         "quote-epictetus-return",
         "poem-neruda-1-02",
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "date": "2026-11-09",
+      "date": "2026-11-10",
       "ids": [
         "poem-celakovsky-toman-01",
         "proverb-archive-dd041d0a21a3",
@@ -235,7 +235,7 @@
       ]
     },
     {
-      "date": "2026-11-10",
+      "date": "2026-11-11",
       "ids": [
         "proverb-archive-9480e2e1b60c",
         "prose-pol-01",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "date": "2026-11-11",
+      "date": "2026-11-12",
       "ids": [
         "prose-lab-02",
         "proverb-archive-3a4ae7405313",
@@ -255,7 +255,7 @@
       ]
     },
     {
-      "date": "2026-11-12",
+      "date": "2026-11-13",
       "ids": [
         "proverb-archive-1aa296aafe68",
         "quote-marcus-within",
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "date": "2026-11-13",
+      "date": "2026-11-14",
       "ids": [
         "quote-ovid-change",
         "poem-neruda-7-02",
@@ -275,7 +275,7 @@
       ]
     },
     {
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "ids": [
         "poem-vrchlicky-podobenstvi-02",
         "proverb-archive-950593b5aba4",
@@ -285,7 +285,7 @@
       ]
     },
     {
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "ids": [
         "proverb-archive-631cb2842bc5",
         "prose-bar-01",
@@ -295,7 +295,7 @@
       ]
     },
     {
-      "date": "2026-11-16",
+      "date": "2026-11-17",
       "ids": [
         "prose-sve-11",
         "proverb-archive-ed55c6243dce",
@@ -305,7 +305,7 @@
       ]
     },
     {
-      "date": "2026-11-17",
+      "date": "2026-11-18",
       "ids": [
         "proverb-archive-695448a19b17",
         "quote-virgil-fortune",
@@ -315,7 +315,7 @@
       ]
     },
     {
-      "date": "2026-11-18",
+      "date": "2026-11-19",
       "ids": [
         "quote-comenius-return",
         "poem-erben-svatebni-kosile-04",
@@ -325,7 +325,7 @@
       ]
     },
     {
-      "date": "2026-11-19",
+      "date": "2026-11-20",
       "ids": [
         "poem-halek-61-03",
         "proverb-archive-bad02901ad71",
@@ -335,7 +335,7 @@
       ]
     },
     {
-      "date": "2026-11-20",
+      "date": "2026-11-21",
       "ids": [
         "proverb-archive-fd04ef60f422",
         "prose-mlo-01",
@@ -345,7 +345,7 @@
       ]
     },
     {
-      "date": "2026-11-21",
+      "date": "2026-11-22",
       "ids": [
         "prose-sve-14",
         "proverb-archive-8054f23aedad",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
       "ids": [
         "proverb-archive-44c040cd9fc3",
         "quote-aristotle-poetry",
@@ -365,7 +365,7 @@
       ]
     },
     {
-      "date": "2026-11-23",
+      "date": "2026-11-24",
       "ids": [
         "quote-pascal-reed",
         "poem-halek-3-03",
@@ -375,7 +375,7 @@
       ]
     },
     {
-      "date": "2026-11-24",
+      "date": "2026-11-25",
       "ids": [
         "poem-halek-3-01",
         "proverb-archive-4a649ec7d600",
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "date": "2026-11-25",
+      "date": "2026-11-26",
       "ids": [
         "proverb-archive-891b77f6e398",
         "prose-bab-09",
@@ -395,7 +395,7 @@
       ]
     },
     {
-      "date": "2026-11-26",
+      "date": "2026-11-27",
       "ids": [
         "prose-sve-06",
         "proverb-archive-5670b07a8eb5",
@@ -405,7 +405,7 @@
       ]
     },
     {
-      "date": "2026-11-27",
+      "date": "2026-11-28",
       "ids": [
         "proverb-archive-9a082078db25",
         "quote-cicero-history",
@@ -415,7 +415,7 @@
       ]
     },
     {
-      "date": "2026-11-28",
+      "date": "2026-11-29",
       "ids": [
         "quote-bacon-reading",
         "poem-wolker-veci-01",
@@ -425,7 +425,7 @@
       ]
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-30",
       "ids": [
         "poem-neruda-1-01",
         "proverb-archive-438a9c4a3e4b",
@@ -435,7 +435,7 @@
       ]
     },
     {
-      "date": "2026-11-30",
+      "date": "2026-12-01",
       "ids": [
         "proverb-archive-ad4b210b0790",
         "prose-zah-05",
@@ -445,7 +445,7 @@
       ]
     },
     {
-      "date": "2026-12-01",
+      "date": "2026-12-02",
       "ids": [
         "prose-kap-08",
         "proverb-archive-7685199a54e1",
@@ -455,7 +455,7 @@
       ]
     },
     {
-      "date": "2026-12-02",
+      "date": "2026-12-03",
       "ids": [
         "proverb-archive-e19811629700",
         "quote-socrates-wrongdoing",
@@ -465,7 +465,7 @@
       ]
     },
     {
-      "date": "2026-12-03",
+      "date": "2026-12-04",
       "ids": [
         "quote-galileo-mathematics",
         "poem-halek-2-01",
@@ -475,7 +475,7 @@
       ]
     },
     {
-      "date": "2026-12-04",
+      "date": "2026-12-05",
       "ids": [
         "poem-neruda-21-03",
         "proverb-archive-7d5d0e461d49",
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "date": "2026-12-05",
+      "date": "2026-12-06",
       "ids": [
         "proverb-archive-65815c58fd08",
         "prose-jir-07",
@@ -495,7 +495,7 @@
       ]
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-07",
       "ids": [
         "prose-pol-08",
         "proverb-archive-187c5bbab978",
@@ -505,7 +505,7 @@
       ]
     },
     {
-      "date": "2026-12-07",
+      "date": "2026-12-08",
       "ids": [
         "proverb-archive-549ea55869df",
         "quote-lao-tiptoe",
@@ -515,7 +515,7 @@
       ]
     },
     {
-      "date": "2026-12-08",
+      "date": "2026-12-09",
       "ids": [
         "quote-terence-human",
         "poem-erben-lilie-04",
@@ -525,7 +525,7 @@
       ]
     },
     {
-      "date": "2026-12-09",
+      "date": "2026-12-10",
       "ids": [
         "poem-neruda-21-04",
         "proverb-archive-0c96214c5a9f",
@@ -535,7 +535,7 @@
       ]
     },
     {
-      "date": "2026-12-10",
+      "date": "2026-12-11",
       "ids": [
         "proverb-archive-57caea6481db",
         "prose-pol-06",
@@ -545,7 +545,7 @@
       ]
     },
     {
-      "date": "2026-12-11",
+      "date": "2026-12-12",
       "ids": [
         "prose-sve-07",
         "proverb-archive-62df628d894a",
@@ -555,7 +555,7 @@
       ]
     },
     {
-      "date": "2026-12-12",
+      "date": "2026-12-13",
       "ids": [
         "proverb-archive-e9817062cd8f",
         "quote-horace-wise",
@@ -565,7 +565,7 @@
       ]
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-14",
       "ids": [
         "quote-confucius-education",
         "poem-erben-vodnik-01",
@@ -575,7 +575,7 @@
       ]
     },
     {
-      "date": "2026-12-14",
+      "date": "2026-12-15",
       "ids": [
         "poem-wolker-kamna-03",
         "proverb-archive-1b83f09a60df",
@@ -585,7 +585,7 @@
       ]
     },
     {
-      "date": "2026-12-15",
+      "date": "2026-12-16",
       "ids": [
         "proverb-archive-6ef9fa564c68",
         "prose-ner-02",
@@ -595,7 +595,7 @@
       ]
     },
     {
-      "date": "2026-12-16",
+      "date": "2026-12-17",
       "ids": [
         "prose-bab-04",
         "proverb-archive-d91a8f97efb5",
@@ -605,7 +605,7 @@
       ]
     },
     {
-      "date": "2026-12-17",
+      "date": "2026-12-18",
       "ids": [
         "proverb-archive-04e1ca26d134",
         "quote-cervantes-freedom",
@@ -615,7 +615,7 @@
       ]
     },
     {
-      "date": "2026-12-18",
+      "date": "2026-12-19",
       "ids": [
         "quote-seneca-everywhere",
         "poem-wolker-kamna-01",
@@ -625,7 +625,7 @@
       ]
     },
     {
-      "date": "2026-12-19",
+      "date": "2026-12-20",
       "ids": [
         "poem-celakovsky-pocestny-02",
         "proverb-archive-71c490e450c2",
@@ -635,7 +635,7 @@
       ]
     },
     {
-      "date": "2026-12-20",
+      "date": "2026-12-21",
       "ids": [
         "proverb-archive-b2431d986819",
         "prose-zah-03",
@@ -645,7 +645,7 @@
       ]
     },
     {
-      "date": "2026-12-21",
+      "date": "2026-12-22",
       "ids": [
         "prose-das-01",
         "proverb-archive-eebf3e214a43",
@@ -655,7 +655,7 @@
       ]
     },
     {
-      "date": "2026-12-22",
+      "date": "2026-12-23",
       "ids": [
         "proverb-archive-8aa8b7714526",
         "quote-confucius-mistake",
@@ -665,7 +665,7 @@
       ]
     },
     {
-      "date": "2026-12-23",
+      "date": "2026-12-24",
       "ids": [
         "quote-plato-philosopher-kings",
         "poem-erben-poklad-03",
@@ -675,7 +675,7 @@
       ]
     },
     {
-      "date": "2026-12-24",
+      "date": "2026-12-25",
       "ids": [
         "poem-erben-poklad-01",
         "proverb-archive-3c9deb17f6bf",
@@ -685,7 +685,7 @@
       ]
     },
     {
-      "date": "2026-12-25",
+      "date": "2026-12-26",
       "ids": [
         "proverb-archive-e460a544e9f2",
         "prose-pol-03",
@@ -695,7 +695,7 @@
       ]
     },
     {
-      "date": "2026-12-26",
+      "date": "2026-12-27",
       "ids": [
         "prose-sve-05",
         "proverb-archive-a7f2df12d661",
@@ -705,7 +705,7 @@
       ]
     },
     {
-      "date": "2026-12-27",
+      "date": "2026-12-28",
       "ids": [
         "proverb-archive-6b14049dfd5d",
         "quote-pascal-heart",
@@ -715,7 +715,7 @@
       ]
     },
     {
-      "date": "2026-12-28",
+      "date": "2026-12-29",
       "ids": [
         "quote-seneca-time",
         "poem-erben-vodnik-04",
@@ -725,7 +725,7 @@
       ]
     },
     {
-      "date": "2026-12-29",
+      "date": "2026-12-30",
       "ids": [
         "poem-neruda-3-03",
         "proverb-archive-7e51697c5bca",
@@ -735,7 +735,7 @@
       ]
     },
     {
-      "date": "2026-12-30",
+      "date": "2026-12-31",
       "ids": [
         "proverb-archive-754bd342f6f1",
         "prose-jir-06",
@@ -745,7 +745,7 @@
       ]
     },
     {
-      "date": "2026-12-31",
+      "date": "2027-01-01",
       "ids": [
         "prose-jir-04",
         "proverb-archive-4a5ba0900615",
@@ -755,7 +755,7 @@
       ]
     },
     {
-      "date": "2027-01-01",
+      "date": "2027-01-02",
       "ids": [
         "proverb-archive-8af9ca0a1897",
         "quote-more-property",
@@ -765,7 +765,7 @@
       ]
     },
     {
-      "date": "2027-01-02",
+      "date": "2027-01-03",
       "ids": [
         "quote-epictetus-invincible",
         "poem-celakovsky-toman-02",
@@ -775,7 +775,7 @@
       ]
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-04",
       "ids": [
         "poem-erben-lilie-02",
         "proverb-archive-4d5cfdb8f3ed",
@@ -785,7 +785,7 @@
       ]
     },
     {
-      "date": "2027-01-04",
+      "date": "2027-01-05",
       "ids": [
         "proverb-archive-9113adab98a8",
         "prose-kap-02",
@@ -795,7 +795,7 @@
       ]
     },
     {
-      "date": "2027-01-05",
+      "date": "2027-01-06",
       "ids": [
         "prose-tov-03",
         "proverb-archive-af0af9be1852",
@@ -805,7 +805,7 @@
       ]
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-07",
       "ids": [
         "proverb-archive-39fbf97fa280",
         "quote-epictetus-practice",
@@ -815,7 +815,7 @@
       ]
     },
     {
-      "date": "2027-01-07",
+      "date": "2027-01-08",
       "ids": [
         "quote-epictetus-speak-little",
         "poem-erben-stedry-den-04",
@@ -825,7 +825,7 @@
       ]
     },
     {
-      "date": "2027-01-08",
+      "date": "2027-01-09",
       "ids": [
         "poem-neruda-7-01",
         "proverb-archive-2bbc786a0e65",
@@ -835,7 +835,7 @@
       ]
     },
     {
-      "date": "2027-01-09",
+      "date": "2027-01-10",
       "ids": [
         "proverb-archive-b069815bc5ee",
         "prose-bab-06",
@@ -845,7 +845,7 @@
       ]
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-11",
       "ids": [
         "prose-sve-01",
         "proverb-archive-bfc3a53dc624",
@@ -855,7 +855,7 @@
       ]
     },
     {
-      "date": "2027-01-11",
+      "date": "2027-01-12",
       "ids": [
         "proverb-archive-937fb00007f8",
         "quote-epictetus-banquet",
@@ -865,7 +865,7 @@
       ]
     },
     {
-      "date": "2027-01-12",
+      "date": "2027-01-13",
       "ids": [
         "quote-horace-homer",
         "poem-wolker-veci-02",
@@ -875,7 +875,7 @@
       ]
     },
     {
-      "date": "2027-01-13",
+      "date": "2027-01-14",
       "ids": [
         "poem-vrchlicky-podobenstvi-03",
         "proverb-archive-c75c44fa54fd",
@@ -885,7 +885,7 @@
       ]
     },
     {
-      "date": "2027-01-14",
+      "date": "2027-01-15",
       "ids": [
         "proverb-archive-b526dcd45ec5",
         "prose-ner-01",
@@ -895,7 +895,7 @@
       ]
     },
     {
-      "date": "2027-01-15",
+      "date": "2027-01-16",
       "ids": [
         "prose-das-04",
         "proverb-archive-fcf2fd0a92cf",
@@ -905,7 +905,7 @@
       ]
     },
     {
-      "date": "2027-01-16",
+      "date": "2027-01-17",
       "ids": [
         "proverb-archive-4c70a0bb8055",
         "quote-aristotle-political",
@@ -915,7 +915,7 @@
       ]
     },
     {
-      "date": "2027-01-17",
+      "date": "2027-01-18",
       "ids": [
         "quote-lao-silence",
         "poem-neruda-2-03",
@@ -925,7 +925,7 @@
       ]
     },
     {
-      "date": "2027-01-18",
+      "date": "2027-01-19",
       "ids": [
         "poem-wolker-okno-04",
         "proverb-archive-587079a0ef7c",
@@ -935,7 +935,7 @@
       ]
     },
     {
-      "date": "2027-01-19",
+      "date": "2027-01-20",
       "ids": [
         "proverb-archive-f1958e414934",
         "prose-ner-03",
@@ -945,7 +945,7 @@
       ]
     },
     {
-      "date": "2027-01-20",
+      "date": "2027-01-21",
       "ids": [
         "prose-ner-10",
         "proverb-archive-fe4d73d28e0a",
@@ -955,7 +955,7 @@
       ]
     },
     {
-      "date": "2027-01-21",
+      "date": "2027-01-22",
       "ids": [
         "proverb-archive-9b395932cf1e",
         "quote-lao-self-victory",
@@ -965,7 +965,7 @@
       ]
     },
     {
-      "date": "2027-01-22",
+      "date": "2027-01-23",
       "ids": [
         "quote-tagore-fearless",
         "poem-celakovsky-pocestny-04",
@@ -975,7 +975,7 @@
       ]
     },
     {
-      "date": "2027-01-23",
+      "date": "2027-01-24",
       "ids": [
         "poem-neruda-22-05",
         "proverb-archive-33902c174d6f",
@@ -985,7 +985,7 @@
       ]
     },
     {
-      "date": "2027-01-24",
+      "date": "2027-01-25",
       "ids": [
         "proverb-archive-7d8ee8c614b4",
         "prose-pol-05",
@@ -995,7 +995,7 @@
       ]
     },
     {
-      "date": "2027-01-25",
+      "date": "2027-01-26",
       "ids": [
         "prose-sve-09",
         "proverb-archive-b4899a351416",

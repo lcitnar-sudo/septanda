@@ -35,6 +35,7 @@ assert.deepEqual(legacy,['poem-may','proverb-pit','poem-bouquet','caesar-dice','
 assert.deepEqual(daily.plan('2026-10-15'),['poem-bouquet','poem-noon','descartes','proverb-work','poem-may']);checks++;
 check(daily.plan('2026-10-16').join()===legacy.join(),'Published prelaunch day preserved');
 assert.deepEqual(daily.plan('2026-10-17'),['caesar-victory','descartes','poem-noon','poem-may','proverb-work']);checks++;
+assert.deepEqual(daily.plan('2026-10-18'),['proverb-pit','poem-may','caesar-dice','proverb-work','proverb-measure']);checks++;
 const state=daily.createState(null), day=daily.ensureDay(state,'2026-10-16');
 day.progress[day.ids[0]]={attempts:[{id:'qa-stable-id',text:byId.get(day.ids[0]).answer,time:123}],hints:['clue'],status:'won',draft:''};
 const cleaned=daily.sanitizeState(state);
