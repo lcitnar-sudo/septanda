@@ -18,19 +18,23 @@ for(const p of puzzles){
   check(p.concepts.length>0 && p.concepts.every(g=>g.length>0),'Semantic cues: '+p.id);
 }
 const allDays=[];
+const startTime=Date.parse(daily.scheduleStart+'T12:00:00Z');
+check(Number.isFinite(startTime),'The curated calendar has a valid launch date');
 for(let i=0;i<100;i++){
-  const date=new Date(Date.UTC(2026,9,17+i,12)).toISOString().slice(0,10), day=daily.plan(date);
+  const date=new Date(startTime+i*86400000).toISOString().slice(0,10), day=daily.plan(date);
   check(day.length===5 && new Set(day).size===5 && day.every(id=>byId.has(id)),'Five valid puzzles: '+date);
   const categories=day.map(id=>byId.get(id).category);
   check(categories.filter(c=>c==='Lidové přísloví').length===2,'Daily two proverbs: '+date);
   allDays.push(...day);
 }
 check(new Set(allDays).size===500,'No repeat during100 days');
-check(daily.plan('2027-01-25').join()===daily.plan('2026-10-17').join(),'After100days the curated cycle repeats');
+const cycleDate=new Date(startTime+100*86400000).toISOString().slice(0,10);
+check(daily.plan(cycleDate).join()===daily.plan(daily.scheduleStart).join(),'After100days the curated cycle repeats');
 const legacy=daily.legacyPlan('2026-10-16');
 assert.deepEqual(legacy,['poem-may','proverb-pit','poem-bouquet','caesar-dice','proverb-measure']);checks++;
 assert.deepEqual(daily.plan('2026-10-15'),['poem-bouquet','poem-noon','descartes','proverb-work','poem-may']);checks++;
 check(daily.plan('2026-10-16').join()===legacy.join(),'Published prelaunch day preserved');
+assert.deepEqual(daily.plan('2026-10-17'),['caesar-victory','descartes','poem-noon','poem-may','proverb-work']);checks++;
 const state=daily.createState(null), day=daily.ensureDay(state,'2026-10-16');
 day.progress[day.ids[0]]={attempts:[{id:'qa-stable-id',text:byId.get(day.ids[0]).answer,time:123}],hints:['clue'],status:'won',draft:''};
 const cleaned=daily.sanitizeState(state);

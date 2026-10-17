@@ -12,9 +12,11 @@ V novém projektu otevři **SQL Editor → New query**. Vlož celý obsah soubor
 
 V **Authentication → Sign In / Providers → Email** zapni e-mail a potvrzování adresy. Aplikace podporuje e-mail + heslo, potvrzovací odkaz a obnovu hesla. Google přihlášení není v této integraci nastavené.
 
-V **Authentication → URL Configuration** nastav Site URL na skutečnou veřejnou adresu hry, například `https://dazzling-kleicha-efa517.netlify.app/`. Do Redirect URLs přidej stejnou adresu a `https://dazzling-kleicha-efa517.netlify.app/?account=recovery`. Pro místní ověření lze přidat `http://127.0.0.1:8785/` a `http://127.0.0.1:8785/?account=recovery`. Pokud používáš projekt `fascinating-babsousa-5b2ee7`, nahraď doménu jeho adresou; oba projekty současně bez záměru nepropojuj.
+V **Authentication → URL Configuration** nastav Site URL na `https://septanda.com/`. Do Redirect URLs patří `https://septanda.com/` a `https://septanda.com/?account=recovery`. Zachované původní adresy jsou `https://dazzling-kleicha-efa517.netlify.app/` a `https://dazzling-kleicha-efa517.netlify.app/?account=recovery`. Pro místní ověření lze samostatně přidat `http://127.0.0.1:8785/` a `http://127.0.0.1:8785/?account=recovery`. Jiné projekty Netlify nejsou součástí této instalace.
 
 Pro registrace skutečných hráčů nastav v Supabase také **vlastní SMTP** a ověřenou odesílací adresu. Výchozí odesílání Supabase je určené pro testy a omezuje příjemce; samotné založení projektu nestačí pro doručování potvrzení všem hráčům. Přihlašovací e-maily neobsahují marketing a nevyžadují souhlas s novinkami. [Oficiální návod SMTP](https://supabase.com/docs/guides/auth/auth-smtp), [nastavení návratových adres](https://supabase.com/docs/guides/auth/redirect-urls).
+
+Pro tuto instalaci je připravené Resend SMTP s oddělenou odesílací doménou `auth.septanda.com`, region Ireland. DNS hodnoty vždy zkopíruj z konkrétního účtu Resend; nepoužívej ukázkové podpisové záznamy. Odesílání povol až po ověření domény. Host je `smtp.resend.com`, port `465`, uživatel `resend`; jako SMTP heslo slouží omezený odesílací API klíč, nikoli heslo Gmailu. Vypni sledování otevření a kliknutí u přihlašovacích zpráv. Přijímání e-mailů pro tuto subdoménu není potřeba povolovat. [Návod Resend pro Supabase](https://resend.com/docs/send-with-supabase-smtp).
 
 ## 3. Tři proměnné v Netlify
 
@@ -58,7 +60,7 @@ Souhlas s novinkami je samostatný, nepovinný a při registraci prázdný. Data
 
 ## 6. Napište nám
 
-V Netlify **Forms** zapni **form detection** a poté web znovu nasaď. Po zpracování má být vidět formulář `septanda-contact`. Zprávy jsou v jeho Submissions. Pokud je chceš i e-mailem, přidej v Netlify oznámení o novém podání na svou adresu. Formulář má skrytou spamovou past a používá filtrování Netlify. V místním náhledu se zprávy neposílají. [Nastavení Netlify Forms](https://docs.netlify.com/manage/forms/setup/).
+V Netlify **Forms** zapni **form detection** a poté web znovu nasaď. Po zpracování má být vidět formulář `septanda-contact`. Zprávy jsou v jeho Submissions. E-mailová oznámení patří na `infoseptanda@gmail.com`; jejich doručení ověř po nasazení formuláře. Formulář má skrytou spamovou past a používá filtrování Netlify. V místním náhledu se zprávy neposílají. [Nastavení Netlify Forms](https://docs.netlify.com/manage/forms/setup/).
 
 ## 7. Přechod dosavadních hráčů
 
