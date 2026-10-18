@@ -407,7 +407,8 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
         if (score.accepted) round.status = 'won';
       }
     }
-    if (source.status === 'revealed') round.status = 'revealed';
+    // Already completed history survives later scoring corrections. The server still validates new wins.
+    if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
     return round;

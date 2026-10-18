@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.1.6">
+  <meta name="septanda-build" content="5.1.7">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
   <title>Šeptanda — Pět výroků na každý den</title>
@@ -2132,7 +2132,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.6 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.7 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
@@ -3332,7 +3332,8 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
         if (score.accepted) round.status = 'won';
       }
     }
-    if (source.status === 'revealed') round.status = 'revealed';
+    // Already completed history survives later scoring corrections. The server still validates new wins.
+    if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
     return round;

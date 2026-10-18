@@ -56,6 +56,8 @@ Import starší `legacy.progress` části je povolen pouze na výslovné první 
 
 ## Co se ukládá a jak se řeší souběh zařízení
 
+Běžné nasazení aktualizuje pouze web a serverové funkce. Nepřepojovat produkční Supabase projekt, nespouštět znovu úvodní migraci a nepřejmenovávat tabulky ani trvalé klíče podle verze webu. Změny databáze se připravují oddělenou přírůstkovou migrací a nejprve ověřují mimo produkci. Obsahový kontrakt `content/published-history.json` a regresní testy se kontrolují při každém sestavení; vydaný výrok se neodstraňuje ani nepoužije pro jinou hádanku a dřívější kalendář se nepřeskládává.
+
 Soukromá data obsahují e-mail, přezdívku, celý v6 postup, všechny uložené tipy, zakoupené nápovědy, rozluštěné i odhalené hádanky a rozepsaný tip. Každý tip má stálé označení. Shodné odeslání se nepočítá dvakrát; starší zařízení nemůže vymazat již uložené tipy, nákupy nebo výsledky. Při konfliktu rozepsaného tipu a právě otevřeného výroku vyhraje poslední úspěšné uložení. Výsledky a body se počítají na serveru stejným hodnoticím modulem jako ve hře.
 
 Databáze zamkne řádek a porovná revizi; postup, statistiky i denní pořadí se zapisují v jedné transakci. Při souběhu server znovu načte aktuální verzi a sloučí obě historie. Dokončený výsledek je neměnný, odhalený výrok nikdy dodatečně nevydělá body.

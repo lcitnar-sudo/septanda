@@ -1,7 +1,8 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import vm from 'node:vm';
+import {assertHistoryContract} from './history-contract.mjs';
 const root=new URL('../',import.meta.url);
-export async function makeCatalog(){
+export async function makeCatalog({recordHistory=false}={}){
   const original=await readFile(new URL('content/original-puzzles.js',root),'utf8');
   const puzzles=JSON.parse(await readFile(new URL('content/new-puzzles.json',root),'utf8'));
   const calendar=JSON.parse(await readFile(new URL('content/schedule.json',root),'utf8'));
@@ -21,6 +22,12 @@ export async function makeCatalog(){
   if(calendar.days.some(day=>(Array.isArray(day)?day:day.ids)?.length!==5) || scheduled.length!==puzzles.length || new Set(scheduled).size!==scheduled.length || scheduled.some(id=>!puzzles.some(p=>p.id===id)))throw new Error('Daily schedule repeats or omits a new puzzle');
   if(calendar.afterEnd!=='wait-for-new-content')throw new Error('The calendar must not restart old puzzles');
   const schedule={version:1,timeZone:'Europe/Prague',start:calendar.startDate,end:calendar.endDate,legacyIds,days:calendar.days,afterEnd:calendar.afterEnd};
+  const baseline=JSON.parse(await readFile(new URL('content/published-history.json',root),'utf8'));
+  context.SEPTANDA_PUZZLES=[...context.SEPTANDA_PUZZLES,...puzzles];context.SEPTANDA_SCHEDULE=schedule;
+  vm.runInContext(await readFile(new URL('client/daily.js',root),'utf8'),context);
+  const contract={baseline,puzzles:context.SEPTANDA_PUZZLES,calendar,daily:context.SeptandaDaily,normalize:context.SeptandaEngine.normalize,appSource:await readFile(new URL('client/app.js',root),'utf8')};
+  const snapshot=assertHistoryContract({...contract,requireComplete:!recordHistory});
+  if(recordHistory)await writeFile(new URL('content/published-history.json',root),JSON.stringify(snapshot,null,2)+'\n');
   const content=original+'\n/* Kurátorská zásoba100 dnů; původních9 záznamů zůstává kvůli historii. */\nglobalThis.SEPTANDA_PUZZLES.push(...'+JSON.stringify(puzzles)+');\nglobalThis.SEPTANDA_SCHEDULE='+JSON.stringify(schedule)+';\n';
   await writeFile(new URL('client/puzzles.js',root),content);
   return {puzzles:puzzles.length,days:calendar.days.length};

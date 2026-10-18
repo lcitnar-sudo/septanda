@@ -2,10 +2,10 @@
 
 Připraveno pro současnou hru. Katalog je oddělený od původních devíti hádanek, aby jejich identifikátory a uložená historie mohly dál fungovat.
 
-- **Období:** 17.10.2026–24.1.2027, 100 po sobě jdoucích dnů v časovém pásmu Europe/Prague.
+- **Období:** 19.10.2026–26.1.2027, 100 po sobě jdoucích dnů v časovém pásmu Europe/Prague.
 - **Denní složení:** dvě lidová přísloví, jeden historický výrok, jeden úryvek poezie a jeden úryvek prózy. Pořadí kategorií se střídá.
 - **Obsah:** 200 přísloví, 100 historických výroků, 100 básnických a 100 prozaických úryvků. Žádný cílový text se v této stovce dnů neopakuje; přesné znění původních devíti hádanek není znovu zařazeno.
-- **Po skončení:** plán výslovně předepisuje opakování této stovky dnů. Není to neomezený přísun nového obsahu. Další sezonu lze vyměnit redakčním vydáním.
+- **Po skončení:** hra čeká na novou zásobu. Tato stovka dnů se nespustí znovu. Další sezonu připoj na konec; vydané identifikátory a sady zůstávají kvůli historii.
 - **Před začátkem:** aplikace má zachovat výběr původních devíti hádanek a původní způsob výpočtu jejich denních sad. Obsahový balík sám nemění dřívější uživatelskou historii.
 
 ## Soubory pro zapojení
@@ -16,7 +16,9 @@ Připraveno pro současnou hru. Katalog je oddělený od původních devíti há
 
 `redakcni-prehled-500.csv` je tabulka s datem, pořadím, originálem, autorem, dílem, významem, nápovědou, všemi pěti předáními, pramenem, atribucí a přijímanými variantami. Soubor je UTF-8 s BOM pro pohodlné otevření v tabulkových editorech. `denni-plan-100.csv` je menší rozpis samotných ID.
 
-`build-catalog.py` opakovatelně sestaví katalog a plán z redakčních podkladů. Nepřepisujte ručně vygenerovaný JSON a současně jeho podklady; příští sestavení by takovou změnu přepsalo. Při opravě již publikovaného znění zachovejte ID ručně, aby se neodpojila historie. Nové ID je vhodné až pro novou hádanku.
+Zdroj pravdy jsou `new-puzzles.json`, `original-puzzles.js` a `schedule.json`; aplikaci sestavuje `scripts/catalog.mjs`. Nepřepisujte ručně vygenerovaný `client/puzzles.js` ani `game.mjs`. Při opravě publikovaného výroku zachovejte ID a jeho původní znění mezi přijímanými variantami, aby se neodpojila historie. Nové ID patří až novému výroku.
+
+`published-history.json` chrání již vydané identity, místní úložiště a kalendář. Nové položky a celé denní sady připojte na konec a zaznamenejte `npm run content:record`; potom sestavte aplikaci. Příkaz přidává nové identity až po ověření starých. Záznam historie ručně nemažte ani nepřepisujte, aby sestavení nemohlo přehlédnout změnu poškozující výsledky hráčů.
 
 ## Obtížnost a férovost
 
@@ -49,7 +51,7 @@ Nově napsané herní řetězce, nápovědy a výklady jsou redakční adaptace 
 
 ## Kontroly
 
-Spusťte `python3 work/content-100days/validate-content.py` z kořene projektu a `node work/content-100days/test-content.cjs` pro kontrolu proti aktuálnímu místnímu hodnoticímu modulu.
+Spusťte `npm run build` z kořene aplikace. Sestavení ověří obsah, stálé identity a vydané dny, poté provede regresní kontroly účtů a zachování postupu. Původní redakční reporty níže dokumentují přípravu zásoby; nenahrazují tyto kontroly aktuální verze.
 
 Výstupy `validation-report.json` a `scoring-report.json` zachycují:
 

@@ -1,4 +1,4 @@
-# Šeptanda 5.1.1 — archiv slov
+# Šeptanda 5.1.7 — archiv slov
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a 100 připravených denních sad.
 
@@ -10,7 +10,7 @@ Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Su
 - Supabase registrace, potvrzování e-mailu, přihlášení, obnova hesla, synchronizace, profil a samostatný souhlas s novinkami.
 - Soukromá správa hráčů a audit souhlasů; veřejný žebříček neukazuje e-maily ani odpovědi.
 - Kontaktní formulář přes Netlify Forms se spamovou pastí a stavem odesílání.
-- 500 nových hádanek v sadách od 17. 10. 2026 do 24. 1. 2027. Po tomto období se cyklus opakuje. Devět původních hádanek zůstává pro starší historii.
+- 500 nových hádanek v sadách od 19. 10. 2026 do 26. 1. 2027. Po konci zásoby hra čeká na nové výroky. Devět původních hádanek zůstává pro starší historii.
 - Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
 
 ## Zapojení
@@ -33,6 +33,16 @@ npm start
 Místní náhled běží na http://127.0.0.1:8785/. Bez proměnných Supabase používá dosavadní účty a soukromý souborový archiv v `.local-data`. Netlify používá pro tento starý režim původní Blobs úložiště. Při testování kontaktního formuláře v místním náhledu se nic neodesílá.
 
 `npm test` zahrnuje skutečné SQL/RLS testy v lokálním PostgreSQL prostředí PGlite, API bezpečnost, slučování dvou souběžných zařízení, klientské účty/souhlasy/importy/formuláře a kontrolu obsahu i výsledného HTML a jeho CSP. Neověřuje doručování ze skutečného SMTP ani živé Netlify/Supabase nastavení.
+
+## Aktualizace zachovávají hráče a výsledky
+
+Netlify zveřejňuje kód a grafiku; účty, body a historie zůstávají ve stejném Supabase projektu. Běžná aktualizace znovu nezakládá databázi ani nepouští úvodní SQL migraci. Neměň produkční projekt, trvalé klíče úložiště ani identifikátory vydaných výroků podle čísla verze aplikace.
+
+`content/published-history.json` eviduje 509 stálých identifikátorů, původní přijímaná znění, 100 vydaných sad a formát uloženého postupu. Sestavení odmítne odstranění nebo přejmenování výroku, použití jeho ID pro jiný výrok, změnu vydaného plánu či reset úložiště. Texty nápověd, zkomoleniny, vysvětlení, vzhled a přijímané varianty lze upravovat se zachováním ID. Při opravě cílového textu ponech staré znění mezi variantami.
+
+Nové hádanky a dny přidávej na konec zásoby. Poté spusť `npm run content:record` a zahrň rozšířený záznam do stejné aktualizace. Tento příkaz nejprve ověří staré položky a teprve potom připojí nové; nepoužívej jej k přepsání historie. Rozšíření formátu dat vyžaduje samostatně ověřený převod zachovávající staré záznamy.
+
+`npm run build`, který používá Netlify, nyní spouští i všechny regresní testy. Kontrolují zachování vyhraných/odhalených kol, bodů, nákupů, rozepsaných tipů a evidence zobrazených výroků při změně hodnocení i při připojení staršího zařízení. Selhání zastaví nové nasazení; dosud publikovaná hra zůstane dostupná. Již serverem uznané výhry se při pozdější úpravě hodnoticího modulu neruší; nové výhry stále ověřuje server.
 
 ## Uspořádání
 
