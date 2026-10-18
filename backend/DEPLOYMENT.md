@@ -1,6 +1,6 @@
 # Připravené propojení Netlify a Supabase
 
-Tato část je připravená k nasazení, ale ještě není připojená k živému Supabase projektu. Dokud nejsou nastavené všechny tři proměnné, vrací veřejná konfigurace `provider: legacy` a existující přihlášení z Netlify Blobs zůstává dostupné. Místní hra pro hosty funguje vždy.
+Pro Šeptandu je propojení se samostatným živým Supabase projektem nastavené. Netlify má uložené všechny tři hodnoty, odesílací doména auth.septanda.com je ověřená a Supabase používá Resend SMTP s českými šablonami. Skutečný Deploy Preview ověřil databázový žebříček a ochranu soukromého postupu. Doručení a první vlastní přihlášení ověří provozovatel po zveřejnění. Níže zůstává reprodukovatelný postup pro další prostředí. Místní hra pro hosty funguje vždy.
 
 ## Nastavení před zapnutím cloudových účtů
 
@@ -38,7 +38,15 @@ Přehled rozlišuje všechny registrované hráče a adresáty s aktivním souhl
 - Pozdější změna se ukládá samostatným endpointem a připojí neměnnou auditní událost. Odvolání je okamžité; původní znění a datum udělení zůstanou v historii.
 - Pouhé přepsání `user_metadata` neudělí správce ani neobnoví odvolaný souhlas.
 - Před rozesílkou znovu použij filtr aktivního souhlasu a potvrzené adresy. Starý export nesmí převážit novější odvolání. Pro skutečné rozesílání je potřeba samostatný poskytovatel a funkční odhlašovací odkaz; aplikace zatím žádnou marketingovou zprávu neposílá.
-- Před veřejným startem doplň skutečného provozovatele, kontakt, informace o zpracování a dobu uchování podle svého provozu. Formulace souhlasu a zásady hry jsou technický základ; neobsahují vymyšlenou totožnost provozovatele.
+- Provozovatel Lukáš Citnar a kontakt infoseptanda@gmail.com jsou potvrzené. Veřejné informace se sestavují z client/SOUKROMI.md do public/soukromi.html. Při změně poskytovatelů nebo účelu uprav skutečný provoz i tento text.
+
+## Vyřizování žádostí a uchování zpráv
+
+Žádosti přicházejí do infoseptanda@gmail.com. Správce zaznamená datum přijetí, ověří vlastnictví účtu přiměřeným způsobem a žádost vyřídí zpravidla do měsíce. Nikdy nežádá heslo. Cloudový účet se ruší přes Supabase Authentication; navázané tabulky se odstraní kaskádově. Před výmazem je potřeba konkrétní žádost a potvrzení vlastníka, nikoli pouhá podobnost přezdívky.
+
+Při kontrole doručených zpráv správce zároveň kontroluje dokončené případy: nejpozději šest měsíců po vyřízení odstraní zprávu z Netlify Forms i Gmailu, včetně nepotřebných kopií a příloh. Případný záznam potřebný pro probíhající spor oddělí a zaznamená důvod i okamžik další kontroly. Tato kontrola je provozní postup správce; aplikace neslibuje automatický výmaz po šesti měsících.
+
+Záznamy souhlasu se uchovávají s účtem a po jeho zrušení se mažou kaskádově. Odvolání v profilu ihned vyloučí hráče z marketingového filtru. Neaktivita sama účet nemaže. Při obnovení celé databáze ze zálohy je potřeba znovu uplatnit dříve vyřízené výmazy a odvolání.
 
 ## Přenos starších účtů a postupu
 

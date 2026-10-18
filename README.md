@@ -51,4 +51,4 @@ Místní procenta nejsou měřením skutečného porozumění. Neobvyklou správ
 
 Žebříček ověřuje odpovědi na serveru a odmítá podvržené body. Veřejný statický obsah umožňuje dohledat i řešení; nejde o zabezpečení soutěže o ceny. Cloudový zápis má velikostní omezení 2 MiB a nejvýše 500 tipů na jednu hádanku; místní hraní není omezené počtem tipů. Při nedostupném cloudu místní postup zůstává v prohlížeči a lze jej exportovat.
 
-Identitu a kontaktní údaje provozovatele je potřeba vyplnit v informacích o soukromí před přijetím veřejných registrací. Data se třetím stranám neprodávají a v této verzi nejsou reklamní ani analytické měřicí skripty. Odesílání novinek není součástí balíčku.
+Provozovatel Lukáš Citnar a kontakt infoseptanda@gmail.com jsou uvedení v informacích o soukromí. Čitelná stránka soukromi.html se sestavuje ze zdroje client/SOUKROMI.md. Data se třetím stranám neprodávají a v této verzi nejsou reklamní ani analytické měřicí skripty. Odesílání novinek není součástí balíčku.

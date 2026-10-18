@@ -69,5 +69,12 @@ await writeFile(path.join(destination,'_headers'),`/*
   Cache-Control: public, max-age=0, must-revalidate
 `);
 for(const file of ['ZDROJE.md','FONTY-LICENCE.txt','SOUKROMI.md']) if(await exists(path.join(source,file))) await copyFile(path.join(source,file),path.join(destination,file));
+const privacy = await readFile(path.join(source,'SOUKROMI.md'),'utf8');
+const privacyInline = text => escape(text).replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+|mailto:[^\s)]+)\)/g,'<a href="$2">$1</a>');
+const privacyBody = privacy.trim().split(/\n\n+/).map(block=>{
+  const heading=block.match(/^(#{1,2}) (.*)$/);
+  return heading ? `<h${heading[1].length}>${privacyInline(heading[2])}</h${heading[1].length}>` : `<p>${privacyInline(block)}</p>`;
+}).join('\n');
+await writeFile(path.join(destination,'soukromi.html'),`<!doctype html><html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Soukromí · Šeptanda</title><style>body{margin:0;background:#e8e6dc;color:#252b26;font:17px/1.7 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:36px 24px 80px}h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:40px 0 24px}h2{font-size:23px;line-height:1.3;margin:38px 0 14px}a{color:#963c2c;text-underline-offset:3px}p{margin:0 0 18px}header{border-bottom:2px solid #252b26;padding-bottom:20px}</style></head><body><main><header><a href="./">← Zpět do Šeptandy</a></header>${privacyBody}</main></body></html>`);
 try{await cp(path.join(source,'assets'),path.join(destination,'assets'),{recursive:true});}catch(error){if(error.code!=='ENOENT')throw error;}
 console.log(JSON.stringify({version,puzzles:context.SEPTANDA_PUZZLES.length,htmlBytes:Buffer.byteLength(html),scripts:blocks.map(x=>x.name)}));
