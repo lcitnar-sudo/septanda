@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.1.7">
+  <meta name="septanda-build" content="5.1.8">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
   <title>Šeptanda — Pět výroků na každý den</title>
@@ -2100,8 +2100,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
             <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 5</span><div class="route-line" id="daily-route"></div></nav>
             <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow">ZACHYCENÁ ZPRÁVA</p><blockquote id="distorted-message">Dorazil jsem na místo, trochu se rozhlédl a už mi všichni gratulovali.</blockquote></div>
             <form id="guess-form" novalidate>
-              <div class="input-label-row"><label for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
-              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tady začíná cesta zpátky ke slovům…" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
+              <div class="input-label-row"><label class="sr-only" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
+              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tvůj tip na původní znění" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
               <div class="form-bottom"><p id="input-help">Na čárkách ani diakritice nezáleží.<br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button></div>
               <p id="form-message" class="form-message" role="status"></p>
             </form>
@@ -2132,7 +2132,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.7 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.8 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>

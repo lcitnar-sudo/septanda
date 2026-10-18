@@ -54,8 +54,8 @@
             <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 5</span><div class="route-line" id="daily-route"></div></nav>
             <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow">ZACHYCENÁ ZPRÁVA</p><blockquote id="distorted-message">Dorazil jsem na místo, trochu se rozhlédl a už mi všichni gratulovali.</blockquote></div>
             <form id="guess-form" novalidate>
-              <div class="input-label-row"><label for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
-              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tady začíná cesta zpátky ke slovům…" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
+              <div class="input-label-row"><label class="sr-only" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
+              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tvůj tip na původní znění" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
               <div class="form-bottom"><p id="input-help">Na čárkách ani diakritice nezáleží.<br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button></div>
               <p id="form-message" class="form-message" role="status"></p>
             </form>

@@ -1,4 +1,4 @@
-# Šeptanda 5.1.7 — archiv slov
+# Šeptanda 5.1.8 — archiv slov
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a 100 připravených denních sad.
 
