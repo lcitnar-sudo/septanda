@@ -139,7 +139,7 @@
       applying = true; Game.setAccount(result.account.id, {importGuest:false}); applying = false;
       const cached = Game.exportState();
       apply(result, !hasProgress(cached)); ready = true;
-      if (!$('signup-confirmation').hidden) $('player-dialog').close();
+      $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
@@ -204,7 +204,7 @@
           const result = mode === 'register' ? await sdk.auth.signUp({email,password,options:{emailRedirectTo:redirectUrl(),data:{display_name:$('player-name').value.trim() || 'Hráč ' + Math.random().toString(36).slice(2,6),marketing_opt_in:$('marketing-opt-in').checked,marketing_consent_version:config.consent.version}}}) : await sdk.auth.signInWithPassword({email,password});
           if (result.error) throw result.error;
           $('player-password').value = '';
-          if (result.data.session) { await loadAccount(result.data.session); if (profile) { $('player-dialog').close(); if (hasProgress(Game.guestState())) showProfile(); } }
+          if (result.data.session) await loadAccount(result.data.session);
           else showConfirmation(email);
         }
       } catch (error) { $('player-message').textContent = translate(error); }

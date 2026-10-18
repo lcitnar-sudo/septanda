@@ -17,7 +17,8 @@ const context = vm.createContext({console,URL,URLSearchParams,AbortController,Bl
   await context.SeptandaCloud.start({consent:{version:'v1',text:'Optional consent'},supabase:{url:'https://project.supabase.co',publishableKey:'public-key'}});
   assert.equal(accountId,null);
   assert.equal(element('marketing-opt-in').checked,false);
-  await element('mode-register').fire('click');
+  await element('header-register').fire('click');
+  assert.equal(element('player-dialog').open,true);
   assert.equal(element('marketing-opt-in').checked,false);
   element('player-email').value='player@example.test';element('player-password').value='test password 123';
   await element('player-form').fire('submit');
@@ -31,10 +32,24 @@ const context = vm.createContext({console,URL,URLSearchParams,AbortController,Bl
   assert.equal(element('signup-confirmation').hidden,true);
   assert.equal(element('player-form').hidden,false,'confirmed user has a direct way back to login');
   element('player-password').value='test password 123';
+  unavailable=true;
+  await element('player-form').fire('submit');
+  assert.equal(element('player-dialog').open,true,'failed account loading keeps the error visible in the login window');
+  assert.equal(element('profile-dialog').open,false,'failed account loading never opens account settings');
+  assert.match(element('player-message').textContent,/účet se nepodařilo načíst/);
+  unavailable=false;
+  element('player-password').value='test password 123';
   await element('player-form').fire('submit');
   assert.equal(accountId,profile().account.id);
+  assert.equal(element('player-dialog').open,false,'successful login closes the login window');
+  assert.equal(element('profile-dialog').open,false,'guest progress must not interrupt login with account settings');
   assert.equal(posted.some(body=>body.action==='sync'),false,'empty signup never creates a premature blank cloud state');
   assert.equal(element('cloud-import').hidden,false);
+  await element('header-profile').fire('click');
+  assert.equal(element('profile-dialog').open,true,'account settings and explicit guest import remain available from the header');
+  handler('TOKEN_REFRESHED',persistedSession);
+  assert.equal(element('profile-dialog').open,true,'background token refresh preserves deliberately opened account settings');
+  element('profile-dialog').close();
   await element('cloud-import-button').fire('click');
   const imported=posted.find(body=>body.importLegacy===true);
   assert.ok(imported);assert.ok(JSON.stringify(imported.state).includes('my guest answer'));
@@ -63,6 +78,8 @@ const context = vm.createContext({console,URL,URLSearchParams,AbortController,Bl
   assert.equal(accountId,profile().account.id,'stored session restores account without signing in again');
   assert.equal(current.days['2026-10-16'].progress.a.draft,'cached answer before leaving','cached draft survives reopening while offline');
   assert.ok(posted.slice(requestsBeforeReconnect).some(body=>body.action==='sync' && body.state.days['2026-10-16'].progress.a.draft==='cached answer before leaving'),'reconnection sends unsaved account progress');
+  assert.equal(element('player-dialog').open,false);
+  assert.equal(element('profile-dialog').open,false,'returning players resume the game without account settings opening');
   console.log('PASS returning account, private cached progress and reconnect after failed initial profile load.');
   // Contact preview must never report a real delivery; a failed remote request keeps the form.
   let requestCount=0;

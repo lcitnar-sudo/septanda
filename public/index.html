@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.1.5">
+  <meta name="septanda-build" content="5.1.6">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
   <title>Šeptanda — Pět výroků na každý den</title>
@@ -2132,7 +2132,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.5 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.6 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
@@ -3829,7 +3829,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       applying = true; Game.setAccount(result.account.id, {importGuest:false}); applying = false;
       const cached = Game.exportState();
       apply(result, !hasProgress(cached)); ready = true;
-      if (!$('signup-confirmation').hidden) $('player-dialog').close();
+      $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
@@ -3894,7 +3894,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
           const result = mode === 'register' ? await sdk.auth.signUp({email,password,options:{emailRedirectTo:redirectUrl(),data:{display_name:$('player-name').value.trim() || 'Hráč ' + Math.random().toString(36).slice(2,6),marketing_opt_in:$('marketing-opt-in').checked,marketing_consent_version:config.consent.version}}}) : await sdk.auth.signInWithPassword({email,password});
           if (result.error) throw result.error;
           $('player-password').value = '';
-          if (result.data.session) { await loadAccount(result.data.session); if (profile) { $('player-dialog').close(); if (hasProgress(Game.guestState())) showProfile(); } }
+          if (result.data.session) await loadAccount(result.data.session);
           else showConfirmation(email);
         }
       } catch (error) { $('player-message').textContent = translate(error); }
