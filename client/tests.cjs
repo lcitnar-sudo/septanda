@@ -23,7 +23,14 @@ const context = vm.createContext({console,URL,URLSearchParams,AbortController,Bl
   await element('player-form').fire('submit');
   assert.equal(authCalls[0].options.data.marketing_opt_in,false);
   assert.equal(accountId,null,'unconfirmed signup cannot claim guest state');
-  await element('mode-login').fire('click');element('player-password').value='test password 123';
+  assert.equal(element('signup-confirmation').hidden,false,'confirmation is the primary screen after signup');
+  assert.equal(element('player-form').hidden,true,'pending confirmation cannot accidentally resubmit registration');
+  assert.equal(element('account-mode-tabs').hidden,true);
+  assert.equal(element('signup-email').textContent,'player@example.test');
+  await element('signup-login').fire('click');
+  assert.equal(element('signup-confirmation').hidden,true);
+  assert.equal(element('player-form').hidden,false,'confirmed user has a direct way back to login');
+  element('player-password').value='test password 123';
   await element('player-form').fire('submit');
   assert.equal(accountId,profile().account.id);
   assert.equal(posted.some(body=>body.action==='sync'),false,'empty signup never creates a premature blank cloud state');

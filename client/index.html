@@ -201,7 +201,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   <dialog id="player-dialog" aria-labelledby="player-title">
     <div class="dialog-head"><p class="eyebrow">ULOŽIT A POKRAČOVAT</p><button class="close-button" data-close aria-label="Zavřít">×</button></div>
     <h2 id="player-title">Přihlas se do hry.</h2>
-    <div class="account-tabs" role="group" aria-label="Přihlášení nebo nový účet"><button type="button" id="mode-login" aria-pressed="true">Přihlášení</button><button type="button" id="mode-register" aria-pressed="false">Nový účet</button></div>
+    <section id="signup-confirmation" class="signup-confirmation" tabindex="-1" aria-labelledby="signup-confirmation-title" hidden>
+      <p class="eyebrow">JEŠTĚ JEDEN KROK</p>
+      <h3 id="signup-confirmation-title">Podívej se do své e-mailové schránky.</h3>
+      <p>Na adrese <strong id="signup-email"></strong> hledej zprávu od Šeptandy.</p>
+      <ol><li>Otevři potvrzovací e-mail.</li><li>Klikni na tlačítko <strong>Potvrdit e-mail</strong>.</li><li>Vrať se do hry. Pokud se účet neotevře automaticky, přihlas se.</li></ol>
+      <p class="field-note">Zpráva může dorazit za pár minut. Podívej se také do spamu nebo složky Hromadné. Do potvrzení zůstává tvoje hra uložená v tomto prohlížeči.</p>
+      <button type="button" class="primary-button" id="signup-login">Pokračovat k přihlášení <span aria-hidden="true">→</span></button>
+    </section>
+    <div id="account-mode-tabs" class="account-tabs" role="group" aria-label="Přihlášení nebo nový účet"><button type="button" id="mode-login" aria-pressed="true">Přihlášení</button><button type="button" id="mode-register" aria-pressed="false">Nový účet</button></div>
     <form id="player-form">
       <div id="player-name-field"><label for="player-name" class="player-label">Přezdívka</label><input id="player-name" name="username" type="text" minlength="2" maxlength="24" autocomplete="nickname" placeholder="Tvoje jméno v žebříčku" required></div>
       <div id="registration-email" hidden><label for="player-email" class="player-label">E-mail</label><input id="player-email" name="email" type="email" maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="email-help" disabled><p class="field-note" id="email-help">E-mail je neveřejný. V žebříčku se objeví jen přezdívka.</p></div>

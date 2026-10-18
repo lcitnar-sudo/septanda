@@ -32,6 +32,8 @@
   }
   function setMode(next) {
     mode = next;
+    $('signup-confirmation').hidden = true; $('signup-email').textContent = '';
+    $('account-mode-tabs').hidden = false; $('player-form').hidden = false;
     const registration = mode === 'register', reset = mode === 'reset';
     $('player-title').textContent = registration ? 'Ulož si svou cestu.' : reset ? 'Obnov přístup.' : 'Přihlas se do hry.';
     $('mode-login').setAttribute('aria-pressed', String(mode === 'login'));
@@ -49,6 +51,14 @@
     $('player-message').textContent = '';
   }
   function openPlayer(next = 'login') { setMode(next); open('player-dialog'); }
+  function showConfirmation(email) {
+    $('player-title').textContent = 'Teď potvrď svůj e-mail.';
+    $('signup-email').textContent = email;
+    $('account-mode-tabs').hidden = true; $('player-form').hidden = true;
+    $('signup-confirmation').hidden = false;
+    $('player-dialog').scrollTop = 0;
+    $('signup-confirmation').focus?.();
+  }
   function renderAccount() {
     const account = profile?.account;
     $('header-login').hidden = !!account; $('header-register').hidden = !!account; $('header-profile').hidden = !account;
@@ -129,6 +139,7 @@
       applying = true; Game.setAccount(result.account.id, {importGuest:false}); applying = false;
       const cached = Game.exportState();
       apply(result, !hasProgress(cached)); ready = true;
+      if (!$('signup-confirmation').hidden) $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
@@ -176,6 +187,7 @@
     $('profile-submit').textContent = 'Uložit přezdívku'; $('profile-sync').hidden = false; $('profile-file-import').hidden = false;
     sdk = root.SeptandaSupabase.createClient(config.supabase.url, config.supabase.publishableKey, {auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
     $('mode-login').addEventListener('click', () => setMode('login')); $('mode-register').addEventListener('click', () => setMode('register'));
+    $('signup-login').addEventListener('click', () => setMode('login'));
     $('header-login').addEventListener('click', () => openPlayer()); $('header-register').addEventListener('click', () => openPlayer('register'));
     const showProfile = () => { renderAccount(); open('profile-dialog'); };
     $('header-profile').addEventListener('click', showProfile); $('leaderboard-join').addEventListener('click', () => profile ? showProfile() : openPlayer('register'));
@@ -193,7 +205,7 @@
           if (result.error) throw result.error;
           $('player-password').value = '';
           if (result.data.session) { await loadAccount(result.data.session); if (profile) { $('player-dialog').close(); if (hasProgress(Game.guestState())) showProfile(); } }
-          else $('player-message').textContent = 'Zkontroluj e-mail a potvrď registraci odkazem ve zprávě. Potom se přihlas; místní postup zůstává tady v prohlížeči.';
+          else showConfirmation(email);
         }
       } catch (error) { $('player-message').textContent = translate(error); }
       finally { signing = false; authAction = false; $('player-submit').disabled = false; }

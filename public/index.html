@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.1.3">
+  <meta name="septanda-build" content="5.1.4">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
   <title>Šeptanda — Pět výroků na každý den</title>
@@ -1993,6 +1993,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .check-field input[type=checkbox] {flex:0 0 18px;width:18px;height:18px;min-height:0;margin:4px 0 0;accent-color:var(--accent)}
 .check-field[hidden] {display:none}
 .recovery-link {display:inline-block;margin:18px 0 0 18px}
+.signup-confirmation {margin-top:22px;padding:22px 20px;border:1px solid var(--line);border-top:4px solid var(--oxide);background:var(--paper);overflow-wrap:anywhere}
+.signup-confirmation h3 {font:700 30px/1.15 var(--display);margin:12px 0 18px}
+.signup-confirmation ol {padding-left:22px;line-height:1.7;margin:20px 0}
+.signup-confirmation li+li {margin-top:10px}
+.signup-confirmation .primary-button {margin-top:10px;max-width:100%;white-space:normal}
 .profile-section {border-top:1px solid var(--line);margin-top:26px;padding-top:20px}
 .profile-section h3 {font:600 24px/1.2 var(--display);margin:0 0 10px}
 .profile-section .check-field {margin:12px 0}
@@ -2121,7 +2126,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.3 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.4 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky se vybírají z připravené sbírky a mohou se v dalších dnech opakovat.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
@@ -2845,7 +2850,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
   <dialog id="player-dialog" aria-labelledby="player-title">
     <div class="dialog-head"><p class="eyebrow">ULOŽIT A POKRAČOVAT</p><button class="close-button" data-close aria-label="Zavřít">×</button></div>
     <h2 id="player-title">Přihlas se do hry.</h2>
-    <div class="account-tabs" role="group" aria-label="Přihlášení nebo nový účet"><button type="button" id="mode-login" aria-pressed="true">Přihlášení</button><button type="button" id="mode-register" aria-pressed="false">Nový účet</button></div>
+    <section id="signup-confirmation" class="signup-confirmation" tabindex="-1" aria-labelledby="signup-confirmation-title" hidden>
+      <p class="eyebrow">JEŠTĚ JEDEN KROK</p>
+      <h3 id="signup-confirmation-title">Podívej se do své e-mailové schránky.</h3>
+      <p>Na adrese <strong id="signup-email"></strong> hledej zprávu od Šeptandy.</p>
+      <ol><li>Otevři potvrzovací e-mail.</li><li>Klikni na tlačítko <strong>Potvrdit e-mail</strong>.</li><li>Vrať se do hry. Pokud se účet neotevře automaticky, přihlas se.</li></ol>
+      <p class="field-note">Zpráva může dorazit za pár minut. Podívej se také do spamu nebo složky Hromadné. Do potvrzení zůstává tvoje hra uložená v tomto prohlížeči.</p>
+      <button type="button" class="primary-button" id="signup-login">Pokračovat k přihlášení <span aria-hidden="true">→</span></button>
+    </section>
+    <div id="account-mode-tabs" class="account-tabs" role="group" aria-label="Přihlášení nebo nový účet"><button type="button" id="mode-login" aria-pressed="true">Přihlášení</button><button type="button" id="mode-register" aria-pressed="false">Nový účet</button></div>
     <form id="player-form">
       <div id="player-name-field"><label for="player-name" class="player-label">Přezdívka</label><input id="player-name" name="username" type="text" minlength="2" maxlength="24" autocomplete="nickname" placeholder="Tvoje jméno v žebříčku" required></div>
       <div id="registration-email" hidden><label for="player-email" class="player-label">E-mail</label><input id="player-email" name="email" type="email" maxlength="254" autocomplete="email" autocapitalize="none" spellcheck="false" aria-describedby="email-help" disabled><p class="field-note" id="email-help">E-mail je neveřejný. V žebříčku se objeví jen přezdívka.</p></div>
@@ -3662,6 +3675,8 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
   }
   function setMode(next) {
     mode = next;
+    $('signup-confirmation').hidden = true; $('signup-email').textContent = '';
+    $('account-mode-tabs').hidden = false; $('player-form').hidden = false;
     const registration = mode === 'register', reset = mode === 'reset';
     $('player-title').textContent = registration ? 'Ulož si svou cestu.' : reset ? 'Obnov přístup.' : 'Přihlas se do hry.';
     $('mode-login').setAttribute('aria-pressed', String(mode === 'login'));
@@ -3679,6 +3694,14 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     $('player-message').textContent = '';
   }
   function openPlayer(next = 'login') { setMode(next); open('player-dialog'); }
+  function showConfirmation(email) {
+    $('player-title').textContent = 'Teď potvrď svůj e-mail.';
+    $('signup-email').textContent = email;
+    $('account-mode-tabs').hidden = true; $('player-form').hidden = true;
+    $('signup-confirmation').hidden = false;
+    $('player-dialog').scrollTop = 0;
+    $('signup-confirmation').focus?.();
+  }
   function renderAccount() {
     const account = profile?.account;
     $('header-login').hidden = !!account; $('header-register').hidden = !!account; $('header-profile').hidden = !account;
@@ -3759,6 +3782,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       applying = true; Game.setAccount(result.account.id, {importGuest:false}); applying = false;
       const cached = Game.exportState();
       apply(result, !hasProgress(cached)); ready = true;
+      if (!$('signup-confirmation').hidden) $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
@@ -3806,6 +3830,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     $('profile-submit').textContent = 'Uložit přezdívku'; $('profile-sync').hidden = false; $('profile-file-import').hidden = false;
     sdk = root.SeptandaSupabase.createClient(config.supabase.url, config.supabase.publishableKey, {auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
     $('mode-login').addEventListener('click', () => setMode('login')); $('mode-register').addEventListener('click', () => setMode('register'));
+    $('signup-login').addEventListener('click', () => setMode('login'));
     $('header-login').addEventListener('click', () => openPlayer()); $('header-register').addEventListener('click', () => openPlayer('register'));
     const showProfile = () => { renderAccount(); open('profile-dialog'); };
     $('header-profile').addEventListener('click', showProfile); $('leaderboard-join').addEventListener('click', () => profile ? showProfile() : openPlayer('register'));
@@ -3823,7 +3848,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
           if (result.error) throw result.error;
           $('player-password').value = '';
           if (result.data.session) { await loadAccount(result.data.session); if (profile) { $('player-dialog').close(); if (hasProgress(Game.guestState())) showProfile(); } }
-          else $('player-message').textContent = 'Zkontroluj e-mail a potvrď registraci odkazem ve zprávě. Potom se přihlas; místní postup zůstává tady v prohlížeči.';
+          else showConfirmation(email);
         }
       } catch (error) { $('player-message').textContent = translate(error); }
       finally { signing = false; authAction = false; $('player-submit').disabled = false; }

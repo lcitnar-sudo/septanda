@@ -1869,6 +1869,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .check-field input[type=checkbox] {flex:0 0 18px;width:18px;height:18px;min-height:0;margin:4px 0 0;accent-color:var(--accent)}
 .check-field[hidden] {display:none}
 .recovery-link {display:inline-block;margin:18px 0 0 18px}
+.signup-confirmation {margin-top:22px;padding:22px 20px;border:1px solid var(--line);border-top:4px solid var(--oxide);background:var(--paper);overflow-wrap:anywhere}
+.signup-confirmation h3 {font:700 30px/1.15 var(--display);margin:12px 0 18px}
+.signup-confirmation ol {padding-left:22px;line-height:1.7;margin:20px 0}
+.signup-confirmation li+li {margin-top:10px}
+.signup-confirmation .primary-button {margin-top:10px;max-width:100%;white-space:normal}
 .profile-section {border-top:1px solid var(--line);margin-top:26px;padding-top:20px}
 .profile-section h3 {font:600 24px/1.2 var(--display);margin:0 0 10px}
 .profile-section .check-field {margin:12px 0}
