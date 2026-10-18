@@ -2,7 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id), Game = root.SeptandaGame, Daily = root.SeptandaDaily;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const hasProgress = state => !!state && [state.legacy?.progress || {}, ...Object.values(state.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing'));
+  const hasProgress = state => !!state && (Object.values(state.days || {}).some(day => day.seen?.length) || [state.legacy?.progress || {}, ...Object.values(state.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing')));
   let sdk, config, session = null, profile = null, mode = 'login', signing = false, ready = false, syncing = false, pending = false, applying = false, timer, lastSynced = '', loadEpoch = 0, adminOffset = 0, authAction = false;
   const endpoint = name => '/.netlify/functions/' + name;
   const date = value => value ? new Intl.DateTimeFormat('cs-CZ', {dateStyle:'medium',timeStyle:'short'}).format(new Date(value)) : '—';

@@ -1005,6 +1005,6 @@
       ]
     }
   ],
-  "afterEnd": "cycle-100-days",
+  "afterEnd": "wait-for-new-content",
   "legacyBeforeStart": true
 }

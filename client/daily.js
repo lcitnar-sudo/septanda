@@ -38,12 +38,34 @@
     const schedule = root.SEPTANDA_SCHEDULE;
     if (!schedule || key < schedule.start) return legacyPlan(key);
     const difference = Math.floor((Date.parse(key + 'T12:00:00Z') - Date.parse(schedule.start + 'T12:00:00Z')) / 86400000);
-    const entry = schedule.days[difference % schedule.days.length];
+    if (difference >= schedule.days.length) return [];
+    const entry = schedule.days[difference];
     const ids = Array.isArray(entry) ? entry : entry.ids;
     if (!Array.isArray(ids) || ids.length !== 5 || ids.some(id => !byId.has(id))) throw new Error('Neúplná denní sada.');
     return ids.slice();
   }
   const blankRound = () => ({attempts: [], hints: [], status: 'playing', draft: ''});
+  const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || r.draft || r.status === 'won' || r.status === 'revealed');
+  function seenBefore(state, key) {
+    const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
+    for (const [date, day] of Object.entries(state.days || {})) if (date < key) {
+      for (const id of day.seen || []) seen.add(id);
+      for (const [id, r] of Object.entries(day.progress || {})) if (hasWork(r)) seen.add(id);
+    }
+    return seen;
+  }
+  function reconcileDay(state, key) {
+    const day = state.days[key], seen = seenBefore(state, key);
+    // Rozpracované a dokončené záznamy zůstávají beze změny. Staré otázky se znovu neotvírají jako nové.
+    day.skipped = day.ids.filter(id => seen.has(id) && !hasWork(day.progress[id]));
+    day.seen = [...new Set((day.seen || []).filter(id => day.ids.includes(id)))];
+    if (!canSelect(day, day.selected)) day.selected = nextId(day) || day.ids.find(id => !day.skipped.includes(id)) || null;
+    return day;
+  }
+  function markSeen(day, id) {
+    if (!id || !canSelect(day, id) || day.seen.includes(id)) return false;
+    day.seen.push(id); return true;
+  }
   function cleanRound(source, puzzle) {
     const round = blankRound();
     if (!source || typeof source !== 'object') return round;
@@ -77,39 +99,39 @@
     if (raw.days && typeof raw.days === 'object') {
       for (const [key, source] of Object.entries(raw.days)) {
         if (!validDay(key) || !source || typeof source !== 'object') continue;
-        const ids = Array.isArray(source.ids) && source.ids.length === 5 && new Set(source.ids).size === 5 && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
-        const day = {ids, selected: source.selected, progress: cleanProgress(source.progress, ids)};
-        if (!canSelect(day, day.selected)) day.selected = nextId(day) || ids[4];
+        const ids = Array.isArray(source.ids) && (source.ids.length === 5 || source.ids.length === 0) && new Set(source.ids).size === source.ids.length && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
+        const day = {ids, selected: source.selected, progress: cleanProgress(source.progress, ids), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
         state.days[key] = day;
       }
+      for (const key of Object.keys(state.days).sort()) reconcileDay(state, key);
     }
     return state;
   }
   function ensureDay(state, key) {
-    if (!Object.hasOwn(state.days, key)) {
-      const ids = plan(key);
-      state.days[key] = {ids, selected: ids[0], progress: {}};
+    const planned = plan(key);
+    if (!Object.hasOwn(state.days, key) || (!state.days[key].ids.length && planned.length)) {
+      const ids = planned;
+      state.days[key] = {ids, selected: ids[0] || null, progress: {}, seen: [], skipped: []};
     }
-    const day = state.days[key];
-    if (!canSelect(day, day.selected)) day.selected = nextId(day) || day.ids[4];
-    return day;
+    return reconcileDay(state, key);
   }
   function roundFor(day, id = day.selected) {
     if (!day.ids.includes(id)) return null;
     return day.progress[id] || (day.progress[id] = blankRound());
   }
-  function nextId(day) { return day.ids.find(id => !day.progress[id] || day.progress[id].status === 'playing') || null; }
+  function nextId(day) { return day.ids.find(id => !day.skipped?.includes(id) && (!day.progress[id] || day.progress[id].status === 'playing')) || null; }
   function canSelect(day, id) {
     const index = day.ids.indexOf(id), next = nextId(day);
-    return index >= 0 && (next === null || index <= day.ids.indexOf(next));
+    return index >= 0 && !day.skipped?.includes(id) && (next === null || index <= day.ids.indexOf(next));
   }
   function dayTotals(day) {
     return day.ids.reduce((t, id) => {
+      if (day.skipped?.includes(id)) { t.skipped++; t.completed++; return t; }
       const r = day.progress[id] || blankRound();
       t.solved += Number(r.status === 'won'); t.completed += Number(r.status !== 'playing');
       t.revealed += Number(r.status === 'revealed'); t.attempts += r.attempts.length;
       return t;
-    }, {solved: 0, completed: 0, revealed: 0, attempts: 0});
+    }, {solved: 0, completed: 0, revealed: 0, attempts: 0, skipped: 0});
   }
   function totals(state) {
     const t = {solved: 0, spent: 0, attempts: 0, revealed: 0, points: 100};
@@ -121,5 +143,5 @@
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);

@@ -1932,3 +1932,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
   .mascot-guide img { width: 84px; height: 92px; flex-basis: 84px; }
 }
 @media (prefers-reduced-motion: reduce) { .mascot-guide { animation: none; transition: none; } }
+
+.daily-waiting h2 {font:700 clamp(30px,4vw,46px)/1.1 var(--display);margin:20px 0}
+.daily-waiting>p:not(.eyebrow) {line-height:1.8;max-width:600px}
+.daily-waiting .secondary-button {margin-top:24px}
+.route-line button.skipped,.collection-marks button.skipped {background:var(--line);opacity:.65}

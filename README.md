@@ -52,3 +52,9 @@ Místní procenta nejsou měřením skutečného porozumění. Neobvyklou správ
 Žebříček ověřuje odpovědi na serveru a odmítá podvržené body. Veřejný statický obsah umožňuje dohledat i řešení; nejde o zabezpečení soutěže o ceny. Cloudový zápis má velikostní omezení 2 MiB a nejvýše 500 tipů na jednu hádanku; místní hraní není omezené počtem tipů. Při nedostupném cloudu místní postup zůstává v prohlížeči a lze jej exportovat.
 
 Provozovatel Lukáš Citnar a kontakt infoseptanda@gmail.com jsou uvedení v informacích o soukromí. Čitelná stránka soukromi.html se sestavuje ze zdroje client/SOUKROMI.md. Data se třetím stranám neprodávají a v této verzi nejsou reklamní ani analytické měřicí skripty. Odesílání novinek není součástí balíčku.
+
+## Hádanky se hráči neopakují
+
+Připravený kalendář používá každý výrok jen jednou. Po konci zásoby se cyklus nespustí znovu; hra čeká na další nové sady. Sestavení odmítne opakovaný identifikátor i shodné normalizované znění nebo přijímanou variantu u různých hádanek.
+
+Do historie každého dne se ukládají i již zobrazené identifikátory. Nový den vynechává známé výroky z dřívějších dnů a původní historie. Rozpracované a dokončené záznamy se nemažou. Klient i server odvozují vynechané položky ze stejné historie; pouhé vynechání nepřidává body ani výsledky do žebříčku. Při přihlášení se historie synchronizuje s účtem. Bez účtu ji uchovává jen konkrétní prohlížeč; po jeho vymazání nebo na jiném zařízení ji hra nemá jak poznat.

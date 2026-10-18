@@ -44,7 +44,7 @@
       if (Object.keys(raw.days || {}).some(day => !root.SeptandaDaily.validDay(day) || day > root.SeptandaDaily.dayKey())) throw new Error('Soubor obsahuje neplatný nebo budoucí herní den.');
       const clean = root.SeptandaDaily.sanitizeState(raw); if (!clean) throw new Error('Soubor se nepodařilo přečíst.');
       const totals = root.SeptandaDaily.totals(clean);
-      if (![clean.legacy?.progress || {}, ...Object.values(clean.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing'))) throw new Error('Soubor neobsahuje žádný odehraný postup.');
+      if (!Object.values(clean.days || {}).some(day => day.seen?.length) && ![clean.legacy?.progress || {}, ...Object.values(clean.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing'))) throw new Error('Soubor neobsahuje žádný odehraný postup.');
       selected = {state:clean,key:root.SeptandaGame.storageKey()};
       $('progress-file-preview').textContent = file.name + ' · ' + totals.solved + ' rozluštěno · ' + totals.attempts + ' tipů. Potvrzením se postup sloučí s účtem „' + $('profile-name').textContent + '“. Dosavadní záznamy účtu se zachovají. Přidej pouze svůj vlastní postup.';
       $('progress-file-confirm').hidden = false;
