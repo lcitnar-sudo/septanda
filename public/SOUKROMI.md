@@ -14,7 +14,7 @@ Hosting při zobrazení a ochraně webu zpracovává technické údaje, napřík
 
 ## Dobrovolný účet
 
-Pro založení účtu potřebujeme e-mail, heslo a přezdívku. E-mail slouží k ověření adresy, přihlášení a obnovení přístupu. Heslo spravuje ověřovací služba Supabase; správce hry ho nevidí v čitelné podobě. Bez těchto údajů účet založit nelze, hraní bez účtu zůstává dostupné.
+Pro založení účtu potřebujeme e-mail a heslo. Přezdívku si můžete zvolit; jinak hra vytvoří označení „Hráč“ s náhodnou příponou. E-mail slouží k ověření adresy, přihlášení a obnovení přístupu. Heslo spravuje ověřovací služba Supabase; správce hry ho nevidí v čitelné podobě. Bez těchto údajů účet založit nelze, hraní bez účtu zůstává dostupné.
 
 U přihlášeného hráče ukládáme přezdívku, historii tipů včetně neúspěšných odpovědí, rozepsané odpovědi, nápovědy, vyřešené a odhalené hádanky, body a statistiky. Server přijímá synchronizovaný postup a přepočítává výsledky. Účelem je uchování hry a pokračování na jiném zařízení. Zpracování potřebné pro vyžádaný účet vychází z plnění služby podle čl. 6 odst. 1 písm. b) GDPR.
 
