@@ -1,0 +1,9 @@
+{
+  "puzzles": 500,
+  "acceptedFormulations": 785,
+  "maskedPromptsBelowSuccess": 500,
+  "maxMaskedScore": 62,
+  "meanMaskedScore": 14.65,
+  "engineSource": "client/engine.js",
+  "note": "Lexical diagnostics, not calibrated player difficulty;20 sourced historical replacements."
+}

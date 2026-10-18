@@ -1,0 +1,1518 @@
+{
+  "version": 2,
+  "replacements": {
+    "quote-confucius-learning": "quote-boethius-love-law",
+    "quote-confucius-knowing": "quote-dante-hope",
+    "quote-confucius-neighbours": "quote-dante-knowledge",
+    "quote-confucius-old-new": "quote-hus-truth",
+    "quote-confucius-in-yourself": "quote-petrarch-peace",
+    "quote-confucius-way": "quote-more-property",
+    "quote-confucius-nature": "quote-shakespeare-hamlet",
+    "quote-confucius-language": "quote-shakespeare-rose",
+    "quote-lao-water": "quote-montaigne-knowing",
+    "quote-lao-bend": "quote-cervantes-freedom",
+    "quote-lao-self-knowledge": "quote-comenius-return",
+    "quote-lao-inaction": "quote-galileo-mathematics",
+    "quote-lao-door": "quote-newton-giants",
+    "quote-lao-small-fish": "quote-voltaire-garden",
+    "quote-lao-soft-water": "quote-wollstonecraft-self-rule",
+    "quote-seneca-delay": "quote-lincoln-democracy",
+    "quote-seneca-poor": "quote-douglass-struggle",
+    "quote-seneca-teaching": "quote-nietzsche-stronger",
+    "quote-seneca-imagination": "quote-tagore-fearless",
+    "quote-seneca-long-life": "quote-masaryk-discussion"
+  },
+  "records": [
+    {
+      "id": "quote-boethius-love-law",
+      "category": "Historický výrok",
+      "era": "Kolem 524 · přechod pozdní antiky a raného středověku",
+      "answer": "Kdo může dát zákon milujícím? Láska je sama sobě vyšším zákonem.",
+      "variants": [
+        "Jaký zákon může ovládnout milující? Láska je větším zákonem sama sobě.",
+        "Kdo by milujícím dal zákon? Láska má svůj vlastní vyšší zákon."
+      ],
+      "concepts": [
+        [
+          "laska",
+          "miluj",
+          "srdc"
+        ],
+        [
+          "zakon",
+          "pravidl",
+          "prikaz"
+        ],
+        [
+          "vyssi",
+          "vlast",
+          "silnejs"
+        ]
+      ],
+      "paraphrases": [
+        "Silná láska se může dostat do konfliktu s vnějším příkazem."
+      ],
+      "contradictions": [],
+      "hint": "Jedno vnitřní pravidlo soupeří s pravidlem daným zvenčí.",
+      "chain": [
+        "Milující neposlechne zákon, protože láska je pro něj vyšším pravidlem.",
+        "Na zamilovaného je vnější příkaz krátký, uvnitř má silnější autoritu.",
+        "Srdce si vedle vyhlášky zavedlo vlastní nadřízený předpis.",
+        "Strážný ukázal zákaz, ale návštěvník v něm poznal jen slabší ze dvou rozkazů.",
+        "U brány stojí zákaz a oddaný návštěvník; jeho vnitřní velitel má však vyšší hodnost než veškerá místní stráž."
+      ],
+      "author": "Boëthius",
+      "origin": "Útěcha z filosofie · kniha III, báseň 12",
+      "context": "Boëthius psal Útěchu z filosofie ve vězení. V příběhu Orfea a Eurydiky naráží milující člověk na zákaz, který nedokáže dodržet. Jde o pozdně antické dílo s mimořádným středověkým vlivem, ne o současný návod ignorovat pravidla.",
+      "meaning": "Silná láska se může dostat do konfliktu s vnějším příkazem.",
+      "attribution": "Vlastní český převod veřejně volného textu podle překladu H. R. Jamese (1862–1931),1897. Literární báseň o Orfeovi; nejde o doslovný moderní český překlad. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Útěcha z filosofie · kniha III, báseň12 · původní text",
+          "url": "https://www.gutenberg.org/files/14328/14328-h/14328-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Boëthius",
+        "work": "Útěcha z filosofie · kniha III, báseň 12",
+        "summary": "Boëthius psal Útěchu z filosofie ve vězení. V příběhu Orfea a Eurydiky naráží milující člověk na zákaz, který nedokáže dodržet. Jde o pozdně antické dílo s mimořádným středověkým vlivem, ne o současný návod ignorovat pravidla."
+      },
+      "coverage": {
+        "epoch": "pozdni-antika-rany-stredovek",
+        "originYearApprox": 524,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Itálie",
+        "themes": [
+          "láska a vztahy",
+          "svoboda a pravidla"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "What law can lovers move? A higher law is love!",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-dante-hope",
+      "category": "Historický výrok",
+      "era": "Počátek 14. století · vrcholný středověk",
+      "answer": "Zanechte vší naděje, vy, kdo vstupujete.",
+      "variants": [
+        "Vy, kdo vstupujete, zanechte vší naděje.",
+        "Zanech vší naděje, kdo vstupuješ.",
+        "Naděje zanechte, kdož vstupujete.",
+        "Lasciate ogne speranza, voi ch’intrate."
+      ],
+      "concepts": [
+        [
+          "zanech",
+          "vzdat",
+          "odevzd"
+        ],
+        [
+          "nadej",
+          "ocekav",
+          "budouc"
+        ],
+        [
+          "vstup",
+          "bran",
+          "hranic"
+        ]
+      ],
+      "paraphrases": [
+        "Překročení hranice znamená ztrátu naděje na změnu."
+      ],
+      "contradictions": [],
+      "hint": "Rozhodující je, co se má odložit ještě před překročením hranice.",
+      "chain": [
+        "Kdo vchází dovnitř, má se vzdát veškeré naděje.",
+        "Za tuto bránu nesmí návštěvník přinést naději.",
+        "Vstupní kontrola zabavuje poslední očekávání dobrého konce.",
+        "Cestující musí před dveřmi odevzdat i tu nejmenší jiskru příznivé budoucnosti.",
+        "Na poslední vstupní kontrole nezajímají stráž mince ani zavazadla; odevzdat se musí úplně každé očekávání, že to ještě dobře dopadne."
+      ],
+      "author": "Dante Alighieri",
+      "origin": "Božská komedie · Peklo III, verš 9",
+      "context": "Dante čte tato slova nad branou pekla. Nápis ohlašuje místo bez naděje na vysvobození; slavná věta patří do literárního obrazu cesty posmrtným světem.",
+      "meaning": "Překročení hranice znamená ztrátu naděje na změnu.",
+      "attribution": "Vlastní krátký český překlad italského verše veřejně volného díla. Přijímány jsou i ustálené české varianty a původní italština; nejde o citaci konkrétního moderního překladatele. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Božská komedie · Peklo III, verš9 · původní text",
+          "url": "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_III"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Dante Alighieri",
+        "work": "Božská komedie · Peklo III, verš 9",
+        "summary": "Dante čte tato slova nad branou pekla. Nápis ohlašuje místo bez naděje na vysvobození; slavná věta patří do literárního obrazu cesty posmrtným světem."
+      },
+      "coverage": {
+        "epoch": "stredovek",
+        "originYearApprox": 1310,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Itálie",
+        "themes": [
+          "naděje a ztráta",
+          "smrt a posmrtný svět"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Lasciate ogne speranza, voi ch’intrate.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-dante-knowledge",
+      "category": "Historický výrok",
+      "era": "Počátek 14. století · vrcholný středověk",
+      "answer": "Nebyli jste stvořeni k životu zvířat, ale k následování ctnosti a poznání.",
+      "variants": [
+        "Nebyli jste zrozeni žít jako zvířata, ale hledat ctnost a poznání.",
+        "Nebyli jste stvořeni, abyste žili jako dobytek, nýbrž abyste šli za ctností a věděním."
+      ],
+      "concepts": [
+        [
+          "clov",
+          "lid",
+          "posad"
+        ],
+        [
+          "zvir",
+          "dobytek",
+          "preziv"
+        ],
+        [
+          "ctnost",
+          "charakter"
+        ],
+        [
+          "pozn",
+          "ved",
+          "rozum"
+        ]
+      ],
+      "paraphrases": [
+        "Lidský život má usilovat o poznání a mravní růst, ne pouze o přežití."
+      ],
+      "contradictions": [],
+      "hint": "Výzva srovnává lidské možnosti s pouhým přirozeným přežíváním.",
+      "chain": [
+        "Lidé nejsou určeni jen k živočišnému životu, mají hledat ctnost a poznání.",
+        "Posádka má po sobě chtít víc než zvířata, má rozvíjet rozum i charakter.",
+        "Námořníkům nestačí plnit břicha, mají také posouvat hranice vědění a povahy.",
+        "Velitel odmítl pro výpravu program pouhého krmení a spaní.",
+        "Velitel posádce roztrhal plán složený jen z krmení a dřímání; lidské vybavení prý vyžaduje také výpravu za porozuměním a lepším charakterem."
+      ],
+      "author": "Dante Alighieri",
+      "origin": "Božská komedie · Peklo XXVI, verše 118–120",
+      "context": "Tuto výzvu v Danteho básni pronáší Odysseus ke své posádce. Jeho touha po poznání je strhující, ale celá epizoda končí katastrofou. Verše proto nemají být vytržené jako bezvýhradná oslava každého riskování.",
+      "meaning": "Lidský život má usilovat o poznání a mravní růst, ne pouze o přežití.",
+      "attribution": "Vlastní české převyprávění veřejně volných italských veršů. Mluvčím je literární Odysseus v Danteho díle; nepřipisujeme verše historickému řeckému hrdinovi. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Božská komedie · Peklo XXVI, verše118–120 · původní text",
+          "url": "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_XXVI"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Dante Alighieri",
+        "work": "Božská komedie · Peklo XXVI, verše 118–120",
+        "summary": "Tuto výzvu v Danteho básni pronáší Odysseus ke své posádce. Jeho touha po poznání je strhující, ale celá epizoda končí katastrofou. Verše proto nemají být vytržené jako bezvýhradná oslava každého riskování."
+      },
+      "coverage": {
+        "epoch": "stredovek",
+        "originYearApprox": 1310,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Itálie",
+        "themes": [
+          "poznání a vzdělávání",
+          "odvaha a odpovědnost"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Considerate la vostra semenza: fatti non foste a viver come bruti, ma per seguir virtute e canoscenza.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-hus-truth",
+      "category": "Historický výrok",
+      "era": "1412 · pozdní středověk, česká reformace",
+      "answer": "Hledaj pravdy, slyš pravdu, uč se pravdě, miluj pravdu, prav pravdu, drž pravdu, braň pravdy až do smrti.",
+      "variants": [
+        "Hledej pravdu, slyš pravdu, uč se pravdě, miluj pravdu, mluv pravdu, drž pravdu, braň pravdu až do smrti.",
+        "Hledej pravdy, slyš pravdu, uč se pravdě, miluj pravdu, prav pravdu, drž pravdu, braň pravdy až do smrti."
+      ],
+      "concepts": [
+        [
+          "pravd",
+          "skutec",
+          "poctiv"
+        ],
+        [
+          "hled",
+          "slys",
+          "uc"
+        ],
+        [
+          "miluj",
+          "mluv",
+          "prav"
+        ],
+        [
+          "drz",
+          "bran",
+          "vytrv"
+        ]
+      ],
+      "paraphrases": [
+        "Pravdě je třeba porozumět, žít podle ní a vytrvat v ní."
+      ],
+      "contradictions": [],
+      "hint": "Nejde o jediný čin, ale o celý způsob zacházení s jednou hodnotou.",
+      "chain": [
+        "Pravdu hledej, slyš, uč se jí, miluj ji, říkej ji a braň ji celý život.",
+        "S poznanou skutečností se má člověk seznamovat, žít i za ni stát až do konce.",
+        "Životní plán pro poctivost má seznamování, naslouchání, učení, lásku, řeč i obranu.",
+        "Stejná hodnota dostala sedm pracovních úkolů a žádný předčasný odchod ze služby.",
+        "Do jedné služby se hlásí pátrač, posluchač, žák, milovník, mluvčí, strážce i obránce; jejich společný svěřenec se nesmí opustit ani při poslední zkoušce."
+      ],
+      "author": "Jan Hus",
+      "origin": "Výklad viery · kapitola V ·1412",
+      "context": "Husova řada výzev spojuje hledání, přijímání i obranu pravdy. Ve Výkladu viery má výslovně křesťanský smysl. Znění lze dohledat v Erbenově vydání Husových českých spisů z roku 1865, na straně 7.",
+      "meaning": "Pravdě je třeba porozumět, žít podle ní a vytrvat v ní.",
+      "attribution": "Jan Hus (†1415), původní český text, mírně normalizovaný pravopis „se“ místo „sě“. Pramen: K. J. Erben (ed.), Mistra Jana Husi Sebrané spisy české I, Praha: Bedřich Tempský,1865, s.7; digitální text a sken AHISTO. Novodobé stručné heslo „Pravda vítězí“ není vydáváno za celé znění tohoto místa. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Výklad viery · kapitola V ·1412 · původní text",
+          "url": "https://www.rbmonline.cz/portal/book/377?lpage=7"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Jan Hus",
+        "work": "Výklad viery · kapitola V ·1412",
+        "summary": "Husova řada výzev spojuje hledání, přijímání i obranu pravdy. Ve Výkladu viery má výslovně křesťanský smysl. Znění lze dohledat v Erbenově vydání Husových českých spisů z roku 1865, na straně 7."
+      },
+      "coverage": {
+        "epoch": "stredovek",
+        "originYearApprox": 1412,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "České země",
+        "themes": [
+          "pravda a svědomí",
+          "víra a náboženství"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "hledaj pravdy, slyš pravdu, uč sě pravdě, miluj pravdu, prav pravdu, drž pravdu, braň pravdy až do smrti",
+        "language": "cs",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-petrarch-peace",
+      "category": "Historický výrok",
+      "era": "14. století · pozdní středověk a počátky humanismu",
+      "answer": "Mír nenacházím a do války se nemám.",
+      "variants": [
+        "Pokoj nenalézám a válčit nemohu.",
+        "Klid nenacházím a nemám s kým válčit.",
+        "Mír nenalézám, ač nejsem ve válce.",
+        "Pace non trovo, et non ò da far guerra."
+      ],
+      "concepts": [
+        [
+          "mir",
+          "klid",
+          "pokoj"
+        ],
+        [
+          "nenach",
+          "nemam",
+          "marne"
+        ],
+        [
+          "valk",
+          "boj",
+          "bit"
+        ]
+      ],
+      "paraphrases": [
+        "Silný cit přivádí člověka do rozporného stavu bez klidu i jasného protivníka."
+      ],
+      "contradictions": [],
+      "hint": "Vnitřní situace se nevejde do dvou obvyklých protikladných možností.",
+      "chain": [
+        "Nemám pokoj, ale nemohu ani válčit.",
+        "Necítím klid, přesto se nemám s kým bít.",
+        "Uvnitř není příměří a venku čeká prázdné bojiště.",
+        "Srdce hledá odpočinek marně, ani bitevní rozkaz pro něj však není připravený.",
+        "Uvnitř obyvatele pořád houká poplach, jenže když se chce vypravit proti nepříteli, nenajde na bojišti nikoho, s kým by mohl začít."
+      ],
+      "author": "Francesco Petrarca",
+      "origin": "Zpěvník · sonet 134 · první verš",
+      "context": "Petrarkův sonet vrství protiklady milostného prožitku: strach i naději, žár i led. Už první verš stojí mezi neklidem a nemožností skutečného boje. Česká věta je náš převod italského originálu.",
+      "meaning": "Silný cit přivádí člověka do rozporného stavu bez klidu i jasného protivníka.",
+      "attribution": "Vlastní krátký český překlad původního veřejně volného italského verše. Petrarca (1304–1374) stojí na přechodu středověké kultury a humanismu; přesný rok vzniku tohoto verše neurčujeme. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Zpěvník · sonet134 · první verš · původní text",
+          "url": "https://it.wikisource.org/wiki/Canzoniere_(Rerum_vulgarium_fragmenta)/Pace_non_trovo,_et_non_%C3%B2_da_far_guerra"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Francesco Petrarca",
+        "work": "Zpěvník · sonet 134 · první verš",
+        "summary": "Petrarkův sonet vrství protiklady milostného prožitku: strach i naději, žár i led. Už první verš stojí mezi neklidem a nemožností skutečného boje. Česká věta je náš převod italského originálu."
+      },
+      "coverage": {
+        "epoch": "stredovek-humanismus",
+        "originYearApprox": 1350,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Itálie",
+        "themes": [
+          "láska a vztahy",
+          "vnitřní rozpory"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Pace non trovo, et non ò da far guerra;",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-more-property",
+      "category": "Historický výrok",
+      "era": "1516 · renesanční humanismus",
+      "answer": "Dokud trvá soukromé vlastnictví, nemůže být majetek rozdělen spravedlivě.",
+      "variants": [
+        "Kde je soukromé vlastnictví, je stěží možné, aby se stát spravoval spravedlivě.",
+        "Dokud nebude odstraněno soukromé vlastnictví, nebude spravedlivé rozdělení věcí."
+      ],
+      "concepts": [
+        [
+          "soukrom",
+          "vlastn",
+          "majet"
+        ],
+        [
+          "rozd",
+          "del",
+          "podil"
+        ],
+        [
+          "spraved",
+          "rovn",
+          "ferov"
+        ]
+      ],
+      "paraphrases": [
+        "Mluvčí spojuje spravedlivé rozdělení zdrojů s odmítnutím soukromého vlastnictví."
+      ],
+      "contradictions": [],
+      "hint": "Sleduj, čemu mluvčí připisuje nerovnost při rozdělování.",
+      "chain": [
+        "Soukromý majetek podle mluvčího brání spravedlivému dělení.",
+        "Dokud má každý své, nebude se prý vše rozdělovat spravedlivě.",
+        "Při dělení společné zásoby si silní přidržují vlastní zamčené skříně.",
+        "Reformátor chce nejdřív zrušit soukromé klíče a teprve pak narovnat podíly.",
+        "Na poradě o rovných porcích někdo prohlásil, že se nejprve musí odevzdat vlastní uzamčené truhlice, jinak férová výdejna vůbec nevznikne."
+      ],
+      "author": "Thomas More",
+      "origin": "Utopie · kniha I ·1516",
+      "context": "V dialogu Utopie obhajuje Rafael Hythlodaios společné uspořádání majetku. Jiní účastníci mu odporují. Výrok je součást literární rozpravy, nikoli důkaz, že autor bez výhrad schvaloval každý rys popisované společnosti.",
+      "meaning": "Mluvčí spojuje spravedlivé rozdělení zdrojů s odmítnutím soukromého vlastnictví.",
+      "attribution": "Vlastní český převod podle veřejně volného anglického překladu Gilberta Burneta (1643–1715). Literární výrok postavy Rafaela Hythlodaia; nezjednodušujeme dialog na bezvýhradné autorovo politické vyznání. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Utopie · kniha I ·1516 · původní text",
+          "url": "https://www.gutenberg.org/files/2130/2130-h/2130-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Thomas More",
+        "work": "Utopie · kniha I ·1516",
+        "summary": "V dialogu Utopie obhajuje Rafael Hythlodaios společné uspořádání majetku. Jiní účastníci mu odporují. Výrok je součást literární rozpravy, nikoli důkaz, že autor bez výhrad schvaloval každý rys popisované společnosti."
+      },
+      "coverage": {
+        "epoch": "renesance",
+        "originYearApprox": 1516,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Anglie",
+        "themes": [
+          "majetek a nerovnost",
+          "politika a společnost"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "till property is taken away, there can be no equitable or just distribution of things",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-shakespeare-hamlet",
+      "category": "Historický výrok",
+      "era": "Kolem 1600 · anglická renesance",
+      "answer": "Být, či nebýt, to je otázka.",
+      "variants": [
+        "Být nebo nebýt, to je otázka.",
+        "Být, čili nebýt, toť otázka.",
+        "Být či nebýt.",
+        "To be, or not to be, that is the question."
+      ],
+      "concepts": [
+        [
+          "byt",
+          "exist",
+          "zit"
+        ],
+        [
+          "nebyt",
+          "skonc",
+          "ukonc"
+        ],
+        [
+          "otazk",
+          "volb",
+          "vah"
+        ]
+      ],
+      "paraphrases": [
+        "Mluvčí váhá mezi pokračováním existence a jejím ukončením."
+      ],
+      "contradictions": [],
+      "hint": "Volba je obecnější než rozhodnutí o jedné konkrétní činnosti.",
+      "chain": [
+        "Otázkou je, zda být, nebo nebýt.",
+        "Má člověk pokračovat v existenci, či skončit?",
+        "Na poradě vlastního života zůstaly jen dvě krajní možnosti.",
+        "Nájemník světa zvažuje pokračování smlouvy proti úplnému odhlášení.",
+        "U jediné osobní přepážky leží žádost o pokračování pobytu vedle definitivního odhlášení; žadatel nedokáže rozhodnout, který formulář vlastně zvolit."
+      ],
+      "author": "William Shakespeare",
+      "origin": "Hamlet · III. jednání,1. výstup",
+      "context": "Hamletův monolog začíná otázkou existence a smrti. Slavná formule patří dánskému princi jako divadelní postavě. Pochybování tu vede k úvaze o utrpení, činu a obavě z neznáma po smrti.",
+      "meaning": "Mluvčí váhá mezi pokračováním existence a jejím ukončením.",
+      "attribution": "Vlastní jednoduchý český převod krátké veřejně volné anglické věty; přijímány jsou ustálené české varianty i originál. Není převzat delší moderní český překlad. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Hamlet · III. jednání,1. výstup · původní text",
+          "url": "https://www.gutenberg.org/files/1524/1524-h/1524-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "William Shakespeare",
+        "work": "Hamlet · III. jednání,1. výstup",
+        "summary": "Hamletův monolog začíná otázkou existence a smrti. Slavná formule patří dánskému princi jako divadelní postavě. Pochybování tu vede k úvaze o utrpení, činu a obavě z neznáma po smrti."
+      },
+      "coverage": {
+        "epoch": "renesance",
+        "originYearApprox": 1600,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Anglie",
+        "themes": [
+          "život a smrt",
+          "rozhodování"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "To be, or not to be, that is the question:",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-shakespeare-rose",
+      "category": "Historický výrok",
+      "era": "Kolem 1595 · anglická renesance",
+      "answer": "Co je po jméně? Růže by pod jiným jménem voněla stejně sladce.",
+      "variants": [
+        "Co záleží na jméně? Růže by pod jiným jménem voněla stejně.",
+        "Co je v jménu? To, čemu říkáme růže, by jiným jménem vonělo stejně sladce."
+      ],
+      "concepts": [
+        [
+          "jmen",
+          "nazv",
+          "oznac"
+        ],
+        [
+          "ruz",
+          "kvet",
+          "zahon"
+        ],
+        [
+          "von",
+          "podstat",
+          "stejn"
+        ]
+      ],
+      "paraphrases": [
+        "Pouhá změna názvu nemění podstatu ani hodnotu věci."
+      ],
+      "contradictions": [],
+      "hint": "Jeden vnější štítek je poměřován s tím, co zůstává i bez něj.",
+      "chain": [
+        "Růže voní stejně, ať se jí říká jakkoli.",
+        "Změněné pojmenování nevezme květině její vůni.",
+        "Zahradník přepsal jmenovku a nos si rozdílu vůbec nevšiml.",
+        "Úřad přejmenoval květinovou krásku, její skutečná příjemnost však žádost nečetla.",
+        "Zahradník vyměnil cedulku na nejvoňavějším záhonu; vzduch kolem něj o žádné administrativní změně nevěděl a pokračoval úplně stejně."
+      ],
+      "author": "William Shakespeare",
+      "origin": "Romeo a Julie · II. jednání,2. výstup",
+      "context": "Julie se ptá, proč by příjmení milovaného člověka mělo určovat jeho hodnotu. Přirovnání květiny odlišuje označení od skutečných vlastností. Jde o repliku divadelní postavy, ne o samostatně doložený Shakespearův osobní projev.",
+      "meaning": "Pouhá změna názvu nemění podstatu ani hodnotu věci.",
+      "attribution": "Vlastní české převyprávění dvou řádků veřejně volného anglického textu. České překlady se liší; ve hře přijímáme více věrných formulací. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Romeo a Julie · II. jednání,2. výstup · původní text",
+          "url": "https://www.gutenberg.org/files/1513/1513-h/1513-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "William Shakespeare",
+        "work": "Romeo a Julie · II. jednání,2. výstup",
+        "summary": "Julie se ptá, proč by příjmení milovaného člověka mělo určovat jeho hodnotu. Přirovnání květiny odlišuje označení od skutečných vlastností. Jde o repliku divadelní postavy, ne o samostatně doložený Shakespearův osobní projev."
+      },
+      "coverage": {
+        "epoch": "renesance",
+        "originYearApprox": 1595,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Anglie",
+        "themes": [
+          "láska a vztahy",
+          "jména a skutečnost"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "What’s in a name? That which we call a rose By any other name would smell as sweet;",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-montaigne-knowing",
+      "category": "Historický výrok",
+      "era": "1580 · renesanční skepticismus",
+      "answer": "Co já vím?",
+      "variants": [
+        "Co vlastně vím?",
+        "Co vím?",
+        "Que sais-je?",
+        "Que sçay-je?"
+      ],
+      "concepts": [
+        [
+          "co",
+          "otazk",
+          "dotaz"
+        ],
+        [
+          "vim",
+          "ved",
+          "znal"
+        ],
+        [
+          "ja",
+          "vlast",
+          "sebe"
+        ]
+      ],
+      "paraphrases": [
+        "Vlastní vědění je třeba podrobit poctivé pochybnosti."
+      ],
+      "contradictions": [],
+      "hint": "Mluvčí nezkouší cizí neznalost; obrací dotaz sám na sebe.",
+      "chain": [
+        "Ptám se, co doopravdy vím.",
+        "Jaké jsou vlastně mé vlastní znalosti?",
+        "Zkoušející obrátil otázku od studentů na svou vlastní jistotu.",
+        "Majitel hlavy žádá inventuru skutečně potvrzeného obsahu.",
+        "Zkoušející zastavil celé představení sebejistoty, otočil lampu k vlastní hlavě a požádal o seznam toho, co v ní opravdu může zaručit."
+      ],
+      "author": "Michel de Montaigne",
+      "origin": "Eseje · II,12 · Apologie Raimonda Sebonda",
+      "context": "Montaigne vysvětluje skeptický postoj otázkou, kterou užíval i jako motto spojené s vahami. Nejde o prohlášení, že je poznání zbytečné, ale o prověřování vlastní jistoty.",
+      "meaning": "Vlastní vědění je třeba podrobit poctivé pochybnosti.",
+      "attribution": "Vlastní krátký český převod francouzské otázky z veřejně volného díla. Nejde o Sókratovo „Vím, že nic nevím“, které je v katalogu jinou hádankou. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Eseje · II,12 · Apologie Raimonda Sebonda · původní text",
+          "url": "https://fr.wikisource.org/wiki/Essais/Livre_II/Chapitre_12"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Michel de Montaigne",
+        "work": "Eseje · II,12 · Apologie Raimonda Sebonda",
+        "summary": "Montaigne vysvětluje skeptický postoj otázkou, kterou užíval i jako motto spojené s vahami. Nejde o prohlášení, že je poznání zbytečné, ale o prověřování vlastní jistoty."
+      },
+      "coverage": {
+        "epoch": "renesance",
+        "originYearApprox": 1580,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Francie",
+        "themes": [
+          "poznání a pochybnost",
+          "pokora"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Cette fantasie est plus seurement conceuë par interrogation: Que sçay-je?",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-cervantes-freedom",
+      "category": "Historický výrok",
+      "era": "1615 · raný novověk, španělský Zlatý věk",
+      "answer": "Svoboda, Sancho, je jeden z nejvzácnějších darů, které nebesa dala lidem.",
+      "variants": [
+        "Svoboda je jeden z nejcennějších darů, jež nebe dalo lidem.",
+        "Svoboda, Sancho, patří k nejvzácnějším darům, které nebesa poskytla člověku."
+      ],
+      "concepts": [
+        [
+          "svobod",
+          "voln",
+          "vlast"
+        ],
+        [
+          "dar",
+          "poklad",
+          "vzac"
+        ],
+        [
+          "nebe",
+          "lid",
+          "clov"
+        ]
+      ],
+      "paraphrases": [
+        "Možnost rozhodovat o sobě je hodnotnější než dary, které člověka zavazují."
+      ],
+      "contradictions": [],
+      "hint": "Mluvčí oceňuje něco, co nelze jednoduše zamknout do truhly.",
+      "chain": [
+        "Svoboda je vzácný dar, který lidé dostali od nebes.",
+        "Schopnost žít bez cizího pouta je nebeský poklad.",
+        "Rytíř si cení vlastního pohybu víc než zámeckých darů.",
+        "Z otevřené krajiny přišel neviditelný dárek dražší než hradní hostina.",
+        "Cestující opustil plné zámecké stoly a našel venku dar bez hmotného obalu; právě možnost jít vlastní cestou prý nemůže vyvážit žádná pokladnice."
+      ],
+      "author": "Miguel de Cervantes",
+      "origin": "Důmyslný rytíř Don Quijote de la Mancha · II,58",
+      "context": "Don Quijote po odchodu z vévodského zámku porovnává svobodu s bohatým, ale zavazujícím pohoštěním. Je to promluva románové postavy k Sanchovi, nikoli přímý autobiografický výrok Cervantese.",
+      "meaning": "Možnost rozhodovat o sobě je hodnotnější než dary, které člověka zavazují.",
+      "attribution": "Vlastní český převod podle veřejně volného překladu Johna Ormsbyho (1829–1895), kapitola 58 druhého dílu. Nejde o moderní český překlad. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Důmyslný rytíř Don Quijote de la Mancha · II,58 · původní text",
+          "url": "https://www.gutenberg.org/files/5946/5946-h/5946-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Miguel de Cervantes",
+        "work": "Důmyslný rytíř Don Quijote de la Mancha · II,58",
+        "summary": "Don Quijote po odchodu z vévodského zámku porovnává svobodu s bohatým, ale zavazujícím pohoštěním. Je to promluva románové postavy k Sanchovi, nikoli přímý autobiografický výrok Cervantese."
+      },
+      "coverage": {
+        "epoch": "rany-novovek",
+        "originYearApprox": 1615,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Španělsko",
+        "themes": [
+          "svoboda a důstojnost",
+          "majetek a závislost"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Freedom, Sancho, is one of the most precious gifts that heaven has bestowed upon men;",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-comenius-return",
+      "category": "Historický výrok",
+      "era": "1650 · raný novověk po třicetileté válce",
+      "answer": "Vláda věcí tvých k tobě se zase navrátí, ó lide český!",
+      "variants": [
+        "Vláda věcí tvých se k tobě zase navrátí, ó lide český.",
+        "Vláda tvých věcí se k tobě opět vrátí, lide český."
+      ],
+      "concepts": [
+        [
+          "vlad",
+          "sprav",
+          "rozhod"
+        ],
+        [
+          "zase",
+          "navrat",
+          "zpet"
+        ],
+        [
+          "lid",
+          "cesk",
+          "narod"
+        ]
+      ],
+      "paraphrases": [
+        "Po těžkém období se má společenství vrátit právo rozhodovat o sobě."
+      ],
+      "contradictions": [],
+      "hint": "Slib se týká obnovení něčeho dříve ztraceného, ne získání cizího.",
+      "chain": [
+        "Český lid má znovu získat vládu nad vlastními věcmi.",
+        "Národu se vrátí možnost spravovat svůj život.",
+        "Zemi mají po nucené správě znovu předat její vlastní klíče.",
+        "Dávný vlastník rozhodování se má vrátit za svůj odložený stůl.",
+        "Obyvatelům země někdo slibuje, že po vichřici dostanou zpátky klíče od vlastní správní místnosti a o svém chodu už rozhodnou sami."
+      ],
+      "author": "Jan Amos Komenský",
+      "origin": "Kšaft umírající matky Jednoty bratrské · XIX ·1650",
+      "context": "Komenský nechává odcházející Jednotu bratrskou promlouvat k českému a moravskému národu. V době exilu vyjadřuje naději na návrat možnosti spravovat vlastní věci. Citujeme známou část delšího souvětí, nikoli jeho úplné znění.",
+      "meaning": "Po těžkém období se má společenství vrátit právo rozhodovat o sobě.",
+      "attribution": "Původní veřejně volný český text Jana Amosa Komenského (1592–1670), znění podle odkazovaného přepisu. Oslovení a naděje patří k nábožensky vystavěné literární závěti z roku 1650. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Kšaft umírající matky Jednoty bratrské · XIX ·1650 · původní text",
+          "url": "https://cs.wikisource.org/wiki/K%C5%A1aft_um%C3%ADraj%C3%ADc%C3%AD_matky_Jednoty_bratrsk%C3%A9"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Jan Amos Komenský",
+        "work": "Kšaft umírající matky Jednoty bratrské · XIX ·1650",
+        "summary": "Komenský nechává odcházející Jednotu bratrskou promlouvat k českému a moravskému národu. V době exilu vyjadřuje naději na návrat možnosti spravovat vlastní věci. Citujeme známou část delšího souvětí, nikoli jeho úplné znění."
+      },
+      "coverage": {
+        "epoch": "rany-novovek",
+        "originYearApprox": 1650,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "České země a exil",
+        "themes": [
+          "naděje a návrat",
+          "politika a sebeurčení"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "vláda věcí tvých k tobě se zase navrátí, ó lide český!",
+        "language": "cs",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-galileo-mathematics",
+      "category": "Historický výrok",
+      "era": "1623 · raně novověká vědecká revoluce",
+      "answer": "Kniha vesmíru je psána jazykem matematiky.",
+      "variants": [
+        "Příroda je psána matematickým jazykem.",
+        "Vesmír je napsán jazykem matematiky.",
+        "Kniha přírody je napsána jazykem matematiky."
+      ],
+      "concepts": [
+        [
+          "vesmir",
+          "prirod",
+          "svet"
+        ],
+        [
+          "knih",
+          "cten",
+          "psan"
+        ],
+        [
+          "matem",
+          "cisl",
+          "geometr"
+        ]
+      ],
+      "paraphrases": [
+        "Porozumění přírodě vyžaduje matematické vyjadřování jejích vztahů."
+      ],
+      "contradictions": [],
+      "hint": "K přečtení největší otevřené knihy je třeba zvláštní abeceda.",
+      "chain": [
+        "Vesmír lze číst jen pomocí matematického jazyka.",
+        "Veliká přírodní kniha používá geometrické znaky.",
+        "Hvězdné stránky neumějí běžná písmena, čtenář potřebuje čísla a tvary.",
+        "Kosmická knihovna vyměnila abecedu za kruhy a trojúhelníky.",
+        "Čtenář otevřel svazek veliký jako celý svět, jenže tiskárna do něj místo písmen vysázela kružnice, trojúhelníky a vztahy mezi čísly."
+      ],
+      "author": "Galileo Galilei",
+      "origin": "Il Saggiatore · oddíl 6 ·1623",
+      "context": "Galileo přirovnává vesmír k otevřené knize, pro jejíž čtení je třeba znát matematické znaky. Pasáž má oporu v díle Il Saggiatore; nezaměňujeme ji s později tradovaným „A přece se točí“, jehož vyslovení není spolehlivě doloženo.",
+      "meaning": "Porozumění přírodě vyžaduje matematické vyjadřování jejích vztahů.",
+      "attribution": "Vlastní české shrnutí přesně označeného přirovnání z veřejně volného italského originálu,1623. Cílová věta kondenzuje delší pasáž; tuto okolnost výslovně uvádíme. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Il Saggiatore · oddíl6 ·1623 · původní text",
+          "url": "https://galilei.letteraturaoperaomnia.org/galilei_il_saggiatore.html"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Galileo Galilei",
+        "work": "Il Saggiatore · oddíl 6 ·1623",
+        "summary": "Galileo přirovnává vesmír k otevřené knize, pro jejíž čtení je třeba znát matematické znaky. Pasáž má oporu v díle Il Saggiatore; nezaměňujeme ji s později tradovaným „A přece se točí“, jehož vyslovení není spolehlivě doloženo."
+      },
+      "coverage": {
+        "epoch": "rany-novovek",
+        "originYearApprox": 1623,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Itálie",
+        "themes": [
+          "věda a příroda",
+          "jazyk a porozumění"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Egli è scritto in lingua matematica, e i caratteri son triangoli, cerchi, ed altre figure geometriche",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-newton-giants",
+      "category": "Historický výrok",
+      "era": "1676 · raně novověká vědecká revoluce",
+      "answer": "Viděl-li jsem dále, bylo to proto, že jsem stál na ramenou obrů.",
+      "variants": [
+        "Jestliže jsem dohlédl dál, pak proto, že jsem stál na ramenou obrů.",
+        "Pokud jsem viděl dále, bylo to tím, že jsem stál na ramenou obrů."
+      ],
+      "concepts": [
+        [
+          "vid",
+          "dohled",
+          "rozhled"
+        ],
+        [
+          "ramen",
+          "nos",
+          "stal"
+        ],
+        [
+          "obr",
+          "predchud",
+          "velik"
+        ]
+      ],
+      "paraphrases": [
+        "Vlastní poznání vyrůstá z práce lidí, kteří nás předcházeli."
+      ],
+      "contradictions": [],
+      "hint": "Větší rozhled nemusí dokazovat jen vlastní výšku.",
+      "chain": [
+        "Dohlédl jsem dál díky tomu, že jsem stál na ramenou velkých předchůdců.",
+        "Výšku mého rozhledu mi poskytli dřívější velikáni.",
+        "Badatel viděl za obzor ze zvýšeného místa, které mu přenechali jiní.",
+        "Malý pozorovatel si připsal daleký výhled, ale nezapomněl na své obrovské nosiče.",
+        "Pozorovatel se nechlubí vlastníma nohama: přes vzdálený obzor zahlédl jen proto, že jej pod sebou nesla celá výška jeho mohutných předchůdců."
+      ],
+      "author": "Isaac Newton",
+      "origin": "Dopis Robertu Hookovi ·5. února 1676",
+      "context": "Newton v dopise Hookovi uznává přínos předchůdců a spolupracovníků. Přirovnání trpaslíků na ramenou obrů je starší než Newton; jeho dopis je doloženým užitím, ne dokladem autorství celého obrazu.",
+      "meaning": "Vlastní poznání vyrůstá z práce lidí, kteří nás předcházeli.",
+      "attribution": "Vlastní český překlad Newtonovy veřejně volné anglické věty. Dopis z 5. února 1675/76 v tehdejším anglickém datování, citovaný v Brewsterově edici a přístupný přes Newton Project. Starší tradice obrazu se přiznává. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Dopis Robertu Hookovi ·5. února1676 · původní text",
+          "url": "https://newtonproject.ox.ac.uk/view/texts/normalized/OTHE00101"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Isaac Newton",
+        "work": "Dopis Robertu Hookovi ·5. února 1676",
+        "summary": "Newton v dopise Hookovi uznává přínos předchůdců a spolupracovníků. Přirovnání trpaslíků na ramenou obrů je starší než Newton; jeho dopis je doloženým užitím, ne dokladem autorství celého obrazu."
+      },
+      "coverage": {
+        "epoch": "rany-novovek",
+        "originYearApprox": 1676,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Anglie",
+        "themes": [
+          "poznání a předchůdci",
+          "spolupráce"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "If I have seen farther, it is by standing on the shoulders of giants.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-voltaire-garden",
+      "category": "Historický výrok",
+      "era": "1759 · osvícenství",
+      "answer": "Musíme pěstovat svou zahradu.",
+      "variants": [
+        "Je třeba obdělávat naši zahradu.",
+        "Musíme obdělávat svou zahradu.",
+        "Je třeba pěstovat naši zahrádku.",
+        "Il faut cultiver notre jardin."
+      ],
+      "concepts": [
+        [
+          "mus",
+          "potreb",
+          "treba"
+        ],
+        [
+          "pest",
+          "obdel",
+          "pec"
+        ],
+        [
+          "zahrad",
+          "pozem",
+          "zahon"
+        ]
+      ],
+      "paraphrases": [
+        "Místo nekonečného vysvětlování je třeba pečovat o vlastní konkrétní úkol."
+      ],
+      "contradictions": [],
+      "hint": "Z velké rozpravy se pozornost vrací k malému místu, o které lze pečovat.",
+      "chain": [
+        "Máme se starat o vlastní zahradu.",
+        "Místo planého hovoru je potřeba obdělávat náš kus země.",
+        "Debata o světě končí povoláním na společný záhon.",
+        "Filozofům zůstalo nářadí a malý pozemek k péči.",
+        "Rozprava o napravování celého světa se rozešla; účastníkům místo dalších velkých vysvětlení rozdali nástroje a ukázali na vlastní kus země před domem."
+      ],
+      "author": "Voltaire",
+      "origin": "Candide neboli Optimismus · kapitola 30 ·1759",
+      "context": "Na konci Voltairova příběhu přeruší Candide velké výklady světa výzvou ke konkrétní práci. Zahrada je skutečným místem i obrazem toho, o co můžeme pečovat. Jde o repliku literární postavy.",
+      "meaning": "Místo nekonečného vysvětlování je třeba pečovat o vlastní konkrétní úkol.",
+      "attribution": "Vlastní krátký český překlad veřejně volného francouzského originálu. Není tvrzeno, že cílem je útěk před každou veřejnou odpovědností; výklad zůstává u závěru konkrétního příběhu. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Candide neboli Optimismus · kapitola30 ·1759 · původní text",
+          "url": "https://fr.wikisource.org/wiki/Candide,_ou_l%E2%80%99Optimisme/Garnier_1877/Chapitre_30"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Voltaire",
+        "work": "Candide neboli Optimismus · kapitola 30 ·1759",
+        "summary": "Na konci Voltairova příběhu přeruší Candide velké výklady světa výzvou ke konkrétní práci. Zahrada je skutečným místem i obrazem toho, o co můžeme pečovat. Jde o repliku literární postavy."
+      },
+      "coverage": {
+        "epoch": "osvicenstvi",
+        "originYearApprox": 1759,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Francie",
+        "themes": [
+          "práce a jednání",
+          "smysl a odpovědnost"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "mais il faut cultiver notre jardin.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-wollstonecraft-self-rule",
+      "category": "Historický výrok",
+      "era": "1792 · osvícenství a počátky moderního feminismu",
+      "answer": "Nechci, aby ženy měly moc nad muži, ale samy nad sebou.",
+      "variants": [
+        "Nepřeji si, aby ženy vládly mužům, nýbrž samy sobě.",
+        "Nechci pro ženy vládu nad muži, ale vládu nad sebou samými."
+      ],
+      "concepts": [
+        [
+          "zen",
+          "zensk"
+        ],
+        [
+          "muzi",
+          "muzu",
+          "muz"
+        ],
+        [
+          "sebou",
+          "samostat",
+          "sebeurc"
+        ],
+        [
+          "moc",
+          "vlad",
+          "rid"
+        ]
+      ],
+      "paraphrases": [
+        "Rovnost má přinést sebeurčení místo vlády jednoho pohlaví nad druhým."
+      ],
+      "contradictions": [],
+      "hint": "Cílem není vyměnit vládce a ovládané.",
+      "chain": [
+        "Ženy mají mít vládu nad vlastním životem, ne nad muži.",
+        "Nejde o ženskou nadvládu, ale o samostatnost žen.",
+        "Reformátorka nechce přestěhovat trůn nad druhé pohlaví, chce každé ženě její vlastní kormidlo.",
+        "Nový plán nerozdává ženy jako velitelky mužů, ale jako správkyně vlastního směru.",
+        "Na rozdělování kormidel odmítla ženám přidělit cizí lodě; požaduje, aby konečně směly držet volant té, ve které samy žijí."
+      ],
+      "author": "Mary Wollstonecraft",
+      "origin": "Obhajoba práv žen · kapitola 4 ·1792",
+      "context": "Wollstonecraft reaguje na Rousseauovu představu ženské výchovy. Vzdělání a vlastní rozum mají ženám dát samostatnost; žádá možnost řídit vlastní život, nikoli obrátit mocenskou nerovnost proti mužům.",
+      "meaning": "Rovnost má přinést sebeurčení místo vlády jednoho pohlaví nad druhým.",
+      "attribution": "Vlastní český překlad veřejně volného anglického originálu autorky (1759–1797). Místo v kapitole 4 odpovídá odkazovanému vydání. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Obhajoba práv žen · kapitola4 ·1792 · původní text",
+          "url": "https://www.gutenberg.org/cache/epub/3420/pg3420-images.html"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Mary Wollstonecraft",
+        "work": "Obhajoba práv žen · kapitola 4 ·1792",
+        "summary": "Wollstonecraft reaguje na Rousseauovu představu ženské výchovy. Vzdělání a vlastní rozum mají ženám dát samostatnost; žádá možnost řídit vlastní život, nikoli obrátit mocenskou nerovnost proti mužům."
+      },
+      "coverage": {
+        "epoch": "osvicenstvi",
+        "originYearApprox": 1792,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Anglie",
+        "themes": [
+          "svoboda a rovnost",
+          "vzdělávání a ženy"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "I do not wish them to have power over men; but over themselves.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-lincoln-democracy",
+      "category": "Historický výrok",
+      "era": "1863 · občanská válka ve Spojených státech",
+      "answer": "Vláda lidu, lidem a pro lid nezmizí ze země.",
+      "variants": [
+        "Vláda z lidu, lidem a pro lid nevymizí z povrchu země.",
+        "Vláda lidu, lidem, pro lid nikdy nezanikne.",
+        "Vláda lidu, lidem a pro lid."
+      ],
+      "concepts": [
+        [
+          "vlad",
+          "sprav",
+          "rozhod"
+        ],
+        [
+          "lid",
+          "obcan",
+          "obyvat"
+        ],
+        [
+          "pro",
+          "zdroj",
+          "cil"
+        ],
+        [
+          "nezmiz",
+          "nezanik",
+          "prezi"
+        ]
+      ],
+      "paraphrases": [
+        "Demokratická vláda má pocházet od občanů, být jimi vykonávána a sloužit jim."
+      ],
+      "contradictions": [],
+      "hint": "Tři různé vztahy míří ke stejné skupině.",
+      "chain": [
+        "Občané jsou zdrojem, vykonavatelem i cílem vlády, která má přežít.",
+        "Veřejná správa vzniká z obyvatel, obyvatelé ji vedou a pro ně pracuje.",
+        "V jedné správní místnosti sedí stejní lidé jako zadavatelé, obsluha i příjemci služby.",
+        "Trojí občanská pečeť má rozhodování udržet při životě.",
+        "Zakladatel, obsluha i příjemce služby mají tentokrát tutéž občanskou adresu; právě takto vystavěný dům rozhodování se prý nesmí ze světa ztratit."
+      ],
+      "author": "Abraham Lincoln",
+      "origin": "Gettysburský projev ·19. listopadu 1863",
+      "context": "Lincoln uzavírá krátký projev při zasvěcení vojenského hřbitova nadějí na zachování vlády vycházející z občanů a sloužící občanům. Rukopis ukazuje také drobné rozdíly mezi dochovanými verzemi projevu.",
+      "meaning": "Demokratická vláda má pocházet od občanů, být jimi vykonávána a sloužit jim.",
+      "attribution": "Vlastní český překlad veřejně volného anglického závěru projevu. Primární pramen je Lincolnův rukopis zveřejněný Library of Congress; netvrdíme shodu všech historických verzí slovo od slova. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Gettysburský projev ·19. listopadu1863 · původní text",
+          "url": "https://www.loc.gov/exhibits/civil-war-in-america/ext/al0186p1.html"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Abraham Lincoln",
+        "work": "Gettysburský projev ·19. listopadu 1863",
+        "summary": "Lincoln uzavírá krátký projev při zasvěcení vojenského hřbitova nadějí na zachování vlády vycházející z občanů a sloužící občanům. Rukopis ukazuje také drobné rozdíly mezi dochovanými verzemi projevu."
+      },
+      "coverage": {
+        "epoch": "19-stoleti",
+        "originYearApprox": 1863,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Spojené státy",
+        "themes": [
+          "demokracie a občanství",
+          "válka a paměť"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "government of the people by the people for the people, shall not perish from the earth.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-douglass-struggle",
+      "category": "Historický výrok",
+      "era": "1857 · hnutí proti otroctví ve Spojených státech",
+      "answer": "Není-li zápasu, není pokroku.",
+      "variants": [
+        "Bez boje není pokroku.",
+        "Kde není boj, tam není pokrok.",
+        "Není pokroku bez zápasu.",
+        "If there is no struggle there is no progress."
+      ],
+      "concepts": [
+        [
+          "zapas",
+          "boj",
+          "usil"
+        ],
+        [
+          "pokrok",
+          "zmen",
+          "posun"
+        ],
+        [
+          "bez",
+          "neni",
+          "podmin"
+        ]
+      ],
+      "paraphrases": [
+        "Společenská změna vyžaduje úsilí a překonávání odporu."
+      ],
+      "contradictions": [],
+      "hint": "Pohyb kupředu má nezbytnou podmínku, která nebývá pohodlná.",
+      "chain": [
+        "Bez zápasu nemůže být pokrok.",
+        "Posun kupředu předpokládá překonání odporu.",
+        "Dveře nových práv se neotevírají samotným čekáním.",
+        "Cestující nedostal další kilometr, dokud si neporadil s překážkou před sebou.",
+        "Společenský povoz marně čekal na další kus cesty; kola se podle řečníka nepohnou, dokud cestující nepřestanou jen sedět a nepostaví se odporu."
+      ],
+      "author": "Frederick Douglass",
+      "origin": "West India Emancipation · projev vCanandaigue ·3. srpna 1857",
+      "context": "Bývalý zotročený člověk a abolicionista Douglass vysvětluje, že rozšíření svobody nevzniká samo od sebe. V následujícím textu rozlišuje zápas mravní i fyzický; výrok proto nelze redukovat jen na násilí.",
+      "meaning": "Společenská změna vyžaduje úsilí a překonávání odporu.",
+      "attribution": "Vlastní krátký český překlad veřejně volného anglického projevu. Citováno s konkrétním datem a kontextem abolicionistického hnutí, nikoli jako neurčitá motivační průpovídka. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "West India Emancipation · projev vCanandaigue ·3. srpna1857 · původní text",
+          "url": "https://en.wikisource.org/wiki/West_India_Emancipation"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Frederick Douglass",
+        "work": "West India Emancipation · projev vCanandaigue ·3. srpna 1857",
+        "summary": "Bývalý zotročený člověk a abolicionista Douglass vysvětluje, že rozšíření svobody nevzniká samo od sebe. V následujícím textu rozlišuje zápas mravní i fyzický; výrok proto nelze redukovat jen na násilí."
+      },
+      "coverage": {
+        "epoch": "19-stoleti",
+        "originYearApprox": 1857,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Spojené státy",
+        "themes": [
+          "svoboda a práva",
+          "odvaha a změna"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "If there is no struggle there is no progress.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-nietzsche-stronger",
+      "category": "Historický výrok",
+      "era": "Napsáno 1888, vydáno 1889 · filozofie 19. století",
+      "answer": "Co mě nezabije, to mě posílí.",
+      "variants": [
+        "Co mne nezabije, to mne posílí.",
+        "Co tě nezabije, to tě posílí.",
+        "Co mě nezabije, učiní mě silnějším.",
+        "Was mich nicht umbringt, macht mich stärker."
+      ],
+      "concepts": [
+        [
+          "nezabij",
+          "prezij",
+          "neukonc"
+        ],
+        [
+          "posil",
+          "silnejs",
+          "sil"
+        ],
+        [
+          "me",
+          "mne",
+          "zkusen"
+        ]
+      ],
+      "paraphrases": [
+        "Překonaná těžká zkušenost může být myšlena jako zdroj síly."
+      ],
+      "contradictions": [],
+      "hint": "Důležitá je hranice mezi úplným koncem a tím, co člověk ještě překoná.",
+      "chain": [
+        "To, co přežiji, mě učiní silnějším.",
+        "Nejtěžší zkouška, která mě nepřipraví o život, přidá sílu.",
+        "Životní útočník neuspěl a svému soupeři ještě doplnil svaly.",
+        "Poražené nebezpečí se přihlásilo jako nový trenér.",
+        "Útočník přišel ukončit celý příběh, ale obyvatel vydržel; podle provokativní zápisky odchází z téhle nevítané lekce s větší zásobou sil."
+      ],
+      "author": "Friedrich Nietzsche",
+      "origin": "Soumrak model · Výroky a šípy,8 ·1889",
+      "context": "Krátký aforismus stojí pod uvedením „Z válečné školy života“. Nietzsche spojuje přežitou těžkost se silou. Je to filozofická provokace, nikoli zdravotní tvrzení, že každé trauma člověku nutně prospěje.",
+      "meaning": "Překonaná těžká zkušenost může být myšlena jako zdroj síly.",
+      "attribution": "Vlastní jednoduchý český převod veřejně volného německého originálu,1888/1889. Vedle první osoby přijímáme běžnou českou variantu ve druhé osobě; nejde o převzetí chráněného moderního překladu. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Soumrak model · Výroky a šípy,8 ·1889 · původní text",
+          "url": "https://www.gutenberg.org/cache/epub/7203/pg7203.html"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Friedrich Nietzsche",
+        "work": "Soumrak model · Výroky a šípy,8 ·1889",
+        "summary": "Krátký aforismus stojí pod uvedením „Z válečné školy života“. Nietzsche spojuje přežitou těžkost se silou. Je to filozofická provokace, nikoli zdravotní tvrzení, že každé trauma člověku nutně prospěje."
+      },
+      "coverage": {
+        "epoch": "19-stoleti",
+        "originYearApprox": 1889,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Německojazyčná Evropa",
+        "themes": [
+          "odolnost a zkušenost",
+          "utrpení a růst"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Aus der Kriegsschule des Lebens. - Was mich nicht umbringt, macht mich stärker.",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-tagore-fearless",
+      "category": "Historický výrok",
+      "era": "1912 · bengálská literatura počátku 20. století",
+      "answer": "Kde je mysl beze strachu a hlava se drží vzpřímeně.",
+      "variants": [
+        "Kde je mysl bez bázně a hlava vztyčená.",
+        "Tam, kde je mysl beze strachu a hlava hrdě vztyčená.",
+        "Kde mysl nezná strach a hlava je vysoko."
+      ],
+      "concepts": [
+        [
+          "mysl",
+          "hlav",
+          "uvaz"
+        ],
+        [
+          "strach",
+          "baz",
+          "ustra"
+        ],
+        [
+          "vzp",
+          "vztyc",
+          "dujn"
+        ]
+      ],
+      "paraphrases": [
+        "Svobodná společnost umožňuje lidem přemýšlet bez úzkosti a žít důstojně."
+      ],
+      "contradictions": [],
+      "hint": "Dva obrazy spojují vnitřní volnost a vnější držení člověka.",
+      "chain": [
+        "Mysl je bez strachu a člověk může držet hlavu vysoko.",
+        "Člověk myslí svobodně a nemusí sklánět hlavu.",
+        "Vnitřní hlas se přestal bát a držení těla se narovnalo.",
+        "Země otevírá prostor pro neustrašené uvažování a rovný pohled.",
+        "V vysněné zemi nikdo nenosí v hlavě vystrašeného dozorce a krk nemusí před okolím zůstávat pokorně ohnutý."
+      ],
+      "author": "Rabíndranáth Thákur",
+      "origin": "Gítándžali · anglická báseň 35 ·1912",
+      "context": "Thákur otevírá báseň přáním svobodné a důstojné země, kde je poznání dostupné. Anglické Gítándžali vzniklo jeho vlastním převodem a výběrem z bengálských básní; český úryvek zde nově převádíme z autorovy anglické verze.",
+      "meaning": "Svobodná společnost umožňuje lidem přemýšlet bez úzkosti a žít důstojně.",
+      "attribution": "Vlastní český převod autorovy veřejně volné anglické verze,1912, číslo 35. Rabíndranáth Thákur (1861–1941) není zařazen pod evropskou kulturu jen proto, že použitý pramen je anglický. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Gítándžali · anglická báseň35 ·1912 · původní text",
+          "url": "https://www.gutenberg.org/files/7164/7164-h/7164-h.htm"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Rabíndranáth Thákur",
+        "work": "Gítándžali · anglická báseň 35 ·1912",
+        "summary": "Thákur otevírá báseň přáním svobodné a důstojné země, kde je poznání dostupné. Anglické Gítándžali vzniklo jeho vlastním převodem a výběrem z bengálských básní; český úryvek zde nově převádíme z autorovy anglické verze."
+      },
+      "coverage": {
+        "epoch": "20-stoleti-do-1945",
+        "originYearApprox": 1912,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Bengálsko, Indie",
+        "themes": [
+          "svoboda a důstojnost",
+          "poznání a vzdělávání"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Where the mind is without fear and the head is held high;",
+        "language": "original-or-public-domain-translation",
+        "checked": "2026-10-16"
+      }
+    },
+    {
+      "id": "quote-masaryk-discussion",
+      "category": "Historický výrok",
+      "era": "1935 · první Československá republika",
+      "answer": "Demokracie je diskuse.",
+      "variants": [
+        "Demokracie jest diskuse.",
+        "Demokracie je diskuze."
+      ],
+      "concepts": [
+        [
+          "demokr",
+          "obcan",
+          "svobod"
+        ],
+        [
+          "diskus",
+          "diskuz",
+          "rozhovor",
+          "dialog"
+        ]
+      ],
+      "paraphrases": [
+        "Demokratické soužití stojí na otevřeném rozhovoru rovných občanů."
+      ],
+      "contradictions": [],
+      "hint": "Způsob společného rozhodování se vysvětluje obyčejnou lidskou činností.",
+      "chain": [
+        "Demokracie znamená veřejnou diskusi.",
+        "Občanské rozhodování je rozhovor mezi rovnými.",
+        "Stát potřebuje, aby se jeho obyvatelé spolu poctivě bavili.",
+        "V sále rozhodování se místo jediné hlasité povelové trouby otevírá více naslouchajících míst.",
+        "Správní místnost svobodných občanů má podle řečníka fungovat jako stůl, u něhož si rovní účastníci navzájem odpovídají a také skutečně naslouchají."
+      ],
+      "author": "Tomáš Garrigue Masaryk, zaznamenal Karel Čapek",
+      "origin": "Hovory sT. G. Masarykem · Demokracie ·1935",
+      "context": "V Čapkových Hovorech Masaryk připomíná svůj výrok a vysvětluje, že skutečný rozhovor potřebuje důvěru a poctivé hledání pravdy. Nejde jen o hádání nebo proceduru hlasování. Uvádíme rok knižního podání, nikoli jisté datum prvního vyslovení.",
+      "meaning": "Demokratické soužití stojí na otevřeném rozhovoru rovných občanů.",
+      "attribution": "Původní český výrok T. G. Masaryka (1850–1937) v literárním záznamu Karla Čapka (1890–1938), Hovory sT. G. Masarykem. Oba autoři jsou veřejně volní; formulaci neprohlašujeme za přepis zvukové nahrávky. Herní řetězec, nápověda a výklad jsou nové redakční zpracování Šeptandy.",
+      "sources": [
+        {
+          "label": "Hovory sT. G. Masarykem · Demokracie ·1935 · původní text",
+          "url": "https://cs.wikisource.org/wiki/Hovory_s_T._G._Masarykem/Demokracie"
+        }
+      ],
+      "education": {
+        "type": "quote",
+        "label": "Výrok a jeho pramen",
+        "person": "Tomáš Garrigue Masaryk, zaznamenal Karel Čapek",
+        "work": "Hovory sT. G. Masarykem · Demokracie ·1935",
+        "summary": "V Čapkových Hovorech Masaryk připomíná svůj výrok a vysvětluje, že skutečný rozhovor potřebuje důvěru a poctivé hledání pravdy. Nejde jen o hádání nebo proceduru hlasování. Uvádíme rok knižního podání, nikoli jisté datum prvního vyslovení."
+      },
+      "coverage": {
+        "epoch": "20-stoleti-do-1945",
+        "originYearApprox": 1935,
+        "recordedYear": null,
+        "originDating": "composition",
+        "region": "Československo",
+        "themes": [
+          "demokracie a občanství",
+          "dialog a důvěra"
+        ]
+      },
+      "sourceEvidence": {
+        "text": "Řekl jsem jednou, že demokracie je diskuse.",
+        "language": "cs",
+        "checked": "2026-10-16"
+      }
+    }
+  ]
+}

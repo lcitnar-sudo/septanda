@@ -1,0 +1,80 @@
+/* Offline integration checks: synthetic sessions and DOM, no external accounts or requests. */
+const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
+const elements = new Map(), handlers = new Map(), windowHandlers = new Map(), accountCache = new Map();
+function element(id) {
+  if (elements.has(id)) return elements.get(id);
+  const listeners = new Map(), node = {id,value:'',hidden:false,disabled:false,required:false,checked:false,open:false,textContent:'',innerHTML:'',dataset:{},classList:{add(){},remove(){}},setAttribute(){},querySelector(){return element(id+'.label');},replaceChildren(){this.innerHTML='';},showModal(){this.open=true;},close(){this.open=false;},addEventListener(name,fn){listeners.set(name,fn);},async fire(name,event={}){return listeners.get(name)?.({preventDefault(){},...event});},reportValidity(){return true;},reset(){this.resetCalled=true;}};
+  elements.set(id,node); return node;
+}
+const clone = value => JSON.parse(JSON.stringify(value));
+const blank = () => ({version:6,legacy:{progress:{}},days:{}});
+const guest = {version:6,legacy:{progress:{}},days:{'2026-10-16':{ids:['a','b','c','d','e'],selected:'a',progress:{a:{attempts:[{id:'synthetic',text:'my guest answer',time:1,score:{total:10}}],hints:[],status:'playing',draft:''}}}}};
+let current = blank(), cloud = null, accountId = null, posted = [], authCalls = [], handler, updates=[], persistedSession=null, unavailable=false;
+const profile = () => ({account:{id:'12345678-1234-1234-1234-123456789abc',name:'Zkušební hráč',email:'player@example.test',emailConfirmed:true},state:cloud,revision:1,consent:{granted:false,active:false},admin:false});
+const context = vm.createContext({console,URL,URLSearchParams,AbortController,Blob,Date,Intl,JSON,Math,Promise,Error,TypeError,setTimeout,clearTimeout,setInterval(){},history:{replaceState(){}},location:{origin:'https://example.test',pathname:'/',href:'https://example.test/'},document:{body:{append(){}},createElement(){return {click(){context.exportClicked=true;},remove(){}};},getElementById:element,addEventListener(name,fn){handlers.set(name,fn);},hidden:false},window:{addEventListener(name,fn){windowHandlers.set(name,fn);}},SeptandaDaily:{sanitizeState:clone,dayKey:()=> '2026-10-16',validDay:day=>/^\d{4}-\d{2}-\d{2}$/.test(day),totals:state=>({solved:0,attempts:Object.values(state.days || {}).reduce((n,day)=>n+Object.values(day.progress || {}).reduce((sum,r)=>sum+r.attempts.length,0),0),revealed:0,spent:0})},SeptandaGame:{storageKey(){return accountId ? 'account.'+accountId : 'guest';},exportState(){return clone(current);},replaceState(next){current=clone(next);return true;},guestState(){return clone(guest);},setAccount(id,options){assert.equal(options.importGuest,false);if(accountId)accountCache.set(accountId,clone(current));accountId=id; current=clone(accountCache.get(id) || blank());updates.push(id);}},SeptandaSupabase:{createClient(){return {auth:{onAuthStateChange(fn){handler=fn;},async getSession(){return {data:{session:persistedSession}};},async signUp(body){authCalls.push(body);return {data:{session:null}};},async signInWithPassword(body){authCalls.push(body);persistedSession={access_token:'synthetic-token',user:{id:profile().account.id}};return {data:{session:persistedSession}};},async resetPasswordForEmail(email,options){authCalls.push({email,options});return {};},async updateUser(body){authCalls.push(body);return {};},async signOut(){persistedSession=null;return {};}}};}},async fetch(url,options={}){if(url.includes('cloud-leaderboard')) return {ok:true,json:async()=>({date:'2026-10-16',entries:[],total:0})};assert.ok(options.headers.Authorization==='Bearer synthetic-token');if(unavailable)throw new TypeError('Network unavailable');if(options.body){const body=JSON.parse(options.body);posted.push(body);if(body.action==='sync')cloud=body.state;if(body.action==='consent') return {ok:true,json:async()=>({...profile(),consent:{granted:body.granted,active:body.granted}})};}return {ok:true,json:async()=>profile()};}});
+(async()=>{
+  vm.runInContext(fs.readFileSync(__dirname+'/cloud.js','utf8'),context);
+  await context.SeptandaCloud.start({consent:{version:'v1',text:'Optional consent'},supabase:{url:'https://project.supabase.co',publishableKey:'public-key'}});
+  assert.equal(accountId,null);
+  assert.equal(element('marketing-opt-in').checked,false);
+  await element('mode-register').fire('click');
+  assert.equal(element('marketing-opt-in').checked,false);
+  element('player-email').value='player@example.test';element('player-password').value='test password 123';
+  await element('player-form').fire('submit');
+  assert.equal(authCalls[0].options.data.marketing_opt_in,false);
+  assert.equal(accountId,null,'unconfirmed signup cannot claim guest state');
+  await element('mode-login').fire('click');element('player-password').value='test password 123';
+  await element('player-form').fire('submit');
+  assert.equal(accountId,profile().account.id);
+  assert.equal(posted.some(body=>body.action==='sync'),false,'empty signup never creates a premature blank cloud state');
+  assert.equal(element('cloud-import').hidden,false);
+  await element('cloud-import-button').fire('click');
+  const imported=posted.find(body=>body.importLegacy===true);
+  assert.ok(imported);assert.ok(JSON.stringify(imported.state).includes('my guest answer'));
+  assert.ok(JSON.stringify(current).includes('my guest answer'));
+  element('profile-marketing-opt-in').checked=true;await element('profile-consent-save').fire('click');
+  assert.equal(element('profile-marketing-opt-in').checked,true);
+  element('profile-marketing-opt-in').checked=false;await element('profile-consent-save').fire('click');
+  assert.equal(posted.at(-1).granted,false);
+  assert.equal(element('profile-admin').hidden,true);
+  await element('player-forgot').fire('click');await element('player-form').fire('submit');
+  assert.equal(authCalls.at(-1).options.redirectTo,'https://example.test/?account=recovery');
+  element('recovery-password').value='new password 123';element('recovery-password-again').value='different password';
+  const before=authCalls.length;await element('recovery-form').fire('submit');assert.equal(authCalls.length,before,'mismatched recovery passwords stay local');
+  // Keep the session for explicit file-transfer tests below; logout is checked last.
+  assert.equal(JSON.stringify(guest).includes('my guest answer'),true);
+  console.log('PASS cloud guest isolation, explicit import, unchecked consent, opt-out, private admin and recovery.');
+  // New page visit: the session remains stored and an unsent local answer survives a failed profile request.
+  current.days['2026-10-16'].progress.a.draft='cached answer before leaving';
+  context.SeptandaGame.setAccount(null,{importGuest:false});
+  unavailable=true;
+  vm.runInContext(fs.readFileSync(__dirname+'/cloud.js','utf8'),context);
+  await context.SeptandaCloud.start({consent:{version:'v1',text:'Optional consent'},supabase:{url:'https://project.supabase.co',publishableKey:'public-key'}});
+  assert.ok(accountCache.get(profile().account.id).days['2026-10-16'].progress.a.draft);
+  const requestsBeforeReconnect=posted.length;
+  unavailable=false; await windowHandlers.get('online')();
+  assert.equal(accountId,profile().account.id,'stored session restores account without signing in again');
+  assert.equal(current.days['2026-10-16'].progress.a.draft,'cached answer before leaving','cached draft survives reopening while offline');
+  assert.ok(posted.slice(requestsBeforeReconnect).some(body=>body.action==='sync' && body.state.days['2026-10-16'].progress.a.draft==='cached answer before leaving'),'reconnection sends unsaved account progress');
+  console.log('PASS returning account, private cached progress and reconnect after failed initial profile load.');
+  // Contact preview must never report a real delivery; a failed remote request keeps the form.
+  let requestCount=0;
+  context.location={hostname:'127.0.0.1',protocol:'http:'};
+  context.FormData=function(){return [['form-name','septanda-contact'],['message','synthetic feedback']];};
+  context.fetch=async()=>{requestCount++;return {ok:false};};
+  vm.runInContext(fs.readFileSync(__dirname+'/community.js','utf8'),context);
+  await element('contact-form').fire('submit');assert.equal(requestCount,0);assert.match(element('contact-status').textContent,/místním náhledu/);
+  context.location.hostname='example.test';await element('contact-form').fire('submit');assert.equal(requestCount,1);assert.equal(element('contact-form').resetCalled,undefined);
+  context.fetch=async()=>({ok:true});await element('contact-form').fire('submit');assert.equal(element('contact-form').resetCalled,true);
+  console.log('PASS contact local preview, failure retention and positive response confirmation.');
+  await element('profile-export').fire('click');assert.equal(context.exportClicked,true,'export initiates a private JSON file download');
+  element('progress-file').files=[{name:'bad.json',size:3,text:async()=>'{bad'}];await element('progress-file').fire('change');assert.equal(element('progress-file-confirm').hidden,true);
+  element('progress-file').files=[{name:'progress.json',size:1000,text:async()=>JSON.stringify(guest)}];
+  const beforeImport=posted.length;await element('progress-file').fire('change');assert.equal(posted.length,beforeImport,'file selection alone never imports');
+  assert.equal(element('progress-file-confirm').hidden,false);assert.match(element('progress-file-preview').textContent,/Zkušební hráč/);
+  // Restore authenticated backend mock after the contact transport tests.
+  context.fetch=async(url,options={})=>{if(url.includes('cloud-leaderboard'))return {ok:true,json:async()=>({date:'2026-10-16',entries:[],total:0})};const body=JSON.parse(options.body);posted.push(body);if(body.action==='sync')cloud=body.state;return {ok:true,json:async()=>profile()};};
+  await element('progress-file-confirm').fire('click');assert.ok(posted.at(-1).importLegacy);assert.equal(element('progress-file-confirm').hidden,true);
+  console.log('PASS local export, invalid JSON rejection, explicit file confirmation and cloud merge.');
+  await element('profile-logout').fire('click');assert.equal(accountId,null);console.log('PASS logout restores isolated guest state.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

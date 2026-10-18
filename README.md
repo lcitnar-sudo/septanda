@@ -1,98 +1,54 @@
-# Šeptanda 5.0.11 — účty a žebříček
+# Šeptanda 5.1.1 — archiv slov
 
-Úvod zní „Tichá pošta. Poznáš, co bylo na začátku?“ Prázdná historie se nezobrazuje. V hlavičce jsou výrazná tlačítka Vytvořit účet a Přihlásit se. V pravém sloupci je dnešní žebříček a pořadí všech hráčů. Nejsou tu předvyplnění falešní soupeři.
+Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a 100 připravených denních sad.
 
-## Co funguje
+## Co obsahuje
 
-- Založení účtu, přihlášení, odhlášení a přihlášení stejným účtem na jiném zařízení. Nová registrace vyžaduje přezdívku, e-mail a heslo. Přezdívka je veřejná a jedinečná bez ohledu na velikost písmen. E-mail je neveřejný. Heslo má 10 až 128 znaků.
-- Po přihlášení se zapíší dnešní výsledky z tohoto prohlížeče a při dalších změnách se průběžně aktualizují. Pořadí se řadí od nejvíce bodů; shodné body znamenají sdílené místo.
-- Body v žebříčku jsou **dnešní přírůstek**: +200 za rozluštění a −50 za nápovědu. Počátečních 100 bodů ani starší zásoba bodů se do denního pořadí nepočítá. Nejvýše pět výroků za český kalendářní den. Datum určuje server.
-- Server sám znovu vyhodnotí vítězné znění. Nepřebírá klientem navržený počet bodů. Opakované odeslání nepřidá další odměnu, dříve zaznamenanou nápovědu nelze odstranit a odhalený výrok nelze dodatečně proměnit ve výhru. Souběžné zápisy používají podmíněné zápisy podle ETag.
-- Hesla jsou uložená pouze jako scrypt otisk s náhodnou solí. Přihlášení používá náhodnou session v HttpOnly cookie; na HTTPS je cookie Secure. Server ukládá jen otisk session tokenu. Platnost je 30 dnů. Přihlášení je omezené počtem pokusů.
-- Veřejný žebříček vrací pouze přezdívku, identifikátor, dnešní skóre, pořadí a počty dokončených/rozluštěných výroků. Vlastník účtu dostává v části `account` své přihlášené odpovědi navíc vlastní e-mail; adresy jiných hráčů se neposílají. Vítězné odpovědi se používají k ověření a neukládají se. Neúspěšné tipy a rozepsané odpovědi se neodesílají.
-- Pětice se mění o půlnoci v Europe/Prague. Původní body a historie se zachovají v místní hře. Edukace s portréty, původními zdroji a atribucí zůstává.
+- Hra bez povinné registrace, pět navazujících hádanek denně podle pražského času.
+- Jedna nápověda za 50 bodů, odměna 200 bodů, úspěch od 97 %, všechny místní tipy v historii.
+- Pravidlové hodnocení: slovní shoda 60 %, odhad významu 40 %. Ve hře neběží AI.
+- Supabase registrace, potvrzování e-mailu, přihlášení, obnova hesla, synchronizace, profil a samostatný souhlas s novinkami.
+- Soukromá správa hráčů a audit souhlasů; veřejný žebříček neukazuje e-maily ani odpovědi.
+- Kontaktní formulář přes Netlify Forms se spamovou pastí a stavem odesílání.
+- 500 nových hádanek v sadách od 17. 10. 2026 do 24. 1. 2027. Po tomto období se cyklus opakuje. Devět původních hádanek zůstává pro starší historii.
+- Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
 
-## Otevření místně
+## Zapojení
 
-Vyžaduje Node.js 22.12 nebo novější. Ve složce projektu spusť:
+Postup po jednotlivých obrazovkách je v [NASTAVENI.md](NASTAVENI.md). Detailní rozhraní a provoz jsou v [backend/API-CONTRACT.md](backend/API-CONTRACT.md) a [backend/DEPLOYMENT.md](backend/DEPLOYMENT.md).
 
-```
+Aktualizuj obsah existujícího GitHub repozitáře; Netlify se sestaví automaticky. Nic v balíčku samo nevytváří Supabase projekt, nenahrává web ani neposílá e-maily. Serverové proměnné nastav až po databázové migraci. Původní hesla nejsou přenesena; starší účty si mohou exportovat místní postup a výslovně jej sloučit do nového e-mailového účtu.
+
+## Místní spuštění a kontroly
+
+Je potřeba Node.js 22.12 nebo novější a běžný balíčkovací nástroj.
+
+```sh
 npm install
+npm run build
+npm test
 npm start
 ```
 
-Otevři http://127.0.0.1:8785/. Místní účty a skóre se ukládají do neveřejné složky `.local-data`, která není součástí dodaného ZIPu. V náhledu je uvedeno „Lokální pořadí pro zkoušení“. Tyto účty se neposílají na Netlify a po publikování tam nebude místní testovací pořadí.
+Místní náhled běží na http://127.0.0.1:8785/. Bez proměnných Supabase používá dosavadní účty a soukromý souborový archiv v `.local-data`. Netlify používá pro tento starý režim původní Blobs úložiště. Při testování kontaktního formuláře v místním náhledu se nic neodesílá.
 
-Volitelné argumenty serveru: `node server.mjs public 8785 .local-data`. Statické soubory se servírují výhradně z `public`; databáze ani serverový kód nejsou veřejné. Kontroly spustí `npm test` a používají oddělená dočasná data.
+`npm test` zahrnuje skutečné SQL/RLS testy v lokálním PostgreSQL prostředí PGlite, API bezpečnost, slučování dvou souběžných zařízení, klientské účty/souhlasy/importy/formuláře a kontrolu obsahu i výsledného HTML a jeho CSP. Neověřuje doručování ze skutečného SMTP ani živé Netlify/Supabase nastavení.
 
-## Zapojení do stávajícího Netlify projektu
+## Uspořádání
 
-**Tento balíček obsahuje serverovou část. Samotné nahrání statické složky `public` účty a společné skóre neaktivuje.** Níže je popsané nasazení celého projektu přes propojený Git repozitář nebo Netlify CLI. Netlify nově u přihlášených uživatelů uvádí také sestavení zdrojového projektu přes Drop; tento konkrétní postup pro zdejší serverový balíček nebyl online ověřen. Pokud projekt nemá nasazenou funkci, přihlášení a žebříček oznámí nedostupnost a místní hra dál funguje. [Oficiální možnosti ručního nahrání](https://docs.netlify.com/deploy/create-deploys/#drag-and-drop).
+- `client/` — upravitelné HTML, styly a herní moduly.
+- `content/` — původní obsah, 500 nových záznamů a pevný plán sad.
+- `scripts/` — sestavení a kontrola shodného hodnocení pro prohlížeč i server.
+- `public/` — vygenerovaný web: vzhled, fonty a skripty uvnitř index.html, aby se neztratily při nahrávání.
+- `backend/` a `netlify/functions/` — Supabase integrace pro Netlify.
+- `supabase/migrations/` — SQL k jednorázovému nastavení nové databáze.
+- `legacy-server/` — zachovaný původní přihlašovací server.
+- `game.mjs` — automaticky generovaná společná herní logika; upravuj zdroj v client/content, poté sestav.
 
-1. Použij existující projekt pro fascinating-babsousa-5b2ee7.netlify.app (nebo svůj aktuální zvolený projekt), aby zůstala adresa.
-2. Ulož celý obsah tohoto balíčku do zdrojového repozitáře projektu. Netlify přečte `netlify.toml`: publikovaná složka `public`, funkce `netlify/functions`, Node 22. Závislosti jsou uvedené v `package.json` a uzamčené v `pnpm-lock.yaml`.
-3. Při nasazení přes CLI se v kořenové složce přihlas ke svému Netlify účtu a pomocí `netlify link` vyber **stávající** projekt. Po instalaci závislostí spusť `netlify deploy --dir=public --functions=netlify/functions` pro kontrolní nasazení. Produkční nasazení se provede až výslovně pomocí `netlify deploy --prod --dir=public --functions=netlify/functions`.
-4. Netlify Function používá Netlify Blobs. Přístupové údaje pro Blobs dodá Netlify do funkce automaticky. Do HTML ani prohlížeče se žádný administrační token nevkládá. Data se ukládají do site-wide úložiště `septanda-players-v1` v regionu eu-central-1 a přežijí běžné aktualizace webu.
-5. Pro testovací/preview nasazení nastav ve funkcích jinou hodnotu proměnné `SEPTANDA_STORE`, například `septanda-players-test`, aby se testovací účty nedostaly do produkčního pořadí. Nezapínej produkční úložiště u nedůvěryhodných preview větví.
-6. Ověř založení vlastního účtu a přihlášení ve dvou prohlížečích. Verze v patičce má být 5.0.11. Místní nasazení ani testy nepotvrzují stav online webu.
+## Limity a redakce
 
-Oficiální podklady: [nasazení Netlify Functions](https://docs.netlify.com/build/functions/get-started/), [Netlify Blobs a podmíněné zápisy](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [Netlify CLI deploy](https://cli.netlify.com/commands/deploy/).
+Místní procenta nejsou měřením skutečného porozumění. Neobvyklou správnou parafrázi může hra podhodnotit, ironii či některé zápory nepoznat. U vlastních převyprávění antických pramenů jsou přijímané varianty součástí záznamu. Zdroj a atribuce zůstávají po odhalení přístupné.
 
-Nic nebylo automaticky publikováno. Před nasazením ověř limity a účtování svého Netlify projektu.
+Žebříček ověřuje odpovědi na serveru a odmítá podvržené body. Veřejný statický obsah umožňuje dohledat i řešení; nejde o zabezpečení soutěže o ceny. Cloudový zápis má velikostní omezení 2 MiB a nejvýše 500 tipů na jednu hádanku; místní hraní není omezené počtem tipů. Při nedostupném cloudu místní postup zůstává v prohlížeči a lze jej exportovat.
 
-## Rozsah a limity této verze
-
-Toto je funkční prototyp pro menší hru. Účet sdílí umístění a ověřené skóre, **nesynchronizuje kompletní místní herní stav, peněženku, rozepsané tipy ani historii mezi zařízeními**. V jednom prohlížeči jsou rozehrané hry účtů oddělené. První přihlášený účet si může převzít dosavadní místní postup; další nový účet začíná vlastní hru. Po odhlášení se znovu otevře původní hra hosta. Server zajišťuje nejvýše jednu bodovou odměnu za daný výrok na účet a den.
-
-Obnova zapomenutého hesla, ověření e-mailu, přihlášení přes Google, správa účtů a moderace přezdívek zatím zapojené nejsou. Registrace vyžaduje e-mail; jeho vlastnictví se zatím neověřuje potvrzovací zprávou. Veřejně nevkládej do přezdívky osobní údaje. Přihlášení nevylučuje více účtů jednoho člověka. Otázky i odpovědi jsou obsažené ve statickém HTML, proto nejde o systém chránící soutěž proti cílenému podvádění. Pro placenou soutěž by bylo nutné přesunout obsah a celý průběh hry na server, doplnit ochranu proti zneužití, správu účtů a obnovu hesel.
-
-Úložiště se čte v dávkách a veřejně vrací prvních 100 hráčů plus přihlášeného hráče, pokud je níže. Pro velký počet hráčů je vhodná databáze s indexovaným pořadím. Staré session ztrácejí platnost podle uloženého času; tento prototyp je automaticky fyzicky nepročišťuje.
-
-Vyhodnocování je stejné místní pravidlové skórování jako dříve: slovní shoda 60 %, významový odhad 40 %, úspěch od 97 %. Nejde o AI; neobvyklé parafráze, negace a ironii může posoudit nepřesně. Statická sbírka má devět položek, takže se výroky mezi dny opakují. Všechny obrázky jsou přímo v HTML; prameny uvádí `public/ZDROJE.md` a hra.
-
-Při úpravě herního obsahu nebo hodnocení je potřeba udržet shodný katalog a pravidla v `public/index.html` a `game.mjs`. Při změně vloženého JavaScriptu přepočítej CSP otisky v `public/_headers`.
-
-## Tolerantnější vyhodnocování v 5.0.7
-
-Odstraněný podtitulek pod hlavním nadpisem se již nezobrazuje. Hra nově hledá původní úryvek uvnitř odpovědi, takže pokračování básně navíc nesnižuje jeho rozpoznání. Toleruje drobné překlepy včetně přehozených sousedních písmen, vynechané spojky „a“/„i“ a omezené odchylky v delším znění. Drobně pozměněné rozpoznané znění získá 97 % (slovní složka 95 %, význam 100 %); přesná známá varianta i jako část delšího textu získá 100 %. Jde o práh rozpoznání pravidlovou kontrolou, nikoli o statistickou pravděpodobnost.
-
-Příklad „zemřela matak do hrobu dána, siroty po ní zůstaly“ projde za 97 %. Projde i správně poznaný úryvek s dalšími verši. Samotná první polovina úryvku, obecná parafráze, zpřeházená slova nebo změna záporu dál k výhře nestačí. Nejde o volné jazykové porozumění; některé správné alternativní formulace zůstávají mimo připravená pravidla.
-
-Stejná pravidla používá prohlížeč i ověřování bodů na serveru. Při aktualizaci se starší tipy znovu vyhodnotí a všechny zůstanou v historii. Pokud dřívější tip u rozehrané hádanky nyní projde, hra ji uzná a připíše jednu odměnu; při dalším obnovení se nepřičte znovu. Dříve dobrovolně odhalené hádanky zůstávají bez odměny. V přehledu rozluštěné hádanky je zvýrazněný uznaný tip.
-
-## Industriálnější typografie v 5.0.8
-
-Nadpisy a značka používají Barlow Condensed, delší texty, výroky a ovládání Barlow. Technická čísla využívají systémové neproporcionální písmo. Kurzíva v hlavním nadpisu byla odstraněna. Rozložení a zelená paleta zůstaly zachované; herní vyhodnocování se nezměnilo.
-
-WOFF2 písma včetně českých znaků jsou přímo v `index.html`; pro hraní nejsou potřeba externí fontové služby. Licence a autorství jsou v přehledu zdrojů ve hře i v souboru `FONTY-LICENCE.txt` (u kompletního projektu ve složce `public`). Tento soubor je nově součástí ZIPu.
-
-## Industriál a archiv v 5.0.9
-
-Vzhled spojuje kartotéční list s industriální typografií: teplý papírový podklad s jemnou sítí, tmavý tisk, ostré rámečky a střídmé rezavě červené akcenty. Dnešní datum v razítku vychází ze stejného českého dne jako herní sada. Záložka na herní kartě otevírá skutečný seznam dnešních výroků. Čísla postupu mají podobu rejstříkových polí, vstup pro tip připomíná linkovaný formulář a boční přehled i dialogy používají stejné linky a sazbu.
-
-Odhalení autora má podobu evidenční karty s černobílým zobrazením existujícího portrétu. Původní zdroje a licence zůstávají dostupné. Na telefonu se vedlejší panely skládají pod hru; razítko se schová, aby zůstala priorita zprávě a tipu. Všechny nové detaily tvoří přímo HTML/CSS, bez stahování obrázků zvenku.
-
-Jde o změnu vzhledu. Herní pravidla, tolerance tipů, body, nápovědy, účty, dnešní pořadí a místní historie se nemění. Uložený postup zůstává zachovaný. Pro tento vzhled nahraj opět celý aktuální balíček včetně `_headers`; změnilo se i vložené zobrazení data, proto jsou aktualizované otisky skriptů.
-
-
-## E-mail a viditelné přihlášení v 5.0.10
-
-Nový účet vyžaduje přezdívku, e-mail a heslo. Formát e-mailu kontroluje prohlížeč i server. Přihlášení zůstává přes přezdívku a heslo. E-mail je neveřejný údaj účtu, není to ověřená identita ani přihlašovací jméno; jeho jedinečnost se v této verzi nevynucuje. Žádný potvrzovací e-mail, newsletter ani jiná zpráva se neodesílá. Obnova hesla stále není zapojená.
-
-V hlavičce je výrazné tlačítko Vytvořit účet a vedle něj Přihlásit se. Po přihlášení se zobrazí vlastní přezdívka a Můj účet. Stávající účty bez e-mailu i jejich session fungují dál; v horním tlačítku uvidí Doplň e-mail. Přes Můj účet lze e-mail doplnit nebo upravit po potvrzení současným heslem. Změna zachovává identifikátor hráče, body, místní postup i ostatní přihlášená zařízení. Původní záznamy účtů, hesel a skóre se nemažou ani hromadně nepřepisují.
-
-E-mail se ukládá jen do neveřejného záznamu účtu a nepatří do veřejného pořadí, session cookie ani uložené místní historie hry. API vrací vlastní e-mail pouze přihlášenému vlastníkovi. Úprava vyžaduje platnou session a současné heslo, ověřuje původ požadavku a má samostatné omezení pokusů. Zápis používá ETag, aby nepřepsal souběžně měněný záznam.
-
-### Aktualizace nyní propojeného projektu přes GitHub
-
-1. Rozbal kompletní ZIP 5.0.11 a nahraj jeho obsah do kořene existujícího repozitáře `lcitnar-sudo/septanda` přes Add file → Upload files. Zachovej strukturu složek `public` a `netlify/functions`.
-2. Potvrď Commit changes. Netlify už je propojené, takže změna spustí nové nasazení.
-3. Počkej na Published u nejnovějšího nasazení a obnov adresu svého existujícího projektu, například dazzling-kleicha-efa517.netlify.app. V patičce ověř 5.0.11.
-4. U svého dřívějšího účtu se přihlas přezdívkou a heslem, nahoře otevři Můj účet a doplň e-mail. Nová registrace jej vyžaduje rovnou.
-
-Aktualizace obsahuje frontend i serverovou část: samotné nahrání složky public přes Drop nemění serverové ověřování. Použij celý projekt přes připojený GitHub. Nic se z tohoto ZIPu samo nenahrává; Commit changes a nasazení provádí uživatel.
-
-
-## Body po přihlášení v 5.0.11
-
-Vlastní počet bodů a jeho přehled se zobrazují až po potvrzeném přihlášení nebo registraci. Při načítání účtu jsou skryté už v HTML; po odhlášení zmizí a otevřený přehled se zavře. Host může dál hrát. Dosavadní body a historie zůstávají uložené a pravidla odměn i cen nápověd se nemění. Veřejné pořadí a informace o ceně nápovědy či odměně popisují pravidla hry; osobní zůstatek host nevidí.
+Provozovatel Lukáš Citnar a kontakt infoseptanda@gmail.com jsou uvedení v informacích o soukromí. Čitelná stránka soukromi.html se sestavuje ze zdroje client/SOUKROMI.md. Data se třetím stranám neprodávají a v této verzi nejsou reklamní ani analytické měřicí skripty. Odesílání novinek není součástí balíčku.
