@@ -1621,7 +1621,7 @@ body {
   background-size: 30px 30px;
 }
 ::selection { background: #d7c5ac; }
-.site-header { min-height: 96px; border-bottom: 2px solid var(--ink); }
+.site-header { min-height: 96px; border-bottom: 0; }
 .wordmark { color: var(--ink); }
 .wordmark-dot { color: var(--oxide); }
 .edition { color: var(--muted); font-size: 8px; letter-spacing: .06em; border-left: 1px solid var(--line); padding: 3px 0 3px 18px; }
@@ -1730,7 +1730,7 @@ textarea:focus { border-color: var(--ink); box-shadow: inset 3px 0 0 var(--oxide
 .attempt-index { border: 1px solid #adb5a5; padding: 2px 3px; background: #eeeee3; }
 .attempt-score { font-size: 23px; }
 .attempt-detail { font-size: 9px; }
-footer { border-top: 2px solid var(--ink); margin-top: 45px; }
+footer { border-top: 0; margin-top: 45px; }
 footer > div > span { font-family: var(--mono); font-size: 8px; }
 .footer-brand { color: var(--ink); }
 dialog { border: 1px solid var(--ink); border-top: 5px solid var(--ink); background: var(--white); box-shadow: 7px 7px 0 #27302535; }

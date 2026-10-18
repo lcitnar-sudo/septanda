@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.1.8">
+  <meta name="septanda-build" content="5.1.9">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Šeptanda: literární hra s tichou poštou. Rozlušti překroucená přísloví, historické výroky a verše a objev jejich příběh.">
   <title>Šeptanda — Pět výroků na každý den</title>
@@ -1745,7 +1745,7 @@ body {
   background-size: 30px 30px;
 }
 ::selection { background: #d7c5ac; }
-.site-header { min-height: 96px; border-bottom: 2px solid var(--ink); }
+.site-header { min-height: 96px; border-bottom: 0; }
 .wordmark { color: var(--ink); }
 .wordmark-dot { color: var(--oxide); }
 .edition { color: var(--muted); font-size: 8px; letter-spacing: .06em; border-left: 1px solid var(--line); padding: 3px 0 3px 18px; }
@@ -1854,7 +1854,7 @@ textarea:focus { border-color: var(--ink); box-shadow: inset 3px 0 0 var(--oxide
 .attempt-index { border: 1px solid #adb5a5; padding: 2px 3px; background: #eeeee3; }
 .attempt-score { font-size: 23px; }
 .attempt-detail { font-size: 9px; }
-footer { border-top: 2px solid var(--ink); margin-top: 45px; }
+footer { border-top: 0; margin-top: 45px; }
 footer > div > span { font-family: var(--mono); font-size: 8px; }
 .footer-brand { color: var(--ink); }
 dialog { border: 1px solid var(--ink); border-top: 5px solid var(--ink); background: var(--white); box-shadow: 7px 7px 0 #27302535; }
@@ -2132,7 +2132,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.8 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.1.9 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Sleduj dvě stopy.</strong><p>Slovní shoda tvoří 60 % a místní odhad významu 40 % celkové blízkosti. Od 97 % je rozluštěno. Samotná parafráze vítězství nezaručí.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Jedna jemná nápověda stojí 50 bodů. U každé hádanky ji platíš jen jednou.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Denní sada se obnovuje o půlnoci podle českého času. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
