@@ -101,18 +101,19 @@ function candidate(body, date, account, previous, known) {
   return body.rounds.map((r,i) => {
     if (!r || r.id !== ids[i] || !['playing','won','revealed'].includes(r.status) || typeof r.hint !== 'boolean') fail(400,'Neplatný výsledek dnešní sady.');
     if (r.status === 'won' && (typeof r.answer !== 'string' || r.answer.length > 400 || !engine.evaluate(r.answer,byId.get(r.id)).accepted)) fail(400,'Výsledek se nepodařilo ověřit.');
-    return {id:r.id,status:r.status,hint:r.hint,...(r.status==='revealed' && (r.paidSkip===true || ids.length===3 || date>=daily.paidSkipStart)?{paidSkip:true}:{})};
+    if(r.chainLevel!==undefined && (!Number.isInteger(r.chainLevel) || r.chainLevel<0 || r.chainLevel>4))fail(400,'Neplatný krok tiché pošty.');
+    return {id:r.id,status:r.status,hint:r.hint,chainLevel:r.chainLevel||0,...(r.status==='revealed' && (r.paidSkip===true || ids.length===3 || date>=daily.paidSkipStart)?{paidSkip:true,skipCharge:daily.skipCost}:{})};
   });
 }
 function merge(previous, incoming) {
   const rounds=incoming.map((r,i) => {
     const old=previous?.rounds?.[i];
     const terminal=old && old.status!=='playing';
-    return {id:r.id, status:terminal?old.status:r.status, hint:r.hint || Boolean(old?.hint),...((terminal?old.status==='revealed' && old.paidSkip:r.paidSkip)?{paidSkip:true}:{})};
+    return {id:r.id, status:terminal?old.status:r.status, hint:r.hint || Boolean(old?.hint),chainLevel:terminal?(old.chainLevel||0):Math.max(old?.chainLevel||0,r.chainLevel||0),...((terminal?old.status==='revealed' && old.paidSkip:r.paidSkip)?{paidSkip:true,skipCharge:terminal?daily.skipCharge(old):daily.skipCost}:{})};
   });
   let locked=false;
   for (const r of rounds) {
-    if (locked && (r.status !== 'playing' || r.hint)) fail(400,'Výroky se dokončují postupně.');
+    if (locked && (r.status !== 'playing' || r.hint || r.chainLevel)) fail(400,'Výroky se dokončují postupně.');
     if (r.status === 'playing') locked=true;
   }
   return rounds;
@@ -120,8 +121,8 @@ function merge(previous, incoming) {
 function publicEntry(record) {
   const solved=record.rounds.filter(r=>r.status==='won').length;
   const hints=record.rounds.filter(r=>r.hint).length;
-  const skipped=record.rounds.filter(r=>r.status==='revealed' && r.paidSkip).length;
-  return {id:record.id,name:record.name,points:solved*200-hints*50-skipped*daily.skipCost,solved,completed:record.rounds.filter(r=>r.status!=='playing').length};
+  const spent=record.rounds.reduce((sum,r)=>sum+(r.chainLevel||0)*daily.chainCost+(r.status==='revealed' && r.paidSkip?daily.skipCharge(r):0),0);
+  return {id:record.id,name:record.name,points:solved*200-hints*50-spent,solved,completed:record.rounds.filter(r=>r.status!=='playing').length};
 }
 async function board(store,date,id) {
   const {blobs}=await store.list({prefix:`records/${date}/`});
@@ -174,8 +175,8 @@ export function createHandler(store,{now=()=>new Date(),local=false}={}) {
             const existing=await store.getWithMetadata(key,{type:'json'}),previous=existing?.data;
             const incoming=candidate(body,date,account,previous,known);
             const record={id:account.id,name:account.name,date,rounds:merge(previous,incoming)};
-            const newSkip=record.rounds.some((r,i)=>r.paidSkip && !['won','revealed'].includes(previous?.rounds?.[i]?.status));
-            if(newSkip && 100+earlierPoints+publicEntry(record).points<0)fail(409,'Na přeskočení potřebuješ alespoň 200 bodů.');
+            const newPaidAction=record.rounds.some((r,i)=>(r.paidSkip && !['won','revealed'].includes(previous?.rounds?.[i]?.status)) || (r.chainLevel||0)>(previous?.rounds?.[i]?.chainLevel||0));
+            if(newPaidAction && 100+earlierPoints+publicEntry(record).points<0)fail(409,'Na tento krok nemáš dost bodů. Předání stojí 50 bodů, přeskočení 100 bodů.');
             if(previous && JSON.stringify(record)===JSON.stringify(previous)){saved=true;break;}
             const result=await store.setJSON(key,record,existing?{onlyIfMatch:existing.etag}:{onlyIfNew:true});
             if(result.modified){saved=true;break;}

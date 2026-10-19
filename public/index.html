@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="5.2.2">
+  <meta name="septanda-build" content="5.3.0">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den tři nové hádanky.">
   <meta property="og:type" content="website">
@@ -2094,6 +2094,13 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 
 .collection-marks{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}
 
+/* Individually purchased earlier transmissions, shown from the last towards the first. */
+.transmission-section { border-top:1px solid var(--line); }
+.transmission-list { list-style:none; padding:0; margin:16px 0 0; }
+.transmission-list li { border-left:2px solid var(--oxide); background:#e5e6d9; padding:12px; margin:0 0 12px; }
+.transmission-list p { font-family:var(--sans); font-size:14px; line-height:1.6; margin:8px 0 0; }
+.transmission-list .eyebrow { font-size:9px; }
+
 </style>
 </head>
 <body>
@@ -2155,19 +2162,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
             <div id="hint-clue-content" class="hint-content" hidden></div>
             <p id="hint-status" class="hint-status" aria-live="polite">Tři postupné stopy za jednu cenu.</p>
           </section>
+          <section id="transmission-section" class="hint-section transmission-section" aria-labelledby="transmission-title"><h2 id="transmission-title">Po stopách věty.</h2><p class="side-intro">Nechceš nápovědu? Vracej se po jednom předání od zamotané zprávy směrem k začátku. Původní výrok dál hádáš.</p><button class="hint-button" id="reveal-transmission" aria-describedby="transmission-status"><span><strong>Předchozí podoba věty</strong><small>Jeden krok zpátky v tiché poště.</small></span><span class="price">50 <small>bodů</small></span></button><ol id="transmission-content" class="transmission-list" hidden></ol><p id="transmission-status" class="hint-status" aria-live="polite">Každé předání se odemyká zvlášť za 50 bodů.</p></section>
           <section class="leaderboard-section" aria-labelledby="leaderboard-title"><div class="progress-header"><h2 id="leaderboard-title">Žebříček</h2><button class="text-button leaderboard-refresh" id="leaderboard-refresh" aria-label="Obnovit žebříček">Obnovit</button></div><p class="leaderboard-period">Dnes <span id="leaderboard-date"></span></p><div id="leaderboard-preview" aria-live="polite"><p class="leaderboard-note">Načítání pořadí…</p></div><div class="leaderboard-actions"><button class="text-button underlined" id="leaderboard-join">Přihlásit se</button><button class="text-button underlined" data-open="leaderboard-dialog">Celé pořadí <span aria-hidden="true">→</span></button></div><p class="leaderboard-note" id="leaderboard-status" role="status"></p></section>
           <section id="goal-note" class="goal-note"><div class="goal-top"><span class="eyebrow">SLOVA NA SVÉ MÍSTO</span></div><p>Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
           <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 3</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Tři výroky na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
           <div class="local-note"><span class="local-indicator" aria-hidden="true"></span><p>Vyhodnocováno v prohlížeči.<br><button class="text-button underlined" data-open="scoring-dialog">Jak fungují stopy</button></p></div>
-          <button class="give-up text-button" id="give-up" aria-describedby="skip-help">Přeskočit · −200 bodů</button><p id="skip-help" class="field-note">Přeskočená hádanka se počítá do dnešního limitu.</p>
+          <button class="give-up text-button" id="give-up" aria-describedby="skip-help">Přeskočit · −100 bodů</button><p id="skip-help" class="field-note">Přeskočená hádanka se počítá do dnešního limitu.</p>
         </aside>
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.2.2 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.3.0 · Archiv slov</span></div></footer>
   </div>
 
-  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Hádanku můžeš přeskočit za 200 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
+  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Samostatně můžeš odkrývat dřívější podoby věty, každou za 50 bodů. Začínáš předposledním předáním a můžeš se vrátit až k prvnímu. Původní znění stále hádáš. Hádanku můžeš přeskočit za 100 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
 
   <dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><p class="eyebrow">PĚT VÝROKŮ NA DEN</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="collection-title">Dnešní sada.</h2><p class="muted" id="collection-date"></p><div id="collection-list"></div><p class="small muted">Další výrok se otevře po rozluštění nebo odhalení předchozího. Připravené nové sady se otevírají o půlnoci podle českého času. Známé výroky vynecháme.</p></dialog>
 
@@ -2883,7 +2891,7 @@ FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
 OTHER DEALINGS IN THE FONT SOFTWARE.
 </pre></details><p class="dialog-note">Pět předání je součástí autorského herního obsahu. Nejde o výstup skutečného experimentu s hráči ani o živé generování AI.</p></dialog>
 
-  <dialog id="leaderboard-dialog" aria-labelledby="leaderboard-full-title"><div class="dialog-head"><p class="eyebrow">DNEŠNÍ PĚTICE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="leaderboard-full-title">Žebříček hráčů.</h2><p class="muted">Body za dnešní výroky: +200 za rozluštění, −50 za nápovědu. Při shodě bodů se místo sdílí.</p><div id="leaderboard-table"></div><p class="dialog-note">Celkové body na nápovědy ti zůstávají. Tady porovnáváme dnešní přírůstek. Hráči řeší různé osobní sady; obtížnost není standardizovaná a pořadí slouží pro orientační zábavu.</p></dialog>
+  <dialog id="leaderboard-dialog" aria-labelledby="leaderboard-full-title"><div class="dialog-head"><p class="eyebrow">DNEŠNÍ TROJICE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="leaderboard-full-title">Žebříček hráčů.</h2><p class="muted">Body za dnešní výroky: +200 za rozluštění, −50 za balíček stop, −50 za každé odkryté předání, −100 za přeskočení. Při shodě bodů se místo sdílí.</p><div id="leaderboard-table"></div><p class="dialog-note">Celkové body na nápovědy ti zůstávají. Tady porovnáváme dnešní přírůstek. Hráči řeší různé osobní sady; obtížnost není standardizovaná a pořadí slouží pro orientační zábavu.</p></dialog>
 
   <dialog id="player-dialog" aria-labelledby="player-title">
     <div class="dialog-head"><p class="eyebrow">ULOŽIT A POKRAČOVAT</p><button class="close-button" data-close aria-label="Zavřít">×</button></div>
@@ -3292,7 +3300,10 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
   const pool = root.SEPTANDA_PUZZLES, engine = root.SeptandaEngine;
   const byId = new Map(pool.map(p => [p.id, p]));
   const HINT_COST = {clue: 50, small: 30, previous: 60};
-  const PERSONAL_SIZE=3, SKIP_COST=200, SIZE_CHANGED_ON='2026-10-19', PAID_SKIP_START='2026-10-20';
+  const PERSONAL_SIZE=3, SKIP_COST=100, CHAIN_COST=50, SIZE_CHANGED_ON='2026-10-19', PAID_SKIP_START='2026-10-20';
+  // Historical paid skips without an amount were charged 200; never reprice them.
+  const skipCharge = r => r?.skipCharge===100 ? 100 : 200;
+  const chainLevel = r => Math.min(4,Math.max(0,Math.floor(Number(r?.chainLevel)||0)));
   const validPersonalSize=(key,size)=>size===PERSONAL_SIZE || size===5 && key<=SIZE_CHANGED_ON;
   if (pool.length < 5) throw new Error('Denní sada potřebuje alespoň pět výroků.');
   function dayKey(date = new Date()) {
@@ -3369,7 +3380,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     return chosen;
   }
   const blankRound = () => ({attempts: [], hints: [], status: 'playing', draft: ''});
-  const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || r.draft || r.status === 'won' || r.status === 'revealed');
+  const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || chainLevel(r) || r.draft || r.status === 'won' || r.status === 'revealed');
   function seenBefore(state, key) {
     const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
     for(const id of state.knownIds||[])if(byId.has(id))seen.add(id);
@@ -3406,7 +3417,8 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     }
     // Already completed history survives later scoring corrections. The server still validates new wins.
     if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
-    if(round.status==='revealed' && source.paidSkip===true)round.paidSkip=true;
+    if(round.status==='revealed' && source.paidSkip===true){round.paidSkip=true;round.skipCharge=skipCharge(source);}
+    if(chainLevel(source))round.chainLevel=chainLevel(source);
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     if(round.hints.includes('clue'))round.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
@@ -3464,7 +3476,9 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       const r={...a,attempts,hints:[...new Set([...a.hints,...b.hints])],draft:b.draft||a.draft,
         status:['won','revealed'].includes(a.status)?a.status:b.status};
       if(r.hints.includes('clue'))r.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
-      if(r.status==='revealed' && (['won','revealed'].includes(a.status)?a.paidSkip:b.paidSkip))r.paidSkip=true;
+      r.chainLevel=['won','revealed'].includes(a.status)?chainLevel(a):Math.max(chainLevel(a),chainLevel(b));
+      const terminal=['won','revealed'].includes(a.status)?a:b;
+      if(r.status==='revealed' && terminal.paidSkip){r.paidSkip=true;r.skipCharge=skipCharge(terminal);}
       return r;
     };
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
@@ -3508,12 +3522,13 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     for (const progress of rounds) for (const r of Object.values(progress)) {
       t.solved += Number(r.status === 'won'); t.revealed += Number(r.status === 'revealed');
       t.spent += r.hints.reduce((sum, h) => sum + HINT_COST[h], 0); t.attempts += r.attempts.length;
-      if(r.status==='revealed' && r.paidSkip===true)t.spent+=SKIP_COST;
+      t.spent+=chainLevel(r)*CHAIN_COST;
+      if(r.status==='revealed' && r.paidSkip===true)t.spent+=skipCharge(r);
     }
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);
 </script>
 <script id="septanda-guidance">
@@ -3665,7 +3680,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     const original = p.sources[0];
     const picture = media ? `<figure class="education-media ${media.kind === 'work' ? 'work-image' : ''}"><img src="${escape(media.data)}" alt="${escape(media.alt)}" width="330" height="410" decoding="async"><figcaption>${escape(media.caption || '')}</figcaption></figure>` : '';
     const imageCredit = media ? `<p class="image-credit">${escape(media.credit)} <a href="${escape(media.source)}" target="_blank" rel="noopener noreferrer">Zdroj obrázku</a> · <a href="${escape(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">Licence</a></p>` : '';
-    panel.innerHTML = `<div class="reveal-top"><p class="eyebrow">${won ? 'SLOVA JSOU ZPÁTKY DOMA' : 'PŮVODNÍ ZPRÁVA'}</p><span class="award">${won ? '+200 bodů připsáno' : r.paidSkip?'Přeskočeno · −200 bodů':'Odhaleno · bez odměny'}</span></div><h2 id="reveal-title" tabindex="-1">„${escape(p.answer)}“</h2><article class="education-card ${media ? 'has-media' : ''}">${picture}<div class="education-copy"><p class="eyebrow">${escape(education.label)}</p><h3>${escape(education.person)}</h3><p class="education-work">${escape(education.work)}</p><p class="education-summary">${escape(education.summary)}</p><a class="education-original" href="${escape(original.url)}" target="_blank" rel="noopener noreferrer">Původní zdroj <span aria-hidden="true">→</span></a></div></article><details class="source-details"><summary>Podrobnosti a atribuce</summary><p class="attribution">${escape(p.attribution)}</p><div class="source-links">${p.sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.label)}</a>`).join('')}</div>${imageCredit}</details><details class="chain-details"><summary>Celá cesta tiché pošty · originál a 5 předání</summary><ol class="chain-list"><li><span>0</span>${escape(p.answer)}</li>${p.chain.map((text, i) => `<li><span>${i + 1}</span>${escape(text)}</li>`).join('')}</ol></details>${allDone ? '<p class="daily-complete">Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.</p>' : ''}<div class="reveal-actions"><button class="primary-button" data-next>${allDone ? 'Prohlédnout dnešní sadu' : 'Další výrok'} <span aria-hidden="true">→</span></button><button class="text-button underlined" data-share>Zkopírovat výsledek bez řešení</button></div><p id="share-message" class="form-message" role="status"></p>`;
+    panel.innerHTML = `<div class="reveal-top"><p class="eyebrow">${won ? 'SLOVA JSOU ZPÁTKY DOMA' : 'PŮVODNÍ ZPRÁVA'}</p><span class="award">${won ? '+200 bodů připsáno' : r.paidSkip?`Přeskočeno · −${Daily.skipCharge(r)} bodů`:'Odhaleno · bez odměny'}</span></div><h2 id="reveal-title" tabindex="-1">„${escape(p.answer)}“</h2><article class="education-card ${media ? 'has-media' : ''}">${picture}<div class="education-copy"><p class="eyebrow">${escape(education.label)}</p><h3>${escape(education.person)}</h3><p class="education-work">${escape(education.work)}</p><p class="education-summary">${escape(education.summary)}</p><a class="education-original" href="${escape(original.url)}" target="_blank" rel="noopener noreferrer">Původní zdroj <span aria-hidden="true">→</span></a></div></article><details class="source-details"><summary>Podrobnosti a atribuce</summary><p class="attribution">${escape(p.attribution)}</p><div class="source-links">${p.sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.label)}</a>`).join('')}</div>${imageCredit}</details><details class="chain-details"><summary>Celá cesta tiché pošty · originál a 5 předání</summary><ol class="chain-list"><li><span>0</span>${escape(p.answer)}</li>${p.chain.map((text, i) => `<li><span>${i + 1}</span>${escape(text)}</li>`).join('')}</ol></details>${allDone ? '<p class="daily-complete">Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.</p>' : ''}<div class="reveal-actions"><button class="primary-button" data-next>${allDone ? 'Prohlédnout dnešní sadu' : 'Další výrok'} <span aria-hidden="true">→</span></button><button class="text-button underlined" data-share>Zkopírovat výsledek bez řešení</button></div><p id="share-message" class="form-message" role="status"></p>`;
   }
   function render() {
     const p = currentPuzzle(), r = roundFor(), t = totals(), index = puzzles.indexOf(p);
@@ -3675,7 +3690,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     $('edition-date').dateTime = activeDate;
     $('edition-count').textContent = puzzles.length ? pad(puzzles.length)+' '+(puzzles.length===3?'VÝROKY':'VÝROKŮ') : 'ČEKÁME NA NOVÉ';
     $('puzzle-sheet').hidden = !p; $('daily-waiting').hidden = !!p;
-    $('hint-section').hidden = !p; $('goal-note').hidden = !p;
+    $('hint-section').hidden = !p; $('transmission-section').hidden = !p; $('goal-note').hidden = !p;
     if (!p) {
       $('waiting-title').textContent = puzzles.length ? 'Dnes už nic neopakujeme.' : 'Další zprávy připravujeme.';
       $('waiting-copy').textContent = puzzles.length ? 'Výroky dnešní sady už máš v historii. Znovu ti je jako nové nenabídneme. Tvoje starší hry i body zůstávají uložené.' : 'Všechny úplné sady z aktuálně schválené zásoby už máš přidělené. Připravujeme další nové výroky. Tvoje historie i body zůstávají uložené a staré hádanky se znovu nevrací.';
@@ -3704,11 +3719,12 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       $('hint-' + type + '-content').innerHTML = owned?Guidance.clues(p).slice(0,level).map((text,i)=>`<p><strong>Stopa ${i+1}</strong><br>${escape(text)}</p>`).join(''):'';
     }
     $('hint-status').textContent = r.status !== 'playing' ? 'Celý řetězec je teď přístupný pod výrokem.' : r.hints.length ? `Stopa ${r.hintLevel||1} ze 3. Další už stojí 0 bodů.` : t.points < COST.clue ? 'Na stopy teď body nestačí.' : 'Za 50 bodů odemkneš všechny tři. Otevíráš je postupně.';
+    renderTransmissions(p,r,t);
     $('give-up').hidden = r.status !== 'playing';
     $('give-up').disabled = skipBusy || t.points<Daily.skipCost;
-    $('give-up').textContent = skipBusy?'Přeskakuji…':'Přeskočit · −200 bodů';
+    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit · −100 bodů';
     $('skip-help').hidden = r.status !== 'playing';
-    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 200 bodů.':'Přeskočená hádanka se počítá do dnešního limitu.';
+    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočená hádanka se počítá do dnešního limitu.';
     $('guess').disabled=skipBusy;
     const today = Daily.dayTotals(day);
     $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${puzzles.length}`;
@@ -3730,6 +3746,29 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     save(); $('form-message').textContent = ''; render();
     announce(date !== activeDate ? 'Nový den. Je připravena další osobní sada.' : 'Postup byl aktualizován z dalšího okna.');
     return false;
+  }
+  function renderTransmissions(p,r,t) {
+    const level=Daily.chainLevel(r),max=p.chain.length-1,done=r.status!=='playing';
+    $('transmission-section').hidden=done;
+    const button=$('reveal-transmission');
+    button.disabled=skipBusy || done || level>=max || t.points<Daily.chainCost;
+    button.querySelector('strong').textContent=level>=max?'Všechna předání odkryta':'Předchozí podoba věty';
+    button.querySelector('.price').innerHTML=level>=max?'<small>Hotovo</small>':`${Daily.chainCost} <small>bodů</small>`;
+    $('transmission-content').hidden=!level;
+    $('transmission-content').innerHTML=p.chain.slice(max-level,max).reverse().map((text,i)=>`<li><span class="eyebrow">PŘEDÁNÍ ${max-i} Z ${p.chain.length}</span><p>${escape(text)}</p></li>`).join('');
+    $('transmission-status').textContent=`Odkryto ${level} ze ${max}. `+(level>=max?'Původní výrok ještě zbývá uhodnout.':t.points<Daily.chainCost?'Na další předání potřebuješ 50 bodů.':'Každé další předání stojí 50 bodů.');
+  }
+  async function buyTransmission() {
+    if(skipBusy || !currentPuzzle() || !storeDraft())return;
+    const id=day.selected,date=activeDate,r=roundFor(),max=currentPuzzle().chain.length-1;
+    if(r.status!=='playing' || Daily.chainLevel(r)>=max || totals().points<Daily.chainCost)return;
+    const level=Daily.chainLevel(r)+1;skipBusy=true;render();
+    try {
+      if(hasAccount() && globalThis.SeptandaCloud?.isActive())await globalThis.SeptandaCloud.revealChainStep(date,id,level);
+      else {const current=roundFor(id);current.chainLevel=level;save();}
+      announce('Předchozí podoba věty je odkrytá. '+currentPuzzle().chain[max-level]);
+    } catch(error){$('form-message').textContent=error.message;announce(error.message);}
+    finally{skipBusy=false;render();}
   }
   function storeDraft() {
     if (!currentPuzzle()) return true;
@@ -3785,7 +3824,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     const r = roundFor(), index = puzzles.findIndex(p => p.id === day.selected) + 1;
     if (!r) return;
     const hintCount = Number(r.hints.length > 0);
-    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Osobní výrok ${index}/${puzzles.length}\n${r.status === 'won' ? 'Rozluštěno' : r.paidSkip?'Přeskočeno −200 bodů':'Odhaleno bez odměny'} · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
+    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Osobní výrok ${index}/${puzzles.length}\n${r.status === 'won' ? 'Rozluštěno' : r.paidSkip?`Přeskočeno −${Daily.skipCharge(r)} bodů`:'Odhaleno bez odměny'} · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
     try { await navigator.clipboard.writeText(text); $('share-message').textContent = 'Výsledek je ve schránce. Řešení zůstalo tajemstvím.'; }
     catch (_) { $('share-message').textContent = 'Automatické kopírování není dostupné. Výsledek si můžeš vybrat a zkopírovat:'; const box = document.createElement('textarea'); box.value = text; box.readOnly = true; box.setAttribute('aria-label', 'Výsledek ke zkopírování'); $('share-message').append(box); box.select(); }
   }
@@ -3808,19 +3847,20 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     if (event.key === 'Enter' && !event.shiftKey && !event.isComposing) { event.preventDefault(); $('guess-form').requestSubmit(); }
   });
   $('guess').addEventListener('input', storeDraft);
+  $('reveal-transmission').addEventListener('click', buyTransmission);
   $('give-up').addEventListener('click', () => {
     if (!currentPuzzle() || skipBusy || roundFor().status!=='playing' || totals().points<Daily.skipCost) return;
     const id = day.selected, date = activeDate;
-    ask('Přeskočit za 200 bodů?', 'Odečte se 200 bodů a přejdeš na další výrok dnešní sady. Tento se počítá do denního limitu; jeho řešení zůstane v přehledu. Za přeskočený výrok nezískáš odměnu. Zakoupené stopy se nevracejí.', 'Přeskočit · −200 bodů', async () => {
+    ask('Přeskočit za 100 bodů?', 'Odečte se 100 bodů a přejdeš na další výrok dnešní sady. Tento se počítá do denního limitu; jeho řešení zůstane v přehledu. Za přeskočený výrok nezískáš odměnu. Zakoupené stopy se nevracejí.', 'Přeskočit · −100 bodů', async () => {
       if (!syncCurrent(date, id)) return; const r = roundFor(); if (r.status !== 'playing' || totals().points<Daily.skipCost) return;
       storeDraft();skipBusy=true;render();
       try {
         if(hasAccount() && globalThis.SeptandaCloud?.isActive())await globalThis.SeptandaCloud.skipPuzzle(date,id);
-        else {const current=roundFor(id);current.status='revealed';current.paidSkip=true;current.draft='';save();}
+        else {const current=roundFor(id);current.status='revealed';current.paidSkip=true;current.skipCharge=Daily.skipCost;current.draft='';save();}
         const next=Daily.nextId(day);
         if(next)day.selected=next;
         save();$('form-message').textContent='';
-        announce('Přeskočeno za 200 bodů. '+(next?'Pokračuj dalším výrokem.':'Dnešní sada je hotová.'));
+        announce('Přeskočeno za 100 bodů. '+(next?'Pokračuj dalším výrokem.':'Dnešní sada je hotová.'));
       } catch(error){$('form-message').textContent=error.message;announce(error.message);}
       finally{skipBusy=false;render();}
       $('puzzle-heading').scrollIntoView({block:'start'});
@@ -3992,7 +4032,16 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
     const result=await api('player',{action:'skip',date,id});
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
-    apply(result,true);notice('Výrok je přeskočený. Odečteno 200 bodů.');refreshBoard();
+    apply(result,true);notice('Výrok je přeskočený. Odečteno 100 bodů.');refreshBoard();
+  }
+  async function revealChainStep(date,id,level) {
+    if(!session || !ready || syncing)throw new Error('Počkej prosím na připojení a dokončení ukládání účtu.');
+    const epoch=loadEpoch,userId=session.user.id;
+    if(!await sync(true))throw new Error('Nejprve se musí uložit aktuální postup. Zkus odkrytí znovu po připojení.');
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    const result=await api('player',{action:'chain-step',date,id,level});
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    apply(result,true);notice('Předchozí podoba věty je uložená v účtu.');refreshBoard();
   }
   async function loadAccount(nextSession) {
     const epoch = ++loadEpoch;
@@ -4185,7 +4234,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     if (!(await sync(true, clean))) throw new Error('Přenos se nedokončil. Zkus ho prosím znovu.');
     return true;
   }
-  root.SeptandaCloud = Object.freeze({start,importLocalState,skipPuzzle,isActive:()=>Boolean(sdk)});
+  root.SeptandaCloud = Object.freeze({start,importLocalState,skipPuzzle,revealChainStep,isActive:()=>Boolean(sdk)});
 })(globalThis);
 </script>
 <script id="septanda-leaderboard">
@@ -4202,7 +4251,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     return {action:'sync',date,...(state?.assignmentVersion===1?{assignmentVersion:1,assignmentSeed:state.assignmentSeed}:{}),rounds:ids.map(id=>{
       const r=day?.progress[id] || Daily.blankRound(),p=globalThis.SEPTANDA_PUZZLES.find(p=>p.id===id);
       const winning=r.status==='won'?r.attempts.find(a=>Engine.evaluate(a.text,p).accepted)?.text:undefined;
-      return {id,status:r.status,hint:r.hints.length>0,...(r.paidSkip?{paidSkip:true}:{}),...(winning?{answer:winning}:{})};
+      return {id,status:r.status,hint:r.hints.length>0,...(r.paidSkip?{paidSkip:true,skipCharge:Daily.skipCharge(r)}:{}),chainLevel:Daily.chainLevel(r),...(winning?{answer:winning}:{})};
     })};
   }
   function rows(entries) {

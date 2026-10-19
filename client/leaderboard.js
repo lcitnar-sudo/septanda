@@ -11,7 +11,7 @@
     return {action:'sync',date,...(state?.assignmentVersion===1?{assignmentVersion:1,assignmentSeed:state.assignmentSeed}:{}),rounds:ids.map(id=>{
       const r=day?.progress[id] || Daily.blankRound(),p=globalThis.SEPTANDA_PUZZLES.find(p=>p.id===id);
       const winning=r.status==='won'?r.attempts.find(a=>Engine.evaluate(a.text,p).accepted)?.text:undefined;
-      return {id,status:r.status,hint:r.hints.length>0,...(r.paidSkip?{paidSkip:true}:{}),...(winning?{answer:winning}:{})};
+      return {id,status:r.status,hint:r.hints.length>0,...(r.paidSkip?{paidSkip:true,skipCharge:Daily.skipCharge(r)}:{}),chainLevel:Daily.chainLevel(r),...(winning?{answer:winning}:{})};
     })};
   }
   function rows(entries) {

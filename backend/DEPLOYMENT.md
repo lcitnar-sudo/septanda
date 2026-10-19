@@ -104,4 +104,6 @@ Deploy code, the generated client, and `content/editorial-review.json` together.
 
 ## Upgrade 5.2.1
 
-Three-slot personal days and paid skip use additive JSON fields in the existing v6 state. Deploy the client and functions together; do not rerun the original migration or edit player records. The new skip-tests exercise insufficient funds, 200-point deduction, idempotent and competing requests, stale marker retention, archival free reveals and the old five-slot sets.
+Three-slot personal days and paid skip use additive JSON fields in the existing v6 state. Deploy the client and functions together; do not rerun the original migration or edit player records. The new skip-tests exercise insufficient funds, 100-point deduction, idempotent and competing requests, stale marker retention, archival free reveals and the old five-slot sets.
+
+5.3.0 adds `chainLevel` and a durable `skipCharge` inside the existing JSON state. Deploy functions and client together. No secrets or SQL changes are required; retain all existing records. `scripts/chain-tests.mjs` covers all four steps, retries, stale devices, insufficient funds, ranking and unchanged historical 200-point charges.
