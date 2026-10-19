@@ -26,7 +26,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
     if (!profile || !progress || !choice) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
     const today=game.daily.dayKey(clock());
     if(game.daily.personalStart && today>=game.daily.personalStart) {
-      const prepared=JSON.parse(JSON.stringify(progress.state));
+      const prepared=progress.state?.version===6?JSON.parse(JSON.stringify(progress.state)):game.daily.createState(null);
       game.daily.bindPlayer(prepared,user.id);
       game.daily.ensureDay(prepared,today);
       if(JSON.stringify(prepared)!==JSON.stringify(progress.state)) {
@@ -52,11 +52,21 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
       await db.rpc('septanda_set_consent',{p_user:user.id,p_granted:body.granted});
       return json(await readPlayer(user));
     }
-    if (body.action!=='sync') fail(400,'Neznámá akce.');
+    if (!['sync','skip'].includes(body.action)) fail(400,'Neznámá akce.');
     for (let retry=0;retry<8;retry++) {
       const {data}=await db.read('septanda_progress',`user_id=eq.${user.id}&select=state,revision&limit=1`,{user});
       const old=data?.[0];if (!old) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
-      const merged=tools.merge(old.state,body.state,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id});
+      let incoming=body.state;
+      if(body.action==='skip') {
+        if(body.date!==game.daily.dayKey(clock()) || typeof body.id!=='string')fail(400,'Přeskočit lze aktuální výrok dnešní sady.');
+        incoming=JSON.parse(JSON.stringify(old.state));
+        const day=incoming?.days?.[body.date],round=day?.progress?.[body.id];
+        if(!day || !day.ids.includes(body.id) || !game.daily.canSelect(day,body.id))fail(409,'Nejprve načti svoji aktuální sadu.');
+        if(round?.status==='won')fail(409,'Rozluštěný výrok už se nepřeskakuje.');
+        if(round?.status==='revealed')return json(await readPlayer(user));
+        day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',paidSkip:true,draft:''};
+      }
+      const merged=tools.merge(old.state,incoming,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id});
       const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(old.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});
       if (result?.saved===true) return json(await readPlayer(user));
     }

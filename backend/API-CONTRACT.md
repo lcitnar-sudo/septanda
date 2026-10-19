@@ -39,3 +39,11 @@ GET player reserves today's approved five IDs before returning via the existing 
 New sets exclude all IDs assigned on earlier days, past worked/seen legacy IDs and `knownIds`. The 135-item approved pool yields at most 27 full personal sets; exhaustion returns an empty set and never loops. Original 509 identities and the shared 100-day calendar remain compatible for existing records. Different players may receive overlapping puzzles; rankings compare different personal sets.
 
 Guidance reports literal matching content words against one accepted spelling plus three editorial clues. Internal score fields remain for archival compatibility and server acceptance; the UI no longer exposes semantic percentages as guidance.
+
+## Daily triples and paid skip (5.2.1)
+
+New personal assignments have three IDs; existing stored five-ID assignments remain immutable. Canonical archival `daily.plan` still returns five for compatibility. `daily.personalPlan` defaults to three. Older offline personal five-ID days are accepted only through the 2026-10-19 cutover; future new five-ID assignments are rejected.
+
+POST player `{action:"skip",date:"YYYY-MM-DD",id:"puzzle-id"}` requires the authenticated current day, an unlocked current puzzle and enough saved points. It loads canonical progress, marks the round `status:"revealed",paidSkip:true`, recomputes the wallet and scores, and commits through the same revision CAS. Repeating the same paid skip is idempotent; solved rounds cannot be skipped. Insufficient funds return 409 / `insufficient_points` without a write. The client flushes local progress before the skip and waits for acknowledgment; a missing response can safely be retried.
+
+The 200-point fee is part of stats.spent and daily_scores.spent, and no win reward is awarded. Both client and server preserve the marker across stale merges. New reveals in three-ID sets (or dates from 2026-10-20) require the fee even if a forged sync omits the marker. Previously stored free reveals remain free; pre-cutover five-ID offline history stays compatible. No SQL migration is required; the existing score constraints permit both old five and new three.

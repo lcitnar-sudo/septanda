@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#e8e6dc">
-  <meta name="description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den pět nových hádanek.">
+  <meta name="description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den tři nové hádanky.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Šeptanda">
   <meta property="og:url" content="https://septanda.com/">
   <meta property="og:title" content="Šeptanda — Tichá pošta napříč dějinami">
-  <meta property="og:description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den pět nových hádanek.">
+  <meta property="og:description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den tři nové hádanky.">
   <meta property="og:image" content="https://septanda.com/assets/social/septik-share-v1.png">
   <meta property="og:image:secure_url" content="https://septanda.com/assets/social/septik-share-v1.png">
   <meta property="og:image:type" content="image/png">
@@ -19,7 +19,7 @@
   <meta property="og:image:alt" content="Šeptík, dobrodružný průvodce Šeptandou s kloboukem a starou mapou.">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Šeptanda — Tichá pošta napříč dějinami">
-  <meta name="twitter:description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den pět nových hádanek.">
+  <meta name="twitter:description" content="Výroky se cestou pořádně zamotaly. Poznáš, co zaznělo na začátku? Každý den tři nové hádanky.">
   <meta name="twitter:image" content="https://septanda.com/assets/social/septik-share-v1.png">
   <meta name="twitter:image:alt" content="Šeptík, dobrodružný průvodce Šeptandou s kloboukem a starou mapou.">
   <title>Šeptanda — Tichá pošta napříč dějinami</title>
@@ -59,7 +59,7 @@
         <div>
           <h1 id="intro-title">Tichá pošta.<br><em>Poznáš, co bylo na začátku?</em></h1>
         </div>
-        <div class="edition-slip" aria-label="Dnešní vydání"><span>DNEŠNÍ VYDÁNÍ</span><time id="edition-date"></time><span id="edition-count">05 VÝROKŮ</span></div>
+        <div class="edition-slip" aria-label="Dnešní vydání"><span>DNEŠNÍ VYDÁNÍ</span><time id="edition-date"></time><span id="edition-count">03 VÝROKY</span></div>
       </section>
 
       <div id="storage-warning" class="notice" role="status" hidden>Prohlížeč nepovoluje ukládání. Hra funguje, ale po zavření stránky se může pokrok ztratit.</div>
@@ -69,7 +69,7 @@
           <section id="daily-waiting" class="puzzle-sheet daily-waiting" aria-labelledby="waiting-title" hidden><p class="eyebrow">ARCHIV SLOV</p><h2 id="waiting-title">Další zprávy připravujeme.</h2><p id="waiting-copy"></p><button class="secondary-button" data-open="collection-dialog">Prohlédnout dnešní sadu</button></section>
           <section id="puzzle-sheet" class="puzzle-sheet" aria-labelledby="puzzle-heading">
             <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category">HISTORICKÝ VÝROK</p><h2 id="puzzle-heading">Co zaznělo na začátku?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
-            <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 5</span><div class="route-line" id="daily-route"></div></nav>
+            <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav>
             <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow">ZACHYCENÁ ZPRÁVA</p><blockquote id="distorted-message">Dorazil jsem na místo, trochu se rozhlédl a už mi všichni gratulovali.</blockquote></div>
             <form id="guess-form" novalidate>
               <div class="input-label-row"><label class="sr-only" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
@@ -97,9 +97,9 @@
           </section>
           <section class="leaderboard-section" aria-labelledby="leaderboard-title"><div class="progress-header"><h2 id="leaderboard-title">Žebříček</h2><button class="text-button leaderboard-refresh" id="leaderboard-refresh" aria-label="Obnovit žebříček">Obnovit</button></div><p class="leaderboard-period">Dnes <span id="leaderboard-date"></span></p><div id="leaderboard-preview" aria-live="polite"><p class="leaderboard-note">Načítání pořadí…</p></div><div class="leaderboard-actions"><button class="text-button underlined" id="leaderboard-join">Přihlásit se</button><button class="text-button underlined" data-open="leaderboard-dialog">Celé pořadí <span aria-hidden="true">→</span></button></div><p class="leaderboard-note" id="leaderboard-status" role="status"></p></section>
           <section id="goal-note" class="goal-note"><div class="goal-top"><span class="eyebrow">SLOVA NA SVÉ MÍSTO</span></div><p>Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
-          <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 5</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Pět výroků na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
+          <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 3</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Tři výroky na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
           <div class="local-note"><span class="local-indicator" aria-hidden="true"></span><p>Vyhodnocováno v prohlížeči.<br><button class="text-button underlined" data-open="scoring-dialog">Jak fungují stopy</button></p></div>
-          <button class="give-up text-button" id="give-up">Odhalit výrok bez odměny</button>
+          <button class="give-up text-button" id="give-up" aria-describedby="skip-help">Přeskočit · −200 bodů</button><p id="skip-help" class="field-note">Přeskočená hádanka se počítá do dnešního limitu.</p>
         </aside>
       </div>
     </main>
@@ -107,7 +107,7 @@
     <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>5.0 · Lokální vydání</span></div></footer>
   </div>
 
-  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čeká pět výroků, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit pěti výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
+  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Hádanku můžeš přeskočit za 200 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. Už dříve přidělené pětičlenné sady zůstávají dohratelné. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
 
   <dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><p class="eyebrow">PĚT VÝROKŮ NA DEN</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="collection-title">Dnešní sada.</h2><p class="muted" id="collection-date"></p><div id="collection-list"></div><p class="small muted">Další výrok se otevře po rozluštění nebo odhalení předchozího. Připravené nové sady se otevírají o půlnoci podle českého času. Známé výroky vynecháme.</p></dialog>
 

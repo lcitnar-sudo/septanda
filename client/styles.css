@@ -1947,3 +1947,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .hint-content p { margin:0 0 16px; }
 .hint-content p:last-child { margin-bottom:0; }
 #result-panel .underlined { white-space:normal; text-align:left; }
+
+#give-up:disabled{opacity:.55;cursor:not-allowed}
+#skip-help{margin:-8px 0 20px;line-height:1.6}
+
+.collection-marks{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}

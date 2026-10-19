@@ -101,3 +101,7 @@ Po připojení skutečné služby je nutné samostatně ověřit doručení a kl
 ## Upgrade 5.2.0
 
 Deploy code, the generated client, and `content/editorial-review.json` together. Do not rerun the initial migration, create a new project, reset player rows, change v6 storage keys, or rewrite `published-history.json`. Personal assignment reservation uses the already installed progress CAS function; no additional SQL is required. Netlify's build runs the complete regression suite including personal selection and guidance tests. Verify the deployed build version, runtime configuration and an account's retained history on a second device. The public pool now contains 135 approved entries; the other 374 stay archival and unavailable for newly assigned sets.
+
+## Upgrade 5.2.1
+
+Three-slot personal days and paid skip use additive JSON fields in the existing v6 state. Deploy the client and functions together; do not rerun the original migration or edit player records. The new skip-tests exercise insufficient funds, 200-point deduction, idempotent and competing requests, stale marker retention, archival free reveals and the old five-slot sets.
