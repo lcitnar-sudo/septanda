@@ -61,6 +61,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
         if(body.date!==game.daily.dayKey(clock()) || typeof body.id!=='string')fail(400,'Přeskočit lze aktuální výrok dnešní sady.');
         incoming=JSON.parse(JSON.stringify(old.state));
         const day=incoming?.days?.[body.date],round=day?.progress?.[body.id];
+        if(day)game.daily.reconcileDay(incoming,body.date);
         if(!day || !day.ids.includes(body.id) || !game.daily.canSelect(day,body.id))fail(409,'Nejprve načti svoji aktuální sadu.');
         if(round?.status==='won')fail(409,'Rozluštěný výrok už se nepřeskakuje.');
         if(round?.status==='revealed')return json(await readPlayer(user));

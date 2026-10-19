@@ -424,10 +424,12 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
   }
   function reconcileDay(state, key) {
     const day = state.days[key], seen = seenBefore(state, key);
+    // Keep every issued ID and result, but offer only the first three slots now.
+    if(key>=SIZE_CHANGED_ON)day.playLimit=PERSONAL_SIZE;
     // Rozpracované a dokončené záznamy zůstávají beze změny. Staré otázky se znovu neotvírají jako nové.
     day.skipped = day.ids.filter(id => seen.has(id) && !hasWork(day.progress[id]));
     day.seen = [...new Set((day.seen || []).filter(id => day.ids.includes(id)))];
-    if (!canSelect(day, day.selected)) day.selected = nextId(day) || day.ids.find(id => !day.skipped.includes(id)) || null;
+    if (!canSelect(day, day.selected)) day.selected = nextId(day) || playIds(day).find(id => !day.skipped.includes(id)) || null;
     return day;
   }
   function markSeen(day, id) {
@@ -528,13 +530,14 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     for(const key of Object.keys(result.days).sort())reconcileDay(result,key);
     return {state:result,backupRequired};
   }
-  function nextId(day) { return day.ids.find(id => !day.skipped?.includes(id) && (!day.progress[id] || day.progress[id].status === 'playing')) || null; }
+  function playIds(day) { return day.ids.slice(0,day.playLimit ?? day.ids.length); }
+  function nextId(day) { return playIds(day).find(id => !day.skipped?.includes(id) && (!day.progress[id] || day.progress[id].status === 'playing')) || null; }
   function canSelect(day, id) {
-    const index = day.ids.indexOf(id), next = nextId(day);
-    return index >= 0 && !day.skipped?.includes(id) && (next === null || index <= day.ids.indexOf(next));
+    const ids=playIds(day),index = ids.indexOf(id), next = nextId(day);
+    return index >= 0 && !day.skipped?.includes(id) && (next === null || index <= ids.indexOf(next));
   }
   function dayTotals(day) {
-    return day.ids.reduce((t, id) => {
+    return playIds(day).reduce((t, id) => {
       if (day.skipped?.includes(id)) { t.skipped++; t.completed++; return t; }
       const r = day.progress[id] || blankRound();
       t.solved += Number(r.status === 'won'); t.completed += Number(r.status !== 'playing');
@@ -553,7 +556,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);
 
 })(root);

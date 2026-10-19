@@ -14,7 +14,7 @@
   function activateDay() {
     activeDate = Daily.dayKey();
     day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1]});
-    puzzles = day.ids.map(id => allPuzzles.find(p => p.id === id));
+    puzzles = Daily.playIds(day).map(id => allPuzzles.find(p => p.id === id));
   }
   function read() {
     if (!memoryOnly) {
@@ -80,8 +80,8 @@
   function renderStats(t) {
     if (!hasAccount()) { $('stats-content').replaceChildren(); if ($('stats-dialog').open) $('stats-dialog').close(); return; }
     const today = Daily.dayTotals(day);
-    const history = Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress)).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress);
-    $('stats-content').innerHTML = `<div class="stats-grid"><div class="stat"><strong>${t.points}</strong><span>bodů k dispozici</span></div><div class="stat"><strong>${day.ids.length ? today.completed + " / " + day.ids.length : "—"}</strong><span>dnes dokončeno</span></div><div class="stat"><strong>${today.attempts}</strong><span>dnešních tipů</span></div></div><div class="ledger"><span>Body na začátek</span><span>+${INITIAL}</span><span>Odměny celkem</span><span>+${t.solved * 200}</span><span>Stopy a přeskočení</span><span>−${t.spent}</span><span>Dnes rozluštěno</span><span>${today.solved} / ${day.ids.length}</span></div>${history ? `<details class="past-games"><summary>Starší hry a tipy</summary>${history}</details>` : ''}`;
+    const history = Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress)).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress) + archiveGroup('Dřívější výsledky z dneška', day.ids.filter(id=>!Daily.playIds(day).includes(id)), day.progress);
+    $('stats-content').innerHTML = `<div class="stats-grid"><div class="stat"><strong>${t.points}</strong><span>bodů k dispozici</span></div><div class="stat"><strong>${puzzles.length ? today.completed + " / " + puzzles.length : "—"}</strong><span>dnes dokončeno</span></div><div class="stat"><strong>${today.attempts}</strong><span>dnešních tipů</span></div></div><div class="ledger"><span>Body na začátek</span><span>+${INITIAL}</span><span>Odměny celkem</span><span>+${t.solved * 200}</span><span>Stopy a přeskočení</span><span>−${t.spent}</span><span>Dnes rozluštěno</span><span>${today.solved} / ${puzzles.length}</span></div>${history ? `<details class="past-games"><summary>Starší hry a tipy</summary>${history}</details>` : ''}`;
   }
   function renderResult(r) {
     const last = r.status === 'won' ? r.attempts.findLast(a => a.score.accepted) : r.attempts.at(-1), panel = $('result-panel');
@@ -110,7 +110,7 @@
     const panel = $('reveal-panel'); panel.hidden = r.status === 'playing';
     if (panel.hidden) { panel.innerHTML = ''; return; }
     const won = r.status === 'won';
-    const allDone = Daily.dayTotals(day).completed === day.ids.length;
+    const allDone = Daily.dayTotals(day).completed === puzzles.length;
     const education = p.education || {label: 'Původ úryvku', person: p.author, work: p.origin, summary: p.context};
     const media = education.image ? globalThis.SEPTANDA_IMAGES?.[education.image] : null;
     const original = p.sources[0];
@@ -124,16 +124,16 @@
     $('balance').textContent = hasAccount() ? t.points : '';
     $('edition-date').textContent = new Intl.DateTimeFormat('cs-CZ', {timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric'}).format(new Date(activeDate + 'T12:00:00Z'));
     $('edition-date').dateTime = activeDate;
-    $('edition-count').textContent = day.ids.length ? pad(day.ids.length)+' '+(day.ids.length===3?'VÝROKY':'VÝROKŮ') : 'ČEKÁME NA NOVÉ';
+    $('edition-count').textContent = puzzles.length ? pad(puzzles.length)+' '+(puzzles.length===3?'VÝROKY':'VÝROKŮ') : 'ČEKÁME NA NOVÉ';
     $('puzzle-sheet').hidden = !p; $('daily-waiting').hidden = !!p;
     $('hint-section').hidden = !p; $('goal-note').hidden = !p;
     if (!p) {
-      $('waiting-title').textContent = day.ids.length ? 'Dnes už nic neopakujeme.' : 'Další zprávy připravujeme.';
-      $('waiting-copy').textContent = day.ids.length ? 'Výroky dnešní sady už máš v historii. Znovu ti je jako nové nenabídneme. Tvoje starší hry i body zůstávají uložené.' : 'Všechny úplné sady z aktuálně schválené zásoby už máš přidělené. Připravujeme další nové výroky. Tvoje historie i body zůstávají uložené a staré hádanky se znovu nevrací.';
+      $('waiting-title').textContent = puzzles.length ? 'Dnes už nic neopakujeme.' : 'Další zprávy připravujeme.';
+      $('waiting-copy').textContent = puzzles.length ? 'Výroky dnešní sady už máš v historii. Znovu ti je jako nové nenabídneme. Tvoje starší hry i body zůstávají uložené.' : 'Všechny úplné sady z aktuálně schválené zásoby už máš přidělené. Připravujeme další nové výroky. Tvoje historie i body zůstávají uložené a staré hádanky se znovu nevrací.';
       for (const id of ['guess-form','result-panel','reveal-panel','history-section','give-up','skip-help']) $(id).hidden = true;
-      $('solved-count').textContent = day.ids.length ? 'Už znáš' : '—';
+      $('solved-count').textContent = puzzles.length ? 'Už znáš' : '—';
       $('collection-marks').replaceChildren();
-      $('collection-copy').textContent = day.ids.length ? 'Žádná opakovaná hádanka.' : 'Čekáme na další nové výroky.';
+      $('collection-copy').textContent = puzzles.length ? 'Žádná opakovaná hádanka.' : 'Čekáme na další nové výroky.';
       renderCollection(); renderStats(t);
       document.dispatchEvent(new Event('septanda:progress'));
       document.dispatchEvent(new CustomEvent('septanda:scene', {detail:{status:'waiting',score:null,attempts:0,id:null}}));
@@ -162,9 +162,9 @@
     $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 200 bodů.':'Přeskočená hádanka se počítá do dnešního limitu.';
     $('guess').disabled=skipBusy;
     const today = Daily.dayTotals(day);
-    $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${day.ids.length}`;
-    $('solved-count').textContent = `${today.completed} / ${day.ids.length}`;
-    $('collection-copy').textContent = today.skipped ? `${today.completed - today.skipped} nových dokončeno · ${today.skipped} už znáš z dřívějška.` : today.completed === day.ids.length ? 'Dnešní sada je hotová.' : `${today.completed} z ${day.ids.length} dokončeno dnes.`;
+    $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${puzzles.length}`;
+    $('solved-count').textContent = `${today.completed} / ${puzzles.length}`;
+    $('collection-copy').textContent = today.skipped ? `${today.completed - today.skipped} nových dokončeno · ${today.skipped} už znáš z dřívějška.` : today.completed === puzzles.length ? 'Dnešní sada je hotová.' : `${today.completed} z ${puzzles.length} dokončeno dnes.`;
     const progressButton = (item, i, rail) => {
       const status = day.progress[item.id]?.status || 'playing', unlocked = Daily.canSelect(day, item.id), skipped = day.skipped.includes(item.id);
       return `<button class="${skipped ? 'skipped' : status} ${item.id === p.id ? 'current' : ''}" data-select="${item.id}" aria-label="Dnešní výrok ${i + 1}, ${skipped ? 'už znáš z dřívějška' : status === 'won' ? 'rozluštěno' : status === 'revealed' ? (day.progress[item.id]?.paidSkip?'přeskočeno':'odhaleno') : unlocked ? 'aktuální' : 'zatím zamčeno'}" ${item.id === p.id ? 'aria-current="step"' : ''} ${unlocked ? '' : 'disabled'}>${rail ? i + 1 : ''}</button>`;
@@ -236,7 +236,7 @@
     const r = roundFor(), index = puzzles.findIndex(p => p.id === day.selected) + 1;
     if (!r) return;
     const hintCount = Number(r.hints.length > 0);
-    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Osobní výrok ${index}/${day.ids.length}\n${r.status === 'won' ? 'Rozluštěno' : r.paidSkip?'Přeskočeno −200 bodů':'Odhaleno bez odměny'} · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
+    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Osobní výrok ${index}/${puzzles.length}\n${r.status === 'won' ? 'Rozluštěno' : r.paidSkip?'Přeskočeno −200 bodů':'Odhaleno bez odměny'} · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
     try { await navigator.clipboard.writeText(text); $('share-message').textContent = 'Výsledek je ve schránce. Řešení zůstalo tajemstvím.'; }
     catch (_) { $('share-message').textContent = 'Automatické kopírování není dostupné. Výsledek si můžeš vybrat a zkopírovat:'; const box = document.createElement('textarea'); box.value = text; box.readOnly = true; box.setAttribute('aria-label', 'Výsledek ke zkopírování'); $('share-message').append(box); box.select(); }
   }

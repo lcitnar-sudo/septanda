@@ -52,7 +52,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     return result;
   }
   function selection(day,preferred) {
-    return daily.canSelect(day,preferred) ? preferred : daily.nextId(day) || day.ids.find(id=>!day.skipped?.includes(id)) || null;
+    return daily.canSelect(day,preferred) ? preferred : daily.nextId(day) || daily.playIds(day).find(id=>!day.skipped?.includes(id)) || null;
   }
   function canonicalIDs(key,source,previous,now,state,{personal=false,incoming,importLegacy=false}={}) {
     if (!daily.validDay(key) || key>daily.dayKey(now)) fail(400,'Nelze ukládat neplatný nebo budoucí den.');

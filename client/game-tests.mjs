@@ -102,4 +102,16 @@ node('give-up').fire('click');await node('confirm-action').fire('click');
 state=game.exportState();
 assert.equal(state.days[date].progress[accountSkipID].paidSkip,true,'Cloud skip adopts the acknowledged server result');
 assert.equal(daily.totals(state).points,100,'Cloud skip spends the saved account balance once');
+const originalFive=daily.plan(date),withFive=daily.createState(null);daily.bindPlayer(withFive,accountID);
+withFive.days[date]={ids:originalFive,selected:originalFive[4],seen:[originalFive[4]],skipped:[],progress:{
+ [originalFive[3]]:{...daily.blankRound(),status:'won',attempts:[{id:'archived-fourth-win',text:puzzle(originalFive[3]).answer,time:fixed}]},
+ [originalFive[4]]:{...daily.blankRound(),draft:'Můj původní pátý tip'}}};
+game.replaceState(withFive);const capped=game.exportState();
+assert.match(node('edition-count').textContent,/03 VÝROKY/,'A previously issued five now visibly says three');
+assert.match(node('daily-position').textContent,/Z 3$/);
+assert.equal((node('collection-list').innerHTML.match(/class="collection-item"/g)||[]).length,3,'The actual collection UI offers three buttons');
+assert.equal(capped.days[date].ids.length,5,'Stored issued IDs remain complete');
+assert.equal(daily.totals(capped).points,300,'The earlier fourth-slot win remains awarded');
+assert.equal(capped.days[date].progress[originalFive[4]].draft,'Můj původní pátý tip');
+assert.match(node('stats-content').innerHTML,/Dřívější výsledky z dneška/,'Existing extra work is accessible in the archive');
 console.log('PASS actual game UI: word guidance, three clues / one charge, reward, guest isolation, private backups and cold cloud account restoration.');
