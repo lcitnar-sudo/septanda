@@ -1,4 +1,4 @@
-# Šeptanda 5.1.10 — archiv slov
+# Šeptanda 5.1.11 — archiv slov
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a 100 připravených denních sad.
 
@@ -12,6 +12,7 @@ Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Su
 - Kontaktní formulář přes Netlify Forms se spamovou pastí a stavem odesílání.
 - 500 nových hádanek v sadách od 19. 10. 2026 do 26. 1. 2027. Po konci zásoby hra čeká na nové výroky. Devět původních hádanek zůstává pro starší historii.
 - Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
+- Náhled sdíleného odkazu obsahuje Šeptíka z brand balíčku. Veřejný obrázek `assets/social/septik-share-v1.png` (1080 × 1080 px) je uvedený přímo v HTML přes Open Graph a Twitter metadata; nevyžaduje přihlášení ani spuštění skriptů.
 
 ## Zapojení
 
