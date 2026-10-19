@@ -15,7 +15,7 @@ function adminUser(row) {
 }
 export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupabase({env,fetcher}),clock=()=>new Date()}={}) {
   const tools=createProgressTools(game);
-  async function readPlayer(user) {
+  async function readPlayer(user,retry=0) {
     const id=`user_id=eq.${user.id}`;
     const [profileResult,progressResult,consentResult,admin] = await Promise.all([
       db.read('septanda_profiles',`${id}&select=display_name,email,email_confirmed_at&limit=1`,{user}),
@@ -24,6 +24,19 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
     ]);
     const profile=profileResult.data?.[0],progress=progressResult.data?.[0],choice=consentResult.data?.[0];
     if (!profile || !progress || !choice) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
+    const today=game.daily.dayKey(clock());
+    if(game.daily.personalStart && today>=game.daily.personalStart) {
+      const prepared=JSON.parse(JSON.stringify(progress.state));
+      game.daily.bindPlayer(prepared,user.id);
+      game.daily.ensureDay(prepared,today);
+      if(JSON.stringify(prepared)!==JSON.stringify(progress.state)) {
+        if(retry>=8)fail(409,'Osobní sada se právě připravuje na jiném zařízení. Zkus načtení znovu.','conflict');
+        const merged=tools.merge(progress.state,prepared,{now:clock(),playerId:user.id});
+        const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(progress.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});
+        if(result?.saved===true || result?.saved===false)return readPlayer(user,retry+1);
+        fail(503,'Osobní sadu se nepodařilo uložit.');
+      }
+    }
     return {account:account(user,profile),state:progress.state,revision:Number(progress.revision),stats:progress.stats || INITIAL_STATS,
       consent:consent(choice,Boolean(user.email_confirmed_at)),admin};
   }
@@ -43,7 +56,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
     for (let retry=0;retry<8;retry++) {
       const {data}=await db.read('septanda_progress',`user_id=eq.${user.id}&select=state,revision&limit=1`,{user});
       const old=data?.[0];if (!old) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
-      const merged=tools.merge(old.state,body.state,{now:clock(),importLegacy:body.importLegacy===true});
+      const merged=tools.merge(old.state,body.state,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id});
       const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(old.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});
       if (result?.saved===true) return json(await readPlayer(user));
     }

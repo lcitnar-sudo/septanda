@@ -32,6 +32,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     const allowed = legacy ? Object.keys(HINT_COST) : ['clue'];
     if (source.hints!==undefined && !Array.isArray(source.hints)) fail(400,'Neplatné nápovědy.');
     out.hints = [...new Set((source.hints||[]).filter(h=>allowed.includes(h)))];
+    if(out.hints.includes('clue'))out.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     out.status = source.status==='revealed' ? 'revealed' : out.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
     out.draft = typeof source.draft==='string' ? source.draft.slice(0,400) : '';
     return out;
@@ -43,6 +44,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     for (const item of [...a.attempts,...b.attempts]) if (!seen.has(item.id)) { seen.add(item.id); result.attempts.push(item); }
     if (result.attempts.length>500) fail(413,'U jedné hádanky lze uložit nejvýše 500 tipů.');
     result.hints=[...new Set([...a.hints,...b.hints])];
+    if(result.hints.includes('clue'))result.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
     result.status = ['won','revealed'].includes(previous?.status) ? previous.status : b.status==='revealed' ? 'revealed' : result.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
     result.draft=object(incoming) ? b.draft : a.draft;
     return result;
@@ -50,25 +52,49 @@ export function createProgressTools({puzzles,engine,daily}) {
   function selection(day,preferred) {
     return daily.canSelect(day,preferred) ? preferred : daily.nextId(day) || day.ids.find(id=>!day.skipped?.includes(id)) || null;
   }
-  function canonicalIDs(key,source,previous,now) {
+  function canonicalIDs(key,source,previous,now,state,{personal=false,incoming,importLegacy=false}={}) {
     if (!daily.validDay(key) || key>daily.dayKey(now)) fail(400,'Nelze ukládat neplatný nebo budoucí den.');
-    const planned=daily.plan(key);
+    const published=daily.plan(key);
+    const planned=personal && key>=daily.personalStart ? daily.personalPlan(state,key) : published;
     if (!Array.isArray(planned) || ![0,5].includes(planned.length) || new Set(planned).size!==planned.length || !planned.every(id=>byId.has(id))) fail(503,'Denní sada není dostupná.');
     // A previously stored day keeps its published IDs even after a catalog update.
     const expected=Array.isArray(previous?.ids) && (previous.ids.length===5 || previous.ids.length===0 && planned.length===0) && previous.ids.every(id=>byId.has(id)) ? previous.ids : planned;
     if (source?.ids && (!Array.isArray(source.ids) || source.ids.length!==expected.length || source.ids.some((id,i)=>id!==expected[i]))) {
+      // A legitimate offline device may already have played before an untouched
+      // server reservation was made. Keep its five approved, non-repeated IDs;
+      // once any exposure/work is stored the assignment is immutable.
+      const unused=!previous || !(previous.seen?.length) && !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft);
+      const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
+      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && source.ids.length===5 && new Set(source.ids).size===5 && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
+      if(personal && importLegacy && daily.validSeed(incoming?.assignmentSeed) && incoming.assignmentSeed.startsWith('guest:') && (!previous || !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft))) {
+        const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed);
+        const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
+        if(Array.isArray(source.ids) && source.ids.length===imported.length && source.ids.every((id,i)=>id===imported[i] && !earlier.has(id))) {
+          state.knownIds=[...new Set([...(state.knownIds||[]),...(previous?.seen||[])])];
+          return imported;
+        }
+      }
+      if(personal && key<=daily.personalStart && (!previous || !(previous.seen?.length) && !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft)) && Array.isArray(source.ids) && source.ids.length===published.length && source.ids.every((id,i)=>id===published[i]))return published;
+      if(personal && !previous && incoming?.assignmentVersion!==1 && key<=daily.personalStart && Array.isArray(source.ids) && source.ids.length===published.length && source.ids.every((id,i)=>id===published[i]))return published;
       const old = typeof daily.legacyPlan==='function' ? daily.legacyPlan(key) : null;
       if (!(!previous && daily.scheduleStart && key<daily.scheduleStart && Array.isArray(source.ids) && source.ids.length===5 && new Set(source.ids).size===5 && old && old.length===5 && source.ids.every((id,i)=>id===old[i]) && old.every(id=>byId.has(id)))) fail(409,'Denní sada se změnila. Obnov stránku před uložením.','schedule_changed');
       return old.slice();
     }
     return expected.slice();
   }
-  function merge(previous,incoming,{now=new Date(),importLegacy=false}={}) {
+  function merge(previous,incoming,{now=new Date(),importLegacy=false,playerId=null}={}) {
     if (!object(incoming) || incoming.version!==6 || !object(incoming.days)) fail(400,'Neplatný formát herního postupu.');
     if (Object.keys(incoming.days).length>3660) fail(413,'Historie obsahuje příliš mnoho dnů.');
     const prior=previous && previous.version===6 ? previous : {version:6,legacy:{progress:{}},days:{}};
     const imported = prior.legacy?.imported===true || Object.keys(prior.legacy?.progress||{}).length>0;
     const state={version:6,legacy:{progress:{},imported},days:{}};
+    const personal=Boolean(daily.personalStart && ((playerId && daily.dayKey(now)>=daily.personalStart) || incoming.assignmentVersion===1));
+    if(personal) {
+      state.assignmentVersion=1;
+      state.assignmentSeed=playerId ? daily.accountSeed(playerId) : daily.validSeed(prior.assignmentSeed) ? prior.assignmentSeed : incoming.assignmentSeed;
+      if(!daily.validSeed(state.assignmentSeed))fail(400,'Chybí identita osobní sady.');
+      state.knownIds=[...new Set([...(Array.isArray(prior.knownIds)?prior.knownIds:[]),...(Array.isArray(incoming.knownIds)?incoming.knownIds:[])].filter(id=>byId.has(id)))];
+    }
     // Server-owned marker survives an earlier blank sync; a client cannot set or clear it.
     const legacySource = !imported && importLegacy && object(incoming.legacy?.progress) ? Object.fromEntries(Object.entries(incoming.legacy.progress).filter(([id,record])=>legacyIds.has(id) && (hasWork(record) || typeof record?.draft==='string' && record.draft.length>0))) : {};
     if (Object.keys(legacySource).length) state.legacy.imported=true;
@@ -79,9 +105,10 @@ export function createProgressTools({puzzles,engine,daily}) {
     for (const key of [...new Set([...Object.keys(prior.days||{}),...Object.keys(incoming.days)])].sort()) {
       const old=prior.days?.[key],source=incoming.days[key];
       if (source!==undefined && !object(source)) fail(400,'Neplatný den v historii.');
-      const ids=canonicalIDs(key,source,old,now),day={ids,selected:ids[0] || null,progress:{},seen:[],skipped:[]};
+      const ids=canonicalIDs(key,source,old,now,state,{personal,incoming,importLegacy}),day={ids,selected:ids[0] || null,progress:{},seen:[],skipped:[]};
       for (const id of ids) {
         const a=old?.progress?.[id],b=source?.progress?.[id];
+        if(personal && key>=daily.personalStart && daily.seenBefore(state,key).has(id) && hasWork(b) && !hasWork(a))fail(409,'Tento výrok už máš v dřívější historii. Místní postup zůstává uložený.','known_puzzle');
         if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart)});
       }
       state.days[key]=day;

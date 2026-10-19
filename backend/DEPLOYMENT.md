@@ -97,3 +97,7 @@ Po připojení skutečné služby je nutné samostatně ověřit doručení a kl
 - https://supabase.com/docs/guides/getting-started/api-keys
 - https://supabase.com/docs/guides/auth/passwords
 - https://supabase.com/docs/guides/auth/redirect-urls
+
+## Upgrade 5.2.0
+
+Deploy code, the generated client, and `content/editorial-review.json` together. Do not rerun the initial migration, create a new project, reset player rows, change v6 storage keys, or rewrite `published-history.json`. Personal assignment reservation uses the already installed progress CAS function; no additional SQL is required. Netlify's build runs the complete regression suite including personal selection and guidance tests. Verify the deployed build version, runtime configuration and an account's retained history on a second device. The public pool now contains 135 approved entries; the other 374 stay archival and unavailable for newly assigned sets.
