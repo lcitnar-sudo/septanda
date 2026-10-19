@@ -78,9 +78,12 @@ try {
   time=new Date('2026-10-16T12:00:00Z');eq((await call(null,b.cookie)).data.entries,[],'new day board resets');
   time=new Date('2026-10-20T12:00:00Z');
   const personalState=daily.createState(null);daily.bindPlayer(personalState,b.data.account.id);
+  daily.ensureDay(personalState,'2026-10-15'); // The already issued set is part of this account's history.
   const personalDay=daily.ensureDay(personalState,'2026-10-20');
   const personalBody={action:'sync',date:'2026-10-20',assignmentVersion:1,assignmentSeed:personalState.assignmentSeed,rounds:personalDay.ids.map(id=>({id,status:'playing',hint:false}))};
-  win(personalBody,0);eq((await call(personalBody,b.cookie)).data.me.points,200,'legacy preview accepts a verified personal result');
+  win(personalBody,0);const personalResult=await call(personalBody,b.cookie);
+  eq(personalResult.status,200,'personal selection excludes the account\'s earlier issued IDs');
+  eq(personalResult.data.me.points,200,'legacy preview accepts a verified personal result');
   eq((await call(personalBody,b.cookie)).data.me.points,200,'personal result is idempotent');
   const alternate=structuredClone(personalBody);[alternate.rounds[1],alternate.rounds[2]]=[alternate.rounds[2],alternate.rounds[1]];
   eq((await call(alternate,b.cookie)).status,409,'legacy stored personal IDs and order stay frozen');
