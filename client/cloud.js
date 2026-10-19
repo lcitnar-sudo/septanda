@@ -25,7 +25,7 @@
     try {
       const response = await fetch(endpoint(name), {method:body ? 'POST' : 'GET', cache:'no-store', credentials:'same-origin', headers:{...(token ? {Authorization:'Bearer ' + token} : {}), ...(body ? {'Content-Type':'application/json'} : {})}, ...(body ? {body:JSON.stringify(body)} : {}), signal:controller.signal});
       let result; try { result = await response.json(); } catch (_) { throw new Error('Ukládání je teď nedostupné. Zkus to později.'); }
-      if (!response.ok) throw Object.assign(new Error(result.error || 'Požadavek se nepodařil.'), {status:response.status});
+      if (!response.ok) throw Object.assign(new Error(result.error || 'Požadavek se nepodařil.'), {status:response.status,code:result.code});
       if (options.required !== false && session?.user.id !== requestUser) throw new Error('Účet se mezitím změnil. Otevři přehled znovu.');
       return result;
     } finally { clearTimeout(timeout); }
@@ -122,6 +122,15 @@
     }
   }
   let stateSignatureAtImport = '';
+  async function skipPuzzle(date,id) {
+    if(!session || !ready || syncing)throw new Error('Počkej prosím na připojení a dokončení ukládání účtu.');
+    const epoch=loadEpoch,userId=session.user.id;
+    if(!await sync(true))throw new Error('Nejprve se musí uložit aktuální postup. Zkus přeskočení znovu po připojení.');
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    const result=await api('player',{action:'skip',date,id});
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    apply(result,true);notice('Výrok je přeskočený. Odečteno 200 bodů.');refreshBoard();
+  }
   async function loadAccount(nextSession) {
     const epoch = ++loadEpoch;
     const previousId = session?.user.id;
@@ -313,5 +322,5 @@
     if (!(await sync(true, clean))) throw new Error('Přenos se nedokončil. Zkus ho prosím znovu.');
     return true;
   }
-  root.SeptandaCloud = Object.freeze({start,importLocalState});
+  root.SeptandaCloud = Object.freeze({start,importLocalState,skipPuzzle,isActive:()=>Boolean(sdk)});
 })(globalThis);

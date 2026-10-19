@@ -329,12 +329,14 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
   root.SeptandaEngine = Object.freeze({normalize, evaluate, label});
 })(globalThis);
 
-/* Pět výroků za pražský kalendářní den; stav hráče patří tomuto prohlížeči. */
+/* Osobní trojice za pražský kalendářní den; vydané sady zůstávají uložené. */
 (function (root) {
   'use strict';
   const pool = root.SEPTANDA_PUZZLES, engine = root.SeptandaEngine;
   const byId = new Map(pool.map(p => [p.id, p]));
   const HINT_COST = {clue: 50, small: 30, previous: 60};
+  const PERSONAL_SIZE=3, SKIP_COST=200, SIZE_CHANGED_ON='2026-10-19', PAID_SKIP_START='2026-10-20';
+  const validPersonalSize=(key,size)=>size===PERSONAL_SIZE || size===5 && key<=SIZE_CHANGED_ON;
   if (pool.length < 5) throw new Error('Denní sada potřebuje alespoň pět výroků.');
   function dayKey(date = new Date()) {
     const parts = new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/Prague', year: 'numeric', month: '2-digit', day: '2-digit'}).formatToParts(date);
@@ -386,14 +388,14 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       state.assignmentSeed='guest:'+(root.crypto?.randomUUID?.() || Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'-'+Math.random().toString(36).slice(2));
     return state;
   }
-  function personalPlan(state,key,seed=state.assignmentSeed) {
+  function personalPlan(state,key,seed=state.assignmentSeed,size=PERSONAL_SIZE) {
     if(!validDay(key))throw new Error('Neplatný den.');
     if(!personalStart || key<personalStart || !validSeed(seed))return plan(key);
     const excluded=seenBefore(state,key);
     for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
     for(const id of state.knownIds||[])excluded.add(id);
     const candidates=approvedIDs.filter(id=>byId.has(id) && !excluded.has(id));
-    if(candidates.length<5)return [];
+    if(!validPersonalSize(key,size) || candidates.length<size)return [];
     let randomState=2166136261;
     for(const char of 'septanda-personal-1:'+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
     const random=()=>{randomState=(randomState+0x6D2B79F5)|0;let n=Math.imul(randomState^randomState>>>15,1|randomState);n^=n+Math.imul(n^n>>>7,61|n);return((n^n>>>14)>>>0)/4294967296;};
@@ -403,8 +405,9 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       const id=candidates.find(id=>!chosen.includes(id) && (!category || byId.get(id).category===category) && (!['Veřejně volné verše','Úryvek z knihy'].includes(byId.get(id).category) || !usedWorks.has(byId.get(id).origin)));
       if(id){chosen.push(id);usedWorks.add(byId.get(id).origin);}
     };
-    for(const category of ['Lidové přísloví','Historický výrok','Veřejně volné verše','Úryvek z knihy','Lidové přísloví'])take(category);
-    for(const id of candidates)if(chosen.length<5 && !chosen.includes(id))chosen.push(id);
+    const categories=size===5?['Lidové přísloví','Historický výrok','Veřejně volné verše','Úryvek z knihy','Lidové přísloví']:['Lidové přísloví','Historický výrok',...(random()<0.5?['Veřejně volné verše','Úryvek z knihy']:['Úryvek z knihy','Veřejně volné verše'])];
+    for(const category of categories)if(chosen.length<size)take(category);
+    for(const id of candidates)if(chosen.length<size && !chosen.includes(id))chosen.push(id);
     for(let i=chosen.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[chosen[i],chosen[j]]=[chosen[j],chosen[i]];}
     return chosen;
   }
@@ -444,6 +447,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     }
     // Already completed history survives later scoring corrections. The server still validates new wins.
     if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
+    if(round.status==='revealed' && source.paidSkip===true)round.paidSkip=true;
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     if(round.hints.includes('clue'))round.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
@@ -468,7 +472,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     if (raw.days && typeof raw.days === 'object') {
       for (const [key, source] of Object.entries(raw.days)) {
         if (!validDay(key) || !source || typeof source !== 'object') continue;
-        const ids = Array.isArray(source.ids) && (source.ids.length === 5 || source.ids.length === 0) && new Set(source.ids).size === source.ids.length && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
+        const ids = Array.isArray(source.ids) && [0,3,5].includes(source.ids.length) && new Set(source.ids).size === source.ids.length && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
         const day = {ids, selected: source.selected, progress: cleanProgress(source.progress, ids), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
         state.days[key] = day;
       }
@@ -501,6 +505,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       const r={...a,attempts,hints:[...new Set([...a.hints,...b.hints])],draft:b.draft||a.draft,
         status:['won','revealed'].includes(a.status)?a.status:b.status};
       if(r.hints.includes('clue'))r.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
+      if(r.status==='revealed' && (['won','revealed'].includes(a.status)?a.paidSkip:b.paidSkip))r.paidSkip=true;
       return r;
     };
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
@@ -510,7 +515,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       if(!target){result.days[key]=source;continue;}
       if(target.ids.join()!==source.ids.join()) {
         const earlier=new Set(Object.entries(result.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-        const mayKeep=work(source) && !work(target) && !target.seen.length && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
+        const mayKeep=work(source) && !work(target) && !target.seen.length && validPersonalSize(key,source.ids.length) && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
         if(mayKeep){result.days[key]=source;continue;}
         if(work(source))backupRequired=true;
         result.knownIds=[...new Set([...result.knownIds,...source.seen.filter(id=>!target.ids.includes(id))])];
@@ -543,11 +548,12 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     for (const progress of rounds) for (const r of Object.values(progress)) {
       t.solved += Number(r.status === 'won'); t.revealed += Number(r.status === 'revealed');
       t.spent += r.hints.reduce((sum, h) => sum + HINT_COST[h], 0); t.attempts += r.attempts.length;
+      if(r.status==='revealed' && r.paidSkip===true)t.spent+=SKIP_COST;
     }
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);
 
 })(root);

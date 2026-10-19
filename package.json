@@ -1,6 +1,6 @@
 {
   "name": "septanda",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "build": "node scripts/build.mjs && npm test",
     "content:record": "node scripts/record-history.mjs",
     "start": "node server.mjs",
-    "test": "node backend/test.mjs && node client/tests.cjs && node client/session-tests.mjs && node legacy-server/test.mjs && node scripts/check.mjs && node scripts/history-tests.mjs && node scripts/personal-tests.mjs && node client/game-tests.mjs"
+    "test": "node backend/test.mjs && node client/tests.cjs && node client/session-tests.mjs && node legacy-server/test.mjs && node scripts/check.mjs && node scripts/history-tests.mjs && node scripts/personal-tests.mjs && node client/game-tests.mjs && node scripts/skip-tests.mjs"
   },
   "dependencies": {
     "@netlify/blobs": "11.1.4",

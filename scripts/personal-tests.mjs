@@ -23,6 +23,7 @@ const userA='11111111-1111-4111-8111-111111111111',userB='22222222-2222-4222-822
 const tools=createProgressTools({puzzles,engine,daily});
 const personal=id=>{const s=daily.createState(null);daily.bindPlayer(s,id);daily.ensureDay(s,date);return s;};
 const a=personal(userA),b=personal(userB);
+eq(a.days[date].ids.length,3,'New personal days contain three puzzles');
 ok(a.days[date].ids.join()!==b.days[date].ids.join(),'Different players receive their own set');
 eq(daily.ensureDay(daily.sanitizeState(clone(a)),date).ids,a.days[date].ids,'Reload preserves the exact assignment and order');
 eq(daily.ensureDay(daily.sanitizeState(clone(a)),date).ids,a.days[date].ids,'A second device with the same identity and history agrees');
@@ -31,13 +32,13 @@ for(let n=1;n<=1000;n++)variety.add(personal(n.toString(16).padStart(32,'0')).da
 ok(variety.size>=990,'Personal selection has substantial variety across 1000 identities');
 const seen=new Set(),long=daily.createState(null);daily.bindPlayer(long,userA);
 let fullDays=0;
-for(let n=0;n<35;n++){
+for(let n=0;n<50;n++){
   const key=new Date(Date.parse(date+'T12:00:00Z')+n*86400000).toISOString().slice(0,10);
   const d=daily.ensureDay(long,key);
   if(d.ids.length)fullDays++;
   for(const id of d.ids){ok(approved.has(id),'Only approved content is assigned');ok(!seen.has(id),'No prior assigned puzzle returns, including unopened slots');seen.add(id);}
 }
-eq(fullDays,27,'135 approved puzzles provide 27 complete personal sets');
+eq(fullDays,45,'135 approved puzzles provide 45 complete personal triples');
 eq(seen.size,135,'The complete reviewed pool is used exactly once');
 eq(daily.ensureDay(long,'2027-05-01').ids,[],'Exhausted content never wraps around');
 

@@ -92,22 +92,23 @@ function candidate(body, date, account, previous, known) {
   if(body.assignmentVersion===1 && date>=daily.personalStart) {
     if(body.assignmentSeed!==daily.accountSeed(account.id))fail(400,'Neplatná identita osobní sady.');
     const offered=body.rounds?.map(r=>r?.id);
-    if(!Array.isArray(offered) || offered.length!==5 || new Set(offered).size!==5 || !offered.every(id=>byId.has(id) && (previous || daily.approvedIDs.includes(id))))fail(400,'Neplatná osobní sada.');
+    if(!Array.isArray(offered) || !(previous?[3,5].includes(offered.length):daily.validPersonalSize(date,offered.length)) || new Set(offered).size!==offered.length || !offered.every(id=>byId.has(id) && (previous || daily.approvedIDs.includes(id))))fail(400,'Neplatná osobní sada.');
     if(previous && previous.rounds.map(r=>r.id).join()!==offered.join())fail(409,'Dnešní sada už je uložená. Použij původní prohlížeč.');
     if(!previous && offered.some(id=>known.has(id)))fail(409,'Tento výrok už máš v dřívější historii.');
     ids=offered;
   }
-  if (!Array.isArray(body.rounds) || body.rounds.length !== 5) fail(400,'Dnešní sada musí mít pět výroků.');
+  if (!Array.isArray(body.rounds) || body.rounds.length !== ids.length) fail(400,'Neplatná délka dnešní sady.');
   return body.rounds.map((r,i) => {
     if (!r || r.id !== ids[i] || !['playing','won','revealed'].includes(r.status) || typeof r.hint !== 'boolean') fail(400,'Neplatný výsledek dnešní sady.');
     if (r.status === 'won' && (typeof r.answer !== 'string' || r.answer.length > 400 || !engine.evaluate(r.answer,byId.get(r.id)).accepted)) fail(400,'Výsledek se nepodařilo ověřit.');
-    return {id:r.id,status:r.status,hint:r.hint};
+    return {id:r.id,status:r.status,hint:r.hint,...(r.status==='revealed' && (r.paidSkip===true || ids.length===3 || date>=daily.paidSkipStart)?{paidSkip:true}:{})};
   });
 }
 function merge(previous, incoming) {
   const rounds=incoming.map((r,i) => {
     const old=previous?.rounds?.[i];
-    return {id:r.id, status:old && old.status !== 'playing' ? old.status : r.status, hint:r.hint || Boolean(old?.hint)};
+    const terminal=old && old.status!=='playing';
+    return {id:r.id, status:terminal?old.status:r.status, hint:r.hint || Boolean(old?.hint),...((terminal?old.status==='revealed' && old.paidSkip:r.paidSkip)?{paidSkip:true}:{})};
   });
   let locked=false;
   for (const r of rounds) {
@@ -119,7 +120,8 @@ function merge(previous, incoming) {
 function publicEntry(record) {
   const solved=record.rounds.filter(r=>r.status==='won').length;
   const hints=record.rounds.filter(r=>r.hint).length;
-  return {id:record.id,name:record.name,points:solved*200-hints*50,solved,completed:record.rounds.filter(r=>r.status!=='playing').length};
+  const skipped=record.rounds.filter(r=>r.status==='revealed' && r.paidSkip).length;
+  return {id:record.id,name:record.name,points:solved*200-hints*50-skipped*daily.skipCost,solved,completed:record.rounds.filter(r=>r.status!=='playing').length};
 }
 async function board(store,date,id) {
   const {blobs}=await store.list({prefix:`records/${date}/`});
@@ -161,9 +163,10 @@ export function createHandler(store,{now=()=>new Date(),local=false}={}) {
           if(!account)fail(401,'Pro zapsání bodů se přihlas.');
           const key=`records/${date}/${account.id}`;
           const {blobs}=await store.list({prefix:'records/'});
-          const known=new Set();
+          const known=new Set();let earlierPoints=0;
           for(const item of blobs)if(item.key.endsWith('/'+account.id) && item.key<key) {
             const record=await store.get(item.key,{type:'json'});
+            if(record)earlierPoints+=publicEntry(record).points;
             for(const round of record?.rounds||[])known.add(round.id);
           }
           let saved=false;
@@ -171,6 +174,8 @@ export function createHandler(store,{now=()=>new Date(),local=false}={}) {
             const existing=await store.getWithMetadata(key,{type:'json'}),previous=existing?.data;
             const incoming=candidate(body,date,account,previous,known);
             const record={id:account.id,name:account.name,date,rounds:merge(previous,incoming)};
+            const newSkip=record.rounds.some((r,i)=>r.paidSkip && !['won','revealed'].includes(previous?.rounds?.[i]?.status));
+            if(newSkip && 100+earlierPoints+publicEntry(record).points<0)fail(409,'Na přeskočení potřebuješ alespoň 200 bodů.');
             if(previous && JSON.stringify(record)===JSON.stringify(previous)){saved=true;break;}
             const result=await store.setJSON(key,record,existing?{onlyIfMatch:existing.etag}:{onlyIfNew:true});
             if(result.modified){saved=true;break;}

@@ -34,6 +34,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     out.hints = [...new Set((source.hints||[]).filter(h=>allowed.includes(h)))];
     if(out.hints.includes('clue'))out.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     out.status = source.status==='revealed' ? 'revealed' : out.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
+    if(out.status==='revealed' && source.paidSkip===true)out.paidSkip=true;
     out.draft = typeof source.draft==='string' ? source.draft.slice(0,400) : '';
     return out;
   }
@@ -46,6 +47,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     result.hints=[...new Set([...a.hints,...b.hints])];
     if(result.hints.includes('clue'))result.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
     result.status = ['won','revealed'].includes(previous?.status) ? previous.status : b.status==='revealed' ? 'revealed' : result.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
+    if(result.status==='revealed' && (['won','revealed'].includes(previous?.status)?previous.paidSkip:b.paidSkip || options.requirePaidSkip))result.paidSkip=true;
     result.draft=object(incoming) ? b.draft : a.draft;
     return result;
   }
@@ -56,18 +58,18 @@ export function createProgressTools({puzzles,engine,daily}) {
     if (!daily.validDay(key) || key>daily.dayKey(now)) fail(400,'Nelze ukládat neplatný nebo budoucí den.');
     const published=daily.plan(key);
     const planned=personal && key>=daily.personalStart ? daily.personalPlan(state,key) : published;
-    if (!Array.isArray(planned) || ![0,5].includes(planned.length) || new Set(planned).size!==planned.length || !planned.every(id=>byId.has(id))) fail(503,'Denní sada není dostupná.');
+    if (!Array.isArray(planned) || ![0,3,5].includes(planned.length) || new Set(planned).size!==planned.length || !planned.every(id=>byId.has(id))) fail(503,'Denní sada není dostupná.');
     // A previously stored day keeps its published IDs even after a catalog update.
-    const expected=Array.isArray(previous?.ids) && (previous.ids.length===5 || previous.ids.length===0 && planned.length===0) && previous.ids.every(id=>byId.has(id)) ? previous.ids : planned;
+    const expected=Array.isArray(previous?.ids) && ([3,5].includes(previous.ids.length) || previous.ids.length===0 && planned.length===0) && previous.ids.every(id=>byId.has(id)) ? previous.ids : planned;
     if (source?.ids && (!Array.isArray(source.ids) || source.ids.length!==expected.length || source.ids.some((id,i)=>id!==expected[i]))) {
       // A legitimate offline device may already have played before an untouched
       // server reservation was made. Keep its five approved, non-repeated IDs;
       // once any exposure/work is stored the assignment is immutable.
       const unused=!previous || !(previous.seen?.length) && !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft);
       const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && source.ids.length===5 && new Set(source.ids).size===5 && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
+      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && daily.validPersonalSize(key,source.ids.length) && new Set(source.ids).size===source.ids.length && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
       if(personal && importLegacy && daily.validSeed(incoming?.assignmentSeed) && incoming.assignmentSeed.startsWith('guest:') && (!previous || !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft))) {
-        const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed);
+        const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed,source.ids?.length);
         const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
         if(Array.isArray(source.ids) && source.ids.length===imported.length && source.ids.every((id,i)=>id===imported[i] && !earlier.has(id))) {
           state.knownIds=[...new Set([...(state.knownIds||[]),...(previous?.seen||[])])];
@@ -88,6 +90,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     const prior=previous && previous.version===6 ? previous : {version:6,legacy:{progress:{}},days:{}};
     const imported = prior.legacy?.imported===true || Object.keys(prior.legacy?.progress||{}).length>0;
     const state={version:6,legacy:{progress:{},imported},days:{}};
+    let newPaidSkips=0;
     const personal=Boolean(daily.personalStart && ((playerId && daily.dayKey(now)>=daily.personalStart) || incoming.assignmentVersion===1));
     if(personal) {
       state.assignmentVersion=1;
@@ -109,7 +112,8 @@ export function createProgressTools({puzzles,engine,daily}) {
       for (const id of ids) {
         const a=old?.progress?.[id],b=source?.progress?.[id];
         if(personal && key>=daily.personalStart && daily.seenBefore(state,key).has(id) && hasWork(b) && !hasWork(a))fail(409,'Tento výrok už máš v dřívější historii. Místní postup zůstává uložený.','known_puzzle');
-        if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart)});
+        if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart),requirePaidSkip:ids.length===3 || key>=daily.paidSkipStart});
+        if(day.progress[id]?.paidSkip && !['won','revealed'].includes(a?.status))newPaidSkips++;
       }
       state.days[key]=day;
       daily.reconcileDay(state,key);
@@ -124,7 +128,9 @@ export function createProgressTools({puzzles,engine,daily}) {
       day.seen=[...new Set([...oldSeen,...incomingSeen.filter(id=>daily.canSelect(day,id)),...Object.keys(day.progress).filter(id=>hasWork(day.progress[id]))])].filter(id=>ids.includes(id));
       day.selected=selection(day,source?.selected || old?.selected);
     }
-    return {state,stats:totals(state),scores:dayScores(state)};
+    const stats=totals(state);
+    if(newPaidSkips && stats.points<0)fail(409,'Na přeskočení potřebuješ alespoň 200 bodů.','insufficient_points');
+    return {state,stats,scores:dayScores(state)};
   }
   function totals(state) {
     const value={solved:0,spent:0,attempts:0,revealed:0,points:100};
@@ -132,6 +138,7 @@ export function createProgressTools({puzzles,engine,daily}) {
       for (const record of Object.values(progress)) {
         value.solved+=Number(record.status==='won');value.revealed+=Number(record.status==='revealed');
         value.spent+=(record.hints||[]).reduce((sum,h)=>sum+(HINT_COST[h]||0),0);value.attempts+=(record.attempts||[]).length;
+        if(record.status==='revealed' && record.paidSkip===true)value.spent+=daily.skipCost;
       }
     }
     value.points=100+200*value.solved-value.spent;
@@ -140,7 +147,7 @@ export function createProgressTools({puzzles,engine,daily}) {
   function dayScores(state) {
     return Object.entries(state.days).flatMap(([date,day])=>{
       let solved=0,completed=0,attemptCount=0,spent=0;
-      for (const id of day.ids) {const r=day.progress[id]||blank();solved+=Number(r.status==='won');completed+=Number(r.status!=='playing');attemptCount+=r.attempts.length;spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);}
+      for (const id of day.ids) {const r=day.progress[id]||blank();solved+=Number(r.status==='won');completed+=Number(r.status!=='playing');attemptCount+=r.attempts.length;spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);if(r.status==='revealed' && r.paidSkip===true)spent+=daily.skipCost;}
       return attemptCount || completed || spent ? [{date,points:solved*200-spent,solved,completed,attempts:attemptCount,spent}] : [];
     });
   }

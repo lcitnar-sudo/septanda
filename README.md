@@ -1,16 +1,16 @@
-# Šeptanda 5.2.0 — archiv slov
+# Šeptanda 5.2.1 — archiv slov
 
-Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní pětici pro každého hráče.
+Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
 ## Co obsahuje
 
-- Hra bez povinné registrace, pět navazujících hádanek denně podle pražského času.
+- Hra bez povinné registrace, tři navazující hádanky denně podle pražského času.
 - Konkrétní shodná slova po každém tipu a tři postupné stopy: význam, obraz či pramen a začátek výroku. Celý balíček stojí jednou 50 bodů; rozluštění přidá 200 bodů.
 - Procenta už hráče nenavádějí. Dosavadní pravidlový modul ověřuje přijímané podoby a drobné odchylky; jeho číselná pole zůstávají interně pro kompatibilitu historie. Ve hře neběží AI.
 - Supabase registrace, potvrzování e-mailu, přihlášení, obnova hesla, synchronizace, profil a samostatný souhlas s novinkami.
 - Soukromá správa hráčů a audit souhlasů; veřejný žebříček neukazuje e-maily ani odpovědi.
 - Kontaktní formulář přes Netlify Forms se spamovou pastí a stavem odesílání.
-- Redakční kontrola všech 500 nových položek: 126 nových a 9 původních je schváleno pro nové osobní sady, 374 čeká na přepracování. Celkem 509 identit i starý kalendář 100 sad zůstávají pro historii. Aktivních 135 výroků stačí nejvýše na 27 úplných osobních sad, podle dřívější historie méně. Po vyčerpání se obsah neopakuje.
+- Redakční kontrola všech 500 nových položek: 126 nových a 9 původních je schváleno pro nové osobní sady, 374 čeká na přepracování. Celkem 509 identit i starý kalendář 100 sad zůstávají pro historii. Aktivních 135 výroků stačí nejvýše na 45 úplných osobních sad, podle dřívější historie méně. Po vyčerpání se obsah neopakuje.
 - Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
 - Náhled sdíleného odkazu obsahuje Šeptíka z brand balíčku. Veřejný obrázek `assets/social/septik-share-v1.png` (1080 × 1080 px) je uvedený přímo v HTML přes Open Graph a Twitter metadata; nevyžaduje přihlášení ani spuštění skriptů.
 
@@ -66,10 +66,18 @@ Provozovatel Lukáš Citnar a kontakt infoseptanda@gmail.com jsou uvedení v inf
 
 ## Osobní sady a zachování postupu
 
-Od 19. 10. 2026 se nové dny vybírají z redakčně schválených ID podle identity hráče, data a historie. Přidělená pětice se uloží a nemění při návratu, aktualizaci ani na jiném zařízení. Různí hráči mohou někdy potkat stejný výrok. Stejnému hráči se znovu nepřidělí ani neotevřená položka z jeho dřívější sady. Po vyčerpání zásoby se cyklus neopakuje.
+Od 19. 10. 2026 se nové dny vybírají z redakčně schválených ID podle identity hráče, data a historie. Přidělená sada se uloží a nemění při návratu, aktualizaci ani na jiném zařízení. Různí hráči mohou někdy potkat stejný výrok. Stejnému hráči se znovu nepřidělí ani neotevřená položka z jeho dřívější sady. Po vyčerpání zásoby se cyklus neopakuje.
 
 Účet má identitu odvozenou z ověřeného Supabase uživatele. GET player nejprve rezervuje dnešní sadu přes existující databázovou revizi; souběžná zařízení dostanou stejný uložený výběr. Klient načte historii účtu před sloučením svých místních tipů. U již rozehraných dnů zůstává i výrok dočasně vyřazený z nového výběru. Aktualizace nemaže starší body ani nákupy.
 
 Bez účtu existuje trvalá náhodná identita pouze v konkrétním prohlížeči. Po vymazání jeho dat nebo na jiném zařízení nelze hosta poznat. Místní hru lze do účtu přidat výslovným importem. Starý záložní režim bez Supabase ověřuje osobní výsledky, ale nesynchronizuje soukromé rozehrané tipy mezi zařízeními.
 
 Shodné sady se slučují včetně pokusů, nejvyšší odemčené stopy a dokončení. Pokud dvě zařízení skutečně rozehrála odlišné pětice před připojením, serverem rozpracovaná sada zůstane hlavní; před nahrazením klient uloží všechny konfliktní snímky do soukromé místní zálohy dostupné v Můj účet. Místní zálohu je vhodné stáhnout před mazáním dat prohlížeče.
+
+## Tři hádanky a přeskočení (5.2.1)
+
+Nově přidělené osobní sady obsahují tři hádanky. Dříve uložené pětice se nezkracují; zachovají se jejich ID, pořadí, výsledky i otevřené tipy. Proto může mít hráč v den aktualizace ještě pět položek. Dosavadní archivní kalendář je beze změny.
+
+Přeskočení nahradilo bezplatné odhalení aktuálního výroku. Po výslovném herním potvrzení strhne 200 bodů, uzavře hádanku bez odměny a přejde na další slot stejné sady. Nevytváří náhradní čtvrtou hádanku. Poslední přeskok dokončí sadu. Je potřeba mít alespoň 200 bodů; původní nákupy stop se nevracejí. Řešení zůstane v přehledu.
+
+Účet provádí přeskok až po uložení rozpracovaného postupu a potvrzení serverem. CAS a serverový výpočet chrání proti dvojímu stržení a souběžnému utracení téhož zůstatku. Záznam je status `revealed` s příznakem `paidSkip:true`; cena se započte do výdajů i denního pořadí. Staré odhalené výsledky se nikdy zpětně nezpoplatňují. Bez účtu se přeskok ukládá v prohlížeči.
