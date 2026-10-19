@@ -76,6 +76,20 @@ try {
   eq((await call(blank(),a.cookie)).status,401,'logged out session revoked');
   ok((await call(null,secondDevice.cookie)).data.account,'other device remains signed in');
   time=new Date('2026-10-16T12:00:00Z');eq((await call(null,b.cookie)).data.entries,[],'new day board resets');
+  time=new Date('2026-10-20T12:00:00Z');
+  const personalState=daily.createState(null);daily.bindPlayer(personalState,b.data.account.id);
+  const personalDay=daily.ensureDay(personalState,'2026-10-20');
+  const personalBody={action:'sync',date:'2026-10-20',assignmentVersion:1,assignmentSeed:personalState.assignmentSeed,rounds:personalDay.ids.map(id=>({id,status:'playing',hint:false}))};
+  win(personalBody,0);eq((await call(personalBody,b.cookie)).data.me.points,200,'legacy preview accepts a verified personal result');
+  eq((await call(personalBody,b.cookie)).data.me.points,200,'personal result is idempotent');
+  const alternate=structuredClone(personalBody);[alternate.rounds[1],alternate.rounds[2]]=[alternate.rounds[2],alternate.rounds[1]];
+  eq((await call(alternate,b.cookie)).status,409,'legacy stored personal IDs and order stay frozen');
+  const unreviewed=structuredClone(personalBody);unreviewed.rounds[0].id='quote-seneca-rest';
+  eq((await call(unreviewed,b.cookie)).status,409,'legacy stored assignment cannot be replaced by held content');
+  const badSeed={...personalBody,assignmentSeed:daily.accountSeed(a.data.account.id)};
+  eq((await call(badSeed,b.cookie)).status,400,'legacy account identity is server-owned');
+  time=new Date('2026-10-21T12:00:00Z');
+  eq((await call({...personalBody,date:'2026-10-21'},b.cookie)).status,409,'legacy account cannot reuse yesterday\'s personal set');
   time=new Date('2026-12-01T12:00:00Z');eq((await call(null,b.cookie)).data.account,null,'session expiration');
   console.log(JSON.stringify({checks,result:'all passed',accounts:'required email, private email, legacy accounts, profile password check, persistent session, logout',ranking:'server scoring, ties, five rounds, concurrency, rollover'},null,2));
 }finally{await rm(folder,{recursive:true,force:true});}

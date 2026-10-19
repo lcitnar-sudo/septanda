@@ -1937,3 +1937,13 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .daily-waiting>p:not(.eyebrow) {line-height:1.8;max-width:600px}
 .daily-waiting .secondary-button {margin-top:24px}
 .route-line button.skipped,.collection-marks button.skipped {background:var(--line);opacity:.65}
+
+/* Actionable guidance replaces numeric similarity meters. */
+#result-panel>h2 { margin: 8px 0 12px; font: 700 32px/1.1 var(--display); }
+#result-panel>p { max-width: 62ch; }
+.guidance-words { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0; }
+.guidance-words span { background:var(--paper); border:1px solid var(--accent); padding:5px 10px; color:var(--ink); font-weight:600; }
+.guidance-caution { font-size:12px; color:var(--muted); }
+.hint-content p { margin:0 0 16px; }
+.hint-content p:last-child { margin-bottom:0; }
+#result-panel .underlined { white-space:normal; text-align:left; }

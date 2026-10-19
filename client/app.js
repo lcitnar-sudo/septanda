@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const allPuzzles = globalThis.SEPTANDA_PUZZLES, engine = globalThis.SeptandaEngine, Daily = globalThis.SeptandaDaily;
+  const allPuzzles = globalThis.SEPTANDA_PUZZLES, engine = globalThis.SeptandaEngine, Daily = globalThis.SeptandaDaily, Guidance=globalThis.SeptandaGuidance;
   const GUEST_KEY = 'septanda.v6.daily';
   let KEY = GUEST_KEY;
   const LEGACY_KEY = 'septanda.v5.progress', INITIAL = 100, COST = {clue: 50};
@@ -13,7 +13,7 @@
   let day, activeDate, puzzles = [];
   function activateDay() {
     activeDate = Daily.dayKey();
-    day = Daily.ensureDay(state, activeDate);
+    day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1]});
     puzzles = day.ids.map(id => allPuzzles.find(p => p.id === id));
   }
   function read() {
@@ -74,7 +74,7 @@
     if (!records.length) return '';
     return `<section class="archive-group"><h3>${escape(title)}</h3>${records.map(id => {
       const p = allPuzzles.find(p => p.id === id), r = progress[id];
-      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.total} %</strong></li>`).join('')}</ol>${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
+      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?'Rozpoznané znění':'Předchozí tip'}</strong></li>`).join('')}</ol>${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
     }).join('')}</section>`;
   }
   function renderStats(t) {
@@ -87,8 +87,8 @@
     const last = r.status === 'won' ? r.attempts.findLast(a => a.score.accepted) : r.attempts.at(-1), panel = $('result-panel');
     panel.hidden = !last;
     if (!last) { panel.innerHTML = ''; return; }
-    const s = last.score, best = Math.max(...r.attempts.map(a => a.score.total));
-    panel.innerHTML = `<div class="result-top"><div class="result-number">${s.total}<small> %</small></div><div><h2 id="result-title">${engine.label(s.total)}</h2><p>${r.status === 'won' ? 'UZNANÝ TIP' : 'POSLEDNÍ TIP'} &nbsp; / &nbsp; NEJLEPŠÍ ${best} %</p></div></div><div class="score-bars"><div><div class="score-label">Slovní shoda <span>váha 60 %</span><strong>${s.words} %</strong></div><div class="score-track" role="meter" aria-label="Slovní shoda" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${s.words}"><span style="width:${s.words}%"></span></div></div><div><div class="score-label">Významový odhad <span>váha 40 %</span><strong>${s.meaning} %</strong></div><div class="score-track meaning" role="meter" aria-label="Místní významový odhad" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${s.meaning}"><span style="width:${s.meaning}%"></span></div></div></div>`;
+    const f=Guidance.feedback(last.text,currentPuzzle(),last.score.accepted);
+    panel.innerHTML=`<p class="eyebrow">${f.accepted?'UZNANÝ TIP':'STOPA Z TVÉHO TIPU'}</p><h2 id="result-title">${escape(f.title)}</h2><p>${escape(f.detail)}</p>${f.matched.length?`<div class="guidance-words" aria-label="Shodná podstatná slova">${f.matched.map(word=>`<span>${escape(word)}</span>`).join('')}</div>`:''}${!f.accepted?`<p class="guidance-caution">${escape(f.caution)}</p><button class="text-button underlined" data-guide>Chci konkrétnější stopu</button>`:''}`;
   }
   function renderHistory(r) {
     $('attempt-count').textContent = `${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')}`;
@@ -100,7 +100,8 @@
     const fragment = document.createDocumentFragment();
     r.attempts.slice().reverse().forEach((a, i) => {
       const row = document.createElement('article'); row.className = 'attempt';
-      row.innerHTML = `<span class="attempt-index">${pad(r.attempts.length - i)}</span><div><p class="attempt-text">${escape(a.text)}</p><p class="attempt-detail">Slovní shoda ${a.score.words} % &nbsp;·&nbsp; Významový odhad ${a.score.meaning} %</p></div><div class="attempt-score">${a.score.total} %<small>${engine.label(a.score.total)}</small></div>`;
+      const f=Guidance.feedback(a.text,currentPuzzle(),a.score.accepted);
+      row.innerHTML = `<span class="attempt-index">${pad(r.attempts.length - i)}</span><div><p class="attempt-text">${escape(a.text)}</p><p class="attempt-detail">${f.accepted?'Rozpoznané původní znění':f.matched.length?'Shodná slova: '+escape(f.matched.join(', ')):'Zatím bez shodného podstatného slova.'}</p></div><div class="attempt-score"><small>${f.accepted?'Rozluštěno':'Pokus'}</small></div>`;
       fragment.append(row);
     });
     $('history').replaceChildren(fragment);
@@ -128,7 +129,7 @@
     $('hint-section').hidden = !p; $('goal-note').hidden = !p;
     if (!p) {
       $('waiting-title').textContent = day.ids.length ? 'Dnes už nic neopakujeme.' : 'Další zprávy připravujeme.';
-      $('waiting-copy').textContent = day.ids.length ? 'Výroky dnešní sady už máš v historii. Znovu ti je jako nové nenabídneme. Tvoje starší hry i body zůstávají uložené.' : 'Aktuálně připravené denní sady už skončily. Jakmile přidáme další nové výroky, objeví se tady. K první sadě se automaticky nevracíme.';
+      $('waiting-copy').textContent = day.ids.length ? 'Výroky dnešní sady už máš v historii. Znovu ti je jako nové nenabídneme. Tvoje starší hry i body zůstávají uložené.' : 'Všechny úplné sady z aktuálně schválené zásoby už máš přidělené. Připravujeme další nové výroky. Tvoje historie i body zůstávají uložené a staré hádanky se znovu nevrací.';
       for (const id of ['guess-form','result-panel','reveal-panel','history-section','give-up']) $(id).hidden = true;
       $('solved-count').textContent = day.ids.length ? 'Už znáš' : '—';
       $('collection-marks').replaceChildren();
@@ -145,13 +146,15 @@
     if ($('guess').value !== r.draft) $('guess').value = r.draft;
     for (const type of Object.keys(COST)) {
       const owned = r.hints.length > 0, button = $('hint-' + type);
-      button.disabled = owned || r.status !== 'playing' || t.points < COST[type];
+      const level=Math.min(3,Math.max(1,r.hintLevel||1));
+      button.disabled = r.status !== 'playing' || (owned ? level>=3 : t.points < COST[type]);
       button.classList.toggle('purchased', owned);
-      button.querySelector('.price').innerHTML = owned ? '<small>Koupeno</small>' : `${COST[type]} <small>bodů</small>`;
+      button.querySelector('strong').textContent=owned && level<3?'Další stopa':'Tři postupné stopy';
+      button.querySelector('.price').innerHTML = owned ? '<small>Odemčeno</small>' : `${COST[type]} <small>bodů</small>`;
       $('hint-' + type + '-content').hidden = !owned;
-      $('hint-' + type + '-content').textContent = p.hint;
+      $('hint-' + type + '-content').innerHTML = owned?Guidance.clues(p).slice(0,level).map((text,i)=>`<p><strong>Stopa ${i+1}</strong><br>${escape(text)}</p>`).join(''):'';
     }
-    $('hint-status').textContent = r.status !== 'playing' ? 'Celý řetězec je teď přístupný pod výrokem.' : r.hints.length ? 'Nápověda je už odemčená.' : t.points < COST.clue ? 'Na nápovědu teď body nestačí.' : 'Jedna nápověda ke každé hádance.';
+    $('hint-status').textContent = r.status !== 'playing' ? 'Celý řetězec je teď přístupný pod výrokem.' : r.hints.length ? `Stopa ${r.hintLevel||1} ze 3. Další už stojí 0 bodů.` : t.points < COST.clue ? 'Na stopy teď body nestačí.' : 'Za 50 bodů odemkneš všechny tři. Otevíráš je postupně.';
     $('give-up').hidden = r.status !== 'playing';
     const today = Daily.dayTotals(day);
     $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z 5`;
@@ -204,24 +207,28 @@
     r.attempts.push({id: globalThis.crypto?.randomUUID?.() || Date.now().toString(36) + '-' + Math.random().toString(36).slice(2), text, time: Date.now(), score}); r.draft = '';
     if (score.accepted) r.status = 'won';
     save(); $('form-message').textContent = ''; render();
-    announce(`${score.total} procent. ${engine.label(score.total)}. Slovní shoda ${score.words} procent, významový odhad ${score.meaning} procent.${score.accepted ? ' Připsáno 200 bodů.' : ''}`);
+    const feedback=Guidance.feedback(text,p,score.accepted);
+    announce(`${feedback.title} ${feedback.detail}${feedback.matched.length?' Shodná slova: '+feedback.matched.join(', ')+'.':''}${score.accepted ? ' Připsáno 200 bodů.' : ''}`);
     if (score.accepted) { $('reveal-title').focus({preventScroll: true}); $('reveal-panel').scrollIntoView({block: 'start'}); }
     else { $('result-panel').scrollIntoView({block: 'nearest'}); $('guess').focus({preventScroll: true}); }
   }
   function buy(type) {
     const draft = $('guess').value; if (!syncCurrent(activeDate, day.selected)) return;
     const r = roundFor(); if (!r) return; r.draft = draft;
-    if (!Object.hasOwn(COST, type) || r.status !== 'playing' || r.hints.length > 0) return;
+    if (!Object.hasOwn(COST, type) || r.status !== 'playing') return;
+    if(r.hints.includes(type)) {
+      r.hintLevel=Math.min(3,(r.hintLevel||1)+1);save();render();
+      announce(`Stopa ${r.hintLevel}: ${Guidance.clues(currentPuzzle())[r.hintLevel-1]}`);return;
+    }
     if (totals().points < COST[type]) { $('hint-status').textContent = 'Na tuto nápovědu teď nemáš dost bodů.'; return; }
-    r.hints.push(type); save(); render();
+    r.hints.push(type);r.hintLevel=1; save(); render();
     announce(`Nápověda zakoupena za ${COST[type]} bodů. ${currentPuzzle().hint}`);
   }
   async function share() {
     const r = roundFor(), index = puzzles.findIndex(p => p.id === day.selected) + 1;
     if (!r) return;
-    const best = Math.max(0, ...r.attempts.map(a => a.score.total));
     const hintCount = Number(r.hints.length > 0);
-    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Výrok ${index}/5\n${r.status === 'won' ? 'Rozluštěno' : 'Odhaleno bez odměny'} · ${best} % · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
+    const text = `Šeptanda · ${Daily.displayDate(activeDate)} · Osobní výrok ${index}/5\n${r.status === 'won' ? 'Rozluštěno' : 'Odhaleno bez odměny'} · ${r.attempts.length} ${plural(r.attempts.length, 'pokus', 'pokusy', 'pokusů')} · ${hintCount} ${plural(hintCount, 'nápověda', 'nápovědy', 'nápověd')}\n${location.origin}${location.pathname}`;
     try { await navigator.clipboard.writeText(text); $('share-message').textContent = 'Výsledek je ve schránce. Řešení zůstalo tajemstvím.'; }
     catch (_) { $('share-message').textContent = 'Automatické kopírování není dostupné. Výsledek si můžeš vybrat a zkopírovat:'; const box = document.createElement('textarea'); box.value = text; box.readOnly = true; box.setAttribute('aria-label', 'Výsledek ke zkopírování'); $('share-message').append(box); box.select(); }
   }
@@ -232,6 +239,7 @@
     else if (button.hasAttribute('data-close')) button.closest('dialog').close();
     else if (button.dataset.select) select(button.dataset.select);
     else if (button.dataset.hint) buy(button.dataset.hint);
+    else if (button.hasAttribute('data-guide')) { $('hint-section').scrollIntoView({block:'center'});$('hint-clue').focus(); }
     else if (button.hasAttribute('data-next')) {
       if (!syncCurrent(activeDate, day.selected)) return;
       const next = Daily.nextId(day);
@@ -280,5 +288,7 @@
     if (KEY === GUEST_KEY) return exportState();
     try { return Daily.sanitizeState(JSON.parse(localStorage.getItem(GUEST_KEY))); } catch (_) { return null; }
   }
-  globalThis.SeptandaGame = Object.freeze({storageKey: () => KEY, setAccount, exportState, replaceState, guestState, hasAccount, scene: () => ({status:roundFor()?.status || 'waiting', score:roundFor()?.attempts.at(-1)?.score.total ?? null, attempts:roundFor()?.attempts.length || 0, id:currentPuzzle()?.id || null})});
+  function backupPending(value){try{const old=pendingBackup();const snapshots=old?.format==='septanda-pending-backup'?old.snapshots:old?[old]:[];if(!snapshots.some(s=>JSON.stringify(s)===JSON.stringify(value)))snapshots.push(value);localStorage.setItem(KEY+'.pending-backup',JSON.stringify({format:'septanda-pending-backup',snapshots}));}catch(_){throw new Error('Zálohu místních tipů nelze uložit. Před synchronizací si stáhni svůj postup.');}}
+  function pendingBackup(){try{return JSON.parse(localStorage.getItem(KEY+'.pending-backup')||'null');}catch(_){return null;}}
+  globalThis.SeptandaGame = Object.freeze({storageKey: () => KEY, setAccount, exportState, replaceState, guestState, hasAccount,backupPending,pendingBackup, scene: () => ({status:roundFor()?.status || 'waiting', score:roundFor()?.attempts.at(-1)?.score.total ?? null, attempts:roundFor()?.attempts.length || 0, id:currentPuzzle()?.id || null})});
 })();

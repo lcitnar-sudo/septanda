@@ -86,9 +86,17 @@ function nickname(value) {
   if (!/^[\p{L}\p{N}][\p{L}\p{N} ._-]{1,23}$/u.test(name)) fail(400,'Použij 2 až 24 znaků: písmena, čísla, mezery, tečku, pomlčku nebo podtržítko.');
   return name;
 }
-function candidate(body, date) {
+function candidate(body, date, account, previous, known) {
   if (body.date !== date) fail(409,'Zkontroluj datum zařízení. Žebříček už používá dnešní české datum.');
-  const ids=daily.plan(date);
+  let ids=daily.plan(date);
+  if(body.assignmentVersion===1 && date>=daily.personalStart) {
+    if(body.assignmentSeed!==daily.accountSeed(account.id))fail(400,'Neplatná identita osobní sady.');
+    const offered=body.rounds?.map(r=>r?.id);
+    if(!Array.isArray(offered) || offered.length!==5 || new Set(offered).size!==5 || !offered.every(id=>byId.has(id) && (previous || daily.approvedIDs.includes(id))))fail(400,'Neplatná osobní sada.');
+    if(previous && previous.rounds.map(r=>r.id).join()!==offered.join())fail(409,'Dnešní sada už je uložená. Použij původní prohlížeč.');
+    if(!previous && offered.some(id=>known.has(id)))fail(409,'Tento výrok už máš v dřívější historii.');
+    ids=offered;
+  }
   if (!Array.isArray(body.rounds) || body.rounds.length !== 5) fail(400,'Dnešní sada musí mít pět výroků.');
   return body.rounds.map((r,i) => {
     if (!r || r.id !== ids[i] || !['playing','won','revealed'].includes(r.status) || typeof r.hint !== 'boolean') fail(400,'Neplatný výsledek dnešní sady.');
@@ -151,10 +159,17 @@ export function createHandler(store,{now=()=>new Date(),local=false}={}) {
           account=await updateEmail(store,account,body,time);
         } else if(body.action==='sync') {
           if(!account)fail(401,'Pro zapsání bodů se přihlas.');
-          const incoming=candidate(body,date),key=`records/${date}/${account.id}`;
+          const key=`records/${date}/${account.id}`;
+          const {blobs}=await store.list({prefix:'records/'});
+          const known=new Set();
+          for(const item of blobs)if(item.key.endsWith('/'+account.id) && item.key<key) {
+            const record=await store.get(item.key,{type:'json'});
+            for(const round of record?.rounds||[])known.add(round.id);
+          }
           let saved=false;
           for(let retry=0;retry<6;retry++) {
             const existing=await store.getWithMetadata(key,{type:'json'}),previous=existing?.data;
+            const incoming=candidate(body,date,account,previous,known);
             const record={id:account.id,name:account.name,date,rounds:merge(previous,incoming)};
             if(previous && JSON.stringify(record)===JSON.stringify(previous)){saved=true;break;}
             const result=await store.setJSON(key,record,existing?{onlyIfMatch:existing.etag}:{onlyIfNew:true});

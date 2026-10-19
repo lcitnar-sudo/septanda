@@ -1,4 +1,16 @@
-# Šeptanda: 100 denních sad / 500 nových hádanek
+# Redakční výběr od 19. 10. 2026 / verze 5.2.0
+
+Původních 500 položek prošlo úplnou kontrolou zadání, rozpoznatelnosti cíle a nápověd. Pro nové osobní hry je schváleno **126 nových + 9 původních = 135 výroků**. **374 položek je pozastaveno**: převážně méně známé archaické obraty, libovolné krátké úryvky a vlastní překlady, u nichž nelze férově očekávat přesné rozpoznání z metafory. Dva hráči nahlášené příklady (`proverb-archive-3beea40a787e`, `quote-seneca-rest`) se do nových her nezařazují; jejich text byl opraven i pro staré rozehrané sady.
+
+`editorial-review.json` je závazný seznam schválených ID a rozhodnutí ke všem 509 archivovaným položkám. Obsahuje kontrolní otisk odpovědi, variant, řetězce a stop. Změna bez nové redakční kontroly zastaví sestavení. Nové osobní dny čerpají pouze z `approvedIds`; nikdy ze všech archivovaných položek. Staré uložené sady a identifikátory zůstávají kvůli výsledkům hráčů.
+
+U schválených položek je přepracováno poslední zadání, doplněna běžná ustálená znění a dvě konkrétní redakční stopy. Třetí stopa ukáže začátek jedné přijímané podoby, nikoli celé řešení. Procenta v hráčské nápovědě byla nahrazena skutečně shodnými podstatnými slovy. Shoda slov není tvrzením o správném významu.
+
+Aktivní zásoba poskytne nejvýše **27 úplných osobních sad**, podle předchozí historie méně. Po vyčerpání se čeká na nové schválené výroky. Pro prodloužení je třeba obsah ručně dopracovat, ověřit rozpoznatelnost v pilotu a teprve poté schválit. Číslo 500 označuje archiv, nikoli aktuální počet nově nabízených hádanek.
+
+## Původní příprava archivu 100 sad / 500 položek
+
+Následující dokumentace a CSV zachycují původní přípravu. Pevný kalendář zůstává kompatibilním archivem; od 5.2.0 nerozhoduje o nových osobních sadách. Staré reporty nejsou aktuálním hodnocením férovosti.
 
 Připraveno pro současnou hru. Katalog je oddělený od původních devíti hádanek, aby jejich identifikátory a uložená historie mohly dál fungovat.
 

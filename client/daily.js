@@ -44,10 +44,44 @@
     if (!Array.isArray(ids) || ids.length !== 5 || ids.some(id => !byId.has(id))) throw new Error('Neúplná denní sada.');
     return ids.slice();
   }
+  const personalStart = root.SEPTANDA_SCHEDULE?.personal?.start || null;
+  const approvedIDs = Object.freeze(root.SEPTANDA_SCHEDULE?.personal?.approvedIds?.slice() || []);
+  const accountSeed = id => 'account:' + String(id).toLowerCase().replace(/-/g,'');
+  const validSeed = seed => typeof seed==='string' && /^(?:account:[a-f0-9]{32}|guest:[a-zA-Z0-9_-]{12,96})$/.test(seed);
+  function bindPlayer(state,id=null) {
+    state.assignmentVersion=1;
+    if(id)state.assignmentSeed=accountSeed(id);
+    else if(!validSeed(state.assignmentSeed) || !state.assignmentSeed.startsWith('guest:'))
+      state.assignmentSeed='guest:'+(root.crypto?.randomUUID?.() || Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'-'+Math.random().toString(36).slice(2));
+    return state;
+  }
+  function personalPlan(state,key,seed=state.assignmentSeed) {
+    if(!validDay(key))throw new Error('Neplatný den.');
+    if(!personalStart || key<personalStart || !validSeed(seed))return plan(key);
+    const excluded=seenBefore(state,key);
+    for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
+    for(const id of state.knownIds||[])excluded.add(id);
+    const candidates=approvedIDs.filter(id=>byId.has(id) && !excluded.has(id));
+    if(candidates.length<5)return [];
+    let randomState=2166136261;
+    for(const char of 'septanda-personal-1:'+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
+    const random=()=>{randomState=(randomState+0x6D2B79F5)|0;let n=Math.imul(randomState^randomState>>>15,1|randomState);n^=n+Math.imul(n^n>>>7,61|n);return((n^n>>>14)>>>0)/4294967296;};
+    for(let i=candidates.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
+    const chosen=[],usedWorks=new Set();
+    const take=category=>{
+      const id=candidates.find(id=>!chosen.includes(id) && (!category || byId.get(id).category===category) && (!['Veřejně volné verše','Úryvek z knihy'].includes(byId.get(id).category) || !usedWorks.has(byId.get(id).origin)));
+      if(id){chosen.push(id);usedWorks.add(byId.get(id).origin);}
+    };
+    for(const category of ['Lidové přísloví','Historický výrok','Veřejně volné verše','Úryvek z knihy','Lidové přísloví'])take(category);
+    for(const id of candidates)if(chosen.length<5 && !chosen.includes(id))chosen.push(id);
+    for(let i=chosen.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[chosen[i],chosen[j]]=[chosen[j],chosen[i]];}
+    return chosen;
+  }
   const blankRound = () => ({attempts: [], hints: [], status: 'playing', draft: ''});
   const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || r.draft || r.status === 'won' || r.status === 'revealed');
   function seenBefore(state, key) {
     const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
+    for(const id of state.knownIds||[])if(byId.has(id))seen.add(id);
     for (const [date, day] of Object.entries(state.days || {})) if (date < key) {
       for (const id of day.seen || []) seen.add(id);
       for (const [id, r] of Object.entries(day.progress || {})) if (hasWork(r)) seen.add(id);
@@ -80,6 +114,7 @@
     // Already completed history survives later scoring corrections. The server still validates new wins.
     if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
+    if(round.hints.includes('clue'))round.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
     return round;
   }
@@ -95,6 +130,8 @@
   function sanitizeState(raw) {
     const state = createState(null);
     if (!raw || raw.version !== 6) return null;
+    if(raw.assignmentVersion===1 && validSeed(raw.assignmentSeed)){state.assignmentVersion=1;state.assignmentSeed=raw.assignmentSeed;}
+    if(Array.isArray(raw.knownIds))state.knownIds=[...new Set(raw.knownIds.filter(id=>byId.has(id)))];
     state.legacy.progress = cleanProgress(raw.legacy?.progress, pool.map(p => p.id));
     if (raw.legacy?.imported === true) state.legacy.imported = true;
     if (raw.days && typeof raw.days === 'object') {
@@ -108,8 +145,9 @@
     }
     return state;
   }
-  function ensureDay(state, key) {
-    const planned = plan(key);
+  function ensureDay(state, key, options={}) {
+    if(options.personal)bindPlayer(state,options.playerId||null);
+    const planned = state.assignmentVersion===1 ? personalPlan(state,key) : plan(key);
     if (!Object.hasOwn(state.days, key) || (!state.days[key].ids.length && planned.length)) {
       const ids = planned;
       state.days[key] = {ids, selected: ids[0] || null, progress: {}, seen: [], skipped: []};
@@ -119,6 +157,40 @@
   function roundFor(day, id = day.selected) {
     if (!day.ids.includes(id)) return null;
     return day.progress[id] || (day.progress[id] = blankRound());
+  }
+  function mergeForSync(remote,cached) {
+    const result=sanitizeState(remote) || createState(null),local=sanitizeState(cached);
+    if(!local)return {state:result,backupRequired:false};
+    let backupRequired=false;
+    const work=day=>Object.values(day?.progress||{}).some(hasWork);
+    const mergeRound=(a,b)=>{
+      if(!a)return b;if(!b)return a;
+      const attempts=[],seen=new Set();
+      for(const item of [...a.attempts,...b.attempts]){const id=item.id||item.text+'\0'+item.time;if(!seen.has(id)){seen.add(id);attempts.push(item);}}
+      const r={...a,attempts,hints:[...new Set([...a.hints,...b.hints])],draft:b.draft||a.draft,
+        status:['won','revealed'].includes(a.status)?a.status:b.status};
+      if(r.hints.includes('clue'))r.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
+      return r;
+    };
+    result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
+    for(const [id,r] of Object.entries(local.legacy.progress))result.legacy.progress[id]=mergeRound(result.legacy.progress[id],r);
+    for(const [key,source] of Object.entries(local.days).sort()) {
+      const target=result.days[key];
+      if(!target){result.days[key]=source;continue;}
+      if(target.ids.join()!==source.ids.join()) {
+        const earlier=new Set(Object.entries(result.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
+        const mayKeep=work(source) && !work(target) && !target.seen.length && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
+        if(mayKeep){result.days[key]=source;continue;}
+        if(work(source))backupRequired=true;
+        result.knownIds=[...new Set([...result.knownIds,...source.seen.filter(id=>!target.ids.includes(id))])];
+        continue;
+      }
+      target.seen=[...new Set([...target.seen,...source.seen])];
+      for(const [id,r] of Object.entries(source.progress))target.progress[id]=mergeRound(target.progress[id],r);
+      target.selected=source.selected||target.selected;
+    }
+    for(const key of Object.keys(result.days).sort())reconcileDay(result,key);
+    return {state:result,backupRequired};
   }
   function nextId(day) { return day.ids.find(id => !day.skipped?.includes(id) && (!day.progress[id] || day.progress[id].status === 'playing')) || null; }
   function canSelect(day, id) {
@@ -144,5 +216,5 @@
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);

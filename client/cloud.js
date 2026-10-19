@@ -66,6 +66,7 @@
     $('leaderboard-join').textContent = account ? 'Můj účet' : 'Uložit postup';
     $('header-profile').setAttribute('aria-label', account ? 'Můj účet: ' + account.name : 'Můj účet');
     $('profile-admin').hidden = !profile?.admin;
+    $('profile-pending-export').hidden = !Game.pendingBackup?.();
     if (!account) return;
     $('profile-title').textContent = 'Můj účet.'; $('profile-name').textContent = account.name;
     $('profile-display-name').value = account.name; $('profile-email').value = account.email || '';
@@ -138,10 +139,18 @@
       if (epoch !== loadEpoch || session?.user.id !== nextSession.user.id) return;
       applying = true; Game.setAccount(result.account.id, {importGuest:false}); applying = false;
       const cached = Game.exportState();
-      apply(result, !hasProgress(cached)); ready = true;
+      let pendingBackup=false;
+      if(Daily.mergeForSync && result.state) {
+        const merged=Daily.mergeForSync(result.state,cached);
+        pendingBackup=merged.backupRequired;
+        if(pendingBackup)Game.backupPending?.(cached);
+        apply({...result,state:merged.state},true);
+      } else apply(result, !hasProgress(cached));
+      ready = true;
       $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
+      if(pendingBackup)notice('Na jiném zařízení je už uložená odlišná sada. Místní tipy máš zachované v záloze ke stažení v Můj účet.');
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
       refreshBoard();
     } catch (error) {
@@ -223,6 +232,11 @@
       finally { $('profile-consent-save').disabled = false; }
     });
     $('profile-sync').addEventListener('click', () => sync(true));
+    $('profile-pending-export').addEventListener('click',()=>{
+      const state=Game.pendingBackup?.();if(!state)return;
+      const url=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));
+      const link=document.createElement('a');link.href=url;link.download='septanda-zaloha-mistnich-tipu.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    });
     $('cloud-import-button').addEventListener('click', async () => {
       const guest = Game.guestState(); if (!hasProgress(guest)) return;
       $('cloud-import-button').disabled = true; $('import-message').textContent = '';

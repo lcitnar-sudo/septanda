@@ -1,0 +1,3199 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-19",
+  "personalStart": "2026-10-19",
+  "policy": "Nová osobní sada používá jen výslovně schválené položky. Odložené identity a staré výsledky se nemažou. Žádná položka nedostane automatické schválení při dalším doplnění.",
+  "approvedIds": [
+    "caesar-victory",
+    "proverb-pit",
+    "poem-may",
+    "caesar-dice",
+    "proverb-work",
+    "poem-noon",
+    "descartes",
+    "proverb-measure",
+    "poem-bouquet",
+    "quote-dante-hope",
+    "quote-confucius-reciprocity",
+    "quote-shakespeare-hamlet",
+    "quote-shakespeare-rose",
+    "quote-comenius-return",
+    "quote-newton-giants",
+    "quote-lao-first-step",
+    "quote-lincoln-democracy",
+    "quote-nietzsche-stronger",
+    "quote-masaryk-discussion",
+    "quote-socrates-ignorance",
+    "quote-aristotle-political",
+    "quote-cicero-times",
+    "quote-cicero-history",
+    "quote-cicero-laws-arms",
+    "quote-horace-day",
+    "quote-horace-mouse",
+    "quote-virgil-love",
+    "quote-virgil-fortune",
+    "quote-terence-human",
+    "quote-juvenal-bread-games",
+    "quote-pascal-heart",
+    "quote-kant-heavens",
+    "quote-rousseau-chains",
+    "proverb-archive-e52461e58866",
+    "proverb-archive-187c5bbab978",
+    "proverb-archive-4a649ec7d600",
+    "proverb-archive-fbba1f988819",
+    "proverb-archive-229946c51616",
+    "proverb-archive-937fb00007f8",
+    "proverb-archive-c63b1d435474",
+    "proverb-archive-230d147aaaa2",
+    "proverb-archive-3a4ae7405313",
+    "proverb-archive-4f10ad2d056b",
+    "proverb-archive-77241f00dd6b",
+    "proverb-archive-438a9c4a3e4b",
+    "proverb-archive-4c70a0bb8055",
+    "proverb-archive-7e51697c5bca",
+    "proverb-archive-6ef9fa564c68",
+    "proverb-archive-94f5f2d515fe",
+    "proverb-archive-fd04ef60f422",
+    "proverb-archive-2bbc786a0e65",
+    "proverb-archive-43cc61082273",
+    "proverb-archive-a7f2df12d661",
+    "proverb-archive-1a393640bb8d",
+    "proverb-archive-89e295bc23e6",
+    "proverb-archive-bfc3a53dc624",
+    "proverb-archive-0e1821c8335a",
+    "proverb-archive-3c16b50a38ab",
+    "proverb-archive-b2431d986819",
+    "proverb-archive-a4613f8523a2",
+    "proverb-archive-57caea6481db",
+    "proverb-archive-fd3fa63ea449",
+    "proverb-archive-2632766a59cf",
+    "proverb-archive-33902c174d6f",
+    "proverb-archive-131270b20812",
+    "proverb-archive-b4899a351416",
+    "proverb-archive-e26a6b5ee661",
+    "proverb-archive-0c6af067ed8f",
+    "proverb-archive-75a85fff5dfa",
+    "proverb-archive-0c96ed19f961",
+    "proverb-archive-a846995b6ac6",
+    "proverb-archive-112b88a7b156",
+    "proverb-archive-00f9edc2f0b4",
+    "proverb-archive-f89c64464484",
+    "proverb-archive-4ea7ad163f72",
+    "proverb-archive-6be02ce36a46",
+    "proverb-archive-4cb96988adae",
+    "proverb-archive-44253061a2b1",
+    "proverb-archive-3d73c3384b2a",
+    "proverb-archive-259c3d12d81b",
+    "proverb-archive-755c78487885",
+    "proverb-archive-8a156ea0364c",
+    "proverb-archive-e796fe73fddc",
+    "proverb-archive-8aa8b7714526",
+    "proverb-archive-38bba390184c",
+    "proverb-archive-b77c3850ff07",
+    "proverb-archive-251b2427d081",
+    "proverb-archive-4d773c928da3",
+    "proverb-archive-78de3eb3da2f",
+    "proverb-archive-ba369f12eeeb",
+    "proverb-archive-7d8ee8c614b4",
+    "proverb-archive-3eeb2426969a",
+    "proverb-archive-6bd0dfb2f801",
+    "proverb-archive-4d6c83449d98",
+    "proverb-archive-5477644e7df4",
+    "proverb-archive-b069815bc5ee",
+    "proverb-archive-7685199a54e1",
+    "proverb-archive-56aab4016dae",
+    "proverb-archive-9b395932cf1e",
+    "proverb-archive-272b1cddd84a",
+    "proverb-archive-bad2ba04678d",
+    "proverb-archive-7218e68c79c4",
+    "proverb-archive-5670b07a8eb5",
+    "proverb-archive-d14ce561026b",
+    "proverb-archive-549ea55869df",
+    "proverb-archive-f7ea58eab08e",
+    "proverb-archive-6b14049dfd5d",
+    "proverb-archive-59c744d1d677",
+    "proverb-archive-964bcb70ceaa",
+    "proverb-archive-7d5d0e461d49",
+    "proverb-archive-74ad1f8bce9a",
+    "proverb-archive-8f58c15b0f38",
+    "proverb-archive-634be44ad358",
+    "proverb-archive-c487bd88d414",
+    "poem-erben-vodnik-01",
+    "poem-erben-svatebni-kosile-01",
+    "poem-erben-stedry-den-01",
+    "poem-erben-holoubek-01",
+    "poem-erben-vrba-02",
+    "poem-erben-poklad-01",
+    "poem-erben-zlaty-kolovrat-01",
+    "poem-neruda-21-01",
+    "poem-neruda-22-01",
+    "poem-wolker-postovni-schranka-01",
+    "poem-wolker-pokora-01",
+    "poem-wolker-okno-01",
+    "poem-halek-1-01",
+    "poem-halek-60-01",
+    "poem-halek-61-01",
+    "poem-celakovsky-toman-01",
+    "prose-bab-10",
+    "prose-das-01",
+    "prose-jir-06",
+    "prose-sve-01",
+    "prose-sve-03"
+  ],
+  "entries": {
+    "quote-boethius-love-law": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo může dát zákon milujícím? Láska je sama sobě vyšším zákonem.",
+      "contentSha256": "3bea09ed428a0b9de6d4900111653270762b88f81fdbbaa6a676aa1b11c9a2fe"
+    },
+    "quote-confucius-thinking": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Učení bez přemýšlení je marné; přemýšlení bez učení je nebezpečné.",
+      "contentSha256": "09032f58c0d17352c0bb906c2800a265c50c58af90333a5f791a539e0b7c44ae"
+    },
+    "quote-dante-hope": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Zanechte vší naděje, vy, kdo vstupujete.",
+      "contentSha256": "21bfc6ac7011cac8caab82916947997b13cf061261fe8a4df1dc8887d682570b"
+    },
+    "quote-confucius-courage": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Vidět, co je správné, a neudělat to znamená nemít odvahu.",
+      "contentSha256": "697cac52d9fdb34948cf2cac037eae85a6e9d17531bbf18614df843f83c2c3e2"
+    },
+    "quote-dante-knowledge": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nebyli jste stvořeni k životu zvířat, ale k následování ctnosti a poznání.",
+      "contentSha256": "0b21f4913c8029a361b27acb500f28e8e3c4b7f36624a1432bf543a6c211dee0"
+    },
+    "quote-confucius-teachers": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Jdu-li se dvěma dalšími, vždy mezi nimi najdu učitele.",
+      "contentSha256": "2a20578f9f98cc4fa42161209420a0fd00d44b56e96eac67f3d523ba726e76d3"
+    },
+    "quote-hus-truth": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Hledaj pravdy, slyš pravdu, uč se pravdě, miluj pravdu, prav pravdu, drž pravdu, braň pravdy až do smrti.",
+      "contentSha256": "9370e0b53bc0e474932f748b86ce523bbfd64705172d6bbaa6b4f403c11d49ed"
+    },
+    "quote-confucius-self-examination": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Když vidíš dobrého člověka, snaž se mu vyrovnat; když špatného, zkoumej sebe.",
+      "contentSha256": "80cf1f8a831f9834b467b0af1d65ac472622cb6fbf3df612c7115fceecb2455e"
+    },
+    "quote-petrarch-peace": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Mír nenacházím a do války se nemám.",
+      "contentSha256": "8effefb871c33613508744b21b88deddb676ea03ca97e08cdc82fb862be92412"
+    },
+    "quote-confucius-reciprocity": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co nechceš, aby druzí dělali tobě, nedělej ty jim.",
+      "contentSha256": "e2e6325a2ec74bebdbc68599c486c91c40b344d4796d95ba178adf3b5a013361"
+    },
+    "quote-more-property": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Dokud trvá soukromé vlastnictví, nemůže být majetek rozdělen spravedlivě.",
+      "contentSha256": "e114f142fd06f00fab37a0cae052c4dd2a6851a036c9f34d208be01e2e5d14f6"
+    },
+    "quote-confucius-mistake": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Chybovat a nenapravit to, teprve to je chyba.",
+      "contentSha256": "5e484b5638b7cc93b5307bad1c5c2ee35e8b65fab2a4643f7ae987330fe5dfc5"
+    },
+    "quote-shakespeare-hamlet": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Být, či nebýt, to je otázka.",
+      "contentSha256": "bbe13e44660d6d5bca8023c2370e3ef95de61128dfd1e9297642d6c3ccc60f68"
+    },
+    "quote-confucius-education": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Ve vzdělávání nemají být rozdíly mezi třídami.",
+      "contentSha256": "ce0ad080e323ae4979821f7e05b8685b32aa319884a025f5b5158a8c2d78f348"
+    },
+    "quote-shakespeare-rose": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co je po jméně? Růže by pod jiným jménem voněla stejně sladce.",
+      "contentSha256": "f046d92d0fd702cf3f68f90df8484c09f008bc8febad9567e7d7f80f3e6b6a8f"
+    },
+    "quote-lao-way": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Cesta, kterou lze vyslovit, není věčná cesta.",
+      "contentSha256": "40d10d83724f80a9c9172af999fe382ce193e8d44f72de680aa17985958070cc"
+    },
+    "quote-montaigne-knowing": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Co já vím?",
+      "contentSha256": "6691a2550fd3ff3030546e85d8c39c2649c56c78bf967141b75633a5edd86dae"
+    },
+    "quote-lao-wheel": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Třicet paprsků sdílí náboj, ale užitek kola dává jeho prázdný střed.",
+      "contentSha256": "5dafac99974468842a8707e4b82018523fda563456ceeb7c3b38948b7f0c3903"
+    },
+    "quote-cervantes-freedom": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Svoboda, Sancho, je jeden z nejvzácnějších darů, které nebesa dala lidem.",
+      "contentSha256": "c740b1b553381ea705697d9e57a6e85fe353a15a3187ec8ab341e4bf089b83a0"
+    },
+    "quote-lao-tiptoe": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo stojí na špičkách, nestojí pevně.",
+      "contentSha256": "86dbf0ff8c464e33cdd7e51a793d639ab2de73e69b8dd7e3d58116c74c720f8c"
+    },
+    "quote-comenius-return": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Vláda věcí tvých k tobě se zase navrátí, ó lide český!",
+      "contentSha256": "12082dab231eac875faa2a1176e1e6738551046dcb1651406c9f0f2c90db1c1e"
+    },
+    "quote-lao-self-victory": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo vítězí nad druhými, je silný; kdo vítězí nad sebou, je mocný.",
+      "contentSha256": "0b35f2d3723f6d6d7bdc8b1379d9655b90096980a6b8ff5970edf7602308956a"
+    },
+    "quote-galileo-mathematics": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kniha vesmíru je psána jazykem matematiky.",
+      "contentSha256": "ae38c19e4e864dd6fa38ab9c84c558bf37c7862f87f67f1a745bd8d5a8292688"
+    },
+    "quote-lao-enough": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo ví, že má dost, má vždy dost.",
+      "contentSha256": "0cb882c1696acf91bab28a77eefbe3180481019f3790b4035ea6093a4ab0ea25"
+    },
+    "quote-newton-giants": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Viděl-li jsem dále, bylo to proto, že jsem stál na ramenou obrů.",
+      "contentSha256": "ac20311f6332ec7f6014947c55119c28e05c9dcca3aae4541f6043fba458b537"
+    },
+    "quote-lao-silence": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo ví, nemluví; kdo mluví, neví.",
+      "contentSha256": "19eeb3028ef0da4632514af7c581fa397cf9011d4f6b1d0c531f6053051a4357"
+    },
+    "quote-voltaire-garden": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Musíme pěstovat svou zahradu.",
+      "contentSha256": "55b28ce123f6976bb1d8815446b3008756f794d38de3c066269a7fb8ae264ab3"
+    },
+    "quote-lao-first-step": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Cesta dlouhá tisíc mil začíná jediným krokem.",
+      "contentSha256": "c78f500b05b53e7b4720fd419df2b1269296a93a0acb70fa2d2562d8a224a055"
+    },
+    "quote-wollstonecraft-self-rule": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nechci, aby ženy měly moc nad muži, ale samy nad sebou.",
+      "contentSha256": "f2efd591184e09f8f7ec0e16e6628baf88d7e38bc243189c57125371bdd4f293"
+    },
+    "quote-lao-true-words": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Pravdivá slova nejsou krásná, krásná slova nejsou pravdivá.",
+      "contentSha256": "d61ce9cd1eaef45fa4c73ee8214809c04506e1047cea5a531e99dc13fcbabc72"
+    },
+    "quote-epictetus-control": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Některé věci jsou v naší moci, jiné nejsou.",
+      "contentSha256": "f0103ae41dd9d42bd54b3bc0d936bee68adb87908f6b9831bf83b2baa789f214"
+    },
+    "quote-epictetus-opinions": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Lidi nezneklidňují věci, ale názory, které o nich mají.",
+      "contentSha256": "2fc8056d09281407dad6d7bbfb017aea8e7399af70b26543b554ad31fc378c5d"
+    },
+    "quote-epictetus-events": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nechtěj, aby se věci děly podle tebe; chtěj je takové, jaké se dějí.",
+      "contentSha256": "32f8c990f553f18e0fe32bddedb85d1a2f3378166a3e58207604a0d3add0ec94"
+    },
+    "quote-epictetus-return": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Neříkej: ztratil jsem to, ale: vrátil jsem to.",
+      "contentSha256": "64cb3e3e6714b80dd34bf35a30aeb245174ad59c5cf4f4dbdb823e295f1dc381"
+    },
+    "quote-epictetus-banquet": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "V životě se chovej jako na hostině.",
+      "contentSha256": "5c0ecc704e4967a2a0151a5f387f39dc29cb23d5c920835a35840122eb632a94"
+    },
+    "quote-epictetus-actor": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Jsi herec ve hře; tvým úkolem je dobře zahrát přidělenou roli.",
+      "contentSha256": "6a5d55a20487a8e5052798309a77339fff4dff8f2454db49500afed9cee827db"
+    },
+    "quote-epictetus-invincible": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Můžeš být nepřemožitelný, nevstoupíš-li do zápasu, v němž nemáš vítězství ve své moci.",
+      "contentSha256": "eae3e72285b349f68cf73fa0ec4419d5b23344f55ba52a0d91ee8c8dc17c05f6"
+    },
+    "quote-epictetus-speak-little": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Většinou mlč, a mluvíš-li, říkej jen to nutné a několika slovy.",
+      "contentSha256": "d44a9e1153683540216f68664262ee9139fad63ce7175c1526abfae19a804413"
+    },
+    "quote-epictetus-handles": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Každá věc má dvě držadla: za jedno ji uneseš, za druhé ne.",
+      "contentSha256": "319c460bffcd892ba5482b4aa68ab683b57fa301a80dc428758d23189f5c3056"
+    },
+    "quote-epictetus-practice": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nenazývej se filosofem; raději jednej podle toho, co učíš.",
+      "contentSha256": "2ebb2e2c944f7958c3f5aab85f8a0c01ce3b19108ef3b124f6710d40248d2b38"
+    },
+    "quote-marcus-revenge": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nejlepší pomsta je nepodobat se tomu, kdo ti ublížil.",
+      "contentSha256": "9ae8c1e06faabb66be5a2d8e9488f4e8b7307bb992e36766521702d3d1cd81c3"
+    },
+    "quote-marcus-bee": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Co neprospívá roji, neprospívá ani včele.",
+      "contentSha256": "7038990da4c2990a7618625bbda8561202c3c6c40bf1444e2c95da58df429fe4"
+    },
+    "quote-marcus-do-say": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Co není správné, nedělej; co není pravdivé, neříkej.",
+      "contentSha256": "f884537172bb9f2874500a657f51f3c21390bfe1730e7ef473572e4c0916575b"
+    },
+    "quote-marcus-good-man": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Přestaň rozprávět o tom, jaký má být dobrý člověk, a staň se jím.",
+      "contentSha256": "df3e1e94c174c93dfd576cd0a01f45d030d3217e9e1405a13c927192ac6d99db"
+    },
+    "quote-marcus-obstacle": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Co stálo v cestě, stává se cestou.",
+      "contentSha256": "6dd8c5ae53fc76a71becc5a607f838213a714d312425afb7a7a778321887e64c"
+    },
+    "quote-marcus-within": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nikde nenajde člověk klidnější útočiště než ve vlastní duši.",
+      "contentSha256": "17f7fbe08eba2e39d1f495edbff1ff8d4ab0390cdbee935ff66fb968d1222a7c"
+    },
+    "quote-marcus-present": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Člověk žije jen přítomností; ostatní už minulo, nebo je nejisté.",
+      "contentSha256": "ef9a9fabc82a3aad4cd5d536f904dd4505a2517a6889c2cd651e032f288cbf85"
+    },
+    "quote-marcus-change": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Svět je změna, život je názor.",
+      "contentSha256": "0f7c3ce570ff861885df1cd945aedfba35fd2b1e215f7e22cab02f142817ea7a"
+    },
+    "quote-lincoln-democracy": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Vláda lidu, lidem a pro lid nezmizí ze země.",
+      "contentSha256": "60bdce4760a4f05949267e39c08030b3506921ebb0d0c3cd322e7158c1f55abd"
+    },
+    "quote-seneca-everywhere": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kdo je všude, není nikde.",
+      "contentSha256": "f4fa79525dc57add4319c36e320fc57f03f52235e255572dc788d64a319558d4"
+    },
+    "quote-douglass-struggle": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Není-li zápasu, není pokroku.",
+      "contentSha256": "cfd8e16960dbcdebf564ad12e99e9f772de43ea47f3cfb05d19ce429f788a8d2"
+    },
+    "quote-seneca-examples": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Dlouhá je cesta přes poučky, krátká a účinná přes příklady.",
+      "contentSha256": "da463e2f4fddff3a04a609026d014d22b052612683f43dae2226eb6a196fd01e"
+    },
+    "quote-nietzsche-stronger": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co mě nezabije, to mě posílí.",
+      "contentSha256": "dc88e61560e4f8a3686279b4e573fec7d904995eacd4b5e9d2c335a66862246a"
+    },
+    "quote-seneca-time": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Všechno je cizí, jen čas je náš.",
+      "contentSha256": "fb5bc5a56829ee0ee91c102e267a7ffbc00976138c1cdf8b3f7b38790b6d42a6"
+    },
+    "quote-seneca-rest": {
+      "status": "held",
+      "reason": "Odloženo: nekanonický překlad a samoúčelná pohovka s pracovním rozpisem; výslovný hráčský podnět.",
+      "reviewedAnswer": "Odpočívající má také jednat a jednající také odpočívat.",
+      "contentSha256": "e6d15f9323ded3ce51add3d24edec308024db068e5d69a3ef18e02e36041a187"
+    },
+    "quote-tagore-fearless": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Kde je mysl beze strachu a hlava se drží vzpřímeně.",
+      "contentSha256": "8468e59bf477a3d6d8a1a115e62763f749c0008c9b613e31b42b3090fcfe9b92"
+    },
+    "quote-seneca-waste": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nemáme málo času, ale mnoho ho promarníme.",
+      "contentSha256": "d7a88e672380911b453fd02cdc11275f57a099868b3919ee76a3b3028a362485"
+    },
+    "quote-masaryk-discussion": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Demokracie je diskuse.",
+      "contentSha256": "92aa9a888cb08e3f297d04ea1ccce0364f41f0a6adc394325cbd86931a166bb7"
+    },
+    "quote-socrates-examined": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nezkoumaný život nestojí člověku za to žít.",
+      "contentSha256": "c7d152548a99b02b2e2b11470df7aa6f56044f023273b8cac8b70b687ea05247"
+    },
+    "quote-socrates-ignorance": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co nevím, ani si nemyslím, že vím.",
+      "contentSha256": "4f72ff451366fc2b04751bb188b3ac484f8e1c78d58cb7966ad442233c6a39eb"
+    },
+    "quote-socrates-wrongdoing": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Není těžké uniknout smrti; mnohem těžší je uniknout špatnosti.",
+      "contentSha256": "f09e91bab5dce8e60c402ff01a0925bc1eb05503664eb7e221668a124f9f4675"
+    },
+    "quote-plato-worse-ruler": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Největší trest za odmítnutí vlády je být ovládán někým horším.",
+      "contentSha256": "ba496b7db49cfde51f34128339e7020412a5e96f01f709dd9ff82653a5dee4a5"
+    },
+    "quote-plato-philosopher-kings": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Dokud filosofové nebudou králi, státy se nezbaví svých běd.",
+      "contentSha256": "2454428e94547cf9c2ee43548e91f4d216e0c4eb50c4a663af7fd5b00d45f8d4"
+    },
+    "quote-aristotle-political": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Člověk je od přirozenosti tvor politický.",
+      "contentSha256": "e0828d7e570ae5316ffd20a33222fdc55a9591ab777f4ccc9e7b3437b6bc8b63"
+    },
+    "quote-aristotle-law": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Zákon je rozum zbavený žádostivosti.",
+      "contentSha256": "9cdd200154f51c31285956d4a032f003b4d48761719921f4aed5f316c1b2f320"
+    },
+    "quote-aristotle-knowledge": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Všichni lidé od přirozenosti touží po vědění.",
+      "contentSha256": "cb7b389d7835dd91eff0c6dfd43672f8efb99228fde59f2d3e49ffca08879520"
+    },
+    "quote-aristotle-poetry": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Poezie je filosofičtější a závažnější než dějepisectví.",
+      "contentSha256": "8cb9736a5992aa9e566fb2e07d5159667293342fed5dd7c8fbb4a7cc33ce7725"
+    },
+    "quote-cicero-times": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Ó časy, ó mravy!",
+      "contentSha256": "33cee6d87084ca33e3774837b56aca5004f6be982c27ce49bdef323606df7893"
+    },
+    "quote-cicero-welfare": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Blaho lidu budiž nejvyšším zákonem.",
+      "contentSha256": "c6cb48ba399feb8a759c64a5959e1ecfe2684fec21742c848999dcc6a57c563c"
+    },
+    "quote-cicero-history": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Dějiny jsou učitelkou života.",
+      "contentSha256": "59eead57e5e92eb3ab24db6775fba719e07eac43ec0595800e9b38faf12a8230"
+    },
+    "quote-cicero-laws-arms": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Mezi zbraněmi zákony mlčí.",
+      "contentSha256": "ed1f386f97700e8492fe750a5d42ce03f693bb41fa05a2e9a9a5c7db57d6f3a7"
+    },
+    "quote-cicero-error": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Mýlit se může každý, setrvávat v omylu jen hlupák.",
+      "contentSha256": "066f35a108c7e59802a1fc31baafaa621e33e23622e2b888e5170a828a3af959"
+    },
+    "quote-horace-day": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Užívej dne a co nejméně věř zítřku.",
+      "contentSha256": "2cd79ddfc1d06ba7a48b6adb46aabb11b47f5f12b5a74e5b4f3198c67fd1dd57"
+    },
+    "quote-horace-wise": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Odvaž se být moudrý.",
+      "contentSha256": "7e7ef2a72f92224faf4b9382da163849f80582a253aedef689517da0b2d50698"
+    },
+    "quote-horace-mouse": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Hory budou rodit a narodí se směšná myš.",
+      "contentSha256": "90e017446b2388b73c39fb824e8b85fdfcbdb8d0174cc5c05b6c6a7f6f241a8c"
+    },
+    "quote-horace-homer": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "I dobrý Homér občas zdřímne.",
+      "contentSha256": "2bc673a29e315a7a2890d50414048600013a6d6a47a76063f57b74ed8542131e"
+    },
+    "quote-ovid-change": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Všechno se mění, nic nezaniká.",
+      "contentSha256": "636adec872baa29c56ad943f7a8940a423bd88ea05c1fae541d008a4c4e90db4"
+    },
+    "quote-ovid-friends": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Dokud se ti daří, budeš mít mnoho přátel; přijdou-li těžké časy, zůstaneš sám.",
+      "contentSha256": "a2e527893f1e8cc2c48ef3e010b1e6dae812c2c9bc9473d44b140b4536dd87ab"
+    },
+    "quote-ovid-beginnings": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Braň se počátkům; pozdě se chystá lék, když zlo otálením zesílí.",
+      "contentSha256": "ad89ac6fc52359eeeaa24e5e15f7c448bcb1ec9f28367058eeb5dd0faf807079"
+    },
+    "quote-ovid-better-worse": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Vidím a schvaluji lepší, následuji však horší.",
+      "contentSha256": "8c75e03c4bb33366b7dabdc3a0307ff1fc7724ce270f4805b32b7aaaec58560b"
+    },
+    "quote-virgil-love": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Všechno přemáhá láska; i my ustupme lásce.",
+      "contentSha256": "9440efdc3476a2ad716fca9bf13b34c5a0acecc4151a2156e78420c2a3fe3058"
+    },
+    "quote-virgil-fortune": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Štěstí pomáhá odvážným.",
+      "contentSha256": "596d259ddab96ba0849ab7dbe6a9ee472a0a2318f6f06eba3845615c721f43d8"
+    },
+    "quote-virgil-memory": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Snad i na toto bude jednou radost vzpomínat.",
+      "contentSha256": "11f9b1cc0d7a32e1760508d767a39af6d317ed5775a739cdf98bf589b52a19b7"
+    },
+    "quote-terence-human": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Jsem člověk a nic lidského mi není cizí.",
+      "contentSha256": "075aeced586c7df7e08a11087b22392b07a2642cefc7285f6d252e6046297597"
+    },
+    "quote-terence-food-love": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Bez jídla a vína láska chladne.",
+      "contentSha256": "a1330ed92be9cc6ad23f63c81486e06ea5ca2c368f8c3cdccd85862f65ecdcbf"
+    },
+    "quote-juvenal-healthy": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Je třeba prosit o zdravou mysl ve zdravém těle.",
+      "contentSha256": "d2adf41e88fa50119565e28c8b8479adc6d0063640f7f93bdb8878fe4a186f03"
+    },
+    "quote-juvenal-bread-games": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Lid teď touží jen po dvou věcech: chlebu a hrách.",
+      "contentSha256": "568088bacb528ef41a1323270ddc2080a174ef317283a43a69a65edc03d4263c"
+    },
+    "quote-bacon-books": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Některé knihy se ochutnávají, jiné polykají a jen málokteré se mají rozžvýkat a strávit.",
+      "contentSha256": "5453c95d1962dab8bc7339ef329866d468e12c1fbf24573756ada4a05b2d352c"
+    },
+    "quote-bacon-reading": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Čtení člověka naplňuje, rozhovor ho činí pohotovým a psaní přesným.",
+      "contentSha256": "b1b3fea8479bdb895b4a4dc24765cdb51c8a82547499f5598700cd2991444e0d"
+    },
+    "quote-bacon-truth-time": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Pravda je dcerou času, nikoli autority.",
+      "contentSha256": "36b14ad8cb6ff9936dadd8034504618943e6f314f475c4ca21dd2c956edd31f5"
+    },
+    "quote-hobbes-life": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Život člověka je osamělý, chudý, odporný, zvířecký a krátký.",
+      "contentSha256": "691f77a609132f63b9bb4372dd91f6acba60891c8d4d3cb591f59ff3a204907b"
+    },
+    "quote-pascal-heart": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Srdce má své důvody, o nichž rozum nic neví.",
+      "contentSha256": "43b528f50c5f6bc1a9a53763163557fc643cc4a4e78c1c3a6b6ae1088b318501"
+    },
+    "quote-pascal-reed": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Člověk je jen třtina, nejslabší v přírodě, ale třtina myslící.",
+      "contentSha256": "57be2b8f5785df3259fdfddec5822bdbe8a15d936e1c4c7b0f777c4edef99526"
+    },
+    "quote-machiavelli-feared": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Je bezpečnější být obáván než milován, musíš-li se jednoho z obojího vzdát.",
+      "contentSha256": "1583cecec8eb9e6d904f883265891f2db60f6d90156e70d37cf822dd679636eb"
+    },
+    "quote-machiavelli-appearance": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Lidé obecně soudí více očima než rukama.",
+      "contentSha256": "d4f6588de6ea80edb5d3a00299fd46bee12d3e7657ef660b0114e5d30b7b37e8"
+    },
+    "quote-spinoza-persist": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Každá věc se, nakolik je v ní samé, snaží setrvat ve svém bytí.",
+      "contentSha256": "47f2bae1e3abb0480938cf44aa715c48584ddbbd8fede6719b914c1f82040f4d"
+    },
+    "quote-spinoza-life": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Svobodný člověk myslí nejméně na smrt; jeho moudrost je rozjímáním o životě.",
+      "contentSha256": "d58e2ceb95a9fccad252303e0d3805d53a517c8117fbdef1cda90dcd8425db59"
+    },
+    "quote-kant-heavens": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Hvězdné nebe nade mnou a mravní zákon ve mně.",
+      "contentSha256": "bc837316cd96cbf70c251d964519532bfcd079155988f040c29fe4b8edc8432b"
+    },
+    "quote-rousseau-chains": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Člověk se narodil svobodný, a všude je v okovech.",
+      "contentSha256": "34bf61c47f0008ee231299806479da82cb83d8b3f5b56c068275af19f7fa1e3a"
+    },
+    "quote-mill-sovereign": {
+      "status": "held",
+      "reason": "Odloženo: z obrazu nelze férově odvodit přesné znění vlastního překladu; chybí dostatečně ustálená rozpoznatelná formulace.",
+      "reviewedAnswer": "Nad sebou samým, nad svým tělem a myslí, je jednotlivec svrchovaný.",
+      "contentSha256": "75bd3a9494b35d105d3e0e7b1ad9e48072d00df471c689c2885a72d42aff6a07"
+    },
+    "proverb-archive-e52461e58866": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo ráno vstává, tomu Pán Bůh dává.",
+      "contentSha256": "fb0c6d924efba0dd0a417baef5ec8429e9f8c75c486f8228607363874e6bb649"
+    },
+    "proverb-archive-187c5bbab978": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Každá liška svůj ocas chválí.",
+      "contentSha256": "88da9b88724bec150d383346c7a6c0950661a579331e19f9516c801d333de092"
+    },
+    "proverb-archive-c9e1f1836b8c": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Liška srst změní, ale obyčejů nezmění.",
+      "contentSha256": "f73d39eae6b11febb431127f259adcb9681fef92a763626a493d3985dc0bfc16"
+    },
+    "proverb-archive-4a649ec7d600": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Není všecko zlato, co se třpytí.",
+      "contentSha256": "98911e3ae984203c3bcd3ecbed3aaeadffeff95b5828336e03b14903d46a13a3"
+    },
+    "proverb-archive-fbba1f988819": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Dva kohouti na jednom smetišti se nesnášejí.",
+      "contentSha256": "fb8d683ae76729752bd7bd028a9de4bf26157634b28d126dc16c7a2d3c6f262f"
+    },
+    "proverb-archive-229946c51616": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Řemeslo má zlaté dno.",
+      "contentSha256": "bc8149601e3ead1eb45e0ce619239f1614c2679a24974e71efbc0299cbd4b86d"
+    },
+    "proverb-archive-937fb00007f8": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Mnoho řemesel, málo chleba.",
+      "contentSha256": "ed788bbcaca8e5ccf402f80aa0df286f7b5095fc8fabf4c802df58e43436b11b"
+    },
+    "proverb-archive-c63b1d435474": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo dva zajíce honí, žádného nechytí.",
+      "contentSha256": "ad6d62756f25581a84d661de62b652e180d538900df2062af0362694cb76d3ff"
+    },
+    "proverb-archive-230d147aaaa2": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nekupuj zajíce v pytli.",
+      "contentSha256": "74d9412c0ebab551a1c9bde45184da71bcab7f389db0bb143d107a711d48134d"
+    },
+    "proverb-archive-3a4ae7405313": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Když Pán Bůh dopustí, i motyka spustí.",
+      "contentSha256": "6ef6625863ea39fb829c5e7c4bb9ae2d6290b995a75197e867ce9db6d72c28cd"
+    },
+    "proverb-archive-4f10ad2d056b": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "I slepá slepice někdy zrnko najde.",
+      "contentSha256": "72b26cbe5ace4c94b0b47029f5ec28173841b246ac20548ecb5de3ccb490b2d2"
+    },
+    "proverb-archive-77241f00dd6b": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Jaký strom, také ovoce.",
+      "contentSha256": "f03eb2caface03b74d16350f326502ff527cbbc8646cf098e949f89fa2d81805"
+    },
+    "proverb-archive-438a9c4a3e4b": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nepadne jablko daleko od stromu.",
+      "contentSha256": "78c6b817fc435ad1bf29cbff5701d4d46c3e26ca590b0ffbdcc0544a05c822f3"
+    },
+    "proverb-archive-4c70a0bb8055": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "S chutí do toho, půl je hotovo.",
+      "contentSha256": "8f7f5830505cc205dacef48c3b6f966d8675c4b19451346a5604b834a323f4bd"
+    },
+    "proverb-archive-7e51697c5bca": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nové koště dobře mete.",
+      "contentSha256": "95164a673c5802f7d9289499f40976eb8ef881893020d2bd3cc81f4cabbe9956"
+    },
+    "proverb-archive-6ef9fa564c68": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Rané ptáče dál doskáče.",
+      "contentSha256": "c4183d85d3eb559b7b5158b7dbbe8bc7dc7bae3c45c54f938950d7661caf4af8"
+    },
+    "proverb-archive-94f5f2d515fe": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Host a ryba třetího dne smrdí.",
+      "contentSha256": "77ccfdadb4f187e2bbcfcc63447fc2c53303afe457b61f0a13e59561b0ab635c"
+    },
+    "proverb-archive-fd04ef60f422": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Od hlavy ryba smrdí.",
+      "contentSha256": "1258770e79bd8c71dc4a079363821dba589ad7eb4809a674d3f33dd37d668085"
+    },
+    "proverb-archive-2bbc786a0e65": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Tiché vody břehy berou.",
+      "contentSha256": "612032f9827bd81dea682d56f663633b47165712ac3adae9b2f9dbf49fa52168"
+    },
+    "proverb-archive-dd041d0a21a3": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Stojaté vody hnijí.",
+      "contentSha256": "88a80cec76b123047e49796e01aed932468822b4b7fbb886a0677ee316bc861d"
+    },
+    "proverb-archive-43cc61082273": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Častá krůpěj i kámen prorazí.",
+      "contentSha256": "a666f1de75a17fc418cd79d517b5398944150327e4473097d13c2bd0fc00830d"
+    },
+    "proverb-archive-a7f2df12d661": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Dva tvrdé kameny řídko dobré mouky námelou.",
+      "contentSha256": "75dcf73ba9e5da4cce6713c362eaaf1c3fe618d4bfd312359b413ddd0ad97bc5"
+    },
+    "proverb-archive-1a393640bb8d": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kde provaz tenký, tu se trhá.",
+      "contentSha256": "6c8277123a65c8a529de5f71871235bc394f06ab8d0b470118e9f9b500cb2e7b"
+    },
+    "proverb-archive-62e7708f2f7d": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Trojnásobný provaz nesnadno se přetrhne.",
+      "contentSha256": "9ecb608a43ba16d3a2ce2cce2a3ce37926dc048adfe8cb36117b161b0b14a0a1"
+    },
+    "proverb-archive-89e295bc23e6": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Topící se i slámy se chytá.",
+      "contentSha256": "8ac12c37aee483fac29b0e425dbf7e823086ffc1fc07302d528cc799b974ef58"
+    },
+    "proverb-archive-bfc3a53dc624": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Pečené holuby, nelítají do huby.",
+      "contentSha256": "c6dbda85aeeded9a0da1d277f10f945938ad8656b43c0054c9adc0bed99e63c0"
+    },
+    "proverb-archive-0e1821c8335a": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kde nic není, ani čert nebere.",
+      "contentSha256": "a07c80e587c3f9748166b43b4ebe2fb736b6ddb15b8becbd3ef28fb56abbfc04"
+    },
+    "proverb-archive-3c16b50a38ab": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Já pán, ty pán, kdo bude svině pásti?",
+      "contentSha256": "698cdd14a7464685016068e9a3c98fad94021c9a1b240459f9fbf0a6291742b1"
+    },
+    "proverb-archive-b2431d986819": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Čas růže přináší.",
+      "contentSha256": "3379e2effcdfb4addf3740802258b8f0209fe7fdb46d2b391d8f71e91ceb31ef"
+    },
+    "proverb-archive-a4613f8523a2": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Žádná růže, není bez trní.",
+      "contentSha256": "8598d008da613d899cd87d4a141eb99a2e614abd98cbefb46038260ac37e85c4"
+    },
+    "proverb-archive-e8d780776aa7": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Růži trhej, když kvete.",
+      "contentSha256": "ba2e37e7f4cfc2c7ecd3b08fa53a97be5df5442d71d0f3888055e0892cabb14a"
+    },
+    "proverb-archive-57caea6481db": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co kdo seje, to bude žíti.",
+      "contentSha256": "784d6356fc99263fc99d06367139eea07c82490d39760b2e11356115f86d588d"
+    },
+    "proverb-archive-fd3fa63ea449": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Přetočená struna praská.",
+      "contentSha256": "fd15ca5075ab56d89e4fb4cb2c59e60cd838cdda9a90c4c200b29994f3522370"
+    },
+    "proverb-archive-ef7a2e5be920": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Prázdný pytel nestojí.",
+      "contentSha256": "13d4b3154bbc5b42bf7eee01d04cf8fb50ee4328b554fcfc2f38b0bdb10ec485"
+    },
+    "proverb-archive-2632766a59cf": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Darovanému koni na zuby se nedívej.",
+      "contentSha256": "2a7ece8f04389ea464622b4322d2faf840520ccf18b6317d28d9df0397f4402c"
+    },
+    "proverb-archive-e01c0c7dc475": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Koně nekupuj ušima, ale očima.",
+      "contentSha256": "4fcdfdd6242a433bd5b22ce5953d5f61a7be9a5e99a76b2afff0d96a4fa7cc3a"
+    },
+    "proverb-archive-33902c174d6f": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Někdy i kůň o čtyřech nohách klesne.",
+      "contentSha256": "4b247473fa259a7c3d8923171b0b309788797411c8f1ef38fabc9791a14aae49"
+    },
+    "proverb-archive-9a082078db25": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Ani kůň netáhne víc než může.",
+      "contentSha256": "7081b0c19a95dcab4da7c47ce9b1c8b1f2521e638f54888736bfb3928b82b0a8"
+    },
+    "proverb-archive-131270b20812": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Každé hrábě k sobě hrabou.",
+      "contentSha256": "d577c3834fd5496e1ae163c08799e84c2afe8f41e6e83a7ff75280d8ba595fef"
+    },
+    "proverb-archive-b4899a351416": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Líná huba holé neštěstí.",
+      "contentSha256": "4960c2170fee22e70cdbe86eaf69cdc18dea408562424d6e8a88836b52f66ba8"
+    },
+    "proverb-archive-84a1fb257f48": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nebezpečno olejem oheň hasiti.",
+      "contentSha256": "4f77c6e93bd7a08eb4e4329a41593ce5b33c594280c003a39ca0f94f843055df"
+    },
+    "proverb-archive-e26a6b5ee661": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo dřív přijde, ten dřív mele.",
+      "contentSha256": "54448b4a005b52c5f1c0902122ee7a185d76642401280eac41cea3ce970a03c3"
+    },
+    "proverb-archive-0c6af067ed8f": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nechoď se vším na trh.",
+      "contentSha256": "e03877bcc387c976df78b0a24e59db1a8d07b71f90ccf8f8116b0c43c8e9c239"
+    },
+    "proverb-archive-75a85fff5dfa": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo do mlýna chodí, zamoučí se.",
+      "contentSha256": "530dec714053167ff6177ad7d61db80bde777f233f3d44005bace920654fb954"
+    },
+    "proverb-archive-d948cfb7a35e": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Víno není vinno, že se lidé opíjí.",
+      "contentSha256": "01defcbc61ac3492b581d6c3fc034bb3a470aeb6410f5a3bd5c4b7ee176f3d5e"
+    },
+    "proverb-archive-9c23bbeeb2ef": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Vinice nechce modlitby, ale motyky.",
+      "contentSha256": "dbacff4d50aa141d30e49c2d0703f21d4b527a50837fa21c9459c8014c511186"
+    },
+    "proverb-archive-0c96ed19f961": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co vlk schvátí, nerad vrátí.",
+      "contentSha256": "02ee0f3aa48a8ab7fe09b42e59fd4446475d2af56ae826804c338667c5897fca"
+    },
+    "proverb-archive-a846995b6ac6": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo chce s vlky býti, musí s nimi výti.",
+      "contentSha256": "14a538540830b4054d5caafefa826a44b58c65f1da3b1cbf2dec3225b8e338f8"
+    },
+    "proverb-archive-112b88a7b156": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Rána se zhojí, ale slovo ne.",
+      "contentSha256": "2ace0ca87528a00741e9a3e0a5d97bfee7bbf63e1c897e8e8824e2377204a14d"
+    },
+    "proverb-archive-bad02901ad71": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nehraď se plotem, ale přáteli.",
+      "contentSha256": "5ee9223524742c501ab0c9b110cddd97ec8987956820b7076b734d3103ff6047"
+    },
+    "proverb-archive-00f9edc2f0b4": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Opatrnosti nikdy nezbývá.",
+      "contentSha256": "70ffe3ce2c0488106b1658e184ef9f490f505c7561b3e228c28e8d114c4a5bed"
+    },
+    "proverb-archive-891b77f6e398": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "S každým pěkně, s nemnohými důvěrně.",
+      "contentSha256": "36c200caa80290e65244f4823ae72b8707be5587045a4ef7410cc9da8bf5c1af"
+    },
+    "proverb-archive-f1958e414934": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "V každé věci hleď konce.",
+      "contentSha256": "d869e46c30c7fc7ae8676ebfad05010222344663736ffa752906b2534c4ff48a"
+    },
+    "proverb-archive-d45f9b9ac9b9": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nepouštěj se bez vesla na moře.",
+      "contentSha256": "a82b6469299ee3ff2f8425c9aeb33d62fdab77777a86f0ca36bc8a0e7524e9da"
+    },
+    "proverb-archive-8f297c15e8fd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Pole má oči, les uši: chovej se všude jak sluší.",
+      "contentSha256": "b224b405aea5a2c9d36a54ed1a4913b3458a89b58bafb62e55a61205b11e1d4a"
+    },
+    "proverb-archive-03df672625aa": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo chce v domě škody zbýti, nedej jiskře ohněm býti.",
+      "contentSha256": "b95e03c0fce2d988352075d34ef44f867767b4e9f3e78433437b16c8d204dbfa"
+    },
+    "proverb-archive-1b83f09a60df": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zároveň zle jest i všechněm věřiti, i nikomu.",
+      "contentSha256": "64fdafffc63d7d54f43e0efb0f088f6e966383dad30b74bbc8c222c14ee5ff83"
+    },
+    "proverb-archive-82b576c19bc9": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Dvě věci vždy jsou hojnější, nežli myslíme: naše léta a naše chyby.",
+      "contentSha256": "3f5d9261cd7d86e09143fd626c2c193bdbbd420abb1d660fc3238295ea3b5985"
+    },
+    "proverb-archive-f89c64464484": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo nemá v hlavě, musí míti v nohou.",
+      "contentSha256": "4b14b92493e5381b91a2e8e2885179d018950e920e1319e2ece7f7eb73f2c243"
+    },
+    "proverb-archive-2651565befb0": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Myš jest malé zvíře, a nevěří jedné díře.",
+      "contentSha256": "b8ee23a166ea5b9cd91e76e2465b8eb155d5d47e3251bf4fc4e16f16f288067a"
+    },
+    "proverb-archive-631cb2842bc5": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zajíc v lese, a on rožeň strouže.",
+      "contentSha256": "e49080f21a1fbba7df7f53ab0b599c72a5dc06b1c1cb44ca36c7e7534ded47f3"
+    },
+    "proverb-archive-e19811629700": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nespouštěj se silnice pro nejistou pěšinku.",
+      "contentSha256": "67b49a907c658e31235d8b3a60c8a26861cab0265d62d368aa0e806bbfffa424"
+    },
+    "proverb-archive-4ea7ad163f72": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Lépe pozdě, nežli nikdy.",
+      "contentSha256": "c18dc9d3b59a8ccbdafbc5e009c42250b086e4586ab4587a033292dfa20cc3ea"
+    },
+    "proverb-archive-6be02ce36a46": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kvapky mívají hapky.",
+      "contentSha256": "8ffb77ebe95c1e4a662788edfa7ccf4b441728689cb3ad77cfbd32790ec149ba"
+    },
+    "proverb-archive-55448b172a1f": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Lepší jedna rozmyšlená, nežli sto učiněných.",
+      "contentSha256": "b1d4181031a592ad0146de7ff84aaa3ac5b924e2b894184741cdc8dcc9e1f2dd"
+    },
+    "proverb-archive-4cb96988adae": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Horké železo nejlépe se kuje.",
+      "contentSha256": "5198526da8c808e2a9052d1c8340993e14c6692efa169c877781255815a1169a"
+    },
+    "proverb-archive-71c490e450c2": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Co dnes propustíš, zítra nedohoníš.",
+      "contentSha256": "9188e0a972f7eb693aaaed26c965ca7e13857871ce8621f77482f6ecefddf14f"
+    },
+    "proverb-archive-44253061a2b1": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Ztracený čas nikdy se nenavrátí.",
+      "contentSha256": "8bf1508c15ff56828229be456f68b6fbd8e1b9f1066fc27f958abf14d91dd114"
+    },
+    "proverb-archive-f64007c6c608": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Večer ukáže, jaký den byl.",
+      "contentSha256": "8b789939224041f4135b7583847fbae759fc823e6e42b8e233f0b6b700940949"
+    },
+    "proverb-archive-3d73c3384b2a": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co koho nepálí, toho nehas.",
+      "contentSha256": "98783a83c172e604b0eaf13609c3c64cba5b2776bb80914a9b30a3415d5d24e4"
+    },
+    "proverb-archive-259c3d12d81b": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Všude dobře, doma nejlépe.",
+      "contentSha256": "6632c952455c847b86ab9b9542acf4482e021104aabc826aea304e664e5da1e3"
+    },
+    "proverb-archive-7f6dfbf5d948": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Lepší doma krajíc chleba, než v cizině kráva celá.",
+      "contentSha256": "a7cdc9e03ff6efeaf53c037b52e1da6c4c99a0c84740c7fbc6b3db94a4a54e75"
+    },
+    "proverb-archive-9480e2e1b60c": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kde se kdo zrodí, tam se i hodí.",
+      "contentSha256": "38a5b98c804db94e420f60611ba4f3e28a35329d547feab81cb9f228fbf1973b"
+    },
+    "proverb-archive-7d5b37d77f6c": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kde jest peníz bit, tam nejvíc platí.",
+      "contentSha256": "ea9fbf949598edfb181cdc563436f909993ad61213ca35bff6731686b18f746d"
+    },
+    "proverb-archive-af0af9be1852": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "V cizím kraji i sokola za vránu mají.",
+      "contentSha256": "71fbc52918234bc930fd952ebfc9449f54ceed3ca93268bed6e5fc93460cd73d"
+    },
+    "proverb-archive-c75c44fa54fd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo činí, co chce, utrpí, co nechce.",
+      "contentSha256": "8764d6baea64e7037a2cf5faf439a140a25062bdb69a34d1da305c238b6e1ef9"
+    },
+    "proverb-archive-c21ec56b73df": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Cizí jmění strachem ohrazeno.",
+      "contentSha256": "36b9d161fc1fe4c507129dbfb7ef917aed684cc8abe59a290e1e5b74e0689992"
+    },
+    "proverb-archive-61b4a715159a": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Svoje svato, a cizí nejsvětější.",
+      "contentSha256": "f012c975878721fe992da4e6b5f2059bf1a3e1f18476b959832c1c5976db2dcb"
+    },
+    "proverb-archive-40c04f1b3af6": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Každá věc za svým pánem křičí.",
+      "contentSha256": "6ca6c7747551201ff808b9f25e406e1065a2d6e0d78c0337bf02cdc2818a0d1f"
+    },
+    "proverb-archive-1fb5bdd0bb27": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Našel a neohlásil, jakby ukradl.",
+      "contentSha256": "ea1840fa2a694886c586ee778573a7d796f815fe9d6dc853ec97c4a977aa6d4b"
+    },
+    "proverb-archive-755c78487885": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Po niti klubka se doviješ.",
+      "contentSha256": "77e4d4862ddf5aba5691deb2c1024099817caca91d7326ef7b8c88bb7055f88e"
+    },
+    "proverb-archive-0c96214c5a9f": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Pomsta i na chromém dojede.",
+      "contentSha256": "37c6c8e4f3f745a383f59c248da3b2e38cf171dfa3e4e4359e581085a72e7e2a"
+    },
+    "proverb-archive-8a156ea0364c": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co se vleče, neuteče.",
+      "contentSha256": "7c5fa1cca13c7d258427df72a1ee4b0870338ca744312e4e6df7e4b28561432c"
+    },
+    "proverb-archive-3ab773da4703": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Lepší kůrka v pokoji, nežli bochník v rozbroji.",
+      "contentSha256": "7cb6470f2fe8d32570583d70390e9614379898101d43f46e39d6e8b9aec2f6bb"
+    },
+    "proverb-archive-a2d141cd65d6": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Dobré svědomí nade všecko jmění.",
+      "contentSha256": "c0437c604c9beebeef5080e3930e56d30eec2dee26f4cc2c857c14058f50f8d8"
+    },
+    "proverb-archive-a0ed9dea6834": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zlé svědomí ustavičná poprava.",
+      "contentSha256": "d15250a6edd01cd7c119a9136e9d4e8e557c49be9958c689cae2e24d3385088b"
+    },
+    "proverb-archive-ed55c6243dce": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Čiň, co jest pravého, neboj se žádného.",
+      "contentSha256": "14bf5943c0d1049c474e0a42e9da6b035b16334362761b8f8afc180affae8ce4"
+    },
+    "proverb-archive-44c040cd9fc3": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zdraví na všecko vystačí.",
+      "contentSha256": "893e935822b8abd35475bf288ec552a018c3e8220b318b435119e97d93727304"
+    },
+    "proverb-archive-c7a194c57538": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Prostě-li žiješ, sta let dožiješ.",
+      "contentSha256": "472bbf266c50a04e8bf3b57dfdc46279bdf45f6ebe219b7dbff594de818bb0fc"
+    },
+    "proverb-archive-61cb520b6a01": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Sladkosti se nedobírej až do hořkosti.",
+      "contentSha256": "ec5e90e5a27155f954cec0818b970241e2b20f34e23501efc9bc5c3ac1f25f4a"
+    },
+    "proverb-archive-e796fe73fddc": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Veselá mysl půl zdraví.",
+      "contentSha256": "b4e9d7ce246b6b17d4d275e150660e0c294f9046d48e8407f65bb03551633e59"
+    },
+    "proverb-archive-443eb52ff330": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kam střídmost nechodí, tam chodí lékař.",
+      "contentSha256": "231c3eef604162cd85a9b5b6b8ec2b57bd1d5029905a210117fad78809051463"
+    },
+    "proverb-archive-2a46b561f9a9": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Na lože o deváté, s lože o páté.",
+      "contentSha256": "831a5b042c1266359b69a0ad5cd74a8678c03edea830fef8d43bf2534c0740b8"
+    },
+    "proverb-archive-b09f553ee120": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "V čem není skladu, v tom není ladu.",
+      "contentSha256": "da3d2eda96fe98f4daceff390f32c7154f654d7b7481ea2a5e28ea8d4ac83fef"
+    },
+    "proverb-archive-3c9deb17f6bf": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zlaté časy — mladá léta.",
+      "contentSha256": "b7885601f43094b6cfe57f9982ba8070e729e665725e647c0170d0f39b3e8e2d"
+    },
+    "proverb-archive-ad4b210b0790": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Mladým náleží budoucnost.",
+      "contentSha256": "71a78ab6209edaf55bf373aa6d17b97d1b655ca76107d78a46e487ce17f212a6"
+    },
+    "proverb-archive-f9d6cfa7ae86": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Mlád jsa pamatuj, že stár budeš.",
+      "contentSha256": "9c16f7be7843ec7136acbcc5ec3f66af327202ffaed5d903968eaa43a581d6e7"
+    },
+    "proverb-archive-e10ac9cc1772": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Letům ani cvalem neutečeš.",
+      "contentSha256": "f7d4e122587f35889bd8c68d0aa6b9e02010f921d18761561bf03674164ce7c9"
+    },
+    "proverb-archive-76111a1da429": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Dnes jsme zde, a zítra kde!",
+      "contentSha256": "51450b480785cc614ba785c1f1406aa73ea0eb8527cf2d9fed06b9d880e58a69"
+    },
+    "proverb-archive-8aa8b7714526": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Konec dílo chválí.",
+      "contentSha256": "d9f452bbcb8b7d319a9a69c96f9a68c3df1260ee837d70343b24831ecef780ac"
+    },
+    "proverb-archive-e34efc5a49fd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo své zahazuje, cizího nezasluhuje.",
+      "contentSha256": "8a86d9f9ae8199feb69698c410a2a84c035fe7873de37a78fd152a1bf7b616be"
+    },
+    "proverb-archive-7b57d12b94e7": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Dokud co máš, nechť o to dbáš.",
+      "contentSha256": "56bdad18c29191702379d3e6a2f11abcf862251e911595892f5d2354b8e257f2"
+    },
+    "proverb-archive-fa1661d9f552": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo se rád hádá, v posměch se dává.",
+      "contentSha256": "decd6e779b38316fe5187eb60692334f0a599714144ea8da946e571a391735df"
+    },
+    "proverb-archive-950593b5aba4": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Od včely máš medu, od hada však jedu.",
+      "contentSha256": "43e852611cda1fdb459c6dc0d2d52be06d225a7e3fc49fcbde27248000bb0c18"
+    },
+    "proverb-archive-8af9ca0a1897": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Mladí ležáci, staří žebráci.",
+      "contentSha256": "ae1fa6b5503b6f421b84da26ba3f16f839562b9eed1a88be5d2b6cd855514a28"
+    },
+    "proverb-archive-2ce402b830d8": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo neseje, ten nevěje.",
+      "contentSha256": "3642d1f67d5b9a47f9e71a83aeec5ce3495f35934f2fa54d0b9e7bffebfcfcb9"
+    },
+    "proverb-archive-856bb342e4fe": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Chceš-li s pole bráti, musíš na ně dáti.",
+      "contentSha256": "40d98908ac322f08807008cfedbf5788871ec2454e33f2a917f71b9ed8935363"
+    },
+    "proverb-archive-6b41023fbd87": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Brázda hluboká, sláma vysoká.",
+      "contentSha256": "c7b439d890a0676808ec599bc3a7f49dc272aff3ba68066577e2ca4115d3c958"
+    },
+    "proverb-archive-495687c548a8": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Široké brázdy, prázdné stodoly.",
+      "contentSha256": "8144699cfe9c69f47db24314a61ff9c8c737114086cdc672e542567e53b33325"
+    },
+    "proverb-archive-d91a8f97efb5": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Hnůj na dvoře, zlato na poli.",
+      "contentSha256": "2312ca65d87b033acefca58fe368399f71b847c67a647305fc2e370fcf65f435"
+    },
+    "proverb-archive-3beea40a787e": {
+      "status": "held",
+      "reason": "Odloženo: neznámé přísloví a neodvoditelná „ranní výmluva“; výslovný hráčský podnět.",
+      "reviewedAnswer": "Záhy vstávej, příklad dávej.",
+      "contentSha256": "e0080639e0dde63179a00d84812cd7d689e871b24123b35e4877071e9896e8a7"
+    },
+    "proverb-archive-7ff51c5e36f2": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Čím výše stoupáš, tím víc vidíš.",
+      "contentSha256": "789e8302ac2256e442c1d63b246aab9bec63ca3bcad6261393d30185d8395208"
+    },
+    "proverb-archive-e9817062cd8f": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Není každý oráč, kdo se pluhu drží.",
+      "contentSha256": "22d4425504d86d8dab1073be65b19251653dfc6cf46861e49ffd2343f6587238"
+    },
+    "proverb-archive-38bba390184c": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co můžeš zhotoviti dnes, neodkládej na zítřek.",
+      "contentSha256": "bdd3069bbcdeabc4bee89323049a1cf25241b57ad7752f0eb26d581e73e889a2"
+    },
+    "proverb-archive-e40da3c2d078": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Stará liška těžce se dá uštvati.",
+      "contentSha256": "c15c9f2e8fad4be78549f7867a6d31136d60af87607a74e36e930c6f65d268d0"
+    },
+    "proverb-archive-e460a544e9f2": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Hojná píce, plný krajáč.",
+      "contentSha256": "43d5d0cdbab8285af4d0d9f715b277df92795178b31ffd1958ac37d8c0c2af7b"
+    },
+    "proverb-archive-761da47474bf": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo lépe krmen, lépe táhne.",
+      "contentSha256": "22b7fc713fd2eee131817a20c11df1b51b5d780ad122296401de96c8f558b70e"
+    },
+    "proverb-archive-d09ba2fe5704": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Jesle ke stolu nechodí.",
+      "contentSha256": "432d8cfd3901d586cda856c9ac80cae214ca8588f098a4827a866aa86f75c3f0"
+    },
+    "proverb-archive-fe4d73d28e0a": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Lepší dnes malý kus než zítra celá hus.",
+      "contentSha256": "91594e838c96c1db3532238b7f4d4b436076cca0cafe096f0c2a28aca249e278"
+    },
+    "proverb-archive-04e1ca26d134": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nerovná spřež nerada spolu dobře táhne.",
+      "contentSha256": "1d50fd9a3f7a526d0612079c5d1fde577d6a1fc6b2d91571d7a451064c139c0d"
+    },
+    "proverb-archive-ce11724f24ce": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Není na světě jedu, aby neměl v sobě medu.",
+      "contentSha256": "eae99df67d0fba325570dc1644071047927c15763be1a1fcab087529a7a78079"
+    },
+    "proverb-archive-0c906f7442e7": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Velký zvon nemůže se najednou rozkolébati.",
+      "contentSha256": "7277580927cc88d298ff0fedc373fbd9883bddde718775919f256f63a136d514"
+    },
+    "proverb-archive-9b8e62afb4cd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Když se páni rvou, pouštějí sedláci chlupy.",
+      "contentSha256": "3d923a1d9ece44f888b85e202c64ab495362230a79553d91879dce505cf73a47"
+    },
+    "proverb-archive-e15ae9ee6159": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kohout na svém smetišti rád kokrhá a zpívá.",
+      "contentSha256": "5fb3c9ee30e1602d34b6cac3584dd18527fefeda7131547c0e917f9abd09cda3"
+    },
+    "proverb-archive-0f411f8c854d": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Není dům bez dýmu.",
+      "contentSha256": "30a57ef1a48ef3b1687273bf0964675b51344c74b6e6ffd59efeef12868057f4"
+    },
+    "proverb-archive-65815c58fd08": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Z cizí kůže dobře jest široký řemínek krájeti.",
+      "contentSha256": "7c291800393855220cb29d63171116f7d1b021d96b83010ee1f455b92cdde195"
+    },
+    "proverb-archive-0df5eeed9001": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Běda té slepici, na kteréž se jestřáb učí.",
+      "contentSha256": "2c0cd1160f106a9e7edd1e5c4aa3a9847275ce4f8c7e3b5e286c4c97f5a8ffd4"
+    },
+    "proverb-archive-b77c3850ff07": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kuře učí slepici.",
+      "contentSha256": "1c89874653a695f2508271beae5dfb47dfd2ab68efc0a1b16bc3cbeca5fe1da8"
+    },
+    "proverb-archive-251b2427d081": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Ani slepice darmo nehrabe.",
+      "contentSha256": "ad72689d8ee8879355b55f5df807e4585d1a92e169465a7b89943e2e41b166fe"
+    },
+    "proverb-archive-4d773c928da3": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kam strom ohýbáš, tam roste.",
+      "contentSha256": "15b8fa90d8d8e76d42890abc0e51a284936d28771ce0b7d42d7efb920c8535c6"
+    },
+    "proverb-archive-07ff8af8eaab": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Jeden strom nečiní háj.",
+      "contentSha256": "a5ebd9b1fd3fcbda454ed17a29db81f2b6ccfe6c1db8addcdf4edf2f54d95a51"
+    },
+    "proverb-archive-45d6a53a04a5": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Jaký plat, taká práce.",
+      "contentSha256": "fa35561cefcc979c25aff0d327b78bb43a4201ca596d210acbe878e708f97353"
+    },
+    "proverb-archive-d8322bd96847": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Práce bezděčná nebývá vděčná.",
+      "contentSha256": "63af9624595fd5ff10c7c45386aa7f1fa268c638edba46f4d7c1d1bf7eba77e8"
+    },
+    "proverb-archive-338de409b9ab": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Práce kvapná, málo platná.",
+      "contentSha256": "923aee34d45b1fc6a1f7c07cc659da9ed88d4f32403307b14284e84cfc7be2e6"
+    },
+    "proverb-archive-9113adab98a8": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Ustavičná práce vše přemáhá.",
+      "contentSha256": "fe23a35ef851d349cdb98121a3ad0a0fd87bebc3c4606401375baa50bf65d2ef"
+    },
+    "proverb-archive-d7f094eb3a81": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo z rána políhá, večer pobíhá.",
+      "contentSha256": "f91d3aa17c5c1c7f6f88fb9de2c050e700947a3502125e6e9bd6d35f484499ad"
+    },
+    "proverb-archive-78de3eb3da2f": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Neštěstí nechodí po horách, ale po lidech.",
+      "contentSha256": "48eee4cdb55ce130895f2c19434b7b4145bf210bb988f13c10d76fd1c19aff14"
+    },
+    "proverb-archive-ba369f12eeeb": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Hory s horami se nesejdou, za to však lidé s lidmi.",
+      "contentSha256": "5eebaad9ff4cdb7ee583eaf6d251f2f201d0fac07b93debbbbe58974ac0439f1"
+    },
+    "proverb-archive-7d8ee8c614b4": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kopřivu mráz nespálí.",
+      "contentSha256": "b5936b5448531e2f39ae75496f24baeccb081071603f5638d17b81e1da77db01"
+    },
+    "proverb-archive-e1fc6c4ecb66": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Chutnější chléb ve svobodě než koláč ve službě.",
+      "contentSha256": "34c8f494471a63abc535583e718b506489b80592d73d688035a4de528fd4508f"
+    },
+    "proverb-archive-1aa296aafe68": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Lenoch i pod svou střechou zmokne.",
+      "contentSha256": "176d8b1207e1d4f8d9d2371003dea89ad610ea14a315e1e6c47c9ad3948fbc6e"
+    },
+    "proverb-archive-587079a0ef7c": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Na dubu nerostou než žaludy.",
+      "contentSha256": "e38122494a50a0d9602058030447393b70e4132e9d1afd7e2c97dd1075390a30"
+    },
+    "proverb-archive-33ec43926878": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "V čas nouze i brambory pochoutkou.",
+      "contentSha256": "f4ec71360e4520a46c2285005a08918ca317cf8b79f82af25382ad9a19e6954d"
+    },
+    "proverb-archive-3eeb2426969a": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo maže, ten jede.",
+      "contentSha256": "aed4a3dea067e9bbf9be2863e4614102bc1c938ebfa9f224da2df02acd5e037a"
+    },
+    "proverb-archive-6bd0dfb2f801": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Podobného peří ptáci k sobě se táhnou.",
+      "contentSha256": "038aa0026000d6296e8980063dbae972c4c69add76586415d24304d1dfc93a3a"
+    },
+    "proverb-archive-4d6c83449d98": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Každý pták zpívá, jak mu narostl zob.",
+      "contentSha256": "ffc85df89f9ef321556098d04470adef460b117269612e8ab33a41a3834e0ea6"
+    },
+    "proverb-archive-5477644e7df4": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo chce jádro jísti, musí ořech rozlousknouti.",
+      "contentSha256": "d71a1ebc803247e551405b2caebd2f8f0dd58f823db20d447143940a63bbb50b"
+    },
+    "proverb-archive-7c9492cc4f22": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Každý řetěz tlačí, byť i články jeho zlaté byly.",
+      "contentSha256": "b7178e001729ce768a9dd880a7fca3b33711051a17145752926e089c429e721c"
+    },
+    "proverb-archive-b069815bc5ee": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "S velkými pány není dobře třešně jísti.",
+      "contentSha256": "b345e8cfcca6a22403e424efb39a3b8d9c5d37c34d9ad585446791ab363bd078"
+    },
+    "proverb-archive-7685199a54e1": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Vrána vráně oči nevyklube.",
+      "contentSha256": "2ca8b03dc41b79273267a10866bd01a13e2434ebdb1371f37d5277571fbf7474"
+    },
+    "proverb-archive-7a8b149cd6be": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Šetrnost jest jistý výdělek.",
+      "contentSha256": "8d6ed9dcaa42ceca234fa87e0d26feb7ff92a0b085968dfa7f057e6f397b61f3"
+    },
+    "proverb-archive-56aab4016dae": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo mála si neváží, po mnohu ať nebaží.",
+      "contentSha256": "34f36b7918abf3b7f0803a891288cb36527a7157ba89a7cfcb138f2e7993ac1d"
+    },
+    "proverb-archive-0847ef72f6da": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Dělej, jak ti řemen stačí.",
+      "contentSha256": "7218cd7d50a59be394f517f7a78fd2482753cde26ed83a607c46d2e346264569"
+    },
+    "proverb-archive-1ae88597941d": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo rukama med mícha, prsty olizuje.",
+      "contentSha256": "5d9c62c7bf02f5bf5613b35eea36caac32aaa0e0b8221ca54810981a324882b5"
+    },
+    "proverb-archive-9b395932cf1e": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Poruč psu, pes ocasu, pes si lehne, ocas se nehne.",
+      "contentSha256": "da4d72b3d53fcc9ec6755bff2b9d02f1d2c72d5ab1a4048289a96dedebe87cc6"
+    },
+    "proverb-archive-272b1cddd84a": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Pes, který mnoho štěká, málo kouše.",
+      "contentSha256": "0b3fac2ed10fed20ce6cd70e52f1596c59c637a41b00a970352ad82273aa4fb4"
+    },
+    "proverb-archive-bad2ba04678d": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo chce psa bít, snadno hůl najde.",
+      "contentSha256": "e29d9e39be95d1fd769d7e962d6785254b355d99eac99f34f3b868f5dbfe2302"
+    },
+    "proverb-archive-7218e68c79c4": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Mnoho psů zajícova smrt.",
+      "contentSha256": "66684e590e8cfd34fcff9b46568b04e496a1f81dfeeeeee6371002b96d22b18a"
+    },
+    "proverb-archive-5670b07a8eb5": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nebuď psa, když spí.",
+      "contentSha256": "eaae387df2e3febd8ea0d6adfce727851d19b202d4c26d715f8f2cf8453383a1"
+    },
+    "proverb-archive-22bf9676e4b2": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kocour rád ryby jídá, nerad však pro ně do vody lízá.",
+      "contentSha256": "c057d5f67d235def2111c564696e759ba5d75a345f6a8c4c07745a84720874e1"
+    },
+    "proverb-archive-d14ce561026b": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Když kocour není doma, myši mají posvícení.",
+      "contentSha256": "b230462d2ba69763ff0939f7d47f86d6912a9b9704c7353331a5d6907b2a34a2"
+    },
+    "proverb-archive-4d5cfdb8f3ed": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Čím více s kočkou zahráváš, tím spíše tě škrábne.",
+      "contentSha256": "80e7267435b62d0f6e5af522584d7e63f5fc701227d9477a04259db3bee2164f"
+    },
+    "proverb-archive-0e531b4f6e6e": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Neplet se mezi smetí, abys nebyl vymeten.",
+      "contentSha256": "82a4da351c51a5a93c0a4f1b39dd0ddd11a4d8f734952784024a0e9a13d315da"
+    },
+    "proverb-archive-549ea55869df": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Rozumí tomu jako koza petrželi.",
+      "contentSha256": "4f312bdd026732cdfeadabe52f08d708cc8840ea9156bdd80ec053e18cf340f2"
+    },
+    "proverb-archive-f7ea58eab08e": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Mnoho křiku, málo vlny.",
+      "contentSha256": "df90575c470a5b26292280ec5d1be269cfa4ae5225d0cc05677fb1e92e5e4931"
+    },
+    "proverb-archive-5251015623ce": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nesmělé srdce cti nedochází.",
+      "contentSha256": "0e32f4cc577195e88cf5547276eb88df00101694b251c233430f64646e95dd99"
+    },
+    "proverb-archive-c66cf10fb67c": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Jaké srdce, takový jazyk.",
+      "contentSha256": "85978e915a3f88a77f3b9852ef59fae05a6685b2e341f60edd8de0e83aeab65d"
+    },
+    "proverb-archive-6b14049dfd5d": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Raději kováře než kováříčka.",
+      "contentSha256": "a5cc6fcfd4059ecd5e929ef77ad086f52eb4bba88b103f9e19076ed324c21200"
+    },
+    "proverb-archive-eebf3e214a43": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Šetrnost nad bohatství.",
+      "contentSha256": "86fd8f0f17b03f184ae42b4937a0660ba1eb66051da7bab51c67415a9617d944"
+    },
+    "proverb-archive-59c744d1d677": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo šetří, má.",
+      "contentSha256": "3db470302fd1936db393e97c9930070e31f67ed731e608a15819d1c2c5d2bb9e"
+    },
+    "proverb-archive-4722424562bd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Neudržíš-li za uzdu, za ocas neudržíš.",
+      "contentSha256": "b235e51a23f4711e5cbe0d701ef7ef31015d578d035067c49b1e7bac22fbb6bd"
+    },
+    "proverb-archive-96f67b589001": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Není hospůdky, by nebylo půtky.",
+      "contentSha256": "edde3e9f6a2f2c4f36ef17580e8e63fb0d4d7c66c5219775b989e9865ac60196"
+    },
+    "proverb-archive-b526dcd45ec5": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kde co čpí a kde co hnije, pole, luka z toho sílu pije.",
+      "contentSha256": "beb710ae5e225196ae1a1247e95eb0388bcd8672f90eeb1a077f0b97672dcc0f"
+    },
+    "proverb-archive-4156605c5ddd": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nekoukej na vrata, ale za ně.",
+      "contentSha256": "af7e84d5965c3a29753ff9e2d777a95d0cf2caeb00d6e2397883714dda98dc9a"
+    },
+    "proverb-archive-964bcb70ceaa": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Meť před svými dveřmi.",
+      "contentSha256": "b6052e6d1d1f912a7a746b7fe98d5820e7bcb78ef3af916c1cd9c187bc8eaf15"
+    },
+    "proverb-archive-39fbf97fa280": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Hrnec se pozná po klepání, blázen po štěbetání.",
+      "contentSha256": "5a0d56a29c1a0db4a2a1e2fc4ede65279a97a2fe05174e0e304c7ad9650a8476"
+    },
+    "proverb-archive-68d00f3e7cc3": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo ví, co v hrnci vře, když jest pod pokličkou?",
+      "contentSha256": "e1e76399d3f90d58882751c541cb4f03bff2caf1c8b5dcc10a39f85b9165c982"
+    },
+    "proverb-archive-d2150c697346": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Malý hrnek rád překypí.",
+      "contentSha256": "0a1da58f6f9b57781ade6fff887d07ccd7c677015d9db0b64b091c813c137a9a"
+    },
+    "proverb-archive-62df628d894a": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Drž se břehu, nechceš-li utonouti.",
+      "contentSha256": "ae001c21e93b7856b22c45b4c8c1e847d5f22b90d4a408c2e60a8f2e553efe6e"
+    },
+    "proverb-archive-2f36cc9cb282": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Podemletému břehu nevěř.",
+      "contentSha256": "686254129bae90539531e5bbdae10c0dd189c58661d79fba3bc5c5a686f7dd1a"
+    },
+    "proverb-archive-6542d0bd9c8b": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Čím jsou vody kalnější, tím jsou lovy valnější.",
+      "contentSha256": "21f7f9a70552505f562f5a7fc0133175d8664b2ad10d30241a859af85f474e54"
+    },
+    "proverb-archive-6175210b5e07": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Na ptáky musí se lepem a ne cepem.",
+      "contentSha256": "8580fe56e1047e00d4ffd4944cc079761c8675ae345fe44e6d2e6b5dcff2e0e4"
+    },
+    "proverb-archive-fce6dad3bc9f": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kdo jednou ptáka z ruky pustí, na střeše ho těžko lapne.",
+      "contentSha256": "61be780d3aa83ac2d5e2813b92401b09c583aa132c012e7889d3128b352bef8b"
+    },
+    "proverb-archive-4e724b7bf281": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Ptáka zpěv prozrazuje.",
+      "contentSha256": "86a2b222ba9a0dfc0f4bd573e3398e117b72116a7fe7f6f8d03b63949fd24c95"
+    },
+    "proverb-archive-aa22fb60d22b": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Malý pták, malé hnízdo.",
+      "contentSha256": "b0f79e47bf4aba389875c4cf71c5b243bdaae30dffba9d8a6e739da5f10d190e"
+    },
+    "proverb-archive-8054f23aedad": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Vrabci se hádají o cizí proso.",
+      "contentSha256": "49589cb4fd872c6d7c6a48eeba6178309ecb3763de6e326125189da2a5164d76"
+    },
+    "proverb-archive-7d5d0e461d49": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Lepší pták jeden v ruce nežli dva letící.",
+      "contentSha256": "ef9449d4560a8b5dc200e79d2d659870cbfa78474ce113dd79f0251149b66927"
+    },
+    "proverb-archive-fcf2fd0a92cf": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Nesluší za vrabcem vejce házeti.",
+      "contentSha256": "03f8fdb1a27084880df2f834d052545863ae723207c45328edcf1976e8a9bed3"
+    },
+    "proverb-archive-2008df90af63": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Těžko z kamene olej vytlačiti.",
+      "contentSha256": "c2a4ff260d955b1c6d5ea9889964563721d1104ba7c26370d11ff625f0b1d265"
+    },
+    "proverb-archive-754bd342f6f1": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Na tvrdý špalek tvrdý klín.",
+      "contentSha256": "94d3fdc6739580ccb06e4e008484474da0f19b93e6a41e700fe9cc9c82077811"
+    },
+    "proverb-archive-43bae73427a3": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Ze špatného semene nečekej dobrého plemene.",
+      "contentSha256": "9bc41432598b314f71868e81bfe0dd95fbb7d96390a7f5c713914ffca3dc49f9"
+    },
+    "proverb-archive-74ad1f8bce9a": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Jediná prašivá ovce celé stádo nakaziti může.",
+      "contentSha256": "ee449fe600b0d6361e3c14fc24f6820c33c90b0f96f758c18a1c247e3a13b70f"
+    },
+    "proverb-archive-8f58c15b0f38": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Čí chléb jíš a pivo piješ, toho píseň zpívej.",
+      "contentSha256": "cbe3635fa2a8ce65023189f8b09c7310f262f059eacaa3be9e486fd6db7ad702"
+    },
+    "proverb-archive-078abbd44c8a": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Zlatý klíč všecky zámky otevře.",
+      "contentSha256": "12697315632b6cc25677549d2c86d987dc94e93f6cbc906c25e0a6e8615c87e6"
+    },
+    "proverb-archive-695448a19b17": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Chovej tele, bude z něho vůl.",
+      "contentSha256": "b7762c88d8579442eb6e81b7865368d883bb6e3981a7279d3e1baea47afd3b5a"
+    },
+    "proverb-archive-634be44ad358": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Jazyk bez kostí, ale kosti láme.",
+      "contentSha256": "d3e8688cf8679f8f6894964dcd18c2b5d7ab07de764eed80690b136dff4615e6"
+    },
+    "proverb-archive-48fba77ae6c3": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Když se jedna husa napije, pijou jiné všecky.",
+      "contentSha256": "8a8b234e1aeb865d332c18217ac57134a14c290fd6175ea53fa3889810b990da"
+    },
+    "proverb-archive-a1f1787f2d85": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Když nemáš křídel, nelítej.",
+      "contentSha256": "767de6d125c15e0737004de2426d4650c16aab985ffd7c3dbf0afb892685bb4a"
+    },
+    "proverb-archive-c487bd88d414": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Není krávy, která by telátkem nebývala.",
+      "contentSha256": "fc9cb0a3a08e25201996707067ce0fcd4ca172f406cc08441697f6f54964f887"
+    },
+    "proverb-archive-4a5ba0900615": {
+      "status": "held",
+      "reason": "Odloženo: málo známé nebo obtížně rekonstruovatelné znění, případně příliš obecné či umělé vodítko.",
+      "reviewedAnswer": "Kam voda má spád, tam teče.",
+      "contentSha256": "56e0012236b6f19673d5899f2ddc48b4b69d347bf32da423fd1dbaf8b88bc1e7"
+    },
+    "poem-erben-vodnik-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Na topole nad jezerem\nseděl vodník podvečerem:",
+      "contentSha256": "3c8fa22d39c334a2dd2dbca0ea025238b8c47182ffa3a1b2c4586939bc3440d9"
+    },
+    "poem-erben-vodnik-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Šiju, šiju si botičky\ndo sucha i do vodičky:",
+      "contentSha256": "97d708099ef14147f7d4da471f78ba5a1b6b7139698986b115611206567e5856"
+    },
+    "poem-erben-vodnik-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Zelené šaty, botky rudé,\nzejtra moje svatba bude:",
+      "contentSha256": "a204a94c07eda373de3ebe01bda84095c78580c72bb3b57d36ffb13343706547"
+    },
+    "poem-erben-vodnik-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Nevesely truchlivy\njsou ty vodní kraje,",
+      "contentSha256": "f4c89012ad63ace916d876118238dd547582fb5099c56a6186f66dc56c4af1a1"
+    },
+    "poem-erben-svatebni-kosile-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Již jedenáctá odbila,\na lampa ještě svítila,",
+      "contentSha256": "e6919758f0975b54368826f7ebf0cc115fbff5d71ab764e86e0f4662fe1336b8"
+    },
+    "poem-erben-svatebni-kosile-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Sestra do roka nežila,\nbratra mi koule zabila.",
+      "contentSha256": "c68939c1914c23c0b6f860a886b6e23c9860a002c747729a9c598ad668aa0ccd"
+    },
+    "poem-erben-svatebni-kosile-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Zasej, má milá, zasej len,\nvzpomínej na mne každý den,",
+      "contentSha256": "033f16ed25d2908bbee810d7b85fec50335e216bf546bfbcf81487763513519b"
+    },
+    "poem-erben-svatebni-kosile-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Pohnul se obraz na stěně —\ni vzkřikla panna zděšeně;",
+      "contentSha256": "0823d6c8e75e896799ab7931c8f5037cbcdbd8039e9f3192a2b14a5e50d922b3"
+    },
+    "poem-erben-stedry-den-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Tma jako v hrobě, mráz v okna duje,\nv světnici teplo u kamen;",
+      "contentSha256": "ed0f8d5f8e95822247051925eab37794a409505258d6793537b98ee31a5d7d85"
+    },
+    "poem-erben-stedry-den-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Hoj, ty Štědrý večere,\nty tajemný svátku,",
+      "contentSha256": "fc619e595aa7e83a53cafbe2e86b306c85a7a15e345662c70f52059a29c28747"
+    },
+    "poem-erben-stedry-den-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "stojí vrby stařeny,\nsníh na šedé hlavě.",
+      "contentSha256": "81efd79c0e941d8cb949e0f7cadd022b4c85fec474236446c2a82f2f438f682f"
+    },
+    "poem-erben-stedry-den-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "všecko ve světě jen na obrátku\na život lidský jako sen!",
+      "contentSha256": "e60a13f9cfa1eca719858ad0afe1d07b71f433651d545bb90c4a9ee6559f08bf"
+    },
+    "poem-erben-holoubek-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Okolo hřbitova\ncesta úvozová;",
+      "contentSha256": "21812e0668d7dc60b2a6a4627612a481b433706cd3cb17e55983d9c1147ba204"
+    },
+    "poem-erben-holoubek-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Běží časy, běží,\nvšecko s sebou mění:",
+      "contentSha256": "5d07addf6ff7f706a04715464c3856a20532808786920c02a4aa26888769bc6c"
+    },
+    "poem-erben-holoubek-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "jedno však nemizí:\npevně stojí vina.",
+      "contentSha256": "1bdb0691e7108df9a8932dc13fc7451e7865efb9afdeca9eabefa00c958f5be5"
+    },
+    "poem-erben-holoubek-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "na doubku sedává\nběloučký holoubek.",
+      "contentSha256": "b5f232034ceafdee794f0808c567db8399c1ce0297997329c49e5008e42732e7"
+    },
+    "poem-erben-vrba-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Večer lehneš zdráva, svěží,\nv noci tělo mrtvo leží.",
+      "contentSha256": "425d1db8cb92151bde8d67cf53edc28e208025cc5cef925da006ea54ee73626c"
+    },
+    "poem-erben-vrba-02": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Co souzeno při zrození,\ntomu nikdež léku není.",
+      "contentSha256": "7c6a4deeb8788524088f3974f26e00b2a8984c41ae71946e6a2579340e445352"
+    },
+    "poem-erben-vrba-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Ve dne s tebou živa v domě,\nv noci duše její v stromě.",
+      "contentSha256": "2a01058ea207f8343e471d4235ad48b8337d6a0337b0959e356004eede21f1a7"
+    },
+    "poem-erben-vrba-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vzal sekeru na ramena,\nuťal vrbu od kořena;",
+      "contentSha256": "8a50777d481df5ef1d5a7416abce20b0fae8fe87dc32232fd5e4a14b793921b5"
+    },
+    "poem-erben-poklad-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Na pahorku mezi buky\nkostelíček s věží nízkou;",
+      "contentSha256": "c41a28cf022570268c84c0aff1e5fa8dcdca4e1fa441a212c315366cb311af61"
+    },
+    "poem-erben-poklad-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "v kůru tam se právě pěje\nKrista Pána umučení.",
+      "contentSha256": "9487ae6d48ec52fb165f32d57ced788b702dff509989495650e32d67fa54e0a7"
+    },
+    "poem-erben-poklad-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Snad ji vábí stříbro, zlato? —\nAch, již ona nedbá na to!",
+      "contentSha256": "416d22f4d02e22ab0f2f8b1516e7e84f41a794c326a0c34686143d429169405f"
+    },
+    "poem-erben-poklad-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "žetě velmi málo zlato,\navšak dítě nade všecko!",
+      "contentSha256": "000282e98edf5b55e056d566e595955bf4afc7191d2a2f104398e00fe2ca0166"
+    },
+    "poem-erben-lilie-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Umřela panna v době jarních let,\njako když uschne mladé růže květ;",
+      "contentSha256": "a1dd849ab5fad3402387bfc2c0cb9f4a9774737d0e14ef82d3c56679f811f80f"
+    },
+    "poem-erben-lilie-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Pochovejte mne vpod zelený les,\ntam na mém hrobě kvésti bude vřes;",
+      "contentSha256": "00ded1cf1c237fb0d7572e4420e9265e4cfd606aa38dc3db4f81e43ec9de653c"
+    },
+    "poem-erben-lilie-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Lilie bílá — kdo ji uviděl,\nkaždého divný pojal srdce žel;",
+      "contentSha256": "ca36ef5df062871b7c91540bb05ead6fddfec05f4d9ec89ab15a0912a9d74d51"
+    },
+    "poem-erben-lilie-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Zdviženo rámě, jež ji probije —\ntu místo laňky — bílá lilie.",
+      "contentSha256": "715539faee34072c04e25071c6748e2f8071784e55073ae8daecd76666c3ad1b"
+    },
+    "poem-erben-zlaty-kolovrat-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Okolo lesa pole lán,\nhoj jede, jede z lesa pán,",
+      "contentSha256": "d1af9ae3c7db18458c6ef2c0f839e66e80d4944604cc960fdea6de3e2396a5f1"
+    },
+    "poem-erben-zlaty-kolovrat-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "zbloudil jsem při lovení zvěře,\ndejte vody pít!",
+      "contentSha256": "073e2a90c193063b36b92e291e762822a2ca897ac96b2e471df3b5224db227ac"
+    },
+    "poem-erben-zlaty-kolovrat-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vyšla dívčina jako květ,\nneviděl také krásy svět;",
+      "contentSha256": "fef1c013698528e1a93241b5604202328b11cfd4adffa342f599c0078476e60e"
+    },
+    "poem-erben-zlaty-kolovrat-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Pojď se, má paní, posadit,\nupřeď mi z lásky zlatou nit.",
+      "contentSha256": "f1cd5f693d4442a815cc0bf24966bdcf89b78f32b446b3594f09d77a53ed9764"
+    },
+    "poem-neruda-1-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Letní Ty noci zářivá,\njakž Tebou srdce okřívá —",
+      "contentSha256": "b92c2298f7d3727cf0abbb31e16f85d82d1732d0a0de6f237b9c3f45f590374d"
+    },
+    "poem-neruda-1-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "S oblohy bílý měsíček,\nstarobný nebes tatíček,",
+      "contentSha256": "05c7e5e83debc8f630affa06f6030393d4491102bf980714027e3feb31ff6aa1"
+    },
+    "poem-neruda-1-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Dokola jeho dětičky,\ndrobounké, smavé hvězdičky,",
+      "contentSha256": "15b3bc134fd162021acb500aba63920d160e3ad99d76c472a29fa9333742f657"
+    },
+    "poem-neruda-2-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Když k Vám vesel hledím, zlatá Vy kuřátka,\nslyším naše písně, česká zřím děvčátka.",
+      "contentSha256": "4a7d18f4a399f882f91464c69dd0d559288b8f87bd0b537dea24bcbe2374f7c7"
+    },
+    "poem-neruda-2-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Naše dívky slunce rannější bývají,\nve potoku chladném oči si mývají.",
+      "contentSha256": "a3429349e2bc49913682e1e0a6f3a909def9738b5d0a8b2cee1c0d23ad110081"
+    },
+    "poem-neruda-2-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "V noci krásné hvězdy do vody naprší —\nběda hochu, na nějž oči ty zasrší!",
+      "contentSha256": "9cbe18d533d0a8ca0897ce3cac7423e61d1c759d02c8a196b4ee07c838f79396"
+    },
+    "poem-neruda-3-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Ach, jaké to blaho: poležet\nzde na drnu poblíž boru",
+      "contentSha256": "053cba2a2ab66edc743a5cc1888d9fbf627780e39c54901a93ca17fae867c8e7"
+    },
+    "poem-neruda-3-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Ty třepotné, smavé hvězdičky\ntak čiperně na mne hledí —",
+      "contentSha256": "cf92716f48aed058ec7c14f95648e1691c2a6cec78733c493037992b87dc728b"
+    },
+    "poem-neruda-3-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Že maličké vy prý hvězdičky\njste obrovská samá těla —",
+      "contentSha256": "cbf16f28be1162b6a15a5413dc889f61e5555ce8cae5d483f231a66c909d9924"
+    },
+    "poem-neruda-3-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "když vesele prstem zaluskám,\nje věru v tom více šumu!",
+      "contentSha256": "4a1e8adb08200a61af8322720ad6b2162d7d9cdde184566d677cbea0e430a771"
+    },
+    "poem-neruda-7-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Po nebi hvězdic je rozseto\nlesem jak zvonců vřesných,",
+      "contentSha256": "0628f87f47b754be0207c9a1932d2bd89c23c99e7d5a43b9252be839d3402b3b"
+    },
+    "poem-neruda-7-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vidíme plesu jenom cíp -\nzkoumej a čítej sebelíp,",
+      "contentSha256": "b0b560853a1b5fa56cab9696187c16f2fd92f79433aaaf26bec5be109c3b2c62"
+    },
+    "poem-neruda-7-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Mysli se nejvýš - a nad tebou\nhvězd jako vřesných zvonců -",
+      "contentSha256": "c8fd76e62d0c226110ad801b45d7d1fa0e2b7f6b5f7b805053822558284f27e1"
+    },
+    "poem-neruda-7-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "myšlénka letí světům vstříc -\nvysoko - převysoko -",
+      "contentSha256": "5306f1130b78f32988f03ccc41219a1418332e49df4b6afffc3e2bc8bfb1e2bc"
+    },
+    "poem-neruda-21-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Jak lvové bijem o mříže,\njak lvové v kleci jatí,",
+      "contentSha256": "6dfceb5b53e615cd44420bab5a363d9a58dfc0e4e9791bb930a6450a2a648285"
+    },
+    "poem-neruda-21-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "my bychom vzhůru k nebesům,\na jsme zde Zemí spjatí.",
+      "contentSha256": "b895495d963f1b9d4957a1880759428f35e9bb18b36833b22ae97d52b798b5da"
+    },
+    "poem-neruda-21-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "My přijdem! Odpusť, matičko,\njiž jsi nám, Země, malá,",
+      "contentSha256": "9ddb03c977046ec3f278105b15d6eefa5ca78a462da9fcaf8c2d3f339e651100"
+    },
+    "poem-neruda-21-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "my blesk k myšlénkám spřaháme\na noha parou cválá.",
+      "contentSha256": "f5c3efeefdde761006fa14fd24fd9265cb10cf42188408af495b38f78283741c"
+    },
+    "poem-neruda-21-05": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "My přijdem! Duch náš roste v výš\na tepny touhou bijí,",
+      "contentSha256": "8562504cdd28c37378794af5e311c168b44e0b42907a431cd7d3e5eb1bfd996e"
+    },
+    "poem-neruda-22-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Seděly žáby v kaluži,\nhleděly vzhůru k nebi,",
+      "contentSha256": "e98804bf5c263d9fdde98ea89434112bc2498d638b4268c7f65c4e722660ed87"
+    },
+    "poem-neruda-22-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "mluvil o pánech hvězdářích\nzove je „Světa krtky“.",
+      "contentSha256": "23f3e6dc51a7bb5a32ee5508b06deca8dae712d49112c912e906775c876f197c"
+    },
+    "poem-neruda-22-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "dvacet že milionů mil\nteprv jim loket jeden.",
+      "contentSha256": "1c24172957f6d36df074c494a1ca5c2d20e20c7b026e31d7273d0976b28f77b4"
+    },
+    "poem-neruda-22-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "ze Slunce že by nastrouhal\nna tři sta tisíc Zemí.",
+      "contentSha256": "ecd66083f4a1265a85fc0455b04967f7fe97e5e6176f4a7a9e1631f143022d9d"
+    },
+    "poem-neruda-22-05": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "jsou-li tam tvoři jako my,\njsou-li tam žáby taky!",
+      "contentSha256": "daf2097c86019c6fec5592d7d6ecbcb82d662b85eabcd4ba39ffa699673b34a1"
+    },
+    "poem-wolker-postovni-schranka-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Poštovní schránka na rohu ulice,\nto není nějaká lecjaká věc.",
+      "contentSha256": "6fbb22d45058bcd71655af95dcb39215088720849a91df7549d354ad6562133f"
+    },
+    "poem-wolker-postovni-schranka-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Psaníčka jsou bílá jako pel\na čekají na vlaky, lodě a člověka,",
+      "contentSha256": "840c68406da823aa965a9f615101d2a6ac708e2dfcccf52b40f3463a8aaf2065"
+    },
+    "poem-wolker-postovni-schranka-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "psaníčka do ní házejí ze dvou stran,\nz jedné smutná a z druhé veselá.",
+      "contentSha256": "18ff5a98de18fe08cb17a1d795ef8e80fa4ba96717b244110d85e6fe6d42feee"
+    },
+    "poem-wolker-pokora-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Stanu se menším a ještě menším,\naž budu nejmenším na celém světě.",
+      "contentSha256": "30910070044964cf63d9d2260d42d0d3d0f5d5faf14a6a3486edc108828dcbee"
+    },
+    "poem-wolker-pokora-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Po ránu, na louce, v létě\npo kvítku vztáhnu se nejmenším.",
+      "contentSha256": "529c884e5e46fe13a27525e99dca716e8f501b96b2268d2ede3eb5d1ebc1efef"
+    },
+    "poem-wolker-veci-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Miluji věci, mlčenlivé soudruhy,\nprotože všichni nakládají s nimi,",
+      "contentSha256": "f78fba9711c0e61c35e912660c2b18560d26a951d0a651f04ea2f1730faad13e"
+    },
+    "poem-wolker-veci-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "a ony zatím žijí a dívají se na nás\njak věrni psi pohledy soustředěnými",
+      "contentSha256": "523628b15e6af551f96a42cec64a22268396fdf23619831a7b57f9134a7d0d5e"
+    },
+    "poem-wolker-veci-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Ostýchají se první dát do řeči,\nmlčí, čekají, mlčí",
+      "contentSha256": "7dd22d4f4b702ec64ffa17067c72a8b75180314423a62013c7d07ca696b2890e"
+    },
+    "poem-wolker-kamna-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Myslím, že v poledne každý den\nby mohl být květnově tichý a slavný,",
+      "contentSha256": "a9e2ddd631ffcbc65f3ff54e11ddfac07b6b13666ce9f0f14c85622984945648"
+    },
+    "poem-wolker-kamna-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Maminky-sluníčka\nv kuchyních by se nad nimi točily a smály,",
+      "contentSha256": "5e01d28accd7861b803f2a180620507e3d0f7a3845251fe246f54423770761e3"
+    },
+    "poem-wolker-kamna-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vezměte z našich rukou, moji nejmilejší,\nkytici!",
+      "contentSha256": "9b6a21b2bbfa8139f13fbeca1b9779c73e88219e76b5c4850b17c091068ca664"
+    },
+    "poem-wolker-okno-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Okno je skleněná loď,\npřipoutaná k břehům mé světnice.",
+      "contentSha256": "e9f554f20ba4ae73c3e0bf242654678a29b9681680ea4a98beef95dbc1317470"
+    },
+    "poem-wolker-okno-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Našli jsme i nové světa díly,\nze všech světa dílů nejmladší,",
+      "contentSha256": "b2b8309db3225b5067008f58c182f6084c28e9624314395962509980ddc1c61c"
+    },
+    "poem-wolker-okno-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "U rozviklaného stolu mezi dvěma vysychajícími kalamáři\nnejlépe uplatníš povídku s polární září.",
+      "contentSha256": "38b7b86a5ad581a583cab9f4fc840f009f074cfbbf096ff10d1215c3f8f80b71"
+    },
+    "poem-wolker-okno-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vše bude tiché a šťastné, — ty sám nejvíce.\nOči své položíš doprostřed světnice:",
+      "contentSha256": "809810592be9e27d463baabb809a8b30699b48eeb2f1d9d325fcabaa1127af10"
+    },
+    "poem-wolker-zne-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Slunce je veliký básník\na napsalo krásnou báseň",
+      "contentSha256": "1c057455b278071be7a500149d1eb57e634dd635c47b2436ff867a87842beeca"
+    },
+    "poem-wolker-zne-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "ale slova jsou tak veliká,\nže neprojdou mými ústy,",
+      "contentSha256": "4b985f905d2da8194173b4a5e1bfdd2a430ef5f6a76bf80c5d4250fdb9a961a6"
+    },
+    "poem-wolker-zne-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "a jen cítím, že jsem:\nklas v řadě,",
+      "contentSha256": "0c8fb14a72057d8f872d8810e33f4f5a3d879d5356b5453e2fcd35d2484382c8"
+    },
+    "poem-halek-1-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Přilítlo jaro z daleka,\na všude plno touhy,",
+      "contentSha256": "13330c521ab2e851e7d61b51f998d4bbf41ceb0bc7b582216f6b720999a7388b"
+    },
+    "poem-halek-1-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Vylítly z hnízda pěnkavy\na drobné děti z chýše,",
+      "contentSha256": "6ffa7e4a70d3f6786f882a0a199a6a57f913d24813a5c87a14b1e74797ab25ce"
+    },
+    "poem-halek-1-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Z větví se lístek tlačí ven\na ptáčkům z hrdla hlásky,",
+      "contentSha256": "cfa7e9c8f925b1ca7e95cc1081619a5c7b36fc6c71654e83c4429d25ee448b9c"
+    },
+    "poem-halek-2-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Já jsem ten rytíř z pohádky,\njenž hrdě vyjel do světa,",
+      "contentSha256": "6f305000a3464dcdf2a0f0efe4a643b96a30087afe9eba456c9ab507e68add33"
+    },
+    "poem-halek-2-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "O ní šla věsť: kdo spatří ji —\nten s kletbou prý to odnese,",
+      "contentSha256": "9007066c3386f547569c07571b1722e6f6fa9c340ff2141051af1228da9e7de8"
+    },
+    "poem-halek-2-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "A vyjel jsem, a za ten hřích\nteď — v zpěváka jsem zakletý!",
+      "contentSha256": "64c446de0c684f2c691b943a00342cfd36d0e4d614088bf753bb05bb029f730c"
+    },
+    "poem-halek-3-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Umlklo stromů šumění,\na lístek sotva dýše,",
+      "contentSha256": "b92190e97026c0cc4f20c0e32d963cf8f73bbd2a5f01c122cbe0c937c6d5458d"
+    },
+    "poem-halek-3-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "jenom v těch ňadrech teskno tak\na u srdce tak bolno.",
+      "contentSha256": "93a95ca9a7b6d84ac40f29a6f2059bf933666441d4a55e7aa57d7a59c6b691b8"
+    },
+    "poem-halek-3-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "můj Bože, a ta rosa též\nse v moje oči vkrádá.",
+      "contentSha256": "a052a7b3039a1dba46e441836c4d1556398b65b18d9634c345467ed106407047"
+    },
+    "poem-halek-60-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Kdo v zlaté struny zahrát zná,\njej ctěte víc než sebe,",
+      "contentSha256": "4b55ef1123c49144e0ea4f2d00f737885b9c0adda78b774c5507165a3171b6b1"
+    },
+    "poem-halek-60-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "však ze všech trestů největší,\nkdyž národ nemá písně.",
+      "contentSha256": "1900760d465ea4524a5ee7f24d36a258b0033c759dd1ed1d69c0db2aa1acdc54"
+    },
+    "poem-halek-60-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Ten národ ještě nezhynul,\ndokud mu věštec zpívá,",
+      "contentSha256": "c99ff1f6b6d250636a61fc9db7fd656162fd4ba19c82fb7ee0d47f23553a0230"
+    },
+    "poem-halek-61-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Nekamenujte proroky!\nNeb pěvci jsou jak ptáci:",
+      "contentSha256": "f7842841e81c9e2ce489517b19fa8c06aa13f0cc9c508adb7cd33ab2fa655855"
+    },
+    "poem-halek-61-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Soud boží na se národ zve,\njenž pěvce své ctít neví,",
+      "contentSha256": "412f43dfc5feff04652f21f5bd94842003ed8e03bf73b0f7ea1bd6b6bdebcb83"
+    },
+    "poem-halek-61-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "a co vám zpíval od srdce,\nto ve svém srdci noste!",
+      "contentSha256": "303c649969a846530c144145acb92baed040f3038033a7db8a28f55d20210315"
+    },
+    "poem-celakovsky-toman-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Večer před svatým Janem\nmluví sestra s Tomanem:",
+      "contentSha256": "e90fbd6d602bb77dc13ab6a2fd1c65b3dc6275afdd27b729ac7d92e2b1fdcf96"
+    },
+    "poem-celakovsky-toman-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Slyš, Tománku, radu mou,\nnedávej se doubravou:",
+      "contentSha256": "4241c6641969085da4030b8219309d5101a79c53030efde8ef84a11ee0c27396"
+    },
+    "poem-celakovsky-toman-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Jedna li tě opustila.\nnahradí to stokrát jiná.",
+      "contentSha256": "d67e0da8f7d2cb1bd5a22b672cd414d3133f3d5c67f7d3203c5d1fd786e38d79"
+    },
+    "poem-celakovsky-toman-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Tomanovi srdce plesá,\nuzdu pouští, s koně klesá",
+      "contentSha256": "5da062152e9b98ec9707b9b6f968cc8904f3ec1311626d8628ab138efc440a9d"
+    },
+    "poem-celakovsky-pocestny-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "sotva přejdeš jedny hory,\nhned se najdou jiné.",
+      "contentSha256": "c391f8b0b46bc3fed57722f7aedd2f7f63f597df8ba9a8f698bf2c5c8c79b248"
+    },
+    "poem-celakovsky-pocestny-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "jen když já mám zdravé nohy,\nk tomu dobré boty!",
+      "contentSha256": "98efbaefe1570a6ce600f5c5848381300fc366e722c5bfe7aede4c16a5e11c36"
+    },
+    "poem-celakovsky-pocestny-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "jednou se jim kolo zláme,\njindy vůz se zvrhne.",
+      "contentSha256": "00e883d0b3002183d40381fc077c2ad176d2af1e57bd481b6ccab0466b7ddc55"
+    },
+    "poem-celakovsky-pocestny-04": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "v jedné hospodě na nocleh\npán nepán se sejdem.",
+      "contentSha256": "27af5715cdf470be1dd21866a3f8ea41efd962e72d60cb1e4a368f3b4c0987cb"
+    },
+    "poem-vrchlicky-podobenstvi-01": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Když zřím plnou číši vína, myslím na tvé vlasy:\nv obou tolik zlatých svitů míhá se a hrá si.",
+      "contentSha256": "d7dda7c652c57d25f43f4b118bdd394f4e6be386db453bfe4388d6e0aea47166"
+    },
+    "poem-vrchlicky-podobenstvi-02": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "Když zřím plnou číši vína, myslím na tvá ústa,\nrubín vína vstříc mi kyne a jak rty dva vzrůstá.",
+      "contentSha256": "1ed361a4ba4ed6e3519172881859c6c69c745edd2489661c9e6688d2b2a63707"
+    },
+    "poem-vrchlicky-podobenstvi-03": {
+      "status": "held",
+      "reason": "Odloženo: izolovaný méně známý verš bez dostatečné opory pro rozpoznání a doslovnou rekonstrukci.",
+      "reviewedAnswer": "A ten žár, jejž v srdci vznítí, nelze ztišit pěním,\nleda novou číší vína, novým políbením.",
+      "contentSha256": "7cb36728b7d8413c4bfb3e60adc7513bdfc2ed84ee0bbb13b20af98d8c3c47af"
+    },
+    "prose-bab-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Babička měla syna a dvě dcery.",
+      "contentSha256": "b63a89ad14050c56478c19910b283003dd13261765c2066cdc451d835580cbcf"
+    },
+    "prose-bab-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Babička si hned první hodinu srdce svých vnoučátek zcela osvojila, však se jim ale hned také všecka vzdala.",
+      "contentSha256": "0fd722bf0ae0b7199dd211a703bcb10751364c64b797527e279f4c762ba80173"
+    },
+    "prose-bab-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Co se dětem v babiččině sedničce nejlépe líbilo, byla malovaná její truhla.",
+      "contentSha256": "7aee17bcc7462981e1c6e248acca53956d0a296d2882b758fbd044aa63849091"
+    },
+    "prose-bab-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Přej nám tu radost, Terezko, vždyť jsme rády, že se máme",
+      "contentSha256": "b97bdb6b3bdf8b39143b2cfffff0d5095f662379169873679402e26aa9dd871a"
+    },
+    "prose-bab-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "První, co si babička v hospodářství zcela na starost vzala, bylo pečení chleba.",
+      "contentSha256": "408aac800b6ef7c0444347e56408beaa0654b86166246e90da13b949a09c9801"
+    },
+    "prose-bab-06": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Dokud ale žiju a Pánbůh mi zdraví popřává, náleží, abych pracovala.",
+      "contentSha256": "e677c46bf7c26e4348f6e1bcdd0cd2c531bcc2a693ec3a37fc9535ad46bf0547"
+    },
+    "prose-bab-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Ale člověk mnoho vydrží, milostivá paní!",
+      "contentSha256": "9bb72398c16b918fc76a5f6e5ebc0b0523e1496cce3854a6c8215d38e3542b49"
+    },
+    "prose-bab-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Babička neopustila malé údolíčko, kde našla druhý domov.",
+      "contentSha256": "adf38b2f12a1fd24ec7ce69531f6112c96c0d618957384d6fb35fdb184c86ed7"
+    },
+    "prose-bab-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "každé zvíře, když je má člověk rád, je vděčné",
+      "contentSha256": "9faab77bfeceadfe6dba946031e32b564be01015e0c625e8df348b549c0e0021"
+    },
+    "prose-bab-10": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Včeličky, včeličky, babička nám umřela!",
+      "contentSha256": "33f2186a83f10f4481e74c7458079f7b142cfabb04859a90607ed772e469d5b9"
+    },
+    "prose-bar-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Obecní pastýř jmenoval se Jakub a zůstával se svou dcerou Bárou v té poslední chalupě.",
+      "contentSha256": "97394c961010e9fd9be78cd6739e38c7c1d93329bcbb9673bea448c270c728cb"
+    },
+    "prose-bar-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Bára si to pamatovala a tak dlouho zkoušela udržet se nad vodou, až to dokázala.",
+      "contentSha256": "0fc469f5f4dc8af4a4b5fb16693b3c8e21f2cc23eea5dcce44db203724135195"
+    },
+    "prose-bar-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Bára nedala s sebou vládnout, aniž si dala pěknými slovy oči zasypat.",
+      "contentSha256": "07118116806206f25fb3696cd0a49a9630a7ba1b966e4ef15f9c864f496748fa"
+    },
+    "prose-bar-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Nesnižuj sebe, nepovyšuj mne, jsme si rovny.",
+      "contentSha256": "6954ca8177fe9c785e38b755c434eea41cc3f5287a9104c18afa86b26ce12872"
+    },
+    "prose-bar-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "„Nevěřte takovým báchorám, lidé,“ káral pan farář.",
+      "contentSha256": "df02a24f72b4b9aa389fa6c9b8910a880d4395ce4ed0edb37d98cc2faf2707e7"
+    },
+    "prose-kar-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Od Lesního Mnichova k českým hranicím blížila se tlupa vojáků.",
+      "contentSha256": "a8cab077ee7d57a3b0817681efb6eb77d53e7e75c726e0eb6e9fc96e0c65673e"
+    },
+    "prose-kar-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Vojáci házeli čapkami do povětří, smáli se, výskali a mnohý stál v němém pohnutí.",
+      "contentSha256": "e2c2cac63064c501de130d439dc5fbdcecf12d04512309ac67c980990ef0ca20"
+    },
+    "prose-kar-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Jeho jediná žádost byla, ještě jednou se podívat domů.",
+      "contentSha256": "576ba54a9269ba42273fa81885d5f5cc710a0b52dedc90300838cf1560ed2f31"
+    },
+    "prose-kar-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Abychom ho uchránili od stavu vojenského, obelhali jsme dobré lidi a vydali ho za děvče.",
+      "contentSha256": "eeb177d01965a086a1405041edffdfe76ed67472a8c0c3ffbb4bc71e002271ca"
+    },
+    "prose-kar-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "No, ztratil jsem nevěstu, hale našel hodného kamaráda",
+      "contentSha256": "781cda9697574f5d01fd569d04ca1bd92ae36b0b28d85d740e4d71ca1b2c8c87"
+    },
+    "prose-lab-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "aniž mi se hrubě chtělo s někým se raditi, mysle, že mi každý svou věc chváliti bude",
+      "contentSha256": "f5d2bcb9f96ab823b96be1e36f2a256a12eae519e69c0930f250e252d2bbcb01"
+    },
+    "prose-lab-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "I vstrčil mi brylle na nos, skrze něž já hledě, hned všecko před sebou jinak vidím.",
+      "contentSha256": "56038f87aec4d9ca1263b7b56cd6c30737ef1dbe6d17df1f25811f0b176b3c34"
+    },
+    "prose-lab-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Ač ste mi usta sevřeli a oči zastřeli, věřím však svému Bohu, že mi rozumu a mysli nesvážete.",
+      "contentSha256": "629cfc93636881a630c1534a78a0196343a454c9bf100160bf6d79f27667665a"
+    },
+    "prose-lab-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Půjduť a podívám se, co pak ten svět jest",
+      "contentSha256": "c7c576179520a44c4daa3484fd82bab33fa1a366ad27ead333bf72d3c17e41b9"
+    },
+    "prose-lab-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Navrať se, odkuds vyšel, do domu srdce svého, a zavři po sobě dvéře.",
+      "contentSha256": "a3a5e0e20c9b56a2d36638c05090e421dd9d8f47832ac6d2035aeb945ead4850"
+    },
+    "prose-ner-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "A po těch jedenáct let nepromluvili na sebe ani slova, ba ani si jeden druhého nevšimnul.",
+      "contentSha256": "88b8f6779aa88f1f83a7b47d9baefe48d087c6f01e4030955d519d476497abc3"
+    },
+    "prose-ner-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Divné zvěsti začaly se najednou šourat Malou Stranou.",
+      "contentSha256": "e92b687a346bd11f31c25e6c8bbc6688f07e6d081e8e9742b2b693d53c2bc6da"
+    },
+    "prose-ner-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "A když šel jakýkoli, vyšla dobrá paní Ruska vždycky před dům a srdečně plakala.",
+      "contentSha256": "0711559cc120706991730aaee2d23991a3104a6500d675ff1995b2afb84c34cf"
+    },
+    "prose-ner-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Měli jsme jednou spolek na večeře, každý den měl večeři platit někdo jiný.",
+      "contentSha256": "3db639aad62c6427399bd3b88e974c1517c6821d4d9d031ecb564465481af5e7"
+    },
+    "prose-ner-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Teď ho rychle doneste někam do domu, ať zkusíme pomoci!",
+      "contentSha256": "c7d690cb2b4758793078cc8f32a92faca0e138ac21a6782f1b06341c062230c0"
+    },
+    "prose-ner-06": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Vypravovalo se, že pan Rybář je až báječně bohat.",
+      "contentSha256": "e4f7efeb9506ababf09b8ce35c4157932a820085ecd6a176d9e19e3ea79a8b55"
+    },
+    "prose-ner-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Jedinou těšitelkou páně Vorlovou byla jeho pěnovka.",
+      "contentSha256": "79b133ef8915449bc8324ba519c6575c57a27abfcfb011f013fa125c28978a59"
+    },
+    "prose-ner-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Seděl jsem pod dřevěnými arkádami hostince U tří lilií, poblíž Strahovské brány.",
+      "contentSha256": "9bc2cba1f1bdd5c92b8cf617bb59f71da3fb8f5aa6248cb451490841f1edba17"
+    },
+    "prose-ner-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Jasně zaznělo as dvoje zapadnutí železa a já byl v kostele sám a zavřen.",
+      "contentSha256": "615c9530db4496a31c323147b044192913e9ec78274029b1ea76ea7bbf32985f"
+    },
+    "prose-ner-10": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Od těch dob jsem už věděla, že se nevdám nikdy a mým ženichem že je smrt.",
+      "contentSha256": "24a31f5c46c37ba004c3622cfe7050371bf1a1f14f8769104a26f39589285a7e"
+    },
+    "prose-pol-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Do školy chodím každý den kolem jednopatrového domu, na kterém je štít s nápisem Martin Bejval.",
+      "contentSha256": "e768e2feb9569805cf02915f95d48e568fa38584a8fffe14d45cc9dbdb85c667"
+    },
+    "prose-pol-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Avšak já se peru porád, když mě nenechají.",
+      "contentSha256": "11a0e4087b4ef0d6feb337e880248c1b64dbaf64731ba2fdf798021a75dc0622"
+    },
+    "prose-pol-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Až budu velký, tak budu porád cestovat a budu mít kožený kufr.",
+      "contentSha256": "9c1169af6892603bff538ff5a60f295feae5b4d6ad2f0f612bafcd6a67c5e240"
+    },
+    "prose-pol-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Bejval Antonín odvětil, že by se ani trochu nebál, že by tam všecko sežral.",
+      "contentSha256": "357bce0e457d589f1b600409cb6e63e121f7875613dae205c913921d55898ec3"
+    },
+    "prose-pol-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Přidal se k nám Zilvar z chudobince, protože viděl, že máme s sebou buchty.",
+      "contentSha256": "992bde93ed1c0b1110542d5fe5a2899212e127bc5920acb1a5f392af69333970"
+    },
+    "prose-pol-06": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Od té doby, co se narodila Mančinka, dostal jsem kalhoty a tak jsem se stal doopravdy klukem.",
+      "contentSha256": "361b2a359690c52c7f9c26d6e645d03a2eee2dd505d33989af3f1a00412553ad"
+    },
+    "prose-pol-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Veškerá dědina lehla popelem a Éda Kemlink si propálil kalhoty a brečel, že takhle nemůže domů.",
+      "contentSha256": "d33c912d53920e1e3c01877c56bb63c2a40112dd217e7661ef5ae4fb3069eb55"
+    },
+    "prose-pol-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "My totiž chodíme do houslí tři, já, Čenda Jirsáků a Éda Kemlink.",
+      "contentSha256": "049b092b9c5324bf3654d65db5980dbf91c76d3f6c8d903147b6610ab9704791"
+    },
+    "prose-pol-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Myslím, že to byl Zilvar, jelikož se koukal jinam hned.",
+      "contentSha256": "7ef8b3bf3da4bd1322705686d6ec59710bff1cdf147f0a1cd65e1b85188b67a4"
+    },
+    "prose-pol-10": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Kdo má plavky, ten si oblékne plavky, Zilvar z chudobince nemá plavky, pročež se koupá jenom tak.",
+      "contentSha256": "5827be02ef07af725f44545be551ae1c62bf72165bc5c4af89442fb8eed7e5cd"
+    },
+    "prose-kap-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Protože všechno vím, nemohu vůbec soudit.",
+      "contentSha256": "cba4f0f06f9759d4a788f6cfb623bcee53c159c5a427ecd0027072845068aef5"
+    },
+    "prose-kap-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Pane, nás nezajímá zločin, protože je záhadný, ale protože je zakázaný.",
+      "contentSha256": "706fd8973fed01913d24d17a010d9266f7971c0e3119184aa68ba58eebb98168"
+    },
+    "prose-kap-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Víte, já nedávám vůbec na podrobnosti pozor.",
+      "contentSha256": "540c4cb6095afb542fe2243825da682a27b8432228109e4c418affe7d5fc23a5"
+    },
+    "prose-kap-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Žádný ze svědků nebyl podroben křížovému výslechu.",
+      "contentSha256": "6202ad34d39dac1606605f8df5067dfa3cc010675bf2b531c029b3e0ce8cf343"
+    },
+    "prose-kap-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Čím víc na to myslím, tím míň do toho vidím.",
+      "contentSha256": "d123a1f573a658cb97d76d4b6cc78cfd3f1f96e135011838fb8662843e4cba50"
+    },
+    "prose-kap-06": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To je ten celý trik: mluvit tak, že by se v tom každý mohl poznat.",
+      "contentSha256": "373622710ecfff05f2a8eed3d084eac07284b1a1e0afbe07c7f2467eba710003"
+    },
+    "prose-kap-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Dobrá, ráno nato byla první věc, že mi Klára zase přinesla pugét modrých chryzantém.",
+      "contentSha256": "856ba3d476732db52c9e50bbfd8cbc9684e9e8e0259b039e3c74434e6efd259e"
+    },
+    "prose-kap-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Za jednu guineu mají lidé právo na pořádnou věštbu.",
+      "contentSha256": "0d24c0b6fd2c22dcd3d403522e3655da5d48b77e2a61c84eb2b3e0f7e4a2fae5"
+    },
+    "prose-kap-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To se tak někdy stane, když člověk píše víc dopisů, že je strčí do nepravých obálek.",
+      "contentSha256": "38616adf0b97b0796e650dc184815a531472b99b14f0346736c7de44d08fba26"
+    },
+    "prose-kap-10": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Vy musíte říkat, co vás první napadne.",
+      "contentSha256": "7c81c2ef9625dcd49adfdd33d33e28126bce576747e0b4b53fe6dac0c5745fc6"
+    },
+    "prose-tov-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Řekni sám, Bondy, co je největší problém moderní techniky?",
+      "contentSha256": "498359377cefa471d77832c626ac3608a4e4260c8abc2a39483bf42926dd4525"
+    },
+    "prose-tov-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Spálíš jeden atom, a máš najednou plný sklep Absolutna.",
+      "contentSha256": "c59179df1172092e87a778ee72886cb198166df98204423c217709ba57a31b67"
+    },
+    "prose-tov-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Lidi mají nejdřív věřit v lidi, a to ostatní se už najde.",
+      "contentSha256": "385a9073ea37bbb3b8556c8cd2e0f61f5c641ea6421001eebb43d5954ba360fb"
+    },
+    "prose-tov-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Tebe zabiju, ale lidstvo spasím.",
+      "contentSha256": "96598cdab4a0f67cdcb1de4720a5a24d9a8ebfef3a05bdd1465b058ccee05541"
+    },
+    "prose-tov-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Víte, čím větší věci někdo věří, tím vzteklejc pohrdá těma, co v ně nevěří.",
+      "contentSha256": "63a2cb134e9f72b4702da52d26216ee2a14074f12b9046d7cc61ce059541968b"
+    },
+    "prose-das-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Když se to narodilo, bylo to jenom takové bílé nic, do hrsti se to vešlo",
+      "contentSha256": "e957c6cfe670a71d856232935e487cc4c72b5b66097d4536b7401a663785a92e"
+    },
+    "prose-das-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Taková psí maminka, pánové, nemá snadný život: lidí je mnoho a všechny pokousat nemůže.",
+      "contentSha256": "33efa6513bd5cf8dd6a65a0a89d21e7d2ade45c188aca4cc8c2f178881f54c16"
+    },
+    "prose-das-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Ale život štěněte je ukrutně složitý: teď zase mu rostou zuby.",
+      "contentSha256": "eb36a90b3329e6d85764bff48501249647e3f86ef463637d802e62c59a334f7d"
+    },
+    "prose-das-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To byste, pánové, nevěřili, jak je takového štěněte všude plno.",
+      "contentSha256": "3a3ff5090e055aa7562f7fbb36fede5c835bac773a72e0d81fcbb978b5282a30"
+    },
+    "prose-das-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Víte, mládí rádo tak trochu přepíná.",
+      "contentSha256": "b933d0de2f3332d46feb4d4f54c920640e37dc6d0ab43b72171e8811da991ff0"
+    },
+    "prose-jir-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Vizte, to je ta země, kterou jste hledali.",
+      "contentSha256": "afd0fa1284ae4230d38c1d11e69224c92fc8907ef9ff94afe1d9b9992fd67dec"
+    },
+    "prose-jir-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Krok pak českou zemí vládl, ji všecku soudil a moudrosti učil.",
+      "contentSha256": "8a36048a3747a006d69cda599057ce7fc20134f7fcd850c13f3c9e285ecedcbe"
+    },
+    "prose-jir-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Tu nesu to zlé škodné zvíře, divokého kance z Kavčí hory.",
+      "contentSha256": "12d5111f157d0c0fe9a811b8a57b4bfba9ec7061672fc3231653195edc074e4e"
+    },
+    "prose-jir-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Můj kůň vás povede; za tím jeti neváhejte.",
+      "contentSha256": "a7c87d4110cdbe2f9d3bd5d35299295f026467a988c352566f67f6131c2ece5b"
+    },
+    "prose-jir-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Kdybych byl mohl tuto roli doorati, byla by po všecky časy hojnost chleba.",
+      "contentSha256": "ee6d3613824fea49f52c917a9fed518a571c09ebdb8a787baac386dc749e6621"
+    },
+    "prose-jir-06": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Město vidím veliké, jehož sláva hvězd se bude dotýkat.",
+      "contentSha256": "eb5c1ef978a75d1ae58461fa67fd0f5101d34911f58b02f86c2e6866b4bcdefc"
+    },
+    "prose-jir-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Vše vedla Vlasta, někdy nejpřednější v družině Libušině.",
+      "contentSha256": "6d0cfc4c7a6c07e8d6d692d2d9e1773c4fc580bdd130d87390c86af59b2d0ff1"
+    },
+    "prose-jir-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Skokem byl Horymír v stáji, kdež stál jeho nejmilejší kůň, Šemík.",
+      "contentSha256": "7fa80dcedc1c761153f111c4cda5b791cf19a66876d8b83a85611589946f803f"
+    },
+    "prose-jir-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "A více ho pak dvořané a nikdo již nespatřil.",
+      "contentSha256": "a8ecef077e71a8e6884c19265f9a2f0e9b5ddb536c683b7da9ebf1d0f38a0b8c"
+    },
+    "prose-jir-10": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Svatováclavské vojsko spí. Ještě není čas, aby vstalo.",
+      "contentSha256": "3966116aec772ca8f2686b7e03cd8dc45c414fd7877316c3ab6838d0b8f29bf9"
+    },
+    "prose-sve-01": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "Veliká doba žádá velké lidi.",
+      "contentSha256": "2c1e542cf25ba68a9313e685aaf681a0223a63206bb3a1cd076971213aede74c"
+    },
+    "prose-sve-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Jsou nepoznaní hrdinové, skromní, bez slávy a historie Napoleona.",
+      "contentSha256": "a5450f1cbe1eeafc677095d9b641ab0f260ece146f2811967b53b3f3fd1003f1"
+    },
+    "prose-sve-03": {
+      "status": "approved",
+      "reason": "Rozpoznatelný výrok či známý úryvek; revidované přirozené poslední předání, významová a konkrétní stopa, kontrola běžných variant.",
+      "reviewedAnswer": "„Tak nám zabili Ferdinanda,“ řekla posluhovačka panu Švejkovi",
+      "contentSha256": "24289945cb8879e34533cf7b5619b409237ce60d83f8f38f6650e6bb1242476c"
+    },
+    "prose-sve-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Ale disciplína na vojně musí být, jinak by si nikdo nedělal z ničeho nic.",
+      "contentSha256": "c9a4543572dc0f33cfb0dc7d970ab7e060e87efccce4d26de2052914b68c49f8"
+    },
+    "prose-sve-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Pro nás živnostníky neplatí žádná politika.",
+      "contentSha256": "ac38ed851116c783d1cb51db3a3adb12a1c24a95fb5504c5a66e524393aa0a16"
+    },
+    "prose-sve-06": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Zaplať si pivo a seď v hospodě a žvaň si, co chceš.",
+      "contentSha256": "0776fddd6b05d7a0baa3f141f6bc41a9bb70906d729cba657dc5178769997397"
+    },
+    "prose-sve-07": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Soudní lékaři jsou lidi, a lidi mají svoje chyby.",
+      "contentSha256": "f7132715a4f142eba340523d4557c379443701812d7384617e709f7e4af61070"
+    },
+    "prose-sve-08": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To už je tak v přirozenosti lidský, že se člověk mejlí až do svý smrti.",
+      "contentSha256": "cf54e0046057161b62f251909e960f70123009217b3cc909f4439dc78fa949d5"
+    },
+    "prose-sve-09": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "„Já ho prosím nevážil,“ se svým milým úsměvem odpověděl Švejk.",
+      "contentSha256": "2c980969a7d106f453cc42e4fa4688b97b9ec19924de2fa42efeeb1eeb99fe7e"
+    },
+    "prose-sve-10": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Jsme biti jako žito, kam se podíváme, a proto mě volají na vojnu.",
+      "contentSha256": "fde7d309efa43f84b9802cd9dbe1a88639af9db9f7241400366ff2122933b6aa"
+    },
+    "prose-sve-11": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "„Odneste toho simulanta!“ řekl Bautze, když zjistil, že je muž mrtev.",
+      "contentSha256": "465f7958c1e5d9d62c3e2a96ba0e1649c4a1d3898fa367d95a5aa2c53ce55c3d"
+    },
+    "prose-sve-12": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Švejk šel o berlích a s hrůzou pozoroval, že jeho revmatismus začíná mizet.",
+      "contentSha256": "89e5662d1511bab744575fe65e854048655049f82b0290c49d7c3b4559142ac0"
+    },
+    "prose-sve-13": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Mašírovat pořád kupředu, tomu se říká anabaze.",
+      "contentSha256": "2a713e383511084e76891a9aca709af63996c0a59af5e3da78500574bb8dafc3"
+    },
+    "prose-sve-14": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Stejně vedou také všechny cesty do Českých Budějovic.",
+      "contentSha256": "384c664d11d7eeac80f9bebad49bdee1ecf12bf3cc4dc794b6ca96af5f7e9b92"
+    },
+    "prose-sve-15": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Všichni měli naději, že válka musí za měsíc, dva skončit.",
+      "contentSha256": "038d84b490f14ddec4e0d0ab849392ca4e353f3b07cc85e56fb69ba12f5daff8"
+    },
+    "prose-mlo-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Musíme být básníky, chceme-li udržet svět v chodu.",
+      "contentSha256": "7c7f73125be9282567d246d0321c43874189dc7efcad603020784245f8732349"
+    },
+    "prose-mlo-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Potřebujeme jenom víc vody, víc břehů, víc mělčin pro svůj život.",
+      "contentSha256": "224dd8e3cc6e1722f8a8e46098b3f7bcfcc33b30ebac607f0aa9b2f43b0b163b"
+    },
+    "prose-mlo-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Budete s námi pracovat na odbourání vašeho světa.",
+      "contentSha256": "cc476966241ca643d055431906d853aab6885358765fa0f11ae27ef8b4a6895b"
+    },
+    "prose-mlo-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "U nás to není, tak co; jen kdyby nebyla taková drahota!",
+      "contentSha256": "24bff6bae60dad172f997d1f16352bc989189d92ab75880eb30c41b3ab7f2e00"
+    },
+    "prose-mlo-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To je báječná výhoda, že my nemáme žádné mořské břehy, víš?",
+      "contentSha256": "0f4bbf7b12c655c8f8a9f480a549955095b701d92e599c338e61b54488412f21"
+    },
+    "prose-zah-01": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Proti všemu zdání zahradník se nerodí ze semene, výhonku, cibule, hlízy ani štupru, nýbrž vzniká zkušeností, okolím a přírodními podmínkami.",
+      "contentSha256": "93621749b34dba6254963a1ec217db0f908960fb847bb523f6fb38f96db19471"
+    },
+    "prose-zah-02": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Žádný zázrak slunce nevyrovná se zázraku požehnaného deště.",
+      "contentSha256": "8e49c12b03162a5873a666142aa199ed48bc1ba33516db96a3b5b18d4b364eb6"
+    },
+    "prose-zah-03": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "To pravé, to nejlepší je před námi.",
+      "contentSha256": "dc3cda29ed145b228f61dd7427b205996d06e37260ce9be97dbb965ee5819b04"
+    },
+    "prose-zah-04": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Říkám vám, zkrotit pár sáhů půdy je veliké vítězství.",
+      "contentSha256": "eff5ac75d111d67af8ec04fdd4aacf1b98770d0a2293917ec4126a9ae673ef0c"
+    },
+    "prose-zah-05": {
+      "status": "held",
+      "reason": "Odloženo: běžná či málo známá věta vytržená z knihy by vyžadovala znalost konkrétního znění zpaměti.",
+      "reviewedAnswer": "Je to tak: čím horší neřád, tím víc se má k světu.",
+      "contentSha256": "be8cf6ac70d6c74f952be7e378c331e77d348b1a7494b1f73caeebe83e803666"
+    },
+    "caesar-victory": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Caesarova slavná tři slovesa o rychlém vítězství.",
+      "contentSha256": "f9b581258acc3c1af433366c841043bc096b93baf1f7003f3dbea49c68b62086"
+    },
+    "proverb-pit": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Obraz zahrnuje vykopanou past a člověka, který do ní sám spadne.",
+      "contentSha256": "c4baab5e227952193c78d0e7f339c067cfdeaf1d9211494edd5dad08d5c9bd88"
+    },
+    "poem-may": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Úvod Máchova Máje: první květnový večer a milostná nálada.",
+      "contentSha256": "9f820ef489903b2a33a9b6a3c63c436612dbbdbd9e4ecca9a4a6e22dfcd31f05"
+    },
+    "caesar-dice": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Caesarův nevratný krok se připomíná předmětem používaným při hazardní hře.",
+      "contentSha256": "b8fbc350d726acafc509d266b4c7f7c08631435598ecb081a8cce58713fd2d22"
+    },
+    "proverb-work": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Přísloví spojuje pracovní námahu a sladké pečivo.",
+      "contentSha256": "0ba9d893e346de82b301d8efbd425860e25420078ae9206f3502be7e84eebdd8"
+    },
+    "poem-noon": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "První dvojverší Erbenovy Polednice: dítě, lavice a křik.",
+      "contentSha256": "11edc771478501a35102db03124d8ac2a2718927b5cc43dd98b23a0bbe8db6d6"
+    },
+    "descartes": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Descartes vyvozuje vlastní existenci z jedné duševní činnosti.",
+      "contentSha256": "e8c7c90aa34d21309778182dea8c71f680944d25a0426c2f7b66912e7e92e888"
+    },
+    "proverb-measure": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Známá rada k opakované kontrole před nevratným zásahem.",
+      "contentSha256": "c7c5cea65188a60b1a146436c7e017a2e316680413cc17b2d22c51bc4137f8fc"
+    },
+    "poem-bouquet": {
+      "status": "approved",
+      "reason": "Původní známý výrok; zachovaný kvůli historii, zkontrolovaná rozpoznatelnost.",
+      "specificClue": "Úvod Erbenovy Kytice: smrt matky a děti, které po ní zůstaly.",
+      "contentSha256": "3683d0975da9d038108400bc7f6d999fc77d131f73950f42aad16448dfc62ebf"
+    }
+  }
+}

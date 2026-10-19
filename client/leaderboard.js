@@ -8,7 +8,7 @@
   function snapshot() {
     let state;try{state=Daily.sanitizeState(JSON.parse(localStorage.getItem(globalThis.SeptandaGame.storageKey())));}catch{}
     const date=Daily.dayKey(), day=state?.days[date],ids=day?.ids || Daily.plan(date);
-    return {action:'sync',date,rounds:ids.map(id=>{
+    return {action:'sync',date,...(state?.assignmentVersion===1?{assignmentVersion:1,assignmentSeed:state.assignmentSeed}:{}),rounds:ids.map(id=>{
       const r=day?.progress[id] || Daily.blankRound(),p=globalThis.SEPTANDA_PUZZLES.find(p=>p.id===id);
       const winning=r.status==='won'?r.attempts.find(a=>Engine.evaluate(a.text,p).accepted)?.text:undefined;
       return {id,status:r.status,hint:r.hints.length>0,...(winning?{answer:winning}:{})};
@@ -57,7 +57,7 @@
     try {
       if(!data)accept(await request());
       const body=snapshot(),signature=JSON.stringify(body);
-      if(account && signature!==lastSent){accept(await request(body));lastSent=signature;}
+      if(account && body.rounds.length && signature!==lastSent){accept(await request(body));lastSent=signature;}
       else accept(await request());
       $('leaderboard-status').textContent=data.local?'Lokální pořadí pro zkoušení.':'';
     } catch(e) {
