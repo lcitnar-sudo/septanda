@@ -52,20 +52,31 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
       await db.rpc('septanda_set_consent',{p_user:user.id,p_granted:body.granted});
       return json(await readPlayer(user));
     }
-    if (!['sync','skip'].includes(body.action)) fail(400,'Neznámá akce.');
+    if (!['sync','skip','chain-step'].includes(body.action)) fail(400,'Neznámá akce.');
     for (let retry=0;retry<8;retry++) {
       const {data}=await db.read('septanda_progress',`user_id=eq.${user.id}&select=state,revision&limit=1`,{user});
       const old=data?.[0];if (!old) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
       let incoming=body.state;
-      if(body.action==='skip') {
-        if(body.date!==game.daily.dayKey(clock()) || typeof body.id!=='string')fail(400,'Přeskočit lze aktuální výrok dnešní sady.');
+      if(['skip','chain-step'].includes(body.action)) {
+        if(body.date!==game.daily.dayKey(clock()) || typeof body.id!=='string')fail(400,'Tento krok lze použít u aktuálního výroku dnešní sady.');
         incoming=JSON.parse(JSON.stringify(old.state));
         const day=incoming?.days?.[body.date],round=day?.progress?.[body.id];
         if(day)game.daily.reconcileDay(incoming,body.date);
         if(!day || !day.ids.includes(body.id) || !game.daily.canSelect(day,body.id))fail(409,'Nejprve načti svoji aktuální sadu.');
-        if(round?.status==='won')fail(409,'Rozluštěný výrok už se nepřeskakuje.');
-        if(round?.status==='revealed')return json(await readPlayer(user));
-        day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',paidSkip:true,draft:''};
+        if(body.action==='chain-step') {
+          const max=game.puzzles.find(p=>p.id===body.id).chain.length-1;
+          if(!Number.isInteger(body.level) || body.level<1 || body.level>max)fail(400,'Neplatný krok tiché pošty.');
+          // A target level makes retries and simultaneous devices idempotent.
+          const level=round?.chainLevel||0;
+          if(body.level<=level)return json(await readPlayer(user));
+          if(body.level!==level+1)fail(409,'Předání se odkrývají postupně.');
+          if(['won','revealed'].includes(round?.status))fail(409,'Celou cestu už máš pod dokončeným výrokem zdarma.');
+          day.progress[body.id]={...(round||game.daily.blankRound()),chainLevel:body.level};
+        } else {
+          if(round?.status==='won')fail(409,'Rozluštěný výrok už se nepřeskakuje.');
+          if(round?.status==='revealed')return json(await readPlayer(user));
+          day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',paidSkip:true,skipCharge:game.daily.skipCost,draft:''};
+        }
       }
       const merged=tools.merge(old.state,incoming,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id});
       const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(old.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});

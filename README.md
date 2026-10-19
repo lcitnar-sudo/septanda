@@ -1,4 +1,4 @@
-# Šeptanda 5.2.2 — archiv slov
+# Šeptanda 5.3.0 — archiv slov
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -78,10 +78,16 @@ Shodné sady se slučují včetně pokusů, nejvyšší odemčené stopy a dokon
 
 Nově přidělené osobní sady obsahují tři hádanky. U dříve uložených pětic zůstávají všechna ID, výsledky i rozepsané tipy v archivu, ale od 19. 10. se v aktuální hře nabízejí jen první tři položky. Dřívější práce z dalších dvou je v přehledu účtu pod Dřívější výsledky z dneška. Její body se neodebírají. Dosavadní archivní kalendář je beze změny.
 
-Přeskočení nahradilo bezplatné odhalení aktuálního výroku. Po výslovném herním potvrzení strhne 200 bodů, uzavře hádanku bez odměny a přejde na další slot stejné sady. Nevytváří náhradní čtvrtou hádanku. Poslední přeskok dokončí sadu. Je potřeba mít alespoň 200 bodů; původní nákupy stop se nevracejí. Řešení zůstane v přehledu.
+Přeskočení nahradilo bezplatné odhalení aktuálního výroku. Po výslovném herním potvrzení strhne 100 bodů, uzavře hádanku bez odměny a přejde na další slot stejné sady. Nevytváří náhradní čtvrtou hádanku. Poslední přeskok dokončí sadu. Je potřeba mít alespoň 100 bodů; původní nákupy stop se nevracejí. Řešení zůstane v přehledu.
 
 Účet provádí přeskok až po uložení rozpracovaného postupu a potvrzení serverem. CAS a serverový výpočet chrání proti dvojímu stržení a souběžnému utracení téhož zůstatku. Záznam je status `revealed` s příznakem `paidSkip:true`; cena se započte do výdajů i denního pořadí. Staré odhalené výsledky se nikdy zpětně nezpoplatňují. Bez účtu se přeskok ukládá v prohlížeči.
 
 ## Oprava zobrazení starých pětic (5.2.2)
 
 `day.playLimit` je odvozené omezení na tři pro dny od 19. 10. 2026. `daily.playIds` určuje aktuální nabídku, odemykání i zobrazený postup. Původní `day.ids` a celý `progress` zůstávají v JSON nezkrácené; souhrnný účet a serverový bodový archiv nadále započítávají všechny již uložené výsledky. Také dnes už zobrazení nabídne tři, i když byla dříve vydána pětice. Dřívější dny před 19. 10. zůstávají plné archivní pětice.
+
+## Postupné odkrývání předání (5.3.0)
+
+Vedle balíčku redakčních stop je samostatná volba „Po stopách věty“. Každý klik za 50 bodů odhalí jedno dřívější předání v pořadí 4, 3, 2, 1. Poslední, páté předání je vidět od začátku. Originál není součástí nákupu a ukáže se až po rozluštění či přeskočení. Zakoupené kroky se ukládají do `chainLevel` (0–4), slučují podle nejvyšší dosažené úrovně a promítají do denního pořadí i celkového zůstatku.
+
+Nová přeskočení stojí 100 bodů a mají `skipCharge:100`. Historická zaplacená přeskočení bez částky nadále znamenají původních 200 bodů; server je při dalším zápisu označí `skipCharge:200`. Nákupy ani výkony se zpětně nepřepočítávají. Neprovádí se žádný reset, změna identit výroků ani SQL migrace.

@@ -335,7 +335,10 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
   const pool = root.SEPTANDA_PUZZLES, engine = root.SeptandaEngine;
   const byId = new Map(pool.map(p => [p.id, p]));
   const HINT_COST = {clue: 50, small: 30, previous: 60};
-  const PERSONAL_SIZE=3, SKIP_COST=200, SIZE_CHANGED_ON='2026-10-19', PAID_SKIP_START='2026-10-20';
+  const PERSONAL_SIZE=3, SKIP_COST=100, CHAIN_COST=50, SIZE_CHANGED_ON='2026-10-19', PAID_SKIP_START='2026-10-20';
+  // Historical paid skips without an amount were charged 200; never reprice them.
+  const skipCharge = r => r?.skipCharge===100 ? 100 : 200;
+  const chainLevel = r => Math.min(4,Math.max(0,Math.floor(Number(r?.chainLevel)||0)));
   const validPersonalSize=(key,size)=>size===PERSONAL_SIZE || size===5 && key<=SIZE_CHANGED_ON;
   if (pool.length < 5) throw new Error('Denní sada potřebuje alespoň pět výroků.');
   function dayKey(date = new Date()) {
@@ -412,7 +415,7 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     return chosen;
   }
   const blankRound = () => ({attempts: [], hints: [], status: 'playing', draft: ''});
-  const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || r.draft || r.status === 'won' || r.status === 'revealed');
+  const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || chainLevel(r) || r.draft || r.status === 'won' || r.status === 'revealed');
   function seenBefore(state, key) {
     const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
     for(const id of state.knownIds||[])if(byId.has(id))seen.add(id);
@@ -449,7 +452,8 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     }
     // Already completed history survives later scoring corrections. The server still validates new wins.
     if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
-    if(round.status==='revealed' && source.paidSkip===true)round.paidSkip=true;
+    if(round.status==='revealed' && source.paidSkip===true){round.paidSkip=true;round.skipCharge=skipCharge(source);}
+    if(chainLevel(source))round.chainLevel=chainLevel(source);
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     if(round.hints.includes('clue'))round.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
@@ -507,7 +511,9 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
       const r={...a,attempts,hints:[...new Set([...a.hints,...b.hints])],draft:b.draft||a.draft,
         status:['won','revealed'].includes(a.status)?a.status:b.status};
       if(r.hints.includes('clue'))r.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
-      if(r.status==='revealed' && (['won','revealed'].includes(a.status)?a.paidSkip:b.paidSkip))r.paidSkip=true;
+      r.chainLevel=['won','revealed'].includes(a.status)?chainLevel(a):Math.max(chainLevel(a),chainLevel(b));
+      const terminal=['won','revealed'].includes(a.status)?a:b;
+      if(r.status==='revealed' && terminal.paidSkip){r.paidSkip=true;r.skipCharge=skipCharge(terminal);}
       return r;
     };
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
@@ -551,12 +557,13 @@ globalThis.SEPTANDA_SCHEDULE={"version":1,"timeZone":"Europe/Prague","start":"20
     for (const progress of rounds) for (const r of Object.values(progress)) {
       t.solved += Number(r.status === 'won'); t.revealed += Number(r.status === 'revealed');
       t.spent += r.hints.reduce((sum, h) => sum + HINT_COST[h], 0); t.attempts += r.attempts.length;
-      if(r.status==='revealed' && r.paidSkip===true)t.spent+=SKIP_COST;
+      t.spent+=chainLevel(r)*CHAIN_COST;
+      if(r.status==='revealed' && r.paidSkip===true)t.spent+=skipCharge(r);
     }
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);
 
 })(root);

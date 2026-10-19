@@ -3,7 +3,7 @@ import {fail} from './http.mjs';
 export const HINT_COST = Object.freeze({clue:50,small:30,previous:60});
 const object = value => value && typeof value==='object' && !Array.isArray(value);
 const digest = value => createHash('sha256').update(value).digest('hex');
-const hasWork = round => Boolean(round && (round.attempts?.length || round.hints?.length || round.status==='revealed'));
+const hasWork = round => Boolean(round && (round.attempts?.length || round.hints?.length || round.chainLevel || round.status==='revealed'));
 const blank = () => ({attempts:[],hints:[],status:'playing',draft:''});
 
 // The game module is injected so the exact same catalog/calendar/scorer is used by tests and production.
@@ -34,7 +34,9 @@ export function createProgressTools({puzzles,engine,daily}) {
     out.hints = [...new Set((source.hints||[]).filter(h=>allowed.includes(h)))];
     if(out.hints.includes('clue'))out.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     out.status = source.status==='revealed' ? 'revealed' : out.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
-    if(out.status==='revealed' && source.paidSkip===true)out.paidSkip=true;
+    if(out.status==='revealed' && source.paidSkip===true){out.paidSkip=true;out.skipCharge=daily.skipCharge(source);}
+    if(source.chainLevel!==undefined && (!Number.isInteger(source.chainLevel) || source.chainLevel<0 || source.chainLevel>puzzle.chain.length-1))fail(400,'Neplatný krok tiché pošty.');
+    if(source.chainLevel)out.chainLevel=source.chainLevel;
     out.draft = typeof source.draft==='string' ? source.draft.slice(0,400) : '';
     return out;
   }
@@ -47,7 +49,12 @@ export function createProgressTools({puzzles,engine,daily}) {
     result.hints=[...new Set([...a.hints,...b.hints])];
     if(result.hints.includes('clue'))result.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
     result.status = ['won','revealed'].includes(previous?.status) ? previous.status : b.status==='revealed' ? 'revealed' : result.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
-    if(result.status==='revealed' && (['won','revealed'].includes(previous?.status)?previous.paidSkip:b.paidSkip || options.requirePaidSkip))result.paidSkip=true;
+    const terminal=['won','revealed'].includes(previous?.status);
+    const level=terminal ? (a.chainLevel||0) : Math.max(a.chainLevel||0,b.chainLevel||0);
+    if(level)result.chainLevel=level;
+    if(result.status==='revealed' && (terminal?previous.paidSkip:b.paidSkip || options.requirePaidSkip)){
+      result.paidSkip=true;result.skipCharge=terminal?daily.skipCharge(previous):options.legacy?daily.skipCharge(b):daily.skipCost;
+    }
     result.draft=object(incoming) ? b.draft : a.draft;
     return result;
   }
@@ -90,7 +97,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     const prior=previous && previous.version===6 ? previous : {version:6,legacy:{progress:{}},days:{}};
     const imported = prior.legacy?.imported===true || Object.keys(prior.legacy?.progress||{}).length>0;
     const state={version:6,legacy:{progress:{},imported},days:{}};
-    let newPaidSkips=0;
+    let newPaidActions=0;
     const personal=Boolean(daily.personalStart && ((playerId && daily.dayKey(now)>=daily.personalStart) || incoming.assignmentVersion===1));
     if(personal) {
       state.assignmentVersion=1;
@@ -113,7 +120,8 @@ export function createProgressTools({puzzles,engine,daily}) {
         const a=old?.progress?.[id],b=source?.progress?.[id];
         if(personal && key>=daily.personalStart && daily.seenBefore(state,key).has(id) && hasWork(b) && !hasWork(a))fail(409,'Tento výrok už máš v dřívější historii. Místní postup zůstává uložený.','known_puzzle');
         if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart),requirePaidSkip:ids.length===3 || key>=daily.paidSkipStart});
-        if(day.progress[id]?.paidSkip && !['won','revealed'].includes(a?.status))newPaidSkips++;
+        if(day.progress[id]?.paidSkip && !['won','revealed'].includes(a?.status))newPaidActions++;
+        if((day.progress[id]?.chainLevel||0)>(a?.chainLevel||0))newPaidActions++;
       }
       state.days[key]=day;
       daily.reconcileDay(state,key);
@@ -129,7 +137,7 @@ export function createProgressTools({puzzles,engine,daily}) {
       day.selected=selection(day,source?.selected || old?.selected);
     }
     const stats=totals(state);
-    if(newPaidSkips && stats.points<0)fail(409,'Na přeskočení potřebuješ alespoň 200 bodů.','insufficient_points');
+    if(newPaidActions && stats.points<0)fail(409,'Na tento krok nemáš dost bodů. Předání stojí 50 bodů, přeskočení 100 bodů.','insufficient_points');
     return {state,stats,scores:dayScores(state)};
   }
   function totals(state) {
@@ -138,7 +146,8 @@ export function createProgressTools({puzzles,engine,daily}) {
       for (const record of Object.values(progress)) {
         value.solved+=Number(record.status==='won');value.revealed+=Number(record.status==='revealed');
         value.spent+=(record.hints||[]).reduce((sum,h)=>sum+(HINT_COST[h]||0),0);value.attempts+=(record.attempts||[]).length;
-        if(record.status==='revealed' && record.paidSkip===true)value.spent+=daily.skipCost;
+        value.spent+=(record.chainLevel||0)*daily.chainCost;
+        if(record.status==='revealed' && record.paidSkip===true)value.spent+=daily.skipCharge(record);
       }
     }
     value.points=100+200*value.solved-value.spent;
@@ -147,7 +156,7 @@ export function createProgressTools({puzzles,engine,daily}) {
   function dayScores(state) {
     return Object.entries(state.days).flatMap(([date,day])=>{
       let solved=0,completed=0,attemptCount=0,spent=0;
-      for (const id of day.ids) {const r=day.progress[id]||blank();solved+=Number(r.status==='won');completed+=Number(r.status!=='playing');attemptCount+=r.attempts.length;spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);if(r.status==='revealed' && r.paidSkip===true)spent+=daily.skipCost;}
+      for (const id of day.ids) {const r=day.progress[id]||blank();solved+=Number(r.status==='won');completed+=Number(r.status!=='playing');attemptCount+=r.attempts.length;spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);spent+=(r.chainLevel||0)*daily.chainCost;if(r.status==='revealed' && r.paidSkip===true)spent+=daily.skipCharge(r);}
       return attemptCount || completed || spent ? [{date,points:solved*200-spent,solved,completed,attempts:attemptCount,spent}] : [];
     });
   }

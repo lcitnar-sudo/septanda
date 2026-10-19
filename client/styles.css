@@ -1952,3 +1952,10 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 #skip-help{margin:-8px 0 20px;line-height:1.6}
 
 .collection-marks{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}
+
+/* Individually purchased earlier transmissions, shown from the last towards the first. */
+.transmission-section { border-top:1px solid var(--line); }
+.transmission-list { list-style:none; padding:0; margin:16px 0 0; }
+.transmission-list li { border-left:2px solid var(--oxide); background:#e5e6d9; padding:12px; margin:0 0 12px; }
+.transmission-list p { font-family:var(--sans); font-size:14px; line-height:1.6; margin:8px 0 0; }
+.transmission-list .eyebrow { font-size:9px; }

@@ -129,7 +129,16 @@
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
     const result=await api('player',{action:'skip',date,id});
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
-    apply(result,true);notice('Výrok je přeskočený. Odečteno 200 bodů.');refreshBoard();
+    apply(result,true);notice('Výrok je přeskočený. Odečteno 100 bodů.');refreshBoard();
+  }
+  async function revealChainStep(date,id,level) {
+    if(!session || !ready || syncing)throw new Error('Počkej prosím na připojení a dokončení ukládání účtu.');
+    const epoch=loadEpoch,userId=session.user.id;
+    if(!await sync(true))throw new Error('Nejprve se musí uložit aktuální postup. Zkus odkrytí znovu po připojení.');
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    const result=await api('player',{action:'chain-step',date,id,level});
+    if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
+    apply(result,true);notice('Předchozí podoba věty je uložená v účtu.');refreshBoard();
   }
   async function loadAccount(nextSession) {
     const epoch = ++loadEpoch;
@@ -322,5 +331,5 @@
     if (!(await sync(true, clean))) throw new Error('Přenos se nedokončil. Zkus ho prosím znovu.');
     return true;
   }
-  root.SeptandaCloud = Object.freeze({start,importLocalState,skipPuzzle,isActive:()=>Boolean(sdk)});
+  root.SeptandaCloud = Object.freeze({start,importLocalState,skipPuzzle,revealChainStep,isActive:()=>Boolean(sdk)});
 })(globalThis);

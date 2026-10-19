@@ -33,7 +33,7 @@ assert.equal(state.assignmentVersion,1);
 assert.equal(game.hasAccount(),false);
 assert.equal(state.days[date].ids.length,3);
 assert.equal(node('balance-control').hidden,true,'Guest wallet stays hidden');
-assert.equal(node('give-up').disabled,true,'The initial wallet cannot afford a skip');
+assert.equal(node('give-up').disabled,false,'The initial wallet can afford one 100-point skip');
 node('guess').value=p.answer.split(/\s+/).slice(0,2).join(' ');
 node('guess-form').fire('submit');
 assert.match(node('result-panel').innerHTML,/STOPA Z TVÉHO TIPU/);
@@ -64,10 +64,28 @@ assert.equal(daily.totals(game.exportState()).points,250,'Cancelling spends noth
 node('give-up').fire('click');await node('confirm-action').fire('click');
 let skippedState=game.exportState();
 assert.equal(skippedState.days[date].progress[skippedID].paidSkip,true);
-assert.equal(daily.totals(skippedState).points,50,'A confirmed skip costs 200 without a reward');
+assert.equal(daily.totals(skippedState).points,150,'A confirmed skip costs 100 without a reward');
 assert.equal(skippedState.days[date].selected,skippedState.days[date].ids[2],'Skip immediately advances within the triple');
-assert.equal(node('give-up').disabled,true,'Cannot overspend the remaining balance');
-await node('confirm-action').fire('click');assert.equal(daily.totals(game.exportState()).points,50,'Repeated confirmation never charges twice');
+assert.equal(node('give-up').disabled,false,'A remaining 150 can afford a skip');
+await node('confirm-action').fire('click');assert.equal(daily.totals(game.exportState()).points,150,'Repeated confirmation never charges twice');
+const thirdID=game.exportState().days[date].selected,thirdPuzzle=puzzle(thirdID);
+node('guess').value='rozepsaný tip';node('guess').fire('input');
+for(let level=1;level<=2;level++) {
+  await node('reveal-transmission').fire('click');
+  const current=game.exportState();
+  assert.equal(current.days[date].progress[thirdID].chainLevel,level);
+  assert.equal(daily.totals(current).points,150-level*50,'Each earlier transmission costs 50');
+  assert.ok(node('transmission-content').innerHTML.includes(thirdPuzzle.chain[4-level]),'Reveal moves backwards through the chain');
+  assert.ok(!node('transmission-content').innerHTML.includes(thirdPuzzle.answer),'Original remains hidden');
+}
+await node('reveal-transmission').fire('click');
+assert.equal(daily.totals(game.exportState()).points,0,'A third affordable reveal uses the last 50');
+assert.equal(node('reveal-transmission').disabled,true,'Cannot buy an unaffordable fourth step');
+await node('reveal-transmission').fire('click');
+assert.equal(daily.totals(game.exportState()).points,0,'Unavailable step never overspends');
+game.replaceState(game.exportState());
+assert.equal(game.exportState().days[date].progress[thirdID].chainLevel,3,'Reload keeps purchased transmissions');
+assert.equal(node('guess').value,'rozepsaný tip','Purchase and reload retain the draft');
 const accountID='11111111-1111-4111-8111-111111111111';
 game.setAccount(accountID,{importGuest:false});
 assert.equal(daily.totals(game.exportState()).solved,0,'Guest progress is not silently claimed by another account');
@@ -85,7 +103,7 @@ const session={access_token:'synthetic',user:{id:accountID}};
 context.SeptandaSupabase={createClient(){return{auth:{onAuthStateChange(){},async getSession(){return{data:{session}};}}};}};
 context.fetch=async(url,opts={})=>{
   if(url.includes('cloud-leaderboard'))return{ok:true,json:async()=>({date,entries:[],total:0})};
-  if(opts.body){const body=JSON.parse(opts.body);assert.equal(body.importLegacy,undefined);if(body.action==='sync')server.state=copy(body.state);else if(body.action==='skip'){const r=server.state.days[body.date].progress[body.id]||daily.blankRound();server.state.days[body.date].progress[body.id]={...r,status:'revealed',paidSkip:true,draft:''};}}
+  if(opts.body){const body=JSON.parse(opts.body);assert.equal(body.importLegacy,undefined);if(body.action==='sync')server.state=copy(body.state);else if(body.action==='skip'){const r=server.state.days[body.date].progress[body.id]||daily.blankRound();server.state.days[body.date].progress[body.id]={...r,status:'revealed',paidSkip:true,skipCharge:100,draft:''};}else if(body.action==='chain-step'){const r=server.state.days[body.date].progress[body.id]||daily.blankRound();server.state.days[body.date].progress[body.id]={...r,chainLevel:Math.max(r.chainLevel||0,body.level)};}}
   return{ok:true,json:async()=>copy(server)};
 };
 node('player-dialog').showModal();
@@ -98,10 +116,18 @@ assert.deepEqual(copy(state.days[date].ids),copy(remote.days[date].ids));
 assert.equal(node('player-dialog').open,false,'Restored login closes and returns to playing');
 assert.equal(node('profile-dialog').open,false,'Account settings do not interrupt the game');
 const accountSkipID=state.days[date].selected;
+for(let level=1;level<=4;level++)await node('reveal-transmission').fire('click');
+state=game.exportState();
+assert.equal(state.days[date].progress[accountSkipID].chainLevel,4,'Cloud acknowledges all four earlier transmissions');
+assert.equal(daily.totals(state).points,100,'Four cloud steps cost 200 in total');
+assert.equal(node('reveal-transmission').disabled,true,'No fifth paid reveal or original can be purchased');
+assert.equal((node('transmission-content').innerHTML.match(/<li>/g)||[]).length,4);
+assert.ok(!node('transmission-content').innerHTML.includes(puzzle(accountSkipID).answer),'Even all earlier transmissions do not reveal the original');
+
 node('give-up').fire('click');await node('confirm-action').fire('click');
 state=game.exportState();
 assert.equal(state.days[date].progress[accountSkipID].paidSkip,true,'Cloud skip adopts the acknowledged server result');
-assert.equal(daily.totals(state).points,100,'Cloud skip spends the saved account balance once');
+assert.equal(daily.totals(state).points,0,'Cloud skip spends 100 from the saved account balance once');
 const originalFive=daily.plan(date),withFive=daily.createState(null);daily.bindPlayer(withFive,accountID);
 withFive.days[date]={ids:originalFive,selected:originalFive[4],seen:[originalFive[4]],skipped:[],progress:{
  [originalFive[3]]:{...daily.blankRound(),status:'won',attempts:[{id:'archived-fourth-win',text:puzzle(originalFive[3]).answer,time:fixed}]},
