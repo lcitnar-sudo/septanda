@@ -1,4 +1,4 @@
-# Šeptanda 6.0.3 — Šeptá se to po staletí.
+# Šeptanda 6.0.4 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
