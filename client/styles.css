@@ -1971,3 +1971,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .author-options { display:grid; gap:9px; margin:16px 0; }
 .author-option { text-align:left; padding:12px 14px; font-family:var(--sans); font-size:13px; line-height:1.4; }
 .question-scope { margin:20px 0 0; }
+
+/* Four factual clues from a recognized author guess. */
+.author-guidance { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin:20px 0; }
+.author-guidance > div { padding:12px 14px; background:var(--paper); border:1px solid #aeb6a4; border-left:3px solid #858a7c; }
+.author-guidance > .is-match { border-left-color:var(--accent); background:#edf0e5; }
+.author-guidance dt { font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.author-guidance dd { margin:7px 0 0; font-size:14px; line-height:1.55; }
+.guidance-comparison { padding:12px 0; border-top:1px solid #aeb6a4; font-weight:600; }
+.related-use { margin:22px 0 0; padding-top:16px; border-top:1px solid #aeb6a4; }
+.related-use a { font-size:12px; text-decoration:underline; }
+@media (max-width:480px) { .author-guidance { grid-template-columns:1fr; } }
