@@ -51,21 +51,31 @@ for (const name of scriptNames.filter(name=>name!=='supabase-vendor')) {
   }
   blocks.push({name,code});
 }
-const hashes=[];
-const inline = blocks.map(({name,code})=>{
+const hashes=new Set();
+const renderScripts = parts => parts.map(({name,code})=>{
   if (/<\/script/i.test(code)) throw new Error('Unsafe script terminator: '+name);
   const block='\n'+code.trimEnd()+'\n';
-  hashes.push("'sha256-"+createHash('sha256').update(block).digest('base64')+"'");
+  hashes.add("'sha256-"+createHash('sha256').update(block).digest('base64')+"'");
   return '<script id="septanda-'+name+'">'+block+'</script>';
 }).join('\n');
-html=html.replace('</body>',()=>inline+'\n</body>');
+const pageTemplate=html;
+html=html.replace('</body>',()=>renderScripts(blocks)+'\n</body>');
 await writeFile(path.join(destination,'index.html'),html);
+// Reuse the actual game UI, but omit all account, network and form modules.
+const demoParts=blocks.filter(({name})=>!['supabase-sdk','cloud','leaderboard','community'].includes(name)).map(part=>part.name==='app'?{...part,code:part.code.replace("'septanda.v6.daily'","'septanda.demo.authors.v1'").replace("'septanda.v5.progress'","'septanda.demo.legacy.v1'")}:part);
+demoParts.splice(demoParts.findIndex(p=>p.name==='app'),0,{name:'demo',code:await readFile(path.join(source,'demo.js'),'utf8')});
+const demoCSS=`.header-account,.leaderboard-section,.edition-slip,[data-open="contact-dialog"],[data-open="stats-dialog"]{display:none!important}.demo-banner{margin:0 0 30px;padding:20px;border-left:3px solid var(--oxide);background:var(--paper)}.demo-banner p{margin:8px 0 12px}.demo-banner a{display:inline-block}.demo-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em}.demo-banner strong{font-size:21px}.demo-return{margin-left:auto}`;
+const banner='<section class="demo-banner" aria-label="Cvičná hra"><span class="demo-label">UKÁZKA NOVÉ ŠEPTANDY</span><p><strong>Tři výroky na zkoušku. Hledej autora.</strong></p><p>Začni psát jméno nebo „lidové rčení“. Za 50 cvičných bodů postupně získáš stopy a čtyři možnosti. Cvičné body i výsledky zůstávají jen v této ukázce; tvůj účet a denní postup se nemění.</p><a class="underlined" href="./">Zpět do mé hry →</a></section>';
+let demo=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta name="robots" content="noindex,follow"><style>'+demoCSS+'</style></head>');
+demo=demo.replace('<title>Šeptanda — Slova znáš. A jejich autora?</title>','<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="./">Zpět do mé hry →</a></nav>');
+demo=demo.replace('</body>',()=>renderScripts(demoParts)+'\n</body>');
+await writeFile(path.join(destination,'ukazka.html'),demo);
 await writeFile(path.join(destination,'_headers'),`/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Frame-Options: DENY
-  Content-Security-Policy: default-src 'self'; script-src ${hashes.join(' ')}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src ${[...hashes].join(' ')}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self' https://*.supabase.co; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'
   Cache-Control: public, max-age=0, must-revalidate
 `);
 for(const file of ['ZDROJE.md','FONTY-LICENCE.txt','SOUKROMI.md']) if(await exists(path.join(source,file))) await copyFile(path.join(source,file),path.join(destination,file));

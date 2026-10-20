@@ -1,4 +1,4 @@
-# Šeptanda 6.0.0 — slova a jejich autoři
+# Šeptanda 6.0.1 — slova a jejich autoři
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -13,6 +13,10 @@ Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Su
 - Redakční kontrola všech 500 nových položek: 126 nových a 9 původních je schváleno pro nové osobní sady, 374 čeká na přepracování. Celkem 509 identit i starý kalendář 100 sad zůstávají pro historii. Ve starém režimu 135 položek stačilo na 45 trojic. Nový ověřený výběr obsahuje 51 položek s osobností a 84 anonymních rčení, střídá dvě různé osobnosti a nejvýše jedno rčení denně. Současná zásoba umožňuje nejvýše 25 takových trojic, podle dřívější historie méně. Po vyčerpání se obsah neopakuje.
 - Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
 - Náhled sdíleného odkazu obsahuje Šeptíka z brand balíčku. Veřejný obrázek `assets/social/septik-share-v1.png` (1080 × 1080 px) je uvedený přímo v HTML přes Open Graph a Twitter metadata; nevyžaduje přihlášení ani spuštění skriptů.
+
+## Veřejná ukázka nové hry
+
+`/ukazka.html` nabízí okamžitě tři stálé cvičné výroky i hráčům, kteří dnes dokončují starou sadu. Používá stejnou hru, stopy a vyhodnocování, vlastní místní úložiště `septanda.demo.authors.v1` a neobsahuje přihlašovací ani síťové moduly. Cvičné body se nepřičítají do účtu. Přímý odkaz je také nad rozehranou starou sadou. Dosavadní denní přiřazení, body a placené pomůcky se nemění.
 
 ## Zapojení
 
