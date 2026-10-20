@@ -4,7 +4,7 @@ import {createProgressTools} from '../backend/progress.mjs';
 import {createCloudAPI} from '../backend/api.mjs';
 const copy=x=>JSON.parse(JSON.stringify(x));
 let checks=0;const eq=(a,b,m)=>{assert.deepEqual(copy(a),copy(b),m);checks++;};
-const tools=createProgressTools({puzzles,engine,daily}),id='11111111-1111-4111-8111-111111111111',date='2026-10-20',now=new Date(date+'T12:00:00Z');
+const tools=createProgressTools({puzzles,engine,daily}),id='11111111-1111-4111-8111-111111111111',date='2026-10-19',now=new Date(date+'T12:00:00Z');
 const seed=daily.createState(null);daily.bindPlayer(seed,id);const day=daily.ensureDay(seed,date,{mode:'classic'});const [one,two,three]=day.ids;
 eq(day.ids.length,3,'New personal set has three slots');
 const reserve=tools.merge(null,seed,{now,playerId:id});

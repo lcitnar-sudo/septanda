@@ -92,12 +92,12 @@ export function createProgressTools({puzzles,engine,daily}) {
     }
     return expected.slice();
   }
-  function merge(previous,incoming,{now=new Date(),importLegacy=false,playerId=null}={}) {
+  function mergeBase(previous,incoming,{now=new Date(),importLegacy=false,playerId=null}={}) {
     if (!object(incoming) || incoming.version!==6 || !object(incoming.days)) fail(400,'Neplatný formát herního postupu.');
     if (Object.keys(incoming.days).length>3660) fail(413,'Historie obsahuje příliš mnoho dnů.');
     const prior=previous && previous.version===6 ? previous : {version:6,legacy:{progress:{}},days:{}};
     const imported = prior.legacy?.imported===true || Object.keys(prior.legacy?.progress||{}).length>0;
-    const state={version:6,legacy:{progress:{},imported},days:{}};
+    const state={version:6,legacy:{progress:{},imported},days:{},...(prior.archivedDays?{archivedDays:JSON.parse(JSON.stringify(prior.archivedDays))}:{})};
     let newPaidActions=0;
     const personal=Boolean(daily.personalStart && ((playerId && daily.dayKey(now)>=daily.personalStart) || incoming.assignmentVersion===1));
     if(personal) {
@@ -148,9 +148,70 @@ export function createProgressTools({puzzles,engine,daily}) {
     if(newPaidActions && stats.points<0)fail(409,'Na tento krok nemáš dost bodů. Předání stojí 50 bodů, přeskočení 100 bodů.','insufficient_points');
     return {state,stats,scores:dayScores(state)};
   }
+  // Archived classic records remain server-validated. Clients cannot mint an
+  // archive, replace its IDs, erase its costs or resubmit it for another reward.
+  function mergeArchive(old,source,key,now) {
+    if(!object(source)||daily.modeFor(source)!=='classic'||!Array.isArray(source.ids)||source.ids.join()!==old.ids.join())fail(409,'Archiv původní hry se neshoduje s uloženým postupem.','archive_changed');
+    const day={...old,progress:{},seen:[...(old.seen||[])],skipped:[...(old.skipped||[])]};
+    let unlocked=true;
+    for(const id of old.ids){
+      const a=old.progress?.[id],b=source.progress?.[id];
+      if(!unlocked && hasWork(b) && !hasWork(a))fail(400,'Nejprve dokonči předchozí výrok.');
+      if(a||b){day.progress[id]=mergeRound(a,b,byId.get(id),now,{mode:'classic',requirePaidSkip:old.ids.length===3||key>=daily.paidSkipStart});day.progress[id].draft=b?.draft||a?.draft||'';}
+      if(!day.skipped.includes(id)&&!['won','revealed'].includes(day.progress[id]?.status))unlocked=false;
+    }
+    day.seen=[...new Set([...day.seen,...(Array.isArray(source.seen)?source.seen:[]).filter(id=>daily.canSelect(day,id))])].filter(id=>day.ids.includes(id));
+    day.selected=selection(day,source.selected||old.selected);return day;
+  }
+  function merge(previous,incoming,options={}) {
+    const {now=new Date(),importLegacy=false,upgradeActive=false}=options;
+    if(!object(incoming)||incoming.version!==6||!object(incoming.days))return mergeBase(previous,incoming,options);
+    const copy=x=>JSON.parse(JSON.stringify(x)),today=daily.dayKey(now);
+    let prior=previous?.version===6?copy(previous):daily.createState(null),source=copy(incoming);
+    if(source.archivedDays!==undefined && (!object(source.archivedDays)||Object.keys(source.archivedDays).length>3660))fail(400,'Neplatný archiv původní hry.');
+    // A new client may have already archived its cached classic day. First
+    // validate that old work under its original rules, then validate new play.
+    if(upgradeActive && daily.modeFor(prior.days?.[today])==='classic' && prior.days?.[today] && source.days[today]?.mode==='author-v1' && source.archivedDays?.[today]) {
+      const classic=copy(source);classic.days[today]=classic.archivedDays[today];delete classic.archivedDays[today];
+      const validated=merge(prior,classic,{...options,upgradeActive:false});
+      daily.upgradeCurrentDay(validated.state,today);
+      return merge(validated.state,source,options);
+    }
+    const beforeSpent=totals(prior).spent;
+    const updates=Object.entries(source.archivedDays||{});
+    for(const [key,day] of Object.entries(source.days))if(prior.archivedDays?.[key] && daily.modeFor(day)==='classic'){
+      updates.push([key,day]);delete source.days[key];
+    }
+    for(const [key,record] of updates){
+      if(!daily.validDay(key)||key>today)fail(400,'Neplatné datum archivu.');
+      let old=prior.archivedDays?.[key],offlineAccount=false;
+      if(!old){
+        const unused=prior.days[key]?.mode==='author-v1' && !prior.days[key].seen?.length && !Object.values(prior.days[key].progress||{}).some(r=>hasWork(r)||r.draft);
+        const guestImport=importLegacy && daily.validSeed(source.assignmentSeed) && source.assignmentSeed.startsWith('guest:');
+        offlineAccount=upgradeActive && unused && key<=daily.authorStart && source.assignmentSeed===prior.assignmentSeed && Object.values(record?.progress||{}).some(r=>hasWork(r)||r.draft);
+        if((!guestImport&&!offlineAccount) || key!==today || !Array.isArray(record?.ids))fail(409,'Tento archiv není součástí uloženého účtu.','archive_changed');
+        const candidate=copy(source);delete candidate.archivedDays[key];candidate.days[key]=record;
+        const expected=daily.personalPlan(candidate,key,source.assignmentSeed,record.ids.length,'classic');
+        const admissible=offlineAccount ? daily.validPersonalSize(key,record.ids.length) && new Set(record.ids).size===record.ids.length && record.ids.every(id=>daily.approvedIDs.includes(id)) : record.ids.join()===expected.join();
+        const known=new Set([...Object.entries(prior.days||{}).filter(([date])=>!unused || date!==key).map(([,d])=>d),...Object.values(prior.archivedDays||{})].flatMap(d=>d.ids));
+        if(!admissible || record.ids.some(id=>known.has(id)))fail(409,'Místní archiv se překrývá s již přidělenými výroky. Stáhni si zálohu místního postupu.','known_puzzle');
+        old={ids:record.ids.slice(),progress:{},seen:[],skipped:[],selected:record.ids[0]||null};
+      }
+      prior.archivedDays=prior.archivedDays||{};prior.archivedDays[key]=mergeArchive(old,record,key,now);
+      if(offlineAccount){
+        delete prior.days[key];daily.ensureDay(prior,key,{mode:'author-v1'});
+        if(!Object.values(source.days[key]?.progress||{}).some(r=>hasWork(r)||r.draft))delete source.days[key];
+      }
+    }
+    const result=mergeBase(prior,source,options);
+    if(upgradeActive)daily.upgradeCurrentDay(result.state,today);
+    result.stats=totals(result.state);result.scores=dayScores(result.state);
+    if(totals(prior).spent>beforeSpent && result.stats.points<0)fail(409,'Na tento krok nemáš dost bodů.','insufficient_points');
+    return result;
+  }
   function totals(state) {
     const value={solved:0,spent:0,attempts:0,revealed:0,points:100};
-    for (const progress of [state.legacy?.progress||{},...Object.values(state.days||{}).map(day=>day.progress||{})]) {
+    for (const progress of [state.legacy?.progress||{},...Object.values(state.days||{}).map(day=>day.progress||{}),...Object.values(state.archivedDays||{}).map(day=>day.progress||{})]) {
       for (const record of Object.values(progress)) {
         value.solved+=Number(record.status==='won');value.revealed+=Number(record.status==='revealed');
         value.spent+=(record.hints||[]).reduce((sum,h)=>sum+(HINT_COST[h]||0),0);value.attempts+=(record.attempts||[]).length;
@@ -162,11 +223,13 @@ export function createProgressTools({puzzles,engine,daily}) {
     return value;
   }
   function dayScores(state) {
-    return Object.entries(state.days).flatMap(([date,day])=>{
-      let solved=0,completed=0,attemptCount=0,spent=0;
-      for (const id of day.ids) {const r=day.progress[id]||blank();solved+=Number(r.status==='won');completed+=Number(r.status!=='playing');attemptCount+=r.attempts.length;spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);spent+=(r.chainLevel||0)*daily.chainCost;if(r.status==='revealed' && r.paidSkip===true)spent+=daily.skipCharge(r);}
-      return attemptCount || completed || spent ? [{date,points:solved*200-spent,solved,completed,attempts:attemptCount,spent}] : [];
-    });
+    const scores=new Map();
+    for(const [date,day] of [...Object.entries(state.days||{}),...Object.entries(state.archivedDays||{})]) {
+      const row=scores.get(date)||{date,points:0,solved:0,completed:0,attempts:0,spent:0};
+      for(const id of day.ids){const r=day.progress[id]||blank();row.solved+=Number(r.status==='won');row.completed+=Number(r.status!=='playing');row.attempts+=r.attempts.length;row.spent+=r.hints.reduce((sum,h)=>sum+HINT_COST[h],0);row.spent+=(r.chainLevel||0)*daily.chainCost;if(r.status==='revealed'&&r.paidSkip===true)row.spent+=daily.skipCharge(r);}
+      row.points=row.solved*200-row.spent;scores.set(date,row);
+    }
+    return [...scores.values()].filter(r=>r.attempts||r.completed||r.spent);
   }
   return {merge,totals,dayScores};
 }

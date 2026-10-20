@@ -29,9 +29,10 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
       const prepared=progress.state?.version===6?JSON.parse(JSON.stringify(progress.state)):game.daily.createState(null);
       game.daily.bindPlayer(prepared,user.id);
       game.daily.ensureDay(prepared,today);
+      game.daily.upgradeCurrentDay(prepared,today);
       if(JSON.stringify(prepared)!==JSON.stringify(progress.state)) {
         if(retry>=8)fail(409,'Osobní sada se právě připravuje na jiném zařízení. Zkus načtení znovu.','conflict');
-        const merged=tools.merge(progress.state,prepared,{now:clock(),playerId:user.id});
+        const merged=tools.merge(progress.state,prepared,{now:clock(),playerId:user.id,upgradeActive:true});
         const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(progress.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});
         if(result?.saved===true || result?.saved===false)return readPlayer(user,retry+1);
         fail(503,'Osobní sadu se nepodařilo uložit.');
@@ -79,7 +80,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
           day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',paidSkip:true,skipCharge:game.daily.skipCost,draft:''};
         }
       }
-      const merged=tools.merge(old.state,incoming,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id});
+      const merged=tools.merge(old.state,incoming,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id,upgradeActive:true});
       const result=await db.rpc('septanda_commit_progress',{p_user:user.id,p_expected_revision:Number(old.revision),p_state:merged.state,p_stats:merged.stats,p_scores:merged.scores});
       if (result?.saved===true) return json(await readPlayer(user));
     }
