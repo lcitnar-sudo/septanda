@@ -15,7 +15,20 @@
       ],
       "clue": "Antický Řím. Hledej osobnost veřejného života.",
       "bio": "Římský vojevůdce a politik. Jeho život líčí mimo jiné antický autor Suetonius.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "publiclife"
+        ],
+        "focus": [
+          "politics",
+          "military"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "macha": {
       "name": "Karel Hynek Mácha",
@@ -27,7 +40,19 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český básník, autor básně Máj.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "erben": {
       "name": "Karel Jaromír Erben",
@@ -39,7 +64,20 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český básník a sběratel lidové slovesnosti, autor Kytice.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry",
+          "folklore"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "descartes": {
       "name": "René Descartes",
@@ -51,7 +89,21 @@
       ],
       "clue": "Evropská filozofie raného novověku.",
       "bio": "Francouzský filozof, autor Rozpravy o metodě.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "french",
+        "domains": [
+          "philosophy",
+          "science"
+        ],
+        "focus": [
+          "philosophy",
+          "mathematics"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "dante": {
       "name": "Dante Alighieri",
@@ -62,7 +114,19 @@
       ],
       "clue": "Evropská literatura středověku.",
       "bio": "Italský básník, autor Božské komedie.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "italian",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry"
+        ],
+        "periods": [
+          "medieval"
+        ]
+      }
     },
     "confucius": {
       "name": "Konfucius",
@@ -76,7 +140,19 @@
       ],
       "clue": "Myšlenková tradice starověké Číny.",
       "bio": "Čínský myslitel, jehož výroky a rozhovory předává sbírka Hovory. Nejde o vlastní zvukový ani doslovný zápis rozhovorů.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "chinese",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "shakespeare": {
       "name": "William Shakespeare",
@@ -88,7 +164,20 @@
       ],
       "clue": "Evropské divadlo raného novověku.",
       "bio": "Anglický dramatik a básník. V jeho hrách mluví literární postavy; ve hře hledáme autora jejich replik.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "english",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "drama",
+          "poetry"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "comenius": {
       "name": "Jan Amos Komenský",
@@ -102,7 +191,21 @@
       ],
       "clue": "České písemnictví raného novověku.",
       "bio": "Český myslitel a autor Kšaftu umírající matky Jednoty bratrské.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature",
+          "philosophy"
+        ],
+        "focus": [
+          "education",
+          "philosophy"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "newton": {
       "name": "Isaac Newton",
@@ -114,7 +217,20 @@
       ],
       "clue": "Dějiny přírodních věd raného novověku.",
       "bio": "Vědec spojený s fyzikou a matematikou. Obraz ramen obrů doloženě použil v dopise, nevymyslel však jeho starší základ.",
-      "group": "veda"
+      "group": "veda",
+      "guidance": {
+        "environment": "english",
+        "domains": [
+          "science"
+        ],
+        "focus": [
+          "physics",
+          "mathematics"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "lao": {
       "name": "Lao-c’",
@@ -133,7 +249,19 @@
       ],
       "clue": "Myšlenková tradice starověké Číny.",
       "bio": "Tradiční jméno spojované s Tao-te-ťingem. Historická identita a vznik textu nejsou jisté, proto mluvíme o tradičním připsání.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "chinese",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "lincoln": {
       "name": "Abraham Lincoln",
@@ -144,7 +272,19 @@
       ],
       "clue": "Veřejný život Spojených států v 19. století.",
       "bio": "Americký prezident, jehož Gettysburský projev patří k dochovaným politickým projevům 19. století.",
-      "group": "politika"
+      "group": "politika",
+      "guidance": {
+        "environment": "american",
+        "domains": [
+          "publiclife"
+        ],
+        "focus": [
+          "politics"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "nietzsche": {
       "name": "Friedrich Nietzsche",
@@ -155,7 +295,19 @@
       ],
       "clue": "Evropská filozofie 19. století.",
       "bio": "Německý filozof a autor Soumraku model. Jeho aforismy je potřeba číst v souvislostech.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "german",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "masaryk": {
       "name": "Tomáš Garrigue Masaryk",
@@ -168,7 +320,22 @@
       ],
       "clue": "Československý veřejný život 20. století.",
       "bio": "Československý prezident a myslitel. Jeho názory zaznamenal Karel Čapek v Hovorech s T. G. Masarykem.",
-      "group": "politika"
+      "group": "politika",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "publiclife",
+          "philosophy"
+        ],
+        "focus": [
+          "politics",
+          "philosophy"
+        ],
+        "periods": [
+          "c19",
+          "c20"
+        ]
+      }
     },
     "socrates": {
       "name": "Sókratés",
@@ -180,7 +347,19 @@
       ],
       "clue": "Antická řecká filozofie.",
       "bio": "Athénský myslitel, kterého v Obraně Sókratově zachycuje Platón. Hledaná odpověď označuje mluvčího v Platónově podání.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "greek",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "aristotle": {
       "name": "Aristotelés",
@@ -192,7 +371,19 @@
       ],
       "clue": "Antická řecká filozofie.",
       "bio": "Řecký filozof, autor Politiky. Jeho pojetí obce souvisí s řečí, spravedlností a společným životem.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "greek",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "cicero": {
       "name": "Marcus Tullius Cicero",
@@ -204,7 +395,22 @@
       ],
       "clue": "Antický Řím. Hledej řečníka a autora.",
       "bio": "Římský řečník a autor řečí i filozofických dialogů. Mluvčí v dialogu nemusí být totožný s autorem díla.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "publiclife",
+          "philosophy",
+          "literature"
+        ],
+        "focus": [
+          "rhetoric",
+          "philosophy"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "horace": {
       "name": "Quintus Horatius Flaccus",
@@ -217,7 +423,19 @@
       ],
       "clue": "Antická římská literatura.",
       "bio": "Římský básník, autor Ód a pojednání O umění básnickém.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "virgil": {
       "name": "Publius Vergilius Maro",
@@ -231,7 +449,19 @@
       ],
       "clue": "Antická římská literatura.",
       "bio": "Římský básník, autor Aeneidy a Zpěvů pastýřských. Výroky z těchto děl mohou patřit jejich postavám.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "terence": {
       "name": "Publius Terentius Afer",
@@ -243,7 +473,19 @@
       ],
       "clue": "Antické římské divadlo.",
       "bio": "Římský dramatik, autor komedie Sebetrapič. Slavný výrok v ní pronáší postava Chremés.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "drama"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "juvenal": {
       "name": "Decimus Iunius Iuvenalis",
@@ -257,7 +499,20 @@
       ],
       "clue": "Antická římská literatura.",
       "bio": "Římský satirik, jehož desátá satira obsahuje známý obraz chleba a her.",
-      "group": "antika"
+      "group": "antika",
+      "guidance": {
+        "environment": "roman",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry",
+          "satire"
+        ],
+        "periods": [
+          "ancient"
+        ]
+      }
     },
     "pascal": {
       "name": "Blaise Pascal",
@@ -268,7 +523,21 @@
       ],
       "clue": "Evropské myšlení 17. století.",
       "bio": "Francouzský myslitel, autor zlomků vydávaných pod názvem Myšlenky.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "french",
+        "domains": [
+          "philosophy",
+          "science"
+        ],
+        "focus": [
+          "philosophy",
+          "mathematics"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "kant": {
       "name": "Immanuel Kant",
@@ -280,7 +549,19 @@
       ],
       "clue": "Evropská filozofie 18. století.",
       "bio": "Filozof, autor Kritiky praktického rozumu.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "german",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "rousseau": {
       "name": "Jean-Jacques Rousseau",
@@ -292,7 +573,20 @@
       ],
       "clue": "Evropské myšlení 18. století.",
       "bio": "Myslitel a autor spisu O společenské smlouvě.",
-      "group": "filozofie"
+      "group": "filozofie",
+      "guidance": {
+        "environment": "french",
+        "domains": [
+          "philosophy"
+        ],
+        "focus": [
+          "philosophy",
+          "politics"
+        ],
+        "periods": [
+          "earlymodern"
+        ]
+      }
     },
     "neruda": {
       "name": "Jan Neruda",
@@ -303,7 +597,20 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český básník a prozaik, autor Písní kosmických.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry",
+          "prose"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "wolker": {
       "name": "Jiří Wolker",
@@ -314,7 +621,19 @@
       ],
       "clue": "Česká literatura 20. století.",
       "bio": "Český básník, autor sbírky Host do domu.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry"
+        ],
+        "periods": [
+          "c20"
+        ]
+      }
     },
     "halek": {
       "name": "Vítězslav Hálek",
@@ -325,7 +644,20 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český básník, autor Večerních písní.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry",
+          "prose"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "celakovsky": {
       "name": "František Ladislav Čelakovský",
@@ -337,7 +669,20 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český básník, autor balady Toman a lesní panna v Ohlasu písní českých. Inspirace lidovou poezií z básně nedělá anonymní přísloví.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "poetry",
+          "folklore"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "nemcova": {
       "name": "Božena Němcová",
@@ -348,7 +693,20 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Česká spisovatelka, autorka Babičky.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "prose",
+          "folklore"
+        ],
+        "periods": [
+          "c19"
+        ]
+      }
     },
     "capek": {
       "name": "Karel Čapek",
@@ -359,7 +717,20 @@
       ],
       "clue": "Česká literatura 20. století.",
       "bio": "Český spisovatel, autor vyprávění Dášeňka čili život štěněte.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "prose",
+          "drama"
+        ],
+        "periods": [
+          "c20"
+        ]
+      }
     },
     "jirasek": {
       "name": "Alois Jirásek",
@@ -370,7 +741,21 @@
       ],
       "clue": "Česká literatura 19. století.",
       "bio": "Český spisovatel, autor Starých pověstí českých. Literární převyprávění pověsti není doslovným záznamem historické události.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "prose",
+          "drama"
+        ],
+        "periods": [
+          "c19",
+          "c20"
+        ]
+      }
     },
     "hasek": {
       "name": "Jaroslav Hašek",
@@ -381,7 +766,20 @@
       ],
       "clue": "Česká literatura 20. století.",
       "bio": "Český spisovatel, autor Osudů dobrého vojáka Švejka za světové války.",
-      "group": "literatura"
+      "group": "literatura",
+      "guidance": {
+        "environment": "cz",
+        "domains": [
+          "literature"
+        ],
+        "focus": [
+          "prose",
+          "satire"
+        ],
+        "periods": [
+          "c20"
+        ]
+      }
     },
     "folk": {
       "name": "Lidové rčení – autor neznámý",
@@ -419,7 +817,7 @@
       "sourceURLs": [
         "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html#37"
       ],
-      "contentSha256": "8347258088b8718d66d444531de52a81b4ad30d29ee1c84965304805592ae5e2"
+      "contentSha256": "5d561fd80ee6ac1697163cd96cae596245f744c1fa6ba9ac24db7582a6c42272"
     },
     "proverb-pit": {
       "profile": "folk",
@@ -451,7 +849,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/M%C3%A1j_(M%C3%A1cha)/1"
       ],
-      "contentSha256": "646635e1ea1a1c5bbc3da66199452d53051f353a4eac59f0467fa3d685ec3d58"
+      "contentSha256": "913c08a51671ca895e532b7ad7c33968c64c160e789f4003896d71e6842c44ae"
     },
     "caesar-dice": {
       "profile": "caesar",
@@ -467,7 +865,7 @@
       "sourceURLs": [
         "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html#32"
       ],
-      "contentSha256": "033e8f5432b779bcd44c187655a7e00b4eb970c7bfaebd6dba0fc2d3b564e4bb"
+      "contentSha256": "a98d73c158aab3acd9c65915e68e81ca8c590ddea0d8d447abbcbba104b65c83"
     },
     "proverb-work": {
       "profile": "folk",
@@ -499,7 +897,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Polednice"
       ],
-      "contentSha256": "0ebef684abe89b6400150e71610f845dc887f0ffa0c92d784207717907225ef9"
+      "contentSha256": "d46a89b9844f65a18f1201f9cb93a83f5513dceed2b0e567c9b4430f47f7ec85"
     },
     "descartes": {
       "profile": "descartes",
@@ -515,7 +913,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/59/59-h/59-h.htm"
       ],
-      "contentSha256": "ce5391a353995b521da9f2c62820aa830ba019f5bfc3afdc2860948d83673d71"
+      "contentSha256": "9b11e4a04c15a3c6c55b10b200b4cfac847dc8991c522a7244fb5c6b3f3d9102"
     },
     "proverb-measure": {
       "profile": "folk",
@@ -547,7 +945,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Kytice"
       ],
-      "contentSha256": "c32ed67db683fd6e9da3cb957f3d5ed725dd742f54f939d6a8d487506fbfb041"
+      "contentSha256": "1c08db0e8b901aca91ff87981d8964d965d78c669934e3a7a233cc1b71998629"
     },
     "quote-dante-hope": {
       "profile": "dante",
@@ -563,7 +961,7 @@
       "sourceURLs": [
         "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_III"
       ],
-      "contentSha256": "1411ffa260dee6170fd312a31e1234a4d5116995fedea61cedc987842c6a3e2c"
+      "contentSha256": "0f9eb24fd1cc13d2d4c772cdc5719d859be6a057d1eb83dd6d9376dd1145a469"
     },
     "quote-confucius-reciprocity": {
       "profile": "confucius",
@@ -579,7 +977,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/3330/pg3330.html"
       ],
-      "contentSha256": "64b165df3e26efbb567f87dbad5eaa7ca9c30ee44c07dacbf881d3dff25940a4"
+      "contentSha256": "e46ed74c88f09467d1985710a2426da0be2cc4846127c3721f6d9842022f727a"
     },
     "quote-shakespeare-hamlet": {
       "profile": "shakespeare",
@@ -595,7 +993,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/1524/1524-h/1524-h.htm"
       ],
-      "contentSha256": "214798a7fa12a4e38411a01ea40ec3d8c94fbd66c899e852ff7108861a9b6576"
+      "contentSha256": "beea93c8b539ddb73b581ec527b0157cb978382358f3a7e9a88dcac19db580e6"
     },
     "quote-shakespeare-rose": {
       "profile": "shakespeare",
@@ -611,7 +1009,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/1513/1513-h/1513-h.htm"
       ],
-      "contentSha256": "410265f6c6cb06139dd22eba112c94d3f1cc5b4acedb1ef9f8cb546c59603ba8"
+      "contentSha256": "cee5635fa711d95dc6e02e6cd4abd1bf00c9a4e7dcc117472f7caedbb7793ac5"
     },
     "quote-comenius-return": {
       "profile": "comenius",
@@ -627,7 +1025,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/K%C5%A1aft_um%C3%ADraj%C3%ADc%C3%AD_matky_Jednoty_bratrsk%C3%A9"
       ],
-      "contentSha256": "e87c99e30247dad5985c75a18f392303e6272e33cfc927f56dd739a1013e03bf"
+      "contentSha256": "8a7cb9d92d79a4952db555f62d8188365130fca5c1ba21f37d5f693620b58fd0"
     },
     "quote-newton-giants": {
       "profile": "newton",
@@ -643,7 +1041,7 @@
       "sourceURLs": [
         "https://newtonproject.ox.ac.uk/view/texts/normalized/OTHE00101"
       ],
-      "contentSha256": "9afd02a252e2377673b4226ec5157a45d4d5d07da65b90cbc679f714b38a47ec"
+      "contentSha256": "34204d8114a47dcad0afa8354c0121d7211784e5aee8987893a54f053045bc12"
     },
     "quote-lao-first-step": {
       "profile": "lao",
@@ -659,7 +1057,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/216/216-h/216-h.htm"
       ],
-      "contentSha256": "4848aa60af954a87ef030102af80204f41de38e59774477bd30a2d1efac56cb8"
+      "contentSha256": "ccaf3362228dbbc2093819ecb1e237a1bb0fb87e319dab297f19439215ff206c"
     },
     "quote-lincoln-democracy": {
       "profile": "lincoln",
@@ -675,7 +1073,7 @@
       "sourceURLs": [
         "https://www.loc.gov/exhibits/civil-war-in-america/ext/al0186p1.html"
       ],
-      "contentSha256": "96bf210004ccd20cf94028a483d3b1ed3286b7fe76c5a3df25b4422a31c1b782"
+      "contentSha256": "8ef6c674728f8d3a60747c0ccc285584368ee996a80bfdb60be3f88fe55c063e"
     },
     "quote-nietzsche-stronger": {
       "profile": "nietzsche",
@@ -691,7 +1089,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/7203/pg7203.html"
       ],
-      "contentSha256": "7133dbfba384608e365d2e1a63ea85b6ce13303f253b5aab3dc7e0aff2db19a1"
+      "contentSha256": "1acb7f0f5a7912fbf2ae6441e763607b78561d27433cd07c706675b0c0692bd1"
     },
     "quote-masaryk-discussion": {
       "profile": "masaryk",
@@ -707,7 +1105,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Hovory_s_T._G._Masarykem/Demokracie"
       ],
-      "contentSha256": "dfd591b89e34dac7014958fe162bf33e2e7c64eee03258722a894cf752af05b2"
+      "contentSha256": "c2108172102ef8bea5b4d1aad61d439ac46a97f1564d3818b9925607451d0422"
     },
     "quote-socrates-ignorance": {
       "profile": "socrates",
@@ -723,7 +1121,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/1656/1656-h/1656-h.htm"
       ],
-      "contentSha256": "3ce25af23e30bd64796ec6420826b45de6ec4922bf94cf174c0fdcf8c35c523a"
+      "contentSha256": "1215a691113925f70056cd7a4b7f24e6a1bfd74a36e6727aa3d620e4f32f47b6"
     },
     "quote-aristotle-political": {
       "profile": "aristotle",
@@ -739,7 +1137,7 @@
       "sourceURLs": [
         "https://classics.mit.edu/Aristotle/politics.1.one.html"
       ],
-      "contentSha256": "bbd7ad508e8d78285113952cdc4fcdde21a7ecc6271167d08d72ecc328bcd830"
+      "contentSha256": "0d2a1553c772e95d96a4f3b10491bfaaedec23d3ddc3920887d289d17cf4aef5"
     },
     "quote-cicero-times": {
       "profile": "cicero",
@@ -755,7 +1153,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/cicero/cat1.shtml"
       ],
-      "contentSha256": "79b3b65ac45663f64c6f1552a49021d99bbd1e53c596088a42db8c1bf20af199"
+      "contentSha256": "0fd5c8041e0de6c3ce2d326ac64a32302c2af8e436907e0951b9796b0d655ca6"
     },
     "quote-cicero-history": {
       "profile": "cicero",
@@ -771,7 +1169,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/cicero/oratore2.shtml"
       ],
-      "contentSha256": "19e4ec5f86aa70ee0e914cbaab0fec12b4d9b6b2f44c6b6c14713780a3b21574"
+      "contentSha256": "7bd3f1bcaeaa51297f7b5c7f573822b943c32882cb4a5ba153ade3f72285a75b"
     },
     "quote-cicero-laws-arms": {
       "profile": "cicero",
@@ -787,7 +1185,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/cicero/milo.shtml"
       ],
-      "contentSha256": "a87a1f44a0023bf62a041cf1aac6619a93b2fac080e0d52839c51c125439fb68"
+      "contentSha256": "e7658afec6b386df79a68a830d716ea86a334d59702e43b1e2ffad0c31f3f8ce"
     },
     "quote-horace-day": {
       "profile": "horace",
@@ -803,7 +1201,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/horace/carm1.shtml"
       ],
-      "contentSha256": "7e5e5634a8344f75a8a13b46740c42ec7e455ac5d47a6343a76bd7d9bb63d7c1"
+      "contentSha256": "acf108295e52f204f625bef656b5945b02f8d52cb2a1547ba093957fa70d2f69"
     },
     "quote-horace-mouse": {
       "profile": "horace",
@@ -819,7 +1217,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/horace/arspoet.shtml"
       ],
-      "contentSha256": "52ef42df3671e6bb266d5fdd57a48fb50e763d892c5b2b4d9dbd08552826786a"
+      "contentSha256": "4a90c0e603ab15bbe0ac8b9a97c0876b2a53186aed6794ac68dbd9a2ef5db79f"
     },
     "quote-virgil-love": {
       "profile": "virgil",
@@ -835,7 +1233,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/vergil/ec10.shtml"
       ],
-      "contentSha256": "dc7e271328c1a431074cbf368164340fa581f3dd4e10ccb11949bf9d987309d6"
+      "contentSha256": "b573b9ba0c4f87afdc24c2778a0b768ded61dc04f6ea69dd45c6b92a908675e9"
     },
     "quote-virgil-fortune": {
       "profile": "virgil",
@@ -851,7 +1249,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/vergil/aen10.shtml"
       ],
-      "contentSha256": "7fb892eb6955e18eba1c8689d891a91d4676c63f3d1d1852a7b73e472b6c66e9"
+      "contentSha256": "3051c04fd7c2a1632cff86faa87ef8f2579ac91c23b233144b64a19a31517a58"
     },
     "quote-terence-human": {
       "profile": "terence",
@@ -867,7 +1265,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/ter.heauton.html"
       ],
-      "contentSha256": "11cdf23d5944385fe1ec88cbf50591dcb8e685139b011e334ca0c812633084d3"
+      "contentSha256": "567927083d40a7e3b09122184de1e50f6d13e8d5ae19e3ed79dc6a6b70dd7113"
     },
     "quote-juvenal-bread-games": {
       "profile": "juvenal",
@@ -883,7 +1281,7 @@
       "sourceURLs": [
         "https://www.thelatinlibrary.com/juvenal/10.shtml"
       ],
-      "contentSha256": "e87f34497889f12462b24eda01f61a43fcff2932dc7bbad9508da29108018aa2"
+      "contentSha256": "9cc377819f5a075e619a22746adb6ede79fd83967199bbddc346ca986fd19976"
     },
     "quote-pascal-heart": {
       "profile": "pascal",
@@ -899,7 +1297,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/18269/pg18269-images.html"
       ],
-      "contentSha256": "84388accd57090ca6d5caf487b822a69fb6bdd3ad130b5183af3ddc1fabcb798"
+      "contentSha256": "412ae9d18b1187daaf968bc039c74d9e53a78f96fb5e0a8fe20cfb87d6780d1c"
     },
     "quote-kant-heavens": {
       "profile": "kant",
@@ -915,7 +1313,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/5683/pg5683-images.html"
       ],
-      "contentSha256": "c3d8bee5baaaaa75b83719c3645a43cb52aa00e0a63e97a84c530afb4cab254e"
+      "contentSha256": "fccaba9b3597334b2c9a165d3ef7e80ddd2bc3dd818e6d6fa7070e5312dcd1d0"
     },
     "quote-rousseau-chains": {
       "profile": "rousseau",
@@ -931,7 +1329,7 @@
       "sourceURLs": [
         "https://fr.wikisource.org/wiki/Page:Rousseau_-_Collection_complète_des_œuvres_t1.djvu/208"
       ],
-      "contentSha256": "f59647888f102f280ade772daf4187d060dbd6727676706494a97514b6396d48"
+      "contentSha256": "b5f40d2081023e3b0808b791786ffebc67da13a22def29f75039816c5aedf227"
     },
     "proverb-archive-e52461e58866": {
       "profile": "folk",
@@ -1713,9 +2111,28 @@
       ],
       "reviewedAt": "2026-10-20",
       "sourceURLs": [
-        "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD"
+        "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+        "https://www.bulanci.cz/"
       ],
-      "contentSha256": "8d0a1d74e97f2080cff9ab036fe506903e6708915cc64d5377f1bb887464d0c0"
+      "contentSha256": "98ac51e72470395c9f750b3eadd2ddc04b5d86a66e9dac24a4d6bf161377b43a",
+      "relatedUses": [
+        {
+          "id": "bulanci",
+          "label": "Bulánci",
+          "aliases": [
+            "Bulánci",
+            "Bulánky",
+            "hra Bulánci",
+            "Bulánci 2",
+            "Bulánci 2.0"
+          ],
+          "explanation": "Uznáváme i spojení s Bulánky: jejich oficiální slogan zní „Kdo se vleče, neuteče“. Ve hře čteš starší přísloví „Co se vleče, neuteče“. Jde o příbuznou slovní hříčku, ne o doložené autorství původního přísloví.",
+          "source": {
+            "label": "Oficiální web Bulánků — Kdo se vleče, neuteče",
+            "url": "https://www.bulanci.cz/"
+          }
+        }
+      ]
     },
     "proverb-archive-e796fe73fddc": {
       "profile": "folk",
@@ -2243,7 +2660,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vodn%C3%ADk"
       ],
-      "contentSha256": "f7459e7c933ccf3f1815a1f7c0717a5fafed5bb945548f2d1c893afeb6c568bb"
+      "contentSha256": "133a7da6836418dad8bf55f149943874cedac61697bfba16df28d7f196f4f946"
     },
     "poem-erben-svatebni-kosile-01": {
       "profile": "erben",
@@ -2259,7 +2676,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Svatebn%C3%AD_ko%C5%A1ile"
       ],
-      "contentSha256": "80eab1ae2ae7484b1ed86530bed6ebd40464a8d5eeff5df10b527eb14a8fe594"
+      "contentSha256": "5139e7b6e8b85007fb4c6281fddfbd4afd1b7832278cb66a3dad26c0aa714ff1"
     },
     "poem-erben-stedry-den-01": {
       "profile": "erben",
@@ -2275,7 +2692,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/%C5%A0t%C4%9Bdr%C3%BD_den"
       ],
-      "contentSha256": "3893b4d6a6c8f764e7190b0b651168cb1bdd186212498b619cfcaad28452707f"
+      "contentSha256": "76d16a238b1684976f92703fd80daf69d1b23fbe16e30bb648b887cadb2d1dfb"
     },
     "poem-erben-holoubek-01": {
       "profile": "erben",
@@ -2291,7 +2708,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Holoubek"
       ],
-      "contentSha256": "ed7ab37f074bfed2c065c5805123714ddbc033b281530466e89ee2e583649126"
+      "contentSha256": "de361a99068d3b96d3cc7206b02af488f7fe4e8610112f000254edad8a0f10c1"
     },
     "poem-erben-vrba-02": {
       "profile": "erben",
@@ -2307,7 +2724,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vrba"
       ],
-      "contentSha256": "9d6c56ec603d896624ecc08fcea3e750d0698bf21fda7cb0dd532a8d43728fd1"
+      "contentSha256": "0e165b9810b075de7e47fe6f8229dad1f9c9b958219890e1f745442b08cde055"
     },
     "poem-erben-poklad-01": {
       "profile": "erben",
@@ -2323,7 +2740,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad"
       ],
-      "contentSha256": "7c34407a7fc84ada2fa2c5fae4d8310155b6c61a6c51ea3b6bae09130209ef62"
+      "contentSha256": "fa65987fbd9138b186d9594bdee39d4316cb3747fcb9a5584f0185f2f7d9732a"
     },
     "poem-erben-zlaty-kolovrat-01": {
       "profile": "erben",
@@ -2339,7 +2756,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Zlat%C3%BD_kolovrat"
       ],
-      "contentSha256": "be924d25ebb06615bdedb9319a5e92dc4cfa46e9a05fca3ac4a4e16e30c4041a"
+      "contentSha256": "a99660ac3f8e0adccd5697338aa008445b23c7a5a66bbc42ac9793cae5c57dbb"
     },
     "poem-neruda-21-01": {
       "profile": "neruda",
@@ -2355,7 +2772,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/21"
       ],
-      "contentSha256": "4d33a13b7433bbc7caffc5d79095af28ba7bb20f26ee7e18ca9b1f5a67959850"
+      "contentSha256": "c4cdbf70e0d0c96d8bb34ae7abce96bc861978404039094e6c112d358880cc8c"
     },
     "poem-neruda-22-01": {
       "profile": "neruda",
@@ -2371,7 +2788,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/22"
       ],
-      "contentSha256": "f2a237b381910954200643ebb7832774fddf1dadb150525abf6f80f42a28f4eb"
+      "contentSha256": "7058ea08abda6349bdd9ac51066bbfba14374fdd238d548c8512670025385b99"
     },
     "poem-wolker-postovni-schranka-01": {
       "profile": "wolker",
@@ -2387,7 +2804,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Host_do_domu/Po%C5%A1tovn%C3%AD_schr%C3%A1nka"
       ],
-      "contentSha256": "194ea884538bbc3773e32590d11bba31054d860ff0a4a4478fcd38ffa6163b0d"
+      "contentSha256": "37ef2768ebb718b5a16e39cba2747b92ebe9e25c579af0bd09540df0b9bf846a"
     },
     "poem-wolker-pokora-01": {
       "profile": "wolker",
@@ -2403,7 +2820,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Host_do_domu/Pokora"
       ],
-      "contentSha256": "f018430cf95a6e6c628689a159699edacd90c1f3afca2fe350c239fbfec7440f"
+      "contentSha256": "93ec9382013421d543ed4bc6ec947d2a9e70c1d8a09308b2c049ac95a1ffc511"
     },
     "poem-wolker-okno-01": {
       "profile": "wolker",
@@ -2419,7 +2836,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Host_do_domu/Okno"
       ],
-      "contentSha256": "d010b0c4ae50a7404eb83133553214736d3d0f630365f48ceabe6388f60501dc"
+      "contentSha256": "5bbb0cfd582905541b4cb95e2ed6e42be3a34c3aee8b64396e26123a497d68db"
     },
     "poem-halek-1-01": {
       "profile": "halek",
@@ -2435,7 +2852,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/1"
       ],
-      "contentSha256": "ab155cde578d62d1a3dd348ae21d19ca252d64a984babc63ac326631bdf7dba2"
+      "contentSha256": "47819901a85b7e02b20abad3842a6cc3db6ea4e72cfdd028b4ea97d45a29b6dd"
     },
     "poem-halek-60-01": {
       "profile": "halek",
@@ -2451,7 +2868,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/60"
       ],
-      "contentSha256": "04c48dae1e6019d9b74376d8daec2ab04f2445d77f7219e660fcebdb4d3bcb0c"
+      "contentSha256": "3a36cbf55d0868fcf5be68d589b40e29e333d3bd07f337f7ea8322817f4ebc86"
     },
     "poem-halek-61-01": {
       "profile": "halek",
@@ -2467,7 +2884,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/61"
       ],
-      "contentSha256": "9270b1cf2845e79418c88a53d6b612ca731697484485f98426e3feb36736648c"
+      "contentSha256": "96371a12028f9193b8c7006c3e7a5aacc2e8bd9047741db1531b644244a4fb8d"
     },
     "poem-celakovsky-toman-01": {
       "profile": "celakovsky",
@@ -2483,7 +2900,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Toman_a_lesn%C3%AD_panna"
       ],
-      "contentSha256": "0f04ad150c5222f60c06398766af0c7f50af906799d53ec1750adde68e76089e"
+      "contentSha256": "1674cb8143e4a8cc417d6838570a4c8f8611dc1f0e9ac1af86bd186c14841747"
     },
     "prose-bab-10": {
       "profile": "nemcova",
@@ -2499,7 +2916,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII"
       ],
-      "contentSha256": "cf3f1bd46539bfd91fcad08d3488be97d7dd64c605ef5d8ad35a77e1df1967e3"
+      "contentSha256": "b780de82362a2e72116dcc4d017b774de7eb6c35311c3bfac9040cc85943e901"
     },
     "prose-das-01": {
       "profile": "capek",
@@ -2515,7 +2932,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/1"
       ],
-      "contentSha256": "30ee6145f4fb8b5457b7c957764e6823e15e468a660df8721e81bf373b4c8974"
+      "contentSha256": "6845940d5fe24c88a18c1153bca46bcafc3c7cae5e77df37dc2cc8866f00b104"
     },
     "prose-jir-06": {
       "profile": "jirasek",
@@ -2531,7 +2948,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/Libu%C5%A1ina_proroctv%C3%AD"
       ],
-      "contentSha256": "4c588ace560cd45ca71dee340e1423d9ca19c78e0a606084a05928e29eacf9fc"
+      "contentSha256": "741ae1e3a0e452f58778ed1b30f5cb98ac7e483a1d5d473713639759d77d11af"
     },
     "prose-sve-01": {
       "profile": "hasek",
@@ -2547,7 +2964,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C3%9Avod"
       ],
-      "contentSha256": "6fc3cc05ee71f1fcadf3112abcf8bf074360942c8b5ca376161537f2dd0e8570"
+      "contentSha256": "74655439900fb35fd77fcf72ad9cbfa4a4ecd2a92a95cc7665c9891780d58284"
     },
     "prose-sve-03": {
       "profile": "hasek",
@@ -2563,7 +2980,62 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky"
       ],
-      "contentSha256": "dbf0e0d61795fd4e2ddff9e88b448fd6c9bcbd41ba6c17984d8586771b16fa59"
+      "contentSha256": "ada49057f44a58423a8c407fdeca87edc4fff1ebde32a4ec3226e9a9ca014235"
+    }
+  },
+  "guidance": {
+    "environments": {
+      "cz": "české prostředí",
+      "roman": "starověký Řím",
+      "greek": "antické Řecko",
+      "chinese": "čínská tradice",
+      "english": "anglické prostředí",
+      "french": "francouzsky mluvící prostředí",
+      "german": "německojazyčné prostředí",
+      "italian": "italské prostředí",
+      "american": "Spojené státy"
+    },
+    "periods": {
+      "ancient": {
+        "label": "starověk",
+        "order": 0
+      },
+      "medieval": {
+        "label": "středověk",
+        "order": 1
+      },
+      "earlymodern": {
+        "label": "raný novověk",
+        "order": 2
+      },
+      "c19": {
+        "label": "19. století",
+        "order": 3
+      },
+      "c20": {
+        "label": "20. století",
+        "order": 4
+      }
+    },
+    "domains": {
+      "literature": "literatura",
+      "philosophy": "filozofie",
+      "publiclife": "veřejný život",
+      "science": "věda"
+    },
+    "focus": {
+      "poetry": "poezie",
+      "prose": "próza",
+      "drama": "divadlo",
+      "folklore": "lidová slovesnost",
+      "philosophy": "filozofie",
+      "politics": "politika",
+      "military": "vojenství",
+      "rhetoric": "řečnictví",
+      "physics": "fyzika",
+      "mathematics": "matematika",
+      "education": "vzdělávání",
+      "satire": "satira"
     }
   }
 }

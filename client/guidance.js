@@ -4,8 +4,8 @@
   const normalize=root.SeptandaEngine.normalize;
   const stop=new Set(['a','i','v','ve','z','ze','s','se','si','je','jsou','jsem','jsi','byl','byla','bylo','by','to','ten','ta','te','do','na','po','o','u','k','ke','co','kdo','kdyz','jak','tak','ale','ani','aby','ze','ma','mit','me','mi','ti','tu','tebe','toho','tom','pro','pak']);
   const words=text=>normalize(text).split(' ').filter(Boolean);
-  function feedback(text,puzzle,accepted=false,mode='classic'){
-    if(mode==='author-v1')return root.SeptandaAuthors.feedback(text,puzzle,accepted);
+  function feedback(text,puzzle,accepted=false,mode='classic',previousText){
+    if(mode==='author-v1')return root.SeptandaAuthors.feedback(text,puzzle,accepted,previousText);
     const typed=[...new Set(words(text).filter(w=>w.length>=3 && !stop.has(w)))];
     let matched=[];
     for(const reference of [puzzle.answer,...puzzle.variants]){

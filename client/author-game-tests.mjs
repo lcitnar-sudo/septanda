@@ -80,6 +80,26 @@ assert.equal(migrated.archivedDays[date].progress[oldID].draft,'rozepsaný půvo
 assert.ok(node('classic-history-content').innerHTML.includes('rozepsaný původní tip'));
 assert.equal(daily.totals(migrated).points,oldBalance,'Migration conserves the whole wallet');
 console.log('PASS actual author UI and immediate migration with preserved archive, wallet, drafts, purchases and no repeated quote.');
+// Meaningful feedback uses the actual UI, with no real account or transport.
+const guided=daily.createState(null);daily.bindPlayer(guided,'11111111-1111-4111-8111-111111111111');
+guided.days[date]={mode:'author-v1',ids:['poem-may','prose-bab-10','proverb-archive-8a156ea0364c'],selected:'poem-may',progress:{},seen:[],skipped:[]};
+game.replaceState(guided);
+node('guess').value='Němcová';node('guess-form').fire('submit');
+assert.ok(node('result-panel').innerHTML.includes('shoda v 3 ze 4'));
+assert.equal((node('result-panel').innerHTML.match(/<dt>/g)||[]).length,4);
+node('guess').value='Neruda';node('guess-form').fire('submit');
+assert.ok(node('result-panel').innerHTML.includes('shoda v 4 ze 4'));
+assert.ok(node('result-panel').innerHTML.includes('sedí více vodítek'));
+assert.equal(game.exportState().days[date].progress['poem-may'].status,'playing','Four shared traits are not the correct identity');
+const related=daily.createState(null);daily.bindPlayer(related,'11111111-1111-4111-8111-111111111111');
+related.days[date]={mode:'author-v1',ids:['proverb-archive-8a156ea0364c','poem-may','descartes'],selected:'proverb-archive-8a156ea0364c',progress:{},seen:[],skipped:[]};
+game.replaceState(related);node('guess').value='Bulánci';node('guess-form').fire('submit');
+assert.equal(game.exportState().days[date].progress['proverb-archive-8a156ea0364c'].status,'won');
+assert.ok(node('result-panel').innerHTML.includes('Souvislost odhalena'));
+assert.ok(node('reveal-panel').innerHTML.includes('Kdo se vleče, neuteče'));
+assert.ok(node('reveal-panel').innerHTML.includes('https://www.bulanci.cz/'));
+assert.ok(node('reveal-panel').innerHTML.includes('Lidové rčení – autor neznámý'));
+console.log('PASS author trait cards, warmer comparison and verified game association in actual UI.');
 // Actual cloud module restores a mixed classic/author history and synchronizes names.
 const accountID='22222222-2222-4222-8222-222222222222';
 const remote=daily.createState(null);daily.bindPlayer(remote,accountID);
