@@ -1,4 +1,4 @@
-# Šeptanda 6.0.2 — slova a jejich autoři
+# Šeptanda 6.0.2 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
