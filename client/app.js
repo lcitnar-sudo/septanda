@@ -13,7 +13,7 @@
   let day, activeDate, puzzles = [], skipBusy=false;
   function activateDay() {
     activeDate = Daily.dayKey();
-    day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1]});
+    day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1],upgrade:true});
     puzzles = Daily.playIds(day).map(id => allPuzzles.find(p => p.id === id));
   }
   function read() {
@@ -75,13 +75,13 @@
     if (!records.length) return '';
     return `<section class="archive-group"><h3>${escape(title)}</h3>${records.map(id => {
       const p = allPuzzles.find(p => p.id === id), r = progress[id];
-      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(mode==='author-v1'?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
+      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(mode==='author-v1'?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.hints.length?`<p class="small">Zakoupené nápovědy: ${r.hints.length}${r.hints.includes('clue')?` · Postupné stopy ${r.hintLevel||1}/3`:''}</p>`:''}${r.chainLevel?`<p class="small">Odkrytá předání věty: ${r.chainLevel}/4</p>`:''}${r.paidSkip?`<p class="small">Přeskočeno za ${Daily.skipCharge(r)} bodů</p>`:''}${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
     }).join('')}</section>`;
   }
   function renderStats(t) {
     if (!hasAccount()) { $('stats-content').replaceChildren(); if ($('stats-dialog').open) $('stats-dialog').close(); return; }
     const today = Daily.dayTotals(day);
-    const history = Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress,Daily.modeFor(state.days[key]))).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress) + archiveGroup('Dřívější výsledky z dneška', day.ids.filter(id=>!Daily.playIds(day).includes(id)), day.progress);
+    const history = Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date)+' · Původní tichá pošta',old.ids,old.progress)).join('') + Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress,Daily.modeFor(state.days[key]))).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress) + archiveGroup('Dřívější výsledky z dneška', day.ids.filter(id=>!Daily.playIds(day).includes(id)), day.progress);
     $('stats-content').innerHTML = `<div class="stats-grid"><div class="stat"><strong>${t.points}</strong><span>bodů k dispozici</span></div><div class="stat"><strong>${puzzles.length ? today.completed + " / " + puzzles.length : "—"}</strong><span>dnes dokončeno</span></div><div class="stat"><strong>${today.attempts}</strong><span>dnešních tipů</span></div></div><div class="ledger"><span>Body na začátek</span><span>+${INITIAL}</span><span>Odměny celkem</span><span>+${t.solved * 200}</span><span>Stopy a přeskočení</span><span>−${t.spent}</span><span>Dnes rozluštěno</span><span>${today.solved} / ${puzzles.length}</span></div>${history ? `<details class="past-games"><summary>Starší hry a tipy</summary>${history}</details>` : ''}`;
   }
   function renderResult(r) {
@@ -133,7 +133,8 @@
     $('intro-title').innerHTML='Šeptá se to po staletí.<br><em>Víš, kdo to řekl a proč?</em>';
     $('intro-copy').textContent=author?'Tři výroky denně. Vypátrej, komu patří, a objev jejich příběhy.':'';
     $('intro-copy').hidden=!author;
-    $('mode-notice').hidden=author || !Daily.authorStart || activeDate<Daily.authorStart;
+    $('mode-notice').hidden=!state.archivedDays?.[activeDate];
+    $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
     $('guess').placeholder=author?'Jméno autora nebo „lidové rčení“':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
     $('guess-instructions').textContent=author?'Stačí příjmení nebo „lidové rčení“. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';

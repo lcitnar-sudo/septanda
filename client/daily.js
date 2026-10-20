@@ -70,6 +70,7 @@
     const excluded=seenBefore(state,key);
     for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
     for(const id of state.knownIds||[])excluded.add(id);
+    for(const day of Object.values(state.archivedDays||{}))for(const id of day.ids||[])excluded.add(id);
     const admission=mode==='author-v1'?root.SeptandaAuthors.ids:approvedIDs;
     const candidates=admission.filter(id=>byId.has(id) && !excluded.has(id));
     if(!validPersonalSize(key,size) || candidates.length<size)return [];
@@ -101,6 +102,7 @@
   function seenBefore(state, key) {
     const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
     for(const id of state.knownIds||[])if(byId.has(id))seen.add(id);
+    for(const day of Object.values(state.archivedDays||{}))for(const id of day.ids||[])seen.add(id);
     for (const [date, day] of Object.entries(state.days || {})) if (date < key) {
       for (const id of day.seen || []) seen.add(id);
       for (const [id, r] of Object.entries(day.progress || {})) if (hasWork(r)) seen.add(id);
@@ -157,6 +159,13 @@
     if(Array.isArray(raw.knownIds))state.knownIds=[...new Set(raw.knownIds.filter(id=>byId.has(id)))];
     state.legacy.progress = cleanProgress(raw.legacy?.progress, pool.map(p => p.id));
     if (raw.legacy?.imported === true) state.legacy.imported = true;
+    if(raw.archivedDays && typeof raw.archivedDays==='object') {
+      state.archivedDays={};
+      for(const [key,source] of Object.entries(raw.archivedDays)) {
+        if(!validDay(key) || !source || modeFor(source)!=='classic' || !Array.isArray(source.ids) || ![0,3,5].includes(source.ids.length) || new Set(source.ids).size!==source.ids.length || source.ids.some(id=>!byId.has(id)))continue;
+        state.archivedDays[key]={ids:source.ids.slice(),selected:source.selected,progress:cleanProgress(source.progress,source.ids),seen:Array.isArray(source.seen)?source.seen.filter(id=>source.ids.includes(id)):[],skipped:Array.isArray(source.skipped)?source.skipped.filter(id=>source.ids.includes(id)):[]};
+      }
+    }
     if (raw.days && typeof raw.days === 'object') {
       for (const [key, source] of Object.entries(raw.days)) {
         if (!validDay(key) || !source || typeof source !== 'object') continue;
@@ -177,7 +186,17 @@
       const ids = planned;
       state.days[key] = {ids,...(mode==='author-v1'?{mode}:{}), selected: ids[0] || null, progress: {}, seen: [], skipped: []};
     }
+    if(options.upgrade)upgradeCurrentDay(state,key);
     return reconcileDay(state, key);
+  }
+  function upgradeCurrentDay(state,key) {
+    if(!authorStart || key<authorStart || state.assignmentVersion!==1 || !validSeed(state.assignmentSeed) || !state.days[key] || modeFor(state.days[key])==='author-v1')return false;
+    if(state.archivedDays?.[key])return false;
+    state.archivedDays={...(state.archivedDays||{}),[key]:state.days[key]};
+    delete state.days[key];
+    const ids=personalPlan(state,key,state.assignmentSeed,PERSONAL_SIZE,'author-v1');
+    state.days[key]={ids,mode:'author-v1',selected:ids[0]||null,progress:{},seen:[],skipped:[]};
+    reconcileDay(state,key);return true;
   }
   function roundFor(day, id = day.selected) {
     if (!day.ids.includes(id)) return null;
@@ -201,11 +220,29 @@
       return r;
     };
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
+    const archiveKeys=new Set([...Object.keys(result.archivedDays||{}),...Object.keys(local.archivedDays||{})]);
+    if(archiveKeys.size)result.archivedDays=result.archivedDays||{};
+    for(const key of archiveKeys){
+      const a=result.archivedDays[key],b=local.archivedDays?.[key];
+      if(!a){result.archivedDays[key]=b;continue;}if(!b)continue;
+      if(a.ids.join()!==b.ids.join()){if(work(b))backupRequired=true;continue;}
+      a.seen=[...new Set([...a.seen,...b.seen])];
+      for(const [id,r] of Object.entries(b.progress))a.progress[id]=mergeRound(a.progress[id],r);
+    }
     for(const [id,r] of Object.entries(local.legacy.progress))result.legacy.progress[id]=mergeRound(result.legacy.progress[id],r);
     for(const [key,source] of Object.entries(local.days).sort()) {
       const target=result.days[key];
       if(!target){result.days[key]=source;continue;}
       if(modeFor(target)!==modeFor(source)){
+        const archived=result.archivedDays?.[key];
+        if(modeFor(target)==='classic' && archived && archived.ids.join()===target.ids.join() && modeFor(source)==='author-v1'){
+          for(const [id,r] of Object.entries(target.progress))archived.progress[id]=mergeRound(archived.progress[id],r);
+          result.days[key]=source;continue;
+        }
+        if(modeFor(source)==='classic' && archived && archived.ids.join()===source.ids.join()){
+          for(const [id,r] of Object.entries(source.progress))archived.progress[id]=mergeRound(archived.progress[id],r);
+          archived.seen=[...new Set([...archived.seen,...source.seen])];continue;
+        }
         if(key<=authorStart && modeFor(source)==='classic' && work(source) && !work(target) && !target.seen.length && local.assignmentSeed===result.assignmentSeed){result.days[key]=source;continue;}
         if(work(source))backupRequired=true;continue;
       }
@@ -241,7 +278,7 @@
   }
   function totals(state) {
     const t = {solved: 0, spent: 0, attempts: 0, revealed: 0, points: 100};
-    const rounds = [state.legacy.progress, ...Object.values(state.days).map(day => day.progress)];
+    const rounds = [state.legacy.progress, ...Object.values(state.days).map(day => day.progress),...Object.values(state.archivedDays||{}).map(day=>day.progress)];
     for (const progress of rounds) for (const r of Object.values(progress)) {
       t.solved += Number(r.status === 'won'); t.revealed += Number(r.status === 'revealed');
       t.spent += r.hints.reduce((sum, h) => sum + HINT_COST[h], 0); t.attempts += r.attempts.length;
@@ -251,5 +288,5 @@
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({upgradeCurrentDay,authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);

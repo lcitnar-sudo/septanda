@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="6.0.4">
+  <meta name="septanda-build" content="6.1.0">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Poznej autory známých výroků i lidový původ rčení. Každý den tři hádanky a příběhy, které se za slovy skrývají.">
   <meta property="og:type" content="website">
@@ -2141,19 +2141,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
         <div class="edition-slip" aria-label="Dnešní vydání"><span>DNEŠNÍ VYDÁNÍ</span><time id="edition-date"></time><span id="edition-count">03 VÝROKY</span></div>
       </section>
 
-      <div id="mode-notice" class="notice" role="status" hidden>Dokončuješ dříve rozehranou sadu tiché pošty. Tvoje body a historie zůstávají uložené. <a class="underlined" href="ukazka.html">Vyzkoušet hádání autorů hned →</a><p class="small">Ukázka obsahuje tři cvičné výroky. Od zítřka už budeš mít nový způsob hry i ve své denní sadě.</p></div>
+      <div id="mode-notice" class="notice" role="status" hidden>Už hraješ novou Šeptandu: poznávej autory skutečných výroků. Původní sada, body i tipy jsou zachované. <button type="button" class="text-button underlined" data-open="classic-history-dialog">Prohlédnout původní hru →</button><p class="small">Při tomto přechodu máš jednorázově novou trojici výroků. Staré výroky ti znovu nepřidělíme.</p></div>
       <div id="storage-warning" class="notice" role="status" hidden>Prohlížeč nepovoluje ukládání. Hra funguje, ale po zavření stránky se může pokrok ztratit.</div>
 
       <div class="game-layout">
         <div class="main-column">
           <section id="daily-waiting" class="puzzle-sheet daily-waiting" aria-labelledby="waiting-title" hidden><p class="eyebrow">ARCHIV SLOV</p><h2 id="waiting-title">Další zprávy připravujeme.</h2><p id="waiting-copy"></p><button class="secondary-button" data-open="collection-dialog">Prohlédnout dnešní sadu</button></section>
           <section id="puzzle-sheet" class="puzzle-sheet" aria-labelledby="puzzle-heading">
-            <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category">HISTORICKÝ VÝROK</p><h2 id="puzzle-heading">Co zaznělo na začátku?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
+            <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category">PÁTRÁNÍ PO PŮVODU</p><h2 id="puzzle-heading">Komu tato slova patří?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
             <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav>
-            <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow" id="message-label">ZACHYCENÁ ZPRÁVA</p><blockquote id="distorted-message">Dorazil jsem na místo, trochu se rozhlédl a už mi všichni gratulovali.</blockquote></div>
+            <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow" id="message-label">ČÍ JSOU TATO SLOVA?</p><blockquote id="distorted-message">Načítám výrok…</blockquote></div>
             <p id="question-scope" class="field-note question-scope" hidden></p><form id="guess-form" novalidate>
-              <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
-              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tvůj tip na původní znění" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
+              <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Jméno autora nebo „lidové rčení“</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
+              <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Jméno autora nebo „lidové rčení“" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
               <div class="form-bottom"><p id="input-help"><span id="guess-instructions">Na čárkách ani diakritice nezáleží.</span><br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><div class="guess-actions"><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button><button class="secondary-button" id="give-up" type="button" aria-describedby="skip-help">Přeskočit výrok · −100 bodů</button></div></div>
               <p id="skip-help" class="field-note">Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.</p>
               <p id="form-message" class="form-message" role="status"></p>
@@ -2177,7 +2177,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
             <div id="hint-options" class="author-options" role="group" aria-label="Čtyři možné odpovědi" hidden></div>
             <p id="hint-status" class="hint-status" aria-live="polite">Tři postupné stopy za jednu cenu.</p>
           </section>
-          <section id="transmission-section" class="hint-section transmission-section" aria-labelledby="transmission-title"><h2 id="transmission-title">Po stopách věty.</h2><p class="side-intro">Nechceš nápovědu? Vracej se po jednom předání od zamotané zprávy směrem k začátku. Původní výrok dál hádáš.</p><button class="hint-button" id="reveal-transmission" aria-describedby="transmission-status"><span><strong>Předchozí podoba věty</strong><small>Jeden krok zpátky v tiché poště.</small></span><span class="price">50 <small>bodů</small></span></button><ol id="transmission-content" class="transmission-list" hidden></ol><p id="transmission-status" class="hint-status" aria-live="polite">Každé předání se odemyká zvlášť za 50 bodů.</p></section>
+          <section id="transmission-section" class="hint-section transmission-section" hidden aria-labelledby="transmission-title"><h2 id="transmission-title">Po stopách věty.</h2><p class="side-intro">Nechceš nápovědu? Vracej se po jednom předání od zamotané zprávy směrem k začátku. Původní výrok dál hádáš.</p><button class="hint-button" id="reveal-transmission" aria-describedby="transmission-status"><span><strong>Předchozí podoba věty</strong><small>Jeden krok zpátky v tiché poště.</small></span><span class="price">50 <small>bodů</small></span></button><ol id="transmission-content" class="transmission-list" hidden></ol><p id="transmission-status" class="hint-status" aria-live="polite">Každé předání se odemyká zvlášť za 50 bodů.</p></section>
           <section class="leaderboard-section" aria-labelledby="leaderboard-title"><div class="progress-header"><h2 id="leaderboard-title">Žebříček</h2><button class="text-button leaderboard-refresh" id="leaderboard-refresh" aria-label="Obnovit žebříček">Obnovit</button></div><p class="leaderboard-period">Dnes <span id="leaderboard-date"></span></p><div id="leaderboard-preview" aria-live="polite"><p class="leaderboard-note">Načítání pořadí…</p></div><div class="leaderboard-actions"><button class="text-button underlined" id="leaderboard-join">Přihlásit se</button><button class="text-button underlined" data-open="leaderboard-dialog">Celé pořadí <span aria-hidden="true">→</span></button></div><p class="leaderboard-note" id="leaderboard-status" role="status"></p></section>
           <section id="goal-note" class="goal-note"><div class="goal-top"><span class="eyebrow">SLOVA NA SVÉ MÍSTO</span></div><p id="goal-copy">Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
           <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 3</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Tři výroky na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
@@ -2186,14 +2186,16 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>6.0.4 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>6.1.0 · Archiv slov</span></div></footer>
   </div>
 
-  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><div id="rules-author" hidden><ol class="rules-list"><li><strong>Přečti si výrok.</strong><p>Každý den dostaneš vlastní trojici. Výrok čteš v plném znění a pátráš po jeho autorovi či lidovém původu.</p></li><li><strong>Napiš jméno.</strong><p>Stačí schválené příjmení nebo celé jméno. U literárních textů hledáme autora díla; výjimka je vždy uvedená v otázce. U tradičního rčení napiš „lidové rčení“, „přísloví“ nebo „autor neznámý“. Odpověď „nevím“ není totéž.</p></li><li><strong>Vezmi si stopu.</strong><p>Balíček stojí jednou 50 bodů. Postupně odkryješ oblast, pramen a čtyři možné odpovědi. Další dva kroky už nic nestojí. Můžeš dál psát vlastní tip nebo nakonec vybrat možnost.</p></li><li><strong>Objev příběh.</strong><p>Za správný původ získáš jednou 200 bodů. Po odhalení se dozvíš o osobnosti, významu slov a doloženém prameni. Rozlišujeme skutečně doložené autorství, tradiční připsání, literární repliku a anonymní rčení.</p></li></ol><p class="dialog-note">Začínáš se 100 body. Přeskočení stojí 100 bodů, nepřidává odměnu ani náhradní otázku a počítá se do denní trojice. Body se přenášejí. S účtem se historie synchronizuje mezi zařízeními, bez účtu ji uchovává tento prohlížeč. Už přidělené výroky se nevracejí jako nové ani při změně konceptu. Sada se mění o půlnoci českého času; po vyčerpání zásoby připravíme nové položky. Dříve rozehrané dny se dokončují podle původních pravidel.</p></div><div id="rules-classic"><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Samostatně můžeš odkrývat dřívější podoby věty, každou za 50 bodů. Začínáš předposledním předáním a můžeš se vrátit až k prvnímu. Původní znění stále hádáš. Hádanku můžeš přeskočit za 100 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p></div><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
+  <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><div id="rules-author" hidden><ol class="rules-list"><li><strong>Přečti si výrok.</strong><p>Každý den dostaneš vlastní trojici. Výrok čteš v plném znění a pátráš po jeho autorovi či lidovém původu.</p></li><li><strong>Napiš jméno.</strong><p>Stačí schválené příjmení nebo celé jméno. U literárních textů hledáme autora díla; výjimka je vždy uvedená v otázce. U tradičního rčení napiš „lidové rčení“, „přísloví“ nebo „autor neznámý“. Odpověď „nevím“ není totéž.</p></li><li><strong>Vezmi si stopu.</strong><p>Balíček stojí jednou 50 bodů. Postupně odkryješ oblast, pramen a čtyři možné odpovědi. Další dva kroky už nic nestojí. Můžeš dál psát vlastní tip nebo nakonec vybrat možnost.</p></li><li><strong>Objev příběh.</strong><p>Za správný původ získáš jednou 200 bodů. Po odhalení se dozvíš o osobnosti, významu slov a doloženém prameni. Rozlišujeme skutečně doložené autorství, tradiční připsání, literární repliku a anonymní rčení.</p></li></ol><p class="dialog-note">Začínáš se 100 body. Přeskočení stojí 100 bodů, nepřidává odměnu ani náhradní otázku a počítá se do denní trojice. Body se přenášejí. S účtem se historie synchronizuje mezi zařízeními, bez účtu ji uchovává tento prohlížeč. Už přidělené výroky se nevracejí jako nové ani při změně konceptu. Sada se mění o půlnoci českého času; po vyčerpání zásoby připravíme nové položky. Dříve rozehraná sada je při přechodu zachovaná v historii se všemi body a nákupy. Jednorázově dostaneš novou autorskou trojici; další dny už platí běžný limit tří.</p></div><div id="rules-classic"><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Samostatně můžeš odkrývat dřívější podoby věty, každou za 50 bodů. Začínáš předposledním předáním a můžeš se vrátit až k prvnímu. Původní znění stále hádáš. Hádanku můžeš přeskočit za 100 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p></div><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
 
   <dialog id="collection-dialog" aria-labelledby="collection-title"><div class="dialog-head"><p class="eyebrow">TŘI VÝROKY NA DEN</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="collection-title">Dnešní sada.</h2><p class="muted" id="collection-date"></p><div id="collection-list"></div><p class="small muted">Další výrok se otevře po rozluštění nebo odhalení předchozího. Připravené nové sady se otevírají o půlnoci podle českého času. Známé výroky vynecháme.</p></dialog>
 
   <dialog id="scoring-dialog" aria-labelledby="scoring-title"><div class="dialog-head"><p class="eyebrow">KONKRÉTNÍ VODÍTKA</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="scoring-title">Co už sedí a kam dál.</h2><div id="scoring-author" hidden><p><strong>Píšeme jméno:</strong> přijímáme připravené běžné varianty, příjmení, zápis bez diakritiky a jeden drobný překlep v dostatečně dlouhém úplném jméně či příjmení. Samotné křestní jméno, seznam několika autorů ani libovolný úryvek nestačí.</p><p><strong>Lidový původ:</strong> „lidové rčení“, „přísloví“ a „autor neznámý“ jsou uznávané odpovědi u anonymních rčení. Nevymýšlíme konkrétního původce ani nedoložený příběh jejich vzniku.</p><p><strong>Stopy za 50 bodů:</strong> první uvede oblast, druhá souvislost či pramen a třetí nabídne čtyři odpovědi. Platíš celý balíček pouze jednou. Čtyři možnosti se ukážou až po otevření třetí stopy.</p><p><strong>Správné zadání:</strong> u literatury zpravidla hledáme autora díla, nikoli postavu. Pokud otázka žádá historického mluvčího v dochovaném podání, výslovně to řekne. Nejisté autorství označujeme jako tradiční připsání.</p><p class="dialog-note">Připravené odpovědi ověřuje prohlížeč i server. Uložené výhry, body, nápovědy a ceny starých přeskočení se při aktualizaci nemění.</p></div><div id="scoring-classic"><p><strong>Shodná slova:</strong> ukazujeme jen podstatná slova, která už sám napíšeš a která se opravdu vyskytují v jedné z přijímaných podob výroku. Shoda není potvrzením správného významu ani pořadí.</p><p><strong>Tři postupné stopy:</strong> za 50 bodů odemkneš celý balíček. Nejdřív dostaneš vodítko k významu, potom konkrétnější obraz nebo původ a nakonec začátek jedné přijímané podoby. Otevíráš je postupně; další dvě už nic nestojí.</p><p><strong>Uznání odpovědi:</strong> hledáme rozpoznatelné původní znění nebo připravenou běžnou variantu. Interpunkci, velikost písmen a diakritiku nevyžadujeme. Tolerujeme drobné překlepy a u básně nevadí pokračování navíc. Samotná jinak formulovaná myšlenka nemusí stačit.</p><p>Ve hře neběží AI hodnocení. Zpětná vazba porovnává slova a připravené odpovědi; neověřuje libovolný význam věty. Pokud běžná správná varianta chybí, napiš nám přes Kontakty.</p><p class="dialog-note">S účtem se soukromě ukládají tipy, rozepsané odpovědi, odemčené stopy a výsledky. Osobní sada se synchronizuje mezi zařízeními. Bez účtu ji uchovává tento prohlížeč.</p></div></dialog>
+
+  <dialog id="classic-history-dialog" aria-labelledby="classic-history-title"><div class="dialog-head"><p class="eyebrow">ZACHOVANÝ POSTUP</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="classic-history-title">Původní hra v historii.</h2><p>Body, nákupy a předchozí tipy zůstávají zachované. Nově už pátráš po autorech jiných výroků.</p><div id="classic-history-content"></div></dialog>
 
   <dialog id="stats-dialog" aria-labelledby="stats-title"><div class="dialog-head"><p class="eyebrow">TVOJE CESTA</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="stats-title">Slova se počítají.</h2><div id="stats-content"></div><p class="dialog-note">Body jsou herní a za nápovědy se nic neplatí skutečnými penězi. Bez účtu zůstává hra v tomto prohlížeči. U připojeného účtu Supabase se postup synchronizuje mezi zařízeními. Při výpadku spojení můžeš hrát dál; stav spojení najdeš v účtu. Starší typ účtu ukládá jen denní skóre do žebříčku.</p></dialog>
 
@@ -3423,6 +3425,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     const excluded=seenBefore(state,key);
     for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
     for(const id of state.knownIds||[])excluded.add(id);
+    for(const day of Object.values(state.archivedDays||{}))for(const id of day.ids||[])excluded.add(id);
     const admission=mode==='author-v1'?root.SeptandaAuthors.ids:approvedIDs;
     const candidates=admission.filter(id=>byId.has(id) && !excluded.has(id));
     if(!validPersonalSize(key,size) || candidates.length<size)return [];
@@ -3454,6 +3457,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
   function seenBefore(state, key) {
     const seen = new Set(Object.entries(state.legacy?.progress || {}).filter(([,r]) => hasWork(r)).map(([id]) => id));
     for(const id of state.knownIds||[])if(byId.has(id))seen.add(id);
+    for(const day of Object.values(state.archivedDays||{}))for(const id of day.ids||[])seen.add(id);
     for (const [date, day] of Object.entries(state.days || {})) if (date < key) {
       for (const id of day.seen || []) seen.add(id);
       for (const [id, r] of Object.entries(day.progress || {})) if (hasWork(r)) seen.add(id);
@@ -3510,6 +3514,13 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     if(Array.isArray(raw.knownIds))state.knownIds=[...new Set(raw.knownIds.filter(id=>byId.has(id)))];
     state.legacy.progress = cleanProgress(raw.legacy?.progress, pool.map(p => p.id));
     if (raw.legacy?.imported === true) state.legacy.imported = true;
+    if(raw.archivedDays && typeof raw.archivedDays==='object') {
+      state.archivedDays={};
+      for(const [key,source] of Object.entries(raw.archivedDays)) {
+        if(!validDay(key) || !source || modeFor(source)!=='classic' || !Array.isArray(source.ids) || ![0,3,5].includes(source.ids.length) || new Set(source.ids).size!==source.ids.length || source.ids.some(id=>!byId.has(id)))continue;
+        state.archivedDays[key]={ids:source.ids.slice(),selected:source.selected,progress:cleanProgress(source.progress,source.ids),seen:Array.isArray(source.seen)?source.seen.filter(id=>source.ids.includes(id)):[],skipped:Array.isArray(source.skipped)?source.skipped.filter(id=>source.ids.includes(id)):[]};
+      }
+    }
     if (raw.days && typeof raw.days === 'object') {
       for (const [key, source] of Object.entries(raw.days)) {
         if (!validDay(key) || !source || typeof source !== 'object') continue;
@@ -3530,7 +3541,17 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
       const ids = planned;
       state.days[key] = {ids,...(mode==='author-v1'?{mode}:{}), selected: ids[0] || null, progress: {}, seen: [], skipped: []};
     }
+    if(options.upgrade)upgradeCurrentDay(state,key);
     return reconcileDay(state, key);
+  }
+  function upgradeCurrentDay(state,key) {
+    if(!authorStart || key<authorStart || state.assignmentVersion!==1 || !validSeed(state.assignmentSeed) || !state.days[key] || modeFor(state.days[key])==='author-v1')return false;
+    if(state.archivedDays?.[key])return false;
+    state.archivedDays={...(state.archivedDays||{}),[key]:state.days[key]};
+    delete state.days[key];
+    const ids=personalPlan(state,key,state.assignmentSeed,PERSONAL_SIZE,'author-v1');
+    state.days[key]={ids,mode:'author-v1',selected:ids[0]||null,progress:{},seen:[],skipped:[]};
+    reconcileDay(state,key);return true;
   }
   function roundFor(day, id = day.selected) {
     if (!day.ids.includes(id)) return null;
@@ -3554,11 +3575,29 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
       return r;
     };
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
+    const archiveKeys=new Set([...Object.keys(result.archivedDays||{}),...Object.keys(local.archivedDays||{})]);
+    if(archiveKeys.size)result.archivedDays=result.archivedDays||{};
+    for(const key of archiveKeys){
+      const a=result.archivedDays[key],b=local.archivedDays?.[key];
+      if(!a){result.archivedDays[key]=b;continue;}if(!b)continue;
+      if(a.ids.join()!==b.ids.join()){if(work(b))backupRequired=true;continue;}
+      a.seen=[...new Set([...a.seen,...b.seen])];
+      for(const [id,r] of Object.entries(b.progress))a.progress[id]=mergeRound(a.progress[id],r);
+    }
     for(const [id,r] of Object.entries(local.legacy.progress))result.legacy.progress[id]=mergeRound(result.legacy.progress[id],r);
     for(const [key,source] of Object.entries(local.days).sort()) {
       const target=result.days[key];
       if(!target){result.days[key]=source;continue;}
       if(modeFor(target)!==modeFor(source)){
+        const archived=result.archivedDays?.[key];
+        if(modeFor(target)==='classic' && archived && archived.ids.join()===target.ids.join() && modeFor(source)==='author-v1'){
+          for(const [id,r] of Object.entries(target.progress))archived.progress[id]=mergeRound(archived.progress[id],r);
+          result.days[key]=source;continue;
+        }
+        if(modeFor(source)==='classic' && archived && archived.ids.join()===source.ids.join()){
+          for(const [id,r] of Object.entries(source.progress))archived.progress[id]=mergeRound(archived.progress[id],r);
+          archived.seen=[...new Set([...archived.seen,...source.seen])];continue;
+        }
         if(key<=authorStart && modeFor(source)==='classic' && work(source) && !work(target) && !target.seen.length && local.assignmentSeed===result.assignmentSeed){result.days[key]=source;continue;}
         if(work(source))backupRequired=true;continue;
       }
@@ -3594,7 +3633,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
   }
   function totals(state) {
     const t = {solved: 0, spent: 0, attempts: 0, revealed: 0, points: 100};
-    const rounds = [state.legacy.progress, ...Object.values(state.days).map(day => day.progress)];
+    const rounds = [state.legacy.progress, ...Object.values(state.days).map(day => day.progress),...Object.values(state.archivedDays||{}).map(day=>day.progress)];
     for (const progress of rounds) for (const r of Object.values(progress)) {
       t.solved += Number(r.status === 'won'); t.revealed += Number(r.status === 'revealed');
       t.spent += r.hints.reduce((sum, h) => sum + HINT_COST[h], 0); t.attempts += r.attempts.length;
@@ -3604,7 +3643,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({upgradeCurrentDay,authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);
 </script>
 <script id="septanda-guidance">
@@ -3655,7 +3694,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
   let day, activeDate, puzzles = [], skipBusy=false;
   function activateDay() {
     activeDate = Daily.dayKey();
-    day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1]});
+    day = Daily.ensureDay(state, activeDate,{personal:true,playerId:KEY===GUEST_KEY?null:KEY.split('.account.')[1],upgrade:true});
     puzzles = Daily.playIds(day).map(id => allPuzzles.find(p => p.id === id));
   }
   function read() {
@@ -3717,13 +3756,13 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     if (!records.length) return '';
     return `<section class="archive-group"><h3>${escape(title)}</h3>${records.map(id => {
       const p = allPuzzles.find(p => p.id === id), r = progress[id];
-      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(mode==='author-v1'?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
+      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(mode==='author-v1'?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.hints.length?`<p class="small">Zakoupené nápovědy: ${r.hints.length}${r.hints.includes('clue')?` · Postupné stopy ${r.hintLevel||1}/3`:''}</p>`:''}${r.chainLevel?`<p class="small">Odkrytá předání věty: ${r.chainLevel}/4</p>`:''}${r.paidSkip?`<p class="small">Přeskočeno za ${Daily.skipCharge(r)} bodů</p>`:''}${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
     }).join('')}</section>`;
   }
   function renderStats(t) {
     if (!hasAccount()) { $('stats-content').replaceChildren(); if ($('stats-dialog').open) $('stats-dialog').close(); return; }
     const today = Daily.dayTotals(day);
-    const history = Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress,Daily.modeFor(state.days[key]))).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress) + archiveGroup('Dřívější výsledky z dneška', day.ids.filter(id=>!Daily.playIds(day).includes(id)), day.progress);
+    const history = Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date)+' · Původní tichá pošta',old.ids,old.progress)).join('') + Object.keys(state.days).filter(key => key !== activeDate).sort().reverse().map(key => archiveGroup(Daily.displayDate(key), state.days[key].ids, state.days[key].progress,Daily.modeFor(state.days[key]))).join('') + archiveGroup('Předchozí verze hry', allPuzzles.map(p => p.id), state.legacy.progress) + archiveGroup('Dřívější výsledky z dneška', day.ids.filter(id=>!Daily.playIds(day).includes(id)), day.progress);
     $('stats-content').innerHTML = `<div class="stats-grid"><div class="stat"><strong>${t.points}</strong><span>bodů k dispozici</span></div><div class="stat"><strong>${puzzles.length ? today.completed + " / " + puzzles.length : "—"}</strong><span>dnes dokončeno</span></div><div class="stat"><strong>${today.attempts}</strong><span>dnešních tipů</span></div></div><div class="ledger"><span>Body na začátek</span><span>+${INITIAL}</span><span>Odměny celkem</span><span>+${t.solved * 200}</span><span>Stopy a přeskočení</span><span>−${t.spent}</span><span>Dnes rozluštěno</span><span>${today.solved} / ${puzzles.length}</span></div>${history ? `<details class="past-games"><summary>Starší hry a tipy</summary>${history}</details>` : ''}`;
   }
   function renderResult(r) {
@@ -3775,7 +3814,8 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     $('intro-title').innerHTML='Šeptá se to po staletí.<br><em>Víš, kdo to řekl a proč?</em>';
     $('intro-copy').textContent=author?'Tři výroky denně. Vypátrej, komu patří, a objev jejich příběhy.':'';
     $('intro-copy').hidden=!author;
-    $('mode-notice').hidden=author || !Daily.authorStart || activeDate<Daily.authorStart;
+    $('mode-notice').hidden=!state.archivedDays?.[activeDate];
+    $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
     $('guess').placeholder=author?'Jméno autora nebo „lidové rčení“':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
     $('guess-instructions').textContent=author?'Stačí příjmení nebo „lidové rčení“. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
@@ -4020,7 +4060,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
   'use strict';
   const $ = id => document.getElementById(id), Game = root.SeptandaGame, Daily = root.SeptandaDaily;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const hasProgress = state => !!state && (Object.values(state.days || {}).some(day => day.seen?.length) || [state.legacy?.progress || {}, ...Object.values(state.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing')));
+  const hasProgress = state => !!state && (Object.values(state.days || {}).some(day => day.seen?.length) || [state.legacy?.progress || {}, ...Object.values(state.days || {}).map(day => day.progress || {}), ...Object.values(state.archivedDays || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing')));
   let sdk, config, session = null, profile = null, mode = 'login', signing = false, ready = false, syncing = false, pending = false, applying = false, timer, lastSynced = '', loadEpoch = 0, adminOffset = 0, authAction = false;
   const endpoint = name => '/.netlify/functions/' + name;
   const date = value => value ? new Intl.DateTimeFormat('cs-CZ', {dateStyle:'medium',timeStyle:'short'}).format(new Date(value)) : '—';
@@ -4563,7 +4603,7 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
       if (Object.keys(raw.days || {}).some(day => !root.SeptandaDaily.validDay(day) || day > root.SeptandaDaily.dayKey())) throw new Error('Soubor obsahuje neplatný nebo budoucí herní den.');
       const clean = root.SeptandaDaily.sanitizeState(raw); if (!clean) throw new Error('Soubor se nepodařilo přečíst.');
       const totals = root.SeptandaDaily.totals(clean);
-      if (!Object.values(clean.days || {}).some(day => day.seen?.length) && ![clean.legacy?.progress || {}, ...Object.values(clean.days || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing'))) throw new Error('Soubor neobsahuje žádný odehraný postup.');
+      if (!Object.values(clean.days || {}).some(day => day.seen?.length) && ![clean.legacy?.progress || {}, ...Object.values(clean.days || {}).map(day => day.progress || {}), ...Object.values(clean.archivedDays || {}).map(day => day.progress || {})].some(progress => Object.values(progress).some(round => round.attempts?.length || round.hints?.length || round.draft || round.status !== 'playing'))) throw new Error('Soubor neobsahuje žádný odehraný postup.');
       selected = {state:clean,key:root.SeptandaGame.storageKey()};
       $('progress-file-preview').textContent = file.name + ' · ' + totals.solved + ' rozluštěno · ' + totals.attempts + ' tipů. Potvrzením se postup sloučí s účtem „' + $('profile-name').textContent + '“. Dosavadní záznamy účtu se zachovají. Přidej pouze svůj vlastní postup.';
       $('progress-file-confirm').hidden = false;

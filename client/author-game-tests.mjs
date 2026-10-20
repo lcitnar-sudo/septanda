@@ -64,17 +64,22 @@ const next=node('next-author');next.setAttribute('data-next','');events.get('cli
 const nextID=game.exportState().days[date].selected;
 node('give-up').fire('click');await node('confirm-action').fire('click');
 state=game.exportState();assert.equal(state.days[date].progress[nextID].skipCharge,100);assert.equal(daily.totals(state).points,150,'New concept keeps 100-point skips');
-// The old current day stays playable under its original rules after an upgrade.
+// A returning player's current classic day is archived and replaced immediately.
 const old=daily.createState(null);daily.bindPlayer(old,'11111111-1111-4111-8111-111111111111');const oldDay=daily.ensureDay(old,date,{mode:'classic'}),oldID=oldDay.ids[0];
 oldDay.progress[oldID]={...daily.blankRound(),hints:['clue'],hintLevel:2,chainLevel:1,draft:'rozepsaný původní tip'};
-game.replaceState(old);
-assert.equal(node('mode-notice').hidden,false,'Existing classic day explains the transition');
-assert.equal(node('distorted-message').textContent,byId(oldID).chain.at(-1));
-assert.equal(node('guess').value,'rozepsaný původní tip');
-assert.equal(node('transmission-section').hidden,false,'Previously purchased transmission path remains accessible');
-assert.equal(game.exportState().days[date].progress[oldID].chainLevel,1);
-assert.equal(node('hint-options').hidden,true);
-console.log('PASS actual author UI: real quotation, free text, optional four choices, anonymous origin, educational reveal, preserved classic day and purchases.');
+const oldBalance=daily.totals(old).points;
+game.replaceState(old);const migrated=game.exportState();
+assert.equal(migrated.days[date].mode,'author-v1');
+assert.equal(node('mode-notice').hidden,false,'The automatic transition explains the preserved history');
+assert.ok(migrated.days[date].ids.every(id=>!oldDay.ids.includes(id)),'The old quotes are not repeated');
+assert.equal(node('distorted-message').textContent,byId(migrated.days[date].selected).answer);
+assert.equal(node('guess').placeholder,'Jméno autora nebo „lidové rčení“');
+assert.equal(node('transmission-section').hidden,true);
+assert.equal(migrated.archivedDays[date].progress[oldID].chainLevel,1);
+assert.equal(migrated.archivedDays[date].progress[oldID].draft,'rozepsaný původní tip');
+assert.ok(node('classic-history-content').innerHTML.includes('rozepsaný původní tip'));
+assert.equal(daily.totals(migrated).points,oldBalance,'Migration conserves the whole wallet');
+console.log('PASS actual author UI and immediate migration with preserved archive, wallet, drafts, purchases and no repeated quote.');
 // Actual cloud module restores a mixed classic/author history and synchronizes names.
 const accountID='22222222-2222-4222-8222-222222222222';
 const remote=daily.createState(null);daily.bindPlayer(remote,accountID);

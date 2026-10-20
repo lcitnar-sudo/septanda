@@ -1,6 +1,10 @@
-# Šeptanda 6.0.4 — Šeptá se to po staletí.
+# Šeptanda 6.1.0 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
+
+## Okamžitý přechod na autory
+
+Hlavní hra od této verze automaticky převede i dnešní starší rozehranou sadu: celou ji uloží do `archivedDays` se stejnými body, cenami, tipy a rozepsanými odpověďmi. Přidělí novou osobní autorskou trojici bez jediného starého ID. Jednorázově při změně konceptu může hráč hrát novou trojici navíc; další dny opět platí tři. Archiv je dostupný i bez účtu a synchronizuje se serverově bez nové SQL migrace.
 
 ## Co obsahuje
 
@@ -17,7 +21,7 @@ Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Su
 
 ## Veřejná ukázka nové hry
 
-`/ukazka.html` nabízí okamžitě tři stálé cvičné výroky i hráčům, kteří dnes dokončují starou sadu. Používá stejnou hru, stopy a vyhodnocování, vlastní místní úložiště `septanda.demo.authors.v1` a neobsahuje přihlašovací ani síťové moduly. Cvičné body se nepřičítají do účtu. Přímý odkaz je také nad rozehranou starou sadou. Dosavadní denní přiřazení, body a placené pomůcky se nemění.
+`/ukazka.html` zůstává samostatnou ukázkou se třemi stálými cvičnými výroky. Používá stejnou hru, stopy a vyhodnocování, vlastní místní úložiště `septanda.demo.authors.v1` a neobsahuje přihlašovací ani síťové moduly. Cvičné body se nepřičítají do účtu. Hlavní stránka už přechází na skutečnou osobní autorskou sadu automaticky; ukázku k přechodu nepotřebuje.
 
 ## Zapojení
 
@@ -101,7 +105,7 @@ Nová přeskočení stojí 100 bodů a mají `skipCharge:100`. Historická zapla
 
 `content/authors.json` je samostatné redakční rozhodnutí s identitami osobností, schválenými variantami jmen, typem atribuce, stopami, zdroji a otiskem obsahu. Builder odmítne změnu bez nové kontroly. V původním katalogu se nepřepisuje žádné ID ani originální znění.
 
-Nově přidělené osobní dny od 20. 10. 2026 mají `mode:"author-v1"`. Existující den bez této značky zůstává původní tichou poštou a lze jej dokončit. Původní pokusy se nikdy nepřehodnocují jako jména a původní výhry, nákupy a přeskočení se nikdy znovu neoceňují. Nepoužívá se nový účet, klíč úložiště ani reset. Nový režim vylučuje i všechna dříve přidělená ID starého režimu.
+Nově přidělené osobní dny od 20. 10. 2026 mají `mode:"author-v1"`. Od verze 6.1.0 se dnešní existující den bez této značky přesune do archivu a nahradí osobní autorskou trojicí. Minulé dny zůstávají ve svém původním režimu. Původní pokusy se nikdy nepřehodnocují jako jména a původní výhry, nákupy a přeskočení se nikdy znovu neoceňují. Nepoužívá se nový účet, klíč úložiště ani reset. Nový režim vylučuje i všechna dříve přidělená ID starého režimu.
 
 Po otevření třetí stopy jsou čtyři odpovědi; nejsou součástí výchozí otázky. Literární otázka hledá autora díla, s výslovnou výjimkou otázky na Sókrata v Platónově podání. Tradiční připsání Caesarovi, Konfuciovi a Lao-c’ je přiznané. U anonymních rčení přijímáme lidový původ, nikoli „nevím“.
 

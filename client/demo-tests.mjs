@@ -45,7 +45,7 @@ assert.equal(scripts.length,10,'The sample has only local game modules');
 assert.ok(!scripts.some(([,name])=>['supabase-sdk','cloud','community','leaderboard'].includes(name)));
 assert.ok(html.includes('Cvičné body i výsledky'));
 assert.ok(html.includes('href="./">Zpět do mé hry'));
-assert.ok((await readFile(new URL('../public/index.html',import.meta.url),'utf8')).includes('href="ukazka.html"'));
+assert.ok((await readFile(new URL('../public/index.html',import.meta.url),'utf8')).includes('data-open="classic-history-dialog"'));
 for(const [,name,code] of scripts){
  assert.ok(headers.includes("'sha256-"+createHash('sha256').update(code).digest('base64')+"'"),'Authorized script '+name);
  if(name==='mascot-assets'||name==='mascot')continue;
