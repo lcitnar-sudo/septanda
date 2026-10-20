@@ -1949,7 +1949,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 #result-panel .underlined { white-space:normal; text-align:left; }
 
 #give-up:disabled{opacity:.55;cursor:not-allowed}
-#skip-help{margin:-8px 0 20px;line-height:1.6}
+#skip-help{margin:10px 0 0;line-height:1.6}
+.guess-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px}
+.guess-actions #give-up{font-family:var(--mono);font-size:10px;color:var(--ink);margin:0;white-space:normal}
+@media(max-width:640px){
+  #guess-form .form-bottom{flex-direction:column;align-items:stretch}
+  .guess-actions{justify-content:stretch}
+  .guess-actions>button{flex:1 1 160px}
+}
 
 .collection-marks{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}
 

@@ -77,7 +77,8 @@
             <p id="question-scope" class="field-note question-scope" hidden></p><form id="guess-form" novalidate>
               <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
               <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tvůj tip na původní znění" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
-              <div class="form-bottom"><p id="input-help"><span id="guess-instructions">Na čárkách ani diakritice nezáleží.</span><br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button></div>
+              <div class="form-bottom"><p id="input-help"><span id="guess-instructions">Na čárkách ani diakritice nezáleží.</span><br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><div class="guess-actions"><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button><button class="secondary-button" id="give-up" type="button" aria-describedby="skip-help">Přeskočit výrok · −100 bodů</button></div></div>
+              <p id="skip-help" class="field-note">Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.</p>
               <p id="form-message" class="form-message" role="status"></p>
             </form>
           </section>
@@ -104,7 +105,6 @@
           <section id="goal-note" class="goal-note"><div class="goal-top"><span class="eyebrow">SLOVA NA SVÉ MÍSTO</span></div><p id="goal-copy">Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
           <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 3</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Tři výroky na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
           <div class="local-note"><span class="local-indicator" aria-hidden="true"></span><p>Vyhodnocováno v prohlížeči.<br><button class="text-button underlined" data-open="scoring-dialog">Jak fungují stopy</button></p></div>
-          <button class="give-up text-button" id="give-up" aria-describedby="skip-help">Přeskočit · −100 bodů</button><p id="skip-help" class="field-note">Přeskočená hádanka se počítá do dnešního limitu.</p>
         </aside>
       </div>
     </main>

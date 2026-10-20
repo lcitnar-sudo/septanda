@@ -190,9 +190,9 @@
     renderTransmissions(p,r,t);
     $('give-up').hidden = r.status !== 'playing';
     $('give-up').disabled = skipBusy || t.points<Daily.skipCost;
-    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit · −100 bodů';
+    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit výrok · −100 bodů';
     $('skip-help').hidden = r.status !== 'playing';
-    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočená hádanka se počítá do dnešního limitu.';
+    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.';
     $('guess').disabled=skipBusy;
     const today = Daily.dayTotals(day);
     $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${puzzles.length}`;

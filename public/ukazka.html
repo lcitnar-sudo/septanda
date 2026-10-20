@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="6.0.2">
+  <meta name="septanda-build" content="6.0.3">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Poznej autory známých výroků i lidový původ rčení. Každý den tři hádanky a příběhy, které se za slovy skrývají.">
   <meta property="og:type" content="website">
@@ -2090,7 +2090,14 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 #result-panel .underlined { white-space:normal; text-align:left; }
 
 #give-up:disabled{opacity:.55;cursor:not-allowed}
-#skip-help{margin:-8px 0 20px;line-height:1.6}
+#skip-help{margin:10px 0 0;line-height:1.6}
+.guess-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px}
+.guess-actions #give-up{font-family:var(--mono);font-size:10px;color:var(--ink);margin:0;white-space:normal}
+@media(max-width:640px){
+  #guess-form .form-bottom{flex-direction:column;align-items:stretch}
+  .guess-actions{justify-content:stretch}
+  .guess-actions>button{flex:1 1 160px}
+}
 
 .collection-marks{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}
 
@@ -2147,7 +2154,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
             <p id="question-scope" class="field-note question-scope" hidden></p><form id="guess-form" novalidate>
               <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Tvůj tip na původní znění</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
               <textarea id="guess" name="guess" rows="2" maxlength="400" placeholder="Tvůj tip na původní znění" autocomplete="off" spellcheck="true" aria-describedby="input-help form-message"></textarea>
-              <div class="form-bottom"><p id="input-help"><span id="guess-instructions">Na čárkách ani diakritice nezáleží.</span><br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button></div>
+              <div class="form-bottom"><p id="input-help"><span id="guess-instructions">Na čárkách ani diakritice nezáleží.</span><br><span class="keyboard-tip">Enter odešle, Shift + Enter zalomí řádek.</span></p><div class="guess-actions"><button class="primary-button" type="submit">Ověřit tip <span aria-hidden="true">→</span></button><button class="secondary-button" id="give-up" type="button" aria-describedby="skip-help">Přeskočit výrok · −100 bodů</button></div></div>
+              <p id="skip-help" class="field-note">Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.</p>
               <p id="form-message" class="form-message" role="status"></p>
             </form>
           </section>
@@ -2174,12 +2182,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
           <section id="goal-note" class="goal-note"><div class="goal-top"><span class="eyebrow">SLOVA NA SVÉ MÍSTO</span></div><p id="goal-copy">Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.</p><div class="reward-row"><span>Za rozluštění</span><strong>+200 bodů</strong></div></section>
           <section class="collection-progress"><div class="progress-header"><h2>Dnešní sada</h2><span id="solved-count">0 / 3</span></div><div id="collection-marks" class="collection-marks" aria-label="Postup dnešní sadou"></div><p id="collection-copy">Tři výroky na každý den.</p><button class="text-button underlined" data-open="collection-dialog">Prohlédnout dnešní sadu <span aria-hidden="true">→</span></button></section>
           <div class="local-note"><span class="local-indicator" aria-hidden="true"></span><p>Vyhodnocováno v prohlížeči.<br><button class="text-button underlined" data-open="scoring-dialog">Jak fungují stopy</button></p></div>
-          <button class="give-up text-button" id="give-up" aria-describedby="skip-help">Přeskočit · −100 bodů</button><p id="skip-help" class="field-note">Přeskočená hádanka se počítá do dnešního limitu.</p>
         </aside>
       </div>
     </main>
 
-    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>6.0.2 · Archiv slov</span></div></footer>
+    <footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>6.0.3 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><div id="rules-author" hidden><ol class="rules-list"><li><strong>Přečti si výrok.</strong><p>Každý den dostaneš vlastní trojici. Výrok čteš v plném znění a pátráš po jeho autorovi či lidovém původu.</p></li><li><strong>Napiš jméno.</strong><p>Stačí schválené příjmení nebo celé jméno. U literárních textů hledáme autora díla; výjimka je vždy uvedená v otázce. U tradičního rčení napiš „lidové rčení“, „přísloví“ nebo „autor neznámý“. Odpověď „nevím“ není totéž.</p></li><li><strong>Vezmi si stopu.</strong><p>Balíček stojí jednou 50 bodů. Postupně odkryješ oblast, pramen a čtyři možné odpovědi. Další dva kroky už nic nestojí. Můžeš dál psát vlastní tip nebo nakonec vybrat možnost.</p></li><li><strong>Objev příběh.</strong><p>Za správný původ získáš jednou 200 bodů. Po odhalení se dozvíš o osobnosti, významu slov a doloženém prameni. Rozlišujeme skutečně doložené autorství, tradiční připsání, literární repliku a anonymní rčení.</p></li></ol><p class="dialog-note">Začínáš se 100 body. Přeskočení stojí 100 bodů, nepřidává odměnu ani náhradní otázku a počítá se do denní trojice. Body se přenášejí. S účtem se historie synchronizuje mezi zařízeními, bez účtu ji uchovává tento prohlížeč. Už přidělené výroky se nevracejí jako nové ani při změně konceptu. Sada se mění o půlnoci českého času; po vyčerpání zásoby připravíme nové položky. Dříve rozehrané dny se dokončují podle původních pravidel.</p></div><div id="rules-classic"><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Samostatně můžeš odkrývat dřívější podoby věty, každou za 50 bodů. Začínáš předposledním předáním a můžeš se vrátit až k prvnímu. Původní znění stále hádáš. Hádanku můžeš přeskočit za 100 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p></div><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>
@@ -3813,9 +3820,9 @@ globalThis.SEPTANDA_AUTHORS={"version":1,"start":"2026-10-20","mode":"author-v1"
     renderTransmissions(p,r,t);
     $('give-up').hidden = r.status !== 'playing';
     $('give-up').disabled = skipBusy || t.points<Daily.skipCost;
-    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit · −100 bodů';
+    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit výrok · −100 bodů';
     $('skip-help').hidden = r.status !== 'playing';
-    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočená hádanka se počítá do dnešního limitu.';
+    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.';
     $('guess').disabled=skipBusy;
     const today = Daily.dayTotals(day);
     $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${puzzles.length}`;

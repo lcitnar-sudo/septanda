@@ -1,4 +1,4 @@
-# Šeptanda 6.0.2 — Šeptá se to po staletí.
+# Šeptanda 6.0.3 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -6,6 +6,7 @@ Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Su
 
 - Hra bez povinné registrace, tři navazující hádanky denně podle pražského času.
 - Nové sady: skutečný výrok a psaná odpověď se jménem autora nebo lidovým původem. Stopy vedou přes oblast a pramen ke čtyřem volitelným odpovědím. Balíček stojí jednou 50 bodů; správný původ přidá 200 bodů.
+- Viditelné tlačítko „Přeskočit výrok · −100 bodů“ přímo u odpovědi. Před platbou zobrazí potvrzení, přeskočí právě daný výrok a naváže dalším v denní trojici; nevytváří náhradní otázku ani odměnu.
 - Procenta už hráče nenavádějí. Dosavadní pravidlový modul ověřuje přijímané podoby a drobné odchylky; jeho číselná pole zůstávají interně pro kompatibilitu historie. Ve hře neběží AI.
 - Supabase registrace, potvrzování e-mailu, přihlášení, obnova hesla, synchronizace, profil a samostatný souhlas s novinkami.
 - Soukromá správa hráčů a audit souhlasů; veřejný žebříček neukazuje e-maily ani odpovědi.
