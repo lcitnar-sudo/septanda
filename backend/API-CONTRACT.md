@@ -57,3 +57,13 @@ From 2026-10-19, `reconcileDay` derives `playLimit:3`. `daily.playIds`, `nextId`
 POST player `{action:"chain-step",date:"YYYY-MM-DD",id:"puzzle-id",level:1}` purchases the next earlier transmission for 50 points. `level` must be an integer 1–4; subsequent purchases increment it by one. The target level makes repeated requests idempotent, including racing devices and lost responses. Already unlocked targets return saved state without charging; locked later puzzles, future days, jumps, insufficient funds and purchases on completed rounds are rejected without a write.
 
 Both sync and purchase routes compute costs on the server, preserve monotone `chainLevel`, and commit the state, stats and daily scores atomically through the existing revision CAS. Prices supplied by clients are not authoritative. New skips receive `skipCharge:100`. Previously saved paid skips retain their recorded amount, with absent amounts interpreted as 200. Completed rounds never acquire new chain charges. No database migration is needed.
+
+## Author attribution mode (6.0.0)
+
+New personal days store `mode:"author-v1"`. The field belongs to the immutable issued day; absent mode means the classic text-reconstruction game. Existing days keep their mode and every historical attempt is evaluated under that mode. Old wins remain terminal even when scoring changes. The public quote identity and original text do not change.
+
+Author answers use explicit reviewed aliases, case/diacritic normalization and a single unambiguous edit in a complete alias of at least five characters. Known wrong identities, multiple guesses in one answer, partial first names and quote text are not accepted. The server runs the same matcher.
+
+The hint bundle still costs 50 once; levels 1–3 reveal scope, source and four choices. Chain-step purchases are not available in author mode. Skip remains 100; historic fees are retained. All awards, purchases and daily scores use the existing atomic revision CAS.
+
+Author plans contain two distinct named identities and at most one anonymous saying; no quote ID from any previous assigned day is reused across modes. Exhaustion waits for new content. Worked-on days cannot change mode. A genuine classic offline day at the cutover may replace an entirely untouched author reservation, subject to existing identity, history and import validation; conflicts with already played server days are retained as private local backups. Old clients attempting to write a different saved mode receive 409 `game_updated` and must refresh. No SQL migration is required.

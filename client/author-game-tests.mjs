@@ -1,0 +1,101 @@
+/* Run the actual game and cloud modules against a synthetic DOM and transport. */
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const copy=x=>JSON.parse(JSON.stringify(x)),nodes=new Map(),events=new Map(),storage=new Map();
+const fixed=Date.parse('2026-10-20T12:00:00Z');
+class Clock extends Date{constructor(...args){super(...(args.length?args:[fixed]));}static now(){return fixed;}}
+function node(id){
+  if(nodes.has(id))return nodes.get(id);
+  const listeners=new Map(),attrs=new Map();
+  const n={id,value:'',textContent:'',innerHTML:'',hidden:false,open:false,disabled:false,dataset:{},children:[],
+    classList:{toggle(){},add(){},remove(){}},
+    setAttribute(k,v){attrs.set(k,v);},hasAttribute(k){return attrs.has(k);},closest(s){return s==='button'?n:null;},
+    querySelector(s){return node(id+':'+s);},append(...a){this.children.push(...a);},replaceChildren(...a){this.children=a;this.innerHTML='';},
+    addEventListener(k,f){listeners.set(k,f);},fire(k,e={}){return listeners.get(k)?.({preventDefault(){},...e});},
+    focus(){},scrollIntoView(){},showModal(){this.open=true;},close(){this.open=false;},remove(){},click(){},
+    reset(){},reportValidity(){return true;}};
+  nodes.set(id,n);return n;
+}
+const context=vm.createContext({console,Date:Clock,Intl,Math,JSON,Map,Set,Promise,Error,TypeError,URL,URLSearchParams,AbortController,Blob,
+  Event:class{constructor(type){this.type=type;}},CustomEvent:class{constructor(type,init){this.type=type;this.detail=init.detail;}},
+  crypto:{randomUUID:()=> 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'},
+  localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
+  setInterval(){},setTimeout,clearTimeout,
+  document:{hidden:false,getElementById:node,querySelectorAll:()=>[],createElement:t=>node(t+Math.random()),createDocumentFragment:()=>node('fragment'+Math.random()),
+    addEventListener(k,f){events.set(k,f);},dispatchEvent(){},body:{append(){}}},
+  window:{addEventListener(){}},location:{origin:'https://synthetic.test',pathname:'/',href:'https://synthetic.test/'},history:{replaceState(){}}});
+for(const file of ['puzzles.js','authors-data.js','authors.js','engine.js','daily.js','guidance.js','app.js'])vm.runInContext(await readFile(new URL(file,import.meta.url),'utf8'),context);
+const game=context.SeptandaGame,daily=context.SeptandaDaily,authors=context.SeptandaAuthors,date='2026-10-20';
+const byId=id=>context.SEPTANDA_PUZZLES.find(p=>p.id===id);
+let state=game.exportState(),id=state.days[date].selected,p=byId(id),profile=authors.profile(p);
+assert.equal(state.days[date].mode,'author-v1');
+assert.equal(node('distorted-message').textContent,p.answer,'The exact quotation is visible');
+assert.equal(node('puzzle-category').textContent,'PÁTRÁNÍ PO PŮVODU','Category does not reveal anonymous origin');
+assert.ok(node('intro-title').innerHTML.includes('Slova znáš.'));
+assert.equal(node('guess').placeholder,'Jméno autora nebo „lidové rčení“');
+assert.equal(node('transmission-section').hidden,true,'Distorted transmissions are absent in author mode');
+assert.equal(node('hint-options').hidden,true,'No multiple choice before hints');
+assert.ok(!node('collection-list').innerHTML.includes('Lidové přísloví'),'Collection does not leak the origin');
+node('guess').value=p.answer;node('guess-form').fire('submit');
+assert.equal(game.exportState().days[date].progress[id].status,'playing','Copying the displayed quote does not win');
+assert.ok(node('result-panel').innerHTML.includes('Zkus jiné jméno'));
+const hint=node('hint-clue');hint.dataset.hint='clue';
+for(let level=1;level<=3;level++){
+ events.get('click')({target:hint});state=game.exportState();
+ assert.equal(state.days[date].progress[id].hintLevel,level);
+ assert.equal(daily.totals(state).points,50,'Three stages cost one 50-point bundle');
+ assert.equal(node('hint-options').hidden,level<3);
+}
+assert.equal((node('hint-options').innerHTML.match(/data-author-choice=/g)||[]).length,4,'Four choices appear only after stage three');
+const correct=node('correct-option');correct.dataset.authorChoice=authors.get(p).profile;
+events.get('click')({target:correct});state=game.exportState();
+assert.equal(state.days[date].progress[id].status,'won','Choosing the unlocked correct name submits a valid guess');
+assert.equal(daily.totals(state).points,250,'Hint and reward counted exactly once');
+assert.ok(node('reveal-panel').innerHTML.includes(profile.name));
+assert.ok(node('reveal-panel').innerHTML.includes('Co slova znamenají'));
+assert.ok(node('reveal-panel').innerHTML.includes('Doložený pramen'));
+assert.ok(!node('reveal-panel').innerHTML.includes('Celá cesta tiché pošty'),'Old distortion chain is not in new reveal');
+assert.equal(node('hint-options').hidden,false);
+assert.ok(node('hint-options').innerHTML.includes('disabled'),'Completed choices cannot submit more guesses');
+game.replaceState(game.exportState());
+assert.equal(daily.totals(game.exportState()).points,250,'Reload retains the correct mode and rewards');
+const next=node('next-author');next.setAttribute('data-next','');events.get('click')({target:next});
+const nextID=game.exportState().days[date].selected;
+node('give-up').fire('click');await node('confirm-action').fire('click');
+state=game.exportState();assert.equal(state.days[date].progress[nextID].skipCharge,100);assert.equal(daily.totals(state).points,150,'New concept keeps 100-point skips');
+// The old current day stays playable under its original rules after an upgrade.
+const old=daily.createState(null);daily.bindPlayer(old,'11111111-1111-4111-8111-111111111111');const oldDay=daily.ensureDay(old,date,{mode:'classic'}),oldID=oldDay.ids[0];
+oldDay.progress[oldID]={...daily.blankRound(),hints:['clue'],hintLevel:2,chainLevel:1,draft:'rozepsaný původní tip'};
+game.replaceState(old);
+assert.equal(node('mode-notice').hidden,false,'Existing classic day explains the transition');
+assert.equal(node('distorted-message').textContent,byId(oldID).chain.at(-1));
+assert.equal(node('guess').value,'rozepsaný původní tip');
+assert.equal(node('transmission-section').hidden,false,'Previously purchased transmission path remains accessible');
+assert.equal(game.exportState().days[date].progress[oldID].chainLevel,1);
+assert.equal(node('hint-options').hidden,true);
+console.log('PASS actual author UI: real quotation, free text, optional four choices, anonymous origin, educational reveal, preserved classic day and purchases.');
+// Actual cloud module restores a mixed classic/author history and synchronizes names.
+const accountID='22222222-2222-4222-8222-222222222222';
+const remote=daily.createState(null);daily.bindPlayer(remote,accountID);
+const before=daily.ensureDay(remote,'2026-10-19'),beforeID=before.ids[0];
+before.progress[beforeID]={...daily.blankRound(),status:'won',attempts:[{id:'old-account-win',text:byId(beforeID).answer,time:fixed-86400000}]};
+const current=daily.ensureDay(remote,date),currentID=current.ids[0];
+const server={account:{id:accountID,name:'Tester',email:'test@example.test',emailConfirmed:true},state:copy(remote),consent:{granted:false},admin:false};
+const session={access_token:'synthetic',user:{id:accountID}};
+context.SeptandaSupabase={createClient(){return{auth:{onAuthStateChange(){},async getSession(){return{data:{session}};}}};}};
+context.fetch=async(url,opts={})=>{
+ if(url.includes('cloud-leaderboard'))return{ok:true,json:async()=>({date,entries:[],total:0})};
+ if(opts.body){const body=JSON.parse(opts.body);if(body.action==='sync')server.state=copy(body.state);}
+ return{ok:true,json:async()=>copy(server)};
+};
+vm.runInContext(await readFile(new URL('cloud.js',import.meta.url),'utf8'),context);
+await context.SeptandaCloud.start({consent:{version:'v1',text:'Synthetic'},supabase:{url:'https://synthetic.supabase.test',publishableKey:'synthetic'}});
+state=game.exportState();assert.equal(state.days[date].mode,'author-v1');
+assert.equal(state.days['2026-10-19'].progress[beforeID].status,'won');
+assert.equal(daily.totals(state).points,300,'Cold cloud restore retains old earned points');
+assert.ok(!state.days[date].ids.includes(beforeID),'Account history excludes old quotes');
+assert.equal(node('distorted-message').textContent,byId(currentID).answer);
+node('guess').value=authors.profile(currentID).name;node('guess-form').fire('submit');
+assert.equal(daily.totals(game.exportState()).points,500,'New author win adds to the preserved balance');
+console.log('PASS actual cloud client restores mixed modes, old points and personal author selection.');

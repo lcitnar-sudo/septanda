@@ -21,7 +21,7 @@ for(const id of approved)ok(byID.has(id) && review.entries[id].status==='approve
 const date='2026-10-20',now=new Date(date+'T12:00:00Z');
 const userA='11111111-1111-4111-8111-111111111111',userB='22222222-2222-4222-8222-222222222222';
 const tools=createProgressTools({puzzles,engine,daily});
-const personal=id=>{const s=daily.createState(null);daily.bindPlayer(s,id);daily.ensureDay(s,date);return s;};
+const personal=id=>{const s=daily.createState(null);daily.bindPlayer(s,id);daily.ensureDay(s,date,{mode:'classic'});return s;};
 const a=personal(userA),b=personal(userB);
 eq(a.days[date].ids.length,3,'New personal days contain three puzzles');
 ok(a.days[date].ids.join()!==b.days[date].ids.join(),'Different players receive their own set');
@@ -34,7 +34,7 @@ const seen=new Set(),long=daily.createState(null);daily.bindPlayer(long,userA);
 let fullDays=0;
 for(let n=0;n<50;n++){
   const key=new Date(Date.parse(date+'T12:00:00Z')+n*86400000).toISOString().slice(0,10);
-  const d=daily.ensureDay(long,key);
+  const d=daily.ensureDay(long,key,{mode:'classic'});
   if(d.ids.length)fullDays++;
   for(const id of d.ids){ok(approved.has(id),'Only approved content is assigned');ok(!seen.has(id),'No prior assigned puzzle returns, including unopened slots');seen.add(id);}
 }
@@ -42,7 +42,7 @@ eq(fullDays,45,'135 approved puzzles provide 45 complete personal triples');
 eq(seen.size,135,'The complete reviewed pool is used exactly once');
 eq(daily.ensureDay(long,'2027-05-01').ids,[],'Exhausted content never wraps around');
 
-const guest=daily.createState(null);daily.ensureDay(guest,date,{personal:true});
+const guest=daily.createState(null);daily.ensureDay(guest,date,{personal:true,mode:'classic'});
 ok(guest.assignmentSeed.startsWith('guest:'),'A guest has a browser-owned seed');
 eq(daily.sanitizeState(clone(guest)).assignmentSeed,guest.assignmentSeed,'Guest identity persists through storage');
 eq(daily.ensureDay(daily.sanitizeState(clone(guest)),date).ids,guest.days[date].ids,'A guest is not rerolled on reload');
@@ -71,7 +71,7 @@ const priorDay='2026-10-19',archive=daily.createState(null);daily.bindPlayer(arc
 const prior=daily.ensureDay(archive,priorDay),priorID=prior.ids[0];
 prior.progress[priorID]={...daily.blankRound(),status:'won',attempts:[{id:'prior-win-1',text:byID.get(priorID).answer,time:Date.parse(priorDay+'T12:00:00Z')}]};
 const archived=tools.merge(null,archive,{now,playerId:userA});
-daily.ensureDay(archived.state,date);
+daily.ensureDay(archived.state,date,{mode:'classic'});
 const cold=personal(userA);daily.markSeen(cold.days[date],cold.days[date].ids[0]);
 const coldMerge=daily.mergeForSync(archived.state,cold);
 eq(coldMerge.state.days[priorDay].progress[priorID].status,'won','A cold device keeps earlier account wins');

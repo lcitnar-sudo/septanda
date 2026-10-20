@@ -8,6 +8,10 @@
   // Historical paid skips without an amount were charged 200; never reprice them.
   const skipCharge = r => r?.skipCharge===100 ? 100 : 200;
   const chainLevel = r => Math.min(4,Math.max(0,Math.floor(Number(r?.chainLevel)||0)));
+  const authorStart=root.SeptandaAuthors?.start || null;
+  const newMode=key=>authorStart && key>=authorStart?'author-v1':'classic';
+  const modeFor=day=>day?.mode==='author-v1'?'author-v1':'classic';
+  const validAuthorIDs=ids=>Array.isArray(ids)&&ids.length===3&&ids.every(id=>root.SeptandaAuthors?.get(id))&&ids.filter(id=>root.SeptandaAuthors.get(id).profile==='folk').length<=1&&new Set(ids.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk').map(id=>root.SeptandaAuthors.get(id).profile)).size===ids.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk').length;
   const validPersonalSize=(key,size)=>size===PERSONAL_SIZE || size===5 && key<=SIZE_CHANGED_ON;
   if (pool.length < 5) throw new Error('Denní sada potřebuje alespoň pět výroků.');
   function dayKey(date = new Date()) {
@@ -60,18 +64,27 @@
       state.assignmentSeed='guest:'+(root.crypto?.randomUUID?.() || Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'-'+Math.random().toString(36).slice(2));
     return state;
   }
-  function personalPlan(state,key,seed=state.assignmentSeed,size=PERSONAL_SIZE) {
+  function personalPlan(state,key,seed=state.assignmentSeed,size=PERSONAL_SIZE,mode='classic') {
     if(!validDay(key))throw new Error('Neplatný den.');
     if(!personalStart || key<personalStart || !validSeed(seed))return plan(key);
     const excluded=seenBefore(state,key);
     for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
     for(const id of state.knownIds||[])excluded.add(id);
-    const candidates=approvedIDs.filter(id=>byId.has(id) && !excluded.has(id));
+    const admission=mode==='author-v1'?root.SeptandaAuthors.ids:approvedIDs;
+    const candidates=admission.filter(id=>byId.has(id) && !excluded.has(id));
     if(!validPersonalSize(key,size) || candidates.length<size)return [];
     let randomState=2166136261;
-    for(const char of 'septanda-personal-1:'+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
+    for(const char of (mode==='author-v1'?'septanda-authors-1:':'septanda-personal-1:')+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
     const random=()=>{randomState=(randomState+0x6D2B79F5)|0;let n=Math.imul(randomState^randomState>>>15,1|randomState);n^=n+Math.imul(n^n>>>7,61|n);return((n^n>>>14)>>>0)/4294967296;};
     for(let i=candidates.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
+    if(mode==='author-v1'){
+      if(size!==3)return [];
+      const named=candidates.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk'),folk=candidates.filter(id=>root.SeptandaAuthors.get(id).profile==='folk'),chosen=[],people=new Set();
+      for(const id of named){const person=root.SeptandaAuthors.get(id).profile;if(!people.has(person)){chosen.push(id);people.add(person);}if(chosen.length===2)break;}
+      if(chosen.length<2)return [];
+      const last=folk[0]||named.find(id=>!people.has(root.SeptandaAuthors.get(id).profile));if(!last)return [];chosen.push(last);
+      for(let i=chosen.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[chosen[i],chosen[j]]=[chosen[j],chosen[i]];}return chosen;
+    }
     const chosen=[],usedWorks=new Set();
     const take=category=>{
       const id=candidates.find(id=>!chosen.includes(id) && (!category || byId.get(id).category===category) && (!['Veřejně volné verše','Úryvek z knihy'].includes(byId.get(id).category) || !usedWorks.has(byId.get(id).origin)));
@@ -108,13 +121,13 @@
     if (!id || !canSelect(day, id) || day.seen.includes(id)) return false;
     day.seen.push(id); return true;
   }
-  function cleanRound(source, puzzle) {
+  function cleanRound(source, puzzle, mode='classic') {
     const round = blankRound();
     if (!source || typeof source !== 'object') return round;
     if (Array.isArray(source.attempts)) {
       for (const a of source.attempts) {
         if (!a || typeof a.text !== 'string' || a.text.length > 400 || !engine.normalize(a.text)) continue;
-        const score = engine.evaluate(a.text, puzzle);
+        const score = engine.evaluate(a.text, puzzle, mode);
         round.attempts.push({...(typeof a.id === 'string' && /^[a-zA-Z0-9_-]{1,80}$/.test(a.id) ? {id:a.id} : {}), text: a.text, time: typeof a.time === 'number' ? a.time : 0, score});
         if (score.accepted) round.status = 'won';
       }
@@ -128,10 +141,10 @@
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
     return round;
   }
-  function cleanProgress(source, ids) {
+  function cleanProgress(source, ids, mode='classic') {
     const out = {};
     if (!source || typeof source !== 'object') return out;
-    for (const id of ids) if (Object.hasOwn(source, id)) out[id] = cleanRound(source[id], byId.get(id));
+    for (const id of ids) if (Object.hasOwn(source, id)) out[id] = cleanRound(source[id], byId.get(id),mode);
     return out;
   }
   function createState(legacy) {
@@ -148,7 +161,8 @@
       for (const [key, source] of Object.entries(raw.days)) {
         if (!validDay(key) || !source || typeof source !== 'object') continue;
         const ids = Array.isArray(source.ids) && [0,3,5].includes(source.ids.length) && new Set(source.ids).size === source.ids.length && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
-        const day = {ids, selected: source.selected, progress: cleanProgress(source.progress, ids), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
+        const mode=modeFor(source);
+        const day = {ids,...(mode==='author-v1'?{mode}:{}), selected: source.selected, progress: cleanProgress(source.progress, ids,mode), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
         state.days[key] = day;
       }
       for (const key of Object.keys(state.days).sort()) reconcileDay(state, key);
@@ -157,10 +171,11 @@
   }
   function ensureDay(state, key, options={}) {
     if(options.personal)bindPlayer(state,options.playerId||null);
-    const planned = state.assignmentVersion===1 ? personalPlan(state,key) : plan(key);
+    const mode=state.days[key]?modeFor(state.days[key]):options.mode||newMode(key);
+    const planned = state.assignmentVersion===1 ? personalPlan(state,key,state.assignmentSeed,PERSONAL_SIZE,mode) : plan(key);
     if (!Object.hasOwn(state.days, key) || (!state.days[key].ids.length && planned.length)) {
       const ids = planned;
-      state.days[key] = {ids, selected: ids[0] || null, progress: {}, seen: [], skipped: []};
+      state.days[key] = {ids,...(mode==='author-v1'?{mode}:{}), selected: ids[0] || null, progress: {}, seen: [], skipped: []};
     }
     return reconcileDay(state, key);
   }
@@ -190,9 +205,13 @@
     for(const [key,source] of Object.entries(local.days).sort()) {
       const target=result.days[key];
       if(!target){result.days[key]=source;continue;}
+      if(modeFor(target)!==modeFor(source)){
+        if(key<=authorStart && modeFor(source)==='classic' && work(source) && !work(target) && !target.seen.length && local.assignmentSeed===result.assignmentSeed){result.days[key]=source;continue;}
+        if(work(source))backupRequired=true;continue;
+      }
       if(target.ids.join()!==source.ids.join()) {
         const earlier=new Set(Object.entries(result.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-        const mayKeep=work(source) && !work(target) && !target.seen.length && validPersonalSize(key,source.ids.length) && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
+        const mayKeep=work(source) && !work(target) && !target.seen.length && validPersonalSize(key,source.ids.length) && (modeFor(source)!=='author-v1'||validAuthorIDs(source.ids)) && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
         if(mayKeep){result.days[key]=source;continue;}
         if(work(source))backupRequired=true;
         result.knownIds=[...new Set([...result.knownIds,...source.seen.filter(id=>!target.ids.includes(id))])];
@@ -232,5 +251,5 @@
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  root.SeptandaDaily = Object.freeze({authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);

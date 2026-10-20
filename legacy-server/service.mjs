@@ -98,9 +98,13 @@ function candidate(body, date, account, previous, known) {
     ids=offered;
   }
   if (!Array.isArray(body.rounds) || body.rounds.length !== ids.length) fail(400,'Neplatná délka dnešní sady.');
+  const mode=previous?daily.modeFor(previous):body.mode==='author-v1'?'author-v1':'classic';
+  if(body.mode!==undefined && body.mode!=='author-v1' || daily.modeFor(body)!==mode)fail(409,'Hra se aktualizovala. Obnov stránku.');
+  if(mode==='author-v1' && (date<daily.authorStart || !daily.validAuthorIDs(ids)))fail(400,'Neplatná sada autorů.');
   return body.rounds.map((r,i) => {
     if (!r || r.id !== ids[i] || !['playing','won','revealed'].includes(r.status) || typeof r.hint !== 'boolean') fail(400,'Neplatný výsledek dnešní sady.');
-    if (r.status === 'won' && (typeof r.answer !== 'string' || r.answer.length > 400 || !engine.evaluate(r.answer,byId.get(r.id)).accepted)) fail(400,'Výsledek se nepodařilo ověřit.');
+    if (r.status === 'won' && (typeof r.answer !== 'string' || r.answer.length > 400 || !engine.evaluate(r.answer,byId.get(r.id),mode).accepted)) fail(400,'Výsledek se nepodařilo ověřit.');
+    if(mode==='author-v1' && r.chainLevel)fail(400,'Použij stopy k autorovi.');
     if(r.chainLevel!==undefined && (!Number.isInteger(r.chainLevel) || r.chainLevel<0 || r.chainLevel>4))fail(400,'Neplatný krok tiché pošty.');
     return {id:r.id,status:r.status,hint:r.hint,chainLevel:r.chainLevel||0,...(r.status==='revealed' && (r.paidSkip===true || ids.length===3 || date>=daily.paidSkipStart)?{paidSkip:true,skipCharge:daily.skipCost}:{})};
   });
@@ -174,7 +178,7 @@ export function createHandler(store,{now=()=>new Date(),local=false}={}) {
           for(let retry=0;retry<6;retry++) {
             const existing=await store.getWithMetadata(key,{type:'json'}),previous=existing?.data;
             const incoming=candidate(body,date,account,previous,known);
-            const record={id:account.id,name:account.name,date,rounds:merge(previous,incoming)};
+            const record={id:account.id,name:account.name,date,...(body.mode==='author-v1'?{mode:body.mode}:{}),rounds:merge(previous,incoming)};
             const newPaidAction=record.rounds.some((r,i)=>(r.paidSkip && !['won','revealed'].includes(previous?.rounds?.[i]?.status)) || (r.chainLevel||0)>(previous?.rounds?.[i]?.chainLevel||0));
             if(newPaidAction && 100+earlierPoints+publicEntry(record).points<0)fail(409,'Na tento krok nemáš dost bodů. Předání stojí 50 bodů, přeskočení 100 bodů.');
             if(previous && JSON.stringify(record)===JSON.stringify(previous)){saved=true;break;}

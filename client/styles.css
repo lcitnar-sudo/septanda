@@ -1959,3 +1959,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .transmission-list li { border-left:2px solid var(--oxide); background:#e5e6d9; padding:12px; margin:0 0 12px; }
 .transmission-list p { font-family:var(--sans); font-size:14px; line-height:1.6; margin:8px 0 0; }
 .transmission-list .eyebrow { font-size:9px; }
+
+.intro-copy { font-family:var(--sans); font-size:clamp(14px,1.4vw,18px); max-width:640px; color:var(--muted); line-height:1.6; margin:22px 0 0; }
+.author-options { display:grid; gap:9px; margin:16px 0; }
+.author-option { text-align:left; padding:12px 14px; font-family:var(--sans); font-size:13px; line-height:1.4; }
+.question-scope { margin:20px 0 0; }
