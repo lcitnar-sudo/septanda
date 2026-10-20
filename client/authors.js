@@ -31,7 +31,7 @@
   return shuffle(selected).map(id=>({id,label:profiles[id].name}));
  }
  function feedback(text,puzzle,accepted){
-  const result=evaluate(text,puzzle);return{accepted,matched:[],title:accepted?'Původ odhalen.':'Zkus jiné jméno nebo stopu.',detail:accepted?'Teď se podívej na příběh těchto slov.':result.reason==='other-person'?'Této osobnosti uvedená slova nepatří.':'Hledáme konkrétní jméno, nebo lidový původ. Křestní jméno samotné obvykle nestačí.',caution:'U literárních textů hledáme autora díla, pokud otázka výslovně nežádá mluvčího. Můžeš napsat také „lidové rčení“.'};
+  const result=evaluate(text,puzzle);return{accepted,matched:[],title:accepted?'Původ odhalen.':'Zkus jiné jméno nebo stopu.',detail:accepted?'Teď se podívej na příběh těchto slov.':result.reason==='other-person'?'Této osobnosti uvedená slova nepatří.':'Hledáme konkrétní jméno, nebo lidový původ. Křestní jméno samotné obvykle nestačí.',caution:'U literárních textů hledáme autora díla, pokud otázka výslovně nežádá mluvčího. Pokud autor není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.'};
  }
  root.SeptandaAuthors=Object.freeze({mode:data.mode,start:data.start,ids:Object.freeze(Object.keys(entries)),get,profile,evaluate,options,feedback,normalize:norm});
 })(globalThis);

@@ -135,9 +135,9 @@
     $('intro-copy').hidden=!author;
     $('mode-notice').hidden=!state.archivedDays?.[activeDate];
     $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
-    $('guess').placeholder=author?'Jméno autora nebo „lidové rčení“':'Tvůj tip na původní znění';
+    $('guess').placeholder=author?'Jméno autora nebo lidový původ':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
-    $('guess-instructions').textContent=author?'Stačí příjmení nebo „lidové rčení“. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
+    $('guess-instructions').textContent=author?'Stačí příjmení. U lidového původu napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
     $('hint-clue').querySelector('small').textContent=author?'Oblast, pramen a nakonec čtyři možnosti.':'Od významu ke konkrétnímu obrazu.';
     $('message-label').textContent=author?'ČÍ JSOU TATO SLOVA?':'ZACHYCENÁ ZPRÁVA';
     $('rules-author').hidden=!author;$('rules-classic').hidden=author;

@@ -1,4 +1,4 @@
-# Šeptanda 6.1.0 — Šeptá se to po staletí.
+# Šeptanda 6.1.1 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -110,3 +110,5 @@ Nově přidělené osobní dny od 20. 10. 2026 mají `mode:"author-v1"`. Od verz
 Po otevření třetí stopy jsou čtyři odpovědi; nejsou součástí výchozí otázky. Literární otázka hledá autora díla, s výslovnou výjimkou otázky na Sókrata v Platónově podání. Tradiční připsání Caesarovi, Konfuciovi a Lao-c’ je přiznané. U anonymních rčení přijímáme lidový původ, nikoli „nevím“.
 
 Ověření nového režimu: `scripts/author-tests.mjs` a `client/author-game-tests.mjs` doplňují původních 10 sad testů o uznávání jmen, nejednoznačnosti, anonymní původ, čtyři možnosti, výběr bez opakování, souběžné ukládání a zachování původní i offline historie. SQL migrace není potřeba.
+
+Pokyn pro anonymní původ výslovně nabízí „autor neznámý“, „lidové rčení“ a „pořekadlo“. Všechny tři odpovědi přijímá prohlížeč i server u anonymních rčení; konkrétním autorům se tím autorství nemění.

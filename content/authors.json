@@ -396,7 +396,8 @@
         "neznámý autor",
         "přísloví",
         "rčení",
-        "lidové pořekadlo"
+        "lidové pořekadlo",
+        "pořekadlo"
       ],
       "clue": "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
       "bio": "U tohoto tradičního rčení neznáme konkrétního prvního autora. Doložené znění a výklad ale můžeme ověřovat ve slovnících a sbírkách.",
@@ -408,7 +409,7 @@
       "profile": "caesar",
       "attribution": "traditional",
       "question": "Komu se tato slova tradičně připisují?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Antický Řím. Hledej osobnost veřejného života.",
         "Pramen: Veni, vidi, vici · 47 př. n. l..",
@@ -418,13 +419,13 @@
       "sourceURLs": [
         "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html#37"
       ],
-      "contentSha256": "402431df92bb508ff233f626ea253cde5aad2af4fe8dba3778a8e7c74fcd86db"
+      "contentSha256": "8347258088b8718d66d444531de52a81b4ad30d29ee1c84965304805592ae5e2"
     },
     "proverb-pit": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Pozornost se obrací od druhého člověka zpátky k tomu prvnímu.",
@@ -434,7 +435,7 @@
       "sourceURLs": [
         "https://ssjc.ujc.cas.cz/search.php?heslo=s%C3%A1m&hsubstr=no"
       ],
-      "contentSha256": "98d4068d64449000a7188c4e571599e92af0f60c8178bca87a939fed4b9faada"
+      "contentSha256": "a14ca0c63cd43995cbacf88330945b38d3101a25400d22b6dc09cb127befe81c"
     },
     "poem-may": {
       "profile": "macha",
@@ -456,7 +457,7 @@
       "profile": "caesar",
       "attribution": "traditional",
       "question": "Komu se tato slova tradičně připisují?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Antický Řím. Hledej osobnost veřejného života.",
         "Pramen: Překročení Rubikonu · 49 př. n. l..",
@@ -466,13 +467,13 @@
       "sourceURLs": [
         "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Suetonius/12Caesars/Julius*.html#32"
       ],
-      "contentSha256": "1a23b4b1b77be229c3262cb628ea90605ca383d475fb7dd1c6551464ce886c2f"
+      "contentSha256": "033e8f5432b779bcd44c187655a7e00b4eb970c7bfaebd6dba0fc2d3b564e4bb"
     },
     "proverb-work": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Podstatný je vztah mezi tím, co člověk udělá, a tím, co získá.",
@@ -482,7 +483,7 @@
       "sourceURLs": [
         "https://ssjc.ujc.cas.cz/search.php?heslo=pr%C3%A1ce&hsubstr=no"
       ],
-      "contentSha256": "ddf2b956c14981d5b85a46d962fe261dae0920602ac3148cd21dcc8fb207c61a"
+      "contentSha256": "f80c1804b2197bbeb4ad2e7ecbbdbbc476346f07505263f3dd3f925aeeae0ece"
     },
     "poem-noon": {
       "profile": "erben",
@@ -504,7 +505,7 @@
       "profile": "descartes",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Evropská filozofie raného novověku.",
         "Pramen: Rozprava o metodě · část IV · 1637.",
@@ -514,13 +515,13 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/59/59-h/59-h.htm"
       ],
-      "contentSha256": "5dd7872f35d284de6a2824bb70c6ba68cf09e078465a336f4e270c8a3bbeacdd"
+      "contentSha256": "ce5391a353995b521da9f2c62820aa830ba019f5bfc3afdc2860948d83673d71"
     },
     "proverb-measure": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jde o radu, která rozlišuje přípravu a samotný čin.",
@@ -530,7 +531,7 @@
       "sourceURLs": [
         "https://ssjc.ujc.cas.cz/search.php?heslo=jednou&hsubstr=no"
       ],
-      "contentSha256": "a5d38911b6d48ce21f48e6819180fe3a58a01be8855dd288db19c652892e6444"
+      "contentSha256": "9a6eb7146630e1877b068b9947e690a8258b1eddc1f8853f00b2f5f6fa39c15f"
     },
     "poem-bouquet": {
       "profile": "erben",
@@ -568,7 +569,7 @@
       "profile": "confucius",
       "attribution": "traditional",
       "question": "Komu se tato slova tradičně připisují?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Myšlenková tradice starověké Číny.",
         "Pramen: Hovory XV.23 (Legge; obvykle XV.24).",
@@ -578,7 +579,7 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/3330/pg3330.html"
       ],
-      "contentSha256": "5774b78b0793bd2990feb871e74be9fc14dd12c7c62a98ad223889a57db24e72"
+      "contentSha256": "64b165df3e26efbb567f87dbad5eaa7ca9c30ee44c07dacbf881d3dff25940a4"
     },
     "quote-shakespeare-hamlet": {
       "profile": "shakespeare",
@@ -632,7 +633,7 @@
       "profile": "newton",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Dějiny přírodních věd raného novověku.",
         "Pramen: Dopis Robertu Hookovi ·5. února 1676.",
@@ -642,13 +643,13 @@
       "sourceURLs": [
         "https://newtonproject.ox.ac.uk/view/texts/normalized/OTHE00101"
       ],
-      "contentSha256": "f207a16737a270820566555a1b9a5124239a18767707f5333c1f32c80b4f0fb7"
+      "contentSha256": "9afd02a252e2377673b4226ec5157a45d4d5d07da65b90cbc679f714b38a47ec"
     },
     "quote-lao-first-step": {
       "profile": "lao",
       "attribution": "traditional",
       "question": "Komu se tato slova tradičně připisují?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Myšlenková tradice starověké Číny.",
         "Pramen: Tao-te-ťing 64.2.",
@@ -658,13 +659,13 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/216/216-h/216-h.htm"
       ],
-      "contentSha256": "0c52c9c363802eaa09f1a5482a1946f67a45750e1342088e3b849d6f81e1d021"
+      "contentSha256": "4848aa60af954a87ef030102af80204f41de38e59774477bd30a2d1efac56cb8"
     },
     "quote-lincoln-democracy": {
       "profile": "lincoln",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Veřejný život Spojených států v 19. století.",
         "Pramen: Gettysburský projev ·19. listopadu 1863.",
@@ -674,13 +675,13 @@
       "sourceURLs": [
         "https://www.loc.gov/exhibits/civil-war-in-america/ext/al0186p1.html"
       ],
-      "contentSha256": "11ea605720e38e0716b52537edd13fff160384131eab195dcecc39458bf8c3a8"
+      "contentSha256": "96bf210004ccd20cf94028a483d3b1ed3286b7fe76c5a3df25b4422a31c1b782"
     },
     "quote-nietzsche-stronger": {
       "profile": "nietzsche",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Evropská filozofie 19. století.",
         "Pramen: Soumrak model · Výroky a šípy,8 ·1889.",
@@ -690,13 +691,13 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/7203/pg7203.html"
       ],
-      "contentSha256": "88545686f1cbc981db3e166fc8514eb82fc29e054a403bb44b41b99122997f2e"
+      "contentSha256": "7133dbfba384608e365d2e1a63ea85b6ce13303f253b5aab3dc7e0aff2db19a1"
     },
     "quote-masaryk-discussion": {
       "profile": "masaryk",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Československý veřejný život 20. století.",
         "Výrok najdeš v Čapkových Hovorech, v oddílu Demokracie.",
@@ -706,7 +707,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Hovory_s_T._G._Masarykem/Demokracie"
       ],
-      "contentSha256": "a7f9b51dfcc38d9c6845d34c33199da654bb73c2f307cd8a64a99eb3fdb71b8e"
+      "contentSha256": "dfd591b89e34dac7014958fe162bf33e2e7c64eee03258722a894cf752af05b2"
     },
     "quote-socrates-ignorance": {
       "profile": "socrates",
@@ -728,7 +729,7 @@
       "profile": "aristotle",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Antická řecká filozofie.",
         "Pramen: Politika I.2, 1253a.",
@@ -738,7 +739,7 @@
       "sourceURLs": [
         "https://classics.mit.edu/Aristotle/politics.1.one.html"
       ],
-      "contentSha256": "35ff017dd510ded342784db9d0199c6d81fe59028e5a829396f3df507e87d3f6"
+      "contentSha256": "bbd7ad508e8d78285113952cdc4fcdde21a7ecc6271167d08d72ecc328bcd830"
     },
     "quote-cicero-times": {
       "profile": "cicero",
@@ -888,7 +889,7 @@
       "profile": "pascal",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Evropské myšlení 17. století.",
         "Pramen: Myšlenky, zlomek 277.",
@@ -898,13 +899,13 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/18269/pg18269-images.html"
       ],
-      "contentSha256": "64c52181776b6f604f78044899a12a322095505546d4cf387f2208e642278290"
+      "contentSha256": "84388accd57090ca6d5caf487b822a69fb6bdd3ad130b5183af3ddc1fabcb798"
     },
     "quote-kant-heavens": {
       "profile": "kant",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Evropská filozofie 18. století.",
         "Pramen: Kritika praktického rozumu, závěr, AA V 161.",
@@ -914,13 +915,13 @@
       "sourceURLs": [
         "https://www.gutenberg.org/cache/epub/5683/pg5683-images.html"
       ],
-      "contentSha256": "973e979188a7bb36ccfd7e34654e00be8a37046d385d987740abb24e27bc7f70"
+      "contentSha256": "c3d8bee5baaaaa75b83719c3645a43cb52aa00e0a63e97a84c530afb4cab254e"
     },
     "quote-rousseau-chains": {
       "profile": "rousseau",
       "attribution": "documented",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Evropské myšlení 18. století.",
         "Pramen: O společenské smlouvě I.1.",
@@ -930,13 +931,13 @@
       "sourceURLs": [
         "https://fr.wikisource.org/wiki/Page:Rousseau_-_Collection_complète_des_œuvres_t1.djvu/208"
       ],
-      "contentSha256": "c98dee79a2e2c876b917d9513f7785e01fb8672279077fadd6cca027e4a17d1e"
+      "contentSha256": "f59647888f102f280ade772daf4187d060dbd6727676706494a97514b6396d48"
     },
     "proverb-archive-e52461e58866": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Výhoda patří tomu, kdo začne brzy.",
@@ -946,13 +947,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "46665b0d696a3850520a3c48ec43d3d7fd730bb2f4e286ae0600abcd856abe12"
+      "contentSha256": "8705518ceafe95d64739abbc04112a0f211ed4f8508f39aa3d05bf7fc5720bee"
     },
     "proverb-archive-187c5bbab978": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Vlastní přednosti hodnotíme shovívavě.",
@@ -962,13 +963,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "90147a932279598a01027e980921eed30ef3b084708c3cc63e436ab5c8321335"
+      "contentSha256": "41fcec959c5aae2d47f5e313ea5c10f960511df33bc6a187fd11ba9cb96bdba3"
     },
     "proverb-archive-4a649ec7d600": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Lesklý vzhled nemusí znamenat skutečnou hodnotu.",
@@ -978,13 +979,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "de1662ed78164a34e4c954b2b7aa387b3d04ac0d4793dc9185dd8d41a26efadd"
+      "contentSha256": "9ef89e4b1cce00bf43d54355cfdd5e35d352b81e71a7b243f976650f403aec09"
     },
     "proverb-archive-fbba1f988819": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Dva soupeři chtějí vládnout stejnému místu.",
@@ -994,13 +995,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "fbfee43a97db7edba1094294149268e421d3d502ace4c5dded7b04218e372a55"
+      "contentSha256": "b7fb9634cc2f6259ed1b0a8eb12fbf1125a04bf748cb18dc14abdebaa802994b"
     },
     "proverb-archive-229946c51616": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Dobře zvládnutá dovednost je trvalým bohatstvím.",
@@ -1010,13 +1011,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "b2a9ef5087742eb068bb02b3fc3e8ceb943c9db9377f1ab06ea6de3e799041b4"
+      "contentSha256": "85d6e689e171dbcb77e588b6964dcbeeaaf11d4fcbfda74d9520e2db6ef638d8"
     },
     "proverb-archive-937fb00007f8": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Příliš rozptýlené schopnosti nemusí přinést obživu.",
@@ -1026,13 +1027,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "733a5108c4e465b6eab8355529ca597c52a09dfb6f6bcde5e12b4792ce04c57a"
+      "contentSha256": "7dbb8ae1db9883ddadfd482871544356ebb610855c5aafa6497056b5d120164c"
     },
     "proverb-archive-c63b1d435474": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Snaha získat oba cíle připraví člověka o každý z nich.",
@@ -1042,13 +1043,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "0ff9bf6b31360e709b6eba60bdde0d3e87d685eb1f8e8ee13c04adcd3a97346a"
+      "contentSha256": "9fec37f11cc37db08c02d3bda59228c514cd6a654c3000717075d98b4d2f132b"
     },
     "proverb-archive-230d147aaaa2": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Před nákupem si ověř, co skutečně dostaneš.",
@@ -1058,13 +1059,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "1b5dcb61468fa6884e97088a0499b82e570523b82da2d40901ffd2f11077f8db"
+      "contentSha256": "15309e798d8cf8f4399bdec7f8cfddcfc042cf1edbf8889ee523aa421f55834d"
     },
     "proverb-archive-3a4ae7405313": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Někdy se přihodí i něco krajně nepravděpodobného.",
@@ -1074,13 +1075,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "915666e4aceb81acfe5ad2b568fd19d295c6a3fb29120b245a3f775d0e30fe82"
+      "contentSha256": "cd040cb103b72766eb05dd67c87ce1d2dbbc758b10dc039e6138abeb2ec0022c"
     },
     "proverb-archive-4f10ad2d056b": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "I bez schopností může jednou pomoci náhoda.",
@@ -1090,13 +1091,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "139b192740b8876791b8ae97c82cafa9b8ea9b565000761bec5d227ea4803f8c"
+      "contentSha256": "c9aa1bc7354fd279302df5fa3e78b3b4331b826f8f69c3d69bc3cbbf72cc8444"
     },
     "proverb-archive-77241f00dd6b": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Výsledek vypovídá o svém původu.",
@@ -1106,13 +1107,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "93485f2b5bb9477de80724b9a7341debec0b85e7812de984122c46ee75739965"
+      "contentSha256": "fe1eaf31119ed8d8a36caf79534fd2a40794f676505195f9d6b2dc5d99b98245"
     },
     "proverb-archive-438a9c4a3e4b": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Potomci mívají blízko k rodičům.",
@@ -1122,13 +1123,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e75506281ab03e991e707badfcb60a919c529ca759223d836e81f67043032a31"
+      "contentSha256": "1327c4b7339e14445732fbe78c759fde142cc08bde1ed954496f771ffd61ef7e"
     },
     "proverb-archive-4c70a0bb8055": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Odhodlaný začátek usnadňuje práci.",
@@ -1138,13 +1139,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "d3fb1e1cbe81279107018c9fb11a32e7452322bb87dad270f4885da5b3213c7d"
+      "contentSha256": "eba6f405846006f864b5caf9bee8356bfa9932d99f5418e8bc8434ea3b5f5c6d"
     },
     "proverb-archive-7e51697c5bca": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Začáteční nadšení bývá mimořádné.",
@@ -1154,13 +1155,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2b050a654dc8ab2fae0a453e7a16cc455b653b574df3777258a23919ad89e024"
+      "contentSha256": "4c8e3b72740ab94abda3063af21769ea563348705a30342952a30bcef140a916"
     },
     "proverb-archive-6ef9fa564c68": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Včasný začátek přináší náskok.",
@@ -1170,13 +1171,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "deb396add9278d6292e42cb2aaffe70714b1f95175c77acb5a3fd360b1931d99"
+      "contentSha256": "3f270b5c11f747f3f8782b9751eea6e1025e32dc57aad62b19b610b6bf869a8f"
     },
     "proverb-archive-94f5f2d515fe": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Ani milá společnost nemá zůstat příliš dlouho.",
@@ -1186,13 +1187,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "ab29ebcdaaecccec5c7cc0a71e0468f1a13e09ce8ffa9b75a91189b5496ed868"
+      "contentSha256": "2269c9f5622a0183b3c30d175acf55cdb805b1c9ce780c0ecb00cc1f68f56422"
     },
     "proverb-archive-fd04ef60f422": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Potíže celku mohou začínat u vedení.",
@@ -1202,13 +1203,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "896cfa10d3457158a6951e65165bcfdd561c9886105c0ae4627c14e90369f79b"
+      "contentSha256": "26728a60370a50a75f33b65cea290361bf467b51f68fe09caa3a0c38df37e4c0"
     },
     "proverb-archive-2bbc786a0e65": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Nenápadné chování nemusí znamenat neškodnost.",
@@ -1218,13 +1219,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "c9d5459ea49e343af9cf7fc95c2708efb3a8ce4f0a40bd44856d52e682c78195"
+      "contentSha256": "d7b0cfe702687d2589d1024b9e58b1d240487ee77d4db94d82ebbff34c7737a6"
     },
     "proverb-archive-43cc61082273": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Rozhoduje vytrvalost, ne jediný velký úder.",
@@ -1234,13 +1235,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "84298c58be7258c09b4d5fd553524fca31115ffae6911f90496a0212ba671871"
+      "contentSha256": "31a719ab883e34086aa0bfdbf4c1cb15e588ca9ad8da836370d1248b7e45ac6e"
     },
     "proverb-archive-a7f2df12d661": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Dvě nepoddajné povahy spolu obtížně něco vytvoří.",
@@ -1250,13 +1251,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "d30611ffef76d7973391380b0167bff7685f0f538e80832987623d25a3a056c0"
+      "contentSha256": "9f9b5b367da2c6b9c9c5a97780eeba6e66a4efb1b284f44e74b50f68b486db84"
     },
     "proverb-archive-1a393640bb8d": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "O celku rozhoduje jeho nejslabší část.",
@@ -1266,13 +1267,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "13e271bd7a178cb81b381a0c636068dfcafc6b64e17aca7fe2e538bec7ce3ac9"
+      "contentSha256": "5d74626d4805738c1872f75e14108316e2441f5a779c123271749deff1657795"
     },
     "proverb-archive-89e295bc23e6": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Zoufalství vede i k téměř beznadějné naději.",
@@ -1282,13 +1283,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "a997aeb40a9cadaebd895c9cff4c107cc55555346ef4b4f608db5f17d80a69a1"
+      "contentSha256": "40751c97ce2871950fd38573f8639dd9398bacb7a3be714f538723b1ce2823c6"
     },
     "proverb-archive-bfc3a53dc624": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Výsledek se bez vlastního přičinění nedostaví.",
@@ -1298,13 +1299,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "bf0517972d746d8c41cc6cbd04448e92e4835578828ee7340de36ad17d5b47d6"
+      "contentSha256": "911d330dcbf78229058e45fe3d56b92f1b53d399adc60d9354c3ac815533e464"
     },
     "proverb-archive-0e1821c8335a": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Ani velká moc nevezme něco, co neexistuje.",
@@ -1314,13 +1315,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "8cb469239e31dc611117883a0bba06b46a6a5ec20bf45a0341c2c3385f15dbd6"
+      "contentSha256": "46e1a7505ec7e927a03e4f3e98419135863785841436fd047fc9121ecf05ca71"
     },
     "proverb-archive-3c16b50a38ab": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Když chtějí všichni vládnout, potřebná práce stojí.",
@@ -1330,13 +1331,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2863dad8ff51488178e7011fe3915bf9c5da033435e245c7dfca60b34faa2d43"
+      "contentSha256": "2f9ea71497bc3fe4b2d5844933cd557b044bb5957a9f22264753963ddc3e3d36"
     },
     "proverb-archive-b2431d986819": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Trpělivost může přinést něco dobrého.",
@@ -1346,13 +1347,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e63955382427ccdcfe5abb04504801b0fd5f796edd6df75b4eb1e7ff99ee9e42"
+      "contentSha256": "2427ff40961252156c53354b268b6ed8a4e2a529d29953505431d841e81a50a8"
     },
     "proverb-archive-a4613f8523a2": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "I příjemná věc mívá nepříjemnou stránku.",
@@ -1362,13 +1363,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "5323c690bf9441d331f61bd16a92943ed2b51e3e0d022ddcf73590090b2d71b1"
+      "contentSha256": "7622e3781f7569e1c729b9f7bcab429393219ae1215a6812c918c09341418e9c"
     },
     "proverb-archive-57caea6481db": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Důsledky odpovídají dřívějším činům.",
@@ -1378,13 +1379,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2d088a9f21ae8b8ac98d31ec0d8e148dcb94d05639ec92f28ba1072aef67f0b7"
+      "contentSha256": "4275cb8428a61d12ff24aec122818d47c8dcdea9fa86771f04e31edec18ffdb3"
     },
     "proverb-archive-fd3fa63ea449": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Překročená míra věc zničí.",
@@ -1394,13 +1395,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "62f9fd2f03e32012be7dab1765c3d48874b55dcda33d51cf398cf85f2c752e7e"
+      "contentSha256": "4d392d9933338662f7148598736f8796c9968173ed91326e0b83fa314a7024d0"
     },
     "proverb-archive-2632766a59cf": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Dar není vhodné posuzovat jako placený nákup.",
@@ -1410,13 +1411,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "f0b072d5477d81b603b22eda3086c5a5f5fd88652681aff848f34c2b94b26fac"
+      "contentSha256": "59ada93219bfba0462c8b918873709ff74913947954e156ddf42e61f653a8ff1"
     },
     "proverb-archive-33902c174d6f": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Ani zkušený a schopný neprochází životem bez chyby.",
@@ -1426,13 +1427,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "8ce6203bd8e2e8028f501b8e2c373cd87c8155b12d69d698485dd6a4161e4222"
+      "contentSha256": "ead9e0f71045d6e3b8db7020080cf5f58bd4011f801df73a32ebbe9feed092b0"
     },
     "proverb-archive-131270b20812": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Vlastní prospěch ovlivňuje rozhodování.",
@@ -1442,13 +1443,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e07fccbd710ece248933938da45e1174e51123368db75d2082638738b08d0d46"
+      "contentSha256": "7ef4ddc6eb71d97cf82b5cb04f3ebc936fb76c220b33306f840b43e3ae1f4680"
     },
     "proverb-archive-b4899a351416": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Někdy stačí o potřebnou věc požádat.",
@@ -1458,13 +1459,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "b5e1baf87d39d7b6c8003df6ca3b280af85d08a0b949a3976d42116b1ca55f36"
+      "contentSha256": "52fab199739f948ab1d73d108d969a0a4b280fe59d7543179a4e33db1f146568"
     },
     "proverb-archive-e26a6b5ee661": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Dřívější příchod dává přednost.",
@@ -1474,13 +1475,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "4e301d78e670488576a2243523ebb0280be63391484523739ff2fb05c58d1522"
+      "contentSha256": "89eaee23d97c637233323345fe9efeaabd3b7946b5c5307a6beaa3c1b5fdf67b"
     },
     "proverb-archive-0c6af067ed8f": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Některé informace si zaslouží soukromí.",
@@ -1490,13 +1491,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2e045c75d53565c4592a59f33e726338f61e439618dbddc0dbeac8c62d43ba20"
+      "contentSha256": "f97e0228dd2f4921c96643b9d2d1d2c4d899a53d079dae2155e35aab16c54ea5"
     },
     "proverb-archive-75a85fff5dfa": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Prostředí na člověku zanechá stopy.",
@@ -1506,13 +1507,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "6b22e78d3006e213548022c623dbdd942dcbc02473d43fb47666b1b89abec5dc"
+      "contentSha256": "296fdceecac6b8184f4ea6ab911f2410f08e4b9882c062264aa55acf29c1d370"
     },
     "proverb-archive-0c96ed19f961": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Kořist se pouští nerada.",
@@ -1522,13 +1523,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "b53b2c1e5814614c06e604d7845aed21584c823d21a814e37ccf843cf752f9c7"
+      "contentSha256": "1f41bb20c20577c95fff03656ed3311e713d00294d95351f243acd8bfa66787c"
     },
     "proverb-archive-a846995b6ac6": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Přijetí skupinou vyžaduje přizpůsobení.",
@@ -1538,13 +1539,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e1ec15d6b12a4798655189def1875aab1e488858bd945e07d6060cef2ce15e78"
+      "contentSha256": "2fd9e2d949f7ec6646d99903c5ed9f9c01beeaf7f6de56866c753306f73acc31"
     },
     "proverb-archive-112b88a7b156": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Ublížení řečí může přetrvat tělesné zranění.",
@@ -1554,13 +1555,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "c236cce2c0cdaa43f27396a6b77ad123e5a9e36fa80cf59044ab6534d5d09e42"
+      "contentSha256": "a558267582c8d9f42d5462cef12cb7c00f7c43694c17930eb1d3966693dff65a"
     },
     "proverb-archive-00f9edc2f0b4": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Rozumná obezřetnost není na škodu.",
@@ -1570,13 +1571,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "69ca3dd903ab05734c0beac196b29c728d90f82815412741367236d5d340bf3a"
+      "contentSha256": "a0ada1cc2c1b82bcde6e79e7c4326c0f1ab861551ce155ce69bc60269c25cb63"
     },
     "proverb-archive-f89c64464484": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Paměťovou chybu napraví další námaha.",
@@ -1586,13 +1587,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "b597707791a8c0faf015e41322b6a3c9c627198905af0edb37f28cea1bce7c83"
+      "contentSha256": "0bde2866fc36abbfdfc962c8afdca8fa5c689922fb1aae3d15adad505498fe2f"
     },
     "proverb-archive-4ea7ad163f72": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Opožděný výsledek může mít pořád cenu.",
@@ -1602,13 +1603,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "b39a5eb56cd95d807085f9b7b0e991fbb0a20a7c2606cf0b451d7ecd35fccb16"
+      "contentSha256": "c562a05cdb039c7e009a328ac6b93dc925bc15319889735b41860b9aba1574c3"
     },
     "proverb-archive-6be02ce36a46": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Spěch zvyšuje riziko pádu či chyby.",
@@ -1618,13 +1619,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "3589b9074d8d1299ece9d3ade0034615be04b944db654d356827d2edd88e0a18"
+      "contentSha256": "a301db475daec9933f41c53720f2e2668e7400772769600b78988749ea54dd5f"
     },
     "proverb-archive-4cb96988adae": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Příležitost je třeba využít za vhodných podmínek.",
@@ -1634,13 +1635,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "daa1741cd42132688813cad05870b39f2185ef30a7325b0680afe85cea6fa5ac"
+      "contentSha256": "9f88c2d7e0587e44a0b53a96b90fa2f311c5f2fef6b6fea13b0c22334148713b"
     },
     "proverb-archive-44253061a2b1": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jedna ztráta se nedá získat zpět.",
@@ -1650,13 +1651,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "ca7cf31c4dd034d26c5dce1ce95e10eab94d1438ba19f924fa3c202a04b6bf94"
+      "contentSha256": "0951fd4b993b7317891eec98ae85a049602a9856dd7ff8ecbded09f7681abc84"
     },
     "proverb-archive-3d73c3384b2a": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Rada varuje před vměšováním do cizích záležitostí.",
@@ -1666,13 +1667,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch"
       ],
-      "contentSha256": "bbef1fe89ed76a23a5a5360dc2a234e8fec0c7de5066d63ea309e0a54f705bbd"
+      "contentSha256": "247602465af8430d4da79e231079c0eecb3b1a94b53f558fbc47da6416e8d6b4"
     },
     "proverb-archive-259c3d12d81b": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Pocit domova může převážit pohodlí jinde.",
@@ -1682,13 +1683,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_domov%C4%9B_a_o_vlasti"
       ],
-      "contentSha256": "8cf8372102b3fb40458c49e82b5669c85153eabde50e6c8f94a0a82d2a39214f"
+      "contentSha256": "529b40cc57f9e7cf349868ce105bb40e3d76ded0485bd463a6f85a9f0b58991c"
     },
     "proverb-archive-755c78487885": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Drobná stopa může dovést ke zdroji.",
@@ -1698,13 +1699,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD"
       ],
-      "contentSha256": "b9e2103ed6f82fa971889eda7938f77805c9dc161281aebf1cc0f5c46334937c"
+      "contentSha256": "6a20efbf0645b3d9bd1e49247dd2a33fe88f371df5a08dd59baf7af56ac027ba"
     },
     "proverb-archive-8a156ea0364c": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Pomalý postup ještě nemusí znamenat ztrátu.",
@@ -1714,13 +1715,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD"
       ],
-      "contentSha256": "e2c907aaf7c706c6436ab61e21130732f1149672e0865e0941458d98795b3b91"
+      "contentSha256": "8d0a1d74e97f2080cff9ab036fe506903e6708915cc64d5377f1bb887464d0c0"
     },
     "proverb-archive-e796fe73fddc": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jde o lidovou pochvalu duševní pohody.",
@@ -1730,13 +1731,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_zdrav%C3%AD,_st%C5%99%C3%ADdmosti_a_spr%C3%A1v%C4%9B_%C5%BEivota,_o_mladosti_a_starosti"
       ],
-      "contentSha256": "2dd2a9da8fe3eec8d2882c9ebcc3091789d8895802d922e16de1a41e2f2d5ccd"
+      "contentSha256": "f0ca009f0ae4b8d90872dc147f76edd44d2ce15efaad0d020fa49e5b64743600"
     },
     "proverb-archive-8aa8b7714526": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "O kvalitě rozhoduje dokončení.",
@@ -1746,13 +1747,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_zdrav%C3%AD,_st%C5%99%C3%ADdmosti_a_spr%C3%A1v%C4%9B_%C5%BEivota,_o_mladosti_a_starosti"
       ],
-      "contentSha256": "06a3f36a0a0c5531022bd5fef4d70fc17c54f6be9569df2ac4ce9ed7419c3345"
+      "contentSha256": "f99a0db448d4f4e21689511730c235c89b1198c6e2f1e47cc14213b37a95c7b8"
     },
     "proverb-archive-38bba390184c": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Neodkládej zvládnutelný úkol.",
@@ -1762,13 +1763,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e46409320c666bc1aef31b926761f509a84258f3e50e5ce2d2b57285f38be6d8"
+      "contentSha256": "02a7ef18ce14597b3168f2c37cc6f0a7a297ca2f390459d66360521a58228570"
     },
     "proverb-archive-b77c3850ff07": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Nezkušený poučuje zkušenějšího.",
@@ -1778,13 +1779,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "5427a939e3febb7830f73f7a761868d81886aec69ed9830dcc1ac53d1eec6081"
+      "contentSha256": "7b0d2d73cfaf5a0defb91740ff8da2c1eb4ba9cc1eca3d61f44abb589138e965"
     },
     "proverb-archive-251b2427d081": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Námaha má svůj očekávaný užitek.",
@@ -1794,13 +1795,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "a459ef9a7c195da3986ab2d28955bcece33463c7673814d591f2eb0a241f6d4c"
+      "contentSha256": "76b3195b5ae3bf20f8d9ac706ba89c1d814ae60ab3020dd6da0c54304ba6746d"
     },
     "proverb-archive-4d773c928da3": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Včasné působení formuje další vývoj.",
@@ -1810,13 +1811,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "c865fd515294a7714b639a1e69bfeca235af8af0b38f433c5ef06fae9da4dd3c"
+      "contentSha256": "a9efa1ec7f6672d23edee3442fc7bdc5e75611ee7af8195b8cc8687e069bfdca"
     },
     "proverb-archive-78de3eb3da2f": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Trápení se týká skutečných lidských životů.",
@@ -1826,13 +1827,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "47d3aad4a7e8a25a10fa32679c267cf2aaad776d10d77fe13b118b24436657b1"
+      "contentSha256": "145be880ebdb116cacd5b58b70bfc81e4b5b37bec7a72831090dc231645e6385"
     },
     "proverb-archive-ba369f12eeeb": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Lidé se mohou po čase nečekaně setkat.",
@@ -1842,13 +1843,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "c056262625499cf04e5b6f281b2c29ceb2965ef22785474cea4895453708264c"
+      "contentSha256": "30da7065661b05d7dce8cc0cbee2a3414f10116d7ce85f3bf2ebf79f75706775"
     },
     "proverb-archive-7d8ee8c614b4": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Nepříjemný protivník může být překvapivě odolný.",
@@ -1858,13 +1859,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "f5d5ead25695cefb2f685fe38f71e6f6d4762f873531c52a7e05402c33be9fde"
+      "contentSha256": "3ef2967efa1ddd940a8d3a26cc1b11e56a3a94df87401e21e8cb94d4c8d47b44"
     },
     "proverb-archive-3eeb2426969a": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Obrat může znamenat údržbu i nepoctivou protislužbu.",
@@ -1874,13 +1875,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "dd16726b8cc58c1fadee9e03728c2f52c1d23ced7f929be13fc442729d4bc143"
+      "contentSha256": "d975ecb309824915ce14c69de322827742dc831ca08b2b39847e16725d507270"
     },
     "proverb-archive-6bd0dfb2f801": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Podobní lidé vyhledávají svou společnost.",
@@ -1890,13 +1891,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "6eb4fd44874a35c59b2e49333bdba281908ed803efb1dc0b5685342efa4c5c23"
+      "contentSha256": "3a7344f859d2ebf8c3248e3a3806117d622fb5a311342a06964188e3a468e218"
     },
     "proverb-archive-4d6c83449d98": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Každý se projevuje podle svých možností a povahy.",
@@ -1906,13 +1907,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "9952999ad54177ca97b7e0794adb1da5d15ee1f7ca1aef5911dd0aa3681095c0"
+      "contentSha256": "4137f55ad5d31dbc7f96ea60f79dccaa84b7d575738b916ed3cfd8789df42721"
     },
     "proverb-archive-5477644e7df4": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "K odměně vede překonání překážky.",
@@ -1922,13 +1923,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "4fa7d0ce4139d2e9819c9501faa0ce2a308221abdfcaad6a94bddd3d5dfaa411"
+      "contentSha256": "ae746a136bddf6f5d162c4162f74f8a3740b39a9e5701ffd3e2e1ad7ec9abf49"
     },
     "proverb-archive-b069815bc5ee": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Přílišná důvěrnost s mocnými může být nebezpečná.",
@@ -1938,13 +1939,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2f70def7afe1cb75e731ff7f3d9614907e748596284d159dc727c57e698b31df"
+      "contentSha256": "6290a092acc78e5c5b5424001a7e746ec0cff3d6f6fe79919b5c1a4b49c5ccc3"
     },
     "proverb-archive-7685199a54e1": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Příslušníci stejné skupiny se často chrání.",
@@ -1954,13 +1955,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "c3fe386d5a57b9cbb1696289c54cd6d0b7215fdbe55f8b64bd9bfdae98e93d93"
+      "contentSha256": "9b981e20ca8ee9ca51c0884134cda4b4470f19be687cf86cc35eae87be810ed2"
     },
     "proverb-archive-56aab4016dae": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Vztah k velkým hodnotám začíná u malých.",
@@ -1970,13 +1971,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "f8808c9ec00838ee507b7c980367a02d015e973457cb0ec759e64cf84d72017a"
+      "contentSha256": "659ef43c0ccd86ab3767e1eb6ff71332c5ddc039372f3765a9896f45edc10b02"
     },
     "proverb-archive-9b395932cf1e": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Předáváním úkolu se může ztratit odpovědnost.",
@@ -1986,13 +1987,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "fb2c3bd79d02e2d30f903d4e68af89bd603793e2ec33d4158b27fae031b72578"
+      "contentSha256": "bf50de6a78dc4ea1a943eeba13752a4fb89d74cb30f343c5eec1f7127f2a70e3"
     },
     "proverb-archive-272b1cddd84a": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Hlasité výhrůžky nemusí znamenat skutečný čin.",
@@ -2002,13 +2003,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "3decfa099c2c0cf858922a565357f8eb20cac719a3cb95d97dd64affe8cd904f"
+      "contentSha256": "5a4e978229cbc25549b55059ad03b77eda8c8d4ccae958d181d13fea2631760e"
     },
     "proverb-archive-bad2ba04678d": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Rozhodnutí ublížit předchází hledání záminky.",
@@ -2018,13 +2019,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "aa3a66a1e1caedfa2b63792b8ec746deb90d46b1cc1592154bffeaff7deded8f"
+      "contentSha256": "02ef8430db2706c86c4269fd7d4a101f66dfa3b5ecfb470b3a2b20bb0373dbd4"
     },
     "proverb-archive-7218e68c79c4": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Přesile se jednotlivec ubrání obtížně.",
@@ -2034,13 +2035,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2ecd0642180b0ee955d7c1cc51a6f2e0be94fb45adda6db3c30718a6a164309e"
+      "contentSha256": "2b9c8642cf3346467c0824737a404cce8fb14360c691599fdd9e5507ac39d883"
     },
     "proverb-archive-5670b07a8eb5": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Zbytečně znovu neotevírej uklidněný problém.",
@@ -2050,13 +2051,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "f70855494a8244e8c44ad7b6a2a0afa554d6b7c071169f15601f6008fcc9f6b1"
+      "contentSha256": "ea8a4069cab8615bd390dead1e9b6dcb6b8eba55121d7cbbeb39a16ec29c52f8"
     },
     "proverb-archive-d14ce561026b": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Bez dohledu se podřízení pustí do zábavy.",
@@ -2066,13 +2067,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "769af4cf0eabb0fe44e2f440ff9b8efefb682bd18d73c5908b6e98b3c4f5848e"
+      "contentSha256": "be1afc3c93002bc774d5d2e12acd6e39bc1540c27ba2840e62f33349c9cdf886"
     },
     "proverb-archive-549ea55869df": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Přirovnání zpochybňuje něčí odbornost.",
@@ -2082,13 +2083,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "8fc4f3bb979df25ef9fb22123922ad6fb6a842e7fb1d574b3b0ba9a96ce71cb9"
+      "contentSha256": "0b26b9bf6aa68d6fc137a7f2f4e60f8a461568cb2c8f03fb34b92a505842ae9e"
     },
     "proverb-archive-f7ea58eab08e": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Rozruch neodpovídá výsledku.",
@@ -2098,13 +2099,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "796e6aa9ec421a30b207cb9b3f807594923d8e9343ee472baaa8580aefce0c06"
+      "contentSha256": "628de8d5d822ebf42d1bc8e0a35a3b4df5da58f716bb5647b561a5d62dbb330c"
     },
     "proverb-archive-6b14049dfd5d": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jdi za tím, kdo věc opravdu rozhoduje.",
@@ -2114,13 +2115,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "2defd60f7073b86bc18f5dd5f943a6bdaed050b3c0406f7db9d891dc36dde3a2"
+      "contentSha256": "264838d0a16140175cd3b7af87c2be9d260de707151a27157f6dabf94f5390ee"
     },
     "proverb-archive-59c744d1d677": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Zásoby závisejí také na tom, co neutratíme.",
@@ -2130,13 +2131,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "e2221d4bfa9c362f002e4b9c01bb25b39845241063d77348c814658f4b0d97c3"
+      "contentSha256": "b0e4e1a2fdd4b7489160d3ced20fab7a46cad28510d714428b102b404b20e0d7"
     },
     "proverb-archive-964bcb70ceaa": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Začni nápravou vlastních chyb.",
@@ -2146,13 +2147,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "5049789b61445a6de80168ca9d0656f5d68d912d81b582882a06b5f5f5854927"
+      "contentSha256": "72f2c75d9c4efaf03ecf1681343505df98048ed940ac018d773e826b361f7cc8"
     },
     "proverb-archive-7d5d0e461d49": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jistá malá výhoda může mít větší cenu než nejistá velká.",
@@ -2162,13 +2163,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "0929b727c711f35d31e78931603b16456429d39f6bf6848f44613989da623c22"
+      "contentSha256": "0c6ed2947fb6d848e9e673cbed423bf1d42b08331f996bbc9615ad4e0cc26932"
     },
     "proverb-archive-74ad1f8bce9a": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Jediný špatný vliv může poškodit celou skupinu.",
@@ -2178,13 +2179,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "a1a47ded77e042e91a3b5814dff7121ddd8dfc2a781a8709204c68ed926031b1"
+      "contentSha256": "157b41b0e8c76381357f3fe13aa3dc3fa73cd33cd57b2ee5f8f3942b41882519"
     },
     "proverb-archive-8f58c15b0f38": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Závislost na živiteli může omezovat vlastní názor.",
@@ -2194,13 +2195,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "00a1ead23fa0c6218f79a1f1dc127e5d8ae4995be00b204bc9e24b3f57557b97"
+      "contentSha256": "b15e8d3237a1c636ea58b43db3283d34b562b40b9e24a896d6c229642c504fa8"
     },
     "proverb-archive-634be44ad358": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Slova mohou způsobit vážnou újmu.",
@@ -2210,13 +2211,13 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "7b3d948c33ac176b2892331f0f85c34f063d1e720584f51f9cdda8c2dc0ab9ea"
+      "contentSha256": "fbd6f9afb1082f4c5570bdbf00b2070e6e810805e532febac4e7047411283120"
     },
     "proverb-archive-c487bd88d414": {
       "profile": "folk",
       "attribution": "folk",
       "question": "Komu tato slova patří?",
-      "scope": "Napiš jméno, nebo „lidové rčení“, pokud autor není známý.",
+      "scope": "Napiš jméno autora. Pokud není známý, napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.",
       "clues": [
         "Zamysli se nad tím, zda věta potřebuje jednoho konkrétního autora.",
         "Každý zkušený byl kdysi začátečníkem.",
@@ -2226,7 +2227,7 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec"
       ],
-      "contentSha256": "7c12dce870583a8898b2178ce5653784be597aa12b2ee4c6afe8f725a0ccc7ec"
+      "contentSha256": "71c295b620707ba49f475bc0cbe35d7857f7ce3f47c2173c031e0a49f5554801"
     },
     "poem-erben-vodnik-01": {
       "profile": "erben",
