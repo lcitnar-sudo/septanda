@@ -137,7 +137,7 @@
     $('intro-title').innerHTML='Šeptá se to po staletí.<br><em>Víš, kdo to řekl a proč?</em>';
     $('intro-copy').textContent=author?'Tři výroky denně. Vypátrej, komu patří, a objev jejich příběhy.':'';
     $('intro-copy').hidden=!author;
-    $('mode-notice').hidden=!state.archivedDays?.[activeDate];
+    $('history-access').hidden=!Object.keys(state.archivedDays||{}).length;
     $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
     $('guess').placeholder=author?'Jméno autora nebo lidový původ':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;

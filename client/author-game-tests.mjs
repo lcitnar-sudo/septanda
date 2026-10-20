@@ -70,7 +70,7 @@ oldDay.progress[oldID]={...daily.blankRound(),hints:['clue'],hintLevel:2,chainLe
 const oldBalance=daily.totals(old).points;
 game.replaceState(old);const migrated=game.exportState();
 assert.equal(migrated.days[date].mode,'author-v1');
-assert.equal(node('mode-notice').hidden,false,'The automatic transition explains the preserved history');
+assert.equal(node('history-access').hidden,false,'Preserved history remains accessible from the collection');
 assert.ok(migrated.days[date].ids.every(id=>!oldDay.ids.includes(id)),'The old quotes are not repeated');
 assert.equal(node('distorted-message').textContent,byId(migrated.days[date].selected).answer);
 assert.equal(node('guess').placeholder,'Jméno autora nebo lidový původ');

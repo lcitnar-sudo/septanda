@@ -1,4 +1,4 @@
-# Šeptanda 6.2.0 — Šeptá se to po staletí.
+# Šeptanda 6.2.1 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -115,3 +115,5 @@ Pokyn pro anonymní původ výslovně nabízí „autor neznámý“, „lidové
 
 ## Vodítka z autorských tipů (6.2.0)
 Rozpoznané jméno se porovnává podle čtyř redakčních znaků: oboru, zaměření, kulturního prostředí a období tvorby nebo tradice. Počet shod je transparentní, nikoli procento sémantické správnosti. Další rozpoznaný odlišný tip dostane srovnání s předchozím; shodný počet není uměle rozlišován. Anonymní původ, nerozpoznané a nejednoznačné jméno nemají falešnou vzdálenost. U jedné otázky lze samostatně schválit doložené pozdější použití v relatedUses; nejde o globální alias autora. Bulánci jsou uznáni pouze u Co se vleče, neuteče, s vysvětlením odlišného oficiálního sloganu Kdo se vleče, neuteče a odkazem na oficiální web. ID, původní texty a staré výsledky se nemění.
+
+Od 6.2.1 hlavní stránka neobsahuje přechodové oznámení. Staré tipy jsou dostupné přes Historie tipů v přehledu sady a ve statistikách účtu. Data a převod zůstávají zachované.
