@@ -849,7 +849,17 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/M%C3%A1j_(M%C3%A1cha)/1"
       ],
-      "contentSha256": "913c08a51671ca895e532b7ad7c33968c64c160e789f4003896d71e6842c44ae"
+      "contentSha256": "6efd2cf285982e580d616bb686d3ab357da4428efa9019d17e6540c3483f3fb0",
+      "story": {
+        "paragraphs": [
+          "Jde o úvodní dva verše prvního zpěvu Máje. Mácha nejprve nechává celou přírodu promlouvat řečí lásky: hrdličku, stromy, květiny i hladinu jezera. Klidný začátek ale není příslibem šťastného milostného příběhu.",
+          "Už v témže zpěvu se čekající dívka dozvídá, že Vilém zabil jejího svůdce, aniž věděl, že jde o jeho vlastního otce. Viléma čeká smrt a přírodní idylu vystřídá tragédie. Když se motiv májového večera v závěru zpěvu vrátí, zní po tom všem úplně jinak. Známé verše tak stojí na napětí mezi krásou světa a lidským neštěstím."
+        ],
+        "sourceURLs": [
+          "https://cs.wikisource.org/wiki/M%C3%A1j_(M%C3%A1cha)/1"
+        ],
+        "reviewedAt": "2026-10-20"
+      }
     },
     "caesar-dice": {
       "profile": "caesar",
@@ -913,7 +923,17 @@
       "sourceURLs": [
         "https://www.gutenberg.org/files/59/59-h/59-h.htm"
       ],
-      "contentSha256": "9b11e4a04c15a3c6c55b10b200b4cfac847dc8991c522a7244fb5c6b3f3d9102"
+      "contentSha256": "04980173a151f9315c74b25a79b332a7825cee11bfd610849c3785f5b4841fef",
+      "story": {
+        "paragraphs": [
+          "V úvaze o jistotě si Descartes záměrně nedovoluje věřit ničemu, o čem lze pochybovat. Smysly mohou klamat, v úsudku se můžeme splést a prožitek snu může připomínat skutečnost. Hledá proto jistotu, která obstojí i proti tak důsledné pochybnosti.",
+          "Ve čtvrté části Rozpravy o metodě nachází pevný bod: aby mohl pochybovat nebo se mýlit, musí existovat on sám jako ten, kdo myslí. Krátká věta tedy není radou k pozitivnímu myšlení ani tvrzením, že chytřejší člověk existuje víc. Je odpovědí na otázku, čeho se lze při hledání poznání bezpečně zachytit."
+        ],
+        "sourceURLs": [
+          "https://www.gutenberg.org/files/59/59-h/59-h.htm"
+        ],
+        "reviewedAt": "2026-10-20"
+      }
     },
     "proverb-measure": {
       "profile": "folk",
@@ -2740,7 +2760,18 @@
       "sourceURLs": [
         "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad"
       ],
-      "contentSha256": "fa65987fbd9138b186d9594bdee39d4316cb3747fcb9a5584f0185f2f7d9732a"
+      "contentSha256": "dcbdc5262208c593f0b8f1d3d8a2c5501daace76bcc1adb96325ef93d474f396",
+      "story": {
+        "paragraphs": [
+          "Těmito verši začíná Poklad z Erbenovy Kytice. Zdánlivě pokojná krajina brzy získá důležitý detail: je Velký pátek a z kostela znějí pašije. Právě během nich se nedaleko otevře skála s ukrytým bohatstvím.",
+          "Chudá matka nejprve odnáší stříbro a pak zlato. Aby unesla víc, nechá uvnitř malé dítě. Doma se však drahé kovy promění v kamení a hlínu; po skončení pašijí zmizí i vstup do skály. Žena tak neztratí jen vysněné jmění, ale především syna.",
+          "Skála se znovu otevře až za rok, opět na Velký pátek. Matka tentokrát nevezme nic kromě dítěte. Název básně tak dostává druhý význam: za skutečný poklad lze číst blízkého člověka, jehož hodnotu si uvědomíme teprve ve chvíli ztráty."
+        ],
+        "sourceURLs": [
+          "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad"
+        ],
+        "reviewedAt": "2026-10-20"
+      }
     },
     "poem-erben-zlaty-kolovrat-01": {
       "profile": "erben",

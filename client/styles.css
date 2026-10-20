@@ -1982,3 +1982,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .related-use { margin:22px 0 0; padding-top:16px; border-top:1px solid #aeb6a4; }
 .related-use a { font-size:12px; text-decoration:underline; }
 @media (max-width:480px) { .author-guidance { grid-template-columns:1fr; } }
+
+.quote-story { margin:16px 0; }
+.quote-story p { font-size:14px; line-height:1.8; margin:0 0 14px; }
+.quote-story p:last-child { margin-bottom:0; }

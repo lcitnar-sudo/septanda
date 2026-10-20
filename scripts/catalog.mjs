@@ -46,6 +46,7 @@ export async function makeCatalog({recordHistory=false}={}){
     const p=context.SEPTANDA_PUZZLES.find(p=>p.id===id)||puzzles.find(p=>p.id===id),profile=authorData.profiles[entry.profile];
     if(!p || !review.approvedIds.includes(id) || !profile || !profile.aliases?.length || entry.clues?.length!==3)throw Error('Neověřené autorství: '+id);
     for(const use of entry.relatedUses||[])if(!use.id||!use.label||!use.aliases?.length||!use.explanation||!use.source?.label||!use.source?.url?.startsWith('https://')||!entry.sourceURLs.includes(use.source.url))throw Error('Nedoložené související použití: '+id);
+    if(entry.story&&(!Array.isArray(entry.story.paragraphs)||entry.story.paragraphs.length<2||entry.story.paragraphs.length>4||entry.story.paragraphs.some(text=>typeof text!=='string'||!text.trim()||text.length>1800)||!entry.story.sourceURLs?.length||entry.story.sourceURLs.some(url=>!entry.sourceURLs.includes(url))||!entry.story.reviewedAt))throw Error('Neověřený příběh výroku: '+id);
     const {contentSha256,...fields}=entry;
     if(createHash('sha256').update(JSON.stringify({quote:p.answer,education:p.education,sources:p.sources,entry:fields,profile})).digest('hex')!==contentSha256)throw Error('Autorství se změnilo po kontrole: '+id);
   }
