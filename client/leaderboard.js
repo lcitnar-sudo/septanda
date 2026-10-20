@@ -8,9 +8,9 @@
   function snapshot() {
     let state;try{state=Daily.sanitizeState(JSON.parse(localStorage.getItem(globalThis.SeptandaGame.storageKey())));}catch{}
     const date=Daily.dayKey(), day=state?.days[date],ids=day?.ids || Daily.plan(date);
-    return {action:'sync',date,...(state?.assignmentVersion===1?{assignmentVersion:1,assignmentSeed:state.assignmentSeed}:{}),rounds:ids.map(id=>{
+    return {action:'sync',date,...(state?.assignmentVersion===1?{assignmentVersion:1,assignmentSeed:state.assignmentSeed}:{}),...(day?.mode?{mode:day.mode}:{}),rounds:ids.map(id=>{
       const r=day?.progress[id] || Daily.blankRound(),p=globalThis.SEPTANDA_PUZZLES.find(p=>p.id===id);
-      const winning=r.status==='won'?r.attempts.find(a=>Engine.evaluate(a.text,p).accepted)?.text:undefined;
+      const winning=r.status==='won'?r.attempts.find(a=>Engine.evaluate(a.text,p,Daily.modeFor(day)).accepted)?.text:undefined;
       return {id,status:r.status,hint:r.hints.length>0,...(r.paidSkip?{paidSkip:true,skipCharge:Daily.skipCharge(r)}:{}),chainLevel:Daily.chainLevel(r),...(winning?{answer:winning}:{})};
     })};
   }

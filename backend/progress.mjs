@@ -10,7 +10,7 @@ const blank = () => ({attempts:[],hints:[],status:'playing',draft:''});
 export function createProgressTools({puzzles,engine,daily}) {
   const byId = new Map(puzzles.map(puzzle=>[puzzle.id,puzzle]));
   const legacyIds = new Set(daily.legacyIDs || ['caesar-victory','proverb-pit','poem-may','caesar-dice','proverb-work','poem-noon','descartes','proverb-measure','poem-bouquet']);
-  function attempts(source,puzzle,now) {
+  function attempts(source,puzzle,now,mode='classic') {
     if (source===undefined) return [];
     if (!Array.isArray(source) || source.length>500) fail(413,'U jedné hádanky lze uložit nejvýše 500 tipů.');
     const out=[],seen=new Map();
@@ -21,20 +21,21 @@ export function createProgressTools({puzzles,engine,daily}) {
       const id = typeof item.id==='string' && /^[a-zA-Z0-9_-]{8,96}$/.test(item.id) ? item.id : digest(item.text+'\0'+rawTime).slice(0,32);
       if (seen.has(id)) { if (seen.get(id)!==item.text) fail(400,'Dva rozdílné tipy mají stejné označení.'); continue; }
       seen.set(id,item.text);
-      out.push({id,text:item.text,time,score:engine.evaluate(item.text,puzzle)});
+      out.push({id,text:item.text,time,score:engine.evaluate(item.text,puzzle,mode)});
     }
     return out;
   }
-  function round(source,puzzle,now,{legacy=false}={}) {
+  function round(source,puzzle,now,{legacy=false,mode='classic'}={}) {
     if (!object(source)) return blank();
     const out = blank();
-    out.attempts = attempts(source.attempts,puzzle,now);
+    out.attempts = attempts(source.attempts,puzzle,now,mode);
     const allowed = legacy ? Object.keys(HINT_COST) : ['clue'];
     if (source.hints!==undefined && !Array.isArray(source.hints)) fail(400,'Neplatné nápovědy.');
     out.hints = [...new Set((source.hints||[]).filter(h=>allowed.includes(h)))];
     if(out.hints.includes('clue'))out.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     out.status = source.status==='revealed' ? 'revealed' : out.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
     if(out.status==='revealed' && source.paidSkip===true){out.paidSkip=true;out.skipCharge=daily.skipCharge(source);}
+    if(mode==='author-v1' && source.chainLevel)fail(400,'V nové hře použij stopy k původu výroku.');
     if(source.chainLevel!==undefined && (!Number.isInteger(source.chainLevel) || source.chainLevel<0 || source.chainLevel>puzzle.chain.length-1))fail(400,'Neplatný krok tiché pošty.');
     if(source.chainLevel)out.chainLevel=source.chainLevel;
     out.draft = typeof source.draft==='string' ? source.draft.slice(0,400) : '';
@@ -42,7 +43,7 @@ export function createProgressTools({puzzles,engine,daily}) {
   }
   function mergeRound(previous,incoming,puzzle,now,options={}) {
     // Existing records already passed this validator. Regrade scores without making a revealed result a win.
-    const a=round(previous,puzzle,now,{legacy:true}),b=round(incoming,puzzle,now,options),result=blank();
+    const a=round(previous,puzzle,now,{legacy:true,mode:options.mode}),b=round(incoming,puzzle,now,options),result=blank();
     const seen=new Set();
     for (const item of [...a.attempts,...b.attempts]) if (!seen.has(item.id)) { seen.add(item.id); result.attempts.push(item); }
     if (result.attempts.length>500) fail(413,'U jedné hádanky lze uložit nejvýše 500 tipů.');
@@ -61,10 +62,10 @@ export function createProgressTools({puzzles,engine,daily}) {
   function selection(day,preferred) {
     return daily.canSelect(day,preferred) ? preferred : daily.nextId(day) || daily.playIds(day).find(id=>!day.skipped?.includes(id)) || null;
   }
-  function canonicalIDs(key,source,previous,now,state,{personal=false,incoming,importLegacy=false}={}) {
+  function canonicalIDs(key,source,previous,now,state,{personal=false,incoming,importLegacy=false,mode='classic'}={}) {
     if (!daily.validDay(key) || key>daily.dayKey(now)) fail(400,'Nelze ukládat neplatný nebo budoucí den.');
     const published=daily.plan(key);
-    const planned=personal && key>=daily.personalStart ? daily.personalPlan(state,key) : published;
+    const planned=personal && key>=daily.personalStart ? daily.personalPlan(state,key,state.assignmentSeed,3,mode) : published;
     if (!Array.isArray(planned) || ![0,3,5].includes(planned.length) || new Set(planned).size!==planned.length || !planned.every(id=>byId.has(id))) fail(503,'Denní sada není dostupná.');
     // A previously stored day keeps its published IDs even after a catalog update.
     const expected=Array.isArray(previous?.ids) && ([3,5].includes(previous.ids.length) || previous.ids.length===0 && planned.length===0) && previous.ids.every(id=>byId.has(id)) ? previous.ids : planned;
@@ -74,9 +75,9 @@ export function createProgressTools({puzzles,engine,daily}) {
       // once any exposure/work is stored the assignment is immutable.
       const unused=!previous || !(previous.seen?.length) && !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft);
       const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && daily.validPersonalSize(key,source.ids.length) && new Set(source.ids).size===source.ids.length && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
+      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && daily.validPersonalSize(key,source.ids.length) && new Set(source.ids).size===source.ids.length && (mode!=='author-v1'||daily.validAuthorIDs(source.ids)) && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
       if(personal && importLegacy && daily.validSeed(incoming?.assignmentSeed) && incoming.assignmentSeed.startsWith('guest:') && (!previous || !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft))) {
-        const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed,source.ids?.length);
+        const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed,source.ids?.length,mode);
         const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
         if(Array.isArray(source.ids) && source.ids.length===imported.length && source.ids.every((id,i)=>id===imported[i] && !earlier.has(id))) {
           state.knownIds=[...new Set([...(state.knownIds||[]),...(previous?.seen||[])])];
@@ -115,13 +116,20 @@ export function createProgressTools({puzzles,engine,daily}) {
     for (const key of [...new Set([...Object.keys(prior.days||{}),...Object.keys(incoming.days)])].sort()) {
       const old=prior.days?.[key],source=incoming.days[key];
       if (source!==undefined && !object(source)) fail(400,'Neplatný den v historii.');
-      const ids=canonicalIDs(key,source,old,now,state,{personal,incoming,importLegacy}),day={ids,selected:ids[0] || null,progress:{},seen:[],skipped:[]};
+      if(!daily.validDay(key) || key>daily.dayKey(now))fail(400,'Nelze ukládat neplatný nebo budoucí den.');
+      if(source?.mode!==undefined && source.mode!=='author-v1')fail(400,'Neplatný typ hry.');
+      const unused=old && !old.seen?.length && !Object.values(old.progress||{}).some(r=>hasWork(r)||r.draft);
+      const offlineClassic=unused && key<=daily.authorStart && source && daily.modeFor(source)==='classic' && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && (incoming.assignmentSeed===state.assignmentSeed || importLegacy && incoming.assignmentSeed?.startsWith('guest:'));
+      const mode=offlineClassic?'classic':old?daily.modeFor(old):!personal?'classic':source?.mode==='author-v1'?'author-v1':key<=daily.authorStart?'classic':daily.newMode(key);
+      if(mode==='author-v1' && key<daily.authorStart)fail(400,'Tento režim v daný den ještě nebyl vydán.');
+      if(source && daily.modeFor(source)!==mode)fail(409,'Hra se aktualizovala. Obnov stránku; uložená historie zůstává zachovaná.','game_updated');
+      const ids=canonicalIDs(key,source,old,now,state,{personal,incoming,importLegacy,mode}),day={ids,...(mode==='author-v1'?{mode}:{}),selected:ids[0] || null,progress:{},seen:[],skipped:[]};
       for (const id of ids) {
         const a=old?.progress?.[id],b=source?.progress?.[id];
         if(personal && key>=daily.personalStart && daily.seenBefore(state,key).has(id) && hasWork(b) && !hasWork(a))fail(409,'Tento výrok už máš v dřívější historii. Místní postup zůstává uložený.','known_puzzle');
-        if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart),requirePaidSkip:ids.length===3 || key>=daily.paidSkipStart});
+        if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart),mode,requirePaidSkip:ids.length===3 || key>=daily.paidSkipStart});
         if(day.progress[id]?.paidSkip && !['won','revealed'].includes(a?.status))newPaidActions++;
-        if((day.progress[id]?.chainLevel||0)>(a?.chainLevel||0))newPaidActions++;
+        if((day.progress[id]?.chainLevel||0)>(a?.chainLevel||0) || (day.progress[id]?.hints?.length||0)>(a?.hints?.length||0))newPaidActions++;
       }
       state.days[key]=day;
       daily.reconcileDay(state,key);

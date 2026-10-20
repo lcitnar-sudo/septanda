@@ -10,7 +10,7 @@ const tools=createProgressTools({puzzles,engine,daily});
 const seed=daily.createState(null);daily.bindPlayer(seed,id);
 const prior=daily.ensureDay(seed,'2026-10-19'),priorId=prior.ids[0];
 prior.progress[priorId]={...daily.blankRound(),status:'won',attempts:[{id:'previous-day-winning',text:puzzles.find(p=>p.id===priorId).answer,time:now.getTime()-86400000}]};
-const day=daily.ensureDay(seed,date),pid=day.ids[0];
+const day=daily.ensureDay(seed,date,{mode:'classic'}),pid=day.ids[0];
 const initial=tools.merge(null,seed,{now,playerId:id});
 let row={state:copy(initial.state),revision:1,stats:initial.stats},commits=0;
 const db={ready(){},async verifiedUser(){return{id,email:'synthetic@example.test',email_confirmed_at:now.toISOString()};},async isAdmin(){return false;},
@@ -45,7 +45,7 @@ const historical=tools.merge(old,forged,{now,playerId:id});
 eq(historical.stats.points,100,'Old 200-point skip cannot be repriced by a client');eq(historical.state.days[date].progress[pid].skipCharge,200,'Old price is recorded durably');
 eq(historical.state.days[date].progress[pid].chainLevel||0,0,'No charge for buying already-free terminal chain');
 eq(daily.totals(daily.mergeForSync(old,forged).state).spent,200,'Completed remote rounds do not charge for their already-free chain');
-const poor=daily.createState(null);daily.bindPlayer(poor,id);const poorDay=daily.ensureDay(poor,date),poorID=poorDay.ids[0];
+const poor=daily.createState(null);daily.bindPlayer(poor,id);const poorDay=daily.ensureDay(poor,date,{mode:'classic'}),poorID=poorDay.ids[0];
 let base=tools.merge(null,poor,{now,playerId:id});const buy=copy(base.state);buy.days[date].progress[poorID]={...daily.blankRound(),chainLevel:2};
 base=tools.merge(base.state,buy,{now,playerId:id});eq(base.stats.points,0,'Offline sync charges each of two steps');
 const overspend=copy(base.state);overspend.days[date].progress[poorID].chainLevel=3;

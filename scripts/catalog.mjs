@@ -35,6 +35,14 @@ export async function makeCatalog({recordHistory=false}={}){
     }
   }
   const schedule={version:1,timeZone:'Europe/Prague',start:calendar.startDate,end:calendar.endDate,legacyIds,days:calendar.days,afterEnd:calendar.afterEnd,personal:{version:1,start:review.personalStart,approvedIds:review.approvedIds}};
+  const authorData=JSON.parse(await readFile(new URL('content/authors.json',root),'utf8'));
+  for(const [id,entry] of Object.entries(authorData.entries)){
+    const p=context.SEPTANDA_PUZZLES.find(p=>p.id===id)||puzzles.find(p=>p.id===id),profile=authorData.profiles[entry.profile];
+    if(!p || !review.approvedIds.includes(id) || !profile || !profile.aliases?.length || entry.clues?.length!==3)throw Error('Neověřené autorství: '+id);
+    const {contentSha256,...fields}=entry;
+    if(createHash('sha256').update(JSON.stringify({quote:p.answer,education:p.education,sources:p.sources,entry:fields,profile})).digest('hex')!==contentSha256)throw Error('Autorství se změnilo po kontrole: '+id);
+  }
+  await writeFile(new URL('client/authors-data.js',root),'globalThis.SEPTANDA_AUTHORS='+JSON.stringify(authorData)+';\n');
   const baseline=JSON.parse(await readFile(new URL('content/published-history.json',root),'utf8'));
   context.SEPTANDA_PUZZLES=[...context.SEPTANDA_PUZZLES,...puzzles];context.SEPTANDA_SCHEDULE=schedule;
   vm.runInContext(await readFile(new URL('client/daily.js',root),'utf8'),context);

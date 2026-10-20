@@ -23,7 +23,7 @@ html = html.replace('<meta name="theme-color"','<meta name="septanda-build" cont
 html = html.replace('5.0 · Lokální vydání', version+' · Archiv slov');
 const context = vm.createContext({});
 const gameParts = [];
-for (const name of ['puzzles','engine','daily']) {
+for (const name of ['puzzles','authors-data','authors','engine','daily']) {
   const code = await readFile(path.join(source,name+'.js'),'utf8');
   vm.runInContext(code,context); gameParts.push(code);
 }

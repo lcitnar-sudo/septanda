@@ -82,7 +82,8 @@
   function deniedPrefix(text) {
     return /(?:^| )(?:ne|nikoli|nikoliv|nepravda)(?: |$)/.test(text) || /(?:^| )(?:neni|nebyla|nebylo) pravda(?: |$)/.test(text) || /(?:^| )(?:tohle|toto|to) neni(?: |$)/.test(text);
   }
-  function evaluate(text, puzzle) {
+  function evaluate(text, puzzle, mode='classic') {
+    if(mode==='author-v1')return root.SeptandaAuthors.evaluate(text,puzzle);
     const n = normalize(text);
     if (!n) return {total: 0, words: 0, meaning: 0, accepted: false, conflict: false};
     const references = [puzzle.answer, ...puzzle.variants];

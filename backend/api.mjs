@@ -64,6 +64,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
         if(day)game.daily.reconcileDay(incoming,body.date);
         if(!day || !day.ids.includes(body.id) || !game.daily.canSelect(day,body.id))fail(409,'Nejprve načti svoji aktuální sadu.');
         if(body.action==='chain-step') {
+          if(game.daily.modeFor(day)==='author-v1')fail(400,'V nové hře jsou k dispozici stopy k autorovi a čtyři možnosti.');
           const max=game.puzzles.find(p=>p.id===body.id).chain.length-1;
           if(!Number.isInteger(body.level) || body.level<1 || body.level>max)fail(400,'Neplatný krok tiché pošty.');
           // A target level makes retries and simultaneous devices idempotent.

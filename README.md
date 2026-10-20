@@ -1,16 +1,16 @@
-# Šeptanda 5.3.0 — archiv slov
+# Šeptanda 6.0.0 — slova a jejich autoři
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
 ## Co obsahuje
 
 - Hra bez povinné registrace, tři navazující hádanky denně podle pražského času.
-- Konkrétní shodná slova po každém tipu a tři postupné stopy: význam, obraz či pramen a začátek výroku. Celý balíček stojí jednou 50 bodů; rozluštění přidá 200 bodů.
+- Nové sady: skutečný výrok a psaná odpověď se jménem autora nebo lidovým původem. Stopy vedou přes oblast a pramen ke čtyřem volitelným odpovědím. Balíček stojí jednou 50 bodů; správný původ přidá 200 bodů.
 - Procenta už hráče nenavádějí. Dosavadní pravidlový modul ověřuje přijímané podoby a drobné odchylky; jeho číselná pole zůstávají interně pro kompatibilitu historie. Ve hře neběží AI.
 - Supabase registrace, potvrzování e-mailu, přihlášení, obnova hesla, synchronizace, profil a samostatný souhlas s novinkami.
 - Soukromá správa hráčů a audit souhlasů; veřejný žebříček neukazuje e-maily ani odpovědi.
 - Kontaktní formulář přes Netlify Forms se spamovou pastí a stavem odesílání.
-- Redakční kontrola všech 500 nových položek: 126 nových a 9 původních je schváleno pro nové osobní sady, 374 čeká na přepracování. Celkem 509 identit i starý kalendář 100 sad zůstávají pro historii. Aktivních 135 výroků stačí nejvýše na 45 úplných osobních sad, podle dřívější historie méně. Po vyčerpání se obsah neopakuje.
+- Redakční kontrola všech 500 nových položek: 126 nových a 9 původních je schváleno pro nové osobní sady, 374 čeká na přepracování. Celkem 509 identit i starý kalendář 100 sad zůstávají pro historii. Ve starém režimu 135 položek stačilo na 45 trojic. Nový ověřený výběr obsahuje 51 položek s osobností a 84 anonymních rčení, střídá dvě různé osobnosti a nejvýše jedno rčení denně. Současná zásoba umožňuje nejvýše 25 takových trojic, podle dřívější historie méně. Po vyčerpání se obsah neopakuje.
 - Průvodce Šeptík má šest vlastních průhledných ilustrací podle dodané reference: základ, přemýšlení, radost, překvapení, další pokus a objevování dokumentu. Reaguje na hru a psaní tipů.
 - Náhled sdíleného odkazu obsahuje Šeptíka z brand balíčku. Veřejný obrázek `assets/social/septik-share-v1.png` (1080 × 1080 px) je uvedený přímo v HTML přes Open Graph a Twitter metadata; nevyžaduje přihlášení ani spuštění skriptů.
 
@@ -91,3 +91,13 @@ Přeskočení nahradilo bezplatné odhalení aktuálního výroku. Po výslovné
 Vedle balíčku redakčních stop je samostatná volba „Po stopách věty“. Každý klik za 50 bodů odhalí jedno dřívější předání v pořadí 4, 3, 2, 1. Poslední, páté předání je vidět od začátku. Originál není součástí nákupu a ukáže se až po rozluštění či přeskočení. Zakoupené kroky se ukládají do `chainLevel` (0–4), slučují podle nejvyšší dosažené úrovně a promítají do denního pořadí i celkového zůstatku.
 
 Nová přeskočení stojí 100 bodů a mají `skipCharge:100`. Historická zaplacená přeskočení bez částky nadále znamenají původních 200 bodů; server je při dalším zápisu označí `skipCharge:200`. Nákupy ani výkony se zpětně nepřepočítávají. Neprovádí se žádný reset, změna identit výroků ani SQL migrace.
+
+## Přechod na autory (6.0.0)
+
+`content/authors.json` je samostatné redakční rozhodnutí s identitami osobností, schválenými variantami jmen, typem atribuce, stopami, zdroji a otiskem obsahu. Builder odmítne změnu bez nové kontroly. V původním katalogu se nepřepisuje žádné ID ani originální znění.
+
+Nově přidělené osobní dny od 20. 10. 2026 mají `mode:"author-v1"`. Existující den bez této značky zůstává původní tichou poštou a lze jej dokončit. Původní pokusy se nikdy nepřehodnocují jako jména a původní výhry, nákupy a přeskočení se nikdy znovu neoceňují. Nepoužívá se nový účet, klíč úložiště ani reset. Nový režim vylučuje i všechna dříve přidělená ID starého režimu.
+
+Po otevření třetí stopy jsou čtyři odpovědi; nejsou součástí výchozí otázky. Literární otázka hledá autora díla, s výslovnou výjimkou otázky na Sókrata v Platónově podání. Tradiční připsání Caesarovi, Konfuciovi a Lao-c’ je přiznané. U anonymních rčení přijímáme lidový původ, nikoli „nevím“.
+
+Ověření nového režimu: `scripts/author-tests.mjs` a `client/author-game-tests.mjs` doplňují původních 10 sad testů o uznávání jmen, nejednoznačnosti, anonymní původ, čtyři možnosti, výběr bez opakování, souběžné ukládání a zachování původní i offline historie. SQL migrace není potřeba.
