@@ -67,7 +67,7 @@ demoParts.splice(demoParts.findIndex(p=>p.name==='app'),0,{name:'demo',code:awai
 const demoCSS=`.header-account,.leaderboard-section,.edition-slip,[data-open="contact-dialog"],[data-open="stats-dialog"]{display:none!important}.demo-banner{margin:0 0 30px;padding:20px;border-left:3px solid var(--oxide);background:var(--paper)}.demo-banner p{margin:8px 0 12px}.demo-banner a{display:inline-block}.demo-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em}.demo-banner strong{font-size:21px}.demo-return{margin-left:auto}`;
 const banner='<section class="demo-banner" aria-label="Cvičná hra"><span class="demo-label">UKÁZKA NOVÉ ŠEPTANDY</span><p><strong>Tři výroky na zkoušku. Hledej autora.</strong></p><p>Začni psát jméno nebo „lidové rčení“. Za 50 cvičných bodů postupně získáš stopy a čtyři možnosti. Cvičné body i výsledky zůstávají jen v této ukázce; tvůj účet a denní postup se nemění.</p><a class="underlined" href="./">Zpět do mé hry →</a></section>';
 let demo=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta name="robots" content="noindex,follow"><style>'+demoCSS+'</style></head>');
-demo=demo.replace('<title>Šeptanda — Slova znáš. A jejich autora?</title>','<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="./">Zpět do mé hry →</a></nav>');
+demo=demo.replace(/<title>[^<]*<\/title>/,'<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="./">Zpět do mé hry →</a></nav>');
 demo=demo.replace('</body>',()=>renderScripts(demoParts)+'\n</body>');
 await writeFile(path.join(destination,'ukazka.html'),demo);
 await writeFile(path.join(destination,'_headers'),`/*

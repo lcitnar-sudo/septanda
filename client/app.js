@@ -130,7 +130,7 @@
   }
   function renderMode(){
     const author=isAuthor();
-    $('intro-title').innerHTML=author?'Slova znáš.<br><em>A jejich autora?</em>':'Tichá pošta.<br><em>Poznáš, co bylo na začátku?</em>';
+    $('intro-title').innerHTML=author?'Šeptá se to po staletí.<br><em>Víš, kdo to řekl a proč?</em>':'Tichá pošta.<br><em>Poznáš, co bylo na začátku?</em>';
     $('intro-copy').textContent=author?'Tři výroky denně. Vypátrej, komu patří, a objev jejich příběhy.':'';
     $('intro-copy').hidden=!author;
     $('mode-notice').hidden=author || !Daily.authorStart || activeDate<Daily.authorStart;

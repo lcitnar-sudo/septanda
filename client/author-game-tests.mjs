@@ -32,7 +32,7 @@ let state=game.exportState(),id=state.days[date].selected,p=byId(id),profile=aut
 assert.equal(state.days[date].mode,'author-v1');
 assert.equal(node('distorted-message').textContent,p.answer,'The exact quotation is visible');
 assert.equal(node('puzzle-category').textContent,'PÁTRÁNÍ PO PŮVODU','Category does not reveal anonymous origin');
-assert.ok(node('intro-title').innerHTML.includes('Slova znáš.'));
+assert.equal(node('intro-title').innerHTML,'Šeptá se to po staletí.<br><em>Víš, kdo to řekl a proč?</em>');
 assert.equal(node('guess').placeholder,'Jméno autora nebo „lidové rčení“');
 assert.equal(node('transmission-section').hidden,true,'Distorted transmissions are absent in author mode');
 assert.equal(node('hint-options').hidden,true,'No multiple choice before hints');
