@@ -101,6 +101,28 @@ assert.ok(node('reveal-panel').innerHTML.includes('Kdo se vleče, neuteče'));
 assert.ok(node('reveal-panel').innerHTML.includes('https://www.bulanci.cz/'));
 assert.ok(node('reveal-panel').innerHTML.includes('Lidové rčení – autor neznámý'));
 console.log('PASS author trait cards, warmer comparison and verified game association in actual UI.');
+// Original-language guidance is available before any guess and never charges points.
+const foreignIDs=authors.ids.filter(id=>authors.get(id).original);
+assert.equal(foreignIDs.length,25);
+for(const quoteID of foreignIDs){
+ const sample=daily.createState(null);daily.bindPlayer(sample,'11111111-1111-4111-8111-111111111111');
+ sample.days[date]={mode:'author-v1',ids:[quoteID,'poem-may','poem-erben-poklad-01'],selected:quoteID,progress:{},seen:[],skipped:[]};
+ game.replaceState(sample);const o=authors.get(quoteID).original;
+ assert.equal(node('quote-original').hidden,false,'Original visible without a paid hint: '+quoteID);
+ assert.ok(node('quote-original').innerHTML.includes('lang="'+o.lang+'"'));
+ assert.ok(node('quote-original').innerHTML.includes(o.language));
+ assert.ok(!node('quote-original').innerHTML.includes(o.source.url),'Source must not reveal author before a guess');
+ assert.ok(!node('quote-original').innerHTML.includes(authors.profile(quoteID).name));
+ assert.equal(daily.totals(game.exportState()).points,100,'Reading an original is free');
+ game.replaceState(game.exportState());assert.equal(node('quote-original').hidden,false,'Original survives restored state');
+}
+assert.ok(node('quote-original').innerHTML.includes('&amp; par-tout'),'Original punctuation is escaped');
+node('guess').value='Rousseau';node('guess-form').fire('submit');
+assert.ok(node('reveal-panel').innerHTML.includes(authors.get('quote-rousseau-chains').original.source.url),'Original source is available after solving');
+const native=daily.createState(null);daily.bindPlayer(native,'11111111-1111-4111-8111-111111111111');
+native.days[date]={mode:'author-v1',ids:['poem-may','descartes','proverb-work'],selected:'poem-may',progress:{},seen:[],skipped:[]};
+game.replaceState(native);assert.equal(node('quote-original').hidden,true);assert.equal(node('quote-original').innerHTML,'','A Czech quote clears the previous foreign original');
+console.log('PASS 25 originals in seven languages: free before guessing, escaped, persistent, no author/source leak, no duplication for Czech.');
 // Actual cloud module restores a mixed classic/author history and synchronizes names.
 const accountID='22222222-2222-4222-8222-222222222222';
 const remote=daily.createState(null);daily.bindPlayer(remote,accountID);

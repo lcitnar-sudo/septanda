@@ -47,6 +47,9 @@ export async function makeCatalog({recordHistory=false}={}){
     if(!p || !review.approvedIds.includes(id) || !profile || !profile.aliases?.length || entry.clues?.length!==3)throw Error('Neověřené autorství: '+id);
     for(const use of entry.relatedUses||[])if(!use.id||!use.label||!use.aliases?.length||!use.explanation||!use.source?.label||!use.source?.url?.startsWith('https://')||!entry.sourceURLs.includes(use.source.url))throw Error('Nedoložené související použití: '+id);
     if(entry.story&&(!Array.isArray(entry.story.paragraphs)||entry.story.paragraphs.length<2||entry.story.paragraphs.length>4||entry.story.paragraphs.some(text=>typeof text!=='string'||!text.trim()||text.length>1800)||!entry.story.sourceURLs?.length||entry.story.sourceURLs.some(url=>!entry.sourceURLs.includes(url))||!entry.story.reviewedAt))throw Error('Neověřený příběh výroku: '+id);
+    const original=entry.original;
+    if(original&&(!['la','fr','it','en','de','grc','lzh'].includes(original.lang)||!original.language?.trim()||typeof original.text!=='string'||!original.text.trim()||original.text.length>1200||!original.source?.label?.trim()||!original.source.url?.startsWith('https://')||!entry.sourceURLs.includes(original.source.url)||!original.reviewedAt||(original.note!==undefined&&(typeof original.note!=='string'||original.note.length>300))))throw Error('Neověřené původní znění: '+id);
+    if(entry.profile!=='folk'&&profile.guidance.environment!=='cz'&&!original)throw Error('Chybí původní jazyk cizojazyčného výroku: '+id);
     const {contentSha256,...fields}=entry;
     if(createHash('sha256').update(JSON.stringify({quote:p.answer,education:p.education,sources:p.sources,entry:fields,profile})).digest('hex')!==contentSha256)throw Error('Autorství se změnilo po kontrole: '+id);
   }

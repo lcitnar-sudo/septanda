@@ -1,4 +1,4 @@
-# Šeptanda 6.2.2 — Šeptá se to po staletí.
+# Šeptanda 6.2.3 — Šeptá se to po staletí.
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
@@ -119,3 +119,6 @@ Rozpoznané jméno se porovnává podle čtyř redakčních znaků: oboru, zamě
 Od 6.2.1 hlavní stránka neobsahuje přechodové oznámení. Staré tipy jsou dostupné přes Historie tipů v přehledu sady a ve statistikách účtu. Data a převod zůstávají zachované.
 
 Od 6.2.2 v odhaleném příběhu není obecný nadpis Co slova znamenají. Redakční entry.story umožňuje několik ověřených odstavců; první detailně rozšířené příběhy jsou Poklad, Máj a Descartova Rozprava o metodě. Ostatní otázky zachovávají dosavadní výklad bez tohoto nadpisu. Původní texty, ID i výsledky se nemění.
+
+## Znění v původním jazyce (6.2.3)
+U všech 25 cizojazyčných otázek současného autorského režimu je pod českým textem bezplatně viditelné ověřené znění v původním jazyce. Označení jazyka a případná poznámka nezveřejňují autora ani název pramene před řešením. Odkaz na konkrétní jazykový pramen se objeví v podrobnostech odhalení. Rozlišujeme dochované podání, úryvek a historický pravopis; nejde o zpětný překlad. České výroky se neopakují a starý režim nepoužívá tento pomocný text. Uložené identity, skóre, nákupy ani stav účtů se nemění.

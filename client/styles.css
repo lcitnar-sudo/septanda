@@ -1986,3 +1986,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 .quote-story { margin:16px 0; }
 .quote-story p { font-size:14px; line-height:1.8; margin:0 0 14px; }
 .quote-story p:last-child { margin-bottom:0; }
+.quote-original { margin:24px 0 0; padding:16px 0 0; border-top:1px dashed var(--line); }
+.quote-original figcaption { margin-bottom:8px; }
+.message-wrap .quote-original blockquote { font:italic clamp(17px,2.1vw,21px)/1.65 Georgia,"Times New Roman",serif; margin:0; min-height:0; white-space:pre-line; overflow-wrap:anywhere; }
+.quote-original .small { margin:8px 0 0; }
+.quote-original blockquote:lang(lzh) { font-style:normal; }
