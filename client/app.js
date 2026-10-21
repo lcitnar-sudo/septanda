@@ -150,8 +150,8 @@
     $('message-label').textContent=isMeaning()?'JAK ROZUMÍŠ TĚMTO SLOVŮM?':author?'ČÍ JSOU TATO SLOVA?':'ZACHYCENÁ ZPRÁVA';
     $('rules-author').hidden=!author;$('rules-classic').hidden=author;
     $('scoring-author').hidden=!author;$('scoring-classic').hidden=author;
-    $('rules-title').textContent=author?'Najdi člověka za slovy.':'Vrať slovům jejich začátek.';
-    $('scoring-title').textContent=author?'Jméno, stopy a lidový původ.':'Co už sedí a kam dál.';
+    $('rules-title').textContent=author?'Najdi původ a smysl slov.':'Vrať slovům jejich začátek.';
+    $('scoring-title').textContent=author?'Autor, význam a stopy.':'Co už sedí a kam dál.';
     $('goal-copy').innerHTML=author?'Poznej autora nebo význam rčení.<br>Za slovy tě čeká příběh.':'Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.';
   }
   function render() {

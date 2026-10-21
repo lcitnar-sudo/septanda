@@ -1,4 +1,4 @@
-# Šeptanda 7.0.0
+# Šeptanda 7.0.2
 
 Každodenní pátrání po původu a významu známých slov. Tři osobní případy: dva různí autoři a nejvýše jedno rčení. Nově přidělené sady od 21. 10. 2026 používají `author-v2`; již vydané `author-v1` a původní tichá pošta zachovávají své zadání, výsledky a ceny. Verze uloženého postupu zůstává 6. Žádná databáze se při nasazení nemaže ani znovu nezakládá.
 

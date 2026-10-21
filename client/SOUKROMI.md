@@ -1,6 +1,6 @@
 # Šeptanda — informace o zpracování osobních údajů
 
-Účinné od 18. října 2026.
+Účinné od 18. října 2026; doplněno 21. října 2026 o Deník objevů.
 
 ## Provozovatel a kontakt
 
@@ -16,7 +16,7 @@ Hosting při zobrazení a ochraně webu zpracovává technické údaje, napřík
 
 Pro založení účtu potřebujeme e-mail a heslo. Přezdívku si můžete zvolit; jinak hra vytvoří označení „Hráč“ s náhodnou příponou. E-mail slouží k ověření adresy, přihlášení a obnovení přístupu. Heslo spravuje ověřovací služba Supabase; správce hry ho nevidí v čitelné podobě. Bez těchto údajů účet založit nelze, hraní bez účtu zůstává dostupné.
 
-U přihlášeného hráče ukládáme přezdívku, historii tipů včetně neúspěšných odpovědí, rozepsané odpovědi, nápovědy, vyřešené a odhalené hádanky, body a statistiky. Server přijímá synchronizovaný postup a přepočítává výsledky. Účelem je uchování hry a pokračování na jiném zařízení. Zpracování potřebné pro vyžádaný účet vychází z plnění služby podle čl. 6 odst. 1 písm. b) GDPR.
+U přihlášeného hráče ukládáme přezdívku, historii tipů včetně neúspěšných odpovědí, rozepsané odpovědi, nápovědy, vyřešené a odhalené hádanky, body, statistiky a oblíbené výroky. Dobrovolně můžete připojit hodnocení obtížnosti otázky a užitečnosti stop. Tato hodnocení vidí pouze správce a slouží ke zpřesnění otázek; nezveřejňují se v žebříčku a nemění body. Bez účtu zůstávají v prohlížeči stejně jako místní hra. Server přijímá synchronizovaný postup a přepočítává výsledky. Účelem je uchování hry a pokračování na jiném zařízení. Zpracování potřebné pro vyžádaný účet vychází z plnění služby podle čl. 6 odst. 1 písm. b) GDPR.
 
 Uložená přihlašovací relace umožňuje vracet se bez opakovaného zadávání hesla. Na sdíleném zařízení se odhlaste. Místní postup z hraní bez účtu se přidává až po vašem potvrzení. Starší účet z původní verze hry své heslo do Supabase automaticky nepřevádí; pro nový režim je potřeba založit a potvrdit e-mailový účet.
 
