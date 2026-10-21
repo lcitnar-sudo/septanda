@@ -7,9 +7,9 @@
  let favouriteOnly=false;
  const terminal=r=>['won','revealed'].includes(r?.status);
  function records(state){
-  const map=new Map(),add=(id,r,date)=>{if(terminal(r)&&byId.has(id)&&!map.has(id))map.set(id,{id,round:r,date});};
-  for(const[date,day]of [...Object.entries(state.days),...Object.entries(state.archivedDays||{})].sort(([a],[b])=>b.localeCompare(a)))for(const id of day.ids)add(id,day.progress[id],date);
-  for(const[id,r]of Object.entries(state.legacy.progress))add(id,r,null);
+  const map=new Map(),add=(id,r,date,mode)=>{if(terminal(r)&&byId.has(id)&&!map.has(id))map.set(id,{id,round:r,date,mode});};
+  for(const[date,day]of [...Object.entries(state.days),...Object.entries(state.archivedDays||{})].sort(([a],[b])=>b.localeCompare(a)))for(const id of day.ids)add(id,day.progress[id],date,Daily.modeFor(day));
+  for(const[id,r]of Object.entries(state.legacy.progress))add(id,r,null,'classic');
   return [...map.values()];
  }
  function story(p){const entry=Authors.get(p),parts=entry?.story?.paragraphs||[p.education?.summary||p.meaning||p.hint,p.education?.context].filter(Boolean);return parts.map(x=>`<p>${esc(x)}</p>`).join('');}
@@ -18,7 +18,7 @@
  function renderNotebook(){
   const state=Game.inspect(),items=records(state).filter(item=>!favouriteOnly||state.notebook?.[item.id]?.saved);
   $('notebook-filter').textContent=favouriteOnly?'Zobrazit všechny':'Jen oblíbené';$('notebook-filter').setAttribute('aria-pressed',String(favouriteOnly));
-  $('notebook-content').innerHTML=items.length?items.map(({id,round,date})=>{const p=byId.get(id),saved=!!state.notebook?.[id]?.saved;return `<article class="notebook-entry"><p class="eyebrow">${date?esc(Daily.displayDate(date)):'Dřívější objev'} · ${labels[Daily.roundMethod(round)]}</p><blockquote>${esc(p.answer)}</blockquote><h3>${esc(Authors.profile(p)?.name||p.attribution)}</h3>${story(p)}<p class="source-links">${sources(p)}</p><div class="entry-actions"><button type="button" class="secondary-button" data-favourite="${esc(id)}" aria-pressed="${saved}">${saved?'Uloženo mezi oblíbené':'Uložit oblíbený'}</button><a class="underlined" href="${challenge(id,true)}">Procvičit bez bodů →</a><button class="text-button underlined" data-challenge="${esc(id)}">Vyzvat kamaráda</button></div></article>`;}).join(''):'<p>Sem se ukládají dokončené a odhalené výroky. Rozehrané otázky tu řešení neprozrazují.</p>';
+  $('notebook-content').innerHTML=items.length?items.map(({id,round,date,mode})=>{const p=byId.get(id),saved=!!state.notebook?.[id]?.saved;return `<article class="notebook-entry"><p class="eyebrow">${date?esc(Daily.displayDate(date)):'Dřívější objev'} · ${labels[Daily.isAuthorMode(mode)?Daily.roundMethod(round):round.status==='revealed'?'revealed':round.hints.length||round.chainLevel?'hint':'independent']}</p><blockquote>${esc(p.answer)}</blockquote><h3>${esc(Authors.profile(p)?.name||p.education?.person||p.author)}</h3>${story(p)}<p class="source-links">${sources(p)}</p><div class="entry-actions"><button type="button" class="secondary-button" data-favourite="${esc(id)}" aria-pressed="${saved}">${saved?'Uloženo mezi oblíbené':'Uložit oblíbený'}</button>${Authors.get(id)?`<a class="underlined" href="${challenge(id,true)}">Procvičit bez bodů →</a><button class="text-button underlined" data-challenge="${esc(id)}">Vyzvat kamaráda</button>`:''}</div></article>`;}).join(''):'<p>Sem se ukládají dokončené a odhalené výroky. Rozehrané otázky tu řešení neprozrazují.</p>';
  }
  function nextMidnight(now=new Date()){
   const key=Daily.calendarDayKey(now);let lo=now.getTime(),hi=lo+27*3600000;
