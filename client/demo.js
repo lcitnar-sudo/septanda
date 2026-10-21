@@ -1,6 +1,6 @@
 /* The public three-question sample never reads or writes a player's account. */
 (function (root) {
-  'use strict';
+  'use strict';root.SEPTANDA_DEMO=true;
   const Daily=root.SeptandaDaily, key='septanda.demo.authors.v1', date='2026-10-20';
   const ids=['descartes','poem-may','proverb-work'];
   // An evergreen sample, not another daily assignment or a second scoring wallet.

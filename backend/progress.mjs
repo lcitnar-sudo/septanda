@@ -34,10 +34,12 @@ export function createProgressTools({puzzles,engine,daily}) {
     out.hints = [...new Set((source.hints||[]).filter(h=>allowed.includes(h)))];
     if(out.hints.includes('clue'))out.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
     out.status = source.status==='revealed' ? 'revealed' : out.attempts.some(attempt=>attempt.score.accepted) ? 'won' : 'playing';
+    if(out.status==='revealed' && source.freeReveal===true)out.freeReveal=true;
     if(out.status==='revealed' && source.paidSkip===true){out.paidSkip=true;out.skipCharge=daily.skipCharge(source);}
-    if(mode==='author-v1' && source.chainLevel)fail(400,'V nové hře použij stopy k původu výroku.');
+    if(daily.isAuthorMode(mode) && source.chainLevel)fail(400,'V nové hře použij stopy k původu výroku.');
     if(source.chainLevel!==undefined && (!Number.isInteger(source.chainLevel) || source.chainLevel<0 || source.chainLevel>puzzle.chain.length-1))fail(400,'Neplatný krok tiché pošty.');
     if(source.chainLevel)out.chainLevel=source.chainLevel;
+    if(source.feedback!==undefined){const f=source.feedback;if(!object(f)||!(['easy','fair','hard','unclear'].includes(f.difficulty)||f.difficulty===null&&typeof f.helpful==='boolean')||!Number.isFinite(f.updatedAt))fail(400,'Neplatná zpětná vazba.');out.feedback={difficulty:f.difficulty,helpful:typeof f.helpful==='boolean'?f.helpful:null,updatedAt:Math.max(0,Math.min(Math.floor(f.updatedAt),now.getTime()))};}
     out.draft = typeof source.draft==='string' ? source.draft.slice(0,400) : '';
     return out;
   }
@@ -53,7 +55,9 @@ export function createProgressTools({puzzles,engine,daily}) {
     const terminal=['won','revealed'].includes(previous?.status);
     const level=terminal ? (a.chainLevel||0) : Math.max(a.chainLevel||0,b.chainLevel||0);
     if(level)result.chainLevel=level;
-    if(result.status==='revealed' && (terminal?previous.paidSkip:b.paidSkip || options.requirePaidSkip)){
+    if(result.status==='revealed' && (terminal?previous.freeReveal:b.freeReveal)){result.freeReveal=true;}
+    if(a.feedback||b.feedback)result.feedback=!a.feedback?b.feedback:!b.feedback?a.feedback:(b.feedback.updatedAt>=a.feedback.updatedAt?b.feedback:a.feedback);
+    if(result.status==='revealed' && !result.freeReveal && (terminal?previous.paidSkip:b.paidSkip || options.requirePaidSkip)){
       result.paidSkip=true;result.skipCharge=terminal?daily.skipCharge(previous):options.legacy?daily.skipCharge(b):daily.skipCost;
     }
     result.draft=object(incoming) ? b.draft : a.draft;
@@ -75,7 +79,7 @@ export function createProgressTools({puzzles,engine,daily}) {
       // once any exposure/work is stored the assignment is immutable.
       const unused=!previous || !(previous.seen?.length) && !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft);
       const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && daily.validPersonalSize(key,source.ids.length) && new Set(source.ids).size===source.ids.length && (mode!=='author-v1'||daily.validAuthorIDs(source.ids)) && source.ids.every(id=>daily.approvedIDs.includes(id) && !earlier.has(id)))return source.ids.slice();
+      if(personal && unused && incoming?.assignmentSeed===state.assignmentSeed && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && Array.isArray(source.ids) && daily.validPersonalSize(key,source.ids.length) && new Set(source.ids).size===source.ids.length && (!daily.isAuthorMode(mode)||daily.validAuthorIDs(source.ids)) && source.ids.every(id=>(daily.isAuthorMode(mode)?daily.validAuthorIDs(source.ids):daily.approvedIDs.includes(id)) && !earlier.has(id)))return source.ids.slice();
       if(personal && importLegacy && daily.validSeed(incoming?.assignmentSeed) && incoming.assignmentSeed.startsWith('guest:') && (!previous || !Object.values(previous.progress||{}).some(r=>hasWork(r)||r.draft))) {
         const imported=daily.personalPlan(incoming,key,incoming.assignmentSeed,source.ids?.length,mode);
         const earlier=new Set(Object.entries(state.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
@@ -98,7 +102,7 @@ export function createProgressTools({puzzles,engine,daily}) {
     const prior=previous && previous.version===6 ? previous : {version:6,legacy:{progress:{}},days:{}};
     const imported = prior.legacy?.imported===true || Object.keys(prior.legacy?.progress||{}).length>0;
     const state={version:6,legacy:{progress:{},imported},days:{},...(prior.archivedDays?{archivedDays:JSON.parse(JSON.stringify(prior.archivedDays))}:{})};
-    let newPaidActions=0;
+    let newPaidActions=0,newFreeReveals=0,newWins=0;
     const personal=Boolean(daily.personalStart && ((playerId && daily.dayKey(now)>=daily.personalStart) || incoming.assignmentVersion===1));
     if(personal) {
       state.assignmentVersion=1;
@@ -117,17 +121,20 @@ export function createProgressTools({puzzles,engine,daily}) {
       const old=prior.days?.[key],source=incoming.days[key];
       if (source!==undefined && !object(source)) fail(400,'Neplatný den v historii.');
       if(!daily.validDay(key) || key>daily.dayKey(now))fail(400,'Nelze ukládat neplatný nebo budoucí den.');
-      if(source?.mode!==undefined && source.mode!=='author-v1')fail(400,'Neplatný typ hry.');
+      if(source?.mode!==undefined && !daily.isAuthorMode(source.mode))fail(400,'Neplatný typ hry.');
       const unused=old && !old.seen?.length && !Object.values(old.progress||{}).some(r=>hasWork(r)||r.draft);
       const offlineClassic=unused && key<=daily.authorStart && source && daily.modeFor(source)==='classic' && Object.values(source.progress||{}).some(r=>hasWork(r)||r.draft) && (incoming.assignmentSeed===state.assignmentSeed || importLegacy && incoming.assignmentSeed?.startsWith('guest:'));
-      const mode=offlineClassic?'classic':old?daily.modeFor(old):!personal?'classic':source?.mode==='author-v1'?'author-v1':key<=daily.authorStart?'classic':daily.newMode(key);
-      if(mode==='author-v1' && key<daily.authorStart)fail(400,'Tento režim v daný den ještě nebyl vydán.');
+      const mode=offlineClassic?'classic':old?daily.modeFor(old):!personal?'classic':daily.isAuthorMode(source?.mode)?source.mode:key<=daily.authorStart?'classic':daily.newMode(key);
+      if(daily.isAuthorMode(mode) && key<daily.authorStart)fail(400,'Tento režim v daný den ještě nebyl vydán.');
+      if(mode==='author-v2' && key<daily.experienceStart)fail(400,'Tento typ zadání ještě nebyl vydán.');
       if(source && daily.modeFor(source)!==mode)fail(409,'Hra se aktualizovala. Obnov stránku; uložená historie zůstává zachovaná.','game_updated');
-      const ids=canonicalIDs(key,source,old,now,state,{personal,incoming,importLegacy,mode}),day={ids,...(mode==='author-v1'?{mode}:{}),selected:ids[0] || null,progress:{},seen:[],skipped:[]};
+      const ids=canonicalIDs(key,source,old,now,state,{personal,incoming,importLegacy,mode}),day={ids,...(daily.isAuthorMode(mode)?{mode}:{}),selected:ids[0] || null,progress:{},seen:[],skipped:[]};
       for (const id of ids) {
         const a=old?.progress?.[id],b=source?.progress?.[id];
         if(personal && key>=daily.personalStart && daily.seenBefore(state,key).has(id) && hasWork(b) && !hasWork(a))fail(409,'Tento výrok už máš v dřívější historii. Místní postup zůstává uložený.','known_puzzle');
         if (a || b) day.progress[id]=mergeRound(a,b,byId.get(id),now,{legacy:importLegacy && Boolean(daily.scheduleStart && key<daily.scheduleStart),mode,requirePaidSkip:ids.length===3 || key>=daily.paidSkipStart});
+        if(day.progress[id]?.freeReveal && !['won','revealed'].includes(a?.status)){if(!daily.isAuthorMode(mode))fail(400,'Bezplatné odhalení je součástí pátrání po původu.');newFreeReveals++;}
+        if(day.progress[id]?.status==='won' && !['won','revealed'].includes(a?.status))newWins++;
         if(day.progress[id]?.paidSkip && !['won','revealed'].includes(a?.status))newPaidActions++;
         if((day.progress[id]?.chainLevel||0)>(a?.chainLevel||0) || (day.progress[id]?.hints?.length||0)>(a?.hints?.length||0))newPaidActions++;
       }
@@ -137,7 +144,7 @@ export function createProgressTools({puzzles,engine,daily}) {
       for (const id of ids) {
         if(day.skipped.includes(id))continue;
         const a=old?.progress?.[id],b=source?.progress?.[id];
-        if (!unlocked && hasWork(b) && !hasWork(a)) fail(400,'Nejprve dokonči předchozí výrok.');
+        if (!daily.isAuthorMode(mode) && !unlocked && hasWork(b) && !hasWork(a)) fail(400,'Nejprve dokonči předchozí výrok.');
         if (!['won','revealed'].includes(day.progress[id]?.status)) unlocked=false;
       }
       const oldSeen=Array.isArray(old?.seen)?old.seen:[], incomingSeen=Array.isArray(source?.seen)?source.seen:[];
@@ -145,6 +152,10 @@ export function createProgressTools({puzzles,engine,daily}) {
       day.selected=selection(day,source?.selected || old?.selected);
     }
     const stats=totals(state);
+    if(newFreeReveals && stats.points-200*newWins>=daily.skipCost)fail(409,'Při dostatku bodů použij přeskočení za 100 bodů.','free_reveal_unavailable');
+    if(incoming.notebook!==undefined&&(!object(incoming.notebook)||Object.keys(incoming.notebook).length>byId.size))fail(400,'Neplatný deník.');
+    state.notebook={...(prior.notebook||{})};
+    for(const[id,item]of Object.entries(incoming.notebook||{})){if(!byId.has(id)||!object(item)||typeof item.saved!=='boolean'||!Number.isFinite(item.updatedAt))fail(400,'Neplatná záložka v deníku.');const completed=[state.legacy.progress,...Object.values(state.days).map(d=>d.progress),...Object.values(state.archivedDays||{}).map(d=>d.progress)].some(p=>['won','revealed'].includes(p[id]?.status));if(!completed)fail(400,'Uložit lze jen odhalený výrok.');const value={saved:item.saved,updatedAt:Math.max(0,Math.min(Math.floor(item.updatedAt),now.getTime()))};if(!state.notebook[id]||value.updatedAt>=state.notebook[id].updatedAt)state.notebook[id]=value;}
     if(newPaidActions && stats.points<0)fail(409,'Na tento krok nemáš dost bodů. Předání stojí 50 bodů, přeskočení 100 bodů.','insufficient_points');
     return {state,stats,scores:dayScores(state)};
   }

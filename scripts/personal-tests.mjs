@@ -40,7 +40,7 @@ for(let n=0;n<50;n++){
 }
 eq(fullDays,45,'135 approved puzzles provide 45 complete personal triples');
 eq(seen.size,135,'The complete reviewed pool is used exactly once');
-eq(daily.ensureDay(long,'2027-05-01').ids,[],'Exhausted content never wraps around');
+eq(daily.ensureDay(long,'2027-05-01',{mode:'classic'}).ids,[],'Exhausted content never wraps around');
 
 const guest=daily.createState(null);daily.ensureDay(guest,date,{personal:true,mode:'classic'});
 ok(guest.assignmentSeed.startsWith('guest:'),'A guest has a browser-owned seed');

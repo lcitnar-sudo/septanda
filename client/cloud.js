@@ -8,7 +8,7 @@
   const date = value => value ? new Intl.DateTimeFormat('cs-CZ', {dateStyle:'medium',timeStyle:'short'}).format(new Date(value)) : '—';
   function open(id) { if (!$(id).open) $(id).showModal(); }
   function stateSignature(state = Game.exportState()) { return JSON.stringify(state); }
-  function notice(message) { $('cloud-status').textContent = message; }
+  function notice(message) { $('cloud-status').textContent = message; if($('sync-chip'))$('sync-chip').textContent=message; }
   function translate(error) {
     const message = error?.message || String(error || '');
     if (/invalid login credentials/i.test(message)) return 'E-mail nebo heslo nesouhlasí.';
@@ -122,14 +122,14 @@
     }
   }
   let stateSignatureAtImport = '';
-  async function skipPuzzle(date,id) {
+  async function skipPuzzle(date,id,free=false) {
     if(!session || !ready || syncing)throw new Error('Počkej prosím na připojení a dokončení ukládání účtu.');
     const epoch=loadEpoch,userId=session.user.id;
     if(!await sync(true))throw new Error('Nejprve se musí uložit aktuální postup. Zkus přeskočení znovu po připojení.');
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
-    const result=await api('player',{action:'skip',date,id});
+    const result=await api('player',{action:free?'reveal-free':'skip',date,id});
     if(epoch!==loadEpoch || session?.user.id!==userId)throw new Error('Účet se mezitím změnil.');
-    apply(result,true);notice('Výrok je přeskočený. Odečteno 100 bodů.');refreshBoard();
+    apply(result,true);notice(free?'Odhaleno bez odměny; postup je uložený.':'Výrok je přeskočený. Odečteno 100 bodů.');refreshBoard();
   }
   async function revealChainStep(date,id,level) {
     if(!session || !ready || syncing)throw new Error('Počkej prosím na připojení a dokončení ukládání účtu.');
@@ -149,9 +149,11 @@
       $('profile-dialog').close(); $('admin-dialog').close(); $('admin-users').replaceChildren(); $('admin-audit-list').replaceChildren(); renderAccount();
     }
     if (!session) {
+      document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;try{localStorage.removeItem('septanda.session-present');}catch(_){}
       applying = true; Game.setAccount(null, {importGuest:false}); applying = false; profile = null;
       $('profile-dialog').close(); $('admin-dialog').close(); $('admin-users').replaceChildren(); $('admin-audit-list').replaceChildren(); renderAccount(); refreshBoard(); return;
     }
+    applying=true;Game.setAccount(session.user.id,{importGuest:false});applying=false;try{localStorage.setItem('septanda.session-present','1');}catch(_){}
     try {
       const result = await api('player');
       if (epoch !== loadEpoch || session?.user.id !== nextSession.user.id) return;
@@ -164,7 +166,7 @@
         if(pendingBackup)Game.backupPending?.(cached);
         apply({...result,state:merged.state},true);
       } else apply(result, !hasProgress(cached));
-      ready = true;
+      ready = true;document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;
       $('player-dialog').close();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
@@ -172,7 +174,7 @@
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
       refreshBoard();
     } catch (error) {
-      notice(translate(error)); $('leaderboard-status').textContent = translate(error);
+      document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;notice('Hra zůstává uložená v tomto prohlížeči. Čeká na připojení. '+translate(error)); $('leaderboard-status').textContent = translate(error);
       $('player-message').textContent = 'Přihlášení proběhlo, ale účet se nepodařilo načíst. Zkus obnovit stránku. ' + translate(error);
     }
   }
@@ -197,6 +199,7 @@
     $('admin-status').textContent = 'Načítání hráčů…';
     $('admin-audit').hidden = true; $('admin-audit-list').replaceChildren();
     try {
+      const capacity=await api('admin-users?content=1');if($('admin-content'))$('admin-content').textContent=`Zásoba: ${capacity.stock.named} autorských otázek a ${capacity.stock.folk} rčení. Nový hráč: ${capacity.stock.days} celých trojic. Nejméně zbývá ${capacity.minimumDays} dní (kontrola ${capacity.players} účtů${capacity.sample?' z prvních 1000':''}). Dobrovolná hodnocení: snadné ${capacity.feedback.easy}, akorát ${capacity.feedback.fair}, těžké ${capacity.feedback.hard}, nejasné ${capacity.feedback.unclear}. Stopy pomohly: ${capacity.feedback.helpful}, nepomohly: ${capacity.feedback.unhelpful}.`;
       const result = await api('admin-users?filter=' + encodeURIComponent($('admin-filter').value) + '&limit=50&offset=' + adminOffset);
       if (!profile?.admin || !$('admin-dialog').open) return;
       $('admin-status').textContent = result.total ? (adminOffset + 1) + '–' + Math.min(adminOffset + result.users.length,result.total) + ' z ' + result.total + ' hráčů' : 'Žádné odpovídající účty.';
@@ -307,7 +310,7 @@
     if (error) throw error;
     // INITIAL_SESSION already runs the same transition; this explicit call covers SDKs that emit it before registration.
     if (data.session && !session) await loadAccount(data.session);
-    else if (!data.session) renderAccount();
+    else if (!data.session) await loadAccount(null);
     if (new URL(location.href).searchParams.get('account') === 'recovery' && data.session) open('recovery-dialog');
     setMode('login'); refreshBoard();
   }

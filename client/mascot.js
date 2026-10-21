@@ -11,7 +11,7 @@
     discovery:{alt:'Šeptík objevuje historický dokument',copy:'Podíváme se, odkud slova pocházejí.'}
   });
   const authorCopy={idle:'Vypátráme, komu tahle slova patří.',thinking:'Čí hlas v těch slovech slyšíš?',success:'Máme původ. A za ním další příběh.',surprise:'Zkus jméno, které tě napadlo.',retry:'Zkus jinou osobnost nebo si vezmi stopu.',discovery:'Podíváme se na autora, význam i pramen.'};
-  let authorMode=false;
+  let authorMode=false,meaningMode=false,fact='';
   let active = 'idle', loadId = 0, lastPuzzle = null;
   function show(state) {
     if (!Object.hasOwn(states,state)) return;
@@ -20,13 +20,13 @@
     const src = typeof asset === 'string' ? asset : asset?.src;
     if (!src) { box.hidden = true; return; }
     const ticket = ++loadId, probe = new Image();
-    probe.onload = () => { if (ticket !== loadId) return; image.src = src; image.alt = states[state].alt; copy.textContent = authorMode?authorCopy[state]:states[state].copy; box.dataset.state = state; box.hidden = false; };
+    probe.onload = () => { if (ticket !== loadId) return; image.src = src; image.alt = states[state].alt; copy.textContent = meaningMode&&['idle','thinking','retry'].includes(state)?({idle:'Najdeme, co nám tohle rčení říká.',thinking:'Která běžná situace vystihuje jeho význam?',retry:'Zkus jiný výklad nebo si otevři stopu.'}[state]):fact&&['success','discovery'].includes(state)?fact:authorMode?authorCopy[state]:states[state].copy; box.dataset.state = state; box.hidden = false; };
     probe.onerror = () => { if (ticket === loadId) box.hidden = true; };
     probe.src = src;
   }
   function reflect(scene) {
-    if (!scene) return;
-    const changed=authorMode!==(scene.mode==='author-v1');authorMode=scene.mode==='author-v1';
+    if (!scene) return;meaningMode=!!scene.meaning;fact=(scene.fact||'').match(/^.*?[.!?](?:\s|$)/)?.[0]||scene.fact||'';
+    const changed=authorMode!==(/^author-v[12]$/.test(scene.mode));authorMode=/^author-v[12]$/.test(scene.mode);
     const next = scene.status === 'won' ? 'success' : scene.status === 'revealed' ? 'discovery' : scene.attempts ? scene.score >= 80 ? 'surprise' : 'retry' : 'idle';
     if (lastPuzzle !== scene.id || next !== active || changed) show(next);
     lastPuzzle = scene.id;

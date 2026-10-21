@@ -9,8 +9,10 @@
   const skipCharge = r => r?.skipCharge===100 ? 100 : 200;
   const chainLevel = r => Math.min(4,Math.max(0,Math.floor(Number(r?.chainLevel)||0)));
   const authorStart=root.SeptandaAuthors?.start || null;
-  const newMode=key=>authorStart && key>=authorStart?'author-v1':'classic';
-  const modeFor=day=>day?.mode==='author-v1'?'author-v1':'classic';
+  const experienceStart=root.SEPTANDA_AUTHORS?.experienceStart||'2026-10-21';
+  const isAuthorMode=mode=>mode==='author-v1'||mode==='author-v2';
+  const newMode=key=>key>=experienceStart?'author-v2':authorStart && key>=authorStart?'author-v1':'classic';
+  const modeFor=day=>isAuthorMode(day?.mode)?day.mode:'classic';
   const validAuthorIDs=ids=>Array.isArray(ids)&&ids.length===3&&ids.every(id=>root.SeptandaAuthors?.get(id))&&ids.filter(id=>root.SeptandaAuthors.get(id).profile==='folk').length<=1&&new Set(ids.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk').map(id=>root.SeptandaAuthors.get(id).profile)).size===ids.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk').length;
   const validPersonalSize=(key,size)=>size===PERSONAL_SIZE || size===5 && key<=SIZE_CHANGED_ON;
   if (pool.length < 5) throw new Error('Denní sada potřebuje alespoň pět výroků.');
@@ -71,16 +73,22 @@
     for(const [date,day] of Object.entries(state.days||{}))if(date<key)for(const id of day.ids||[])excluded.add(id);
     for(const id of state.knownIds||[])excluded.add(id);
     for(const day of Object.values(state.archivedDays||{}))for(const id of day.ids||[])excluded.add(id);
-    const admission=mode==='author-v1'?root.SeptandaAuthors.ids:approvedIDs;
+    const admission=isAuthorMode(mode)?root.SeptandaAuthors.ids:approvedIDs;
     const candidates=admission.filter(id=>byId.has(id) && !excluded.has(id));
     if(!validPersonalSize(key,size) || candidates.length<size)return [];
     let randomState=2166136261;
-    for(const char of (mode==='author-v1'?'septanda-authors-1:':'septanda-personal-1:')+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
+    for(const char of (isAuthorMode(mode)?'septanda-authors-1:':'septanda-personal-1:')+seed+':'+key){randomState^=char.charCodeAt(0);randomState=Math.imul(randomState,16777619);}
     const random=()=>{randomState=(randomState+0x6D2B79F5)|0;let n=Math.imul(randomState^randomState>>>15,1|randomState);n^=n+Math.imul(n^n>>>7,61|n);return((n^n>>>14)>>>0)/4294967296;};
     for(let i=candidates.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[candidates[i],candidates[j]]=[candidates[j],candidates[i]];}
-    if(mode==='author-v1'){
+    if(isAuthorMode(mode)){
       if(size!==3)return [];
       const named=candidates.filter(id=>root.SeptandaAuthors.get(id).profile!=='folk'),folk=candidates.filter(id=>root.SeptandaAuthors.get(id).profile==='folk'),chosen=[],people=new Set();
+      if(mode==='author-v2'){
+        const counts=new Map();for(const id of named){const who=root.SeptandaAuthors.get(id).profile;counts.set(who,(counts.get(who)||0)+1);}
+        const recent=new Set(Object.entries(state.days).filter(([d])=>d<key).sort(([a],[b])=>b.localeCompare(a)).slice(0,2).flatMap(([,d])=>d.ids.map(id=>root.SeptandaAuthors.get(id)?.profile)));
+        const total=named.length,max=Math.max(...counts.values());
+        named.sort((a,b)=>{const x=root.SeptandaAuthors.get(a).profile,y=root.SeptandaAuthors.get(b).profile;return (max>=Math.floor(total/2)?Number(counts.get(y)===max)-Number(counts.get(x)===max):0)||(Number(recent.has(x))-Number(recent.has(y)));});
+      }
       for(const id of named){const person=root.SeptandaAuthors.get(id).profile;if(!people.has(person)){chosen.push(id);people.add(person);}if(chosen.length===2)break;}
       if(chosen.length<2)return [];
       const last=folk[0]||named.find(id=>!people.has(root.SeptandaAuthors.get(id).profile));if(!last)return [];chosen.push(last);
@@ -96,6 +104,13 @@
     for(const id of candidates)if(chosen.length<size && !chosen.includes(id))chosen.push(id);
     for(let i=chosen.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[chosen[i],chosen[j]]=[chosen[j],chosen[i]];}
     return chosen;
+  }
+  function capacity(state) {
+    const used=new Set([...(state.knownIds||[]),...Object.keys(state.legacy?.progress||{}),...Object.values(state.days||{}).flatMap(d=>d.ids),...Object.values(state.archivedDays||{}).flatMap(d=>d.ids)]);
+    const left=root.SeptandaAuthors.ids.filter(id=>!used.has(id)),counts={};let folk=0;
+    for(const id of left){const p=root.SeptandaAuthors.get(id).profile;if(p==='folk')folk++;else counts[p]=(counts[p]||0)+1;}
+    const named=Object.values(counts).reduce((a,b)=>a+b,0),max=Math.max(0,...Object.values(counts));
+    return {questions:left.length,named,folk,days:Math.min(folk,Math.floor(named/2),named-max)};
   }
   const blankRound = () => ({attempts: [], hints: [], status: 'playing', draft: ''});
   const hasWork = r => !!r && !!(r.attempts?.length || r.hints?.length || chainLevel(r) || r.draft || r.status === 'won' || r.status === 'revealed');
@@ -136,10 +151,12 @@
     }
     // Already completed history survives later scoring corrections. The server still validates new wins.
     if (source.status === 'won' || source.status === 'revealed') round.status = source.status;
+    if(round.status==='revealed' && source.freeReveal===true)round.freeReveal=true;
     if(round.status==='revealed' && source.paidSkip===true){round.paidSkip=true;round.skipCharge=skipCharge(source);}
     if(chainLevel(source))round.chainLevel=chainLevel(source);
     if (Array.isArray(source.hints)) round.hints = [...new Set(source.hints.filter(h => Object.hasOwn(HINT_COST, h)))];
     if(round.hints.includes('clue'))round.hintLevel=Math.min(3,Math.max(1,Math.floor(Number(source.hintLevel)||1)));
+    if(source.feedback&&(['easy','fair','hard','unclear'].includes(source.feedback.difficulty)||source.feedback.difficulty===null&&typeof source.feedback.helpful==='boolean'))round.feedback={difficulty:source.feedback.difficulty,helpful:typeof source.feedback.helpful==='boolean'?source.feedback.helpful:null,updatedAt:Math.max(0,Math.floor(Number(source.feedback.updatedAt)||0))};
     round.draft = typeof source.draft === 'string' ? source.draft.slice(0, 400) : '';
     return round;
   }
@@ -157,6 +174,7 @@
     if (!raw || raw.version !== 6) return null;
     if(raw.assignmentVersion===1 && validSeed(raw.assignmentSeed)){state.assignmentVersion=1;state.assignmentSeed=raw.assignmentSeed;}
     if(Array.isArray(raw.knownIds))state.knownIds=[...new Set(raw.knownIds.filter(id=>byId.has(id)))];
+    if(raw.notebook&&typeof raw.notebook==='object'){state.notebook={};for(const[id,item]of Object.entries(raw.notebook))if(byId.has(id)&&typeof item?.saved==='boolean'&&Number.isFinite(item.updatedAt))state.notebook[id]={saved:item.saved,updatedAt:Math.max(0,Math.floor(item.updatedAt))};}
     state.legacy.progress = cleanProgress(raw.legacy?.progress, pool.map(p => p.id));
     if (raw.legacy?.imported === true) state.legacy.imported = true;
     if(raw.archivedDays && typeof raw.archivedDays==='object') {
@@ -171,7 +189,7 @@
         if (!validDay(key) || !source || typeof source !== 'object') continue;
         const ids = Array.isArray(source.ids) && [0,3,5].includes(source.ids.length) && new Set(source.ids).size === source.ids.length && source.ids.every(id => byId.has(id)) ? source.ids.slice() : plan(key);
         const mode=modeFor(source);
-        const day = {ids,...(mode==='author-v1'?{mode}:{}), selected: source.selected, progress: cleanProgress(source.progress, ids,mode), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
+        const day = {ids,...(isAuthorMode(mode)?{mode}:{}), selected: source.selected, progress: cleanProgress(source.progress, ids,mode), seen: Array.isArray(source.seen) ? source.seen : [], skipped: []};
         state.days[key] = day;
       }
       for (const key of Object.keys(state.days).sort()) reconcileDay(state, key);
@@ -184,13 +202,13 @@
     const planned = state.assignmentVersion===1 ? personalPlan(state,key,state.assignmentSeed,PERSONAL_SIZE,mode) : plan(key);
     if (!Object.hasOwn(state.days, key) || (!state.days[key].ids.length && planned.length)) {
       const ids = planned;
-      state.days[key] = {ids,...(mode==='author-v1'?{mode}:{}), selected: ids[0] || null, progress: {}, seen: [], skipped: []};
+      state.days[key] = {ids,...(isAuthorMode(mode)?{mode}:{}), selected: ids[0] || null, progress: {}, seen: [], skipped: []};
     }
     if(options.upgrade)upgradeCurrentDay(state,key);
     return reconcileDay(state, key);
   }
   function upgradeCurrentDay(state,key) {
-    if(!authorStart || key<authorStart || state.assignmentVersion!==1 || !validSeed(state.assignmentSeed) || !state.days[key] || modeFor(state.days[key])==='author-v1')return false;
+    if(!authorStart || key<authorStart || state.assignmentVersion!==1 || !validSeed(state.assignmentSeed) || !state.days[key] || isAuthorMode(modeFor(state.days[key])))return false;
     if(state.archivedDays?.[key])return false;
     state.archivedDays={...(state.archivedDays||{}),[key]:state.days[key]};
     delete state.days[key];
@@ -216,9 +234,12 @@
       if(r.hints.includes('clue'))r.hintLevel=Math.max(a.hintLevel||1,b.hintLevel||1);
       r.chainLevel=['won','revealed'].includes(a.status)?chainLevel(a):Math.max(chainLevel(a),chainLevel(b));
       const terminal=['won','revealed'].includes(a.status)?a:b;
+      if(r.status==='revealed' && terminal.freeReveal)r.freeReveal=true;
+      if(a.feedback||b.feedback)r.feedback=!a.feedback?b.feedback:!b.feedback?a.feedback:(b.feedback.updatedAt>=a.feedback.updatedAt?b.feedback:a.feedback);
       if(r.status==='revealed' && terminal.paidSkip){r.paidSkip=true;r.skipCharge=skipCharge(terminal);}
       return r;
     };
+    result.notebook={...(result.notebook||{})};for(const[id,item]of Object.entries(local.notebook||{}))if(!result.notebook[id]||item.updatedAt>=result.notebook[id].updatedAt)result.notebook[id]=item;
     result.knownIds=[...new Set([...(result.knownIds||[]),...(local.knownIds||[])])];
     const archiveKeys=new Set([...Object.keys(result.archivedDays||{}),...Object.keys(local.archivedDays||{})]);
     if(archiveKeys.size)result.archivedDays=result.archivedDays||{};
@@ -235,7 +256,7 @@
       if(!target){result.days[key]=source;continue;}
       if(modeFor(target)!==modeFor(source)){
         const archived=result.archivedDays?.[key];
-        if(modeFor(target)==='classic' && archived && archived.ids.join()===target.ids.join() && modeFor(source)==='author-v1'){
+        if(modeFor(target)==='classic' && archived && archived.ids.join()===target.ids.join() && isAuthorMode(modeFor(source))){
           for(const [id,r] of Object.entries(target.progress))archived.progress[id]=mergeRound(archived.progress[id],r);
           result.days[key]=source;continue;
         }
@@ -248,7 +269,7 @@
       }
       if(target.ids.join()!==source.ids.join()) {
         const earlier=new Set(Object.entries(result.days).filter(([date])=>date<key).flatMap(([,day])=>day.ids));
-        const mayKeep=work(source) && !work(target) && !target.seen.length && validPersonalSize(key,source.ids.length) && (modeFor(source)!=='author-v1'||validAuthorIDs(source.ids)) && source.ids.every(id=>!earlier.has(id) && (approvedIDs.includes(id) || key<=personalStart));
+        const mayKeep=work(source) && !work(target) && !target.seen.length && validPersonalSize(key,source.ids.length) && (!isAuthorMode(modeFor(source))||validAuthorIDs(source.ids)) && source.ids.every(id=>!earlier.has(id) && ((isAuthorMode(modeFor(source))?!!root.SeptandaAuthors.get(id):approvedIDs.includes(id)) || key<=personalStart));
         if(mayKeep){result.days[key]=source;continue;}
         if(work(source))backupRequired=true;
         result.knownIds=[...new Set([...result.knownIds,...source.seen.filter(id=>!target.ids.includes(id))])];
@@ -265,6 +286,7 @@
   function nextId(day) { return playIds(day).find(id => !day.skipped?.includes(id) && (!day.progress[id] || day.progress[id].status === 'playing')) || null; }
   function canSelect(day, id) {
     const ids=playIds(day),index = ids.indexOf(id), next = nextId(day);
+    if(isAuthorMode(modeFor(day)))return index>=0&&!day.skipped?.includes(id);
     return index >= 0 && !day.skipped?.includes(id) && (next === null || index <= ids.indexOf(next));
   }
   function dayTotals(day) {
@@ -288,5 +310,6 @@
     t.points = 100 + t.solved * 200 - t.spent;
     return t;
   }
-  root.SeptandaDaily = Object.freeze({upgradeCurrentDay,authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
+  const roundMethod=r=>r?.status==='won'?(r.hints?.includes('clue')?(r.hintLevel>=3?'options':'hint'):'independent'):r?.status==='revealed'?'revealed':'playing';
+  root.SeptandaDaily = Object.freeze({isAuthorMode,experienceStart,capacity,roundMethod,upgradeCurrentDay,authorStart,newMode,modeFor,validAuthorIDs,personalSize:PERSONAL_SIZE,skipCost:SKIP_COST,skipCharge,chainCost:CHAIN_COST,chainLevel,sizeChangedOn:SIZE_CHANGED_ON,paidSkipStart:PAID_SKIP_START,validPersonalSize,playIds,personalStart,approvedIDs,accountSeed,validSeed,bindPlayer,personalPlan,mergeForSync,calendarDayKey:dayKey,scheduleStart: root.SEPTANDA_SCHEDULE?.start || null, legacyIDs: Object.freeze(root.SEPTANDA_SCHEDULE?.legacyIds?.slice() || pool.slice(0,9).map(p=>p.id)), dayKey, validDay, displayDate, plan, legacyPlan, blankRound, createState, sanitizeState, ensureDay, seenBefore, reconcileDay, markSeen, roundFor, nextId, canSelect, dayTotals, totals});
 })(globalThis);

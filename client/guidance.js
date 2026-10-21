@@ -5,7 +5,7 @@
   const stop=new Set(['a','i','v','ve','z','ze','s','se','si','je','jsou','jsem','jsi','byl','byla','bylo','by','to','ten','ta','te','do','na','po','o','u','k','ke','co','kdo','kdyz','jak','tak','ale','ani','aby','ze','ma','mit','me','mi','ti','tu','tebe','toho','tom','pro','pak']);
   const words=text=>normalize(text).split(' ').filter(Boolean);
   function feedback(text,puzzle,accepted=false,mode='classic',previousText){
-    if(mode==='author-v1')return root.SeptandaAuthors.feedback(text,puzzle,accepted,previousText);
+    if(mode==='author-v1'||mode==='author-v2')return root.SeptandaAuthors.feedback(text,puzzle,accepted,previousText,mode);
     const typed=[...new Set(words(text).filter(w=>w.length>=3 && !stop.has(w)))];
     let matched=[];
     for(const reference of [puzzle.answer,...puzzle.variants]){
@@ -19,7 +19,7 @@
       caution:'Shoda slov nepotvrzuje správný význam ani pořadí. Čárky a diakritiku neřeš.'};
   }
   function clues(puzzle,mode='classic'){
-    if(mode==='author-v1')return root.SeptandaAuthors.get(puzzle).clues;
+    if(mode==='author-v1'||mode==='author-v2')return root.SeptandaAuthors.get(puzzle).clues;
     const prepared=puzzle.guidance?.clues?.filter(x=>typeof x==='string' && x.trim()) || [puzzle.hint];
     const reference=puzzle.variants.find(v=>normalize(v).split(' ').length>=3 && !/^[\x00-\x7f]+$/.test(v)) || puzzle.answer;
     const parts=reference.trim().split(/\s+/),count=parts.length<=4?1:2;

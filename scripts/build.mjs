@@ -33,21 +33,21 @@ await writeFile(path.join(root,'game.mjs'),game);
 await writeFile(path.join(root,'legacy-server/game.mjs'),game);
 const escape = value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sourceList = context.SEPTANDA_PUZZLES.map(p=>'<li><strong>'+escape(p.answer)+'</strong><p>'+escape(p.attribution)+'</p>'+p.sources.map(s=>'<a href="'+escape(s.url)+'" target="_blank" rel="noopener noreferrer">'+escape(s.label)+'</a>').join(' · ')+'</li>').join('\n');
-html = html.replace('<p><a class="underlined" href="ZDROJE.md" target="_blank" rel="noopener">Úplný přehled pramenů</a></p>','<details class="chain-details"><summary>Úplný přehled pramenů (obsahuje řešení)</summary><ol class="rules-list">'+sourceList+'</ol></details>');
+html = html.replace('<p><a class="underlined" href="ZDROJE.md" target="_blank" rel="noopener">Úplný přehled pramenů</a></p>','<p><a class="underlined" href="prameny.html" target="_blank" rel="noopener">Úplný přehled pramenů (obsahuje řešení) →</a></p>');
+await writeFile(path.join(destination,'prameny.html'),'<!doctype html><html lang="cs"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Prameny Šeptandy</title><style>body{max-width:800px;margin:40px auto;padding:20px;font:17px/1.6 system-ui;background:#e8e6dc;color:#252b26}li{margin-bottom:24px}a{color:#963c2c}</style><a href="./">← Zpět do hry</a><h1>Prameny a původ výroků</h1><p>Tento přehled obsahuje řešení. Příběhy odhalených výroků najdeš ve svém Deníku objevů.</p><ol>'+sourceList+'</ol></html>');
 const sdk = await build({stdin:{contents:'export {createClient} from "@supabase/supabase-js";',resolveDir:root,loader:'js'},bundle:true,write:false,format:'iife',globalName:'SeptandaSupabase',platform:'browser',target:['es2022'],minify:true,legalComments:'inline'});
 const blocks = [{name:'supabase-sdk',code:sdk.outputFiles[0].text}];
 for (const name of scriptNames.filter(name=>name!=='supabase-vendor')) {
   let code=await readFile(path.join(source,name+'.js'),'utf8');
-  if (name==='mascot-assets') {
-    const assetsContext=vm.createContext({});vm.runInContext(code,assetsContext);
-    const embedded={};
-    for(const [state,asset] of Object.entries(assetsContext.SEPTANDA_MASCOT_ASSETS || {})) {
-      const file=path.resolve(source,typeof asset==='string'?asset:asset.src);
-      if(!file.startsWith(source+path.sep))throw new Error('Mascot asset outside client');
-      const mime=path.extname(file)==='.webp'?'image/webp':'image/png';
-      embedded[state]='data:'+mime+';base64,'+(await readFile(file)).toString('base64');
+  if(name==='puzzles'){
+    const imageContext=vm.createContext({});vm.runInContext(code,imageContext);
+    const images=imageContext.SEPTANDA_IMAGES||{};
+    await mkdir(path.join(destination,'assets/portraits'),{recursive:true});
+    for(const [key,item]of Object.entries(images)){
+      if(!item.data?.startsWith('data:'))continue;const match=item.data.match(/^data:(image\/[a-z]+);base64,(.*)$/s);if(!match)continue;
+      const bytes=Buffer.from(match[2],'base64'),filename=createHash('sha256').update(bytes).digest('hex').slice(0,20)+'.'+(match[1]==='image/jpeg'?'jpg':match[1].split('/')[1]);
+      await writeFile(path.join(destination,'assets/portraits',filename),bytes);code=code.replaceAll(item.data,'assets/portraits/'+filename);
     }
-    code='globalThis.SEPTANDA_MASCOT_ASSETS='+JSON.stringify(embedded)+';';
   }
   blocks.push({name,code});
 }
@@ -70,6 +70,14 @@ let demo=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta
 demo=demo.replace(/<title>[^<]*<\/title>/,'<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="./">Zpět do mé hry →</a></nav>');
 demo=demo.replace('</body>',()=>renderScripts(demoParts)+'\n</body>');
 await writeFile(path.join(destination,'ukazka.html'),demo);
+const practiceParts=blocks.filter(({name})=>!['supabase-sdk','cloud','leaderboard','community'].includes(name)).map(part=>part.name==='app'?{...part,code:part.code.replace("'septanda.v6.daily'",'globalThis.SEPTANDA_PRACTICE.key').replace("'septanda.v5.progress'","'septanda.practice.legacy.unused'").replaceAll('Připsáno 200 bodů.','Připsáno 200 cvičných bodů.').replaceAll('+200 bodů připsáno','+200 cvičných bodů').replaceAll('Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.','Cvičný výrok je hotový. Denní postup a body se nezměnily.').replaceAll('Prohlédnout dnešní sadu','Prohlédnout cvičný výrok')}:part);
+practiceParts.splice(practiceParts.findIndex(p=>p.name==='app'),0,{name:'practice',code:await readFile(path.join(source,'practice.js'),'utf8')});
+for(const [route,label]of [['vyzva','Výzva pro kamaráda'],['procvicit','Dobrovolné procvičení']]){
+ const banner='<section class="practice-banner"><p class="eyebrow">'+label.toUpperCase()+'</p><h2>Jeden výrok na zkoušku.</h2><p>Tato hra je samostatná. Nemění tvé body, historii ani osobní denní trojici.</p><a class="underlined" href="./">Zpět do mé hry →</a> <button type="button" class="text-button underlined" id="practice-reset">Zkusit znovu</button></section>';
+ let page=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta name="robots" content="noindex,follow"></head>').replace(/<title>[^<]*<\/title>/,'<title>'+label+' · Šeptanda</title>');
+ page=page.replace('</body>',()=>renderScripts(practiceParts)+'\n</body>');await writeFile(path.join(destination,route+'.html'),page);
+}
+
 await writeFile(path.join(destination,'_headers'),`/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

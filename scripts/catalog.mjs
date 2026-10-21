@@ -36,17 +36,22 @@ export async function makeCatalog({recordHistory=false}={}){
   }
   const schedule={version:1,timeZone:'Europe/Prague',start:calendar.startDate,end:calendar.endDate,legacyIds,days:calendar.days,afterEnd:calendar.afterEnd,personal:{version:1,start:review.personalStart,approvedIds:review.approvedIds}};
   const authorData=JSON.parse(await readFile(new URL('content/authors.json',root),'utf8'));
+  const proof=JSON.parse(await readFile(new URL('content/admission-proof.json',root),'utf8'));
+  const quoteNorm=s=>String(s).normalize('NFC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
   const vocabulary=authorData.guidance;
-  for(const [id,profile] of Object.entries(authorData.profiles)){
+  for(const [id,profile] of Object.entries({...authorData.profiles,...authorData.guessProfiles})){
     if(id==='folk')continue;
     const g=profile.guidance;
     if(!g||!vocabulary?.environments[g.environment]||!g.periods?.length||!g.domains?.length||!g.focus?.length||g.periods.some(k=>!vocabulary.periods[k]||!Number.isInteger(vocabulary.periods[k].order))||g.domains.some(k=>!vocabulary.domains[k])||g.focus.some(k=>!vocabulary.focus[k]))throw Error('Chybí ověřená vodítka osobnosti: '+id);
   }
   for(const [id,entry] of Object.entries(authorData.entries)){
     const p=context.SEPTANDA_PUZZLES.find(p=>p.id===id)||puzzles.find(p=>p.id===id),profile=authorData.profiles[entry.profile];
-    if(!p || !review.approvedIds.includes(id) || !profile || !profile.aliases?.length || entry.clues?.length!==3)throw Error('Neověřené autorství: '+id);
+    if(!p || !profile || !profile.aliases?.length || entry.clues?.length!==3)throw Error('Neověřené autorství: '+id);
+    if(entry.admission){const evidence=proof.entries[id];if(!evidence||evidence.quote!==p.answer||!entry.sourceURLs.includes(evidence.url)||!evidence.match.includes(quoteNorm(p.answer))||!/^[a-f0-9]{64}$/.test(evidence.sourceSha256))throw Error('Chybí primární doklad nového obsahu: '+id);}
+    else if(!review.approvedIds.includes(id))throw Error('Chybí schválení otázky: '+id);
+    if(entry.meaning&&(entry.profile!=='folk'||entry.meaning.options?.length!==4||new Set(entry.meaning.options.map(o=>o.label)).size!==4||entry.meaning.options.filter(o=>o.id==='meaning'&&o.label===entry.meaning.correct).length!==1))throw Error('Neplatné možnosti významu: '+id);
     for(const use of entry.relatedUses||[])if(!use.id||!use.label||!use.aliases?.length||!use.explanation||!use.source?.label||!use.source?.url?.startsWith('https://')||!entry.sourceURLs.includes(use.source.url))throw Error('Nedoložené související použití: '+id);
-    if(entry.story&&(!Array.isArray(entry.story.paragraphs)||entry.story.paragraphs.length<2||entry.story.paragraphs.length>4||entry.story.paragraphs.some(text=>typeof text!=='string'||!text.trim()||text.length>1800)||!entry.story.sourceURLs?.length||entry.story.sourceURLs.some(url=>!entry.sourceURLs.includes(url))||!entry.story.reviewedAt))throw Error('Neověřený příběh výroku: '+id);
+    if(entry.story&&(!Array.isArray(entry.story.paragraphs)||entry.story.paragraphs.length<1||entry.story.paragraphs.length>4||entry.story.paragraphs.some(text=>typeof text!=='string'||!text.trim()||text.length>1800)||!entry.story.sourceURLs?.length||entry.story.sourceURLs.some(url=>!entry.sourceURLs.includes(url))||!entry.story.reviewedAt))throw Error('Neověřený příběh výroku: '+id);
     const original=entry.original;
     if(original&&(!['la','fr','it','en','de','grc','lzh'].includes(original.lang)||!original.language?.trim()||typeof original.text!=='string'||!original.text.trim()||original.text.length>1200||!original.source?.label?.trim()||!original.source.url?.startsWith('https://')||!entry.sourceURLs.includes(original.source.url)||!original.reviewedAt||(original.note!==undefined&&(typeof original.note!=='string'||original.note.length>300))))throw Error('Neověřené původní znění: '+id);
     if(entry.profile!=='folk'&&profile.guidance.environment!=='cz'&&!original)throw Error('Chybí původní jazyk cizojazyčného výroku: '+id);
