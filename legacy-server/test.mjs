@@ -79,7 +79,7 @@ try {
   time=new Date('2026-10-20T12:00:00Z');
   const personalState=daily.createState(null);daily.bindPlayer(personalState,b.data.account.id);
   daily.ensureDay(personalState,'2026-10-15'); // The already issued set is part of this account's history.
-  const personalDay=daily.ensureDay(personalState,'2026-10-20');
+  const personalDay=daily.ensureDay(personalState,'2026-10-20',{mode:'classic'});
   const personalBody={action:'sync',date:'2026-10-20',assignmentVersion:1,assignmentSeed:personalState.assignmentSeed,rounds:personalDay.ids.map(id=>({id,status:'playing',hint:false}))};
   win(personalBody,0);const personalResult=await call(personalBody,b.cookie);
   eq(personalResult.status,200,'personal selection excludes the account\'s earlier issued IDs');
@@ -91,7 +91,7 @@ try {
   eq((await call(personalBody,b.cookie)).data.me.points,100,'legacy stale device cannot refund a skip');
   const d=await call({action:'register',name:'Nový hráč',email:'fresh@example.cz',password:'test password D'});
   const dState=daily.createState(null);daily.bindPlayer(dState,d.data.account.id);
-  const dDay=daily.ensureDay(dState,'2026-10-20');
+  const dDay=daily.ensureDay(dState,'2026-10-20',{mode:'classic'});
   const noFunds={action:'sync',date:'2026-10-20',assignmentVersion:1,assignmentSeed:dState.assignmentSeed,rounds:dDay.ids.map((id,i)=>({id,status:i===0?'revealed':'playing',hint:false}))};
   eq((await call(noFunds,d.cookie)).data.me.points,-100,'legacy fresh wallet can pay exactly one skip');
   noFunds.rounds[1].status='revealed';

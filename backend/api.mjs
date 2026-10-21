@@ -53,19 +53,19 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
       await db.rpc('septanda_set_consent',{p_user:user.id,p_granted:body.granted});
       return json(await readPlayer(user));
     }
-    if (!['sync','skip','chain-step'].includes(body.action)) fail(400,'Neznámá akce.');
+    if (!['sync','skip','reveal-free','chain-step'].includes(body.action)) fail(400,'Neznámá akce.');
     for (let retry=0;retry<8;retry++) {
       const {data}=await db.read('septanda_progress',`user_id=eq.${user.id}&select=state,revision&limit=1`,{user});
       const old=data?.[0];if (!old) fail(503,'Nejprve dokonči nastavení databáze Supabase.');
       let incoming=body.state;
-      if(['skip','chain-step'].includes(body.action)) {
+      if(['skip','reveal-free','chain-step'].includes(body.action)) {
         if(body.date!==game.daily.dayKey(clock()) || typeof body.id!=='string')fail(400,'Tento krok lze použít u aktuálního výroku dnešní sady.');
         incoming=JSON.parse(JSON.stringify(old.state));
         const day=incoming?.days?.[body.date],round=day?.progress?.[body.id];
         if(day)game.daily.reconcileDay(incoming,body.date);
         if(!day || !day.ids.includes(body.id) || !game.daily.canSelect(day,body.id))fail(409,'Nejprve načti svoji aktuální sadu.');
         if(body.action==='chain-step') {
-          if(game.daily.modeFor(day)==='author-v1')fail(400,'V nové hře jsou k dispozici stopy k autorovi a čtyři možnosti.');
+          if(game.daily.isAuthorMode(game.daily.modeFor(day)))fail(400,'V nové hře jsou k dispozici stopy k autorovi a čtyři možnosti.');
           const max=game.puzzles.find(p=>p.id===body.id).chain.length-1;
           if(!Number.isInteger(body.level) || body.level<1 || body.level>max)fail(400,'Neplatný krok tiché pošty.');
           // A target level makes retries and simultaneous devices idempotent.
@@ -77,7 +77,7 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
         } else {
           if(round?.status==='won')fail(409,'Rozluštěný výrok už se nepřeskakuje.');
           if(round?.status==='revealed')return json(await readPlayer(user));
-          day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',paidSkip:true,skipCharge:game.daily.skipCost,draft:''};
+          day.progress[body.id]={...(round||game.daily.blankRound()),status:'revealed',...(body.action==='reveal-free'?{freeReveal:true}:{paidSkip:true,skipCharge:game.daily.skipCost}),draft:''};
         }
       }
       const merged=tools.merge(old.state,incoming,{now:clock(),importLegacy:body.importLegacy===true,playerId:user.id,upgradeActive:true});
@@ -100,6 +100,13 @@ export function createCloudAPI({game,env=process.env,fetcher=fetch,db=createSupa
     // A protected database membership is authoritative; metadata supplied at signup never grants administration.
     if (!await db.isAdmin(user)) fail(403,'Tento přehled je dostupný pouze správci.','admin_required');
     const search=new URL(request.url).searchParams,target=search.get('user');
+    if(search.get('content')==='1'){
+      const {data:rows}=await db.read('septanda_progress','select=state&order=user_id.asc&limit=1000');
+      const feedback={easy:0,fair:0,hard:0,unclear:0,helpful:0,unhelpful:0},stock=game.daily.capacity(game.daily.createState(null));let minimumDays=stock.days;
+      for(const row of rows||[]){const state=row.state||game.daily.createState(null);minimumDays=Math.min(minimumDays,game.daily.capacity(state).days);for(const d of Object.values(state.days||{}))for(const r of Object.values(d.progress||{})){const f=r.feedback;if(f){if(['easy','fair','hard','unclear'].includes(f.difficulty))feedback[f.difficulty]++;if(f.helpful===true)feedback.helpful++;if(f.helpful===false)feedback.unhelpful++;}}}
+      return json({stock,minimumDays,players:rows?.length||0,sample:rows?.length===1000,feedback});
+    }
+
     if (target) {
       if (!isUUID(target)) fail(400,'Neplatné označení hráče.');
       const [{data:profiles},{data:stats},{data:consents},{data:events}]=await Promise.all([

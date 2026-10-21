@@ -139,5 +139,5 @@ assert.equal((node('collection-list').innerHTML.match(/class="collection-item"/g
 assert.equal(capped.days[date].ids.length,5,'Stored issued IDs remain complete');
 assert.equal(daily.totals(capped).points,300,'The earlier fourth-slot win remains awarded');
 assert.equal(capped.days[date].progress[originalFive[4]].draft,'Můj původní pátý tip');
-assert.match(node('stats-content').innerHTML,/Dřívější výsledky z dneška/,'Existing extra work is accessible in the archive');
+node('stats-dialog').open=true;game.replaceState(game.exportState());assert.match(node('stats-content').innerHTML,/Dřívější výsledky z dneška/,'Existing extra work is accessible in the archive');
 console.log('PASS actual game UI: word guidance, three clues / one charge, reward, guest isolation, private backups and cold cloud account restoration.');

@@ -2,6 +2,7 @@
   'use strict';
   const allPuzzles = globalThis.SEPTANDA_PUZZLES, engine = globalThis.SeptandaEngine, Daily = globalThis.SeptandaDaily, Guidance=globalThis.SeptandaGuidance;
   const GUEST_KEY = 'septanda.v6.daily';
+  if(!globalThis.SEPTANDA_PRACTICE&&!globalThis.SEPTANDA_DEMO){try{if(localStorage.getItem('septanda.session-present')||Object.keys(localStorage).some(k=>/^sb-.*-auth-token$/.test(k)))document.documentElement.classList.add('restoring-account');}catch(_){}}
   let KEY = GUEST_KEY;
   const LEGACY_KEY = 'septanda.v5.progress', INITIAL = 100, COST = {clue: 50};
   const $ = id => document.getElementById(id);
@@ -53,7 +54,8 @@
   }
   function roundFor(id = day.selected) { return Daily.roundFor(day, id); }
   function currentPuzzle() { return puzzles.find(p => p.id === day.selected); }
-  const mode=()=>Daily.modeFor(day),isAuthor=()=>mode()==='author-v1';
+  const mode=()=>Daily.modeFor(day),isAuthor=()=>Daily.isAuthorMode(mode());
+  const isMeaning=()=>mode()==='author-v2'&&!!globalThis.SeptandaAuthors.get(currentPuzzle())?.meaning;
   function totals() { return Daily.totals(state); }
   function hasAccount() { return KEY !== GUEST_KEY; }
   function announce(text) { $('announcement').textContent = text; }
@@ -75,7 +77,7 @@
     if (!records.length) return '';
     return `<section class="archive-group"><h3>${escape(title)}</h3>${records.map(id => {
       const p = allPuzzles.find(p => p.id === id), r = progress[id];
-      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(mode==='author-v1'?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.hints.length?`<p class="small">Zakoupené nápovědy: ${r.hints.length}${r.hints.includes('clue')?` · Postupné stopy ${r.hintLevel||1}/3`:''}</p>`:''}${r.chainLevel?`<p class="small">Odkrytá předání věty: ${r.chainLevel}/4</p>`:''}${r.paidSkip?`<p class="small">Přeskočeno za ${Daily.skipCharge(r)} bodů</p>`:''}${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
+      return `<details class="archive-round"><summary>${escape(r.status === 'playing' ? p.category : p.answer)} · ${r.attempts.length} ${plural(r.attempts.length, 'tip', 'tipy', 'tipů')}</summary><ol>${r.attempts.map(a => `<li>${escape(a.text)} <strong>${a.score.accepted?(Daily.isAuthorMode(mode)?'Rozpoznaný původ':'Rozpoznané znění'):'Předchozí tip'}</strong></li>`).join('')}</ol>${r.hints.length?`<p class="small">Zakoupené nápovědy: ${r.hints.length}${r.hints.includes('clue')?` · Postupné stopy ${r.hintLevel||1}/3`:''}</p>`:''}${r.chainLevel?`<p class="small">Odkrytá předání věty: ${r.chainLevel}/4</p>`:''}${r.paidSkip?`<p class="small">Přeskočeno za ${Daily.skipCharge(r)} bodů</p>`:''}${r.draft ? `<p>Rozepsáno: ${escape(r.draft)}</p>` : ''}</details>`;
     }).join('')}</section>`;
   }
   function renderStats(t) {
@@ -86,10 +88,10 @@
   }
   function renderResult(r) {
     const last = r.status === 'won' ? r.attempts.findLast(a => a.score.accepted) : r.attempts.at(-1), panel = $('result-panel');
-    panel.hidden = !last;
-    if (!last) { panel.innerHTML = ''; return; }
-    const author=globalThis.SeptandaAuthors,near=isAuthor()?author.proximity(last.text,currentPuzzle()):null;
-    const previous=near?r.attempts.slice(0,r.attempts.indexOf(last)).findLast(a=>{const p=author.proximity(a.text,currentPuzzle());return p&&p.id!==near.id;}):null;
+    panel.hidden = !last || isAuthor()&&r.status==='won';
+    if (!last || isAuthor()&&r.status==='won') { panel.innerHTML = ''; return; }
+    const author=globalThis.SeptandaAuthors,near=isAuthor()?author.proximity(last.text,currentPuzzle(),mode()):null;
+    const previous=near?r.attempts.slice(0,r.attempts.indexOf(last)).findLast(a=>{const p=author.proximity(a.text,currentPuzzle(),mode());return p&&p.id!==near.id;}):null;
     const f=Guidance.feedback(last.text,currentPuzzle(),last.score.accepted,mode(),previous?.text);
     const traits=f.traits?.length?`<dl class="author-guidance" aria-label="Vodítka z tvého tipu">${f.traits.map(t=>`<div class="${t.match?'is-match':'is-miss'}"><dt>${escape(t.label)}${t.match?' · shoda':''}</dt><dd>${escape(t.text)}</dd></div>`).join('')}</dl>`:'';
     panel.innerHTML=`<p class="eyebrow">${f.accepted?'UZNANÝ TIP':'STOPA Z TVÉHO TIPU'}</p><h2 id="result-title">${escape(f.title)}</h2><p>${escape(f.detail)}</p>${traits}${f.comparison?`<p class="guidance-comparison" role="status">${escape(f.comparison)}</p>`:''}${f.matched.length?`<div class="guidance-words" aria-label="Shodná podstatná slova">${f.matched.map(word=>`<span>${escape(word)}</span>`).join('')}</div>`:''}${!f.accepted?`<p class="guidance-caution">${escape(f.caution)}</p><button class="text-button underlined" data-guide>Chci konkrétnější stopu</button>`:''}`;
@@ -115,11 +117,11 @@
     const author=globalThis.SeptandaAuthors,entry=author.get(p),profile=author.profile(p),education=p.education,won=r.status==='won',done=Daily.dayTotals(day).completed===puzzles.length;
     const labels={'folk':'LIDOVÁ TRADICE','traditional':'TRADIČNĚ PŘIPISOVÁNO','speaker':'MLUVČÍ V DOCHOVANÉM PODÁNÍ','literary-author':'AUTOR DÍLA','documented':'DOLOŽENÝ PŮVOD'};
     const media=education.image?globalThis.SEPTANDA_IMAGES?.[education.image]:null;
-    const picture=media?`<figure class="education-media"><img src="${escape(media.data)}" alt="${escape(media.alt)}" width="330" height="410" decoding="async"><figcaption>${escape(media.caption||'')}</figcaption></figure>`:'';
+    const picture=media?`<figure class="education-media"><img src="${escape(media.data)}" alt="${escape(media.alt)}" width="330" height="410" decoding="async" loading="lazy"><figcaption>${escape(media.caption||'')}</figcaption></figure>`:'';
     const story=(entry.story?.paragraphs||[education.summary]).map(text=>`<p>${escape(text)}</p>`).join('');
     const related=(entry.relatedUses||[]).map(use=>`<section class="related-use"><h3>Další známá souvislost · ${escape(use.label)}</h3><p>${escape(use.explanation)}</p><a href="${escape(use.source.url)}" target="_blank" rel="noopener noreferrer">${escape(use.source.label)} →</a></section>`).join('');
     const originalSource=entry.original?`<p>Původní jazyk: <a href="${escape(entry.original.source.url)}" target="_blank" rel="noopener noreferrer">${escape(entry.original.source.label)}</a></p>`:'';
-    panel.innerHTML=`<div class="reveal-top"><p class="eyebrow">${labels[entry.attribution]}</p><span class="award">${won?'+200 bodů připsáno':r.paidSkip?`Přeskočeno · −${Daily.skipCharge(r)} bodů`:'Odhaleno · bez odměny'}</span></div><h2 id="reveal-title" tabindex="-1">${escape(profile.name)}</h2><article class="education-card ${media?'has-media':''}">${picture}<div class="education-copy"><p class="eyebrow">${entry.profile==='folk'?'PROČ SE TO ŘÍKÁ':'OSOBNOST ZA SLOVY'}</p><p>${escape(profile.bio)}</p><p class="education-work">${escape(education.work)}</p><p class="small muted">${escape(p.era)}</p><div class="quote-story">${story}</div><a class="education-original" href="${escape(p.sources[0].url)}" target="_blank" rel="noopener noreferrer">Doložený pramen →</a>${related}</div></article><details class="source-details"><summary>Jak původ dokládáme</summary><p>${escape(p.attribution)}</p>${originalSource}${p.sources.map(s=>`<p><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.label)}</a></p>`).join('')}${media?`<p class="image-credit">${escape(media.credit)} <a href="${escape(media.source)}" target="_blank" rel="noopener noreferrer">Zdroj obrázku</a> · <a href="${escape(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">Licence</a></p>`:''}</details>${done?'<p class="daily-complete">Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.</p>':''}<div class="reveal-actions"><button class="primary-button" data-next>${done?'Prohlédnout dnešní sadu':'Další výrok'} →</button><button class="text-button underlined" data-share>Zkopírovat výsledek bez řešení</button></div><p id="share-message" class="form-message" role="status"></p>`;
+    panel.innerHTML=`<div class="reveal-top"><p class="eyebrow">${labels[entry.attribution]}</p><span class="award">${won?'+200 bodů připsáno':r.paidSkip?`Přeskočeno · −${Daily.skipCharge(r)} bodů`:'Odhaleno · bez odměny'}</span></div><blockquote class="reveal-quotation">${escape(p.answer)}</blockquote><h2 id="reveal-title" tabindex="-1">${escape(profile.name)}</h2><article class="education-card ${media?'has-media':''}">${picture}<div class="education-copy"><p class="eyebrow">${entry.profile==='folk'?'PROČ SE TO ŘÍKÁ':'OSOBNOST ZA SLOVY'}</p><p>${escape(profile.bio)}</p><p class="education-work">${escape(education.work)}</p><p class="small muted">${escape(p.era)}</p><div class="quote-story">${story}</div><a class="education-original" href="${escape(p.sources[0].url)}" target="_blank" rel="noopener noreferrer">Doložený pramen →</a>${related}</div></article><details class="source-details"><summary>Jak původ dokládáme</summary><p>${escape(p.attribution)}</p>${originalSource}${p.sources.map(s=>`<p><a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.label)}</a></p>`).join('')}${media?`<p class="image-credit">${escape(media.credit)} <a href="${escape(media.source)}" target="_blank" rel="noopener noreferrer">Zdroj obrázku</a> · <a href="${escape(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">Licence</a></p>`:''}</details>${done?'<p class="daily-complete">Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.</p>':''}<div class="reveal-actions"><button class="primary-button" data-next>${done?'Prohlédnout dnešní sadu':'Další výrok'} →</button><button class="text-button underlined" data-share>Zkopírovat výsledek bez řešení</button></div><p id="share-message" class="form-message" role="status"></p>`;
   }
   function renderReveal(p, r) {
     if(isAuthor()){renderAuthorReveal(p,r);return;}
@@ -130,7 +132,7 @@
     const education = p.education || {label: 'Původ úryvku', person: p.author, work: p.origin, summary: p.context};
     const media = education.image ? globalThis.SEPTANDA_IMAGES?.[education.image] : null;
     const original = p.sources[0];
-    const picture = media ? `<figure class="education-media ${media.kind === 'work' ? 'work-image' : ''}"><img src="${escape(media.data)}" alt="${escape(media.alt)}" width="330" height="410" decoding="async"><figcaption>${escape(media.caption || '')}</figcaption></figure>` : '';
+    const picture = media ? `<figure class="education-media ${media.kind === 'work' ? 'work-image' : ''}"><img src="${escape(media.data)}" alt="${escape(media.alt)}" width="330" height="410" decoding="async" loading="lazy"><figcaption>${escape(media.caption || '')}</figcaption></figure>` : '';
     const imageCredit = media ? `<p class="image-credit">${escape(media.credit)} <a href="${escape(media.source)}" target="_blank" rel="noopener noreferrer">Zdroj obrázku</a> · <a href="${escape(media.licenseUrl)}" target="_blank" rel="noopener noreferrer">Licence</a></p>` : '';
     panel.innerHTML = `<div class="reveal-top"><p class="eyebrow">${won ? 'SLOVA JSOU ZPÁTKY DOMA' : 'PŮVODNÍ ZPRÁVA'}</p><span class="award">${won ? '+200 bodů připsáno' : r.paidSkip?`Přeskočeno · −${Daily.skipCharge(r)} bodů`:'Odhaleno · bez odměny'}</span></div><h2 id="reveal-title" tabindex="-1">„${escape(p.answer)}“</h2><article class="education-card ${media ? 'has-media' : ''}">${picture}<div class="education-copy"><p class="eyebrow">${escape(education.label)}</p><h3>${escape(education.person)}</h3><p class="education-work">${escape(education.work)}</p><p class="education-summary">${escape(education.summary)}</p><a class="education-original" href="${escape(original.url)}" target="_blank" rel="noopener noreferrer">Původní zdroj <span aria-hidden="true">→</span></a></div></article><details class="source-details"><summary>Podrobnosti a atribuce</summary><p class="attribution">${escape(p.attribution)}</p><div class="source-links">${p.sources.map(s => `<a href="${escape(s.url)}" target="_blank" rel="noopener noreferrer">${escape(s.label)}</a>`).join('')}</div>${imageCredit}</details><details class="chain-details"><summary>Celá cesta tiché pošty · originál a 5 předání</summary><ol class="chain-list"><li><span>0</span>${escape(p.answer)}</li>${p.chain.map((text, i) => `<li><span>${i + 1}</span>${escape(text)}</li>`).join('')}</ol></details>${allDone ? '<p class="daily-complete">Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.</p>' : ''}<div class="reveal-actions"><button class="primary-button" data-next>${allDone ? 'Prohlédnout dnešní sadu' : 'Další výrok'} <span aria-hidden="true">→</span></button><button class="text-button underlined" data-share>Zkopírovat výsledek bez řešení</button></div><p id="share-message" class="form-message" role="status"></p>`;
   }
@@ -141,16 +143,16 @@
     $('intro-copy').hidden=!author;
     $('history-access').hidden=!Object.keys(state.archivedDays||{}).length;
     $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
-    $('guess').placeholder=author?'Jméno autora nebo lidový původ':'Tvůj tip na původní znění';
+    $('guess').placeholder=mode()==='author-v2'?'Jméno autora nebo mluvčího':author?'Jméno autora nebo lidový původ':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
-    $('guess-instructions').textContent=author?'Stačí příjmení. U lidového původu napiš „autor neznámý“, „lidové rčení“ nebo „pořekadlo“. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
-    $('hint-clue').querySelector('small').textContent=author?'Oblast, pramen a nakonec čtyři možnosti.':'Od významu ke konkrétnímu obrazu.';
-    $('message-label').textContent=author?'ČÍ JSOU TATO SLOVA?':'ZACHYCENÁ ZPRÁVA';
+    $('guess-instructions').textContent=author?'Stačí příjmení nebo celé jméno. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
+    $('hint-clue').querySelector('small').textContent=isMeaning()?'Souvislost, dvě možnosti a vysvětlení.':author?'Souvislost, pramen a čtyři osobnosti.':'Od významu ke konkrétnímu obrazu.';
+    $('message-label').textContent=isMeaning()?'JAK ROZUMÍŠ TĚMTO SLOVŮM?':author?'ČÍ JSOU TATO SLOVA?':'ZACHYCENÁ ZPRÁVA';
     $('rules-author').hidden=!author;$('rules-classic').hidden=author;
     $('scoring-author').hidden=!author;$('scoring-classic').hidden=author;
     $('rules-title').textContent=author?'Najdi člověka za slovy.':'Vrať slovům jejich začátek.';
     $('scoring-title').textContent=author?'Jméno, stopy a lidový původ.':'Co už sedí a kam dál.';
-    $('goal-copy').innerHTML=author?'Poznej autora nebo lidový původ.<br>Za slovy tě čeká příběh.':'Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.';
+    $('goal-copy').innerHTML=author?'Poznej autora nebo význam rčení.<br>Za slovy tě čeká příběh.':'Nemusíš trefit každou čárku.<br>Musíš poznat původní výrok.';
   }
   function render() {
     const p = currentPuzzle(), r = roundFor(), t = totals(), index = puzzles.indexOf(p);
@@ -169,20 +171,26 @@
       $('solved-count').textContent = puzzles.length ? 'Už znáš' : '—';
       $('collection-marks').replaceChildren();
       $('collection-copy').textContent = puzzles.length ? 'Žádná opakovaná hádanka.' : 'Čekáme na další nové výroky.';
-      renderCollection(); renderStats(t);
+      renderCollection(); if($('stats-dialog').open)renderStats(t);
       document.dispatchEvent(new Event('septanda:progress'));
       document.dispatchEvent(new CustomEvent('septanda:scene', {detail:{status:'waiting',score:null,attempts:0,id:null}}));
       return;
     }
     if (Daily.markSeen(day,p.id)) save();
     $('puzzle-number').textContent = pad(index + 1); $('puzzle-category').textContent = isAuthor()?'PÁTRÁNÍ PO PŮVODU':p.category.toLocaleUpperCase('cs');
-    $('puzzle-heading').textContent=isAuthor()?globalThis.SeptandaAuthors.get(p).question:'Co zaznělo na začátku?';
-    $('question-scope').hidden=!isAuthor();$('question-scope').textContent=isAuthor()?globalThis.SeptandaAuthors.get(p).scope:'';
+    $('puzzle-heading').textContent=isMeaning()?'Co toto rčení znamená?':isAuthor()?globalThis.SeptandaAuthors.get(p).question:'Co zaznělo na začátku?';
+    $('puzzle-category').textContent=mode()==='author-v1'?'PÁTRÁNÍ PO PŮVODU':isMeaning()?'HLEDÁME VÝZNAM RČENÍ':isAuthor()?(globalThis.SeptandaAuthors.get(p).attribution==='speaker'?'HLEDÁME MLUVČÍHO':globalThis.SeptandaAuthors.get(p).profile==='folk'?'HLEDÁME PŮVOD':globalThis.SeptandaAuthors.get(p).attribution==='literary-author'?'HLEDÁME AUTORA DÍLA':'HLEDÁME AUTORA VÝROKU'):p.category.toLocaleUpperCase('cs');
+    $('question-scope').hidden=!isAuthor();$('question-scope').textContent=isMeaning()?'Vyber výklad, který nejlépe odpovídá rčení.':isAuthor()?(mode()==='author-v2'?globalThis.SeptandaAuthors.get(p).scope.replace(/ Pokud není známý,[\s\S]*/, ''):globalThis.SeptandaAuthors.get(p).scope):'';
     $('distorted-message').textContent = isAuthor()?p.answer:p.chain.at(-1);
     const original=isAuthor()?globalThis.SeptandaAuthors.get(p)?.original:null;
     $('quote-original').hidden=!original;
     $('quote-original').innerHTML=original?`<figcaption class="eyebrow">V původním jazyce · ${escape(original.language)}</figcaption><blockquote lang="${escape(original.lang)}">${escape(original.text)}</blockquote>${original.note?`<p class="small muted">${escape(original.note)}</p>`:''}`:'';
     $('guess-form').hidden = r.status !== 'playing';
+    $('guess').hidden=isMeaning();$('guess-label').hidden=isMeaning();$('input-help').hidden=isMeaning();$('guess-submit').hidden=isMeaning();
+    const meaningOptions=isMeaning()?globalThis.SeptandaAuthors.options(p,mode()):[];
+    $('meaning-options').hidden=!isMeaning();$('meaning-options').innerHTML=meaningOptions.map(o=>`<button type="button" class="meaning-option" data-meaning-choice="${escape(o.id)}" ${r.status!=='playing'?'disabled':''}>${escape(o.label)}</button>`).join('');
+    if(isMeaning()&&r.hints.includes('clue')&&(r.hintLevel||1)>=2){const wrong=meaningOptions.filter(o=>o.id!=='meaning').slice(0,2).map(o=>o.id);$('meaning-options').innerHTML=meaningOptions.filter(o=>!wrong.includes(o.id)).map(o=>`<button type="button" class="meaning-option" data-meaning-choice="${escape(o.id)}">${escape(o.label)}</button>`).join('');}
+    $('defer-puzzle').hidden=r.status!=='playing'||!isAuthor();$('author-suggestions').replaceChildren();
     if ($('guess').value !== r.draft) $('guess').value = r.draft;
     for (const type of Object.keys(COST)) {
       const owned = r.hints.length > 0, button = $('hint-' + type);
@@ -194,15 +202,15 @@
       $('hint-' + type + '-content').hidden = !owned;
       $('hint-' + type + '-content').innerHTML = owned?Guidance.clues(p,mode()).slice(0,level).map((text,i)=>`<p><strong>Stopa ${i+1}</strong><br>${escape(text)}</p>`).join(''):'';
     }
-    $('hint-options').hidden=!(isAuthor() && r.hints.includes('clue') && (r.hintLevel||1)>=3);
-    $('hint-options').innerHTML=$('hint-options').hidden?'':globalThis.SeptandaAuthors.options(p).map(o=>`<button type="button" class="secondary-button author-option" data-author-choice="${escape(o.id)}" ${r.status!=='playing'||skipBusy?'disabled':''}>${escape(o.label)}</button>`).join('');
+    $('hint-options').hidden=isMeaning()||!(isAuthor() && r.hints.includes('clue') && (r.hintLevel||1)>=3);
+    $('hint-options').innerHTML=$('hint-options').hidden?'':globalThis.SeptandaAuthors.options(p,mode()).map(o=>`<button type="button" class="secondary-button author-option" data-author-choice="${escape(o.id)}" ${r.status!=='playing'||skipBusy?'disabled':''}>${escape(o.label)}</button>`).join('');
     $('hint-status').textContent = r.status !== 'playing' ? (isAuthor()?'Příběh a původ najdeš pod výrokem.':'Celý řetězec je teď přístupný pod výrokem.') : r.hints.length ? `Stopa ${r.hintLevel||1} ze 3. Další už stojí 0 bodů.` : t.points < COST.clue ? 'Na stopy teď body nestačí.' : 'Za 50 bodů odemkneš všechny tři. Otevíráš je postupně.';
     renderTransmissions(p,r,t);
     $('give-up').hidden = r.status !== 'playing';
-    $('give-up').disabled = skipBusy || t.points<Daily.skipCost;
-    $('give-up').textContent = skipBusy?'Ukládám…':'Přeskočit výrok · −100 bodů';
+    $('give-up').disabled = skipBusy || !isAuthor()&&t.points<Daily.skipCost;
+    $('give-up').textContent = skipBusy?'Ukládám…':t.points<Daily.skipCost&&isAuthor()?'Odhalit bez odměny':'Přeskočit výrok · −100 bodů';
     $('skip-help').hidden = r.status !== 'playing';
-    $('skip-help').textContent=t.points<Daily.skipCost?'K přeskočení potřebuješ alespoň 100 bodů.':'Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.';
+    $('skip-help').textContent=t.points<Daily.skipCost&&isAuthor()?'Na placené přeskočení body nestačí. Můžeš otázku odložit nebo odhalit bez odměny.':'Přeskočený výrok se počítá do dnešního limitu. Za přeskočení nezískáš odměnu.';
     $('guess').disabled=skipBusy;
     const today = Daily.dayTotals(day);
     $('daily-position').textContent = `DNEŠNÍ VÝROK ${index + 1} Z ${puzzles.length}`;
@@ -214,9 +222,9 @@
     };
     $('daily-route').innerHTML = puzzles.map((item, i) => `${i ? `<b class="${day.progress[puzzles[i - 1].id]?.status && day.progress[puzzles[i - 1].id].status !== 'playing' ? 'complete' : ''}" aria-hidden="true"></b>` : ''}${progressButton(item, i, true)}`).join('');
     $('collection-marks').innerHTML = puzzles.map((item, i) => progressButton(item, i, false)).join('');
-    renderResult(r); renderReveal(p, r); renderHistory(r); renderCollection(); renderStats(t);
+    renderResult(r); renderReveal(p, r); renderHistory(r); renderCollection(); if($('stats-dialog').open)renderStats(t);
     document.dispatchEvent(new Event('septanda:progress'));
-    document.dispatchEvent(new CustomEvent('septanda:scene', {detail: {mode:mode(),status:r.status, score:r.attempts.at(-1)?.score.total ?? null, attempts:r.attempts.length, id:p.id}}));
+    document.dispatchEvent(new CustomEvent('septanda:scene', {detail: {meaning:isMeaning(),mode:mode(),status:r.status, score:r.attempts.at(-1)?.score.total ?? null, attempts:r.attempts.length, id:p.id,fact:r.status!=='playing'?(p.education?.summary||p.meaning||''):''}}));
   }
   function syncCurrent(date, id) {
     read();
@@ -276,6 +284,7 @@
     if (r.attempts.some(a => engine.normalize(a.text) === engine.normalize(text))) {
       $('form-message').textContent = 'Tento tip už je v historii. Zkus znění trochu změnit.'; return;
     }
+    if(mode()==='author-v2'&&!isMeaning()&&!globalThis.SeptandaAuthors.identify(text,true)&&globalThis.SeptandaAuthors.suggestions(text).length>1){$('author-suggestions').innerHTML=globalThis.SeptandaAuthors.suggestions(text).map(c=>`<button type="button" class="name-suggestion" data-author-name="${escape(c.name)}">${escape(c.name)}</button>`).join('');$('form-message').textContent='Upřesni, kterou osobnost myslíš. Tento zápis nepočítáme jako pokus.';return;}
     const score = engine.evaluate(text, p, mode());
     r.attempts.push({id: globalThis.crypto?.randomUUID?.() || Date.now().toString(36) + '-' + Math.random().toString(36).slice(2), text, time: Date.now(), score}); r.draft = '';
     if (score.accepted) r.status = 'won';
@@ -283,7 +292,7 @@
     const feedback=Guidance.feedback(text,p,score.accepted,mode());
     announce(`${feedback.title} ${feedback.detail}${feedback.matched.length?' Shodná slova: '+feedback.matched.join(', ')+'.':''}${score.accepted ? ' Připsáno 200 bodů.' : ''}`);
     if (score.accepted) { $('reveal-title').focus({preventScroll: true}); $('reveal-panel').scrollIntoView({block: 'start'}); }
-    else { $('result-panel').scrollIntoView({block: 'nearest'}); $('guess').focus({preventScroll: true}); }
+    else { $('result-panel').scrollIntoView({block: 'nearest'}); if(!isMeaning())$('guess').focus({preventScroll: true}); }
   }
   function buy(type) {
     if(skipBusy)return;
@@ -314,9 +323,11 @@
     else if (button.dataset.select) select(button.dataset.select);
     else if(button.dataset.authorChoice){
       if(!isAuthor() || roundFor().status!=='playing' || (roundFor().hintLevel||0)<3 || !roundFor().hints.includes('clue'))return;
-      const option=globalThis.SeptandaAuthors.options(currentPuzzle()).find(o=>o.id===button.dataset.authorChoice);if(!option)return;
+      const option=globalThis.SeptandaAuthors.options(currentPuzzle(),mode()).find(o=>o.id===button.dataset.authorChoice);if(!option)return;
       $('guess').value=option.label;submit({preventDefault(){}});
     }
+    else if(button.dataset.meaningChoice){if(!isMeaning()||roundFor().status!=='playing')return;const o=globalThis.SeptandaAuthors.options(currentPuzzle(),mode()).find(o=>o.id===button.dataset.meaningChoice);if(o){$('guess').value=o.label;submit({preventDefault(){}});}}
+    else if(button.dataset.authorName){$('guess').value=button.dataset.authorName;$('author-suggestions').replaceChildren();$('guess').focus();}
     else if (button.dataset.hint) buy(button.dataset.hint);
     else if (button.hasAttribute('data-guide')) { $('hint-section').scrollIntoView({block:'center'});$('hint-clue').focus(); }
     else if (button.hasAttribute('data-next')) {
@@ -329,26 +340,28 @@
   $('guess').addEventListener('keydown', event => {
     if (event.key === 'Enter' && !event.shiftKey && !event.isComposing) { event.preventDefault(); $('guess-form').requestSubmit(); }
   });
-  $('guess').addEventListener('input', storeDraft);
+  $('guess').addEventListener('input',()=>{storeDraft();if(!isAuthor()||isMeaning())return;const choices=globalThis.SeptandaAuthors.suggestions($('guess').value);$('author-suggestions').innerHTML=choices.map(c=>`<button type="button" class="name-suggestion" data-author-name="${escape(c.name)}">${escape(c.name)}</button>`).join('');});
   $('reveal-transmission').addEventListener('click', buyTransmission);
   $('give-up').addEventListener('click', () => {
-    if (!currentPuzzle() || skipBusy || roundFor().status!=='playing' || totals().points<Daily.skipCost) return;
+    if (!currentPuzzle() || skipBusy || roundFor().status!=='playing') return;
     const id = day.selected, date = activeDate;
-    ask('Přeskočit za 100 bodů?', 'Odečte se 100 bodů a přejdeš na další výrok dnešní sady. Tento se počítá do denního limitu; jeho řešení zůstane v přehledu. Za přeskočený výrok nezískáš odměnu. Zakoupené stopy se nevracejí.', 'Přeskočit · −100 bodů', async () => {
-      if (!syncCurrent(date, id)) return; const r = roundFor(); if (r.status !== 'playing' || totals().points<Daily.skipCost) return;
+    const free=isAuthor()&&totals().points<Daily.skipCost;
+    ask(free?'Odhalit bez odměny?':'Přeskočit za 100 bodů?', free?'Výrok se odhalí a započítá do dnešní trojice. Body nezískáš ani neztratíš. Můžeš ho místo toho zdarma odložit.':'Odečte se 100 bodů a přejdeš na další výrok dnešní sady. Tento se počítá do denního limitu; jeho řešení zůstane v přehledu. Za přeskočený výrok nezískáš odměnu. Zakoupené stopy se nevracejí.', free?'Odhalit bez odměny':'Přeskočit · −100 bodů', async () => {
+      if (!syncCurrent(date, id)) return; const r = roundFor(); if (r.status !== 'playing' || !free&&totals().points<Daily.skipCost) return;
       storeDraft();skipBusy=true;render();
       try {
-        if(hasAccount() && globalThis.SeptandaCloud?.isActive())await globalThis.SeptandaCloud.skipPuzzle(date,id);
-        else {const current=roundFor(id);current.status='revealed';current.paidSkip=true;current.skipCharge=Daily.skipCost;current.draft='';save();}
+        if(hasAccount() && globalThis.SeptandaCloud?.isActive())await globalThis.SeptandaCloud.skipPuzzle(date,id,free);
+        else {const current=roundFor(id);current.status='revealed';if(free)current.freeReveal=true;else{current.paidSkip=true;current.skipCharge=Daily.skipCost;}current.draft='';save();}
         const next=Daily.nextId(day);
         if(next)day.selected=next;
         save();$('form-message').textContent='';
-        announce('Přeskočeno za 100 bodů. '+(next?'Pokračuj dalším výrokem.':'Dnešní sada je hotová.'));
+        announce((free?'Odhaleno bez odměny. ':'Přeskočeno za 100 bodů. ')+(next?'Pokračuj dalším výrokem.':'Dnešní sada je hotová.'));
       } catch(error){$('form-message').textContent=error.message;announce(error.message);}
       finally{skipBusy=false;render();}
       $('puzzle-heading').scrollIntoView({block:'start'});
     });
   });
+  $('defer-puzzle').addEventListener('click',()=>{if(!isAuthor()||!storeDraft())return;const choices=Daily.playIds(day).filter(id=>id!==day.selected&&(!day.progress[id]||day.progress[id].status==='playing'));if(choices.length){select(choices[0]);announce('Odloženo zdarma. Ke všem třem otázkám se můžeš vrátit.');}else{$('form-message').textContent='Zbývá poslední otázka. Můžeš se k ní vrátit později; rozepsaný tip je uložený.';}});
   $('confirm-action').addEventListener('click', async () => { const task = confirmTask; confirmTask = null; $('confirm-dialog').close(); if (task) await task(); });
   $('confirm-dialog').addEventListener('close', () => { confirmTask = null; });
   document.querySelectorAll('dialog').forEach(dialog => dialog.addEventListener('click', event => {
@@ -380,5 +393,8 @@
   }
   function backupPending(value){try{const old=pendingBackup();const snapshots=old?.format==='septanda-pending-backup'?old.snapshots:old?[old]:[];if(!snapshots.some(s=>JSON.stringify(s)===JSON.stringify(value)))snapshots.push(value);localStorage.setItem(KEY+'.pending-backup',JSON.stringify({format:'septanda-pending-backup',snapshots}));}catch(_){throw new Error('Zálohu místních tipů nelze uložit. Před synchronizací si stáhni svůj postup.');}}
   function pendingBackup(){try{return JSON.parse(localStorage.getItem(KEY+'.pending-backup')||'null');}catch(_){return null;}}
-  globalThis.SeptandaGame = Object.freeze({storageKey: () => KEY, setAccount, exportState, replaceState, guestState, hasAccount,backupPending,pendingBackup, scene: () => ({mode:mode(),status:roundFor()?.status || 'waiting', score:roundFor()?.attempts.at(-1)?.score.total ?? null, attempts:roundFor()?.attempts.length || 0, id:currentPuzzle()?.id || null})});
+  function changed(){save();document.dispatchEvent(new Event('septanda:progress'));}
+  function notebook(id,saved){const records=[state.legacy.progress,...Object.values(state.days).map(d=>d.progress),...Object.values(state.archivedDays||{}).map(d=>d.progress)];if(!records.some(p=>['won','revealed'].includes(p[id]?.status)))return false;state.notebook={...(state.notebook||{}),[id]:{saved:!!saved,updatedAt:Date.now()}};changed();return true;}
+  function rate(id,difficulty,helpful=null){if(!day.ids.includes(id)||!(difficulty===null&&typeof helpful==='boolean')&&!['easy','fair','hard','unclear'].includes(difficulty))return false;roundFor(id).feedback={difficulty,helpful:typeof helpful==='boolean'?helpful:null,updatedAt:Date.now()};changed();return true;}
+    globalThis.SeptandaGame = Object.freeze({inspect:()=>JSON.parse(JSON.stringify(state)),notebook,rate,select,storageKey: () => KEY, setAccount, exportState, replaceState, guestState, hasAccount,backupPending,pendingBackup, scene: () => ({meaning:isMeaning(),mode:mode(),status:roundFor()?.status || 'waiting', score:roundFor()?.attempts.at(-1)?.score.total ?? null, attempts:roundFor()?.attempts.length || 0, id:currentPuzzle()?.id || null,fact:roundFor()?.status!=='playing'?(currentPuzzle()?.education?.summary||currentPuzzle()?.meaning||''):''})});
 })();

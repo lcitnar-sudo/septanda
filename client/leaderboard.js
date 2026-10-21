@@ -150,6 +150,7 @@
       else throw new Error('Účty ještě nejsou připojené. Hra může pokračovat bez účtu.');
     })
     .catch(error => {
+      const wait=document.getElementById('session-wait');if(wait&&document.documentElement.classList.contains('restoring-account')){wait.hidden=false;wait.textContent='Připojení účtu se nepodařilo načíst. Obnov stránku po připojení; uložené výsledky zůstávají zachované.';}const chip=document.getElementById('sync-chip');if(chip)chip.textContent='Čeká na připojení účtu. Místní rozehraná hra zůstává uložená.';
       const message = error.name === 'AbortError' ? 'Připojení účtu je teď nedostupné. Hra může pokračovat bez účtu.' : error.message;
       document.getElementById('leaderboard-status').textContent = message;
       document.getElementById('leaderboard-preview').innerHTML = '<p class="leaderboard-empty">Pořadí zatím není dostupné.</p>';

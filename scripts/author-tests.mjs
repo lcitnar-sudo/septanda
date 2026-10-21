@@ -6,7 +6,7 @@ import vm from 'node:vm';import {readFile} from 'node:fs/promises';
 const copy=x=>JSON.parse(JSON.stringify(x));let checks=0;const eq=(a,b,m)=>{assert.deepEqual(copy(a),copy(b),m);checks++;},ok=(x,m)=>{assert.ok(x,m);checks++;};
 const ctx=vm.createContext({});for(const f of ['authors-data','authors'])vm.runInContext(await readFile(new URL('../client/'+f+'.js',import.meta.url),'utf8'),ctx);
 const authors=ctx.SeptandaAuthors,byId=new Map(puzzles.map(p=>[p.id,p])),tools=createProgressTools({puzzles,engine,daily});
-eq(authors.ids.length,135,'Separate reviewed author/origin pool');
+eq(authors.ids.length,352,'Separate reviewed author/origin pool');
 for(const id of authors.ids){const p=byId.get(id),profile=authors.profile(id),options=authors.options(p);ok(engine.evaluate(profile.name,p,'author-v1').accepted,'Canonical origin: '+id);ok(!engine.evaluate(p.answer,p,'author-v1').accepted,'Repeating the quote is not an author answer: '+id);eq(options.length,4,'Four choices');eq(new Set(options.map(o=>o.id)).size,4,'Unique choices');eq(options.filter(o=>o.id===authors.get(id).profile).length,1,'One correct choice');ok(options.some(o=>o.id==='folk'),'Anonymous origin is always a possible choice');const wrong=options.find(o=>o.id!==authors.get(id).profile);ok(!engine.evaluate(wrong.label,p,'author-v1').accepted,'Wrong full author rejected');}
 for(const name of ['Descartes','René Descartes','rene descartez','RENÉ DESCARTES!'])ok(engine.evaluate(name,byId.get('descartes'),'author-v1').accepted,'Approved alias or single typo');
 for(const name of ['René','nevim','to neni Descartes','Descartes nebo Pascal','Myslím, tedy jsem.'])ok(!engine.evaluate(name,byId.get('descartes'),'author-v1').accepted,'Incomplete/negative/list/quote rejected');
@@ -20,8 +20,8 @@ const seed=daily.createState(null);daily.bindPlayer(seed,user);const day=daily.e
 eq(day.mode,'author-v1','New personal day uses author mode');ok(daily.validAuthorIDs(day.ids),'At least two distinct named personalities, at most one anonymous origin');
 const variety=new Set();for(let n=1;n<=1000;n++){const s=daily.createState(null);daily.bindPlayer(s,n.toString(16).padStart(32,'0'));variety.add(daily.ensureDay(s,date).ids.join());}ok(variety.size>980,'Different people receive varied triples');
 const long=daily.createState(null);daily.bindPlayer(long,user);const seen=new Set();let sets=0;
-for(let n=0;n<100;n++){const key=new Date(now.getTime()+86400000*n).toISOString().slice(0,10),d=daily.ensureDay(long,key);if(d.ids.length){sets++;ok(daily.validAuthorIDs(d.ids),'Balanced author day');for(const id of d.ids){ok(!seen.has(id),'No quote repeats');seen.add(id);}}}
-ok(sets>10&&sets<=25,'Pilot pool is finite and never padded by repetition');eq(daily.ensureDay(long,'2027-10-20').ids,[],'Exhaustion does not recycle content');
+for(let n=0;n<140;n++){const key=new Date(now.getTime()+86400000*n).toISOString().slice(0,10),d=daily.ensureDay(long,key);if(d.ids.length){sets++;ok(daily.validAuthorIDs(d.ids),'Balanced author day');for(const id of d.ids){ok(!seen.has(id),'No quote repeats');seen.add(id);}}}
+ok(sets>=100,'Expanded stock provides one hundred complete personal triples');eq(daily.ensureDay(long,'2027-10-20').ids,[],'Exhaustion does not recycle content');
 const reserved=tools.merge(null,seed,{now,playerId:user});
 const forged=copy(seed);forged.days[date].progress[pid]={...daily.blankRound(),status:'won',attempts:[{id:'fake-quote-attempt',text:p.answer,time:now.getTime()}]};
 eq(tools.merge(reserved.state,forged,{now,playerId:user}).stats.solved,0,'Server does not award old quote answers in author mode');

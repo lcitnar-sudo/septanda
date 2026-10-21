@@ -83,7 +83,7 @@
     return /(?:^| )(?:ne|nikoli|nikoliv|nepravda)(?: |$)/.test(text) || /(?:^| )(?:neni|nebyla|nebylo) pravda(?: |$)/.test(text) || /(?:^| )(?:tohle|toto|to) neni(?: |$)/.test(text);
   }
   function evaluate(text, puzzle, mode='classic') {
-    if(mode==='author-v1')return root.SeptandaAuthors.evaluate(text,puzzle);
+    if(mode==='author-v1'||mode==='author-v2')return root.SeptandaAuthors.evaluate(text,puzzle,mode);
     const n = normalize(text);
     if (!n) return {total: 0, words: 0, meaning: 0, accepted: false, conflict: false};
     const references = [puzzle.answer, ...puzzle.variants];

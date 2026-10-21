@@ -1,8 +1,29 @@
-# Šeptanda 6.2.3 — Šeptá se to po staletí.
+# Šeptanda 7.0.0
+
+Každodenní pátrání po původu a významu známých slov. Tři osobní případy: dva různí autoři a nejvýše jedno rčení. Nově přidělené sady od 21. 10. 2026 používají `author-v2`; již vydané `author-v1` a původní tichá pošta zachovávají své zadání, výsledky a ceny. Verze uloženého postupu zůstává 6. Žádná databáze se při nasazení nemaže ani znovu nezakládá.
+
+## Změny z auditu
+
+- 352 otázek: 228 autorských a 124 rčení, 33 profilů řešení a dalších 16 profilů pro porovnání tipů. Nových 217 přijetí má doklad přesné shody v původním textu v `content/admission-proof.json`. Historický katalog 509 identit a původní kalendář zůstávají chráněné.
+- Simulace 100 účtů: každý dostal 114 celých denních trojic bez opakování. Starší hráč má zásobu kratší podle svých dřívějších přidělení. Administrace ukazuje nejnižší zbývající kapacitu.
+- U nových rčení se vybírá význam, u citátů se píše autor či výslovně uvedený mluvčí. Nejednoznačná příjmení mají výběr identity; nejde o započítaný tip. Širší slovník a konkrétní oborová vodítka nenahrazují doložené autorství.
+- Odložení je zdarma mezi stejnými třemi případy. Při méně než 100 bodech lze použít odhalení bez odměny, jinak přeskočení stojí 100 bodů. Server hlídá cenu a souběh.
+- Deník objevů, synchronizované oblíbené, příběhy a prameny, dobrovolná hodnocení. Nedokončené otázky deník neodhaluje.
+- Denní přehled, samostatná řešení / stopy / možnosti / odhalení, mírný týdenní cíl a pražská půlnoc včetně změny letního času. Kartička se Šeptíkem neobsahuje řešení.
+- `/vyzva?id=...` a `/procvicit?id=...` jsou izolované, bez účtu, synchronizace a vlivu na denní peněženku či přidělení. Klíče začínají `septanda.practice.v1.`. Opakování je výslovná volba hráče.
+- Obnova účtu používá neutrální stav, synchronizace je vidět ve hře, odpověď má jednořádkové pole. Kontrola odmítnutého tipu předvyplní formulář, který vědomě odešle hráč.
+- Obrázky Šeptíka a portréty se načítají podle potřeby, přehled pramenů má samostatnou stránku. Historické ID a odpovědi zůstávají v klientu kvůli bezpečnému obnovení starých výsledků. Hlavní HTML je menší než před auditem.
+
+První ostrá srovnávací měření obtížnosti teprve přinese pilot. Redakční odhad obtížnosti ani shody oboru nejsou procentní pravděpodobností správné odpovědi. Příběhy používají doložené podklady; rozsah se podle otázky liší. Skutečný telefon, doručení e-mailů a pilot 5–10 lidí zůstávají provozními kontrolami, které samotné automatické testy nenahradí.
+
 
 Funkční web pro stávající Netlify projekt, dobrovolné e-mailové účty Supabase a vlastní denní trojici pro každého hráče.
 
-## Okamžitý přechod na autory
+## Poznámky předchozích vydání (historický popis)
+
+Následující části popisují vývoj starších režimů a jejich kompatibilitu. Aktuální zásoba a pravidla jsou uvedené výše.
+
+### Okamžitý přechod na autory
 
 Hlavní hra od této verze automaticky převede i dnešní starší rozehranou sadu: celou ji uloží do `archivedDays` se stejnými body, cenami, tipy a rozepsanými odpověďmi. Přidělí novou osobní autorskou trojici bez jediného starého ID. Jednorázově při změně konceptu může hráč hrát novou trojici navíc; další dny opět platí tři. Archiv je dostupný i bez účtu a synchronizuje se serverově bez nové SQL migrace.
 

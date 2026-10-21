@@ -1,0 +1,1524 @@
+{
+  "method": "exact-normalized-primary-text",
+  "entries": {
+    "poem-erben-vodnik-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vodn%C3%ADk",
+      "quote": "Šiju, šiju si botičky\ndo sucha i do vodičky:",
+      "match": "natopolenadjezeremsedělvodníkpodvečeremsviťměsíčkusviťaťmišijeniťšijušijusibotičkydosuchaidovodičkysviťměsíčkusviťaťmišijeniťdnesječtvrtekzejtrapátekšijušijusikabáteksviťměsíčkusviťaťmišijeniťzelenéš",
+      "sourceSha256": "c8e41e7c9c305e3aba1d1ed0ac84ae386ea17fb0a8dad2da8cd665d290c0cc5e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-vodnik-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vodn%C3%ADk",
+      "quote": "Zelené šaty, botky rudé,\nzejtra moje svatba bude:",
+      "match": "vodičkysviťměsíčkusviťaťmišijeniťdnesječtvrtekzejtrapátekšijušijusikabáteksviťměsíčkusviťaťmišijeniťzelenéšatybotkyrudézejtramojesvatbabudesviťměsíčkusviťaťmišijeniťránoraníčkopannavstalaprádlosivuzelzavázalapůjdumatičkokjezerušátečkysoběv",
+      "sourceSha256": "c8e41e7c9c305e3aba1d1ed0ac84ae386ea17fb0a8dad2da8cd665d290c0cc5e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-vodnik-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vodn%C3%ADk",
+      "quote": "Nevesely truchlivy\njsou ty vodní kraje,",
+      "match": "činězavířilosevhlubiněvyvalilysevlnyzdolaroztáhnulysevšírákolaanatopolepodleskalzelenýmužíkzatleskalneveselytruchlivyjsoutyvodníkrajekdesivtrávěpodleknínemrybkasrybkouhrajetuslunéčkonezahřívávětříknezavějechladnotichojakoželvsrdcibez",
+      "sourceSha256": "c8e41e7c9c305e3aba1d1ed0ac84ae386ea17fb0a8dad2da8cd665d290c0cc5e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-svatebni-kosile-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Svatebn%C3%AD_ko%C5%A1ile",
+      "quote": "Sestra do roka nežila,\nbratra mi koule zabila.",
+      "match": "avtybíléňádrazapadlaželbohukdemůjtatíčekjižnaněmrostetrávníčekželbohukdemámatičkatamležípodletatíčkasestradorokanežilabratramikoulezabilamělajsemsmutnámiléhoživotbychdalaproněhodocizinyseobrátilpotudseještěnevrátildocizinyseubíraltěšilmě",
+      "sourceSha256": "bafba010a15f715539f09ec21ed8dec3ed2214f677f365843b7b2e11a2f20d0b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-svatebni-kosile-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Svatebn%C3%AD_ko%C5%A1ile",
+      "quote": "Zasej, má milá, zasej len,\nvzpomínej na mne každý den,",
+      "match": "utnámiléhoživotbychdalaproněhodocizinyseobrátilpotudseještěnevrátildocizinyseubíraltěšilměslzyutíralzasejmámilázasejlenvzpomínejnamnekaždýdenprvnírokpřádlahledívejdruhýrokplátnopolívejtřetíkošilevyšívejažtykošileušiješvěnečekzroutypoviješjiž",
+      "sourceSha256": "bafba010a15f715539f09ec21ed8dec3ed2214f677f365843b7b2e11a2f20d0b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-svatebni-kosile-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Svatebn%C3%AD_ko%C5%A1ile",
+      "quote": "Pohnul se obraz na stěně —\ni vzkřikla panna zděšeně;",
+      "match": "aťanebživotmůjnáhlezkraťuněhoživotjarýkvětbezněhovšakměmrzísvětmariamatkomilostibuďpomocnicívžalostipohnulseobraznastěněivzkřiklapannazděšenělampacotemněhořelaprsklaazhasladocelamožnážeťvětrutaženímožnáizléžeznameníaslyšnazáspíkrokůzvukanaok",
+      "sourceSha256": "bafba010a15f715539f09ec21ed8dec3ed2214f677f365843b7b2e11a2f20d0b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-stedry-den-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/%C5%A0t%C4%9Bdr%C3%BD_den",
+      "quote": "Hoj, ty Štědrý večere,\nty tajemný svátku,",
+      "match": "lapřízitenkousvatebníšijekošiletočseavrčmůjkolovrátkuvšakjestadventujižnakrátkuapřededveřmištědrýdenhojtyštědrývečeretytajemnýsvátkucožekomudobréhonesešnapamátkuhospodářištědrovkukravámpovýslužcekohoutovičesnekuhrachujehodružceovocn",
+      "sourceSha256": "902ac5a3ff1ca4407f22f89ccdd991ced2ea8a896a817818936a3c226e5037d1",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-stedry-den-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/%C5%A0t%C4%9Bdr%C3%BD_den",
+      "quote": "stojí vrby stařeny,\nsníh na šedé hlavě.",
+      "match": "postíhojjámladádívčinasrdcenezadanémněnamyslijinéhojinéhocostanepodlesemachpodlesemnatompanskémstavěstojívrbystařenysníhnašedéhlavějednavrbahrbatátajnědolůkývákdesemodréjezeropodledemukrývátuprýdívcevpůlnocipřiluněpochodnisouzenýse",
+      "sourceSha256": "902ac5a3ff1ca4407f22f89ccdd991ced2ea8a896a817818936a3c226e5037d1",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-stedry-den-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/%C5%A0t%C4%9Bdr%C3%BD_den",
+      "quote": "všecko ve světě jen na obrátku\na život lidský jako sen!",
+      "match": "ihnijeubohámariesedělyjsmetakétakjakodnesavčeraanežrokseobrátíkdeznásbudekterátočseavrčmůjkolovrátkuvšeckovesvětějennaobrátkuaživotlidskýjakosenvšaklépevmylnénadějisnítipředseboučiroutemnotunežlibudoucnostodhalitistrašlivoupoznatijistotu",
+      "sourceSha256": "902ac5a3ff1ca4407f22f89ccdd991ced2ea8a896a817818936a3c226e5037d1",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-holoubek-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Holoubek",
+      "quote": "Běží časy, běží,\nvšecko s sebou mění:",
+      "match": "miléhonetřebasebátirakevdostitěsnátenseneobrátílíbejsijelíbejtyžádanélícekomusnamíchalaneobživnevíceběžíčasyběžívšeckossebouměníconebylopřijdecobývaloneníběžíčasyběžírokjakohodinajednovšaknemizípevněstojívinatřirokyminulyconebož",
+      "sourceSha256": "d16ef2fbc8d34aa8c3f8a41adb6d634809b01fbe89ed61b2ddd8c460b70f7af1",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-holoubek-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Holoubek",
+      "quote": "jedno však nemizí:\npevně stojí vina.",
+      "match": "amíchalaneobživnevíceběžíčasyběžívšeckossebouměníconebylopřijdecobývaloneníběžíčasyběžírokjakohodinajednovšaknemizípevněstojívinatřirokyminulyconebožtíkležínajehopahorkutrávarostesvěžínapahorkutrávauhlavymudoubeknadoubkusedáváběl",
+      "sourceSha256": "d16ef2fbc8d34aa8c3f8a41adb6d634809b01fbe89ed61b2ddd8c460b70f7af1",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-vrba-01": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vrba",
+      "quote": "Večer lehneš zdráva, svěží,\nv noci tělo mrtvo leží.",
+      "match": "nájsibylajednohosminesvěřiladvělétajsmespolunyníjednonepokojmičinípanímojemilápaníjakéjetotvojespanívečerlehnešzdrávasvěžívnocitělomrtvoležíaniruchuanisluchuanizdáníotvémduchustudenéjesttotvétělojakbyzpráchnivětichtěloanižtomaličkédítěhořce",
+      "sourceSha256": "21a33ce89dc9959cc4fa9e24b34fca599963e20f8c7e337860dbba33c6a6e748",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-vrba-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vrba",
+      "quote": "Ve dne s tebou živa v domě,\nv noci duše její v stromě.",
+      "match": "unizdáníojejímduchustudenéjestjejítělojakbyzpráchnivětichtělokteraknemámrtvabýtikdyžmájenpůlživobytívednestebouživavdoměvnocidušejejívstromějdikpotokupodoborounajdešvrbusbíloukoroužlutéproutírostenanístoujedušetvojípanínechtěljsemjápanímíti",
+      "sourceSha256": "21a33ce89dc9959cc4fa9e24b34fca599963e20f8c7e337860dbba33c6a6e748",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-vrba-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Vrba",
+      "quote": "Vzal sekeru na ramena,\nuťal vrbu od kořena;",
+      "match": "ostenanístoujedušetvojípanínechtěljsemjápanímítiabysvrboumělažítipanímáaťsemnoužijeavrbaaťvzemihnijevzalsekerunaramenauťalvrbuodkořenapadlatěžcedopotokazašumělaodhlubokazašumělazavzdychalajakbymatkaskonávalajakbymatkaumírajícpodítkuse",
+      "sourceSha256": "21a33ce89dc9959cc4fa9e24b34fca599963e20f8c7e337860dbba33c6a6e748",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-poklad-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad",
+      "quote": "v kůru tam se právě pěje\nKrista Pána umučení.",
+      "match": "ístráněkostelnapahorkuležíavúvalekupotokunáhleubystřujekrokůnebjakvětříkvolněvějezkostelaslyšetipěnívkůrutamseprávěpějekristapánaumučeníběžíběžípodleskálycotomámlivěřitokucožměmojesmyslyšálístaneohlížísekolemrychlekrokyzpětobracístaneza",
+      "sourceSha256": "8907928b9939148420ab5f42a5548a9e18a6585ae2fc6d10378af3365ae2a50b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-poklad-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad",
+      "quote": "Snad ji vábí stříbro, zlato? —\nAch, již ona nedbá na to!",
+      "match": "planenadezlatempopravicisluncemplátinepřestaneaženaseshrůzoublížíavestrachuavnadějitupojizběseohlížísnadjivábístříbrozlatoachjižonanedbánatohahamamahahamamaejhledítědítějejípocelýrokoplakanépotleskujeručinkamaalevženěnenídechuahrůzousecelát",
+      "sourceSha256": "8907928b9939148420ab5f42a5548a9e18a6585ae2fc6d10378af3365ae2a50b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-poklad-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Poklad",
+      "quote": "žetě velmi málo zlato,\navšak dítě nade všecko!",
+      "match": "ímálocojitolikhořestálostáloťjiachslzímnoholečděkujícbohuzatotoužedrahétiskneděckohořceťzakusilatohožetěvelmimálozlatoavšakdítěnadevšeckodávnokostelíčekzbořenumlklyjižzvonkazvukyakdeněkdystálybukysotvajakýhnijekořenstařecmnohopamatujemno",
+      "sourceSha256": "8907928b9939148420ab5f42a5548a9e18a6585ae2fc6d10378af3365ae2a50b",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-lilie-01": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Lilie",
+      "quote": "Umřela panna v době jarních let,\njako když uschne mladé růže květ;",
+      "match": "umřelapannavdobějarníchletjakokdyžuschnemladérůžekvětumřelapannarůževpoupětiškodajíškodavzemiležetinedávejtemnevevsinahřbitovtambývánářeksirotkůavdovtams",
+      "sourceSha256": "49fbf80784fd255f31b8aa01a4f0dbe7585badbbb9d94c3daf1fbe264df7f5a7",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-lilie-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Lilie",
+      "quote": "Pochovejte mne vpod zelený les,\ntam na mém hrobě kvésti bude vřes;",
+      "match": "tinedávejtemnevevsinahřbitovtambývánářeksirotkůavdovtamslzíhořkýchmnohoplynulosrdéčkomébyhořemhynulopochovejtemnevpodzelenýlestamnamémhroběkvéstibudevřesptáčkovémitambudouzpívatisrdéčkomojebudeplesatineminulještěanirokadenhrobjejídrobnýmvřesempovlečenne",
+      "sourceSha256": "49fbf80784fd255f31b8aa01a4f0dbe7585badbbb9d94c3daf1fbe264df7f5a7",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-lilie-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Lilie",
+      "quote": "Lilie bílá — kdo ji uviděl,\nkaždého divný pojal srdce žel;",
+      "match": "minulještěanirokadenhrobjejídrobnýmvřesempovlečennepřišloještěanidotříletnajejímhroběvzácnýkvětekvětliliebílákdojiuvidělkaždéhodivnýpojalsrdcežellilievonnákdojipocítilvkaždémsetouhyplamenroznítilhojmojechasovranéhomistrojchcemisenalovpodzelenouc",
+      "sourceSha256": "49fbf80784fd255f31b8aa01a4f0dbe7585badbbb9d94c3daf1fbe264df7f5a7",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-lilie-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Lilie",
+      "quote": "Zdviženo rámě, jež ji probije —\ntu místo laňky — bílá lilie.",
+      "match": "lotpánnavraníkunapřaženoubraňajakošipkapřednímbílálaňhalohouhalouvzácnámojezvěřnespasítebepoleanikeřzdviženoráměježjiprobijetumístolaňkybíláliliepánnaliliihledísúdivemráměmuklesloduchsetajívněmmyslíamyslíprsadmousevýšvůníčitouhoukdomurozumíšhojs",
+      "sourceSha256": "49fbf80784fd255f31b8aa01a4f0dbe7585badbbb9d94c3daf1fbe264df7f5a7",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-zlaty-kolovrat-02": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Zlat%C3%BD_kolovrat",
+      "quote": "zbloudil jsem při lovení zvěře,\ndejte vody pít!",
+      "match": "koniveselepodkovičkyzvoníjedesámasámapředchalupouskoněhopanachalupuklopklopklopholahejotevřtemidvéřezbloudiljsempřilovenízvěředejtevodypítvyšladívčinajakokvětneviděltakékrásysvětpřineslavodyzestudnicestydlivěsedlaupřeslicepředlapředlalenp",
+      "sourceSha256": "c4cf0ef2d7b753a0ebd7c6b5a12600875bd0eddde7770c02f80a5853f2cd6815",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-zlaty-kolovrat-03": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Zlat%C3%BD_kolovrat",
+      "quote": "Vyšla dívčina jako květ,\nneviděl také krásy svět;",
+      "match": "ředchalupouskoněhopanachalupuklopklopklopholahejotevřtemidvéřezbloudiljsempřilovenízvěředejtevodypítvyšladívčinajakokvětneviděltakékrásysvětpřineslavodyzestudnicestydlivěsedlaupřeslicepředlapředlalenpánstojínevědacochtělsvévelkéžíznězapomně",
+      "sourceSha256": "c4cf0ef2d7b753a0ebd7c6b5a12600875bd0eddde7770c02f80a5853f2cd6815",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-erben-zlaty-kolovrat-04": {
+      "url": "https://cs.wikisource.org/wiki/Kytice_z_pov%C4%9Bst%C3%AD_n%C3%A1rodn%C3%ADch/Zlat%C3%BD_kolovrat",
+      "quote": "Pojď se, má paní, posadit,\nupřeď mi z lásky zlatou nit.",
+      "match": "hslovochjájevsrdcinosilaahleďtecojsemkoupilajedinýmezikolovratypřeslicikuželcelýzlatývšetozláskykvámpojďsemápaníposaditupřeďmizláskyzlatounitkekolovrátkuchutěsedlajakzatočilacelázbledlabědajakýzpěvvrrrzloutopředešnitpřišlajsikráleošiditnevla",
+      "sourceSha256": "c4cf0ef2d7b753a0ebd7c6b5a12600875bd0eddde7770c02f80a5853f2cd6815",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-1-01": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/1",
+      "quote": "Letní Ty noci zářivá,\njakž Tebou srdce okřívá —",
+      "match": "letnítynocizářivájakžtebousrdceokřívávednetaksladkobolnoateďtakvolnovolnosoblohybílýměsíčekstarobnýnebestatíčekstříbrnésvětlapýřípoceléms",
+      "sourceSha256": "4f5a2931de55183d778e7d8382129ea4c1a7cd37b5435e59c57a4662c5bb7ed8",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-1-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/1",
+      "quote": "S oblohy bílý měsíček,\nstarobný nebes tatíček,",
+      "match": "letnítynocizářivájakžtebousrdceokřívávednetaksladkobolnoateďtakvolnovolnosoblohybílýměsíčekstarobnýnebestatíčekstříbrnésvětlapýřípocelémsvětěšířídokolajehodětičkydrobounkésmavéhvězdičkydukátkovýmihlasyzvonínakrá",
+      "sourceSha256": "4f5a2931de55183d778e7d8382129ea4c1a7cd37b5435e59c57a4662c5bb7ed8",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-1-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/1",
+      "quote": "Dokola jeho dětičky,\ndrobounké, smavé hvězdičky,",
+      "match": "sladkobolnoateďtakvolnovolnosoblohybílýměsíčekstarobnýnebestatíčekstříbrnésvětlapýřípocelémsvětěšířídokolajehodětičkydrobounkésmavéhvězdičkydukátkovýmihlasyzvonínakrásnéčasy",
+      "sourceSha256": "4f5a2931de55183d778e7d8382129ea4c1a7cd37b5435e59c57a4662c5bb7ed8",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-2-01": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/2",
+      "quote": "Když k Vám vesel hledím, zlatá Vy kuřátka,\nslyším naše písně, česká zřím děvčátka.",
+      "match": "kdyžkvámveselhledímzlatávykuřátkaslyšímnašepísněčeskázřímděvčátkanašedívkysluncerannějšíbývajívepotokuchladnémočisimývajívnocikrásnéhvězdydovodynapršíbědahochunanějž",
+      "sourceSha256": "126b084506dd9095fe2c2e18da953b7d143e01c44eb7d78b9fbeee70ef3f2117",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-2-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/2",
+      "quote": "Naše dívky slunce rannější bývají,\nve potoku chladném oči si mývají.",
+      "match": "kdyžkvámveselhledímzlatávykuřátkaslyšímnašepísněčeskázřímděvčátkanašedívkysluncerannějšíbývajívepotokuchladnémočisimývajívnocikrásnéhvězdydovodynapršíbědahochunanějžočityzasrší",
+      "sourceSha256": "126b084506dd9095fe2c2e18da953b7d143e01c44eb7d78b9fbeee70ef3f2117",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-2-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/2",
+      "quote": "V noci krásné hvězdy do vody naprší —\nběda hochu, na nějž oči ty zasrší!",
+      "match": "atávykuřátkaslyšímnašepísněčeskázřímděvčátkanašedívkysluncerannějšíbývajívepotokuchladnémočisimývajívnocikrásnéhvězdydovodynapršíbědahochunanějžočityzasrší",
+      "sourceSha256": "126b084506dd9095fe2c2e18da953b7d143e01c44eb7d78b9fbeee70ef3f2117",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-3-01": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/3",
+      "quote": "Ach, jaké to blaho: poležet\nzde na drnu poblíž boru",
+      "match": "achjakétoblahopoležetzdenadrnupoblížboruaszlatýmidátsehvězdamidošeptnéhorozhovorutytřepotnésmavéhvězdičkytakčiperněnamnehledíachprosímvásjet",
+      "sourceSha256": "d2391e979dfc63381c19c87fc66cfec71756982d141c104f2e0fa1f6cebc0774",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-3-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/3",
+      "quote": "Ty třepotné, smavé hvězdičky\ntak čiperně na mne hledí —",
+      "match": "achjakétoblahopoležetzdenadrnupoblížboruaszlatýmidátsehvězdamidošeptnéhorozhovorutytřepotnésmavéhvězdičkytakčiperněnamnehledíachprosímvásjetopravdavšecolidéprýovásvědížemaličkévyprýhvězdičkyjsteobrovskásamátělaaodjednékdruhép",
+      "sourceSha256": "d2391e979dfc63381c19c87fc66cfec71756982d141c104f2e0fa1f6cebc0774",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-3-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/3",
+      "quote": "Že maličké vy prý hvězdičky\njste obrovská samá těla —",
+      "match": "tnéhorozhovorutytřepotnésmavéhvězdičkytakčiperněnamnehledíachprosímvásjetopravdavšecolidéprýovásvědížemaličkévyprýhvězdičkyjsteobrovskásamátělaaodjednékdruhéprýstoletakněkterévěčnostcelácožnevidímjakjstedrobounkyavjakémjsteksoběskladujánahořeb",
+      "sourceSha256": "d2391e979dfc63381c19c87fc66cfec71756982d141c104f2e0fa1f6cebc0774",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-3-04": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/3",
+      "quote": "když vesele prstem zaluskám,\nje věru v tom více šumu!",
+      "match": "iapřessteréskokemmíleejmusilobytuhlukubýtašumuzanočníchvíleazatímtakněměspřádátesvouživotatichoudumukdyžveseleprstemzaluskámjevěruvtomvícešumu",
+      "sourceSha256": "d2391e979dfc63381c19c87fc66cfec71756982d141c104f2e0fa1f6cebc0774",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-7-01": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/7",
+      "quote": "Po nebi hvězdic je rozseto\nlesem jak zvonců vřesných,",
+      "match": "ponebihvězdicjerozsetolesemjakzvoncůvřesnýchdechčasujeměrněprovádívjasavýchkruzíchplesnýchvidímeplesujenomcípzkoumejačítejsebelípmistřevpočetním",
+      "sourceSha256": "eaa883ca1f81968d0b5f6c9e9265192627fbe9f06349e6155712adff40ba4535",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-7-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/7",
+      "quote": "Vidíme plesu jenom cíp -\nzkoumej a čítej sebelíp,",
+      "match": "ponebihvězdicjerozsetolesemjakzvoncůvřesnýchdechčasujeměrněprovádívjasavýchkruzíchplesnýchvidímeplesujenomcípzkoumejačítejsebelípmistřevpočetnímcvikunespočteštanečníkůveselesezemíměsícjdezemězasvmocnémkruhuseokoloslunceotáčívzáři",
+      "sourceSha256": "eaa883ca1f81968d0b5f6c9e9265192627fbe9f06349e6155712adff40ba4535",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-7-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/7",
+      "quote": "Mysli se nejvýš - a nad tebou\nhvězd jako vřesných zvonců -",
+      "match": "loslunceotáčívzářivémplanetpruhuaitovelkésluncezaskolemvětšíhovedenásatotosluncejehokdejdeakolemčehomyslisenejvýšanadtebouhvězdjakovřesnýchzvoncůakdybysbyljakosluncestárnedomyslíšsekoncůklečímahledímvnebelícmyšlénkaletísvětůmvstřícvysokopřevysok",
+      "sourceSha256": "eaa883ca1f81968d0b5f6c9e9265192627fbe9f06349e6155712adff40ba4535",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-7-04": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/7",
+      "quote": "myšlénka letí světům vstříc -\nvysoko - převysoko -",
+      "match": "nejvýšanadtebouhvězdjakovřesnýchzvoncůakdybysbyljakosluncestárnedomyslíšsekoncůklečímahledímvnebelícmyšlénkaletísvětůmvstřícvysokopřevysokoaslzavhrklavoko",
+      "sourceSha256": "eaa883ca1f81968d0b5f6c9e9265192627fbe9f06349e6155712adff40ba4535",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-21-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/21",
+      "quote": "my bychom vzhůru k nebesům,\na jsme zde Zemí spjatí.",
+      "match": "amluvíčlověkjaklvovébijemomřížejaklvovévklecijatímybychomvzhůruknebesůmajsmezdezemíspjatínámzdásezhvězdževanehlasnužpojďtepániblížejentrochublížehrdobcijimžhroudanohyvížemypřijdemodpusťmati",
+      "sourceSha256": "936ba639b7c0c09843cd63a9daf6592e6c0e07c0e4044e213f1237fba421ae86",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-21-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/21",
+      "quote": "My přijdem! Odpusť, matičko,\njiž jsi nám, Země, malá,",
+      "match": "majsmezdezemíspjatínámzdásezhvězdževanehlasnužpojďtepániblížejentrochublížehrdobcijimžhroudanohyvížemypřijdemodpusťmatičkojižjsinámzeměmalámybleskkmyšlénkámspřahámeanohaparoucválámypřijdemduchnášrostevvýšatepnytouhoubijízimničnítouhouposvě",
+      "sourceSha256": "936ba639b7c0c09843cd63a9daf6592e6c0e07c0e4044e213f1237fba421ae86",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-21-04": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/21",
+      "quote": "my blesk k myšlénkám spřaháme\na noha parou cválá.",
+      "match": "hlasnužpojďtepániblížejentrochublížehrdobcijimžhroudanohyvížemypřijdemodpusťmatičkojižjsinámzeměmalámybleskkmyšlénkámspřahámeanohaparoucválámypřijdemduchnášrostevvýšatepnytouhoubijízimničnítouhouposvětechdivsrdcenerozbijímypřijdemblížmypřij",
+      "sourceSha256": "936ba639b7c0c09843cd63a9daf6592e6c0e07c0e4044e213f1237fba421ae86",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-21-05": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/21",
+      "quote": "My přijdem! Duch náš roste v výš\na tepny touhou bijí,",
+      "match": "bcijimžhroudanohyvížemypřijdemodpusťmatičkojižjsinámzeměmalámybleskkmyšlénkámspřahámeanohaparoucválámypřijdemduchnášrostevvýšatepnytouhoubijízimničnítouhouposvětechdivsrdcenerozbijímypřijdemblížmypřijdemblížmysvětůdožijememybijemomřížduchalv",
+      "sourceSha256": "936ba639b7c0c09843cd63a9daf6592e6c0e07c0e4044e213f1237fba421ae86",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-22-02": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/22",
+      "quote": "mluvil o pánech hvězdářích\nzove je „Světa krtky“.",
+      "match": "ábyvkalužihledělyvzhůruknebistarýjimžabákučenýodvíraltvrdélebivysvětlovaljimoblohulíčiltysvětlédrtkymluvilopánechhvězdáříchzovejesvětakrtkypravilžejejichhvězdnýzkumzvláštníjemírouvedendvacetžemilionůmilteprvjimloketjedentedyžeřekněmpropřík",
+      "sourceSha256": "6e79a0c2f209c1e85be13cca146652194c346b5ddcc3273072f7b6688e4183ca",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-22-03": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/22",
+      "quote": "dvacet že milionů mil\nteprv jim loket jeden.",
+      "match": "čiltysvětlédrtkymluvilopánechhvězdáříchzovejesvětakrtkypravilžejejichhvězdnýzkumzvláštníjemírouvedendvacetžemilionůmilteprvjimloketjedentedyžeřekněmpropříkladvěřímelivtykrtkykneptunutřicetloketjekvenušijentřičtvrtkyrozmluvilsepakoslunci",
+      "sourceSha256": "6e79a0c2f209c1e85be13cca146652194c346b5ddcc3273072f7b6688e4183ca",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-22-04": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/22",
+      "quote": "ze Slunce že by nastrouhal\nna tři sta tisíc Zemí.",
+      "match": "íkladvěřímelivtykrtkykneptunutřicetloketjekvenušijentřičtvrtkyrozmluvilsepakosluncižábyjsoudivemněmyzesluncežebynastrouhalnatřistatisíczemíslunceževelmisloužínámpaprskovýmiklínyštípajícvěčnostnarokasměnkovénatermínyokometáchžetěžkářečrozho",
+      "sourceSha256": "6e79a0c2f209c1e85be13cca146652194c346b5ddcc3273072f7b6688e4183ca",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-neruda-22-05": {
+      "url": "https://cs.wikisource.org/wiki/P%C3%ADsn%C4%9B_kosmick%C3%A9/22",
+      "quote": "jsou-li tam tvoři jako my,\njsou-li tam žáby taky!",
+      "match": "rlivěšuškajíposluchačižabákseptázdažosvětechještěcoszvědítráčíjenbychomrádyvědělyvrchhlavypoulízrakyjsoulitamtvořijakomyjsoulitamžábytaky",
+      "sourceSha256": "6e79a0c2f209c1e85be13cca146652194c346b5ddcc3273072f7b6688e4183ca",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-postovni-schranka-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Po%C5%A1tovn%C3%AD_schr%C3%A1nka",
+      "quote": "Psaníčka jsou bílá jako pel\na čekají na vlaky, lodě a člověka,",
+      "match": "ckvetemodřelidésijívážívelicesvěřujísejídocelapsaníčkadoníházejízedvoustranzjednésmutnáazdruhéveselápsaníčkajsoubílájakopelačekajínavlakyloděačlověkaabyjakčmelákavítrjedodálekrozeseltamkdejsousrdcebliznyčervenéschovanévrůžovémokvětíkdyžnaněpsanídole",
+      "sourceSha256": "5c261f7752769b2cfee71bb02021dcc3ba197e4c8604925448a48629f66b023f",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-postovni-schranka-03": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Po%C5%A1tovn%C3%AD_schr%C3%A1nka",
+      "quote": "psaníčka do ní házejí ze dvou stran,\nz jedné smutná a z druhé veselá.",
+      "match": "poštovníschránkanarohuulicetonenínějakálecjakávěckvetemodřelidésijívážívelicesvěřujísejídocelapsaníčkadoníházejízedvoustranzjednésmutnáazdruhéveselápsaníčkajsoubílájakopelačekajínavlakyloděačlověkaabyjakčmelákavítrjedodálekrozeseltamkdejsousrdcebli",
+      "sourceSha256": "5c261f7752769b2cfee71bb02021dcc3ba197e4c8604925448a48629f66b023f",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-pokora-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Pokora",
+      "quote": "Po ránu, na louce, v létě\npo kvítku vztáhnu se nejmenším.",
+      "match": "stanusemenšímaještěmenšímažbudunejmenšímnacelémsvětěporánunaloucevlétěpokvítkuvztáhnusenejmenšímzašeptámažseobejmusnímchlapečkubosýnebedlaňotebeopřelosikapičkourosyabynespadlo",
+      "sourceSha256": "909e2fa1c04b7fba3c5527b7f806fb40d0807b553dcba91019f62cbd3c36ec90",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-veci-01": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/V%C4%9Bci",
+      "quote": "Miluji věci, mlčenlivé soudruhy,\nprotože všichni nakládají s nimi,",
+      "match": "milujivěcimlčenlivésoudruhyprotoževšichninakládajísnimijakobynežilyaonyzatímžijíadívajísenanásjakvěrnipsipohledysoustředěnýmiatrpížežádnýčlověkknimnepromlu",
+      "sourceSha256": "e9edc8bd8216a8a999a48dde4c4cb8f319f21c1fae3646e87c8f25cbab53eaed",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-veci-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/V%C4%9Bci",
+      "quote": "a ony zatím žijí a dívají se na nás\njak věrni psi pohledy soustředěnými",
+      "match": "milujivěcimlčenlivésoudruhyprotoževšichninakládajísnimijakobynežilyaonyzatímžijíadívajísenanásjakvěrnipsipohledysoustředěnýmiatrpížežádnýčlověkknimnepromluvíostýchajíseprvnídátdořečimlčíčekajímlčíapřecitolikbychtělytrochusipo",
+      "sourceSha256": "e9edc8bd8216a8a999a48dde4c4cb8f319f21c1fae3646e87c8f25cbab53eaed",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-veci-03": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/V%C4%9Bci",
+      "quote": "Ostýchají se první dát do řeči,\nmlčí, čekají, mlčí",
+      "match": "kobynežilyaonyzatímžijíadívajísenanásjakvěrnipsipohledysoustředěnýmiatrpížežádnýčlověkknimnepromluvíostýchajíseprvnídátdořečimlčíčekajímlčíapřecitolikbychtělytrochusiporozprávětprotomilujívěciatakémilujícelýsvět",
+      "sourceSha256": "e9edc8bd8216a8a999a48dde4c4cb8f319f21c1fae3646e87c8f25cbab53eaed",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-kamna-01": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Kamna",
+      "quote": "Myslím, že v poledne každý den\nby mohl být květnově tichý a slavný,",
+      "match": "myslímževpolednekaždýdenbymohlbýtkvětnovětichýaslavnýkdybyvšechnyplotnyukamenmohlybýtjakoloukynajařemaminkysluníčkavkuchyníchbysenadnimitočilyasmályžehna",
+      "sourceSha256": "722e5be2e375a0bbea1d1030065ed8538b44209d8c6706ec66c0661ad4a6dc75",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-kamna-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Kamna",
+      "quote": "Maminky-sluníčka\nv kuchyních by se nad nimi točily a smály,",
+      "match": "myslímževpolednekaždýdenbymohlbýtkvětnovětichýaslavnýkdybyvšechnyplotnyukamenmohlybýtjakoloukynajařemaminkysluníčkavkuchyníchbysenadnimitočilyasmályžehnalybyjezlatýmarukamaaonyjakotazeměpodmámavodplatuzatobydalyrůstnasoběchlebůmakoláčůmtakjakokvěti",
+      "sourceSha256": "722e5be2e375a0bbea1d1030065ed8538b44209d8c6706ec66c0661ad4a6dc75",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-kamna-03": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Kamna",
+      "quote": "Vezměte z našich rukou, moji nejmilejší,\nkytici!",
+      "match": "áčůmtakjakokvětinámpolnímcorostouzláskyateplavpolednebyjemaminkyotrhalynastůlpostavilyčerstvéavonícívezměteznašichrukoumojinejmilejšíkytici",
+      "sourceSha256": "722e5be2e375a0bbea1d1030065ed8538b44209d8c6706ec66c0661ad4a6dc75",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-okno-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Okno",
+      "quote": "Našli jsme i nové světa díly,\nze všech světa dílů nejmladší,",
+      "match": "ásnémaširokémbíláoblakabíléskályafrikuiaustraliijsmescestovalisčernochysepobratřiliindiánynavštívilinašlijsmeinovésvětadílyzevšechsvětadílůnejmladšítovšealenestačíabychomsezastavilisvětjekulatýpomnohadobrodružstvíchrádvrátíšsezasedonízkésvětničkykt",
+      "sourceSha256": "e1c95bb986ef54d16d38f617328543f7fc12238a3f3413c9c06df05dc8bd3dfc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-okno-03": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Okno",
+      "quote": "U rozviklaného stolu mezi dvěma vysychajícími kalamáři\nnejlépe uplatníš povídku s polární září.",
+      "match": "světjekulatýpomnohadobrodružstvíchrádvrátíšsezasedonízkésvětničkykterázavírásenadstarýmiznámýmivěcmiurozviklanéhostolumezidvěmavysychajícímikalamářinejlépeuplatníšpovídkuspolárnízářívšebudetichéašťastnétysámnejvíceočisvépoložíšdoprostředsvětnicedárečekzcestyalbumsvěta",
+      "sourceSha256": "e1c95bb986ef54d16d38f617328543f7fc12238a3f3413c9c06df05dc8bd3dfc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-okno-04": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/Okno",
+      "quote": "Vše bude tiché a šťastné, — ty sám nejvíce.\nOči své položíš doprostřed světnice:",
+      "match": "tarýmiznámýmivěcmiurozviklanéhostolumezidvěmavysychajícímikalamářinejlépeuplatníšpovídkuspolárnízářívšebudetichéašťastnétysámnejvíceočisvépoložíšdoprostředsvětnicedárečekzcestyalbumsvěta",
+      "sourceSha256": "e1c95bb986ef54d16d38f617328543f7fc12238a3f3413c9c06df05dc8bd3dfc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-zne-01": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/%C5%BDn%C4%9B",
+      "quote": "Slunce je veliký básník\na napsalo krásnou báseň",
+      "match": "sluncejevelikýbásníkanapsalokrásnoubáseňzlatýmperemnanašizemmužibezkabátůženysčervenýmišátkyděckanamáminěsuknipřescelýdenjenčtouačtouačtouna",
+      "sourceSha256": "3d73097a60350ff2c93b257a77ddddbeeb944459e3c218e0a45e9992b2bb30ce",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-zne-02": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/%C5%BDn%C4%9B",
+      "quote": "ale slova jsou tak veliká,\nže neprojdou mými ústy,",
+      "match": "ounakopečkunadpolemtakéjáchciříkattubáseňvolatabystařečcivdědiněažnapráhvyšliaslyšelicosluncenapsaloaleslovajsoutakvelikáženeprojdoumýmiústyajencítímžejsemklasvřaděpísmenovykřičník",
+      "sourceSha256": "3d73097a60350ff2c93b257a77ddddbeeb944459e3c218e0a45e9992b2bb30ce",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-wolker-zne-03": {
+      "url": "https://cs.wikisource.org/wiki/Host_do_domu/%C5%BDn%C4%9B",
+      "quote": "a jen cítím, že jsem:\nklas v řadě,",
+      "match": "ňvolatabystařečcivdědiněažnapráhvyšliaslyšelicosluncenapsaloaleslovajsoutakvelikáženeprojdoumýmiústyajencítímžejsemklasvřaděpísmenovykřičník",
+      "sourceSha256": "3d73097a60350ff2c93b257a77ddddbeeb944459e3c218e0a45e9992b2bb30ce",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-1-02": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/1",
+      "quote": "Vylítly z hnízda pěnkavy\na drobné děti z chýše,",
+      "match": "přilítlojarozdalekaavšudeplnotouhyvšetlačiloseksluncivenžesnilosentakdlouhývylítlyzhnízdapěnkavyadrobnédětizchýšeapestrékvítínalukáchpřesladkouvůnidýšezvětvíselístektlačívenaptáčkůmzhrdlahláskyavňadrechvsrdcimlaďo",
+      "sourceSha256": "56f76927f5a66fd4e4d94b1dee5229915081eb2f658d3da79798c9034360c9c4",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-1-03": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/1",
+      "quote": "Z větví se lístek tlačí ven\na ptáčkům z hrdla hlásky,",
+      "match": "civenžesnilosentakdlouhývylítlyzhnízdapěnkavyadrobnédětizchýšeapestrékvítínalukáchpřesladkouvůnidýšezvětvíselístektlačívenaptáčkůmzhrdlahláskyavňadrechvsrdcimlaďounkémtamklíčípoupělásky",
+      "sourceSha256": "56f76927f5a66fd4e4d94b1dee5229915081eb2f658d3da79798c9034360c9c4",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-2-01": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/2",
+      "quote": "Já jsem ten rytíř z pohádky,\njenž hrdě vyjel do světa,",
+      "match": "jájsemtenrytířzpohádkyjenžhrděvyjeldosvětaabychtupannuuvidělježjakorůževykvétáoníšlavěsťkdospatříjitenskletbouprýtoodnesebudžesevkámenproměníb",
+      "sourceSha256": "c5adf2ae52b0065013720d7a6fc18738bdcb72c1d49996fa512baf276d7046bc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-2-02": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/2",
+      "quote": "O ní šla věsť: kdo spatří ji —\nten s kletbou prý to odnese,",
+      "match": "jájsemtenrytířzpohádkyjenžhrděvyjeldosvětaabychtupannuuvidělježjakorůževykvétáoníšlavěsťkdospatříjitenskletbouprýtoodnesebudžesevkámenproměníbudžemusrdcevyrveseimysliljsemsiusebesnadpřecjeněkdovyjmutýavyjeljsemazatenhřích",
+      "sourceSha256": "c5adf2ae52b0065013720d7a6fc18738bdcb72c1d49996fa512baf276d7046bc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-2-03": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/2",
+      "quote": "A vyjel jsem, a za ten hřích\nteď — v zpěváka jsem zakletý!",
+      "match": "enskletbouprýtoodnesebudžesevkámenproměníbudžemusrdcevyrveseimysliljsemsiusebesnadpřecjeněkdovyjmutýavyjeljsemazatenhříchteďvzpěvákajsemzakletý",
+      "sourceSha256": "c5adf2ae52b0065013720d7a6fc18738bdcb72c1d49996fa512baf276d7046bc",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-3-01": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/3",
+      "quote": "Umlklo stromů šumění,\na lístek sotva dýše,",
+      "match": "umlklostromůšuměníalísteksotvadýšeaptáčekdřímákrásnýsentaktichouncetaktišenanebivzešlomnohohvězdakolemjetakvolnojenomvtěchňadrechteskn",
+      "sourceSha256": "f925c83d5d53e02ca3673cb8e62f6210b5e8b0c1874b5918b0cb6fa8aefd2c81",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-3-02": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/3",
+      "quote": "jenom v těch ňadrech teskno tak\na u srdce tak bolno.",
+      "match": "šuměníalísteksotvadýšeaptáčekdřímákrásnýsentaktichouncetaktišenanebivzešlomnohohvězdakolemjetakvolnojenomvtěchňadrechtesknotakausrdcetakbolnovekvítkupěknýkalíšeksebílárosaskládámůjbožeatarosatéžsevmojeočivkrádá",
+      "sourceSha256": "f925c83d5d53e02ca3673cb8e62f6210b5e8b0c1874b5918b0cb6fa8aefd2c81",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-3-03": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/3",
+      "quote": "můj Bože, a ta rosa též\nse v moje oči vkrádá.",
+      "match": "hohvězdakolemjetakvolnojenomvtěchňadrechtesknotakausrdcetakbolnovekvítkupěknýkalíšeksebílárosaskládámůjbožeatarosatéžsevmojeočivkrádá",
+      "sourceSha256": "f925c83d5d53e02ca3673cb8e62f6210b5e8b0c1874b5918b0cb6fa8aefd2c81",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-60-02": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/60",
+      "quote": "však ze všech trestů největší,\nkdyž národ nemá písně.",
+      "match": "tznájejctětevícnežsebeneboťvástakbůhmilovalžeposlalvámhosnebehroznékdyžbůhneúrodouamoremtrestápřísněvšakzevšechtrestůnejvětšíkdyžnárodnemápísnětennárodještěnezhynuldokudmuvěšteczpívájeťpíseňvnebizrozenaavesmrťživotvlívá",
+      "sourceSha256": "25f2f80a9b2b67a26d288df22c764c646eca341473be4a0f4c9db6475d798965",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-60-03": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/60",
+      "quote": "Ten národ ještě nezhynul,\ndokud mu věštec zpívá,",
+      "match": "žeposlalvámhosnebehroznékdyžbůhneúrodouamoremtrestápřísněvšakzevšechtrestůnejvětšíkdyžnárodnemápísnětennárodještěnezhynuldokudmuvěšteczpívájeťpíseňvnebizrozenaavesmrťživotvlívá",
+      "sourceSha256": "25f2f80a9b2b67a26d288df22c764c646eca341473be4a0f4c9db6475d798965",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-61-02": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/61",
+      "quote": "Soud boží na se národ zve,\njenž pěvce své ctít neví,",
+      "match": "nekamenujteprorokynebpěvcijsoujakptácikdohodilponěmkamenemktěmvícsenenavracísoudbožínasenárodzvejenžpěvcesvéctítnevíanejstrašnějšíkletboujestkdyžbůhodejmulzpěvyjeťsrdcepěvcůnejčistšíavšehohněvuprostéacovámzpívalodsrd",
+      "sourceSha256": "dcc590ce440c90035cd59392371208cdc929e469db93e648f5dbbd55c1d02cd9",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-halek-61-03": {
+      "url": "https://cs.wikisource.org/wiki/Ve%C4%8Dern%C3%AD_p%C3%ADsn%C4%9B/61",
+      "quote": "a co vám zpíval od srdce,\nto ve svém srdci noste!",
+      "match": "žpěvcesvéctítnevíanejstrašnějšíkletboujestkdyžbůhodejmulzpěvyjeťsrdcepěvcůnejčistšíavšehohněvuprostéacovámzpívalodsrdcetovesvémsrdcinoste",
+      "sourceSha256": "dcc590ce440c90035cd59392371208cdc929e469db93e648f5dbbd55c1d02cd9",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-toman-02": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Toman_a_lesn%C3%AD_panna",
+      "quote": "Slyš, Tománku, radu mou,\nnedávej se doubravou:",
+      "match": "nídejsestřičkodejnovoukošiličkukmentovoukamizolkurůžovoujiskrapadlapodkoníčkemsestravolázabratříčkemslyštománkuradumounedávejsedoubravouobjeďkolemksvatéhořeaťnemámpotoběhoředejseradějvzápolíaťměsrdcenebolínejeltomandoubravoudalsecestičk",
+      "sourceSha256": "0f4c0a53ad3ffa7ee330b99c90d42c38cec857b902f7e2e6abd970462605db1e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-toman-03": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Toman_a_lesn%C3%AD_panna",
+      "quote": "Jedna li tě opustila.\nnahradí to stokrát jiná.",
+      "match": "střelavběhukoněobjelapaktomanovipobokuvyrovnávávplavnémskokušvarnýhochunezoufejbujnýmvětrůmžalostdejjednalitěopustilanahradítostokrátjinášvarnýhochunezoufejbujnýmvětrůmžalostdejtokdyžsladcezpívalavočisemudívalalesnípannanajelenutomancítí",
+      "sourceSha256": "0f4c0a53ad3ffa7ee330b99c90d42c38cec857b902f7e2e6abd970462605db1e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-toman-04": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Toman_a_lesn%C3%AD_panna",
+      "quote": "Tomanovi srdce plesá,\nuzdu pouští, s koně klesá",
+      "match": "zachcesetoběšvarnýhochumůjjsimůjkmémubytusemnouplujtokdypannazpívalavústajezdcelíbalavnáručíhoobjalatomanovisrdceplesáuzdupouštískoněklesápodskalamiprostředlesasluncevyšlonadhoruskáčekoníkdodvorusmutnéhrabepodkovouřehcezprávunedobrousestr",
+      "sourceSha256": "0f4c0a53ad3ffa7ee330b99c90d42c38cec857b902f7e2e6abd970462605db1e",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-pocestny-01": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Pocestn%C3%BD",
+      "quote": "sotva přejdeš jedny hory,\nhned se najdou jiné.",
+      "match": "jetochůzepotomsvětěkamsenohašinesotvapřejdešjednyhoryhnedsenajdoujinéjetoživotnatomsvětěžebyčlověkutekještěnezažiljsijedenmáštudruhýsmutekcožjepánůmtinavozesedípěkněvsuš",
+      "sourceSha256": "fb80eb6c549c5a746d5e12471e5226a580bb959f4f68be86fb457eb519c5afad",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-pocestny-02": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Pocestn%C3%BD",
+      "quote": "jen když já mám zdravé nohy,\nk tomu dobré boty!",
+      "match": "tekcožjepánůmtinavozesedípěkněvsušealechudýtenzanimivdeštiblátěklušeejcojádbámnatécestěnapsotyaslotyjenkdyžjámámzdravénohyktomudobrébotyvšaknapányvkrytémvozetakéněkdytrhnejednousejimkolozlámejindyvůzsezvrhneakromtohoažsvépoutipřejedemap",
+      "sourceSha256": "fb80eb6c549c5a746d5e12471e5226a580bb959f4f68be86fb457eb519c5afad",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-pocestny-03": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Pocestn%C3%BD",
+      "quote": "jednou se jim kolo zláme,\njindy vůz se zvrhne.",
+      "match": "ojádbámnatécestěnapsotyaslotyjenkdyžjámámzdravénohyktomudobrébotyvšaknapányvkrytémvozetakéněkdytrhnejednousejimkolozlámejindyvůzsezvrhneakromtohoažsvépoutipřejedemapřejdemvjednéhospoděnanoclehpánnepánsesejdem",
+      "sourceSha256": "fb80eb6c549c5a746d5e12471e5226a580bb959f4f68be86fb457eb519c5afad",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-celakovsky-pocestny-04": {
+      "url": "https://cs.wikisource.org/wiki/Patery_knihy_plod%C5%AF_b%C3%A1snick%C3%BDch/Pocestn%C3%BD",
+      "quote": "v jedné hospodě na nocleh\npán nepán se sejdem.",
+      "match": "pányvkrytémvozetakéněkdytrhnejednousejimkolozlámejindyvůzsezvrhneakromtohoažsvépoutipřejedemapřejdemvjednéhospoděnanoclehpánnepánsesejdem",
+      "sourceSha256": "fb80eb6c549c5a746d5e12471e5226a580bb959f4f68be86fb457eb519c5afad",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-vrchlicky-podobenstvi-01": {
+      "url": "https://cs.wikisource.org/wiki/Podobenstv%C3%AD_%28Vrchlick%C3%BD%29",
+      "quote": "Když zřím plnou číši vína, myslím na tvé vlasy:\nv obou tolik zlatých svitů míhá se a hrá si.",
+      "match": "kdyžzřímplnoučíšivínamyslímnatvévlasyvoboutolikzlatýchsvitůmíháseahrásikdyžzřímplnoučíšivínamyslímnatváústarubínvínavstřícmikyneajakrtydvavzrůstánatváňadramyslímzřímlivína",
+      "sourceSha256": "eb782fa87e93896e2449e3c00df74aa66db7c8b7caa7010d5299d1981a97d157",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-vrchlicky-podobenstvi-02": {
+      "url": "https://cs.wikisource.org/wiki/Podobenstv%C3%AD_%28Vrchlick%C3%BD%29",
+      "quote": "Když zřím plnou číši vína, myslím na tvá ústa,\nrubín vína vstříc mi kyne a jak rty dva vzrůstá.",
+      "match": "kdyžzřímplnoučíšivínamyslímnatvévlasyvoboutolikzlatýchsvitůmíháseahrásikdyžzřímplnoučíšivínamyslímnatváústarubínvínavstřícmikyneajakrtydvavzrůstánatváňadramyslímzřímlivínapohárplnýtaksedmouvroutakýmohněmjakovínavlnyalenejvícnejvícmusímmysletnatv",
+      "sourceSha256": "eb782fa87e93896e2449e3c00df74aa66db7c8b7caa7010d5299d1981a97d157",
+      "reviewedAt": "2026-10-21"
+    },
+    "poem-vrchlicky-podobenstvi-03": {
+      "url": "https://cs.wikisource.org/wiki/Podobenstv%C3%AD_%28Vrchlick%C3%BD%29",
+      "quote": "A ten žár, jejž v srdci vznítí, nelze ztišit pěním,\nleda novou číší vína, novým políbením.",
+      "match": "routakýmohněmjakovínavlnyalenejvícnejvícmusímmysletnatvéočiztěchjakzvínastejněvsrdcezlatájiskraskočíatenžárjejžvsrdcivznítínelzeztišitpěnímledanovoučíšívínanovýmpolíbením",
+      "sourceSha256": "eb782fa87e93896e2449e3c00df74aa66db7c8b7caa7010d5299d1981a97d157",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-01": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/I",
+      "quote": "Babička měla syna a dvě dcery.",
+      "match": "ovázdrojněmcováboženababička7vydáníprahačeskágrafickáunie1924s917městskáknihovnavprazelicencepdold70babičkamělasynaadvědcerynejstaršížilamnoholetvevídniupřátelodnichžsevdaladruhádcerašlapaknajejímístosynřemeslníktéžbylsamost",
+      "sourceSha256": "1d670c748877dc729b3f590a0de52df8fe38397460d7428513ae15afe103cd3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-02": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/I",
+      "quote": "Babička si hned první hodinu srdce svých vnoučátek zcela osvojila, však se jim ale hned také všecka vzdala.",
+      "match": "inakyadětitonemohoupochopitžebytyjejichbělounkéhladkérucemohlykdytaksvraštělébýtjakorucestarébabičkybabičkasihnedprvníhodinusrdcesvýchvnoučátekzcelaosvojilavšaksejimalehnedtakévšeckavzdalapanprošekbabiččinzeťjehožonatakénebyladříveosobněznaladobylsisrdcejejíhnednaprvnísetkánímilousvojísr",
+      "sourceSha256": "1d670c748877dc729b3f590a0de52df8fe38397460d7428513ae15afe103cd3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-03": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/I",
+      "quote": "Co se dětem v babiččině sedničce nejlépe líbilo, byla malovaná její truhla.",
+      "match": "ojenoumyslílehaladětemtobylotakémilejšíakaždýdenseptalybabičkyjestlinepotřebujesirkyžejíjichnadělajícosedětemvbabiččiněsedničcenejlépelíbilobylamalovanájejítruhlarádysiprohlíželynačervenépůděnamalovanémodréazelenérůžeshnědýmilistymodrélilieačervenožlutéptáčkymez",
+      "sourceSha256": "1d670c748877dc729b3f590a0de52df8fe38397460d7428513ae15afe103cd3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-04": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/I",
+      "quote": "Přej nám tu radost, Terezko, vždyť jsme rády, že se máme",
+      "match": "edbylysbabičkoudobříkamarádimatkajeokřikovalaabydalybabičcepokojanechalyjíoddechualebabičkazaseřeklapřejnámturadostterezkovždyťjsmerádyžesemámeadětiposlechlybabičkujedensedíjínaklínědruhýstojízanínalaviciabarunkastojípředníadívásejídotvářejedn",
+      "sourceSha256": "1d670c748877dc729b3f590a0de52df8fe38397460d7428513ae15afe103cd3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-05": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/I",
+      "quote": "První, co si babička v hospodářství zcela na starost vzala, bylo pečení chleba.",
+      "match": "ylezlanahůrupodívatsejaktostímlenemdopadáadruhýdenvidělydětipoprvévesvémživobytíjaksepředenavřetánkoprvnícosibabičkavhospodářstvízcelanastarostvzalabylopečeníchlebanemohlasnéstžeslužkasbožímdaremtakbezevšíúctyzacházíanidodížeanizdížedopeceanizpecežejejnepřežehnává",
+      "sourceSha256": "1d670c748877dc729b3f590a0de52df8fe38397460d7428513ae15afe103cd3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-06": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/VII",
+      "quote": "Dokud ale žiju a Pánbůh mi zdraví popřává, náleží, abych pracovala.",
+      "match": "létasipohovětvšaktobudedříveneždéležebudesluncenadmojíhlavouvycházetazacházetajábudubezstarostněspátdokudaležijuapánbůhmizdravípopřávánáležíabychpracovalalenochjedarmodrahýazcelabezstarostinenížádnýčlověkjednohotlačítodruhéhoonokaždýnesesvůjkřížekjenomže",
+      "sourceSha256": "d1e2769ee584bcec606a259d654bc57e1ab489e0e16ae56def72b1fa2648daae",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-07": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/VII",
+      "quote": "Ale člověk mnoho vydrží, milostivá paní!",
+      "match": "grošbyldalajsemzalékyapřecetonicnepomohlomyslilajsemtenkrátežeorozumpřijdužemisrdcežalostíserozpuknealečlověkmnohovydržímilostivápanízůstalimitřisirotcinapenězíchanihaléřejentrochutěchklocůvtomsamémplukucojiřísloužilbylšikovatelemjis",
+      "sourceSha256": "d1e2769ee584bcec606a259d654bc57e1ab489e0e16ae56def72b1fa2648daae",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-08": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII",
+      "quote": "Babička neopustila malé údolíčko, kde našla druhý domov.",
+      "match": "svojejindejakosemínkaodvětruzavátáodvodydalekozanešenábynajinýchluzíchabřezíchkořínkysvojezaložilannbabičkaneopustilamaléúdolíčkokdenašladruhýdomovklidnoumyslídívalasejaktovšeokolonírosteakveteradovalasenadštěstímbližníhotěšilazarmoucenépomohlakom",
+      "sourceSha256": "3024bae3334e211a0b7d3179819d3cb0245b101ce46a803d89f169ba46d37da5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bab-09": {
+      "url": "https://cs.wikisource.org/wiki/Babi%C4%8Dka/XVIII",
+      "quote": "každé zvíře, když je má člověk rád, je vděčné",
+      "match": "ěmoutvářkočkyapsyksobězavolalapohladilajeanechalasiodsultánarukulízathleďtejichpravilaadélceaslužkámkaždézvířekdyžjemáčlověkrádjevděčnévoršualezavolalaksoběapřikazovalajíažumruvoršilkojávímžetonebudeuždlouhosemnoutrvatzdálosemidnesvnoc",
+      "sourceSha256": "3024bae3334e211a0b7d3179819d3cb0245b101ce46a803d89f169ba46d37da5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bar-01": {
+      "url": "https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/I",
+      "quote": "Obecní pastýř jmenoval se Jakub a zůstával se svou dcerou Bárou v té poslední chalupě.",
+      "match": "ůmuprostředúdolímezilučinamiapoliteklařekazrovnaokolopastýřovychalupybřehyjejívroubenébylyolšíavrbouobecnípastýřjmenovalsejakubazůstávalsesvoudceroubárouvtéposledníchalupějakubbyljižšedesátníkbárajehoprvorozenédítěajedinačkapřálsiovšemsynamítdědičesvéhojménaalekdyžbárapo",
+      "sourceSha256": "c1e98bf0cff6d100814d61efcbc63f027be354bf406edc6131afde5d696f3d2b",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bar-02": {
+      "url": "https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/I",
+      "quote": "Bára si to pamatovala a tak dlouho zkoušela udržet se nad vodou, až to dokázala.",
+      "match": "jihodněvypeskovalptalasetedytátycosemusídělatkdyžchceplavattátajíukázaljakmusírukamainohamapohybovatbárasitopamatovalaatakdlouhozkoušelaudržetsenadvodouažtodokázalazalíbilosejíplavánítakževlétězránaivečersekoupávalaanejendlouhoplavatvydrželahlavounadvodoualeipodvo",
+      "sourceSha256": "c1e98bf0cff6d100814d61efcbc63f027be354bf406edc6131afde5d696f3d2b",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bar-03": {
+      "url": "https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/II",
+      "quote": "Bára nedala s sebou vládnout, aniž si dala pěknými slovy oči zasypat.",
+      "match": "ěknemůževědětkteraktodopadneadivousjeopravdusetedyoděvčeucházetžádnýzchlapcůnesmělažertemsinetroufalbáranedalassebouvládnoutanižsidalapěknýmislovyočizasypatnejvícejinenávidělakostelníkováačkolivjíbárajaktěživanakřížstéblovcestunevložilabanaopakdobřečinilat",
+      "sourceSha256": "07941861e73e95c6c5017a7728fa8f21d737c93f632ea9c4584af44dc66c73c7",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bar-04": {
+      "url": "https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/II",
+      "quote": "Nesnižuj sebe, nepovyšuj mne, jsme si rovny.",
+      "match": "libostjednomusvědčíkarafiátdruhémurůžetřetímufialakaždékvítkonajdesvéhoobdivovatelekaždémásvojikrásunesnižujsebenepovyšujmnejsmesirovnynebudešopravdunažádnéhozchlapcůmysletanijsiposudnemyslelanenezavrtělabárahlavouusmávšisenažádnéhonem",
+      "sourceSha256": "07941861e73e95c6c5017a7728fa8f21d737c93f632ea9c4584af44dc66c73c7",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-bar-05": {
+      "url": "https://cs.wikisource.org/wiki/Div%C3%A1_B%C3%A1ra_%28N%C4%9Bmcov%C3%A1%29/III",
+      "quote": "„Nevěřte takovým báchorám, lidé,“ káral pan farář.",
+      "match": "ivédítětoseumíudělatneviditelnétomujevevodějakovohnivpovětříjakonazemivšudestejněpraviljedensousednnnevěřtetakovýmbáchorámlidékáralpanfarářbárajeodvážnéděvčeaprovádělarozpustilostitojevšeazatomusíbýtpokáranámusíkemnězítrapřijítnnpřísněpoká",
+      "sourceSha256": "538069cbb6c95098e422a86739fed855b6acf872e7408f0f56c627efa54a6d8a",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kar-01": {
+      "url": "https://cs.wikisource.org/wiki/Karla/I",
+      "quote": "Od Lesního Mnichova k českým hranicím blížila se tlupa vojáků.",
+      "match": "uskrýtstáhnoutzwikizdrojůvolnědostupnéknihovnykarlakarlaboženaněmcováiiiieditovatbylokrásnéjarníjaroodlesníhomnichovakčeskýmhranicímblížilasetlupavojákůzanimijelyvozysvěcminapřednímvozeseděldůstojníksesvoupanívedlevozukráčelaženanesoucnahřbetěmaléděvče",
+      "sourceSha256": "4ae646b992e80418581a5107027eab11dc324a1c4ce88c8f83a5a7d087c46a5d",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kar-02": {
+      "url": "https://cs.wikisource.org/wiki/Karla/I",
+      "quote": "Vojáci házeli čapkami do povětří, smáli se, výskali a mnohý stál v němém pohnutí.",
+      "match": "mdomajsmechválabohuzvolalaklesnoucnakolenadomajsmezlatéčechyužješlakazletakajinakznělotozevšechstranvojáciházeličapkamidopovětřísmálisevýskaliamnohýstálvněmémpohnutíkaždýdlesvépovahyradostnajevodávalkrásnýjetokrajzvolalidůstojníkkdyžbylsesvoupanínapasekuvešelsdovol",
+      "sourceSha256": "4ae646b992e80418581a5107027eab11dc324a1c4ce88c8f83a5a7d087c46a5d",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kar-03": {
+      "url": "https://cs.wikisource.org/wiki/Karla/II",
+      "quote": "Jeho jediná žádost byla, ještě jednou se podívat domů.",
+      "match": "jakobyvšecekbylokřálnáhlealepadldosuchotychřadlachřadlnemohlslužbuzastávatanetrvalotodlouhovyneslihojehojedinážádostbylaještějednousepodívatdomůnebohýnedošeltohomusípřecejenležetvcizízeminešťastnávojnachraňpánbůhkaždoumatkukaždouženuštkalamarky",
+      "sourceSha256": "66bc8f7b72996c476b271d852e3be54ebc48eed8bbe5ac6099905672ab41a0c4",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kar-04": {
+      "url": "https://cs.wikisource.org/wiki/Karla/VIII",
+      "quote": "Abychom ho uchránili od stavu vojenského, obelhali jsme dobré lidi a vydali ho za děvče.",
+      "match": "hakdyžjsembylazasesamodruháabynámdalděvčepánbůhjinakusoudilbylchlapectujsmeseprohřešiliprotipánubohuabychomhouchrániliodstavuvojenskéhoobelhalijsmedobrélidiavydalihozaděvčealepánbůhsenedáobelhatdrahoňumřeltoděvčechciřícttenchlapecbylmojejedináradostbylajsembedlivánaňabyne",
+      "sourceSha256": "59c8cec472b6b4fb05c0f3df2123bc3bf5073d3df7f9da08609cfc9174b9ccf8",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kar-05": {
+      "url": "https://cs.wikisource.org/wiki/Karla/VIII",
+      "quote": "No, ztratil jsem nevěstu, hale našel hodného kamaráda",
+      "match": "čnějehodojímavýhlascítilapolibkyjehoaskoroslzícšeptalasikéžbytutobulopravdaonahnedrozumělahnedvěřilanoztratiljsemnevěstuhalenašelhodnéhokamarádařeklpetrodhodlanědobřetakpetřepřisvědčilmusedlákhanaaleschovalatvářzafěrtuchaplakalanopročpláčešhana",
+      "sourceSha256": "59c8cec472b6b4fb05c0f3df2123bc3bf5073d3df7f9da08609cfc9174b9ccf8",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-lab-01": {
+      "url": "https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/I._O_p%C5%99%C3%AD%C4%8Din%C3%A1ch_v_sv%C4%9Bt_putov%C3%A1n%C3%AD",
+      "quote": "aniž mi se hrubě chtělo s někým se raditi, mysle, že mi každý svou věc chváliti bude",
+      "match": "tumiseopětnesnadnézdálokteréajakébytotakovépovoláníbylopoznatiaskýmseotodostatečněporaditinevědělsemanižmisehruběchtělosněkýmseraditimysležemikaždýsvouvěcchválitibudesámtakékvapněkněčemusáhnoutiabychnepřebralbojesenesmělsemačpřiznámsejednohodruhéhoitřetíhotajněchyta",
+      "sourceSha256": "5041ab5e12d4842c55dc8a35f79ee9186d72d3c0137595a1b84e33c2dbc18685",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-lab-02": {
+      "url": "https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal",
+      "quote": "I vstrčil mi brylle na nos, skrze něž já hledě, hned všecko před sebou jinak vidím.",
+      "match": "taženbudubryllemámenívtomdruhývůdcezdruhéhobokuajátobětytooculárydídarujiskrzeněžsenasvětdívatibudešivstrčilmibryllenanosskrzeněžjáhleděhnedvšeckopředseboujinakvidímmělyzajistétumocjakžsempotommnohokrátzprubovalžeskrzeněhledícímuvěcdalekáblízkáablízkádalekámaláveli",
+      "sourceSha256": "ff8d0b4762ce99bdd8070ef4e58c0f872d6e62f6d1cf816509b9ee77331daef5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-lab-03": {
+      "url": "https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal",
+      "quote": "Ač ste mi usta sevřeli a oči zastřeli, věřím však svému Bohu, že mi rozumu a mysli nesvážete.",
+      "match": "oléhalyajáhlavypřizdvihnaazrakupodnesačistěpřirozeněnavěchledětisemmohlčemužsemrádbylasámvsoběmyslilačstemiustasevřeliaočizastřelivěřímvšaksvémubohužemirozumuamyslinesvážetepůjduťapodívámsecopaktensvětjestnanějžpanímarnostchceabysehleděloavšakvlastnímaočimaabysenehleděloci",
+      "sourceSha256": "ff8d0b4762ce99bdd8070ef4e58c0f872d6e62f6d1cf816509b9ee77331daef5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-lab-04": {
+      "url": "https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/IV._Poutn%C3%ADk_uzdy_a_bryll%C3%AD_dostal",
+      "quote": "Půjduť a podívám se, co pak ten svět jest",
+      "match": "mužsemrádbylasámvsoběmyslilačstemiustasevřeliaočizastřelivěřímvšaksvémubohužemirozumuamyslinesvážetepůjduťapodívámsecopaktensvětjestnanějžpanímarnostchceabysehleděloavšakvlastnímaočimaabysenehledělocitovánozhttpscswikisourceorgwinde",
+      "sourceSha256": "ff8d0b4762ce99bdd8070ef4e58c0f872d6e62f6d1cf816509b9ee77331daef5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-lab-05": {
+      "url": "https://cs.wikisource.org/wiki/Labyrint_sv%C4%9Bta_a_r%C3%A1j_srdce/XXXVII._Poutn%C3%ADk_domu_trefil",
+      "quote": "Navrať se, odkuds vyšel, do domu srdce svého, a zavři po sobě dvéře.",
+      "match": "znovuhlaszavznínavraťsejánevědakamsenavrátitianikudyztémrákotyvyjítitruchlitizačnuaajhlaspotřetívolánavraťseodkudsvyšeldodomusrdcesvéhoazavřiposobědvéředruhénašítakésnažnostivyhledávákteréžradyjájaksemrozuměltaksemposlechlažesemboharadícíhoposlechlpřeš",
+      "sourceSha256": "8ed77afa11888235d76fca38c950af034ac2397fa0638a24318a1804488a314a",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-01": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Pan_Ry%C5%A1%C3%A1nek_a_pan_Schlegl",
+      "quote": "A po těch jedenáct let nepromluvili na sebe ani slova, ba ani si jeden druhého nevšimnul.",
+      "match": "isenakulečníkkstolkuseobrátilijenkdyžsechtělinapítnebodýmkusinacpatjedenáctletjižzasedalitakdencodenapotěchjedenáctletnepromluvilinasebeanislovabaanisijedendruhéhonevšimnulpomaléstraněbylaznámakrutázášťvjakéměljedendruhéhonepřátelstvímezinimibylostaréanesmířitelnétakébyla",
+      "sourceSha256": "73c0aed38e50c7d4bf863770e7cc1cf579d5105e13c2cd589cfe2425c10299e0",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-02": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/P%C5%99ivedla_%C5%BEebr%C3%A1ka_na_mizinu",
+      "quote": "Divné zvěsti začaly se najednou šourat Malou Stranou.",
+      "match": "ulesvítilyzanímažzmizelzarohempaksimiliónovástáhlaplachetkuažpobraduaseděladlouhonepohnutěsnadusnuladivnézvěstizačalysenajednoušouratmaloustranouakohosedotklyškrabalsezauchempanvojtíšekzněločastovrozpacíchazachvilkuzasjsislyšelpanvojtíšekbrzyjse",
+      "sourceSha256": "bd7cb928e6d43ce32d2c1a46f65814dcae09a344fddd8e395e6227ddedb5c548",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-03": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/O_m%C4%9Bkk%C3%A9m_srdci_pan%C3%AD_Rusky",
+      "quote": "A když šel jakýkoli, vyšla dobrá paní Ruska vždycky před dům a srdečně plakala.",
+      "match": "laaspopůlrocevystěhovalasezesvéhodomuanajalasoběbytzrovnavedleoujezdskébránytadymuselkaždýfunuskolemakdyžšeljakýkolivyšladobrápaníruskavždyckypředdůmasrdečněplakalacitovánozhttpscswikisourceorgwindexphptitlepovídkymalostranskéoměkkémsrdcipaníruskyoldid343687katego",
+      "sourceSha256": "8147be4f64c2de7130ad7f230d4d4bae391952fa7301c0732f16b62bd3a19243",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-04": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Ve%C4%8Dern%C3%AD_%C5%A1plechty",
+      "quote": "Měli jsme jednou spolek na večeře, každý den měl večeři platit někdo jiný.",
+      "match": "eceněčímnakompakjednesřadaabyurčilpředmětprozábavunajäklovitotedynepřijdemínilnovomlýnskýzcelaurčitěmělijsmejednouspoleknavečeřekaždýdenmělvečeřiplatitněkdojinýtennakterémbylařadanepřišelnikdypozdvihlpřitomnáhodouhlavukhřebenuprotějšístřechyutopeneczvolaljakob",
+      "sourceSha256": "510d12636d41235da1fe763131780d40b74812b540c629a6a6d694e031a0b228",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-05": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Doktor_Kazisv%C4%9Bt",
+      "quote": "Teď ho rychle doneste někam do domu, ať zkusíme pomoci!",
+      "match": "lrychlepřistoupilkeklidnémuheribertoviacosemástáttázalsedychtivěneníopravdunenímrtevneníjejenstrnulýteďhorychledonesteněkamdodomuaťzkusímepomocinejhotovějšíbláznovstvíkřičelpandoktorlinkkdyžtennenímrtevtedykdopakjetoptalseostrohradskýiprýdoktor",
+      "sourceSha256": "51d29022036a8a2e8b058a54747ecd1f96e5a11d4b51df6f02507ba33e8f440b",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-06": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Hastrman",
+      "quote": "Vypravovalo se, že pan Rybář je až báječně bohat.",
+      "match": "eodturnovazdevprazežilusvéblízképříbuznémladékterámělanevysokéhoúřadníkazamužeasnímuždvěnebotřidítkyvypravovalosežepanrybářjeažbáječněbohataninetaknapenězíchjakonadrahokamechvesvémpokojíkumělříkalistátvysokoučernouskříňvtéskřínibylysaméníz",
+      "sourceSha256": "4cafd1701d2dbe1b88f2ee1fdb0ce2d9ca116953f6225d013c261412bebae73d",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-07": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Jak_si_nakou%C5%99il_pan_Vorel_p%C4%9Bnovku",
+      "quote": "Jedinou těšitelkou páně Vorlovou byla jeho pěnovka.",
+      "match": "ězesousedůnepřišelnikdoatakémálokdyzabloudildokrámunějakývenkovanpravidelněpřicházelpouzepanvojtíšekjedinoutěšitelkoupáněvorlovoubylajehopěnovkačímbylmrzutějšítímmohutnějšíkotoučedýmuvinulysemuzústtvářepáněvorlovybledlyčelosesvrašťovaloalepěnov",
+      "sourceSha256": "2475856cbe07bf6fc5b04d58b9ad696ea922a9e475bcc59846352dcf7bdc2675",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-08": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/U_t%C5%99%C3%AD_lili%C3%AD",
+      "quote": "Seděl jsem pod dřevěnými arkádami hostince U tří lilií, poblíž Strahovské brány.",
+      "match": "nývítrjezvečeramrskalpředseboupakserozhučelamohutnábouřzapraskallijákabouřalijáktrvalyaždopozdnínociseděljsempoddřevěnýmiarkádamihostinceutříliliípoblížstrahovskébránymalýtohostinecčetnějitenkrátenavštívenýjenvždyvnedělikdytuvsalónkupřipianěbavilisetancemkadetiadesát",
+      "sourceSha256": "78269eeabf887f432434c33fd2623edeaf09a24083fee3b186610a5bb889a088",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-09": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Svatov%C3%A1clavsk%C3%A1_m%C5%A1e",
+      "quote": "Jasně zaznělo as dvoje zapadnutí železa a já byl v kostele sám a zavřen.",
+      "match": "linadruhéstraněusakristiekostelníkbouchnultudveřmizaszaharašilzámekcvaklaklikaateďšlikpravémuvýchodujasnězazněloasdvojezapadnutíželezaajábylvkostelesámazavřenpodivnýcitmnouzachvělpřeszádamněpřeběhlhorkýproudalepocittennebylnepříjemnýhonemjsemvyskočilvyndalka",
+      "sourceSha256": "8ae22a08a69c5cb14f941188e15a7272946f3518409b79773493e3ce551c58db",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-ner-10": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_malostransk%C3%A9/Ps%C3%A1no_o_leto%C5%A1n%C3%ADch_Du%C5%A1i%C4%8Dk%C3%A1ch",
+      "quote": "Od těch dob jsem už věděla, že se nevdám nikdy a mým ženichem že je smrt.",
+      "match": "ánějakásmrtmněvyřizovalvždycosedějenazemiaméhomužebolelatamojetouhaajátovidělaabylomněhoprotozaslítoodtěchdobjsemužvědělažesenevdámnikdyamýmženichemžejesmrtnuavidíšluizinejsousnyvrukoubožíchneodděliladvojísmrtživotmůjodživotaostatníhoapanínocarovápakpláčea",
+      "sourceSha256": "7ddb368fe688e9e1a0ca30e83d7e0b49ccadf87424840771af33a0774874acd9",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-01": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#1",
+      "quote": "Do školy chodím každý den kolem jednopatrového domu, na kterém je štít s nápisem Martin Bejval.",
+      "match": "upostavímánotosemněchcespátnnnn1943ntemplatetargetwtkonecformyhrefšablonakonecformyparamsi11editovatdoškolychodímkaždýdenkolemjednopatrovéhodomunakterémještítsnápisemmartinbejvalapodtímjesttiskacímpísmemnapsánopovoznictvíaobchoduhlímtennápisjemodřeačerveněvymalovanýapooboustran",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-02": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#5",
+      "quote": "Avšak já se peru porád, když mě nenechají.",
+      "match": "ozatočertivpeklešťouchalividlemiatobyneradpročežvneděliavesvátekkujepomstuvevšednídensepereakamenujeavšakjáseperuporádkdyžměnenechajínnkdyžjdeprocesídovambeřictakjsmerádiprotožemyklucisepakdámedohromadyačekámeažpůjdezpátkyužzdálkyjes",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-03": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#7",
+      "quote": "Až budu velký, tak budu porád cestovat a budu mít kožený kufr.",
+      "match": "epohrozímuprstemapravívyjedennnprotomámvlakrádževozícesťákyataképrotožezněhojestrozhleddošírékrajinyažbuduvelkýtakbuduporádcestovatabudumítkoženýkufrnnkdyžjsmesevyválelitakjsempravilkdosenejdřívosmělínnvšichnikřičelijáalenejdříveseosmělilédakemlinkt",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-04": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#2",
+      "quote": "Bejval Antonín odvětil, že by se ani trochu nebál, že by tam všecko sežral.",
+      "match": "jezastvojeataksejakorozdělímeocelývýkladitázaljsemsebejvalazdabysebálkdybyhonanoczavřelidocukrářstvíbejvalantonínodvětilžebyseanitrochunebálžebytamvšeckosežraljábysemsetakynebálatakybychvšeckosežralalenahřbitověbychsebáltamvjednomkusestrašíkdonaposledumřetakm",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-05": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#3",
+      "quote": "Přidal se k nám Zilvar z chudobince, protože viděl, že máme s sebou buchty.",
+      "match": "bejvalpovídaltedažejedobřeaťtyplánynakreslísámžeudělátakovývynálezzkázykterýmvšechnynepřátelezničínnpřidalseknámzilvarzchudobinceprotoževidělžemámesseboubuchtyamělkamenyvkapsáchaprakřeklžepřivedeještěvíchochůalebejvalodpovědělžejenásdostédamělpuškulevolvéraka",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-06": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#2",
+      "quote": "Od té doby, co se narodila Mančinka, dostal jsem kalhoty a tak jsem se stal doopravdy klukem.",
+      "match": "tojetvojesestřičkaavelelamněřeknipánbůhpožehnejjájsemtonechtělříciamaminkaleželavposteliabylanemocnáodtédobycosenarodilamančinkadostaljsemkalhotyatakjsemsestaldoopravdyklukemdopadlototedysemnoudobřekdyžbylanašemančinkadocelamalátakmělamístonosuknoflíkavěřtemnětonebonedovedl",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-07": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#4",
+      "quote": "Veškerá dědina lehla popelem a Éda Kemlink si propálil kalhoty a brečel, že takhle nemůže domů.",
+      "match": "naliabejvalpraviltakzvoňnapoplachačeněkjirsákzvonilataksisnámihrálačkolinikdonechtělabysisnámihrálnnveškerádědinalehlapopelemaédakemlinksipropálilkalhotyabrečelžetakhlenemůžedomůnnbejvalpravilkdotizatomůžemělsdávatpozornnédapravilvyjstemnenaváděliajátonavásřeknunnkdyžjsmešlidom",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-08": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#10",
+      "quote": "My totiž chodíme do houslí tři, já, Čenda Jirsáků a Éda Kemlink.",
+      "match": "eljsemdohouslíalešeljsemkjirsákomnnčendajirsákůužvědělžesejdenavosyatakydomapovídalžepůjdedohouslínnmytotižchodímedohouslítřijáčendajirsákůaédakemlinkvšichniseučímeupanarektorysecomáhudebníškolujirsákužpatřímezipokročiléžákyonumíuždvojhmatyacvičídruh",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-09": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#8",
+      "quote": "Myslím, že to byl Zilvar, jelikož se koukal jinam hned.",
+      "match": "aporádsehlásípročežkdyžjsmevycházeliztřídytakmuněkdopodrazilnohyaonbrečelbylotonamněalejájsemtonebylmyslímžetobylzilvarjelikožsekoukaljinamhnednnkdyžjsmesevyhrnulizeškolytakjsmemockřičeliamocjsmeutíkalijenompátakarelkráčelkdomovuslušnějelikožj",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-pol-10": {
+      "url": "https://cs.wikisource.org/wiki/Bylo_n%C3%A1s_p%C4%9Bt#6",
+      "quote": "Kdo má plavky, ten si oblékne plavky, Zilvar z chudobince nemá plavky, pročež se koupá jenom tak.",
+      "match": "eodvážíledahajnýkterýjestozbrojenpuškouakaždéhozlodějezastřelíaspoutanéhopřivedenaúřadabyužnekradlnnkdomáplavkytensioblékneplavkyzilvarzchudobincenemáplavkypročežsekoupájenomtakalesjásotemsevrhámedovodynntakjsmesetuhlešlikoupatkekloboukubylijsmečtyřijábejvalantonínédakemlinkaz",
+      "sourceSha256": "51a2a8d199fe2c1cf0730bf073918a9b4dc591f439735baba2c007a255a0e25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-01": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Posledn%C3%AD_soud",
+      "quote": "Protože všechno vím, nemohu vůbec soudit.",
+      "match": "aljsemseotoalečekalbychžebudetesouditvyjakožtojakožtojakožtobůhdokončilvelikýstařecaletojeprávětovíšprotoževšechnovímnemohuvůbecsoudittopřecenejdeženevíškuglerekdotětentokrátudalnevímřeklkuglerpřekvapenluckasklepniceudalatězežárlivost",
+      "sourceSha256": "6fbe93324ae8909fb166614b1f702c499196d07d78315c7208ec8c0ddf00c6f1",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-02": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/%C5%A0l%C3%A9p%C4%9Bje",
+      "quote": "Pane, nás nezajímá zločin, protože je záhadný, ale protože je zakázaný.",
+      "match": "epochvíližepolicieahlavnětihletajnísezajímajíozáhadymysevámvykašlemenazáhadynászajímajínepatřičnostipanenásnezajímázločinprotožejezáhadnýaleprotožejezakázanýmynehonímenějakéhotoholumpazintelektuálníhozájmumyhohonímeabychomhozatklivejménuzákonaposlouchejteme",
+      "sourceSha256": "e5e8c198537bdc675464af774dc4f12b31b9bf1243fdd66e76ba8aa8f361f5d3",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-03": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/B%C3%A1sn%C3%ADk",
+      "quote": "Víte, já nedávám vůbec na podrobnosti pozor.",
+      "match": "eltonevímřekljájsemsitohonevšimlnevzpomínátesinažádnoupodrobnostnaléhalmejzlíkkdepakdělbásníkupřímněvítejánedávámvůbecnapodrobnostipozortakprosímvásspustildrmejzlíkironickycojstetedyvůbecpozorovaltucelounáladupravilbásníkneurčitěvítetuo",
+      "sourceSha256": "bfcb288063b09154ccfd7b727487d5ea87cb7c499a0573993f4d04251fcef9e1",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-04": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/P%C5%99%C3%ADpad_Selvin%C5%AFv",
+      "quote": "Žádný ze svědků nebyl podroben křížovému výslechu.",
+      "match": "teprocestrvalvšehovšudypůldnefrankselvinprostětvrdilžejenevinenžebylnaprocházcepakšelrovnoudomůaspalžádnýzesvědkůnebylpodrobenkřížovémuvýslechuadvokátfrankůvtoserozumíexoffoprotožepaníselvinovánalepšíhoadvokátapenízenemělabyltakovýstarýdobráka",
+      "sourceSha256": "05843a548399f2aa49e337655c1df5d7a4ed0ecc26e89001873fd481be35bb67",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-05": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/P%C5%99%C3%ADpad_dr._Mejzl%C3%ADka",
+      "quote": "Čím víc na to myslím, tím míň do toho vidím.",
+      "match": "mtuhlejedenpřípadsekterýmsinevímradytakvenstímdělpandastychkohopaksetenpřípadtýkámnevzdychldrmejzlíkčímvícnatomyslímtímmíňdotohovidímposlouchejtečlověkbyseztohozblázniltakcovámkdoudělalptalsechlácholivěpandastychnikdovyhrkldrmejzlíkt",
+      "sourceSha256": "b0ac62fc5c9473ad711942ea40bfcddfe0bf2c6622e5982d571319be286101f5",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-06": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Jasnovidec",
+      "quote": "To je ten celý trik: mluvit tak, že by se v tom každý mohl poznat.",
+      "match": "ecříkalsemůžehoditnakaždéhodruhéhotojsoujentakovéobecnostikaždýčlověkjetaktrochukomediantaprospěchářtojetencelýtrikmluvittakžebysevtomkaždýmohlpoznattakjetorozhodlpanstátníarozevřevdeštníkubíralsedomůsvýmpravidelnýmenergickýmkrokemježíšikristebědova",
+      "sourceSha256": "ce60ae9e08f702e4770f29ea5c9d200572c2a4480adc843e22f8e8550b552fed",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-07": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Modr%C3%A1_chryzant%C3%A9ma",
+      "quote": "Dobrá, ráno nato byla první věc, že mi Klára zase přinesla pugét modrých chryzantém.",
+      "match": "ledatukaždéchalupyvokruhutříkilometrůrozdělímesenačtyřiskupinyvyjávášzahradníkamůjpomocníkvenclajetodobráránonatobylaprvnívěcžemiklárazasepřineslapugétmodrýchchryzantémpotomjsempropátralsvůjúsekvkaždéhospodějsempilteplépivojedlsyrečkyaptalselidípomodrýchchryzantémáchp",
+      "sourceSha256": "0275129e440911ba000f75ac65fd28f9edbbb3cfe9db1a21afd30045d869acf6",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-08": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/V%C4%9B%C5%A1tkyn%C4%9B",
+      "quote": "Za jednu guineu mají lidé právo na pořádnou věštbu.",
+      "match": "lejenavásžalobaževykládátekartyšpatněmilápanímyersovátojejakobystemístočokoládyprodávalatabulkyhlínyzajednuguineumajílidéprávonapořádnouvěštbuprosímvásjakmůžetevěštitkdyžtoneumíteněkteřílidésinestěžujíbránilasestarádámakoukejtesejájimprorokuj",
+      "sourceSha256": "8c706ee1e3840d2b71c6b4aafb70d58f750d1234d72c1087bc17543245e1c25f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-09": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Naprost%C3%BD_d%C5%AFkaz",
+      "quote": "To se tak někdy stane, když člověk píše víc dopisů, že je strčí do nepravých obálek.",
+      "match": "udceatakdáleakdyžtootevruavyndámjejílistvidímnadpisdrahýarturečlověčemněkleslyrucetaktadytokonečnějetosetakněkdystanekdyžčlověkpíševícdopisůžejestrčídonepravýchobálekviďmartičkotojehloupánáhodacoažmnějíhochubylolítožesemnětakvydaladorukounemyslisitoníkuméprvníhnutíb",
+      "sourceSha256": "602a7d76b190ae96347dcd2572603c6826b198787965a37766323444ec41ff3e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-kap-10": {
+      "url": "https://cs.wikisource.org/wiki/Pov%C3%ADdky_z_jedn%C3%A9_kapsy/Experiment_profesora_Rousse",
+      "quote": "Vy musíte říkat, co vás první napadne.",
+      "match": "ícímjáehmřeklplašekdyžtedynikdotakjásidovolímjaksipojďtesempřerušilhoamerikánvelitelskytadysisednětevymusíteříkatcovásprvnínapadnevynesmítepřemýšletvymusíteplácnoutmechanicallyanisámnevítecovyrozumíteprosímřeklochotněpokusnýmužtro",
+      "sourceSha256": "0f56f4de339244d46adeecb276ed17ab0257adf9883bc17956222d674c5baba8",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-tov-01": {
+      "url": "https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_2",
+      "quote": "Řekni sám, Bondy, co je největší problém moderní techniky?",
+      "match": "ižnovýzpůsobdrátůdožárovektonicnenítojsemnašeljentakmimochodemvíšjáuždvacetletpracujinaspalováníhmotřeknisámbondycojenejvětšíproblémmodernítechnikyobchodřeklprezidentajsiužženatvdovecodpovědělmarekavyskočilvzrušenžádnýobchodrozumíšspalovánídokonal",
+      "sourceSha256": "5bafb3d54d1770faa2b21d44f80c5ec3e0e4ae86700947109772c2f389f5d086",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-tov-02": {
+      "url": "https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_3",
+      "quote": "Spálíš jeden atom, a máš najednou plný sklep Absolutna.",
+      "match": "nadobrorozbiješvyletívenjakozeškatulkyjenajednoujakoodvázanývyvinesezhmotyjakosevyvinesvítiplynzuhlíspálíšjedenatomamášnajednouplnýsklepabsolutnatojetiúžasnéjaksetohnedrozprostranínnpočkejozvalsepanbondyřeknitoještějednoualepomalunnmyslisitedyop",
+      "sourceSha256": "d9bd35c7357bc3a801fc07b264b057f18ade3f5d83806750b1872d936b383204",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-tov-03": {
+      "url": "https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_30",
+      "quote": "Lidi mají nejdřív věřit v lidi, a to ostatní se už najde.",
+      "match": "eavidíšpřecezaniklikaždejvěřínasvýhovýbornýhopánabohaalenevěřídruhýmučlověkužetentakyvěříněcodobrýholidimajínejdřívvěřitvlidiatoostatníseužnajdetaktoříkápankuzendabajomínilpanbrychčlověksitřebamůžemysletžedruhávíraješpatnávíraalenemásimysletžet",
+      "sourceSha256": "3e0a7e44bb962477363acc8b54c19e87ee64fd03e776916ecb31ce23a0bb4584",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-tov-05": {
+      "url": "https://cs.wikisource.org/wiki/Tov%C3%A1rna_na_absolutno/Kapitola_30",
+      "quote": "Víte, čím větší věci někdo věří, tím vzteklejc pohrdá těma, co v ně nevěří.",
+      "match": "atnejasprostejapodvedenejchlaptojevpoliticeavevšomaprotosetoliklidínenáviděloapobiloozvalsepáterjoštvítečímvětšívěciněkdověřítímvzteklejcpohrdátěmacovněnevěříapřecenejvětšívírabybylavěřitvlidikaždejtomyslínáramnědobřeslidstvemalesjednímkaždýmčlověkemtonetebe",
+      "sourceSha256": "3e0a7e44bb962477363acc8b54c19e87ee64fd03e776916ecb31ce23a0bb4584",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-das-02": {
+      "url": "https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/1",
+      "quote": "Taková psí maminka, pánové, nemá snadný život: lidí je mnoho a všechny pokousat nemůže.",
+      "match": "níisestrážníkemadíksvéostražitostiabojovnostiuchránilasvéhojedináčkaodvšechúkladůnepřátelazlobysvětatakovápsímaminkapánovénemásnadnýživotlidíjemnohoavšechnypokousatnemůžetohodnekdydášeňkaslaviladesítidennívýročísvéhoživotapotkalajiprvnívelikáudálostkdyžseránoprobudilash",
+      "sourceSha256": "d589f7815e6c0279f1ff4ef6338cd2e973789d40dfdd0c771d9feb62d905e178",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-das-03": {
+      "url": "https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/2",
+      "quote": "Ale život štěněte je ukrutně složitý: teď zase mu rostou zuby.",
+      "match": "abyjizasenašlaadopočítalasevšechčtyřpravdaněkdysesvalíalenatoužjezařízenacelájakoválečekjensekutáletaleživotštěnětejeukrutněsložitýteďzasemurostouzubynejdřívbylyjakokrupičkyalenyčkonějakrostoudošpičekčímjsoušpičatějšítímmocnějipropukávdášeňcepotřebaz",
+      "sourceSha256": "5492a0b9e07513dc3523df21b0367f13dba2f4145ff597c0ce813871879386cb",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-das-04": {
+      "url": "https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/3",
+      "quote": "To byste, pánové, nevěřili, jak je takového štěněte všude plno.",
+      "match": "ucenidílemsevznášetdílemklástnohyopatrnějakonatenkémledučlověknikdynevíkdymutozoufalezakvičípodbotoutobystepánovénevěřilijakjetakovéhoštěnětevšudeplnovničemdášeňkanepočításezlouvůlíarůznýmiúkladyanástrahamitohotosvětatřikrátskočilapohlavědovodnínádrž",
+      "sourceSha256": "26a2ad19140eaa7dc55f3d05e2edeefad93984a23c92c90fb1ecb9063979a049",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-das-05": {
+      "url": "https://cs.wikisource.org/wiki/M%C4%9Bl_jsem_psa_a_ko%C4%8Dku/D%C3%A1%C5%A1e%C5%88ka_%C4%8Dili_%C5%BDivot_%C5%A1t%C4%9Bn%C4%9Bte/4",
+      "quote": "Víte, mládí rádo tak trochu přepíná.",
+      "match": "ravoumíruchceudělatkrůčekazatímjitovymrštíjakozprakuchceskočitamístotohoseboumrsknejakobyjivystřelilvítemládírádotaktrochupřepínádášeňkavlastněneběžíonotoběžísamoaneskáčeonojítoházíjejírychlostjerekordnízatřivteřinystačíporazithr",
+      "sourceSha256": "5ba09843af3ba18e24996ad73ffc72c0f434c60dd2c2ed2afc9df46615fef06e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-01": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_%C4%8Cechovi",
+      "quote": "Vizte, to je ta země, kterou jste hledali.",
+      "match": "dkudvidělidokrajepromluvilknimtaktojižsinebudemestýskatineboťjsmenašlikrajkdezůstanemeasídlazarazímeviztetojetazeměkteroujstehledaličastojsemvámonímluvilaslibovalževásdoníuvedutojetazemězaslíbenázvěřeaptákůplnámedemoplývajícínavšemb",
+      "sourceSha256": "245f273adb81bc799da8d9e5c7274dc08543fd61bd84e16a22490f87d08e68a2",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-02": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Krokovi_a_jeho_dcer%C3%A1ch",
+      "quote": "Krok pak českou zemí vládl, ji všecku soudil a moudrosti učil.",
+      "match": "adilsetamazůstalahradbyzaložilhnězdnojemužpomnožstvíorlíchhnízdtakpřezdělakrakovjejžposvémsynunazvalkrokpakčeskouzemívládljivšeckusoudilamoudrostiučiljsevojvodousídlilnabudčizaněhotubylaškolavnížučilbohoslužběstarýmzpěvůmivěštbámakouzlůmtehdamělikouz",
+      "sourceSha256": "fb0acbb6df9dbff030f66e8218dacf71dcbf5eb3ec13bc28e6df53d929d63c3c",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-03": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Bivoji",
+      "quote": "Tu nesu to zlé škodné zvíře, divokého kance z Kavčí hory.",
+      "match": "ninatěchschodechstálykněžnybivojvčelevšechmužůmajelítézvířenazádechpozdravillibušiijejísestruapraviltunesutozléškodnézvíředivokéhokancezkavčíhoryaťzhynepředtvýmaočimachcešlikdyžlibušekynulaaťsetakstanevzkřiklimužovékolemachystalimečeaoštěpynežbi",
+      "sourceSha256": "81e4b06fd4d46dfa1de103e19aca5c7a9fe2dde363f8b85733cfef7b24ef2a9e",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-04": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_Libu%C5%A1i",
+      "quote": "Můj kůň vás povede; za tím jeti neváhejte.",
+      "match": "eříbymužizestadicpředneslinačemzůstallidakněžnapromluvilaknimlibušenncestyhledatinebudeteanižseptátimůjkůňváspovedezatímjetineváhejtetenvásdovedeazpátkypřivedepravoucestoupředkterýmončlověkemsezastavíazařehcetenjestokterémjsemmluvila",
+      "sourceSha256": "919c85774624ce965f63c24b15843068c2570f6983f28ca36c7f8400440c9a7c",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-05": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_P%C5%99emyslovi",
+      "quote": "Kdybych byl mohl tuto roli doorati, byla by po všecky časy hojnost chleba.",
+      "match": "motevřelaahnedzasezavřelaženebyloponichanistopykposlůmpakpřemysltaktopromluvilželžejstetakránopřišlikdybychbylmohltutorolidooratibylabypovšeckyčasyhojnostchlebaaležejstesipospíšiliamněmédílopřerušilivěztežebudevzemičastobývatihladzatímjakobyzemědalasuchémuostn",
+      "sourceSha256": "da84683e952bf71de6fb1f3818d6515716d2025c765f484ad8879b97ed4d0a12",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-07": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/D%C3%ADv%C4%8D%C3%AD_v%C3%A1lka",
+      "quote": "Vše vedla Vlasta, někdy nejpřednější v družině Libušině.",
+      "match": "rudkýplamenvyšlehlztouhypovláděipomstěchopilysedívkymečealukuaneměřícesilzačalytuhýbojprotivšemmužůmvševedlavlastaněkdynejpřednějšívdružinělibušinětaprvníkbojivyzvalaprvnísezbraněchopilavšechnypaksdružilaakestavběpevnéhohradupřimělatenhradsizbudov",
+      "sourceSha256": "dace8c7d4606389ec38a6a8f774d73e4c521db2865b183ab98cb4f0f74be2e0c",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-08": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_K%C5%99esomyslu_a_Horym%C3%ADrovi",
+      "quote": "Skokem byl Horymír v stáji, kdež stál jeho nejmilejší kůň, Šemík.",
+      "match": "ýkřiknaobranunebyločasuhoufkovkopůhnalsejižkhrádkuapustýrykjehoblížilseletemnezbývalonicnežprchnoutiskokembylhorymírvstájikdežstáljehonejmilejšíkůňšemíkokamžikemhovyvedlosedlalajižpromluvivnaňtichéslovovyrazilbranouvendopolízhlédlihokřičelihnalisezaním",
+      "sourceSha256": "d6b83869fb9aa31b3281c24203e6b477c54ef5fd0fb856c79e2a63bd2299776c",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-09": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/O_kr%C3%A1li_Svatoplukovi",
+      "quote": "A více ho pak dvořané a nikdo již nespatřil.",
+      "match": "ělitukdyžtaradajižsvolalvesvémvojenskémleženínavečerskončenaodebralsesámzasmušilýasmutendosvéhostanuavícehopakdvořanéanikdojižnespatřilokolopůlnocivyšelzestanutostrážvidělavsedlnakoněustanupřivázanéhoajeltišespícímtáboremnikdosihonevši",
+      "sourceSha256": "773ce3566d452656de73ea6f06c046de556b53c21b4dcd95f7972f8dfb96888c",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-jir-10": {
+      "url": "https://cs.wikisource.org/wiki/Star%C3%A9_pov%C4%9Bsti_%C4%8Desk%C3%A9_%281959%29/Blani%C4%8Dt%C3%AD_ryt%C3%AD%C5%99i",
+      "quote": "Svatováclavské vojsko spí. Ještě není čas, aby vstalo.",
+      "match": "nvážněažzachmuřeněshlížínaosamělouodsvětlaodlehloukrajinuajakobytrudtesknédumynaněmavšudekolspočívalsvatováclavskévojskospíještěneníčasabyvstalotobudevechvílinejvětšíhonebezpečenstvíažsenanašivlastsesypetoliknepřátelžebycelékrálovstvírozneslina",
+      "sourceSha256": "e0a2cd92b4602b06ffa647fdb60cf63590c5da767c8379366f76e5d3aa4f93f2",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-02": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C3%9Avod",
+      "quote": "Jsou nepoznaní hrdinové, skromní, bez slávy a historie Napoleona.",
+      "match": "hovnavprazevydánopodle32vydáníprahačeskoslovenskýspisovatel1983licencepdold70velikádobažádávelkélidijsounepoznaníhrdinovéskromníbezslávyahistorienapoleonarozborjejichpovahyzastínilbyislávualexandramakedonskéhodnesmůžetepotkatvpražskýchulicíchošuměléhomuž",
+      "sourceSha256": "904f54eb63abe3e1acfcdd6080c5aa2a8de28475f47578d4c292e2f26a93eff8",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-04": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky",
+      "quote": "Ale disciplína na vojně musí být, jinak by si nikdo nedělal z ničeho nic.",
+      "match": "acetknoflíkůumundúruažemězavřelizatonačtrnáctdnídoajnclíkuadvadnijsemleželjakolazarsvázanejdokozelcealedisciplínanavojněmusíbýtjinakbysinikdonedělalzničehonicnášobrlajtnantmakovectennámvždyříkaldisciplínavyklucipitomímusíbejtjinakbystelezlijakovopicepostrome",
+      "sourceSha256": "baf21fb114a627694a0dd0442f858122e36bd125246fc9d8f96a0ae2f57c0273",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-05": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky",
+      "quote": "Pro nás živnostníky neplatí žádná politika.",
+      "match": "rkyobrátilsešvejknahostinskéhopalivcemášrádtypohanskýpsyviďženemášhostjakohostřeklpalivectřebasturekpronásživnostníkyneplatížádnápolitikazaplaťsipivoaseďvhospoděažvaňsicochceštojemojezásadajestlitotomunašemuferdinandoviudělalsrbneboturek",
+      "sourceSha256": "baf21fb114a627694a0dd0442f858122e36bd125246fc9d8f96a0ae2f57c0273",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-06": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/Zas%C3%A1hnut%C3%AD_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_do_sv%C4%9Btov%C3%A9_v%C3%A1lky",
+      "quote": "Zaplať si pivo a seď v hospodě a žvaň si, co chceš.",
+      "match": "mášrádtypohanskýpsyviďženemášhostjakohostřeklpalivectřebasturekpronásživnostníkyneplatížádnápolitikazaplaťsipivoaseďvhospoděažvaňsicochceštojemojezásadajestlitotomunašemuferdinandoviudělalsrbneboturekkatolíknebomohamedánanarchistanebomlad",
+      "sourceSha256": "baf21fb114a627694a0dd0442f858122e36bd125246fc9d8f96a0ae2f57c0273",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-07": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i",
+      "quote": "Soudní lékaři jsou lidi, a lidi mají svoje chyby.",
+      "match": "jkabychomsenavšechnodívalizpoctivějšístránkyvonsekaždýmůžezmejlitamusísezmejlitčímvíconěčempřemejšlísoudnílékařijsoulidialidimajísvojechybyjakojednouvnuslíchprávěumostupřesbotičpřišelkemněvnocijedenpánkdyžjsemsevracelodbanzetůapraštilměbej",
+      "sourceSha256": "0e0128c9abce24d4ac730f47c9c7c104d7e30872ebef152dcb2bcb3f1e5cb74f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-08": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i",
+      "quote": "To už je tak v přirozenosti lidský, že se člověk mejlí až do svý smrti.",
+      "match": "ítilsinamneapovídátohlejemejlkatonenívonadopálilsetaknatožesezmejlilžeměpřetáhnulještějednoupřeszádatoužjetakvpřirozenostilidskýžesečlověkmejlíaždosvýsmrtijakotenpánconašelvnocivzteklýhopsapolozmrzlýhoavzalhosseboudomůastrčilženědopostelejakmilesepesvohřá",
+      "sourceSha256": "0e0128c9abce24d4ac730f47c9c7c104d7e30872ebef152dcb2bcb3f1e5cb74f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-09": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_p%C5%99ed_soudn%C3%ADmi_l%C3%A9ka%C5%99i",
+      "quote": "„Já ho prosím nevážil,“ se svým milým úsměvem odpověděl Švejk.",
+      "match": "azákladěsystémudoktorapsychiatriekallersonadoktoraheverochaiangličanaweikingajestrádiumtěžšínežolovojáhoprosímnevážilsesvýmmilýmúsměvemodpovědělšvejkvěřítevkonecsvětanapředbychtenkonecsvětamuselvidětledabyleodvětilšvejkrozhodněsehoalezejtraještěnedo",
+      "sourceSha256": "0e0128c9abce24d4ac730f47c9c7c104d7e30872ebef152dcb2bcb3f1e5cb74f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-10": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu",
+      "quote": "Jsme biti jako žito, kam se podíváme, a proto mě volají na vojnu.",
+      "match": "oudělatbojovathrobovýmhlasemodpovědělšvejksrakouskemjetomocšpatnýnahořenámužlezounakrakovadoledouherjsmebitijakožitokamsepodívámeaprotoměvolajínavojnujájimpřecevčeračetlznovinžedrahouvlastvovinulynějakémrakyalevždyťsenemůžouhejbattonevadípanímüllerov",
+      "sourceSha256": "de50db0b50422a4ae46bbdcef96be99b9ce8d0e57f479700d5c67f978236abed",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-11": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu",
+      "quote": "„Odneste toho simulanta!“ řekl Bautze, když zjistil, že je muž mrtev.",
+      "match": "enáctitisícímukdybynebylatohošťastnéhočlověkaprávěvtomokamžikukdyžnaněhozařvalkehrteuchranilamrtviceodnestetohosimulantařeklbautzekdyžzjistilžejemužmrtevapřednímstálvtenpamátnýdenšvejkjakoostatnívplnénahotězakrývajecudněsvounahotuberlemiokteréseopíralda",
+      "sourceSha256": "de50db0b50422a4ae46bbdcef96be99b9ce8d0e57f479700d5c67f978236abed",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-12": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejk_jde_na_vojnu",
+      "quote": "Švejk šel o berlích a s hrůzou pozoroval, že jeho revmatismus začíná mizet.",
+      "match": "ovatelisledovýmklidemřekldenkerlsogleicheinsperrendvavojácisbajonetyodvádělišvejkadoposádkovévěznicešvejkšeloberlíchashrůzoupozorovalžejehorevmatismuszačínámizetpanímüllerovákteráčekalanahořenamostěsvozíkemnašvejkakdyžhovidělapodbajonetyzaplakalaaodešlaodvozíku",
+      "sourceSha256": "de50db0b50422a4ae46bbdcef96be99b9ce8d0e57f479700d5c67f978236abed",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-13": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze",
+      "quote": "Mašírovat pořád kupředu, tomu se říká anabaze.",
+      "match": "xenofónprošelceloumalouasiiabylbůhvíkdebezmapystařígótovédělalisvévýpravytakébeztopografickéznalostimašírovatpořádkupředutomuseříkáanabazeprodíratseneznámýmikrajinamibýtobklíčenýmnepřátelikteříčíhajínanejbližšípříležitostabytizakroutilikr",
+      "sourceSha256": "6fad1e13bea52fa541043d5281b70f019f79b811fe2556bedff4b6a033cba333",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-14": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze",
+      "quote": "Stejně vedou také všechny cesty do Českých Budějovic.",
+      "match": "ujinoucestouabyještěvíctohoužilydořímaadostalysetamtakéodtédobyseříkápatrněževšechnycestyvedoudořímastejněvedoutakévšechnycestydočeskýchbudějovicočemžbylplnouměroupřesvědčendobrývojákšvejkkdyžmístobudějovickéhokrajeuvidělvesnicemilevskéhošelvšak",
+      "sourceSha256": "6fad1e13bea52fa541043d5281b70f019f79b811fe2556bedff4b6a033cba333",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-sve-15": {
+      "url": "https://cs.wikisource.org/wiki/Osudy_dobr%C3%A9ho_voj%C3%A1ka_%C5%A0vejka_za_sv%C4%9Btov%C3%A9_v%C3%A1lky/%C5%A0vejkova_bud%C4%9Bjovick%C3%A1_anabaze",
+      "quote": "Všichni měli naději, že válka musí za měsíc, dva skončit.",
+      "match": "acestáchjeodtudzputiměastohžepatříjemunanocvždyspívestohuvčerajenašelvlesetakjevzalksobědosvéhostohuvšichnimělinadějiževálkamusízaměsícdvaskončitmělipředstavužerusovéužjsouzabudapeštíanamoravěvšeobecněsetovputimipovídákránuještěnežserozednípřine",
+      "sourceSha256": "6fad1e13bea52fa541043d5281b70f019f79b811fe2556bedff4b6a033cba333",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-mlo-01": {
+      "url": "https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Salamander-Syndicate",
+      "quote": "Musíme být básníky, chceme-li udržet svět v chodu.",
+      "match": "ítejakoorománuanopanemátepravdumneobchodzajímájakoumělcebezjistéhouměnípanenevymyslítenikdynicnovéhomusímebýtbásníkychcemeliudržetsvětvchodupotleskghbondyseuklonilpánovéslítostíuzavírámtukapitoluabychtakřeklvantochovskouvníjsmevyužilicovnás",
+      "sourceSha256": "d000d6f5cd08cb5d490a3f44ccc9fcf8b49b089db603c597f2abf4af40d0dcf1",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-mlo-02": {
+      "url": "https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Chief_Salamander_klade_po%C5%BEadavky",
+      "quote": "Potřebujeme jenom víc vody, víc břehů, víc mělčin pro svůj život.",
+      "match": "zkouškyvašetřaskavinyseosvědčilyděkujemevámhallovylidézachovejteklidnemámevůčivámnepřátelskýchúmyslůpotřebujemejenomvícvodyvícbřehůvícmělčinprosvůjživotjenáspřílišmnohoužpronásnenídostmístanavašichbřezíchprotomusímeodbouratvašepevninyudělámeznichsamézá",
+      "sourceSha256": "a4a958b38073489f40444bce4c2cbfcf0168949de1b73240f34b62ca95ddaca3",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-mlo-03": {
+      "url": "https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Chief_Salamander_klade_po%C5%BEadavky",
+      "quote": "Budete s námi pracovat na odbourání vašeho světa.",
+      "match": "sbychomnemohliodkliditstarépevninyhallovylidéchiefsalamandervámjménemvšechmlokůsvětanabízíspoluprácibudetesnámipracovatnaodbouránívašehosvětaděkujemevámunavenýchraptivýhlasumlknulabyloslyšetjentáhléhučeníjakostrojůnebomořehallohallovylidéozv",
+      "sourceSha256": "a4a958b38073489f40444bce4c2cbfcf0168949de1b73240f34b62ca95ddaca3",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-mlo-04": {
+      "url": "https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Pan_Povondra_to_bere_na_sebe",
+      "quote": "U nás to není, tak co; jen kdyby nebyla taková drahota!",
+      "match": "ovinydnesužsetotakneberehloubámelancholickypanpovondrapomalumrkajenadsvýmprutemzvyknesičlověkcodělatunástonenítakcojenkdybynebylatakovádrahotanapříkladcodneschtějízatokafepravdaonabrazílieužtakyzmizelavevlnáchjetopřecejenomvobchodechcítitkdyž",
+      "sourceSha256": "9136a96e8246de45cb43bab6b0ab528f434f71093862b5b583565d2680417e57",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-mlo-05": {
+      "url": "https://cs.wikisource.org/wiki/V%C3%A1lka_s_mloky/Pan_Povondra_to_bere_na_sebe",
+      "quote": "To je báječná výhoda, že my nemáme žádné mořské břehy, víš?",
+      "match": "dálužnetamjsouholenkusaméskályjátambylkdepaksemsemlocinedostanoumytomámedobréašvýcarjenatomtakydobřetojebáječnávýhodažemynemámežádnémořskébřehyvíškdomádnesmořejechudákalekdyžteďjdemořeažkdrážďanůmtamjsouněmciprohlásilstarýpánodmítavětojejejichvěc",
+      "sourceSha256": "9136a96e8246de45cb43bab6b0ab528f434f71093862b5b583565d2680417e57",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-zah-01": {
+      "url": "https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Jak_vznik%C3%A1_zahradn%C3%ADk",
+      "quote": "Proti všemu zdání zahradník se nerodí ze semene, výhonku, cibule, hlízy ani štupru, nýbrž vzniká zkušeností, okolím a přírodními podmínkami.",
+      "match": "drojčapekkarelzahradníkůvrokměljsempsaakočkukalendářměstskáknihovnavprazepdfvydáno1929licencepdold70protivšemuzdánízahradníksenerodízesemenevýhonkucibulehlízyaništuprunýbržvznikázkušenostíokolímapřírodnímipodmínkamidokudjsembylmalýměljsemkoteckézahraděpoměrvzpurnýbaiškodolibýprotožejsemmělzakázánošlapatpozáhonecha",
+      "sourceSha256": "884d1748e93546b733bab036672b8bb5fcdbb682b193149ced729cb4fa082d75",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-zah-02": {
+      "url": "https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Po%C5%BEehnan%C3%BD_d%C3%A9%C5%A1%C5%A5",
+      "quote": "Žádný zázrak slunce nevyrovná se zázraku požehnaného deště.",
+      "match": "ouanelibostízvoňtestříbrnépusinkykterýmižíznivázeměpřijímáúderkrůpějíhučletícízávojivodysmývajícívšežádnýzázraksluncenevyrovnásezázrakupožehnanéhodeštěběžzkalenávodičkostružkamizeměnapojazkypřižíznivouhmotuježnásvěznívšichnijsmevydechlitrávajáhlínamyv",
+      "sourceSha256": "ea4b96bc3bc5292eb1c1cad5cc5c8914e321c763c725ac59d7be2d6ad8411544",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-zah-03": {
+      "url": "https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/O_%C5%BEivot%C4%9B_zahradnick%C3%A9m",
+      "quote": "To pravé, to nejlepší je před námi.",
+      "match": "budeztohohlesmrčkustromjenkdybyužtěchdesetletbylozamnouchtělbychužvidětjakébudoutybřízkyzapadesátlettopravétonejlepšíjepřednámikaždýdalšírokpřidávzrůstuakrásyzaplaťpánbůhžeužzasebudemeorokdálcitovánozhttpscswikisourceorgwindexp",
+      "sourceSha256": "73bcd6ecef0818485f5fe0a3295ea59aa62f5f62cec8c7f9e1b25e653f1ddb1f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-zah-04": {
+      "url": "https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/P%C5%AFda",
+      "quote": "Říkám vám, zkrotit pár sáhů půdy je veliké vítězství.",
+      "match": "bitspeklýjíljakobypotichudýchalustupujepodrýčemkypřeasnápadnouochotouvdlanijeteplýapoddajnýjezkrocenříkámvámzkrotitpársáhůpůdyjevelikévítězstvíteďtuležídělnásypkáavlažnáchtělbysjiceloudrobitamnoutmeziprstyabysesujistilsvýmvítězstvímaniužnemysl",
+      "sourceSha256": "bd2d4df5e3c7363306988d88ac6fef6ed8f534d0e2afe6dc42e7f3ce35c9845f",
+      "reviewedAt": "2026-10-21"
+    },
+    "prose-zah-05": {
+      "url": "https://cs.wikisource.org/wiki/Zahradn%C3%ADk%C5%AFv_rok/Jak_se_zakl%C3%A1daj%C3%AD_zahr%C3%A1dky",
+      "quote": "Je to tak: čím horší neřád, tím víc se má k světu.",
+      "match": "loketzakořeněnoudozeměchcešlitovyrvatzezeměpřetrhnesetohnedukořínkunebotovezmesseboucelouhrouduhlínyjetotakčímhoršíneřádtímvícsemáksvětuzatímsetajemnoupřeměnouhmotzměnilyškvárycestičekvnejlepkavějšíanejmazlavějšíjíljakýjemožnosipředstav",
+      "sourceSha256": "249672bcdf85c50bcf68543ee53b58cebd1fba49d21232572104e8b7215a5f9c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-c9e1f1836b8c": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Liška srst změní, ale obyčejů nezmění.",
+      "match": "svémobdobíkaždáliškasvůjocaschválíliškupoocaselvaamedvědapopazouříchpoznášstaráliškatěžcesedáuštvatiliškasrstzměníaleobyčejůnezměnídobřevčasjiskruuhasitichcešlizlémuvcestujítinedejjiskřeohněmbýtihojnápíceplnýkrajáčkdolépekrmenlépet",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-dd041d0a21a3": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Stojaté vody hnijí.",
+      "match": "šíplnátruhlicenežliprázdnásednicedržsebřehunechcešliutonoutipodemletémubřehunevěřtichévodybřehyberoustojatévodyhnijíčímkdovícevodupijetímvícžízeňvsebelijeuvelkévoděvelkérybyvmalévoděmalérybybývajíčímjsouvodykalnějšít",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-62e7708f2f7d": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Trojnásobný provaz nesnadno se přetrhne.",
+      "match": "kukalívoduberanaporouněpoznáškaždýčápmásvůjčaskdosekprovazunarodívzemineshnijekdeprovaztenkýtusetrhátrojnásobnýprovaznesnadnosepřetrhnetopícíseislámysechytásílaislámulámezeslámynebudenežsekaninaazprknadrtinaslámasenehodíneždochomoutuak",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-e8d780776aa7": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Růži trhej, když kvete.",
+      "match": "rabecvhrstinežlizajícvchrastíčasrůžepřinášínevšudekderůžerostekopřivatakévyrůstážádnárůženeníbeztrnírůžitrhejkdyžkvetenemilovalibychomrůžitolikkdybypocelýrokkvetlanepouštějsebezveslanamořebřezovámetlavyhánídětizpeklažá",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-ef7a2e5be920": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Prázdný pytel nestojí.",
+      "match": "ítikdoplevysejemálonažnejinýsiljinýžnenehledejvesťávěmízelajezamízkytilýkadřítipřetočenástrunapraskáprázdnýpytelnestojíjsiobratnýjakosochorvpytlinešijpytelhedbávímjeststálýjakovodavpytlitystospraviljakosviněpytelovčičky",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-e01c0c7dc475": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Koně nekupuj ušima, ale očima.",
+      "match": "utinedávejbláznupaliciprotipalicineníšermudarovanémukoninazubysenedívejnarychlémkoninanámluvynejezdikoněnekupujušimaaleočimaschvácenýkůňnalomenýlukusmířenýpřítelvždyjsounejistichlivéhokoněnemášpřílišhnátikdomákoněsnadnokněmu",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-9a082078db25": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Ani kůň netáhne víc než může.",
+      "match": "dostávajítěžkojestdostatisesepsanakoněnesedejnakoněnespadneškdybykůňosvésílevědělžádnýbynaněmnesedělanikůňnetáhnevícnežmůžekůňkterýovsadobývánejméněhojíprotojetrhabydruhdruhastrhkdozapluhemklejezlésemenosejekdorádorábudebrz",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-84a1fb257f48": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Nebezpečno olejem oheň hasiti.",
+      "match": "prácedobřekonáanivůldvojísmrtíneumírákdosámvpecibývájinéhotamhledákdyžsevkamnechsvítídobřeunichdlítinebezpečnoolejemoheňhasitijdomutoodrukyjakoševcismůlapěškyjakozavozemnemášlikoněchoďpěškykdobývánakonibýváipodkoněmkůňmladývpe",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-d948cfb7a35e": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Víno není vinno, že se lidé opíjí.",
+      "match": "huďaožralcekdyžspínebuďdržsestaréhovínaapříteledobrévínoibezvěncevypijemkdobrémuvínunepotřebuješhrátvínonenívinnožeselidéopíjívejcednešníchlébvčerejšívínoloňskénejlepšípanskámilostavínovdřevěnékonviipřesnoczvětrajídobrévínonep",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-9c23bbeeb2ef": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Vinice nechce modlitby, ale motyky.",
+      "match": "dcevínavínuvítanýbezinkypřítelvínanepřítellidíbezinkykdovínokopátenpijevodukdovínopijemávelkýchzvonůvinicenechcemodlitbyalemotykykterýpánnasvévinicesejeobilítenisesvouvinicízkobylíkdybybylsvbartolomějsvmatoušebratrembylibychomšťa",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-bad02901ad71": {
+      "url": "https://cs.wikisource.org/wiki/Sb%C3%ADrka_p%C5%99%C3%ADslov%C3%AD,_po%C5%99ekadel_a_pr%C5%AFpov%C4%9Bd%C3%AD,_kter%C3%BDch_u%C5%BE%C3%ADv%C3%A1_n%C3%A1%C5%A1_lid_rolnick%C3%BD/P%C5%99%C3%ADslov%C3%AD_hospod%C3%A1%C5%99sk%C3%A1_v%C5%AFbec",
+      "quote": "Nehraď se plotem, ale přáteli.",
+      "match": "ěžkovlkemoratiránasezhojíaleslovoneslovodělámužekdenicneníaničertneberekdyžpánbůhdalzubydátakédohubynehraďseplotemalepřátelinapohyblivédřevoikozylezoulepšípřítelvraděnežkozavzahraděmladákozarádalížestarábereisesolničkoučíkoz",
+      "sourceSha256": "728a1ada07f57eb4483d7ae51bdbf1ca6f3a3d213ca18527bb38b1c495cff48c",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-891b77f6e398": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "S každým pěkně, s nemnohými důvěrně.",
+      "match": "íduškolstředníchbrnowiniker1883s142národníknihovnačeskérepublikylicencepdold70opatrnostinikdynezbýváskaždýmpěkněsnemnohýmidůvěrněvkaždévěcihleďkoncebědsekaždýchraňnežlipřijdounaňnepouštějsebezveslanamořekdomášskleněnoudušineházej",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-f1958e414934": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "V každé věci hleď konce.",
+      "match": "83s142národníknihovnačeskérepublikylicencepdold70opatrnostinikdynezbýváskaždýmpěkněsnemnohýmidůvěrněvkaždévěcihleďkoncebědsekaždýchraňnežlipřijdounaňnepouštějsebezveslanamořekdomášskleněnoudušineházejnajinéhokamenempole",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-d45f9b9ac9b9": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Nepouštěj se bez vesla na moře.",
+      "match": "opatrnostinikdynezbýváskaždýmpěkněsnemnohýmidůvěrněvkaždévěcihleďkoncebědsekaždýchraňnežlipřijdounaňnepouštějsebezveslanamořekdomášskleněnoudušineházejnajinéhokamenempolemáočilesušichovejsevšudejakslušívyjdedílonabílokdochcev",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-8f297c15e8fd": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Pole má oči, les uši: chovej se všude jak sluší.",
+      "match": "oncebědsekaždýchraňnežlipřijdounaňnepouštějsebezveslanamořekdomášskleněnoudušineházejnajinéhokamenempolemáočilesušichovejsevšudejakslušívyjdedílonabílokdochcevdoměškodyzbýtinedejjiskřeohněmbýtivizzasepředsebouuzříšzároveňzlejestivšechně",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-03df672625aa": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Kdo chce v domě škody zbýti, nedej jiskře ohněm býti.",
+      "match": "lanamořekdomášskleněnoudušineházejnajinéhokamenempolemáočilesušichovejsevšudejakslušívyjdedílonabílokdochcevdoměškodyzbýtinedejjiskřeohněmbýtivizzasepředsebouuzříšzároveňzlejestivšechněmvěřitiinikomudvěvěcivždyjsouhojnějšínežlimyslímenašeléta",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-1b83f09a60df": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Zároveň zle jest i všechněm věřiti, i nikomu.",
+      "match": "ichovejsevšudejakslušívyjdedílonabílokdochcevdoměškodyzbýtinedejjiskřeohněmbýtivizzasepředsebouuzříšzároveňzlejestivšechněmvěřitiinikomudvěvěcivždyjsouhojnějšínežlimyslímenašelétaanašechybykdonemávhlavěmusímítivnohoumyšjestmalézvířeanev",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-82b576c19bc9": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Dvě věci vždy jsou hojnější, nežli myslíme: naše léta a naše chyby.",
+      "match": "okdochcevdoměškodyzbýtinedejjiskřeohněmbýtivizzasepředsebouuzříšzároveňzlejestivšechněmvěřitiinikomudvěvěcivždyjsouhojnějšínežlimyslímenašelétaanašechybykdonemávhlavěmusímítivnohoumyšjestmalézvířeanevěříjednédířezajícvleseaonrožeňstrouženespouštějsesiln",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-2651565befb0": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Myš jest malé zvíře, a nevěří jedné díře.",
+      "match": "šechněmvěřitiinikomudvěvěcivždyjsouhojnějšínežlimyslímenašelétaanašechybykdonemávhlavěmusímítivnohoumyšjestmalézvířeanevěříjednédířezajícvleseaonrožeňstrouženespouštějsesilnicepronejistoupěšinkulépepozděnežlinikdykvapkymívajíhapkydí",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-631cb2842bc5": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Zajíc v lese, a on rožeň strouže.",
+      "match": "souhojnějšínežlimyslímenašelétaanašechybykdonemávhlavěmusímítivnohoumyšjestmalézvířeanevěříjednédířezajícvleseaonrožeňstrouženespouštějsesilnicepronejistoupěšinkulépepozděnežlinikdykvapkymívajíhapkydílokvapnéneníplatnélepšíje",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-e19811629700": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Nespouštěj se silnice pro nejistou pěšinku.",
+      "match": "šelétaanašechybykdonemávhlavěmusímítivnohoumyšjestmalézvířeanevěříjednédířezajícvleseaonrožeňstrouženespouštějsesilnicepronejistoupěšinkulépepozděnežlinikdykvapkymívajíhapkydílokvapnéneníplatnélepšíjednarozmyšlenánežlistoučiněnýchhorkéže",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-55448b172a1f": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Lepší jedna rozmyšlená, nežli sto učiněných.",
+      "match": "strouženespouštějsesilnicepronejistoupěšinkulépepozděnežlinikdykvapkymívajíhapkydílokvapnéneníplatnélepšíjednarozmyšlenánežlistoučiněnýchhorkéželezonejlépesekujecodnespropustíšzítranedohoníškdomákčemupříhodnýčasnechťnajinýnečekázasztrace",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-71c490e450c2": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Co dnes propustíš, zítra nedohoníš.",
+      "match": "dykvapkymívajíhapkydílokvapnéneníplatnélepšíjednarozmyšlenánežlistoučiněnýchhorkéželezonejlépesekujecodnespropustíšzítranedohoníškdomákčemupříhodnýčasnechťnajinýnečekázasztracenýčasnikdysenenavrátíčastopodvečerpláčekdosesmálzrána",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-f64007c6c608": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/Pravidla_opatrnosti_v_%C4%8Desk%C3%BDch_p%C5%99%C3%ADslov%C3%ADch",
+      "quote": "Večer ukáže, jaký den byl.",
+      "match": "kdomákčemupříhodnýčasnechťnajinýnečekázasztracenýčasnikdysenenavrátíčastopodvečerpláčekdosesmálzránavečerukážejakýdenbylokodosrdceoknonevšezlatocoseblyštícokohonepálítohonehascitovánozhttpscswikisourceorgwindexphptitleče",
+      "sourceSha256": "49343384db267da40db62940dda4198b5ffa02f30f216dc7c0ea136b02ccac1d",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-7f6dfbf5d948": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_domov%C4%9B_a_o_vlasti",
+      "quote": "Lepší doma krajíc chleba, než v cizině kráva celá.",
+      "match": "říduškolstředníchbrnowiniker1883s109národníknihovnačeskérepublikylicencepdold70všudedobředomanejlépelepšídomakrajícchlebanežvciziněkrávaceláotcovskézeměodumřialeneodcházejkdesekdozrodítamseihodíkdejestpenízbittamnejvícplatívcizímkrajiisokol",
+      "sourceSha256": "408a0f75df9ba616e01dc3c349cef0ca48959031e031b645bb7646f89b46fb5b",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-9480e2e1b60c": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_domov%C4%9B_a_o_vlasti",
+      "quote": "Kde se kdo zrodí, tam se i hodí.",
+      "match": "epdold70všudedobředomanejlépelepšídomakrajícchlebanežvciziněkrávaceláotcovskézeměodumřialeneodcházejkdesekdozrodítamseihodíkdejestpenízbittamnejvícplatívcizímkrajiisokolazavránumajíšpatnýptákkterýtrousídosvéhohnízdaživbuďvl",
+      "sourceSha256": "408a0f75df9ba616e01dc3c349cef0ca48959031e031b645bb7646f89b46fb5b",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-7d5b37d77f6c": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_domov%C4%9B_a_o_vlasti",
+      "quote": "Kde jest peníz bit, tam nejvíc platí.",
+      "match": "ejlépelepšídomakrajícchlebanežvciziněkrávaceláotcovskézeměodumřialeneodcházejkdesekdozrodítamseihodíkdejestpenízbittamnejvícplatívcizímkrajiisokolazavránumajíšpatnýptákkterýtrousídosvéhohnízdaživbuďvlastipřátelůmvzdajíčesťtvýmpop",
+      "sourceSha256": "408a0f75df9ba616e01dc3c349cef0ca48959031e031b645bb7646f89b46fb5b",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-af0af9be1852": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_domov%C4%9B_a_o_vlasti",
+      "quote": "V cizím kraji i sokola za vránu mají.",
+      "match": "žvciziněkrávaceláotcovskézeměodumřialeneodcházejkdesekdozrodítamseihodíkdejestpenízbittamnejvícplatívcizímkrajiisokolazavránumajíšpatnýptákkterýtrousídosvéhohnízdaživbuďvlastipřátelůmvzdajíčesťtvýmpopelůmkdosezavlastnířečstydíhod",
+      "sourceSha256": "408a0f75df9ba616e01dc3c349cef0ca48959031e031b645bb7646f89b46fb5b",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-c75c44fa54fd": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Kdo činí, co chce, utrpí, co nechce.",
+      "match": "eskáčítankaprodruhoutříduškolstředníchbrnowiniker1883s150národníknihovnačeskérepublikylicencepdold70kdočinícochceutrpíconechcecizíjměnístrachemohrazenosvojesvatoacizínejsvětějšíkaždávěczasvýmpánemkřičínašelaneohlásiljakbyukrad",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-c21ec56b73df": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Cizí jmění strachem ohrazeno.",
+      "match": "kolstředníchbrnowiniker1883s150národníknihovnačeskérepublikylicencepdold70kdočinícochceutrpíconechcecizíjměnístrachemohrazenosvojesvatoacizínejsvětějšíkaždávěczasvýmpánemkřičínašelaneohlásiljakbyukradlradějineslibovatinežslov",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-61b4a715159a": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Svoje svato, a cizí nejsvětější.",
+      "match": "83s150národníknihovnačeskérepublikylicencepdold70kdočinícochceutrpíconechcecizíjměnístrachemohrazenosvojesvatoacizínejsvětějšíkaždávěczasvýmpánemkřičínašelaneohlásiljakbyukradlradějineslibovatinežslovunedostáliponitiklubkasedo",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-40c04f1b3af6": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Každá věc za svým pánem křičí.",
+      "match": "republikylicencepdold70kdočinícochceutrpíconechcecizíjměnístrachemohrazenosvojesvatoacizínejsvětějšíkaždávěczasvýmpánemkřičínašelaneohlásiljakbyukradlradějineslibovatinežslovunedostáliponitiklubkasedoviješpomstainachromémdoj",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-1fb5bdd0bb27": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Našel a neohlásil, jakby ukradl.",
+      "match": "dočinícochceutrpíconechcecizíjměnístrachemohrazenosvojesvatoacizínejsvětějšíkaždávěczasvýmpánemkřičínašelaneohlásiljakbyukradlradějineslibovatinežslovunedostáliponitiklubkasedoviješpomstainachromémdojedecosevlečeneutečelepšíků",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-0c96214c5a9f": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Pomsta i na chromém dojede.",
+      "match": "věczasvýmpánemkřičínašelaneohlásiljakbyukradlradějineslibovatinežslovunedostáliponitiklubkasedoviješpomstainachromémdojedecosevlečeneutečelepšíkůrkavpokojinežlibochníkvrozbrojidobrésvědomínadevšeckojměnízlésvědomíustavičná",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-3ab773da4703": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Lepší kůrka v pokoji, nežli bochník v rozbroji.",
+      "match": "yukradlradějineslibovatinežslovunedostáliponitiklubkasedoviješpomstainachromémdojedecosevlečeneutečelepšíkůrkavpokojinežlibochníkvrozbrojidobrésvědomínadevšeckojměnízlésvědomíustavičnápopravakdozlésvědomímáhadazaňadrychovásvámyslpekloiráj",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-a2d141cd65d6": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Dobré svědomí nade všecko jmění.",
+      "match": "áliponitiklubkasedoviješpomstainachromémdojedecosevlečeneutečelepšíkůrkavpokojinežlibochníkvrozbrojidobrésvědomínadevšeckojměnízlésvědomíustavičnápopravakdozlésvědomímáhadazaňadrychovásvámyslpekloirájnamoustřechuházíanajehopadá",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-a0ed9dea6834": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Zlé svědomí ustavičná poprava.",
+      "match": "stainachromémdojedecosevlečeneutečelepšíkůrkavpokojinežlibochníkvrozbrojidobrésvědomínadevšeckojměnízlésvědomíustavičnápopravakdozlésvědomímáhadazaňadrychovásvámyslpekloirájnamoustřechuházíanajehopadáčiňcojestpravéhonebojsežád",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-ed55c6243dce": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_pr%C3%A1v%C4%9B_a_sv%C4%9Bdom%C3%AD",
+      "quote": "Čiň, co jest pravého, neboj se žádného.",
+      "match": "zlésvědomíustavičnápopravakdozlésvědomímáhadazaňadrychovásvámyslpekloirájnamoustřechuházíanajehopadáčiňcojestpravéhonebojsežádnéhocitovánozhttpscswikisourceorgwindexphptitlečeskáčítankaprodruhoutříduškolstředníchčeskápříslovíopráv",
+      "sourceSha256": "9de8488a8251d566a46dad9cf5e580cb7ed39e1790e54662c98aa726bd9476c8",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-44c040cd9fc3": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_zdrav%C3%AD,_st%C5%99%C3%ADdmosti_a_spr%C3%A1v%C4%9B_%C5%BEivota,_o_mladosti_a_starosti",
+      "quote": "Zdraví na všecko vystačí.",
+      "match": "áčítankaprodruhoutříduškolstředníchbrnowiniker1883s125126národníknihovnačeskérepublikylicencepdold70zdravínavšeckovystačíprostěližiješstaletdožiješsladkostisenedobírejaždohořkostiveselámyslpůlzdravínemůžekaždýstkvostnýodě",
+      "sourceSha256": "dd7d6d03cade07fe6b17078f3de3367673cd8bc78ba561539ea9acf2ab18e844",
+      "reviewedAt": "2026-10-21"
+    },
+    "proverb-archive-c7a194c57538": {
+      "url": "https://cs.wikisource.org/wiki/%C4%8Cesk%C3%A1_%C4%8D%C3%ADtanka_pro_druhou_t%C5%99%C3%ADdu_%C5%A1kol_st%C5%99edn%C3%ADch/%C4%8Cesk%C3%A1_p%C5%99%C3%ADslov%C3%AD_o_zdrav%C3%AD,_st%C5%99%C3%ADdmosti_a_spr%C3%A1v%C4%9B_%C5%BEivota,_o_mladosti_a_starosti",
+      "quote": "Prostě-li žiješ, sta let dožiješ.",
+      "match": "uškolstředníchbrnowiniker1883s125126národníknihovnačeskérepublikylicencepdold70zdravínavšeckovystačíprostěližiješstaletdožiješsladkostisenedobírejaždohořkostiveselámyslpůlzdravínemůžekaždýstkvostnýoděvmítialečistěmůžekaždýchod",
+      "sourceSha256": "dd7d6d03cade07fe6b17078f3de3367673cd8bc78ba561539ea9acf2ab18e844",
+      "reviewedAt": "2026-10-21"
+    }
+  }
+}

@@ -24,7 +24,7 @@ const context=vm.createContext({console,Date:Clock,Intl,Math,JSON,Map,Set,Promis
   localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},
   setInterval(){},setTimeout,clearTimeout,
   document:{hidden:false,getElementById:node,querySelectorAll:()=>[],createElement:t=>node(t+Math.random()),createDocumentFragment:()=>node('fragment'+Math.random()),
-    addEventListener(k,f){events.set(k,f);},dispatchEvent(){},body:{append(){}}},
+    addEventListener(k,f){const before=events.get(k);events.set(k,e=>{before?.(e);f(e);});},dispatchEvent(){},body:{append(){}}},
   window:{addEventListener(){}},location:{origin:'https://synthetic.test',pathname:'/',href:'https://synthetic.test/'},history:{replaceState(){}}});
 
 const protectedData=new Map([
@@ -41,7 +41,7 @@ context.fetch=()=>{throw new Error('The sample must never send a network request
 const html=await readFile(new URL('../public/ukazka.html',import.meta.url),'utf8');
 const headers=await readFile(new URL('../public/_headers',import.meta.url),'utf8');
 const scripts=[...html.matchAll(/<script id="septanda-([^"]+)">([\s\S]*?)<\/script>/g)];
-assert.equal(scripts.length,10,'The sample has only local game modules');
+assert.equal(scripts.length,11,'The sample has only local game modules');
 assert.ok(!scripts.some(([,name])=>['supabase-sdk','cloud','community','leaderboard'].includes(name)));
 assert.ok(html.includes('Cvičné body i výsledky'));
 assert.ok(html.includes('href="./">Zpět do mé hry'));
