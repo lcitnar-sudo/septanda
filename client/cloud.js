@@ -7,6 +7,15 @@
   const endpoint = name => '/.netlify/functions/' + name;
   const date = value => value ? new Intl.DateTimeFormat('cs-CZ', {dateStyle:'medium',timeStyle:'short'}).format(new Date(value)) : '—';
   function open(id) { if (!$(id).open) $(id).showModal(); }
+  function closeLogin() {
+    const wasOpen = $('player-dialog').open;
+    $('player-password').value = '';
+    if (wasOpen) $('player-dialog').close();
+    return wasOpen;
+  }
+  function focusGame() {
+    if (!$('guess-form').hidden && !$('guess').hidden) $('guess').focus?.({preventScroll:true});
+  }
   function stateSignature(state = Game.exportState()) { return JSON.stringify(state); }
   function notice(message) { $('cloud-status').textContent = message; if($('sync-chip'))$('sync-chip').textContent=message; }
   function translate(error) {
@@ -60,11 +69,11 @@
     $('signup-confirmation').focus?.();
   }
   function renderAccount() {
-    const account = profile?.account;
-    $('header-login').hidden = !!account; $('header-register').hidden = !!account; $('header-profile').hidden = !account;
-    $('header-player-name').textContent = account?.name || ''; $('header-account-label').textContent = 'Můj účet';
-    $('leaderboard-join').textContent = account ? 'Můj účet' : 'Uložit postup';
-    $('header-profile').setAttribute('aria-label', account ? 'Můj účet: ' + account.name : 'Můj účet');
+    const account = profile?.account, authenticated = !!session?.user;
+    $('header-login').hidden = authenticated; $('header-register').hidden = authenticated; $('header-profile').hidden = !authenticated;
+    $('header-player-name').textContent = account?.name || (authenticated ? 'Hráčský účet' : ''); $('header-account-label').textContent = account ? 'Můj účet' : 'Znovu připojit';
+    $('leaderboard-join').textContent = authenticated ? (account ? 'Můj účet' : 'Znovu připojit účet') : 'Uložit postup';
+    $('header-profile').setAttribute('aria-label', account ? 'Můj účet: ' + account.name : 'Znovu připojit hráčský účet');
     $('profile-admin').hidden = !profile?.admin;
     $('profile-pending-export').hidden = !Game.pendingBackup?.();
     if (!account) return;
@@ -153,6 +162,10 @@
       applying = true; Game.setAccount(null, {importGuest:false}); applying = false; profile = null;
       $('profile-dialog').close(); $('admin-dialog').close(); $('admin-users').replaceChildren(); $('admin-audit-list').replaceChildren(); renderAccount(); refreshBoard(); return;
     }
+    const continuePlaying = closeLogin();
+    document.documentElement?.classList.add('restoring-account');
+    if ($('session-wait')) { $('session-wait').textContent = 'Načítám tvou hru…'; $('session-wait').hidden = false; }
+    renderAccount();
     applying=true;Game.setAccount(session.user.id,{importGuest:false});applying=false;try{localStorage.setItem('septanda.session-present','1');}catch(_){}
     try {
       const result = await api('player');
@@ -167,14 +180,15 @@
         apply({...result,state:merged.state},true);
       } else apply(result, !hasProgress(cached));
       ready = true;document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;
-      $('player-dialog').close();
+      closeLogin(); if (continuePlaying) focusGame();
       notice(result.state ? 'Postup je propojený s účtem.' : 'Účet je připravený. Nové hry se budou ukládat.');
       if (hasProgress(cached)) await sync(true);
       if(pendingBackup)notice('Na jiném zařízení je už uložená odlišná sada. Místní tipy máš zachované v záloze ke stažení v Můj účet.');
       // Prázdný nový účet se neodesílá: hráč může nejprve výslovně přidat starý postup.
       refreshBoard();
     } catch (error) {
-      document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;notice('Hra zůstává uložená v tomto prohlížeči. Čeká na připojení. '+translate(error)); $('leaderboard-status').textContent = translate(error);
+      document.documentElement?.classList.remove('restoring-account');if($('session-wait'))$('session-wait').hidden=true;renderAccount();notice('Jsi přihlášený. Postup je zatím uložený v tomto prohlížeči. Čeká na připojení. '+translate(error)); $('leaderboard-status').textContent = translate(error);
+      if (continuePlaying) focusGame();
       $('player-message').textContent = 'Přihlášení proběhlo, ale účet se nepodařilo načíst. Zkus obnovit stránku. ' + translate(error);
     }
   }
@@ -219,8 +233,11 @@
     $('mode-login').addEventListener('click', () => setMode('login')); $('mode-register').addEventListener('click', () => setMode('register'));
     $('signup-login').addEventListener('click', () => setMode('login'));
     $('header-login').addEventListener('click', () => openPlayer()); $('header-register').addEventListener('click', () => openPlayer('register'));
-    const showProfile = () => { renderAccount(); open('profile-dialog'); };
-    $('header-profile').addEventListener('click', showProfile); $('leaderboard-join').addEventListener('click', () => profile ? showProfile() : openPlayer('register'));
+    const showProfile = () => {
+      if (!ready || !profile?.account) return session ? loadAccount(session) : openPlayer();
+      renderAccount(); open('profile-dialog');
+    };
+    $('header-profile').addEventListener('click', showProfile); $('leaderboard-join').addEventListener('click', () => session ? showProfile() : openPlayer('register'));
     $('leaderboard-refresh').addEventListener('click', refreshBoard); $('player-forgot').addEventListener('click', () => setMode('reset'));
     $('player-form').addEventListener('submit', async event => {
       event.preventDefault(); if (signing) return;
@@ -303,7 +320,7 @@
       if (event === 'PASSWORD_RECOVERY') setTimeout(() => open('recovery-dialog'),0);
       if (authAction) return;
       if (event === 'TOKEN_REFRESHED' && nextSession?.user.id === session?.user.id) { session = nextSession; if (!ready) setTimeout(resume,0); return; }
-      if (event === 'SIGNED_IN' && nextSession?.user.id === session?.user.id && ready) { session = nextSession; return; }
+      if (event === 'SIGNED_IN' && nextSession?.user.id === session?.user.id && ready) { session = nextSession; if (closeLogin()) focusGame(); return; }
       setTimeout(() => loadAccount(nextSession),0);
     });
     const {data,error} = await sdk.auth.getSession();
