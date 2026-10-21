@@ -1996,3 +1996,67 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 @media(max-width:600px){.experience-toolbar{gap:10px;font-size:12px}.guess-actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:10px}.guess-actions .primary-button{grid-column:1/-1}.guess-actions button{white-space:normal;font-size:11px;padding:12px}.form-bottom{flex-direction:column;align-items:stretch}.meaning-option{font-size:15px;line-height:1.5}.daily-recap{padding:20px}.entry-actions{align-items:stretch;gap:14px}.notebook-entry .secondary-button{width:100%}.notebook-entry blockquote{font-size:22px}.compact-intro #intro-title{font-size:29px}.reveal-quotation{font-size:24px}dialog{max-width:calc(100vw - 24px);box-sizing:border-box}.source-links a{overflow-wrap:anywhere}}
 
 .practice-unavailable .game-layout,.practice-unavailable .introduction,.practice-unavailable #practice-reset{display:none!important}
+
+/* The overview and answer controls share the game's paper and grid rhythm. */
+.experience-panel { margin: 0 0 38px; padding: 0 24px 20px; border: 1px solid #bdc2b2; background: #eeeee3; }
+.experience-status { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.experience-status .sync-chip { margin: 0; font-size: 11px; line-height: 1.5; }
+.experience-status .text-button { flex: 0 0 auto; font-size: 11px; padding: 5px 0 5px 12px; }
+.experience-toolbar { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr) minmax(130px, .8fr); align-items: stretch; gap: 24px; margin: 18px 0 0; }
+.journal-button { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 5px; padding: 0; text-align: left; }
+.journal-button > span, .daily-metrics > div > span, .weekly-metric > span { display: block; font: 500 9px/1.5 var(--mono); letter-spacing: .025em; color: var(--muted); }
+.journal-button strong { font: 700 24px/1.2 var(--display); }
+.journal-button strong span { display: inline-block; margin-left: 10px; color: var(--oxide); font: 18px/1 var(--sans); }
+.journal-button:hover strong { color: var(--oxide); }
+.daily-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.daily-metrics > div, .weekly-metric { border-left: 1px solid var(--line); padding-left: 22px; }
+.daily-metrics strong, .weekly-metric strong { display: block; margin-top: 5px; font: 500 25px/1.2 var(--mono); letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
+.daily-metrics strong small, .weekly-metric strong small { font: 400 11px/1.5 var(--mono); color: var(--muted); letter-spacing: 0; white-space: nowrap; }
+.restoring-account .experience-panel { visibility: hidden; }
+.practice-page .experience-panel { display: none!important; }
+
+#guess { border: 1px solid #a1aa98; border-radius: 0; background: #f1f0e6; color: var(--ink); font: 400 16px/1.5 var(--sans); appearance: none; }
+#guess::placeholder { color: #767d6e; opacity: 1; font-size: 14px; }
+#guess:focus { outline: none; border-color: var(--ink); box-shadow: inset 3px 0 0 var(--oxide); }
+#guess-form .form-bottom { display: block; margin-top: 12px; }
+#guess-form #input-help { margin: 0 0 18px; font-size: 11px; line-height: 1.6; }
+#input-help .keyboard-tip { font-size: 10px; }
+.guess-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr) minmax(0, 1.5fr); gap: 12px; width: 100%; align-items: stretch; }
+.guess-actions > button, .guess-actions #give-up { display: inline-flex; align-items: center; justify-content: center; min-width: 0; min-height: 48px; margin: 0; padding: 12px 14px; font: 500 10px/1.5 var(--mono); text-align: center; white-space: normal; }
+.guess-actions .primary-button { gap: 18px; }
+.guess-actions .secondary-button { border: 1px solid #adb4a4; background: transparent; color: var(--ink); }
+.guess-actions .secondary-button:hover:not(:disabled) { border-color: var(--ink); background: #e8e9dc; }
+#skip-help { max-width: 65ch; margin-top: 14px; }
+
+.leaderboard-section .progress-header { gap: 12px; align-items: center; }
+.leaderboard-section .progress-header h2 { flex: 1; margin: 0; white-space: nowrap; line-height: 1.2; }
+.leaderboard-refresh { flex: 0 0 auto; min-width: 44px; min-height: 36px; padding: 8px 0 8px 8px; font-size: 10px; }
+.leaderboard-description { margin: 10px 0 18px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.leaderboard-period { margin-top: 0; }
+
+@media (max-width: 1080px) {
+  .experience-toolbar { grid-template-columns: 1fr 2.2fr; gap: 20px; }
+  .weekly-metric { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 16px; border-left: 0; border-top: 1px solid var(--line); padding: 12px 0 0; }
+  .weekly-metric strong { margin: 0; font-size: 18px; }
+  .guess-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guess-actions .primary-button { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .experience-panel { padding: 0 16px 16px; margin-bottom: 34px; }
+  .experience-status { gap: 10px; }
+  .experience-status .sync-chip { font-size: 10px; }
+  .experience-status .text-button { font-size: 10px; }
+  .experience-toolbar { grid-template-columns: 1fr; gap: 16px; margin-top: 14px; }
+  .journal-button { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; min-height: 32px; }
+  .journal-button strong { font-size: 22px; }
+  .daily-metrics { gap: 10px; }
+  .daily-metrics > div { padding-left: 12px; }
+  .daily-metrics > div:first-child { border-left: 0; padding-left: 0; }
+  .daily-metrics strong { font-size: 23px; }
+  .daily-metrics > div > span { font-size: 8px; letter-spacing: 0; }
+  .weekly-metric { padding-top: 12px; }
+  .guess-actions > button, .guess-actions #give-up { min-height: 52px; padding: 12px 10px; }
+  .guess-actions .primary-button { min-height: 48px; }
+  #guess-form #input-help { margin-bottom: 16px; }
+  .leaderboard-section .progress-header h2 { font-size: 26px; }
+}
