@@ -2060,3 +2060,8 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
   #guess-form #input-help { margin-bottom: 16px; }
   .leaderboard-section .progress-header h2 { font-size: 26px; }
 }
+
+/* A single question heading and explicit instructions for anonymous sayings. */
+.puzzle-meta > div { align-self: center; }
+#input-help .folk-answer-help { display: block; margin-top: 8px; color: var(--ink); font-size: 12px; line-height: 1.6; max-width: 65ch; }
+#input-help .keyboard-tip { display: block; margin-top: 6px; }

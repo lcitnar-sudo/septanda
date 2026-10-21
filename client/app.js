@@ -146,6 +146,7 @@
     $('guess').placeholder=author?'Napiš jméno autora':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
     $('guess-instructions').textContent=author?'Stačí příjmení nebo celé jméno. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
+    $('folk-answer-help').hidden=!author||isMeaning();
     $('hint-clue').querySelector('small').textContent=isMeaning()?'Souvislost, dvě možnosti a vysvětlení.':author?'Souvislost, pramen a čtyři osobnosti.':'Od významu ke konkrétnímu obrazu.';
     $('message-label').textContent=isMeaning()?'JAK ROZUMÍŠ TĚMTO SLOVŮM?':author?'ČÍ JSOU TATO SLOVA?':'ZACHYCENÁ ZPRÁVA';
     $('rules-author').hidden=!author;$('rules-classic').hidden=author;
