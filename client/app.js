@@ -143,7 +143,7 @@
     $('intro-copy').hidden=!author;
     $('history-access').hidden=!Object.keys(state.archivedDays||{}).length;
     $('classic-history-content').innerHTML=Object.entries(state.archivedDays||{}).sort(([a],[b])=>b.localeCompare(a)).map(([date,old])=>archiveGroup(Daily.displayDate(date),old.ids,old.progress)).join('') || '<p>V původní sadě zatím nebyly odeslané žádné tipy ani zakoupené nápovědy.</p>';
-    $('guess').placeholder=mode()==='author-v2'?'Jméno autora nebo mluvčího':author?'Jméno autora nebo lidový původ':'Tvůj tip na původní znění';
+    $('guess').placeholder=author?'Napiš jméno autora':'Tvůj tip na původní znění';
     $('guess-label').textContent=$('guess').placeholder;$('guess').maxLength=author?120:400;
     $('guess-instructions').textContent=author?'Stačí příjmení nebo celé jméno. Diakritiku neřeš.':'Na čárkách ani diakritice nezáleží.';
     $('hint-clue').querySelector('small').textContent=isMeaning()?'Souvislost, dvě možnosti a vysvětlení.':author?'Souvislost, pramen a čtyři osobnosti.':'Od významu ke konkrétnímu obrazu.';
@@ -157,6 +157,7 @@
   function render() {
     const p = currentPuzzle(), r = roundFor(), t = totals(), index = puzzles.indexOf(p);
     renderMode();
+    $('experience-panel').hidden = !hasAccount() || !!globalThis.SEPTANDA_PRACTICE || !!globalThis.SEPTANDA_DEMO;
     $('balance-control').hidden = !hasAccount();
     $('balance').textContent = hasAccount() ? t.points : '';
     $('edition-date').textContent = new Intl.DateTimeFormat('cs-CZ', {timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric'}).format(new Date(activeDate + 'T12:00:00Z'));
