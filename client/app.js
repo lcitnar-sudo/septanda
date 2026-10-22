@@ -206,7 +206,7 @@
     }
     $('hint-options').hidden=isMeaning()||!(isAuthor() && r.hints.includes('clue') && (r.hintLevel||1)>=3);
     $('hint-options').innerHTML=$('hint-options').hidden?'':globalThis.SeptandaAuthors.options(p,mode()).map(o=>`<button type="button" class="secondary-button author-option" data-author-choice="${escape(o.id)}" ${r.status!=='playing'||skipBusy?'disabled':''}>${escape(o.label)}</button>`).join('');
-    $('hint-status').textContent = r.status !== 'playing' ? (isAuthor()?'Příběh a původ najdeš pod výrokem.':'Celý řetězec je teď přístupný pod výrokem.') : r.hints.length ? `Stopa ${r.hintLevel||1} ze 3. Další už stojí 0 bodů.` : t.points < COST.clue ? 'Na stopy teď body nestačí.' : 'Za 50 bodů odemkneš všechny tři. Otevíráš je postupně.';
+    $('hint-status').textContent = r.status !== 'playing' ? (isAuthor()?'Příběh a původ najdeš pod výrokem.':'Celý řetězec je teď přístupný pod výrokem.') : r.hints.length ? (r.hintLevel||1)>=3 ? 'Všechny tři stopy jsou otevřené.' : `Stopa ${r.hintLevel||1} ze 3. Další je zdarma.` : t.points < COST.clue ? 'Na stopy teď body nestačí.' : 'Platíš jednou. Tři stopy otevíráš postupně.';
     renderTransmissions(p,r,t);
     $('give-up').hidden = r.status !== 'playing';
     $('give-up').disabled = skipBusy || !isAuthor()&&t.points<Daily.skipCost;

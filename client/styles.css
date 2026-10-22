@@ -2247,3 +2247,36 @@ footer .text-button { font-size: 12px; }
   .guess-actions { column-gap: 10px; }
   .guess-actions .secondary-button, .guess-actions #give-up { font-size: 11px; }
 }
+
+/* The game sidebar contains guidance; secondary information opens on demand. */
+.side-column .mascot-guide { flex-direction: row; align-items: center; gap: 12px; margin: 0 0 22px; }
+.side-column .mascot-guide img { flex: 0 0 72px; width: 72px; height: 88px; }
+.side-column .mascot-guide .mascot-name { font-size: 21px; }
+.side-column .mascot-guide p { font-size: 12px; line-height: 1.55; }
+.side-column .hint-section { padding-bottom: 16px; }
+.side-column .hint-status { padding-top: 10px; }
+.side-links { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding-top: 10px; border-top: 1px solid var(--line); }
+.side-links .text-button { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; padding: 10px 0; text-align: left; color: var(--muted); font: 400 12px/1.5 var(--sans); }
+.side-links .text-button:hover { color: var(--ink); }
+.side-links .text-button span { font-size: 15px; }
+.board-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+.board-heading h2 { margin-bottom: 0; }
+.board-heading .leaderboard-refresh { flex: 0 0 auto; }
+.board-period { margin: 8px 0 0; color: var(--muted); font: 400 11px/1.5 var(--mono); }
+#leaderboard-dialog .leaderboard-description { margin-bottom: 24px; }
+#leaderboard-status:empty { display: none; }
+#leaderboard-dialog .leaderboard-note { margin-top: 14px; }
+#collection-dialog .collection-progress { margin: 20px 0 16px; padding: 16px 0; border: 0; }
+#collection-dialog .collection-progress .progress-header { font-size: 12px; }
+#collection-dialog #solved-count { font: 500 14px/1.5 var(--mono); }
+#collection-dialog .collection-progress > p { font-size: 12px; margin: 10px 0 0; }
+#rules-dialog .goal-note { margin: 22px 0; padding: 16px 0 0; }
+#rules-dialog .goal-top { display: none; }
+#rules-dialog .goal-note > p { font-size: 13px; }
+.practice-page .leaderboard-link { display: none; }
+@media (max-width: 760px) {
+  .side-column .mascot-guide { margin-bottom: 20px; gap: 16px; }
+  .side-column .mascot-guide img { flex-basis: 76px; width: 76px; height: 88px; }
+  .side-column .mascot-guide .mascot-name { font-size: 23px; }
+  .side-column .mascot-guide p { font-size: 13px; }
+}
