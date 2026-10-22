@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="septanda-build" content="7.0.6">
+  <meta name="septanda-build" content="7.1.0">
   <meta name="theme-color" content="#e8e6dc">
   <meta name="description" content="Poznej autory známých výroků a význam lidových rčení. Každý den tři hádanky a příběhy, které se za slovy skrývají.">
   <meta property="og:type" content="website">
@@ -2207,6 +2207,188 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
 #input-help .folk-answer-help { display: block; margin-top: 8px; color: var(--ink); font-size: 12px; line-height: 1.6; max-width: 65ch; }
 #input-help .keyboard-tip { display: block; margin-top: 6px; }
 
+/* Jedna karta: one reading surface, quieter navigation and supporting tools. */
+body { border-top: 0; background: var(--paper); }
+.page-shell { max-width: 1180px; padding: 0 40px; }
+.site-header { min-height: 94px; gap: 24px; }
+.wordmark { font-size: 36px; }
+.site-header nav { gap: 24px; }
+.site-header nav > .text-button { font: 400 13px/1.5 var(--sans); text-transform: none; letter-spacing: 0; }
+.balance-button { padding: 8px 0; border: 0; background: transparent; color: var(--ink); font: 500 14px/1.5 var(--mono); }
+.balance-button > span:last-child { color: var(--muted); font: 400 11px/1.5 var(--sans); }
+.balance-button:hover { background: transparent; color: var(--accent); }
+.header-account { padding-left: 24px; gap: 18px; }
+.account-button { min-height: 40px; padding: 10px 14px; border-radius: 5px; background: var(--tint); color: var(--ink); font: 500 13px/1.4 var(--sans); letter-spacing: 0; }
+.account-button:hover { background: #d4dccb; }
+.account-profile { padding-right: 0; padding-left: 0; background: transparent; gap: 9px; }
+.account-profile:hover { background: transparent; color: var(--accent); }
+.account-profile small { color: var(--muted); font: 400 11px/1.5 var(--sans); }
+.intro-instructions, .compact-intro .introduction { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; padding: 28px 0 30px; }
+.intro-instructions h1, .compact-intro #intro-title { font: 700 35px/1.08 var(--display); letter-spacing: -.025em; }
+.intro-instructions h1 em { font-weight: 700; }
+.intro-copy { margin: 12px 0 0; padding: 0; max-width: 50ch; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.intro-instructions .edition-slip { display: flex; flex-direction: column; position: static; flex: 0 0 auto; width: auto; border: 0; padding: 0 0 2px; background: transparent; transform: none; color: var(--muted); text-align: right; }
+.edition-slip::before { display: none; }
+.edition-slip span { font-size: 9px; letter-spacing: .02em; }
+.edition-slip time { order: -1; font-size: 11px; margin: 0 0 4px; letter-spacing: 0; }
+.edition-slip #edition-count { display: none; }
+.compact-intro .edition-slip { display: none; }
+.experience-panel { padding: 0 18px 16px; margin-bottom: 30px; border: 0; border-radius: 8px; background: #dce2d2; }
+.experience-status { border: 0; padding: 8px 0 0; }
+.experience-status .sync-chip, .experience-status .text-button { font-size: 10px; }
+.experience-toolbar { grid-template-columns: minmax(150px, 1.2fr) minmax(0, 2fr) minmax(105px, .8fr); gap: 22px; margin-top: 8px; align-items: center; }
+.journal-button { gap: 3px; }
+.journal-button > span { display: none; }
+.journal-button strong { font-size: 22px; }
+.daily-metrics { gap: 18px; }
+.daily-metrics > div, .weekly-metric { border: 0; padding: 0; }
+.weekly-metric { grid-column: auto; display: block; }
+.daily-metrics strong, .weekly-metric strong { font-size: 21px; margin-top: 3px; }
+.daily-metrics > div > span, .weekly-metric > span { font: 400 11px/1.5 var(--sans); letter-spacing: 0; }
+.game-layout { grid-template-columns: minmax(0, 1fr) 225px; gap: 32px; }
+.puzzle-sheet { border: 0; border-radius: 10px; box-shadow: none; padding: 28px; }
+.sheet-topline { align-items: flex-start; border: 0; padding: 0; gap: 20px; }
+.puzzle-meta { flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.puzzle-meta > div { align-self: auto; }
+.puzzle-number { display: block; align-self: auto; min-width: 0; min-height: 0; padding: 0; border: 0; background: transparent; font: 400 11px/1.5 var(--mono); color: var(--muted); letter-spacing: 0; }
+.puzzle-meta h2 { margin: 0; font: 700 25px/1.15 var(--display); letter-spacing: -.02em; }
+.sheet-navigation { flex: 0 0 auto; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.whisper-route { border: 0; padding: 0; gap: 0; }
+.route-line { flex: none; gap: 8px; }
+.route-line b { display: none; }
+.route-line button { width: 32px; min-width: 32px; height: 32px; border: 0; border-radius: 50%; background: var(--paper); font: 400 12px/32px var(--mono); color: var(--muted); }
+.route-line button.current { background: var(--accent); color: var(--white); box-shadow: none; }
+.route-line button.won { background: var(--accent); color: var(--white); }
+.route-line button.revealed { background: #d7dbce; color: var(--ink); }
+.sheet-topline .switch-button { position: static; border: 0; background: transparent; padding: 3px 0; color: var(--muted); font: 400 11px/1.5 var(--sans); letter-spacing: 0; }
+.sheet-topline .switch-button:hover { background: transparent; color: var(--accent); text-decoration: underline; }
+.message-wrap { padding: 32px 0 28px; }
+.message-wrap blockquote { margin: 0; max-width: 25ch; min-height: 0; font: 400 31px/1.35 var(--sans); letter-spacing: -.025em; overflow-wrap: break-word; }
+.quote-original { border: 0; padding: 0; margin: 14px 0 0; }
+.quote-original figcaption { color: var(--muted); font-size: 10px; margin-bottom: 6px; }
+.message-wrap .quote-original blockquote { max-width: 100%; font-size: 20px; line-height: 1.55; }
+.question-scope { margin: 0 0 14px; padding: 0; border: 0; font-size: 11px; }
+#guess-form { padding: 0; border: 0; }
+.input-label-row { margin: 0; min-height: 0; }
+#guess { border: 1px solid var(--line); border-radius: 5px; background: var(--paper); padding: 14px; min-height: 54px; }
+#guess:focus { border-color: var(--accent); box-shadow: 0 0 0 2px #4b625020; }
+#guess::placeholder { color: var(--muted); font-size: 15px; }
+#guess-form .form-bottom { margin-top: 12px; }
+#guess-form #input-help { margin-bottom: 22px; font-size: 11px; }
+#input-help .folk-answer-help { color: var(--muted); font-size: 11px; margin-top: 5px; }
+#input-help .keyboard-tip { font-size: 10px; margin-top: 4px; }
+.guess-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 18px; }
+.guess-actions .primary-button { grid-column: 1 / -1; width: 100%; min-height: 48px; border-radius: 5px; font: 600 14px/1.5 var(--sans); gap: 14px; }
+.primary-button > span { border: 0; padding: 0; color: inherit; }
+.guess-actions .secondary-button, .guess-actions #give-up { min-height: 44px; padding: 10px 0; border: 0; background: transparent; font: 400 12px/1.5 var(--sans); color: var(--muted); }
+.guess-actions .secondary-button:hover:not(:disabled) { border: 0; background: transparent; color: var(--ink); text-decoration: underline; }
+.guess-actions #defer-puzzle { justify-content: flex-start; text-align: left; }
+.guess-actions #give-up { justify-content: flex-end; text-align: right; }
+#skip-help { margin-top: 8px; font-size: 10px; }
+.meaning-option, .name-suggestion { border-radius: 5px; background: var(--paper); }
+.side-column { border: 0; padding: 0; background: transparent; }
+.mascot-guide { flex-direction: column; align-items: flex-start; gap: 8px; padding: 0; margin: 0 0 28px; border: 0; }
+.mascot-guide img { flex-basis: auto; width: 96px; height: 108px; }
+.mascot-guide .mascot-name { font: 700 23px/1.2 var(--display); margin-bottom: 4px; }
+.mascot-guide p { max-width: 23ch; font-size: 13px; line-height: 1.5; }
+.hint-section, .side-column .hint-section { padding: 0 0 22px; }
+.hint-section h2 { font: 700 25px/1.2 var(--display); }
+.side-intro { font-size: 13px; line-height: 1.65; margin: 10px 0 16px; }
+.hint-button { border: 0; background: #dce2d2; border-radius: 6px; padding: 14px; min-height: 78px; gap: 14px; }
+.hint-button:hover:not(:disabled) { background: #d2dac8; }
+.hint-button strong { font-size: 13px; }
+.hint-button small { font-size: 11px; line-height: 1.5; }
+.hint-button .price { font-size: 18px; }
+.hint-content { border: 0; border-radius: 6px; background: #dce2d2; padding: 14px; margin-top: 12px; font-size: 14px; }
+.hint-status { border: 0; padding-top: 10px; min-height: 0; font-size: 11px; line-height: 1.6; }
+.leaderboard-section { border-top: 1px solid var(--line); padding: 22px 0; }
+.leaderboard-section .progress-header h2 { font-size: 24px; }
+.leaderboard-refresh { font: 400 11px/1.5 var(--sans); }
+.leaderboard-description { font-size: 12px; margin: 10px 0 16px; }
+.leaderboard-period { border: 0; padding-bottom: 6px; }
+.goal-note { margin: 0; padding: 18px 0 0; background: transparent; border: 0; border-top: 1px solid var(--line); }
+.goal-top .eyebrow { font-size: 9px; letter-spacing: .025em; }
+.goal-note > p { margin: 10px 0 14px; }
+.reward-row { border: 0; padding: 0 0 18px; font-size: 10px; }
+.collection-progress { padding: 20px 0; border-top: 1px solid var(--line); }
+.collection-marks button { border: 0; border-radius: 3px; height: 5px; }
+.local-note { border-top: 0; font-size: 11px; }
+.result-panel, .reveal-panel, .daily-recap { border: 0; border-radius: 10px; box-shadow: none; }
+.result-panel { padding: 24px 28px; }
+.reveal-panel { padding: 28px; }
+.history-section { margin-top: 28px; }
+.section-heading { border-bottom: 1px solid var(--line); }
+.attempt-index { border: 0; background: transparent; padding: 0; }
+dialog { border: 0; border-radius: 10px; box-shadow: 0 16px 70px #252b2726; }
+.close-button, dialog .primary-button, dialog .secondary-button, dialog input:not([type=checkbox]), dialog textarea, dialog select { border-radius: 5px; }
+footer { padding-top: 24px; margin-top: 32px; }
+footer .text-button { font-size: 12px; }
+@media (max-width: 1000px) {
+  .page-shell { padding: 0 32px; }
+  .site-header, .site-header nav { gap: 18px; }
+  .header-account { gap: 12px; padding-left: 18px; }
+  .game-layout { gap: 28px; }
+  .experience-toolbar { grid-template-columns: minmax(135px, 1fr) minmax(0, 2fr) minmax(88px, .8fr); gap: 18px; }
+  .journal-button strong { font-size: 21px; }
+  .daily-metrics { gap: 12px; }
+  .daily-metrics > div > span, .weekly-metric > span { font-size: 10px; }
+}
+@media (max-width: 760px) {
+  .page-shell { padding: 0 22px; }
+  .site-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 24px 0 10px; gap: 12px; min-height: 0; }
+  .site-header .wordmark { grid-column: 1; grid-row: 1; font-size: 33px; }
+  .site-header nav { grid-column: 1 / -1; grid-row: 2; border: 0; padding: 8px 0 0; gap: 24px; margin: 0; }
+  .site-header nav > .text-button { font-size: 13px; }
+  .site-header nav .balance-button { margin-left: auto; }
+  .site-header .header-account { grid-column: 2; grid-row: 1; width: auto; border: 0; padding: 0; gap: 12px; }
+  .header-account .header-login { font-size: 12px; }
+  .account-button { min-height: 38px; padding: 9px 11px; font-size: 12px; gap: 8px; }
+  .account-profile { padding-right: 0; gap: 7px; }
+  .account-profile small { font-size: 10px; }
+  .intro-instructions, .compact-intro .introduction { padding: 24px 0 28px; }
+  .intro-instructions h1, .compact-intro #intro-title { font-size: 34px; line-height: 1.08; }
+  .intro-copy { font-size: 14px; margin-top: 12px; }
+  .intro-instructions .edition-slip { display: none; }
+  .experience-panel { padding: 0 16px 16px; margin-bottom: 24px; }
+  .experience-toolbar { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px 10px; margin-top: 6px; }
+  .journal-button { grid-column: 1 / -1; flex-direction: row; justify-content: space-between; align-items: center; min-height: 34px; }
+  .journal-button strong { font-size: 22px; }
+  .daily-metrics { grid-column: span 3; gap: 10px; }
+  .daily-metrics > div { border: 0; padding: 0; }
+  .weekly-metric { grid-column: auto; border: 0; padding: 0; }
+  .daily-metrics strong, .weekly-metric strong { font-size: 18px; margin-top: 4px; }
+  .daily-metrics strong small, .weekly-metric strong small { font-size: 9px; }
+  .game-layout { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .puzzle-sheet { padding: 24px 20px; }
+  .sheet-topline { display: flex; flex-direction: column; gap: 18px; }
+  .puzzle-meta { gap: 6px; }
+  .puzzle-meta h2 { font-size: 25px; }
+  .sheet-navigation { flex-direction: row; align-items: center; justify-content: space-between; width: 100%; }
+  .message-wrap { padding: 28px 0 24px; }
+  .message-wrap blockquote { max-width: 100%; font-size: 28px; line-height: 1.4; }
+  .message-wrap .quote-original blockquote { font-size: 19px; }
+  .guess-actions { gap: 4px 14px; }
+  .guess-actions .primary-button { font-size: 14px; }
+  .guess-actions .secondary-button, .guess-actions #give-up { padding: 10px 0; min-height: 48px; font-size: 12px; }
+  .side-column { padding: 0; border: 0; }
+  .mascot-guide { flex-direction: row; align-items: center; gap: 16px; margin: 0 0 24px; }
+  .mascot-guide img { width: 76px; height: 88px; flex-basis: 76px; }
+  .mascot-guide p { max-width: 26ch; }
+  .result-panel, .reveal-panel { padding: 24px 20px; }
+  footer { margin-top: 20px; }
+}
+@media (max-width: 370px) {
+  .page-shell { padding: 0 16px; }
+  .site-header .header-account { gap: 8px; }
+  .account-button { padding: 8px; font-size: 11px; }
+  .header-account .header-login { font-size: 11px; }
+  .intro-instructions h1, .compact-intro #intro-title { font-size: 31px; }
+  .puzzle-sheet { padding: 22px 18px; }
+  .message-wrap blockquote { font-size: 26px; }
+  .guess-actions { column-gap: 10px; }
+  .guess-actions .secondary-button, .guess-actions #give-up { font-size: 11px; }
+}
+
 </style>
 <meta name="robots" content="noindex,follow"></head>
 <body>
@@ -2254,8 +2436,10 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
         <div class="main-column">
           <section id="daily-waiting" class="puzzle-sheet daily-waiting" aria-labelledby="waiting-title" hidden><p class="eyebrow">ARCHIV SLOV</p><h2 id="waiting-title">Další zprávy připravujeme.</h2><p id="waiting-copy"></p><button class="secondary-button" data-open="collection-dialog">Prohlédnout dnešní sadu</button></section>
           <section id="puzzle-sheet" class="puzzle-sheet" aria-labelledby="puzzle-heading">
-            <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category" hidden>PÁTRÁNÍ PO PŮVODU</p><h2 id="puzzle-heading">Komu tato slova patří?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
-            <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav>
+            <div class="sheet-topline">
+              <div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category" hidden>PÁTRÁNÍ PO PŮVODU</p><h2 id="puzzle-heading">Komu tato slova patří?</h2></div></div>
+              <div class="sheet-navigation"><nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position" class="sr-only">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
+            </div>
             <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow" id="message-label" hidden>ČÍ JSOU TATO SLOVA?</p><blockquote id="distorted-message">Načítám výrok…</blockquote><figure id="quote-original" class="quote-original" hidden></figure></div>
             <p id="question-scope" class="field-note question-scope" hidden></p><form id="guess-form" novalidate>
               <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Napiš jméno autora</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
@@ -2276,7 +2460,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
         </div>
 
         <aside class="side-column" aria-label="Nápovědy a postup">
-          <section id="mascot-guide" class="mascot-guide" aria-label="Šeptík, průvodce hrou" hidden><img id="mascot-image" alt="" width="192" height="192"><div><p class="eyebrow">ŠEPTÍK</p><p id="mascot-copy">Prozkoumáme, co se cestou změnilo.</p></div></section>
+          <section id="mascot-guide" class="mascot-guide" aria-label="Šeptík, průvodce hrou" hidden><img id="mascot-image" alt="" width="192" height="192"><div><p class="mascot-name">Šeptík</p><p id="mascot-copy">Prozkoumáme, co se cestou změnilo.</p></div></section>
           <section id="hint-section" class="hint-section" aria-labelledby="hints-title"><h2 id="hints-title">Nech si napovědět.</h2><p class="side-intro">Občas stačí malá stopa,<br>aby všechno zapadlo.</p>
             <button class="hint-button" id="hint-clue" data-hint="clue"><span><strong>Nápověda</strong><small>Od významu ke konkrétnímu obrazu.</small></span><span class="price">50 <small>bodů</small></span></button>
             <div id="hint-clue-content" class="hint-content" hidden></div>
@@ -2292,7 +2476,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible {outline:2px sol
       </div>
     </main>
 
-    <dialog id="notebook-dialog" aria-labelledby="notebook-title"><div class="dialog-head"><h2 id="notebook-title">Deník objevů.</h2><button type="button" class="close-button" data-close aria-label="Zavřít">×</button></div><button type="button" class="text-button underlined" id="notebook-filter">Jen oblíbené</button><div id="notebook-content"></div></dialog><footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>7.0.6 · Archiv slov</span></div></footer>
+    <dialog id="notebook-dialog" aria-labelledby="notebook-title"><div class="dialog-head"><h2 id="notebook-title">Deník objevů.</h2><button type="button" class="close-button" data-close aria-label="Zavřít">×</button></div><button type="button" class="text-button underlined" id="notebook-filter">Jen oblíbené</button><div id="notebook-content"></div></dialog><footer><a class="footer-brand" href="./">šeptanda<span class="wordmark-dot">.</span></a><div><button class="text-button" data-open="contact-dialog">Napište nám</button><button class="text-button" data-open="privacy-dialog">Soukromí</button><button class="text-button" data-open="sources-dialog">Původ a zdroje</button><span>7.1.0 · Archiv slov</span></div></footer>
   </div>
 
   <dialog id="rules-dialog" aria-labelledby="rules-title"><div class="dialog-head"><p class="eyebrow">JAK SE HRAJE</p><button class="close-button" data-close aria-label="Zavřít">×</button></div><h2 id="rules-title">Vrať slovům jejich začátek.</h2><div id="rules-author" hidden><ol class="rules-list"><li><strong>Přečti si výrok.</strong><p>Každý den dostaneš vlastní trojici. Výrok čteš v plném znění a pátráš po jeho autorovi nebo významu.</p></li><li><strong>Napiš jméno.</strong><p>Stačí schválené příjmení nebo celé jméno. U literárních textů hledáme autora díla; výjimka je vždy uvedená v otázce. U nové otázky na rčení vyber z nabízených významů. U dříve přidělených sad dál platí původní zadání: „autor neznámý“, „lidové rčení“ nebo „pořekadlo“.</p></li><li><strong>Sleduj vodítka z tipů.</strong><p>U rozpoznaného jména uvidíš, zda sedí obor, zaměření tvorby, kulturní prostředí a období. Další tip porovnáme s předchozím: více shod znamená bližší směr, při stejném počtu shod jsou tipy stejně blízko. Shodná vodítka ještě neznamenají správného autora.</p></li><li><strong>Vezmi si silnější stopu.</strong><p>Balíček stojí jednou 50 bodů. Postupně odkryješ souvislost, pramen a čtyři podobné osobnosti. U rčení ti stopa přiblíží význam, zúží výběr a nakonec vysvětlí správný výklad. Další dva kroky už nic nestojí. Můžeš dál psát vlastní tip nebo nakonec vybrat možnost.</p></li><li><strong>Objev příběh.</strong><p>Za správný původ získáš jednou 200 bodů. Po odhalení se dozvíš o osobnosti, významu slov a doloženém prameni. Rozlišujeme skutečně doložené autorství, tradiční připsání, literární repliku a anonymní rčení.</p></li></ol><p class="dialog-note">Začínáš se 100 body. Mezi třemi otázkami můžeš zdarma přecházet tlačítkem Odložit a vrátit se. Při méně než 100 bodech máš záchranné odhalení bez odměny. Jinak přeskočení stojí 100 bodů; nepřidává odměnu ani náhradní otázku a počítá se do denní trojice. Body se přenášejí. S účtem se historie synchronizuje mezi zařízeními, bez účtu ji uchovává tento prohlížeč. Už přidělené výroky se nevracejí jako nové ani při změně konceptu. Sada se mění o půlnoci českého času; po vyčerpání zásoby připravíme nové položky. Starší výsledky a zakoupené pomůcky najdeš v historii.</p></div><div id="rules-classic"><ol class="rules-list"><li><strong>Přečti si poslední zprávu.</strong><p>Každý den tě čekají tři výroky, které se odemykají postupně. Každý prošel pěti připravenými předáními tiché pošty. Vidíš až poslední, nejvíc překroucenou verzi.</p></li><li><strong>Piš vlastní tipy.</strong><p>Hledáme konkrétní přísloví, historický výrok nebo uvedené dva verše. Počet tipů není omezený. Všechny zůstanou v historii dané hádanky.</p></li><li><strong>Navazuj na konkrétní stopy.</strong><p>Po tipu uvidíš podstatná slova, která se už shodují s jednou z přijímaných podob. Shoda slov sama nepotvrzuje správný význam ani pořadí. Když tápeš, otevři postupné stopy: nejdřív význam, pak konkrétní obraz a nakonec začátek výroku.</p></li><li><strong>Sbírej body i příběhy.</strong><p>Začínáš se 100 body. Za každý rozluštěný výrok dnešní sady získáš jednou 200 bodů. Body si přenášíš do dalších dnů. Balíček tří postupných stop stojí 50 bodů. U každé hádanky ho platíš jen jednou; další kroky se otevírají bez dalšího stržení bodů. Samostatně můžeš odkrývat dřívější podoby věty, každou za 50 bodů. Začínáš předposledním předáním a můžeš se vrátit až k prvnímu. Původní znění stále hádáš. Hádanku můžeš přeskočit za 100 bodů, pokud je máš k dispozici. Počítá se do denní trojice a nezískáš za ni odměnu.</p></li></ol><p class="dialog-note">Hra se ukládá v tomto prohlížeči, bez účtu. Každý hráč dostává vlastní denní výběr z redakčně schválené zásoby. Sada se obnovuje o půlnoci podle českého času. Už přidělené výroky mu jako nové znovu nenabídneme. Limit tří výroků platí pro tento prohlížeč; bez účtu se nesdílí mezi zařízeními. Výroky, které už máš v historii, ti znovu jako nové nenabízíme. S účtem tuto historii sdílíš mezi zařízeními; bez účtu se uchovává pouze v tomto prohlížeči. I u dříve přidělené pětice se nyní hrají první tři. Výsledky a rozepsané tipy z dalších dvou zůstávají uložené v historii. Po vyčerpání připravených sad počkáme na nové výroky a nezačínáme od začátku.</p></div><button class="primary-button" data-close>Rozumím, jdu hrát</button></dialog>

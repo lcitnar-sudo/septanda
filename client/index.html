@@ -84,8 +84,10 @@
         <div class="main-column">
           <section id="daily-waiting" class="puzzle-sheet daily-waiting" aria-labelledby="waiting-title" hidden><p class="eyebrow">ARCHIV SLOV</p><h2 id="waiting-title">Další zprávy připravujeme.</h2><p id="waiting-copy"></p><button class="secondary-button" data-open="collection-dialog">Prohlédnout dnešní sadu</button></section>
           <section id="puzzle-sheet" class="puzzle-sheet" aria-labelledby="puzzle-heading">
-            <div class="sheet-topline"><div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category" hidden>PÁTRÁNÍ PO PŮVODU</p><h2 id="puzzle-heading">Komu tato slova patří?</h2></div></div><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
-            <nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav>
+            <div class="sheet-topline">
+              <div class="puzzle-meta"><span id="puzzle-number" class="puzzle-number">01</span><div><p class="eyebrow" id="puzzle-category" hidden>PÁTRÁNÍ PO PŮVODU</p><h2 id="puzzle-heading">Komu tato slova patří?</h2></div></div>
+              <div class="sheet-navigation"><nav class="whisper-route" aria-label="Postup dnešní sadou"><span id="daily-position" class="sr-only">DNEŠNÍ VÝROK 1 Z 3</span><div class="route-line" id="daily-route"></div></nav><button class="text-button switch-button" data-open="collection-dialog">Dnešní sada</button></div>
+            </div>
             <div class="message-wrap"><span class="quote-mark" aria-hidden="true">„</span><p class="eyebrow" id="message-label" hidden>ČÍ JSOU TATO SLOVA?</p><blockquote id="distorted-message">Načítám výrok…</blockquote><figure id="quote-original" class="quote-original" hidden></figure></div>
             <p id="question-scope" class="field-note question-scope" hidden></p><form id="guess-form" novalidate>
               <div class="input-label-row"><label class="sr-only" id="guess-label" for="guess">Napiš jméno autora</label><a class="mobile-hint-link" href="#hints-title">Nápovědy <span aria-hidden="true">↓</span></a></div>
@@ -106,7 +108,7 @@
         </div>
 
         <aside class="side-column" aria-label="Nápovědy a postup">
-          <section id="mascot-guide" class="mascot-guide" aria-label="Šeptík, průvodce hrou" hidden><img id="mascot-image" alt="" width="192" height="192"><div><p class="eyebrow">ŠEPTÍK</p><p id="mascot-copy">Prozkoumáme, co se cestou změnilo.</p></div></section>
+          <section id="mascot-guide" class="mascot-guide" aria-label="Šeptík, průvodce hrou" hidden><img id="mascot-image" alt="" width="192" height="192"><div><p class="mascot-name">Šeptík</p><p id="mascot-copy">Prozkoumáme, co se cestou změnilo.</p></div></section>
           <section id="hint-section" class="hint-section" aria-labelledby="hints-title"><h2 id="hints-title">Nech si napovědět.</h2><p class="side-intro">Občas stačí malá stopa,<br>aby všechno zapadlo.</p>
             <button class="hint-button" id="hint-clue" data-hint="clue"><span><strong>Nápověda</strong><small>Od významu ke konkrétnímu obrazu.</small></span><span class="price">50 <small>bodů</small></span></button>
             <div id="hint-clue-content" class="hint-content" hidden></div>
