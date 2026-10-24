@@ -1,6 +1,6 @@
 # Literární Šeptanda — první hratelný test
 
-24. října 2026 · vydání 7.2.0
+24. října 2026 · vydání 7.2.1
 
 Adresa: https://septanda.com/literatura
 
@@ -10,12 +10,12 @@ Samostatný pilot, který nenahrazuje původní hru. Deset autentických ukázek
 
 - Jednu osobní ukázku denně; výběr pro tento prohlížeč bez opakování již otevřených ukázek. Mezi hráči se texty mohou potkat.
 - Hádání autora, toleranci diakritiky a jedné drobné chyby. U nejednoznačného příjmení výběr celé osobnosti.
-- Období a prostředí → souvislost s knihou → čtyři autoři. Cvičná odměna 200 / 150 / 100 / 50 bodů. Stopy nepotřebují žádný předchozí zůstatek.
+- Období a prostředí → souvislost s knihou → čtyři autoři. Literární odměna 200 / 150 / 100 / 50 bodů (oddělená od původní hry). Stopy nepotřebují žádný předchozí zůstatek.
 - Odhalení bez odměny je vždy dostupné. Kniha, autor, kontext, vysvětlení a prameny se ukážou i bez uhodnutí.
 - Knihovničku dokončených ukázek a záložku Chci si přečíst.
 - Tlačítko Prozkoumat 10 ukázek umožňuje projít celou zásobu ihned. Preview a denní čtení sdílejí jediný výsledek každé ukázky, odměnu nelze opakovat.
 
-Pilot používá pouze samostatný klíč septanda.literature.trial.v1 v prohlížeči. Nesynchronizuje se s účtem ani neposílá tipy na server. Vymazání dat prohlížeče odstraní tento testovací deník. Při nedostupném nebo poškozeném úložišti zůstane hra v paměti a původní záznam nepřepíše.
+Bez účtu používá pilot klíč septanda.literature.trial.v1 v prohlížeči. Přihlášení používá stejný Supabase projekt a uloženou relaci jako původní hra. Přihlášený hráč má soukromou místní cache se suffixem .account.UUID a oddělený záznam players/UUID v privátním, silně konzistentním site-wide Netlify Blobs store septanda-literature-v1 (region eu-central-1). Preview/branch prostředí používá SEPTANDA_STORE-literature, nikdy produkční store. Server ověřuje aktuálního uživatele přes Supabase Auth, vybírá vlastní denní úryvek a provádí akce s podmíněným zápisem podle etag. Záznamy přetrvají nasazení. Server čte pouze vlastní přezdívku ze septanda_profiles; původní postup ani body nečte a nepřepisuje. Místní guest hra se přidává pouze výslovně v Můj účet; její terminální výsledky se ověřují přehráním odpovědí. Při nedostupném nebo poškozeném místním úložišti původní záznam nepřepisujeme. Na žádost o odstranění účtu je potřeba odstranit i jeho privátní literární blob.
 
 ## Otázky pro přátele
 

@@ -1,7 +1,7 @@
 import {readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 
-export async function buildLiterature(root,version,renderScripts) {
+export async function buildLiterature(root,version,renderScripts,sdkBlock) {
   const client=path.join(root,'client'),data=JSON.parse(await readFile(path.join(root,'content/literature.json'),'utf8'));
   const registry=JSON.parse(await readFile(path.join(root,'content/authors.json'),'utf8'));
   const authors=new Map(Object.entries({...registry.profiles,...registry.guessProfiles}).map(([id,a])=>[id,{id,name:a.name,aliases:a.aliases,guidance:a.guidance}]));
@@ -15,7 +15,9 @@ export async function buildLiterature(root,version,renderScripts) {
     if(s.text.includes('\ufffd') || s.hints.length!==2 || s.options.length!==4 || !s.options.includes(s.author) || s.options.some(id=>!authors.has(id)) || s.sources.some(x=>!x.url.startsWith('https://')))throw Error('Invalid literary source: '+s.id);
   }
   const code='globalThis.SEPTANDA_LITERATURE='+JSON.stringify(publicData).replaceAll('<','\\u003c')+';';
-  const parts=[{name:'literature-data',code},...await Promise.all(['literature-engine','literature'].map(async name=>({name,code:await readFile(path.join(client,name+'.js'),'utf8')})))];
+  const engine=await readFile(path.join(client,'literature-engine.js'),'utf8');
+  await writeFile(path.join(root,'literature-game.mjs'),'const root={};\n(function(globalThis){\n'+code+'\n'+engine+'\n})(root);\nexport const data=root.SEPTANDA_LITERATURE,engine=root.SeptandaLiterature;\n');
+  const parts=[sdkBlock,{name:'literature-data',code},...await Promise.all(['literature-engine','literature','literature-cloud'].map(async name=>({name,code:await readFile(path.join(client,name+'.js'),'utf8')})))];
   const css=await readFile(path.join(client,'fonts.css'),'utf8')+'\n'+await readFile(path.join(client,'literature.css'),'utf8');
   const icon=Buffer.from(await readFile(path.join(client,'favicon.svg'),'utf8')).toString('base64');
   const html=(await readFile(path.join(client,'literature.html'),'utf8')).replaceAll('__VERSION__',version).replace('href="/favicon.svg"','href="data:image/svg+xml;base64,'+icon+'"').replace('<!-- LITERATURE_STYLES -->',()=>'<style id="literature-styles">\n'+css+'\n</style>').replace('<!-- LITERATURE_SCRIPTS -->',()=>renderScripts(parts));

@@ -1,6 +1,6 @@
 # Šeptanda — informace o zpracování osobních údajů
 
-Účinné od 18. října 2026; doplněno 21. října 2026 o Deník objevů.
+Účinné od 18. října 2026; doplněno 24. října 2026 o literární čtení v účtu.
 
 ## Provozovatel a kontakt
 
@@ -36,7 +36,7 @@ Vyřizování dotazů a ochrana služby vycházejí z oprávněného zájmu na f
 
 ## Poskytovatelé a ochrana údajů
 
-Netlify poskytuje web, serverové funkce a formuláře. Supabase zajišťuje účty a databázi; databáze Šeptandy je v evropském regionu Stockholm. Resend doručuje potvrzení účtu a obnovu hesla z auth.septanda.com. Kontaktní schránku poskytuje Google Gmail. Provozní e-mail obsahuje adresu příjemce a potřebný potvrzovací odkaz, nikoli herní historii. Sledování otevření a kliknutí v Resend není zapnuté.
+Netlify poskytuje web, serverové funkce a formuláře. Literární test používá stejné ověřené přihlášení Supabase; jeho oddělený postup a knihovnička jsou uloženy v soukromém úložišti Netlify Blobs v evropském regionu. Přístup k vlastnímu záznamu ověřuje server přes Supabase. Literární tipy, rozepsané odpovědi, stopy a záložky slouží pouze k pokračování ve čtení a nepřičítají se do původního žebříčku. Supabase zajišťuje účty a databázi; databáze Šeptandy je v evropském regionu Stockholm. Resend doručuje potvrzení účtu a obnovu hesla z auth.septanda.com. Kontaktní schránku poskytuje Google Gmail. Provozní e-mail obsahuje adresu příjemce a potřebný potvrzovací odkaz, nikoli herní historii. Sledování otevření a kliknutí v Resend není zapnuté.
 
 Poskytovatelé mohou zapojovat další zpracovatele a část údajů při provozu a podpoře zpracovávat i mimo EHP, včetně USA. Evropská databáze proto neznamená výhradně evropské zpracování všech služeb. Jejich podmínky popisují mechanismy předávání, včetně standardních smluvních doložek a případných rozhodnutí o odpovídající ochraně. Podrobnosti: [Supabase](https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq), [Netlify](https://www.netlify.com/gdpr-ccpa/), [Resend](https://resend.com/legal/dpa) a [Google](https://policies.google.com/privacy/frameworks?hl=cs).
 

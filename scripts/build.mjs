@@ -79,7 +79,7 @@ for(const [route,label]of [['vyzva','Výzva pro kamaráda'],['procvicit','Dobrov
  page=page.replace('</body>',()=>renderScripts(practiceParts)+'\n</body>');await writeFile(path.join(destination,route+'.html'),page);
 }
 
-await buildLiterature(root,version,renderScripts);
+await buildLiterature(root,version,renderScripts,blocks[0]);
 await writeFile(path.join(destination,'_headers'),`/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

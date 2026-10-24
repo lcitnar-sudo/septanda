@@ -41,8 +41,10 @@ assert.equal(E.submit(ambiguity,ns,'Neruda',D.authors,'2026-10-24').kind,'ambigu
 const preserved=E.parse(JSON.stringify(round));assert.deepEqual(plain(preserved),plain(round));
 preserved.rounds.L99={status:'solved',hints:0,draft:'old',attempts:[]};E.assign(preserved,'2026-10-25',D.samples);assert.equal(preserved.rounds.L99.status,'solved','unknown historical IDs retained');
 assert.throws(()=>E.parse('{broken'));assert.throws(()=>E.parse('{"version":2}'));
-assert(!/supabase|septanda\.v6\.daily|runtime-config|fetch\(/i.test(page),'prototype contains no production account or network modules');
-assert.equal(page.match(/<script id=/g).length,3);assert(page.includes('noindex,follow'));
+assert(!/septanda\.v6\.daily|cloud-leaderboard|SeptandaGame\./.test(page),'literary progress never imports original game state');
+assert(page.includes('persistSession:true,autoRefreshToken:true'));
+assert(!/<input[^>]*id="lit-consent"[^>]*checked/i.test(page),'marketing is never prechecked');
+assert.equal(page.match(/<script id=/g).length,5);assert(page.includes('noindex,follow'));
 const headers=await read('public/_headers');const {createHash}=await import('node:crypto');
 for(const [,code] of page.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g))assert(headers.includes('sha256-'+createHash('sha256').update(code).digest('base64')),'new page scripts allowed by CSP');
 console.log('Literary trial: 10 sourced excerpts; personal daily selection, no repeats, ambiguity, hints, score finality, storage and CSP isolation passed.');
