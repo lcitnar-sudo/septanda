@@ -70,7 +70,9 @@
     $('hint-button').textContent=r.hints===0?'První stopa · −50 z odměny':r.hints===1?'Druhá stopa · −50 z odměny':r.hints===2?'Čtyři autoři · −50 z odměny':'Všechny stopy jsou otevřené';
     $('hint-button').disabled=finished || r.hints===3;
     $('hint-help').textContent=finished?'Příběh i prameny najdeš pod úryvkem.':'Body nepotřebuješ předem. Stopa sníží jen odměnu za toto čtení.';
-    $('hints').innerHTML=s.hints.slice(0,Math.min(2,r.hints)).map((h,i)=>'<li><strong>STOPA '+(i+1)+'</strong>'+esc(h)+'</li>').join('')+(r.hints===3?'<li><strong>STOPA 3 · ČTYŘI AUTOŘI</strong>'+E.choices(s,state.seed,D.authors).map(a=>finished?'<p>'+esc(a.name)+'</p>':'<button type="button" class="choice" data-person="'+esc(a.id)+'">'+esc(a.name)+'</button>').join('')+'</li>':'');
+    const hintCards=s.hints.slice(0,Math.min(2,r.hints)).map((h,i)=>'<li><strong>STOPA '+(i+1)+'</strong>'+esc(h)+'</li>');
+    if(r.hints===3)hintCards.push('<li><strong>STOPA 3 · ČTYŘI AUTOŘI</strong>'+E.choices(s,state.seed,D.authors).map(a=>finished?'<p>'+esc(a.name)+'</p>':'<button type="button" class="choice" data-person="'+esc(a.id)+'">'+esc(a.name)+'</button>').join('')+'</li>');
+    $('hints').innerHTML=hintCards.reverse().join('');
     $('feedback').hidden=finished || !feedback;$('feedback').innerHTML=finished?'':feedbackHTML(feedback||{});
     $('septik').src='/assets/septik/'+(finished?(r.status==='solved'?'success':'discovery'):r.hints?'thinking':'idle')+'.webp';
     $('mascot-line').textContent=finished?'Za každým úryvkem je kniha. Tady začíná její příběh.':r.hints?'Od doby a prostředí se dostáváme ke konkrétní knize.':'Někdy napoví jméno, jindy rytmus věty. Zkus svůj první dojem.';

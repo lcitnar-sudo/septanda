@@ -5,7 +5,7 @@ function el(id){if(!elements.has(id))elements.set(id,{id,value:'',hidden:false,a
 const localStorage={getItem:k=>mem.get(k)||null,setItem:(k,v)=>mem.set(k,v)};
 const document={getElementById:el,activeElement:null,addEventListener(k,fn){events.set(k,fn);},querySelector(){return null;}};
 class Clock extends Date{constructor(...args){super(...(args.length?args:['2026-10-24T10:00:00Z']));}}
-const context=vm.createContext({document,localStorage,Date:Clock,Intl,crypto:globalThis.crypto,navigator:{},console,Map,Set,Promise,setInterval(){},setTimeout(){return 1;},clearTimeout(){},addEventListener(){},SEPTANDA_LITERATURE:game.data,SeptandaLiterature:game.engine});
+const context=vm.createContext({document,localStorage,Date:Clock,Intl,crypto:globalThis.crypto,navigator:{},console,Map,Set,Promise,setInterval(){},setTimeout(){return 1;},clearTimeout(){},addEventListener(){},SEPTANDA_LITERATURE:game.data,SeptandaLiterature:{...game.engine,day:(now=new Clock())=>game.engine.day(now)}});
 vm.runInContext(await readFile(new URL('./literature.js',import.meta.url),'utf8'),context);
 const G=context.SeptandaLiteraryGame,E=game.engine,clone=x=>JSON.parse(JSON.stringify(x));
 const a=E.fresh('a'),b=E.fresh('b');a.days['2026-10-24']='L01';b.days['2026-10-24']='L02';E.open(a,'L01','2026-10-24');E.open(b,'L02','2026-10-24');
