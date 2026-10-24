@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import vm from 'node:vm';
 import {build} from 'esbuild';
 import {makeCatalog} from './catalog.mjs';
+import {buildLiterature} from './literature-build.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const source = path.join(root,'client'), destination = path.join(root,'public');
@@ -78,6 +79,7 @@ for(const [route,label]of [['vyzva','Výzva pro kamaráda'],['procvicit','Dobrov
  page=page.replace('</body>',()=>renderScripts(practiceParts)+'\n</body>');await writeFile(path.join(destination,route+'.html'),page);
 }
 
+await buildLiterature(root,version,renderScripts);
 await writeFile(path.join(destination,'_headers'),`/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

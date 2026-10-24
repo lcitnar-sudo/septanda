@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e8e6dc">
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="Jeden úryvek denně. Poznej autora a objev příběh knihy. Vyzkoušej literární Šeptandu.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:title" content="Literární Šeptanda — Poznáš, kdo to napsal?">
+  <meta property="og:description" content="Jeden úryvek denně. Poznej autora a objev příběh knihy. Vyzkoušej deset ukázek.">
+  <meta property="og:url" content="https://septanda.com/literatura">
+  <meta property="og:image" content="https://septanda.com/assets/social/septik-share-v1.png">
+  <meta property="og:image:alt" content="Šeptík, průvodce literární Šeptandou.">
+  <meta name="septanda-build" content="__VERSION__">
+  <title>Literární Šeptanda · Jeden úryvek denně</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <!-- LITERATURE_STYLES -->
+</head>
+<body>
+  <a class="skip" href="#reading">Přejít k úryvku</a>
+  <div class="shell">
+    <header class="header"><a class="wordmark" href="/">šeptanda<span>.</span></a><nav aria-label="Nabídka"><button type="button" data-dialog="notebook">Moje knihovnička</button><a href="/">Původní hra <span aria-hidden="true">↗</span></a></nav></header>
+    <main>
+      <section class="intro"><p class="eyebrow">LITERÁRNÍ ŠEPTANDA · NA ZKOUŠKU</p><h1>Jeden úryvek. Celý příběh.<br><span>Poznáš, kdo ho napsal?</span></h1><p>Každý den jedno malé setkání s literaturou. Napiš autora, vezmi si stopu a objev knihu za těmito slovy.</p></section>
+      <div id="storage-note" class="notice" role="status" hidden></div>
+      <div id="new-day" class="notice" hidden>Začal nový den. Rozečtený úryvek zůstává uložený. <button type="button" data-daily>Otevřít dnešní úryvek →</button></div>
+      <div class="trial-toolbar"><p id="day-label"></p><div><button type="button" id="daily-return" data-daily hidden>Zpět na dnešní úryvek</button><button type="button" data-dialog="samples">Prozkoumat 10 ukázek <span aria-hidden="true">↗</span></button></div></div>
+      <div class="layout">
+        <article class="card" id="reading" aria-labelledby="question" tabindex="-1">
+          <div id="empty" hidden><h2>Další příběhy připravujeme.</h2><p>Všech deset ukázek už máš otevřených. Znovu je jako nový denní úryvek nedostaneš. Můžeš se k nim vrátit v přehledu.</p><button type="button" class="primary" data-dialog="samples">Prohlédnout ukázky</button></div>
+          <div id="round"><div class="reading-title"><h2 id="question">Kdo napsal tento úryvek?</h2><span id="reading-time"></span></div><blockquote id="excerpt"></blockquote>
+            <form id="author-form"><label for="author">Autor úryvku</label><input id="author" name="author" type="text" placeholder="Napiš příjmení nebo celé jméno" autocomplete="off" autocapitalize="words" spellcheck="false" maxlength="100" aria-describedby="answer-help"><p class="muted" id="answer-help">Hledáme spisovatele, nikoli postavu. Diakritiku a drobný překlep neřeš.</p><button type="submit" class="primary">Ověřit autora <span aria-hidden="true">→</span></button></form>
+            <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+            <div id="reveal-action" class="reveal-action"><span id="award-note"></span><button type="button" data-reveal>Odhalit autora · bez bodů</button></div>
+            <section id="story" class="story" hidden aria-label="Příběh knihy"></section>
+          </div>
+        </article>
+        <aside class="help" aria-label="Průvodce a stopy"><div class="mascot"><img id="septik" src="/assets/septik/idle.webp" width="80" height="100" alt="Šeptík s mapou a lucernou"><p id="mascot-line">Někdy napoví jméno, jindy rytmus věty. Zkus svůj první dojem.</p></div><div id="hints-panel"><button type="button" id="hint-button" class="hint-button" data-hint></button><p class="muted" id="hint-help"></p><ol id="hints" class="hints"></ol></div><button type="button" class="rules-link" data-dialog="rules">Jak se hraje a počítají body</button></aside>
+      </div>
+      <p class="trial-note">Zkoušíme nový směr Šeptandy: deset ukázek z české prózy 19. a první poloviny 20. století. Výsledky tohoto testu jsou jen v tomto prohlížeči; body a účet v původní hře se nemění.</p>
+    </main>
+    <footer><a class="wordmark small" href="/">šeptanda<span>.</span></a><span>Literární test · __VERSION__</span><a href="/soukromi.html">Soukromí</a></footer>
+  </div>
+  <dialog id="samples" aria-labelledby="samples-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">DESET KNIŽNÍCH SETKÁNÍ</p><h2 id="samples-title">Vyzkoušej i další ukázky.</h2><p>Při běžném hraní dostaneš jednu denně. Pro dnešní test můžeš projít všech deset. Otevřená ukázka se později znovu neobjeví jako nový denní úryvek.</p><div id="sample-list" class="sample-list"></div></dialog>
+  <dialog id="notebook" aria-labelledby="notebook-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">TVÉ LITERÁRNÍ OBJEVY</p><h2 id="notebook-title">Moje knihovnička.</h2><p id="notebook-score"></p><div id="book-list"></div></dialog>
+  <dialog id="rules" aria-labelledby="rules-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">JEDEN ÚRYVEK DENNĚ</p><h2 id="rules-title">Čti. Hádej. Objevuj.</h2><p>Napiš autora úryvku. U shodných příjmení si vyžádáme křestní jméno. Chybný tip nic nestojí.</p><p>Bez nápovědy získáš 200 cvičných bodů. První stopa odhalí období a prostředí, druhá souvislost s knihou, třetí nabídne čtyři autory. Každá stopa sníží možnou odměnu o 50 bodů: 200 → 150 → 100 → 50.</p><p>Stopy můžeš použít vždy, i když ještě nemáš body. Autora můžeš také rovnou odhalit bez bodové odměny. Příběh knihy se ukáže v obou případech.</p><p>Denní úryvek vybíráme pro tento prohlížeč z dosud neotevřených ukázek. Mezi různými hráči se knihy mohou potkat. Po vyčerpání deseti ukázek nic znovu nepřidělujeme.</p><p>Tento test zatím nesynchronizujeme s účtem. Po vymazání dat prohlížeče se jeho deník ztratí.</p></dialog>
+  <noscript><p class="notice">Pro hraní literárního testu zapni JavaScript. <a href="/">Zpět do Šeptandy</a></p></noscript>
+  <!-- LITERATURE_SCRIPTS -->
+</body>
+</html>

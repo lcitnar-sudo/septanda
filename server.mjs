@@ -29,7 +29,7 @@ const headers=Object.fromEntries(headerText.split('\n').filter(l=>l.startsWith('
     // Netlify detects and receives this form only on the deployed site.
     if(req.method==='POST' && url.pathname==='/') {res.writeHead(501,{'Content-Type':'text/plain; charset=utf-8'});res.end('Kontaktní formulář přijímá zprávy až na Netlify.');return;}
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return;}
-    const relative=decodeURIComponent(url.pathname)==='/'?'index.html':['/vyzva','/procvicit','/ukazka'].includes(url.pathname)?url.pathname.slice(1)+'.html':decodeURIComponent(url.pathname).slice(1);
+    const relative=decodeURIComponent(url.pathname)==='/'?'index.html':['/vyzva','/procvicit','/ukazka','/literatura'].includes(url.pathname)?url.pathname.slice(1)+'.html':decodeURIComponent(url.pathname).slice(1);
     const file=path.resolve(root,relative);
     if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}
     if(!(await stat(file)).isFile())throw new Error('missing');
