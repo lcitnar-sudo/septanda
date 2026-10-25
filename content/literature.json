@@ -37,7 +37,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Petr Bajza vyrůstá v rodině obchodníka na malém městě. S kamarády podniká výpravy, zkouší zakázané věci a po svém si vykládá svět dospělých. Vyprávění sleduje jeho dětskou logiku: to, co dospělí považují za samozřejmost, může být pro Petra záhadou nebo velkým dobrodružstvím.",
+        "Knihu netvoří jen klukovské příhody. Způsob, jakým je Petr vypráví, je stejně důležitý jako samotný děj. Přeskakuje mezi školním jazykem, řečí ulice a obraty odposlouchanými od dospělých. Čtenář tak často rozumí situaci trochu jinak než vypravěč."
+      ],
+      "readingTip": "Sleduj, kdy Petr používá vznešená slova pro úplně obyčejnou věc. Právě tento nepoměr je jedním ze zdrojů humoru."
     },
     {
       "id": "L02",
@@ -74,7 +79,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Babička přijíždí za rodinou své dcery a stává se přirozeným středem života na Starém bělidle. Barunce a ostatním dětem pomáhá rozumět lidem, práci i obyčejům. Kniha postupuje každodenním životem a proměnami roku; vedle rodinných setkání do ní vstupují osudy dalších obyvatel okolí.",
+        "Idylický obraz venkova doplňují příběhy bolesti, samoty a společenských rozdílů. Výrazným protipólem klidného života je například Viktorka. Dílo tak můžeme číst jako příběh rodiny i jako literární obraz toho, jak spolu žijí různí lidé."
+      ],
+      "readingTip": "Všímej si, jak jsou postavy představovány prostřednictvím svých vztahů, zvyků a toho, jak jednají s druhými. Porovnej klid běžného dne s příběhy postav na okraji."
     },
     {
       "id": "L03",
@@ -115,7 +125,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Povídky malostranské zachycují pražskou čtvrť jako malý svět se svými pravidly, pověstmi a předsudky. Obyčejná sousedská událost v něm může rozhodnout o celém lidském osudu. Neruda přitom střídá ironii s porozuměním pro lidi, kteří do zavedeného pořádku nezapadají.",
+        "Pan Vorel si v jedné z povídek otevře krám a snaží se získat místní zákazníky. Do jeho nového začátku zasáhne způsob, jakým si o něm sousedé vytvářejí mínění. I zdánlivě nevinné řeči tak mají skutečné následky."
+      ],
+      "readingTip": "Odděluj, co o postavě skutečně víme, od toho, co o ní tvrdí její okolí. Sleduj také místa, kde vypravěč něco chválí tak přehnaně, až z toho vzniká ironie."
     },
     {
       "id": "L04",
@@ -152,7 +167,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Lidé objeví inteligentní mloky a začnou jejich schopnosti využívat pro práci i obchod. Z výhodné spolupráce postupně vzniká závislost, kterou jednotlivci ani státy nechtějí včas zpochybnit. Fantastický námět umožňuje Čapkovi ukázat zcela lidské mechanismy: pohodlnost, zisk, moc i vytěsňování nepříjemných zpráv.",
+        "Román není vyprávěn jediným souvislým hlasem. Střídá příběhové scény s napodobeninami zpráv, odborných textů a dalších veřejných projevů. Povondrovy novinové výstřižky jsou jedním z míst, kde se domácí život propojuje s událostmi světového dosahu."
+      ],
+      "readingTip": "Ptej se, kdo v daném úseku právě mluví a jaký zájem zastupuje. Všímej si rozdílu mezi vážným tónem zprávy a absurditou toho, co zpráva popisuje."
     },
     {
       "id": "L05",
@@ -193,7 +213,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Tato ukázka patří k raným švejkovským povídkám. Vojenské rozkazy, úřední logika a reakce nadřízených se v nich dostávají do střetu se Švejkovou zdánlivou prostotou. Čtenář musí často sám rozhodnout, nakolik postava situaci nechápe a nakolik ji svým jednáním odhaluje.",
+        "Důležité je rozlišovat povídkovou knihu z roku 1912 a pozdější román z doby první světové války. Známá postava procházela vývojem; raná povídka proto není jen jiným vydáním stejné románové kapitoly."
+      ],
+      "readingTip": "Porovnej doslovné znění rozkazu s tím, jaký výsledek jeho splnění přinese. Humor často vzniká ve chvíli, kdy se pravidlo začne důsledně řídit samo sebou."
     },
     {
       "id": "L06",
@@ -230,7 +255,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Staré pověsti české převyprávějí tradované příběhy o počátcích země, vládcích, hrdinech i místech spojených s dávnou minulostí. Vyprávění o Čechovi stojí na začátku této cesty: odchod skupiny ze starého domova se proměňuje v příběh o nalezení nového území.",
+        "Kniha pomáhala upevňovat společnou kulturní paměť. Nepředkládá však každý příběh jako událost, kterou lze doložit stejným způsobem jako archivní zápis. Její síla spočívá také v tom, jak starší látce dává srozumitelný a působivý vypravěčský tvar."
+      ],
+      "readingTip": "Všímej si, co text vysvětluje: původ jména, místa, rodu nebo zvyku. Pak odliš, co patří k doložitelným dějinám a co k tomu, jak si lidé svou minulost vyprávěli."
     },
     {
       "id": "L07",
@@ -267,7 +297,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Klidný chod lázeňského městečka naruší příjezd kouzelníka Arnoštka a jeho společnice Anny. Provozovatel plovárny Antonín Důra a jeho známí začnou všední léto vnímat jinak. Touha po změně se přitom potkává s jejich pohodlností, představami o sobě i drobnou žárlivostí.",
+        "Novela je krátká, ale její jazyk vybízí k pomalému čtení. Vančura používá slavnostní a místy archaicky působící věty i tehdy, když popisuje banální situaci. Komika proto nevzniká pouze z událostí, ale ze způsobu, jakým o nich vypravěč mluví."
+      ],
+      "readingTip": "Zkus si odstavec přečíst nahlas. Sleduj rytmus vět a rozdíl mezi velkolepým slovníkem a obyčejnou situací, kterou právě popisuje."
     },
     {
       "id": "L08",
@@ -304,7 +339,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Pohádka máje sleduje sbližování mladého Ríši a Helenky v moravském venkovském prostředí. Setkání jejich rozdílných povah provází proměny přírody. Krajina není jen kulisou milostného příběhu; její barvy, vůně a rytmus vstupují do toho, jak prožívání postav vnímáme.",
+        "Ve vyprávění je důležité napětí mezi upřímností a lehkomyslností, mezi okamžitým okouzlením a schopností nést za vztah odpovědnost. Název slibuje pohádkovou náladu, ale vztah postav se neobejde bez nejistoty a zrání."
+      ],
+      "readingTip": "Všímej si, jak se popis prostředí mění podle nálady scény. Zkus najít detail, který nepopisuje pouze okolí, ale současně naznačuje citový stav postavy."
     },
     {
       "id": "L09",
@@ -341,7 +381,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Román sleduje Evičku a její vstup do osudu rodiny Potockých, s níž se pojí příběh dávné kletby. Vedle lásky tu hraje roli rodinná paměť, pocit viny a otázka, zda člověk dokáže změnit něco, co celé okolí pokládá za předem dané.",
+        "Ještědské prostředí není pouhou dekorací. Vypravěčka propojuje lidské prožitky s přírodou a s tím, jak o událostech mluví místní společenství. Úvodní ztišení mlýna, stromů a vody připravuje čtenáře na svět, v němž mají lidské činy přesah do života celého okolí."
+      ],
+      "readingTip": "Sleduj rozdíl mezi tím, čemu postavy věří, a tím, co skutečně způsobí jejich vlastní rozhodnutí. Všímej si také, kdy příroda jako by přebírala lidské pocity."
     },
     {
       "id": "L10",
@@ -379,7 +424,12 @@
       "environment": "cz",
       "focus": [
         "prose"
-      ]
+      ],
+      "about": [
+        "Mladý učitelský pomocník Karel Čermák přichází do horského prostředí, kde vzdělanost a kulturní život udržují lidé daleko od velkých center. Škola, hudba, knihy a sousedské vztahy tu tvoří síť každodenní práce, která nemusí být navenek nijak slavná.",
+        "Román ukazuje vlastenectví prostřednictvím drobných, vytrvalých činů. Učit, předávat knihy nebo pečovat o společný zpěv může být pro místní život důležitější než velká prohlášení. Zároveň nejde o dokumentární zápis jednotlivých historických osob, ale o literární příběh."
+      ],
+      "readingTip": "Všímej si, které činnosti pomáhají lidem vytvářet společenství. Porovnej nenápadnost jejich práce s tím, jaký význam jí vyprávění přisuzuje."
     }
   ],
   "extraAuthors": [
@@ -423,5 +473,107 @@
         "prose"
       ]
     }
-  ]
+  ],
+  "authorDetails": {
+    "polacek": {
+      "bio": "Karel Poláček byl prozaik, novinář a humorista. V jeho prózách se běžná řeč stává prostředkem k pozorování lidských zvyků a slabostí. Dětského vypravěče v Bylo nás pět proto nemusíme chápat jako doslovný autorův hlas.",
+      "portrait": {
+        "src": "/assets/literature-authors/polacek.jpg",
+        "alt": "Portrét: Karel Poláček",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Karel_Pol%C3%A1%C4%8Dek_(1892-1945).jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "nemcova": {
+      "bio": "Božena Němcová psala prózu a zaznamenávala pohádky i lidové vyprávění. V Babičce pracuje se vzpomínkovou látkou, ale vytváří samostatné literární dílo. Vypravěčku, postavy a skutečnou autorku je proto dobré rozlišovat.",
+      "portrait": {
+        "src": "/assets/literature-authors/nemcova.jpg",
+        "alt": "Portrét: Božena Němcová",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Bozena_Nemcova.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "neruda": {
+      "bio": "Jan Neruda byl básník, prozaik a novinář. Jeho malostranské povídky spojují pozorné zachycení prostředí s výrazným vypravěčským hlasem. Jde o českého autora Jana Nerudu, nikoli o chilského básníka Pabla Nerudu.",
+      "portrait": {
+        "src": "/assets/literature-authors/neruda.jpg",
+        "alt": "Portrét: Jan Neruda",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Jan_Neruda_02.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "capek": {
+      "bio": "Karel Čapek psal prózu, dramata i novinové texty. Ve svých fantastických příbězích zkoumá lidská rozhodnutí a jejich důsledky. Válka s mloky tak není jen příběhem neobvyklých tvorů, ale především knihou o lidské společnosti.",
+      "portrait": {
+        "src": "/assets/literature-authors/capek.jpg",
+        "alt": "Portrét: Karel Čapek",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Karel-capek.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "hasek": {
+      "bio": "Jaroslav Hašek byl humorista a satirik. V jeho textech se často obrací pozornost od domněle směšného jednotlivce k autoritám a institucím kolem něj. Autora přitom není správné ztotožňovat s názory každé postavy nebo vypravěče.",
+      "portrait": {
+        "src": "/assets/literature-authors/hasek.jpg",
+        "alt": "Portrét: Jaroslav Hašek",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2_%D0%93%D0%B0%D1%88%D0%B5%D0%BA.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "jirasek": {
+      "bio": "Alois Jirásek psal historickou prózu i dramata. Jeho tvorba zasahuje do 19. i 20. století. U této knihy hledáme autora literárního zpracování, nikoli jediného původce všech starších pověstí.",
+      "portrait": {
+        "src": "/assets/literature-authors/jirasek.jpg",
+        "alt": "Portrét: Alois Jirásek",
+        "credit": "Agence Rol, 1921; Bibliothèque nationale de France / Gallica, přes Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Alois_Jir%C3%A1sek_by_Agence_Rol.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "vancura": {
+      "bio": "Vladislav Vančura byl prozaik, dramatik a filmový režisér. Jeho osobitý jazyk se nespokojuje s pouhým předáním děje: mění způsob, jakým čtenář událost vidí a slyší. Rozmarné léto je dobrou ukázkou této práce s vyprávěním.",
+      "portrait": {
+        "src": "/assets/literature-authors/vancura.jpg",
+        "alt": "Portrét: Vladislav Vančura",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Vladislav_Vancura.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "mrstik-vilem": {
+      "bio": "Vilém Mrštík je autorem Pohádky máje. Jeho bratr Alois byl rovněž spisovatel, proto samotné příjmení nemusí stačit k jednoznačné odpovědi. V této knize vyniká smysl pro smyslový detail a propojení člověka s krajinou.",
+      "portrait": {
+        "src": "/assets/literature-authors/mrstik-vilem.jpg",
+        "alt": "Portrét: Vilém Mrštík",
+        "credit": "Historická fotografie, 1910; Moravské zemské muzeum, přes Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Vil%C3%A9m_Mr%C5%A1t%C3%ADk_(1863-1912).jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "svetla": {
+      "bio": "Karolína Světlá je literární pseudonym české prozaičky. V jejích ještědských prózách se osobní vztahy propojují s náročnými mravními rozhodnutími. Ženské postavy v nich nejsou jen pozorovatelkami cizího jednání, ale samy zásadně mění příběh.",
+      "portrait": {
+        "src": "/assets/literature-authors/svetla.jpg",
+        "alt": "Portrét: Karolína Světlá",
+        "credit": "Wikimedia Commons; historická podobizna, autor v použitém záznamu není určen",
+        "source": "https://commons.wikimedia.org/wiki/File:Karolina_Svetla_02.jpg",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    },
+    "rais": {
+      "bio": "Karel Václav Rais patří k českým prozaikům, kteří se soustředili na venkovské a maloměstské prostředí. V Zapadlých vlastencích se pozornost obrací k učitelům a dalším lidem, jejichž vliv vyrůstá z každodenní vytrvalosti.",
+      "portrait": {
+        "src": "/assets/literature-authors/rais.png",
+        "alt": "Portrét: Karel Václav Rais",
+        "credit": "Fotografie Jana Mulače; reprodukce z roku 1896, přes Wikimedia Commons",
+        "source": "https://commons.wikimedia.org/wiki/File:Karel_Vaclav_Rais_1896.png",
+        "license": "Public domain (podle záznamu Wikimedia Commons)"
+      }
+    }
+  }
 }

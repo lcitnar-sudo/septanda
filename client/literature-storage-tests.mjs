@@ -23,4 +23,8 @@ assert.equal(a.rounds.L01.draft,'Rozpracovaný soukromý tip');assert.equal(mem.
 // A terminal result on another device takes precedence over a stale pending draft.
 el('author').value='stale';el('author').listeners.input();await new Promise(r=>setImmediate(r));a.rounds.L01.status='revealed';await G.setIdentity('A',a);assert.deepEqual(Object.keys(G.exportState().pendingDrafts),[]);assert.equal(G.exportState().rounds.L01.status,'revealed');
 context.SeptandaLiteratureCloud.signedIn=()=>false;await G.setIdentity(null);assert.equal(mem.get(E.KEY),guestBefore);
+// The enriched story is only rendered for a finished synthetic round and keeps its award.
+await G.setIdentity('B',b);assert.equal(el('story').hidden,true);
+const finished=clone(b);finished.rounds.L02.status='solved';finished.rounds.L02.hints=1;
+await G.apply(finished);assert.equal(el('story').hidden,false);assert(el('story').innerHTML.includes('/assets/literature-authors/nemcova.jpg'));assert(el('story').innerHTML.includes('O knize'));assert.equal(E.award(G.exportState().rounds.L02),150);
 console.log('Literary storage: guest/account isolation, separate accounts, offline pending draft recovery, acknowledgement and terminal cross-device result preservation passed.');

@@ -9,10 +9,10 @@ export async function buildLiterature(root,version,renderScripts,sdkBlock) {
     const prior=authors.get(a.id);
     authors.set(a.id,{...a,aliases:[...new Set([...(prior?.aliases||[]),...a.aliases])],guidance:{environment:a.environment,periods:[...new Set([...(prior?.guidance?.periods||[]),a.period])],focus:a.focus}});
   }
-  const publicData={samples:data.samples,authors:[...authors.values()]};
+  const publicData={samples:data.samples,authors:[...authors.values()].map(a=>({...a,...(data.authorDetails?.[a.id]?{details:data.authorDetails[a.id]}:{})}))};
   if(data.samples.length!==10 || new Set(data.samples.map(s=>s.id)).size!==10)throw Error('Literary pilot requires ten unique samples');
   for(const s of data.samples){
-    if(s.text.includes('\ufffd') || s.hints.length!==2 || s.options.length!==4 || !s.options.includes(s.author) || s.options.some(id=>!authors.has(id)) || s.sources.some(x=>!x.url.startsWith('https://')))throw Error('Invalid literary source: '+s.id);
+    if(!Array.isArray(s.about)||s.about.length<2||!s.readingTip||!data.authorDetails?.[s.author]?.bio||!data.authorDetails[s.author].portrait?.src.startsWith('/assets/literature-authors/')||s.text.includes('\ufffd') || s.hints.length!==2 || s.options.length!==4 || !s.options.includes(s.author) || s.options.some(id=>!authors.has(id)) || s.sources.some(x=>!x.url.startsWith('https://')))throw Error('Invalid literary source: '+s.id);
   }
   const code='globalThis.SEPTANDA_LITERATURE='+JSON.stringify(publicData).replaceAll('<','\\u003c')+';';
   const engine=await readFile(path.join(client,'literature-engine.js'),'utf8');

@@ -54,9 +54,13 @@
     return '';
   }
   function renderStory(s,r) {
-    const saved=state.saved.includes(s.id);
-    $('story').innerHTML='<p class="eyebrow">'+(r.status==='solved'?'AUTOR ODHALEN · +'+E.award(r)+' LITERÁRNÍCH BODŮ':'PŘÍBĚH OTEVŘEN · BEZ BODŮ')+'</p><h2>'+esc(s.work)+'</h2><p class="author-name">'+esc(s.name)+'</p><p class="book-date">První knižní vydání: '+esc(s.year)+'</p><h3>Co prozrazuje úryvek</h3><p>'+esc(s.story)+'</p><h3>Kniha a její doba</h3><p>'+esc(s.context)+'</p><p class="notice">'+esc(s.notice)+'</p><button type="button" class="save-book" data-save aria-pressed="'+saved+'">'+(saved?'Uloženo: chci si přečíst ✓':'Chci si knihu přečíst +')+'</button><div class="sources">Znění ukázky: '+esc(s.edition)+'. Původní pravopis je zachovaný.'+s.sources.map(source=>'<a href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.label)+' ↗</a>').join('')+'</div>';
+    const saved=state.saved.includes(s.id),details=D.authors.find(a=>a.id===s.author)?.details,portrait=details?.portrait;
+    const image=portrait?'<figure class="author-portrait"><img src="'+esc(portrait.src)+'" alt="'+esc(portrait.alt)+'" width="160" height="200" loading="lazy"><figcaption>Historický portrét</figcaption></figure>':'';
+    const source=s.sources[0],readLabel=source.url.endsWith('.epub')?'Stáhnout e-knihu (EPUB)':'Pokračovat ve čtení';
+    const imageSource=portrait?'<p>Portrét: '+esc(portrait.credit)+'. <a href="'+esc(portrait.source)+'" target="_blank" rel="noopener noreferrer">Zdroj a údaje o portrétu ↗</a></p>':'';
+    $('story').innerHTML='<p class="eyebrow">'+(r.status==='solved'?'AUTOR ODHALEN · +'+E.award(r)+' LITERÁRNÍCH BODŮ':'PŘÍBĚH OTEVŘEN · BEZ BODŮ')+'</p><div class="book-identity">'+image+'<div><h2>'+esc(s.work)+'</h2><p class="author-name">'+esc(s.name)+'</p><p class="book-date">První knižní vydání: '+esc(s.year)+'</p></div></div><h3>O knize</h3>'+s.about.map(p=>'<p>'+esc(p)+'</p>').join('')+'<h3>Co prozrazuje úryvek</h3><p>'+esc(s.story)+'</p><h3>Kniha a její doba</h3><p>'+esc(s.context)+'</p><aside class="reading-tip"><h3>Na co se při čtení zaměřit</h3><p>'+esc(s.readingTip)+'</p></aside><h3>Autor za příběhem</h3><p>'+esc(details.bio)+'</p><p class="notice">'+esc(s.notice)+'</p><div class="book-actions"><a class="read-book" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+readLabel+' ↗</a><button type="button" class="save-book" data-save aria-pressed="'+saved+'">'+(saved?'Uloženo: chci si přečíst ✓':'Chci si knihu přečíst +')+'</button></div><details class="book-provenance"><summary>Prameny a původ portrétu</summary><div class="sources"><p>Znění ukázky: '+esc(s.edition)+'. Původní pravopis je zachovaný.</p>'+s.sources.map(source=>'<a href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.label)+' ↗</a>').join('')+imageSource+'<p>Texty o knize a doporučení k četbě jsou redakční výklad Šeptandy.</p></div></details>';
   }
+
   function render() {
     $('reading-loading').hidden=!paused;
     $('reading-companion').hidden=paused;
