@@ -10,6 +10,7 @@ const plain=x=>JSON.parse(JSON.stringify(x));
 assert.equal(D.samples.length,10);
 assert.equal(new Set(D.samples.map(s=>s.author)).size,10);
 for(const s of D.samples){assert(s.text.split(/\s+/).length>=40);assert(s.text.split(/\s+/).length<=140);assert(!/[\uFFFD\u00AD]/.test(s.text));assert.equal(s.options.length,4);assert.equal(new Set(s.options).size,4);assert(s.options.includes(s.author));assert(s.sources.length);}
+assert(E.compare(D.authors.find(a=>a.id==='jirasek'),D.authors.find(a=>a.id==='capek')).period,'Jirásek retained 20th-century literary activity');
 const first=E.fresh('test-1'),id=E.assign(first,'2026-10-24',D.samples);
 assert.equal(E.assign(first,'2026-10-24',[...D.samples].reverse()),id,'same daily assignment survives catalog order');
 const otherSeeds=new Set(Array.from({length:30},(_,i)=>E.assign(E.fresh('person-'+i),'2026-10-24',D.samples)));

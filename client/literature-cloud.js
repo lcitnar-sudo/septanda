@@ -11,7 +11,7 @@
     if(/password.*(weak|least)/i.test(text))return 'Zvol silnější heslo, alespoň 10 znaků.';
     return text||'Požadavek se nepodařilo dokončit.';
   }
-  function status(text,error=false){$('lit-sync-status').textContent=text;$('lit-account-status').textContent=text;$('lit-reconnect').hidden=!error||!session;}
+  function status(text,error=false){$('lit-sync-status').textContent=text;$('lit-account-status').textContent=text;$('reading-loading-status').textContent=text;$('lit-reconnect').hidden=!error||!session;$('reading-reconnect').hidden=!error||!session;$('reading-account').hidden=!session;}
   function closeLogin(){const opened=$('lit-auth').open;$('lit-password').value='';if(opened)$('lit-auth').close();return opened;}
   function show(id){document.querySelector('dialog[open]')?.close();$(id).showModal();}
   function renderAccount(){
@@ -53,7 +53,7 @@
     commands=commands.then(run,run);return commands;
   }
   async function load(next){
-    const loadEpoch=++epoch;ready=false;session=next;account=null;renderAccount();
+    const loadEpoch=++epoch;ready=false;session=next;account=null;Game.pause(true);renderAccount();
     if(!next){closeLogin();$('lit-account').close();await Game.setIdentity(null);if(epoch!==loadEpoch)return;Game.pause(false);status('Uloženo v tomto prohlížeči. Přihlášením si čtení uchováš.');return;}
     const focus=closeLogin();Game.pause(true);status('Načítám uložené čtení…');
     try{

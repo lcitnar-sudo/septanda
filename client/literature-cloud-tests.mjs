@@ -15,7 +15,7 @@ const context=vm.createContext({document,console,URL,AbortSignal,crypto:globalTh
   SeptandaSupabase:{createClient(url,key,o){assert.equal(url,config.supabase.url);options=o;return {auth:{onAuthStateChange(fn){callback=fn;},async getSession(){return {data:{session}};},async signInWithPassword(){if(authError)return {error:Error(authError)};session=signed;return {data:{session}};},async signUp(body){calls.push({signup:body});return {data:{session:null}};},async resetPasswordForEmail(){return {};},async signOut(){session=null;return {};}}};}},
   async fetch(url,opts={}){if(url.endsWith('runtime-config'))return {ok:true,json:async()=>config};assert.equal(url,'/.netlify/functions/literature-player');assert.equal(opts.headers.Authorization,'Bearer synthetic-token');calls.push(JSON.parse(opts.body));if(gate)await gate;if(failProfile)throw Error('Network unavailable');return {ok:true,json:async()=>({state:clone(state),account:{id:user.id,name:'Čtenář',email:'private@example.test'},result:state.days['2026-10-24']})};}
 });
-const settle=async()=>{for(let i=0;i<8;i++)await new Promise(r=>setImmediate(r));};
+const settle=async()=>{await new Promise(r=>setTimeout(r,2));for(let i=0;i<8;i++)await new Promise(r=>setImmediate(r));};
 const click=async action=>{await listeners.get('click')({target:{closest:()=>({dataset:{auth:action},disabled:false})}});};
 vm.runInContext(code,context);await settle();
 assert.equal(el('lit-auth').open,false,'restored/sign-in session closes login before profile request finishes');assert.equal(el('lit-password').value,'');assert.equal(identities.length,0,'no account data before verified backend response');
@@ -27,4 +27,10 @@ await assert.rejects(context.SeptandaLiteratureCloud.command('daily'),/načtení
 await click('logout');await click('register');assert.equal(el('lit-consent').checked,false);assert.equal(el('lit-password').autocomplete,'new-password');await el('lit-auth-form').listeners.submit({preventDefault(){}});assert.equal(calls.at(-1).signup.options.data.marketing_opt_in,false);assert.equal(el('lit-confirmation').hidden,false);assert.equal(el('lit-auth-form').hidden,true);
 // A repeated same-account SIGNED_IN closes a manually stale login without reloading progress.
 await click('login');session=signed;await el('lit-auth-form').listeners.submit({preventDefault(){}});await click('login');const n=identities.length;callback('SIGNED_IN',signed);await settle();assert.equal(el('lit-auth').open,false);assert.equal(identities.length,n);
+// A different account must cover the old view before its response, also on failure.
+const previousCount=identities.length;let releaseSwitch;gate=new Promise(r=>releaseSwitch=r);
+const second={...signed,user:{id:'87654321-4321-4321-4321-cba987654321'}};
+callback('SIGNED_IN',second);await settle();assert.equal(pauses.at(-1),true,'account is covered before fetching another account');assert.equal(identities.length,previousCount,'unverified new account data never applied');
+failProfile=true;releaseSwitch();gate=null;await settle();assert.equal(pauses.at(-1),true,'previous account remains covered after failed fetch');assert.equal(identities.length,previousCount);assert.equal(el('reading-reconnect').hidden,false);
+failProfile=false;callback('SIGNED_IN',signed);await settle();assert.equal(pauses.at(-1),false);
 console.log('Literary cloud client: persistent shared auth, immediate dialog closure, invalid credentials, backend failure/reconnect, logout isolation, confirmation instructions and unchecked consent passed (synthetic transport).');

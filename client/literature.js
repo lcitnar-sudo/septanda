@@ -5,7 +5,7 @@
   const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sample=id=>D.samples.find(s=>s.id===id);
   const seed=Array.from(crypto.getRandomValues(new Uint32Array(4)),n=>n.toString(16)).join('-');
-  let state=E.fresh(seed),memory=false,queue=Promise.resolve(),current=null,mode='daily',assignedDay=E.day(),feedback=null,opener=null,busy=false,storageKey=E.KEY;
+  let state=E.fresh(seed),memory=false,queue=Promise.resolve(),current=null,mode='daily',assignedDay=E.day(),feedback=null,opener=null,busy=false,storageKey=E.KEY,paused=false;
   const drafts=new Map();let draftTimer;
   function warning(text) {$('storage-note').hidden=false;$('storage-note').textContent=text;}
   function read() {
@@ -58,6 +58,13 @@
     $('story').innerHTML='<p class="eyebrow">'+(r.status==='solved'?'AUTOR ODHALEN · +'+E.award(r)+' LITERÁRNÍCH BODŮ':'PŘÍBĚH OTEVŘEN · BEZ BODŮ')+'</p><h2>'+esc(s.work)+'</h2><p class="author-name">'+esc(s.name)+'</p><p class="book-date">První knižní vydání: '+esc(s.year)+'</p><h3>Co prozrazuje úryvek</h3><p>'+esc(s.story)+'</p><h3>Kniha a její doba</h3><p>'+esc(s.context)+'</p><p class="notice">'+esc(s.notice)+'</p><button type="button" class="save-book" data-save aria-pressed="'+saved+'">'+(saved?'Uloženo: chci si přečíst ✓':'Chci si knihu přečíst +')+'</button><div class="sources">Znění ukázky: '+esc(s.edition)+'. Původní pravopis je zachovaný.'+s.sources.map(source=>'<a href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.label)+' ↗</a>').join('')+'</div>';
   }
   function render() {
+    $('reading-loading').hidden=!paused;
+    $('reading-companion').hidden=paused;
+    if(paused){
+      $('round').hidden=true;$('empty').hidden=true;$('author').value='';
+      $('book-list').innerHTML='';$('notebook-score').textContent='';$('sample-list').innerHTML='';
+      return;
+    }
     summary();
     const s=sample(current),r=state.rounds[current],finished=r && r.status!=='playing';
     $('day-label').textContent=mode==='daily'?'Dnešní čtení · '+new Intl.DateTimeFormat('cs-CZ',{dateStyle:'long',timeZone:'Europe/Prague'}).format(new Date(assignedDay+'T12:00:00Z')):'Testovací ukázka '+String(D.samples.findIndex(x=>x.id===current)+1).padStart(2,'0')+' / 10';
@@ -138,7 +145,12 @@
       else {state=read();await daily();}
     },
     async apply(incoming){await accept(incoming);render();},
-    pause(value){$('reading').inert=value;$('hints-panel').inert=value;},
+    pause(value){
+      paused=value;$('round').inert=value;$('hints-panel').inert=value;$('reading').setAttribute('aria-busy',String(value));
+      for(const button of document.querySelectorAll('[data-dialog="notebook"],[data-dialog="samples"],[data-daily]'))button.disabled=value;
+      if(value){for(const id of ['notebook','samples'])if($(id).open)$(id).close();}
+      render();
+    },
     focus:()=>{if(!$('author-form').hidden)$('author').focus({preventScroll:true});}
   };
 })();

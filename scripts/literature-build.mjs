@@ -7,7 +7,7 @@ export async function buildLiterature(root,version,renderScripts,sdkBlock) {
   const authors=new Map(Object.entries({...registry.profiles,...registry.guessProfiles}).map(([id,a])=>[id,{id,name:a.name,aliases:a.aliases,guidance:a.guidance}]));
   for(const a of [...data.extraAuthors,...data.samples.map(s=>({id:s.author,name:s.name,aliases:s.aliases,environment:s.environment,period:s.period,focus:s.focus}))]){
     const prior=authors.get(a.id);
-    authors.set(a.id,{...a,aliases:[...new Set([...(prior?.aliases||[]),...a.aliases])],guidance:{environment:a.environment,periods:[a.period],focus:a.focus}});
+    authors.set(a.id,{...a,aliases:[...new Set([...(prior?.aliases||[]),...a.aliases])],guidance:{environment:a.environment,periods:[...new Set([...(prior?.guidance?.periods||[]),a.period])],focus:a.focus}});
   }
   const publicData={samples:data.samples,authors:[...authors.values()]};
   if(data.samples.length!==10 || new Set(data.samples.map(s=>s.id)).size!==10)throw Error('Literary pilot requires ten unique samples');

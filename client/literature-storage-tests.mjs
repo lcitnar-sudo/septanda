@@ -3,7 +3,7 @@ import * as game from '../literature-game.mjs';
 const mem=new Map(),elements=new Map(),events=new Map();
 function el(id){if(!elements.has(id))elements.set(id,{id,value:'',hidden:false,attributes:{},listeners:{},setAttribute(k,v){this.attributes[k]=v;},addEventListener(k,fn){this.listeners[k]=fn;},focus(){},querySelector(){return {focus(){}};},close(){}});return elements.get(id);}
 const localStorage={getItem:k=>mem.get(k)||null,setItem:(k,v)=>mem.set(k,v)};
-const document={getElementById:el,activeElement:null,addEventListener(k,fn){events.set(k,fn);},querySelector(){return null;}};
+const document={getElementById:el,activeElement:null,addEventListener(k,fn){events.set(k,fn);},querySelector(){return null;},querySelectorAll(){return [];}};
 class Clock extends Date{constructor(...args){super(...(args.length?args:['2026-10-24T10:00:00Z']));}}
 const context=vm.createContext({document,localStorage,Date:Clock,Intl,crypto:globalThis.crypto,navigator:{},console,Map,Set,Promise,setInterval(){},setTimeout(){return 1;},clearTimeout(){},addEventListener(){},SEPTANDA_LITERATURE:game.data,SeptandaLiterature:{...game.engine,day:(now=new Clock())=>game.engine.day(now)}});
 vm.runInContext(await readFile(new URL('./literature.js',import.meta.url),'utf8'),context);
@@ -14,7 +14,8 @@ context.SeptandaLiteratureCloud={signedIn:()=>true,async command(){throw Error('
 await G.setIdentity('A',a);el('author').value='Rozpracovaný soukromý tip';el('author').listeners.input();await new Promise(r=>setImmediate(r));
 assert.equal(JSON.parse(mem.get(E.KEY+'.account.A')).pendingDrafts.L01,'Rozpracovaný soukromý tip');
 await assert.rejects(G.flushDrafts(),/offline/);
-await G.setIdentity('B',b);assert.equal(el('author').value,'');assert(!JSON.stringify(G.exportState()).includes('soukromý'));
+G.pause(true);assert.equal(el('round').hidden,true);assert.equal(el('reading-companion').hidden,true);assert.equal(el('author').value,'');assert.equal(el('book-list').innerHTML,'');
+await G.setIdentity('B',b);assert.equal(el('round').hidden,true,'account remains covered until authenticated load completes');G.pause(false);assert.equal(el('author').value,'');assert(!JSON.stringify(G.exportState()).includes('soukromý'));
 await G.setIdentity('A',a);assert.equal(el('author').value,'Rozpracovaný soukromý tip','unsent draft survives a restored remote snapshot');
 context.SeptandaLiteratureCloud.command=async(action,body)=>{assert.equal(action,'draft');a.rounds[body.id].draft=body.text;return {state:clone(a)};};
 await G.flushDrafts();assert.deepEqual(Object.keys(JSON.parse(mem.get(E.KEY+'.account.A')).pendingDrafts),[]);
