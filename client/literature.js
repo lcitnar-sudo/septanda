@@ -71,9 +71,9 @@
     }
     summary();
     const s=sample(current),r=state.rounds[current],finished=r && r.status!=='playing';
-    $('day-label').textContent=mode==='daily'?'Dnešní čtení · '+new Intl.DateTimeFormat('cs-CZ',{dateStyle:'long',timeZone:'Europe/Prague'}).format(new Date(assignedDay+'T12:00:00Z')):'Testovací ukázka '+String(D.samples.findIndex(x=>x.id===current)+1).padStart(2,'0')+' / 10';
+    $('day-label').textContent=mode==='daily'?'Dnešní čtení · '+new Intl.DateTimeFormat('cs-CZ',{dateStyle:'long',timeZone:'Europe/Prague'}).format(new Date(assignedDay+'T12:00:00Z')):'Z knihovničky · '+String(D.samples.findIndex(x=>x.id===current)+1).padStart(2,'0')+' / 10';
     $('daily-return').hidden=mode==='daily';$('empty').hidden=!!s;$('round').hidden=!s;$('hints-panel').hidden=!s || finished;
-    if(!s) {$('mascot-line').textContent='Všech deset knih už znáš z ukázky. Své objevy najdeš v knihovničce.';return;}
+    if(!s) {$('mascot-line').textContent='Všechna dostupná čtení už máš otevřená. Své objevy najdeš v knihovničce.';return;}
     $('excerpt').textContent=s.text;$('reading-time').textContent='≈ '+Math.max(1,Math.ceil(s.text.split(/\s+/).length/180))+' min čtení';
     $('author-form').hidden=finished;$('story').hidden=!finished;$('reveal-action').hidden=finished;
     if(document.activeElement!==$('author')) $('author').value=r.draft;

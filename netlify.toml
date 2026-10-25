@@ -17,5 +17,23 @@
 
 [[redirects]]
   from = "/literatura"
-  to = "/literatura.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/literatura.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/literatura/"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/puvodni"
+  to = "/puvodni.html"
   status = 200

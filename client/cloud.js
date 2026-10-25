@@ -221,7 +221,7 @@
       $('admin-previous').disabled = adminOffset === 0; $('admin-next').disabled = adminOffset + 50 >= result.total;
     } catch (error) { $('admin-users').replaceChildren(); $('admin-status').textContent = translate(error); }
   }
-  function redirectUrl(recovery = false) { const url = new URL(location.pathname, location.origin); if (recovery) url.searchParams.set('account','recovery'); return url.href; }
+  function redirectUrl(recovery = false) { const url = new URL('/', location.origin); if (recovery) url.searchParams.set('account','recovery'); return url.href; }
   async function start(runtimeConfig) {
     config = runtimeConfig;
     if (!root.SeptandaSupabase?.createClient) throw new Error('Knihovna přihlášení se nenačetla. Obnov stránku.');

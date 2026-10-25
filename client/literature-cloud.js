@@ -24,7 +24,7 @@
   function mode(next){
     authMode=next;const register=next==='register',reset=next==='reset';
     $('lit-auth-title').textContent=register?'Ulož si své čtení.':reset?'Obnov přístup.':'Přihlas se a čti dál.';
-    $('lit-auth-intro').textContent=register?'Jeden účet pro původní i literární Šeptandu. Hrát můžeš i bez registrace.':reset?'Pošleme ti odkaz pro nastavení nového hesla.':'Použij stejný e-mail a heslo jako v původní hře.';
+    $('lit-auth-intro').textContent=register?'Účet uchová tvoje čtení i na jiném zařízení. Hrát můžeš i bez registrace.':reset?'Pošleme ti odkaz pro nastavení nového hesla.':'Přihlas se e-mailem a heslem. Tvé čtení a knihovnička zůstanou uložené.';
     $('lit-auth-tabs').hidden=false;$('lit-auth-form').hidden=false;$('lit-confirmation').hidden=true;
     for(const b of $('lit-auth-tabs').querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.auth===next));
     $('lit-name-field').hidden=!register;$('lit-consent-field').hidden=!register;$('lit-consent').checked=false;
@@ -94,7 +94,7 @@
       if(authMode==='reset'){
         const url=new URL('/',location.origin);url.searchParams.set('account','recovery');
         const {error}=await sdk.auth.resetPasswordForEmail(email,{redirectTo:url.href});if(error)throw error;
-        $('lit-auth-message').hidden=false;$('lit-auth-message').textContent='Pokud k e-mailu existuje účet, přijde odkaz pro obnovení přístupu. Zkontroluj i spam. Změna hesla se otevře v původní Šeptandě.';
+        $('lit-auth-message').hidden=false;$('lit-auth-message').textContent='Pokud k e-mailu existuje účet, přijde odkaz pro obnovení přístupu. Zkontroluj i spam.';
       }else{
         const result=authMode==='register'?await sdk.auth.signUp({email,password,options:{emailRedirectTo:new URL('/',location.origin).href,data:{display_name:$('lit-name').value.trim()||'Hráč '+crypto.randomUUID().slice(0,4),marketing_opt_in:$('lit-consent').checked,marketing_consent_version:config.consent.version}}}):await sdk.auth.signInWithPassword({email,password});
         if(result.error)throw result.error;$('lit-password').value='';
@@ -105,6 +105,19 @@
     finally{signing=false;$('lit-auth-submit').disabled=false;}
   });
   $('lit-auth').addEventListener('close',()=>{$('lit-password').value='';});
+  $('lit-recovery').addEventListener('close',()=>{$('lit-new-password').value='';$('lit-new-password-again').value='';});
+  $('lit-recovery-form').addEventListener('submit',async event=>{
+    event.preventDefault();const message=$('lit-recovery-message');message.hidden=false;
+    const password=$('lit-new-password').value;
+    if(password!==$('lit-new-password-again').value){message.textContent='Hesla se neshodují.';return;}
+    if(password.length<10){message.textContent='Zvol alespoň 10 znaků.';return;}
+    if(!sdk||!session){message.textContent='Odkaz pro obnovu už není platný. Požádej o nový přes Zapomenuté heslo.';return;}
+    $('lit-recovery-submit').disabled=true;
+    try{const {error}=await sdk.auth.updateUser({password});if(error)throw error;
+      $('lit-new-password').value='';$('lit-new-password-again').value='';$('lit-recovery').close();
+      history.replaceState(null,'',location.pathname||'/');status('Nové heslo je uložené. Můžeš pokračovat ve čtení.');
+    }catch(error){message.textContent=translate(error);}finally{$('lit-recovery-submit').disabled=false;}
+  });
   async function start(){
     Game.pause(true);status('Ověřuji přihlášení…');
     try{
@@ -113,12 +126,14 @@
       $('lit-consent-text').textContent=config.consent.text;
       sdk=root.SeptandaSupabase.createClient(config.supabase.url,config.supabase.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
       sdk.auth.onAuthStateChange((event,next)=>{
+        if(event==='PASSWORD_RECOVERY')setTimeout(()=>show('lit-recovery'),0);
         if(signing)return;
         if(next?.user.id===session?.user.id && ready){session=next;if(event==='SIGNED_IN' && closeLogin())Game.focus();return;}
         if(event==='INITIAL_SESSION')return;
         setTimeout(()=>load(next),0);
       });
       const {data,error}=await sdk.auth.getSession();if(error)throw error;await load(data.session);
+      if(new URL(location.href||'/',location.origin).searchParams.get('account')==='recovery'){if(data.session)show('lit-recovery');else{mode('reset');show('lit-auth');$('lit-auth-message').hidden=false;$('lit-auth-message').textContent='Odkaz pro obnovu už není platný. Požádej o nový odkaz.';}}
     }catch(error){await Game.setIdentity(null);Game.pause(false);status('Hraješ bez účtu. '+translate(error));}
   }
   addEventListener('online',refresh);

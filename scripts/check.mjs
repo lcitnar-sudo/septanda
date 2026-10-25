@@ -72,7 +72,7 @@ check(extension.SeptandaDaily.ensureDay(pending,'2026-01-01').ids.length===0,'No
 extension.SEPTANDA_SCHEDULE.days.push({ids:puzzles.slice(0,5).map(p=>p.id)});
 check(extension.SeptandaDaily.ensureDay(pending,'2026-01-01').ids.length===5,'Newly added content fills an earlier empty assignment');
 
-const html=await readFile(new URL('../public/index.html',import.meta.url),'utf8'),headers=await readFile(new URL('../public/_headers',import.meta.url),'utf8');
+const html=await readFile(new URL('../public/puvodni.html',import.meta.url),'utf8'),headers=await readFile(new URL('../public/_headers',import.meta.url),'utf8');
 const scripts=[...html.matchAll(/<script id="([^"]+)">([\s\S]*?)<\/script>/g)];
 check(scripts.length>=8,'All functional modules in standalone HTML');
 for(const [,name,code] of scripts){

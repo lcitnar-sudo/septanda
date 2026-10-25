@@ -15,7 +15,7 @@ const port=Number(process.argv[3] || 8785);
 const data=path.resolve(process.argv[4] || path.join(here,'.local-data'));
 const legacy=createHandler(fileStore(data),{local:true}),cloud=createCloudAPI({game});
 const literary=createLiteratureAPI({game:literature,store:fileStore(path.join(data,'literature'))});
-const types={'.html':'text/html; charset=utf-8','.md':'text/plain; charset=utf-8','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.json':'application/json','.txt':'text/plain; charset=utf-8'};
+const types={'.html':'text/html; charset=utf-8','.md':'text/plain; charset=utf-8','.jpg':'image/jpeg','.xml':'application/xml; charset=utf-8','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml','.json':'application/json','.txt':'text/plain; charset=utf-8'};
 createServer(async(req,res)=>{
   try {
     const headerText=await readFile(path.join(root,'_headers'),'utf8');
@@ -32,7 +32,7 @@ const headers=Object.fromEntries(headerText.split('\n').filter(l=>l.startsWith('
     // Netlify detects and receives this form only on the deployed site.
     if(req.method==='POST' && url.pathname==='/') {res.writeHead(501,{'Content-Type':'text/plain; charset=utf-8'});res.end('Kontaktní formulář přijímá zprávy až na Netlify.');return;}
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return;}
-    const relative=decodeURIComponent(url.pathname)==='/'?'index.html':['/vyzva','/procvicit','/ukazka','/literatura'].includes(url.pathname)?url.pathname.slice(1)+'.html':decodeURIComponent(url.pathname).slice(1);
+    const relative=decodeURIComponent(url.pathname)==='/'?'index.html':['/vyzva','/procvicit','/ukazka','/literatura','/puvodni'].includes(url.pathname)?url.pathname.slice(1)+'.html':decodeURIComponent(url.pathname).slice(1);
     const file=path.resolve(root,relative);
     if(!file.startsWith(root+path.sep)){res.writeHead(403);res.end();return;}
     if(!(await stat(file)).isFile())throw new Error('missing');

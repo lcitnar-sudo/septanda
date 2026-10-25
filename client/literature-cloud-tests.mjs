@@ -10,9 +10,9 @@ const document={getElementById:el,querySelector:()=>[...elements.values()].find(
 const state=game.engine.fresh('account');game.engine.assign(state,'2026-10-24',game.data.samples);
 const config={configured:true,supabase:{url:'https://synthetic.supabase.co',publishableKey:'synthetic-public'},consent:{text:'Dobrovolné novinky',version:'v1'}};
 let release;gate=new Promise(r=>release=r);
-const context=vm.createContext({document,console,URL,AbortSignal,crypto:globalThis.crypto,location:{origin:'https://example.test'},setTimeout,clearTimeout,addEventListener(){},
+const context=vm.createContext({document,console,URL,AbortSignal,crypto:globalThis.crypto,location:{origin:'https://example.test',pathname:'/',href:'https://example.test/'},history:{replaceState(...args){calls.push({history:args});}},setTimeout,clearTimeout,addEventListener(){},
   SeptandaLiteraryGame:{guestState:()=>null,async setIdentity(id,s){identities.push({id,state:clone(s||{})});},async apply(){},async flushDrafts(){},pause:b=>pauses.push(b),focus(){}},
-  SeptandaSupabase:{createClient(url,key,o){assert.equal(url,config.supabase.url);options=o;return {auth:{onAuthStateChange(fn){callback=fn;},async getSession(){return {data:{session}};},async signInWithPassword(){if(authError)return {error:Error(authError)};session=signed;return {data:{session}};},async signUp(body){calls.push({signup:body});return {data:{session:null}};},async resetPasswordForEmail(){return {};},async signOut(){session=null;return {};}}};}},
+  SeptandaSupabase:{createClient(url,key,o){assert.equal(url,config.supabase.url);options=o;return {auth:{onAuthStateChange(fn){callback=fn;},async getSession(){return {data:{session}};},async signInWithPassword(){if(authError)return {error:Error(authError)};session=signed;return {data:{session}};},async signUp(body){calls.push({signup:body});return {data:{session:null}};},async resetPasswordForEmail(email,body){calls.push({reset:body});return {};},async updateUser(body){calls.push({update:body});return {};},async signOut(){session=null;return {};}}};}},
   async fetch(url,opts={}){if(url.endsWith('runtime-config'))return {ok:true,json:async()=>config};assert.equal(url,'/.netlify/functions/literature-player');assert.equal(opts.headers.Authorization,'Bearer synthetic-token');calls.push(JSON.parse(opts.body));if(gate)await gate;if(failProfile)throw Error('Network unavailable');return {ok:true,json:async()=>({state:clone(state),account:{id:user.id,name:'Čtenář',email:'private@example.test'},result:state.days['2026-10-24']})};}
 });
 const settle=async()=>{await new Promise(r=>setTimeout(r,2));for(let i=0;i<8;i++)await new Promise(r=>setImmediate(r));};
@@ -33,4 +33,10 @@ const second={...signed,user:{id:'87654321-4321-4321-4321-cba987654321'}};
 callback('SIGNED_IN',second);await settle();assert.equal(pauses.at(-1),true,'account is covered before fetching another account');assert.equal(identities.length,previousCount,'unverified new account data never applied');
 failProfile=true;releaseSwitch();gate=null;await settle();assert.equal(pauses.at(-1),true,'previous account remains covered after failed fetch');assert.equal(identities.length,previousCount);assert.equal(el('reading-reconnect').hidden,false);
 failProfile=false;callback('SIGNED_IN',signed);await settle();assert.equal(pauses.at(-1),false);
+// Root landing accepts the existing password recovery links, without navigating to the archive.
+callback('PASSWORD_RECOVERY',signed);await settle();assert.equal(el('lit-recovery').open,true);
+el('lit-new-password').value='synthetic-new-password';el('lit-new-password-again').value='different';
+const updatesBefore=calls.filter(x=>x.update).length;await el('lit-recovery-form').listeners.submit({preventDefault(){}});assert.equal(calls.filter(x=>x.update).length,updatesBefore);assert.match(el('lit-recovery-message').textContent,/neshodují/);
+el('lit-new-password-again').value='synthetic-new-password';await el('lit-recovery-form').listeners.submit({preventDefault(){}});assert.equal(el('lit-recovery').open,false);assert.equal(el('lit-new-password').value,'');assert.equal(calls.findLast(x=>x.history).history[2],'/');
+await click('reset');await el('lit-auth-form').listeners.submit({preventDefault(){}});assert.equal(calls.findLast(x=>x.reset).reset.redirectTo,'https://example.test/?account=recovery');
 console.log('Literary cloud client: persistent shared auth, immediate dialog closure, invalid credentials, backend failure/reconnect, logout isolation, confirmation instructions and unchecked consent passed (synthetic transport).');

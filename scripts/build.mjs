@@ -61,25 +61,27 @@ const renderScripts = parts => parts.map(({name,code})=>{
 }).join('\n');
 const pageTemplate=html;
 html=html.replace('</body>',()=>renderScripts(blocks)+'\n</body>');
-await writeFile(path.join(destination,'index.html'),html);
+await writeFile(path.join(destination,'puvodni.html'),html.replace('href="#guess"','href="/puvodni#guess"').replace('</head>','<base href="/"><meta name="robots" content="noindex,follow"><link rel="canonical" href="https://septanda.com/puvodni"></head>').replace('content="https://septanda.com/"','content="https://septanda.com/puvodni"').replace('</nav>','<a class="text-button" href="/">Dnešní čtení →</a></nav>'));
 // Reuse the actual game UI, but omit all account, network and form modules.
 const demoParts=blocks.filter(({name})=>!['supabase-sdk','cloud','leaderboard','community'].includes(name)).map(part=>part.name==='app'?{...part,code:part.code.replace("'septanda.v6.daily'","'septanda.demo.authors.v1'").replace("'septanda.v5.progress'","'septanda.demo.legacy.v1'")}:part);
 demoParts.splice(demoParts.findIndex(p=>p.name==='app'),0,{name:'demo',code:await readFile(path.join(source,'demo.js'),'utf8')});
 const demoCSS=`.header-account,.leaderboard-section,.edition-slip,[data-open="contact-dialog"],[data-open="stats-dialog"]{display:none!important}.demo-banner{margin:0 0 30px;padding:20px;border-left:3px solid var(--oxide);background:var(--paper)}.demo-banner p{margin:8px 0 12px}.demo-banner a{display:inline-block}.demo-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em}.demo-banner strong{font-size:21px}.demo-return{margin-left:auto}`;
-const banner='<section class="demo-banner" aria-label="Cvičná hra"><span class="demo-label">UKÁZKA NOVÉ ŠEPTANDY</span><p><strong>Tři výroky na zkoušku. Hledej autora.</strong></p><p>Začni psát jméno nebo „lidové rčení“. Za 50 cvičných bodů postupně získáš stopy a čtyři možnosti. Cvičné body i výsledky zůstávají jen v této ukázce; tvůj účet a denní postup se nemění.</p><a class="underlined" href="./">Zpět do mé hry →</a></section>';
+const banner='<section class="demo-banner" aria-label="Cvičná hra"><span class="demo-label">UKÁZKA NOVÉ ŠEPTANDY</span><p><strong>Tři výroky na zkoušku. Hledej autora.</strong></p><p>Začni psát jméno nebo „lidové rčení“. Za 50 cvičných bodů postupně získáš stopy a čtyři možnosti. Cvičné body i výsledky zůstávají jen v této ukázce; tvůj účet a denní postup se nemění.</p><a class="underlined" href="/puvodni">Zpět do mé hry →</a></section>';
 let demo=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta name="robots" content="noindex,follow"><style>'+demoCSS+'</style></head>');
-demo=demo.replace(/<title>[^<]*<\/title>/,'<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="./">Zpět do mé hry →</a></nav>');
+demo=demo.replace(/<title>[^<]*<\/title>/,'<title>Vyzkoušej hádání autorů · Šeptanda</title>').replace('</nav>','<a class="text-button demo-return" href="/puvodni">Zpět do mé hry →</a></nav>');
 demo=demo.replace('</body>',()=>renderScripts(demoParts)+'\n</body>');
 await writeFile(path.join(destination,'ukazka.html'),demo);
 const practiceParts=blocks.filter(({name})=>!['supabase-sdk','cloud','leaderboard','community'].includes(name)).map(part=>part.name==='app'?{...part,code:part.code.replace("'septanda.v6.daily'",'globalThis.SEPTANDA_PRACTICE.key').replace("'septanda.v5.progress'","'septanda.practice.legacy.unused'").replaceAll('Připsáno 200 bodů.','Připsáno 200 cvičných bodů.').replaceAll('+200 bodů připsáno','+200 cvičných bodů').replaceAll('Dnešní sada je hotová. Tvoje výsledky zůstávají uložené.','Cvičný výrok je hotový. Denní postup a body se nezměnily.').replaceAll('Prohlédnout dnešní sadu','Prohlédnout cvičný výrok')}:part);
 practiceParts.splice(practiceParts.findIndex(p=>p.name==='app'),0,{name:'practice',code:await readFile(path.join(source,'practice.js'),'utf8')});
 for(const [route,label]of [['vyzva','Výzva pro kamaráda'],['procvicit','Dobrovolné procvičení']]){
- const banner='<section class="practice-banner"><p class="eyebrow">'+label.toUpperCase()+'</p><h2>Jeden výrok na zkoušku.</h2><p>Tato hra je samostatná. Nemění tvé body, historii ani osobní denní trojici.</p><a class="underlined" href="./">Zpět do mé hry →</a> <button type="button" class="text-button underlined" id="practice-reset">Zkusit znovu</button></section>';
+ const banner='<section class="practice-banner"><p class="eyebrow">'+label.toUpperCase()+'</p><h2>Jeden výrok na zkoušku.</h2><p>Tato hra je samostatná. Nemění tvé body, historii ani osobní denní trojici.</p><a class="underlined" href="/puvodni">Zpět do mé hry →</a> <button type="button" class="text-button underlined" id="practice-reset">Zkusit znovu</button></section>';
  let page=pageTemplate.replace('<main>','<main>'+banner).replace('</head>','<meta name="robots" content="noindex,follow"></head>').replace(/<title>[^<]*<\/title>/,'<title>'+label+' · Šeptanda</title>');
  page=page.replace('</body>',()=>renderScripts(practiceParts)+'\n</body>');await writeFile(path.join(destination,route+'.html'),page);
 }
 
 await buildLiterature(root,version,renderScripts,blocks[0]);
+await writeFile(path.join(destination,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: https://septanda.com/sitemap.xml\n');
+await writeFile(path.join(destination,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://septanda.com/</loc></url><url><loc>https://septanda.com/soukromi.html</loc></url></urlset>');
 await writeFile(path.join(destination,'_headers'),`/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
