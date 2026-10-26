@@ -15,7 +15,7 @@
   <meta property="og:url" content="https://septanda.com/">
   <meta property="og:image" content="https://septanda.com/assets/social/septik-share-v1.png">
   <meta property="og:image:alt" content="Šeptík, průvodce literární Šeptandou.">
-  <meta name="septanda-build" content="7.3.0">
+  <meta name="septanda-build" content="7.4.0">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Šeptanda — Jeden úryvek. Celý příběh.">
   <meta name="twitter:description" content="Každý den jeden literární úryvek. Poznej autora a objev příběh knihy.">
@@ -155,6 +155,10 @@
 /* Shared site forms. */
 select,textarea{font:inherit;color:var(--ink);width:100%;background:#e8e6dc66;border:1px solid #9da893;border-radius:5px;padding:14px 16px;min-height:48px}textarea{resize:vertical;line-height:1.6}select:focus-visible,textarea:focus-visible{outline:3px solid var(--green);outline-offset:4px}.contact-honeypot{display:none}#contact-form label,#lit-recovery-form label{margin-top:18px}#contact-form .primary,#lit-recovery-form .primary{margin-top:22px}#lit-recovery-form input{margin-bottom:18px}#contact-status{font-size:14px;line-height:1.6}.is-success{color:var(--green)}footer button{min-height:44px;text-decoration:underline;text-underline-offset:4px}
 
+/* A second daily game shares the same quiet card, without competing sidebars. */
+.play-modes{display:flex;gap:8px;padding:6px;background:#dfe2d5;border-radius:8px;width:fit-content;max-width:100%;margin:8px 0 24px}.play-modes button{display:flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:12px 18px;border-radius:5px;font-size:15px;line-height:1.3;text-align:center}.play-modes button[aria-selected=true]{background:var(--paper);box-shadow:0 1px 4px #252b2612;font-weight:600}.play-modes button>span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--green)}.emoji-card{padding:34px 36px}.emoji-card h2{font-family:Barlow,sans-serif;font-size:28px;line-height:1.25;font-weight:600;letter-spacing:-.4px}.emoji-intro{font-size:15px;color:var(--muted);margin:12px 0 0}.emoji-symbols{display:flex;justify-content:center;align-items:center;gap:clamp(12px,4vw,28px);padding:36px 0 40px}.emoji-symbols>span{display:flex;align-items:center;justify-content:center;font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:clamp(48px,7vw,74px);line-height:1.3;min-width:0}.emoji-tools{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:18px 0 6px}.emoji-tools .save-book{margin:0;min-width:150px}.emoji-tools>button:last-child{font-size:14px;min-height:46px;color:var(--muted);text-decoration:underline;text-underline-offset:4px}.emoji-card>.eyebrow{margin-bottom:10px}.emoji-card .hints{margin-top:20px}.emoji-card .rules-link{margin-top:16px;display:block;font-size:13px}.emoji-card button:disabled{opacity:.55;cursor:wait}.emoji-card .hints>li{padding:18px 20px}.emoji-story{border-top:1px solid var(--line);padding-top:28px;margin-top:0}.emoji-story h3{font-family:Barlow,sans-serif;font-size:28px;line-height:1.25;margin:10px 0}.emoji-story .emoji-author{font-size:18px;color:var(--green);margin-bottom:20px}.emoji-story details{margin:22px 0}.emoji-story summary,.emoji-history summary{cursor:pointer;min-height:44px;display:list-item;padding:10px 0;font-size:14px;color:var(--green)}.emoji-story details p{font-size:14px;margin:10px 0 0}.emoji-source{font-size:13px;line-height:1.6;display:inline-block;min-height:44px;padding:12px 0;overflow-wrap:anywhere}.emoji-count{display:flex;justify-content:space-between;gap:16px;font-size:14px;margin:18px 0}.emoji-count dd{font-weight:600;margin:0}.emoji-history{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}.emoji-history p{font-size:13px;margin-top:14px}.emoji-share{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;text-align:left;font-size:14px;color:var(--green);border-top:1px solid var(--line);padding-top:16px;margin-top:18px}.emoji-companion>p:not(.muted){font-size:15px}.emoji-card .feedback{margin-bottom:0}#emoji-loading-text{margin-top:18px}#emoji-import-section{margin-top:24px;border-top:1px solid var(--line)}#emoji-import-section p{font-size:14px}
+@media(max-width:480px){.play-modes{width:100%;gap:4px;padding:5px}.play-modes button{flex:1;padding:11px 9px;font-size:13px;gap:5px;flex-wrap:wrap}.play-modes button>span{font-size:9px}.emoji-card{padding:26px 20px}.emoji-card h2{font-size:25px}.emoji-symbols{padding:32px 0}.emoji-tools{gap:14px}.emoji-tools .save-book{min-width:0;padding:12px 14px}.emoji-tools>button:last-child{font-size:13px}.emoji-story h3{font-size:25px}}
+
 </style>
 </head>
 <body>
@@ -165,7 +169,8 @@ select,textarea{font:inherit;color:var(--ink);width:100%;background:#e8e6dc66;bo
       <section class="intro"><p class="eyebrow">KAŽDÝ DEN JEDNO SETKÁNÍ S LITERATUROU</p><h1>Jeden úryvek. Celý příběh.<br><span>Poznáš, kdo ho napsal?</span></h1><p>Každý den jedno malé setkání s literaturou. Napiš autora, vezmi si stopu a objev knihu za těmito slovy.</p></section>
       <div id="storage-note" class="notice" role="status" hidden></div>
       <div id="new-day" class="notice" hidden>Začal nový den. Rozečtený úryvek zůstává uložený. <button type="button" data-daily>Otevřít dnešní úryvek →</button></div>
-      <div class="trial-toolbar"><p id="day-label"></p><div><button type="button" id="daily-return" data-daily hidden>Zpět na dnešní úryvek</button><button type="button" data-dialog="samples" hidden>Prozkoumat 10 ukázek <span aria-hidden="true">↗</span></button></div></div>
+      <div class="play-modes" id="play-modes" role="tablist" aria-label="Vyber hru"><button type="button" id="mode-reading" role="tab" aria-selected="true" aria-controls="literary-view">Denní úryvek</button><button type="button" id="mode-emoji" role="tab" aria-selected="false" aria-controls="emoji" tabindex="-1">Kniha ve třech znacích <span>Bonus</span></button></div>
+      <section id="literary-view" role="tabpanel" aria-labelledby="mode-reading"><div class="trial-toolbar"><p id="day-label"></p><div><button type="button" id="daily-return" data-daily hidden>Zpět na dnešní úryvek</button><button type="button" data-dialog="samples" hidden>Prozkoumat 10 ukázek <span aria-hidden="true">↗</span></button></div></div>
       <div class="layout">
         <article class="card" id="reading" aria-labelledby="question" tabindex="-1">
           <div id="reading-loading" hidden role="status"><h2>Chvilku, otevíráme tvé čtení.</h2><p id="reading-loading-status">Načítám uložené čtení…</p><div class="reading-loading-actions"><button type="button" data-auth="reconnect" id="reading-reconnect" hidden>Zkusit připojení znovu</button><button type="button" data-auth="profile" id="reading-account" hidden>Můj účet</button></div></div><div id="empty" hidden><h2>Další příběhy připravujeme.</h2><p>Všech deset ukázek už máš otevřených. Znovu je jako nový denní úryvek nedostaneš. Můžeš se k nim vrátit v přehledu.</p><button type="button" class="primary" data-dialog="samples">Prohlédnout ukázky</button></div>
@@ -178,15 +183,35 @@ select,textarea{font:inherit;color:var(--ink);width:100%;background:#e8e6dc66;bo
         </article>
         <aside id="reading-companion" class="help" aria-label="Průvodce a čtenářský deník"><div class="mascot"><img id="septik" src="/assets/septik/idle.webp" width="100" height="120" alt="Šeptík s mapou a lucernou"><div><p class="eyebrow">ŠEPTÍK</p><p id="mascot-line">Někdy napoví jméno, jindy rytmus věty. Zkus svůj první dojem.</p></div></div><div id="hints-panel"><button type="button" id="hint-button" class="hint-button" data-hint></button><p class="muted" id="hint-help"></p><ol id="hints" class="hints" reversed></ol></div><div class="reading-summary"><p class="eyebrow">TVÉ ČTENÍ</p><p id="today-status"></p><dl><div><dt>Objevené knihy</dt><dd id="summary-books">0 / 10</dd></div><div><dt>Literární body</dt><dd id="summary-points">0</dd></div></dl><button type="button" class="notebook-link" data-dialog="notebook">Otevřít knihovničku <span aria-hidden="true">→</span></button><p id="lit-sync-status" class="muted" role="status">Uloženo v tomto prohlížeči.</p><button type="button" id="lit-reconnect" data-auth="reconnect" hidden>Zkusit připojení znovu</button></div><button type="button" class="rules-link" data-dialog="rules">Jak se hraje a počítají body</button></aside>
       </div>
-      <p class="trial-note">Hrát můžeš bez účtu. Po přihlášení si své čtení a knihovničku uchováš i na dalších zařízeních.</p>
+      </section>
+      <section id="emoji" class="emoji-view" role="tabpanel" aria-labelledby="mode-emoji" hidden>
+        <div class="trial-toolbar"><p id="emoji-date">Dnešní bonus</p><span>Jedna nová hádanka denně</span></div>
+        <div class="layout">
+          <article class="card emoji-card" aria-labelledby="emoji-title">
+            <div id="emoji-loading" role="status"><h2>Kniha ve třech znacích.</h2><p id="emoji-loading-text">Načítám tvůj denní bonus…</p><button type="button" id="emoji-retry" class="save-book" hidden>Zkusit znovu</button></div>
+            <div id="emoji-content" hidden>
+              <div id="emoji-empty" hidden><h2>Všechny bonusy už máš otevřené.</h2><p>Pro první test máme deset hádanek. Už přidělené ti znovu nenabídneme. Další připravujeme.</p></div>
+              <div id="emoji-round"><p class="eyebrow">MALÁ KNIŽNÍ HÁDANKA</p><h2 id="emoji-title">Tři znaky. Která kniha?</h2><p class="emoji-intro">Napoví ti název, postavy nebo děj. Jakou knihu v nich vidíš?</p><div id="emoji-symbols" class="emoji-symbols" role="group" aria-label="Tři obrazová vodítka"></div>
+                <form id="emoji-form"><label for="emoji-answer">Název knihy</label><input id="emoji-answer" name="book" type="text" autocomplete="off" spellcheck="false" maxlength="150" placeholder="Napiš název knihy" aria-describedby="emoji-answer-help"><p id="emoji-answer-help" class="muted">Hledáme knihu, ne autora. Diakritiku a drobný překlep neřeš.</p><button type="submit" id="emoji-submit" class="primary">Ověřit knihu <span aria-hidden="true">→</span></button></form>
+                <p id="emoji-feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+                <div id="emoji-tools" class="emoji-tools"><button type="button" id="emoji-hint" class="save-book">První stopa</button><button type="button" id="emoji-reveal">Odhalit knihu</button></div><ol id="emoji-hints" class="hints" reversed hidden></ol>
+                <section id="emoji-story" class="emoji-story" aria-label="Příběh rozluštěné knihy" hidden></section>
+                <button type="button" id="emoji-report" class="rules-link">Sedí ti i jiná kniha? Napiš nám.</button>
+              </div>
+            </div>
+          </article>
+          <aside id="emoji-summary" class="help emoji-companion" aria-label="Tvůj knižní bonus" hidden><div class="mascot"><img src="/assets/septik/thinking.webp" width="86" height="108" alt="Přemýšlející Šeptík"><div><p class="eyebrow">ŠEPTÍK</p><p>Dnes zkusíme číst mezi obrázky.</p></div></div><p id="emoji-today"></p><dl class="emoji-count"><dt>Odhalené knihy</dt><dd id="emoji-completed">0 / 10</dd></dl><p class="muted">Bonus hraješ pro radost. Tipy i obě stopy jsou zdarma a literární body se nemění.</p><p id="emoji-sync" class="muted" role="status"></p><details id="emoji-history" class="emoji-history" hidden></details><button type="button" class="emoji-share" id="emoji-share">Poslat kamarádům <span aria-hidden="true">↗</span></button><p id="emoji-share-status" class="muted" role="status"></p></aside>
+        </div>
+      </section>
+      <p class="trial-note">Hrát můžeš bez účtu. Po přihlášení si čtení, knihovničku i bonusové hádanky uchováš na dalších zařízeních.</p>
     </main>
-    <footer><a class="wordmark small" href="/">šeptanda<span>.</span></a><span>Šeptanda · 7.3.0</span><button type="button" data-dialog="contact">Napište nám</button><a href="/soukromi.html">Soukromí</a><a href="/puvodni">Původní hra</a></footer>
+    <footer><a class="wordmark small" href="/">šeptanda<span>.</span></a><span>Šeptanda · 7.4.0</span><button type="button" data-dialog="contact">Napište nám</button><a href="/soukromi.html">Soukromí</a><a href="/puvodni">Původní hra</a></footer>
   </div>
   <dialog id="samples" aria-labelledby="samples-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">DESET KNIŽNÍCH SETKÁNÍ</p><h2 id="samples-title">Tvé knižní příběhy.</h2><p>Vrať se k otevřeným ukázkám. Jako nové denní čtení je znovu nedostaneš.</p><div id="sample-list" class="sample-list"></div></dialog>
   <dialog id="notebook" aria-labelledby="notebook-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">TVÉ LITERÁRNÍ OBJEVY</p><h2 id="notebook-title">Moje knihovnička.</h2><p id="notebook-score"></p><div id="book-list"></div></dialog>
-  <dialog id="rules" aria-labelledby="rules-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">JEDEN ÚRYVEK DENNĚ</p><h2 id="rules-title">Čti. Hádej. Objevuj.</h2><p>Napiš autora úryvku. U shodných příjmení si vyžádáme křestní jméno. Chybný tip nic nestojí.</p><p>Bez nápovědy získáš 200 literárních bodů. První stopa odhalí období a prostředí, druhá souvislost s knihou, třetí nabídne čtyři autory. Každá stopa sníží možnou odměnu o 50 bodů: 200 → 150 → 100 → 50.</p><p>Stopy můžeš použít vždy, i když ještě nemáš body. Autora můžeš také rovnou odhalit bez bodové odměny. Příběh knihy se ukáže v obou případech.</p><p>Denní úryvek vybíráme pro tvůj účet, nebo pro tento prohlížeč při hraní bez účtu. Neopakujeme už otevřené ukázky. Mezi hráči se texty mohou potkat. Po vyčerpání deseti ukázek nic znovu nepřidělujeme.</p><p>Účet uchová tvoje čtení i knihovničku. Místní hru bez účtu můžeš po přihlášení přidat v Můj účet, pokud patří tobě. Starší výsledky z původní hry najdeš zvlášť přes odkaz v patičce.</p></dialog>
+  <dialog id="rules" aria-labelledby="rules-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">JEDEN ÚRYVEK DENNĚ</p><h2 id="rules-title">Čti. Hádej. Objevuj.</h2><p>Napiš autora úryvku. U shodných příjmení si vyžádáme křestní jméno. Chybný tip nic nestojí.</p><p>Bez nápovědy získáš 200 literárních bodů. První stopa odhalí období a prostředí, druhá souvislost s knihou, třetí nabídne čtyři autory. Každá stopa sníží možnou odměnu o 50 bodů: 200 → 150 → 100 → 50.</p><p>Stopy můžeš použít vždy, i když ještě nemáš body. Autora můžeš také rovnou odhalit bez bodové odměny. Příběh knihy se ukáže v obou případech.</p><p>Denní úryvek vybíráme pro tvůj účet, nebo pro tento prohlížeč při hraní bez účtu. Neopakujeme už otevřené ukázky. Mezi hráči se texty mohou potkat. Po vyčerpání deseti ukázek nic znovu nepřidělujeme.</p><h3>Kniha ve třech znacích</h3><p>V bonusu hádáš název knihy podle tří emoji. Každý den dostaneš vlastní novou hádanku. Tipy, dvě postupné stopy i odhalení jsou zdarma. Bonus nepřidává ani neubírá literární body. Po odhalení poznáš autora a příběh knihy. Z prvních deseti bonusů ti žádný znovu nepřidělíme; po vyčerpání počkáme na nové.</p><p>Účet uchová tvoje čtení i knihovničku. Místní hru bez účtu můžeš po přihlášení přidat v Můj účet, pokud patří tobě. Starší výsledky z původní hry najdeš zvlášť přes odkaz v patičce.</p></dialog>
   <dialog id="lit-auth" aria-labelledby="lit-auth-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">TVŮJ ÚČET V ŠEPTANDĚ</p><h2 id="lit-auth-title">Přihlas se a čti dál.</h2><p id="lit-auth-intro">Přihlas se e-mailem a heslem. Tvé čtení a knihovnička zůstanou uložené.</p><div class="auth-tabs" id="lit-auth-tabs"><button type="button" data-auth="login" aria-pressed="true">Přihlášení</button><button type="button" data-auth="register" aria-pressed="false">Nový účet</button></div><form id="lit-auth-form"><div id="lit-name-field" hidden><label for="lit-name">Přezdívka (nepovinná)</label><input id="lit-name" type="text" maxlength="24" autocomplete="nickname"></div><label for="lit-email">E-mail</label><input id="lit-email" type="email" autocomplete="email" maxlength="254" required><div id="lit-password-field"><label for="lit-password">Heslo</label><input id="lit-password" type="password" autocomplete="current-password" maxlength="128" required></div><label class="opt-in" id="lit-consent-field" hidden><input id="lit-consent" type="checkbox"><span id="lit-consent-text">Chci e-mailem dostávat novinky o Šeptandě, nových hrách a tematických vydáních. Souhlas mohu kdykoli odvolat v nastavení účtu.</span></label><p id="lit-auth-message" class="notice" role="status" hidden></p><button type="submit" class="primary" id="lit-auth-submit">Přihlásit se</button><button type="button" class="rules-link" data-auth="reset" id="lit-forgot">Zapomenuté heslo</button></form><section id="lit-confirmation" tabindex="-1" hidden><h3>Podívej se do své e-mailové schránky.</h3><p>Otevři zprávu od Šeptandy a klikni na <strong>Potvrdit e-mail</strong>. Podívej se také do spamu nebo složky Hromadné. Potom se vrať sem a přihlas se.</p><button type="button" class="primary" data-auth="login">Pokračovat k přihlášení</button></section><p class="muted">Účet je dobrovolný. <a href="/soukromi.html" target="_blank" rel="noopener">Jak ukládáme údaje</a>. Registrace neznamená souhlas s novinkami.</p></dialog>
-  <dialog id="lit-account" aria-labelledby="lit-account-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">TVŮJ HRÁČSKÝ ÚČET</p><h2 id="lit-account-title">Můj účet.</h2><p id="lit-account-name"></p><p id="lit-account-email" class="muted"></p><p id="lit-account-status" class="notice" role="status"></p><section id="lit-import-section" hidden><h3>Čtení z tohoto prohlížeče</h3><p>Hráls i bez účtu? Přidej místní ukázky ke svému účtu, pokud patří tobě. Už uložené výsledky zůstanou zachované.</p><button type="button" class="save-book" data-auth="import">Přidat moje místní čtení</button></section><div class="account-actions"><button type="button" class="save-book" data-auth="reconnect">Znovu načíst uložené čtení</button><a href="/puvodni">Správa účtu a původní výsledky ↗</a><button type="button" class="rules-link" data-auth="logout">Odhlásit se</button></div></dialog>
+  <dialog id="lit-account" aria-labelledby="lit-account-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><p class="eyebrow">TVŮJ HRÁČSKÝ ÚČET</p><h2 id="lit-account-title">Můj účet.</h2><p id="lit-account-name"></p><p id="lit-account-email" class="muted"></p><p id="lit-account-status" class="notice" role="status"></p><section id="lit-import-section" hidden><h3>Čtení z tohoto prohlížeče</h3><p>Hráls i bez účtu? Přidej místní ukázky ke svému účtu, pokud patří tobě. Už uložené výsledky zůstanou zachované.</p><button type="button" class="save-book" data-auth="import">Přidat moje místní čtení</button></section><section id="emoji-import-section" hidden><h3>Bonusy z tohoto prohlížeče</h3><p>Pokud místní bonusové výsledky patří tobě, můžeš je přidat do účtu. Dřívější výsledky zůstanou zachované.</p><button type="button" class="save-book" id="emoji-import">Přidat moje místní bonusy</button></section><div class="account-actions"><button type="button" class="save-book" data-auth="reconnect">Znovu načíst uložené čtení</button><a href="/puvodni">Správa účtu a původní výsledky ↗</a><button type="button" class="rules-link" data-auth="logout">Odhlásit se</button></div></dialog>
   <dialog id="contact" aria-labelledby="contact-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><h2 id="contact-title">Napište nám.</h2><p>Něco ve hře nesedí, nebo máte nápad na další knihu? Napište nám přes formulář nebo na <a href="mailto:infoseptanda@gmail.com">infoseptanda@gmail.com</a>.</p><form id="contact-form" name="septanda-contact" method="POST" action="/" data-netlify="true" netlify-honeypot="website"><input type="hidden" name="form-name" value="septanda-contact"><input type="hidden" name="subject" value="Šeptanda: nová zpráva od hráče"><p class="contact-honeypot" aria-hidden="true"><label>Nechte toto pole prázdné <input name="website" tabindex="-1" autocomplete="off"></label></p><label for="contact-category">Téma</label><select id="contact-category" name="category" required><option value="bug">Chyba ve hře nebo v textu</option><option value="suggestion">Návrh knihy nebo úryvku</option><option value="general">Připomínka nebo dotaz</option></select><label for="contact-email">E-mail pro odpověď (nepovinný)</label><input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email"><label for="contact-message">Zpráva</label><textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="3000" required placeholder="U chyby nebo návrhu přidejte název knihy a případně odkaz na pramen."></textarea><p class="muted">Údaje slouží k vyřízení zprávy. Odeslání vás nepřihlásí k novinkám.</p><p id="contact-status" role="status"></p><button class="primary" id="contact-submit" type="submit">Odeslat zprávu →</button></form></dialog>
   <dialog id="lit-recovery" aria-labelledby="lit-recovery-title"><button type="button" class="close" data-close aria-label="Zavřít">×</button><h2 id="lit-recovery-title">Nastav nové heslo.</h2><p>Zvol nové heslo ke svému účtu v Šeptandě. Uložené čtení zůstane zachované.</p><form id="lit-recovery-form"><label for="lit-new-password">Nové heslo</label><input id="lit-new-password" type="password" autocomplete="new-password" minlength="10" maxlength="128" required><label for="lit-new-password-again">Nové heslo znovu</label><input id="lit-new-password-again" type="password" autocomplete="new-password" minlength="10" maxlength="128" required><p id="lit-recovery-message" class="notice" role="status" hidden></p><button id="lit-recovery-submit" type="submit" class="primary">Uložit nové heslo</button></form></dialog>
   <noscript><p class="notice">Pro hraní Šeptandy zapni JavaScript. <a href="/">Zpět do Šeptandy</a></p></noscript>
@@ -461,11 +486,182 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
   };
 })();
 </script>
+<script id="septanda-emoji-data">
+globalThis.SEPTANDA_EMOJI={"version":1,"reviewed":"2026-10-26","items":[{"id":"E01","emoji":["👦","👑","🪐"],"labels":["chlapec","koruna","planeta"],"title":"Malý princ","author":"Antoine de Saint-Exupéry","aliases":["The Little Prince","Le Petit Prince"],"hints":["Francouzská literatura 20. století. Hrdina poznává jiné planety i svět dospělých.","Autorem je Antoine de Saint-Exupéry."],"explanation":"Chlapec a koruna představují prince, planeta jeho vesmírné putování.","about":"Malý cestovatel opustí svou planetu a poznává zvláštní obyvatele dalších světů. Setkání s liškou a pilotem otevírají otázky přátelství, odpovědnosti a toho, co dospělí přehlížejí.","sourceLabel":"Oficiální stránky knihy (anglicky)","source":"https://www.lepetitprince.com/en/the-book/"},{"id":"E02","emoji":["🐖","🐄","🚜"],"labels":["prase","kráva","traktor"],"title":"Farma zvířat","author":"George Orwell","aliases":["Animal Farm","Zvířecí farma"],"hints":["Britská literatura 20. století. Zvířata převezmou správu hospodářství.","Autorem je George Orwell."],"explanation":"Dvě hospodářská zvířata a traktor odkazují na farmu, na které se odehrává příběh.","about":"Zvířata vyženou farmáře a pokusí se vytvořit spravedlivější společnost. Orwellova politická alegorie ukazuje, jak se sliby rovnosti mohou proměnit v novou nadvládu.","sourceLabel":"The Orwell Foundation (anglicky)","source":"https://www.orwellfoundation.com/the-orwell-foundation/orwell/books-by-orwell/animal-farm/"},{"id":"E03","emoji":["🏝️","🗺️","💰"],"labels":["ostrov","mapa","poklad"],"title":"Ostrov pokladů","author":"Robert Louis Stevenson","aliases":["Treasure Island","Ostrov pokladu"],"hints":["Dobrodružný román 19. století. Mladý Jim Hawkins se vydá na plavbu s piráty.","Autorem je Robert Louis Stevenson."],"explanation":"Ostrov a mapa vedou k ukrytému pokladu.","about":"Jim Hawkins získá mapu a vydá se hledat pirátský poklad. Na palubě se ale nedá snadno poznat, komu věřit. Jednou z nejvýraznějších postav je jednonohý lodní kuchař Dlouhý John Silver.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/120"},{"id":"E04","emoji":["🌍","🧳","📆"],"labels":["zeměkoule","kufr","kalendář"],"title":"Cesta kolem světa za osmdesát dní","author":"Jules Verne","aliases":["Cesta kolem světa za 80 dní","Cesta kolem světa za 80 dnů","Cesta kolem světa za osmdesát dnů","Around the World in Eighty Days"],"hints":["Francouzský dobrodružný román 19. století. Na splnění sázky je osmdesát dní.","Autorem je Jules Verne."],"explanation":"Zeměkoule znamená cestu kolem světa, kufr cestování a kalendář časový limit.","about":"Phileas Fogg vsadí na to, že dokáže objet svět za osmdesát dní. Se sluhou Proklouzem závodí s jízdními řády, nečekanými překážkami i detektivem, který jej podezírá z loupeže.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/103"},{"id":"E05","emoji":["🌊","🚢","🐙"],"labels":["moře","loď","hlavonožec"],"title":"Dvacet tisíc mil pod mořem","author":"Jules Verne","aliases":["20 000 mil pod mořem","20000 mil pod mořem","Dvacet tisíc mil pod moři","Twenty Thousand Leagues Under the Sea","20,000 Leagues Under the Sea"],"hints":["Francouzský dobrodružný román 19. století. Hrdinové cestují pod hladinou na Nautilu.","Autorem je Jules Verne."],"explanation":"Moře a plavidlo připomínají podmořskou cestu, hlavonožec jedno z jejích nebezpečí.","about":"Profesor Aronnax a jeho společníci se dostanou na palubu ponorky Nautilus kapitána Nema. Cesta spojuje obdiv k mořskému světu s otázkami svobody a hranic vědeckého pokroku.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/164"},{"id":"E06","emoji":["👧","🐇","🕳️"],"labels":["dívka","králík","díra"],"title":"Alenka v říši divů","author":"Lewis Carroll","aliases":["Alenčina dobrodružství v říši divů","Alice in Wonderland","Alice’s Adventures in Wonderland","Alice's Adventures in Wonderland"],"hints":["Britská literatura 19. století. Všechno začne cestou za Bílým králíkem.","Autorem je Lewis Carroll."],"explanation":"Dívka následuje králíka do králičí nory, která ji zavede do podivuhodného světa.","about":"Alenka potkává postavy, které převracejí běžnou logiku i jazyková pravidla. Vyprávění si hraje s významy slov, velikostí a tím, co vlastně považujeme za samozřejmé.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/11"},{"id":"E07","emoji":["👧","🌪️","🧙‍♂️"],"labels":["dívka","tornádo","čaroděj"],"title":"Čaroděj ze země Oz","author":"L. Frank Baum","aliases":["Čaroděj ze země Ozz","Čaroděj ze země OZ","Čaroděj z krajiny Oz","The Wonderful Wizard of Oz","The Wizard of Oz"],"hints":["Americká pohádková literatura z přelomu 19. a 20. století. Dorotku odnese cyklon z Kansasu.","Autorem je L. Frank Baum."],"explanation":"Dorotka se kvůli větrné smršti dostane do země, kde hledá pomoc čaroděje.","about":"Dorotka chce zpátky domů a na cestě se spojí se Strašákem, Plechovým dřevorubcem a Zbabělým lvem. Jejich přání otevírají téma schopností, které v sobě někdy nevidíme.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/55"},{"id":"E08","emoji":["🐋","⚓","🚢"],"labels":["velryba","kotva","loď"],"title":"Bílá velryba","author":"Herman Melville","aliases":["Moby Dick","Moby-Dick","Moby Dick aneb Bílá velryba","Moby Dick or the Whale"],"hints":["Americký román 19. století. Kapitán Achab pronásleduje jediného mořského tvora.","Autorem je Herman Melville."],"explanation":"Velryba a námořnické symboly představují výpravu za bílým vorvaněm.","about":"Vypravěč Izmael se připojí k posádce velrybářské lodi Pequod. Kapitán Achab podřídí plavbu osobnímu boji s bílým vorvaněm; román se tak stává i příběhem posedlosti a jejích následků.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/2701"},{"id":"E09","emoji":["🧑‍🔬","⚡","🧟"],"labels":["vědec","blesk","stvoření"],"title":"Frankenstein","author":"Mary Shelleyová","aliases":["Frankenstein neboli moderní Prométheus","Frankenstein aneb moderní Prométheus","Frankenstein or the Modern Prometheus"],"hints":["Britský gotický román 19. století. Mladý vědec vytvoří živou bytost, kterou pak zavrhne.","Autorkou je Mary Shelleyová."],"explanation":"Vědec a stvořená bytost připomínají experiment. Blesk je obrazová zkratka, nikoli doslovný popis postupu v románu.","about":"Victor Frankenstein stvoří živou bytost, ale odmítne za ni převzít odpovědnost. Jméno Frankenstein patří vědci, nikoli jeho bezejmennému stvoření. Kniha zkoumá osamělost, přijetí a důsledky lidských rozhodnutí.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/84"},{"id":"E10","emoji":["🧛","🏰","🩸"],"labels":["upír","hrad","krev"],"title":"Dracula","author":"Bram Stoker","aliases":["Drákula","Drakula","Hrabě Drákula","Hrabě Dracula"],"hints":["Gotický román z konce 19. století. Z Transylvánie do Anglie přichází nebezpečný hrabě.","Autorem je Bram Stoker."],"explanation":"Upír, hrad a krev odkazují na hraběte Draculu.","about":"Román skládá příběh z deníků, dopisů a dalších záznamů. Proti upířímu hraběti se postaví skupina spojenců vedená profesorem Van Helsingem.","sourceLabel":"Text a údaje o knize · Project Gutenberg (anglicky)","source":"https://www.gutenberg.org/ebooks/345"}]};
+</script>
+<script id="septanda-emoji-engine">
+(function(root){
+  'use strict';
+  const KEY='septanda.emoji.v1', validID=id=>/^E\d{2,5}$/.test(id), validDay=d=>/^\d{4}-\d{2}-\d{2}$/.test(d);
+  const norm=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+/g,' ');
+  function distance(a,b){
+    const d=Array.from({length:a.length+1},()=>Array(b.length+1).fill(0));
+    for(let i=0;i<=a.length;i++)d[i][0]=i;for(let j=0;j<=b.length;j++)d[0][j]=j;
+    for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++){
+      d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+      if(i>1&&j>1&&a[i-1]===b[j-2]&&a[i-2]===b[j-1])d[i][j]=Math.min(d[i][j],d[i-2][j-2]+1);
+    }return d[a.length][b.length];
+  }
+  function hash(text){let n=2166136261;for(const c of text){n^=c.charCodeAt(0);n=Math.imul(n,16777619);}return n>>>0;}
+  function day(now=new Date()){
+    const p=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Prague',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).map(p=>[p.type,p.value]));
+    return p.year+'-'+p.month+'-'+p.day;
+  }
+  const fresh=seed=>({version:1,seed,days:{},rounds:{}});
+  function parse(raw){
+    const s=JSON.parse(raw);
+    if(s?.version!==1||typeof s.seed!=='string'||!s.seed||!s.days||Array.isArray(s.days)||typeof s.days!=='object'||!s.rounds||Array.isArray(s.rounds)||typeof s.rounds!=='object')throw Error('Neplatný bonusový deník.');
+    for(const [d,id] of Object.entries(s.days))if(!validDay(d)||!validID(id))throw Error('Neplatný den bonusu.');
+    for(const [id,r] of Object.entries(s.rounds))if(!validID(id)||!['playing','solved','revealed'].includes(r.status)||!Number.isInteger(r.hints)||r.hints<0||r.hints>2||!validDay(r.date)||typeof r.draft!=='string'||r.draft.length>150||!Array.isArray(r.attempts)||r.attempts.length>500||r.attempts.some(a=>typeof a.text!=='string'||a.text.length>150))throw Error('Neplatný výsledek bonusu.');
+    return s;
+  }
+  function open(s,id,date){if(!validID(id)||!validDay(date))throw Error('Neplatná hádanka.');if(!Object.hasOwn(s.rounds,id))s.rounds[id]={status:'playing',hints:0,draft:'',attempts:[],date};return s.rounds[id];}
+  function assign(s,date,items){
+    if(Object.hasOwn(s.days,date))return items.some(p=>p.id===s.days[date])?s.days[date]:null;
+    const unused=items.filter(p=>!Object.hasOwn(s.rounds,p.id)).sort((a,b)=>hash(s.seed+'|'+date+'|'+a.id)-hash(s.seed+'|'+date+'|'+b.id)||a.id.localeCompare(b.id));
+    if(!unused.length)return null;const id=unused[0].id;s.days[date]=id;open(s,id,date);return id;
+  }
+  function identify(text,items){
+    const n=norm(text);if(!n||String(text).length>150)return [];
+    const exact=items.filter(p=>[p.title,...p.aliases].some(a=>norm(a)===n));if(exact.length)return exact;
+    return items.filter(p=>[p.title,...p.aliases].some(a=>{const v=norm(a);return v.length>=6&&n.length>=6&&Math.abs(v.length-n.length)<=1&&distance(n,v)<=1;}));
+  }
+  function answer(s,item,text,items,date){
+    const r=open(s,item.id,date);if(r.status!=='playing')return {kind:'finished'};
+    const clean=String(text).trim().slice(0,150);if(!norm(clean))return {kind:'empty'};
+    if(r.attempts.length>=500)throw Error('U této hádanky už je mnoho tipů. Vezmi si stopu nebo odhal knihu.');
+    const matches=identify(clean,items),correct=matches.length===1&&matches[0].id===item.id;
+    r.attempts.push({text:clean,correct});r.draft=clean;if(correct)r.status='solved';return {kind:correct?'correct':'try-again'};
+  }
+  function hint(s,id,date){const r=open(s,id,date);if(r.status==='playing')r.hints=Math.min(2,r.hints+1);return r;}
+  function reveal(s,id,date){const r=open(s,id,date);if(r.status==='playing')r.status='revealed';return r;}
+  root.SeptandaEmojiEngine={KEY,norm,day,fresh,parse,open,assign,identify,answer,hint,reveal};
+})(globalThis);
+</script>
+<script id="septanda-emoji">
+(function(root){
+  'use strict';
+  const E=root.SeptandaEmojiEngine,D=root.SEPTANDA_EMOJI,$=id=>document.getElementById(id);
+  const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const seed=crypto.randomUUID(),item=id=>D.items.find(p=>p.id===id);
+  let state=E.fresh(seed),key=E.KEY,identity=null,generation=0,queue=Promise.resolve(),date=E.day(),revision=0,paused=true,busy=false,memory=false,feedback='',draftTimer,pending=new Map();
+  function note(text){$('emoji-sync').textContent=text;}
+  function read(){try{const raw=localStorage.getItem(key);return raw?E.parse(raw):state;}catch{memory=true;note('Bonusový deník teď nelze načíst. Původní data nepřepisujeme; nové výsledky zůstanou jen na této stránce.');return state;}}
+  function save(){if(memory)return;try{if(identity)state.pendingDrafts=Object.fromEntries(pending);localStorage.setItem(key,JSON.stringify(state));}catch{memory=true;note('Prohlížeč nepovolil uložení bonusu. Výsledek zůstane jen na této stránce.');}}
+  function render(){
+    $('emoji-loading').hidden=!paused;$('emoji-content').hidden=paused;$('emoji-summary').hidden=paused;
+    if(paused){$('emoji-import-section').hidden=true;$('emoji-answer').value='';$('emoji-story').innerHTML='';$('emoji-history').innerHTML='';return;}
+    const p=item(state.days[date]),r=p&&state.rounds[p.id],finished=r&&r.status!=='playing';
+    $('emoji-date').textContent='Dnešní bonus · '+new Intl.DateTimeFormat('cs-CZ',{dateStyle:'long',timeZone:'Europe/Prague'}).format(new Date(date+'T12:00:00Z'));
+    $('emoji-empty').hidden=!!p;$('emoji-round').hidden=!p;
+    const rounds=Object.values(state.rounds);$('emoji-completed').textContent=rounds.filter(r=>r.status!=='playing').length+' / '+D.items.length;
+    $('emoji-today').textContent=!r?'Všechny připravené bonusy už máš otevřené.':finished?'Dnešní bonus je hotový.':'Dnešní bonus čeká na rozluštění.';
+    const history=D.items.filter(p=>state.rounds[p.id]?.status!=='playing'&&state.rounds[p.id]);
+    $('emoji-history').innerHTML=history.length?'<summary>Moje odhalené knihy ('+history.length+')</summary>'+history.map(p=>'<p><strong>'+esc(p.title)+'</strong><br>'+esc(p.author)+'</p>').join(''):'';
+    $('emoji-history').hidden=!history.length;
+    const guest=guestState();$('emoji-import-section').hidden=!identity||!guest||!Object.values(guest.rounds).some(r=>r.attempts.length||r.hints||r.draft||r.status!=='playing');
+    if(!p)return;
+    $('emoji-symbols').innerHTML=p.emoji.map((v,i)=>'<span role="img" aria-label="'+esc(p.labels[i])+'">'+esc(v)+'</span>').join('');
+    $('emoji-form').hidden=finished;$('emoji-tools').hidden=finished;$('emoji-story').hidden=!finished;
+    if(document.activeElement!==$('emoji-answer'))$('emoji-answer').value=r.draft;
+    $('emoji-feedback').hidden=!feedback||finished;$('emoji-feedback').textContent=feedback;
+    $('emoji-hint').textContent=r.hints===0?'První stopa':r.hints===1?'Prozradit autora':'Obě stopy jsou otevřené';
+    $('emoji-hint').disabled=busy||r.hints>=2||finished;
+    $('emoji-hints').innerHTML=p.hints.slice(0,r.hints).map((text,i)=>'<li><strong>STOPA '+(i+1)+'</strong>'+esc(text)+'</li>').reverse().join('');
+    $('emoji-hints').hidden=!r.hints||finished;
+    $('emoji-story').innerHTML=finished?'<p class="eyebrow">'+(r.status==='solved'?'KNIHA ROZLUŠTĚNA':'KNIHA ODHALENA')+'</p><h3>'+esc(p.title)+'</h3><p class="emoji-author">'+esc(p.author)+'</p><p>'+esc(p.about)+'</p><details><summary>Jak číst tyto tři znaky</summary><p>'+esc(p.explanation)+'</p></details><a class="emoji-source" href="'+esc(p.source)+'" target="_blank" rel="noopener noreferrer">'+esc(p.sourceLabel)+' ↗</a><p class="muted">'+(Object.keys(state.rounds).length>=D.items.length?'Všech deset bonusů už máš otevřených. Další připravujeme.':'Další nová hádanka přijde zítra.')+' Úryvek máš dnes k dispozici zvlášť.</p>':'';
+    $('emoji-answer').disabled=busy;$('emoji-submit').disabled=busy;$('emoji-reveal').disabled=busy;
+  }
+  function accept(reply){
+    if(Number.isInteger(reply.revision)&&reply.revision<revision)return;
+    const clean=E.parse(JSON.stringify(reply.state));
+    for(const [id,text] of pending){if(clean.rounds[id]?.status==='playing')clean.rounds[id].draft=text;else pending.delete(id);}
+    state=clean;if(reply.date)date=reply.date;revision=reply.revision||0;save();
+  }
+  function mutate(action,fields={},local){
+    const g=generation,storageKey=key;
+    const perform=async()=>{
+      if(g!==generation||storageKey!==key)throw Error('Účet se mezitím změnil.');
+      if(identity){const reply=await root.SeptandaLiteratureCloud.emojiCommand(action,fields);if(g!==generation)throw Error('Účet se mezitím změnil.');accept(reply);note('Bonus je uložený v účtu.');return reply.result;}
+      state=read();const result=local(state);save();return result;
+    };
+    const run=()=>!identity&&navigator.locks?.request?navigator.locks.request(storageKey,perform):perform();
+    queue=queue.then(run,run);return queue;
+  }
+  function guestState(){try{const raw=localStorage.getItem(E.KEY);return raw?E.parse(raw):null;}catch{return null;}}
+  async function refresh(){
+    if(paused)return;
+    try{await flushDrafts();await mutate('daily',{},s=>E.assign(s,date=E.day(),D.items));render();}catch(error){note(error.message);}
+  }
+  async function setIdentity(id){
+    const g=++generation;paused=true;clearTimeout(draftTimer);render();await queue.catch(()=>{});if(g!==generation)return;
+    identity=id;key=id?E.KEY+'.account.'+id:E.KEY;memory=false;revision=0;pending=new Map();state=E.fresh(id||seed);feedback='';date=E.day();state=read();
+    if(id)for(const [id,text] of Object.entries(state.pendingDrafts||{}))if(typeof text==='string'&&text.length<=150&&state.rounds[id]?.status==='playing')pending.set(id,text);
+    try{
+      if(id){const reply=await root.SeptandaLiteratureCloud.emojiCommand('daily');if(g!==generation)return;accept(reply);note('Bonus je uložený v účtu.');}
+      else{await mutate('daily',{},s=>E.assign(s,date,D.items));if(g!==generation)return;if(!memory)note('Bonus je uložený v tomto prohlížeči.');}
+      if(g!==generation)return;paused=false;render();if(id)flushDrafts().catch(error=>note(error.message));
+    }catch(error){if(g===generation){$('emoji-loading-text').textContent='Bonus se nepodařilo načíst. '+error.message;$('emoji-retry').hidden=false;}}
+  }
+  async function flushDrafts(){
+    clearTimeout(draftTimer);if(!identity||paused)return;const g=generation;
+    for(const [id,text] of pending){await mutate('draft',{id,text},()=>{});if(g!==generation)return;if(pending.get(id)===text)pending.delete(id);save();}
+  }
+  async function action(name){
+    if(paused||busy)return;const id=state.days[date],p=item(id),g=generation;if(!p)return;
+    busy=true;render();
+    try{
+      if(name==='answer'){
+        const text=$('emoji-answer').value;clearTimeout(draftTimer);
+        const result=await mutate('answer',{id,text},s=>E.answer(s,p,text,D.items,date));if(g!==generation)return;
+        if(pending.get(id)===text){pending.delete(id);save();}
+        feedback=result?.kind==='empty'?'Napiš název knihy.':result?.kind==='try-again'?'Tuhle knihu zatím nehledáme. Zkus jiný název nebo si vezmi stopu.':'';
+      }
+      if(name==='hint')await mutate('hint',{id,level:state.rounds[id].hints+1},s=>E.hint(s,id,date));
+      if(name==='reveal'){await mutate('reveal',{id},s=>E.reveal(s,id,date));pending.delete(id);save();}
+    }catch(error){if(g===generation)feedback=error.message;}
+    finally{if(g===generation){busy=false;render();if(state.rounds[id]?.status!=='playing'){$('emoji-story').tabIndex=-1;$('emoji-story').focus({preventScroll:true});}}}
+  }
+  function switchMode(emoji,updateURL=true){
+    $('literary-view').hidden=emoji;$('emoji').hidden=!emoji;
+    for(const mode of ['reading','emoji']){const on=(mode==='emoji')===emoji;$('mode-'+mode).setAttribute('aria-selected',String(on));$('mode-'+mode).tabIndex=on?0:-1;}
+    if(updateURL){const url=new URL(location.href);url.hash=emoji?'emoji':'';history.replaceState(null,'',url.pathname+url.search+url.hash);}
+  }
+  $('emoji-form').addEventListener('submit',event=>{event.preventDefault();action('answer');});
+  $('emoji-answer').addEventListener('input',()=>{
+    if(paused||busy)return;const id=state.days[date],r=state.rounds[id];if(!r||r.status!=='playing')return;
+    r.draft=$('emoji-answer').value.slice(0,150);if(identity)pending.set(id,r.draft);save();clearTimeout(draftTimer);draftTimer=setTimeout(()=>flushDrafts().catch(error=>note(error.message)),700);
+  });
+  $('emoji-hint').addEventListener('click',()=>action('hint'));
+  $('emoji-reveal').addEventListener('click',()=>action('reveal'));
+  $('emoji-retry').addEventListener('click',()=>{if(identity)setIdentity(identity);else refresh();});
+  $('emoji-report').addEventListener('click',()=>{
+    const p=item(state.days[date]);if(p&&!$('contact-message').value)$('contact-message').value='Bonus ze dne '+date+' · '+p.emoji.join(' ')+'\nMůj tip: '+$('emoji-answer').value+'\nProč mi také sedí: ';
+    $('contact-category').value='bug';$('contact').showModal();
+  });
+  $('emoji-import').addEventListener('click',async()=>{
+    if(!identity)return;const guest=guestState();if(!guest)return;$('emoji-import').disabled=true;
+    try{await mutate('import',{state:guest},()=>{});render();note('Místní bonusy jsou přidané. Už uložené výsledky zůstaly zachované.');}catch(error){note(error.message);}finally{$('emoji-import').disabled=false;}
+  });
+  $('emoji-share').addEventListener('click',async()=>{
+    try{await navigator.clipboard.writeText('Zkus poznat knihu ze tří emoji v Šeptandě: https://septanda.com/#emoji');$('emoji-share-status').textContent='Odkaz je zkopírovaný.';}catch{$('emoji-share-status').textContent='Pošli odkaz https://septanda.com/#emoji';}
+  });
+  $('mode-reading').addEventListener('click',()=>switchMode(false));$('mode-emoji').addEventListener('click',()=>switchMode(true));
+  $('play-modes').addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const emoji=event.key==='End'||(event.key!=='Home'&&$('mode-emoji').getAttribute('aria-selected')!=='true');switchMode(emoji);$('mode-'+(emoji?'emoji':'reading')).focus();}});
+  document.querySelector('.skip').addEventListener('click',()=>switchMode(false));
+  addEventListener('hashchange',()=>switchMode(location.hash==='#emoji',false));
+  addEventListener('storage',event=>{if(event.key===key&&!paused&&!identity){state=read();render();}});
+  addEventListener('focus',refresh);addEventListener('online',refresh);
+  setInterval(()=>{if(!identity&&!paused&&date!==E.day())refresh();},30000);
+  root.SeptandaEmoji={setIdentity,refresh,flushDrafts,pause(){generation++;paused=true;busy=false;clearTimeout(draftTimer);$('emoji-loading-text').textContent='Načítám tvůj denní bonus…';$('emoji-retry').hidden=true;render();},exportState:()=>E.parse(JSON.stringify(state))};
+  switchMode(location.hash==='#emoji',false);render();
+})(globalThis);
+</script>
 <script id="septanda-literature-cloud">
 (function(root){
   'use strict';
   const $=id=>document.getElementById(id),Game=root.SeptandaLiteraryGame;
-  let sdk,config,session=null,account=null,ready=false,epoch=0,authMode='login',signing=false,commands=Promise.resolve();
+  let sdk,config,session=null,account=null,ready=false,epoch=0,authMode='login',signing=false,commands=Promise.resolve(),emojiCommands=Promise.resolve();
   function translate(error){
     const text=error?.message||'';
     if(/invalid login credentials/i.test(text))return 'E-mail nebo heslo nesouhlasí.';
@@ -497,10 +693,10 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
     $('lit-auth-submit').textContent=register?'Vytvořit účet':reset?'Poslat odkaz na e-mail':'Přihlásit se';
     $('lit-forgot').hidden=register||reset;$('lit-auth-message').hidden=true;
   }
-  async function request(action,fields={}){
+  async function request(action,fields={},endpoint='literature-player'){
     const token=session?.access_token,id=session?.user.id,requestEpoch=epoch;
     if(!token)throw Error('Nejdřív se přihlas.');
-    const response=await fetch('/.netlify/functions/literature-player',{method:'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({action,...fields}),signal:AbortSignal.timeout(15000)});
+    const response=await fetch('/.netlify/functions/'+endpoint,{method:'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({action,...fields}),signal:AbortSignal.timeout(15000)});
     let reply;try{reply=await response.json();}catch{throw Error('Ukládání do účtu je teď nedostupné.');}
     if(epoch!==requestEpoch || session?.user.id!==id)throw Error('Účet se mezitím změnil.');
     if(!response.ok)throw Error(reply.error||'Ukládání do účtu je teď nedostupné.');
@@ -517,13 +713,13 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
     commands=commands.then(run,run);return commands;
   }
   async function load(next){
-    const loadEpoch=++epoch;ready=false;session=next;account=null;Game.pause(true);renderAccount();
-    if(!next){closeLogin();$('lit-account').close();await Game.setIdentity(null);if(epoch!==loadEpoch)return;Game.pause(false);status('Uloženo v tomto prohlížeči. Přihlášením si čtení uchováš.');return;}
+    const loadEpoch=++epoch;ready=false;session=next;account=null;Game.pause(true);root.SeptandaEmoji?.pause();renderAccount();
+    if(!next){closeLogin();$('lit-account').close();await Game.setIdentity(null);if(epoch!==loadEpoch)return;await root.SeptandaEmoji?.setIdentity(null);if(epoch!==loadEpoch)return;Game.pause(false);status('Uloženo v tomto prohlížeči. Přihlášením si čtení uchováš.');return;}
     const focus=closeLogin();Game.pause(true);status('Načítám uložené čtení…');
     try{
       const reply=await request('daily');if(epoch!==loadEpoch)return;
       account=reply.account;ready=true;await Game.setIdentity(next.user.id,reply.state);
-      if(epoch!==loadEpoch)return;renderAccount();Game.pause(false);status('Čtení je uložené v účtu.');if(focus)Game.focus();
+      if(epoch!==loadEpoch)return;renderAccount();Game.pause(false);status('Čtení je uložené v účtu.');if(focus)Game.focus();root.SeptandaEmoji?.setIdentity(next.user.id);
       Game.flushDrafts().catch(error=>{if(epoch===loadEpoch)status(translate(error),true);});
     }catch(error){if(epoch===loadEpoch){Game.pause(true);renderAccount();status('Jsi přihlášený. '+translate(error)+' Zkus znovu připojit uložené čtení.',true);}}
   }
@@ -533,7 +729,12 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
     try{await Game.flushDrafts();const reply=await command('daily');await Game.apply(reply.state);}
     catch(error){status(translate(error),true);}
   }
-  root.SeptandaLiteratureCloud={signedIn:()=>!!session,command};
+  function emojiCommand(action,fields={}){
+    const id=session?.user.id,e=epoch;
+    const run=()=>{if(!ready||!id||id!==session?.user.id||e!==epoch)throw Error('Počkej na připojení účtu.');return request(action,fields,'emoji-player');};
+    emojiCommands=emojiCommands.then(run,run);return emojiCommands;
+  }
+  root.SeptandaLiteratureCloud={signedIn:()=>!!session,command,emojiCommand};
   document.addEventListener('click',async event=>{
     const button=event.target.closest('[data-auth]');if(!button)return;const action=button.dataset.auth;
     try{
@@ -544,7 +745,7 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
         button.disabled=true;try{const guest=Game.guestState();if(guest){await Game.flushDrafts();const reply=await command('import',{state:guest});await Game.apply(reply.state);status('Místní čtení je přidané. Dříve uložené výsledky zůstaly zachované.');}}finally{button.disabled=false;}
       }
       if(action==='logout'){
-        try{await Game.flushDrafts();}catch{}await commands.catch(()=>{});
+        try{await Game.flushDrafts();await root.SeptandaEmoji?.flushDrafts();}catch{}await commands.catch(()=>{});await emojiCommands.catch(()=>{});
         const {error}=await sdk.auth.signOut({scope:'local'});if(error)throw error;await load(null);
       }
     }catch(error){if($('lit-auth').open){$('lit-auth-message').hidden=false;$('lit-auth-message').textContent=translate(error);}else status(translate(error),true);}
@@ -583,7 +784,7 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
     }catch(error){message.textContent=translate(error);}finally{$('lit-recovery-submit').disabled=false;}
   });
   async function start(){
-    Game.pause(true);status('Ověřuji přihlášení…');
+    Game.pause(true);root.SeptandaEmoji?.pause();status('Ověřuji přihlášení…');
     try{
       const response=await fetch('/.netlify/functions/runtime-config',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('Přihlášení je teď nedostupné.');config=await response.json();
       if(!config.configured||!config.supabase)throw Error('Přihlášení je teď nedostupné.');
@@ -598,7 +799,7 @@ globalThis.SEPTANDA_LITERATURE={"samples":[{"id":"L01","author":"polacek","name"
       });
       const {data,error}=await sdk.auth.getSession();if(error)throw error;await load(data.session);
       if(new URL(location.href||'/',location.origin).searchParams.get('account')==='recovery'){if(data.session)show('lit-recovery');else{mode('reset');show('lit-auth');$('lit-auth-message').hidden=false;$('lit-auth-message').textContent='Odkaz pro obnovu už není platný. Požádej o nový odkaz.';}}
-    }catch(error){await Game.setIdentity(null);Game.pause(false);status('Hraješ bez účtu. '+translate(error));}
+    }catch(error){await Game.setIdentity(null);await root.SeptandaEmoji?.setIdentity(null);Game.pause(false);status('Hraješ bez účtu. '+translate(error));}
   }
   addEventListener('online',refresh);
   addEventListener('focus',()=>{if(ready)refresh();});

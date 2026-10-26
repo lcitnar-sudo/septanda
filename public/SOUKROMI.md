@@ -1,6 +1,6 @@
 # Šeptanda — informace o zpracování osobních údajů
 
-Účinné od 18. října 2026; doplněno 24. října 2026 o literární čtení v účtu.
+Účinné od 18. října 2026; doplněno 26. října 2026 o bonusové knižní hádanky.
 
 ## Provozovatel a kontakt
 
@@ -41,6 +41,8 @@ Netlify poskytuje web, serverové funkce a formuláře. Literární Šeptanda po
 Poskytovatelé mohou zapojovat další zpracovatele a část údajů při provozu a podpoře zpracovávat i mimo EHP, včetně USA. Evropská databáze proto neznamená výhradně evropské zpracování všech služeb. Jejich podmínky popisují mechanismy předávání, včetně standardních smluvních doložek a případných rozhodnutí o odpovídající ochraně. Podrobnosti: [Supabase](https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq), [Netlify](https://www.netlify.com/gdpr-ccpa/), [Resend](https://resend.com/legal/dpa) a [Google](https://policies.google.com/privacy/frameworks?hl=cs).
 
 Soukromé tabulky mají pravidla přístupu pro vlastní účet. Server ověřuje přihlášení; tajné klíče nejsou součástí veřejné stránky. Publikovaný web používá HTTPS. Údaje neprodáváme. Automatické hodnocení odpovědí slouží pouze hře a nemá právní ani obdobně závažné účinky.
+
+Bonus „Kniha ve třech znacích“ uchovává denní přidělení, tipy na název knihy, rozepsanou odpověď, otevřené stopy a stav odhalení. Bez účtu zůstávají v prohlížeči; po přihlášení se ukládají do samostatného soukromého úložiště Netlify Blobs v evropském regionu. Tyto bonusové výsledky se nezveřejňují ani nemění literární body. Místní výsledky lze přidat k účtu pouze vlastní volbou.
 
 ## Doba uchování
 

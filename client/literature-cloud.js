@@ -1,7 +1,7 @@
 (function(root){
   'use strict';
   const $=id=>document.getElementById(id),Game=root.SeptandaLiteraryGame;
-  let sdk,config,session=null,account=null,ready=false,epoch=0,authMode='login',signing=false,commands=Promise.resolve();
+  let sdk,config,session=null,account=null,ready=false,epoch=0,authMode='login',signing=false,commands=Promise.resolve(),emojiCommands=Promise.resolve();
   function translate(error){
     const text=error?.message||'';
     if(/invalid login credentials/i.test(text))return 'E-mail nebo heslo nesouhlasí.';
@@ -33,10 +33,10 @@
     $('lit-auth-submit').textContent=register?'Vytvořit účet':reset?'Poslat odkaz na e-mail':'Přihlásit se';
     $('lit-forgot').hidden=register||reset;$('lit-auth-message').hidden=true;
   }
-  async function request(action,fields={}){
+  async function request(action,fields={},endpoint='literature-player'){
     const token=session?.access_token,id=session?.user.id,requestEpoch=epoch;
     if(!token)throw Error('Nejdřív se přihlas.');
-    const response=await fetch('/.netlify/functions/literature-player',{method:'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({action,...fields}),signal:AbortSignal.timeout(15000)});
+    const response=await fetch('/.netlify/functions/'+endpoint,{method:'POST',credentials:'same-origin',cache:'no-store',headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:JSON.stringify({action,...fields}),signal:AbortSignal.timeout(15000)});
     let reply;try{reply=await response.json();}catch{throw Error('Ukládání do účtu je teď nedostupné.');}
     if(epoch!==requestEpoch || session?.user.id!==id)throw Error('Účet se mezitím změnil.');
     if(!response.ok)throw Error(reply.error||'Ukládání do účtu je teď nedostupné.');
@@ -53,13 +53,13 @@
     commands=commands.then(run,run);return commands;
   }
   async function load(next){
-    const loadEpoch=++epoch;ready=false;session=next;account=null;Game.pause(true);renderAccount();
-    if(!next){closeLogin();$('lit-account').close();await Game.setIdentity(null);if(epoch!==loadEpoch)return;Game.pause(false);status('Uloženo v tomto prohlížeči. Přihlášením si čtení uchováš.');return;}
+    const loadEpoch=++epoch;ready=false;session=next;account=null;Game.pause(true);root.SeptandaEmoji?.pause();renderAccount();
+    if(!next){closeLogin();$('lit-account').close();await Game.setIdentity(null);if(epoch!==loadEpoch)return;await root.SeptandaEmoji?.setIdentity(null);if(epoch!==loadEpoch)return;Game.pause(false);status('Uloženo v tomto prohlížeči. Přihlášením si čtení uchováš.');return;}
     const focus=closeLogin();Game.pause(true);status('Načítám uložené čtení…');
     try{
       const reply=await request('daily');if(epoch!==loadEpoch)return;
       account=reply.account;ready=true;await Game.setIdentity(next.user.id,reply.state);
-      if(epoch!==loadEpoch)return;renderAccount();Game.pause(false);status('Čtení je uložené v účtu.');if(focus)Game.focus();
+      if(epoch!==loadEpoch)return;renderAccount();Game.pause(false);status('Čtení je uložené v účtu.');if(focus)Game.focus();root.SeptandaEmoji?.setIdentity(next.user.id);
       Game.flushDrafts().catch(error=>{if(epoch===loadEpoch)status(translate(error),true);});
     }catch(error){if(epoch===loadEpoch){Game.pause(true);renderAccount();status('Jsi přihlášený. '+translate(error)+' Zkus znovu připojit uložené čtení.',true);}}
   }
@@ -69,7 +69,12 @@
     try{await Game.flushDrafts();const reply=await command('daily');await Game.apply(reply.state);}
     catch(error){status(translate(error),true);}
   }
-  root.SeptandaLiteratureCloud={signedIn:()=>!!session,command};
+  function emojiCommand(action,fields={}){
+    const id=session?.user.id,e=epoch;
+    const run=()=>{if(!ready||!id||id!==session?.user.id||e!==epoch)throw Error('Počkej na připojení účtu.');return request(action,fields,'emoji-player');};
+    emojiCommands=emojiCommands.then(run,run);return emojiCommands;
+  }
+  root.SeptandaLiteratureCloud={signedIn:()=>!!session,command,emojiCommand};
   document.addEventListener('click',async event=>{
     const button=event.target.closest('[data-auth]');if(!button)return;const action=button.dataset.auth;
     try{
@@ -80,7 +85,7 @@
         button.disabled=true;try{const guest=Game.guestState();if(guest){await Game.flushDrafts();const reply=await command('import',{state:guest});await Game.apply(reply.state);status('Místní čtení je přidané. Dříve uložené výsledky zůstaly zachované.');}}finally{button.disabled=false;}
       }
       if(action==='logout'){
-        try{await Game.flushDrafts();}catch{}await commands.catch(()=>{});
+        try{await Game.flushDrafts();await root.SeptandaEmoji?.flushDrafts();}catch{}await commands.catch(()=>{});await emojiCommands.catch(()=>{});
         const {error}=await sdk.auth.signOut({scope:'local'});if(error)throw error;await load(null);
       }
     }catch(error){if($('lit-auth').open){$('lit-auth-message').hidden=false;$('lit-auth-message').textContent=translate(error);}else status(translate(error),true);}
@@ -119,7 +124,7 @@
     }catch(error){message.textContent=translate(error);}finally{$('lit-recovery-submit').disabled=false;}
   });
   async function start(){
-    Game.pause(true);status('Ověřuji přihlášení…');
+    Game.pause(true);root.SeptandaEmoji?.pause();status('Ověřuji přihlášení…');
     try{
       const response=await fetch('/.netlify/functions/runtime-config',{cache:'no-store',signal:AbortSignal.timeout(10000)});if(!response.ok)throw Error('Přihlášení je teď nedostupné.');config=await response.json();
       if(!config.configured||!config.supabase)throw Error('Přihlášení je teď nedostupné.');
@@ -134,7 +139,7 @@
       });
       const {data,error}=await sdk.auth.getSession();if(error)throw error;await load(data.session);
       if(new URL(location.href||'/',location.origin).searchParams.get('account')==='recovery'){if(data.session)show('lit-recovery');else{mode('reset');show('lit-auth');$('lit-auth-message').hidden=false;$('lit-auth-message').textContent='Odkaz pro obnovu už není platný. Požádej o nový odkaz.';}}
-    }catch(error){await Game.setIdentity(null);Game.pause(false);status('Hraješ bez účtu. '+translate(error));}
+    }catch(error){await Game.setIdentity(null);await root.SeptandaEmoji?.setIdentity(null);Game.pause(false);status('Hraješ bez účtu. '+translate(error));}
   }
   addEventListener('online',refresh);
   addEventListener('focus',()=>{if(ready)refresh();});

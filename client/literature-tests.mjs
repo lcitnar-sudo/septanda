@@ -50,7 +50,7 @@ assert.throws(()=>E.parse('{broken'));assert.throws(()=>E.parse('{"version":2}')
 assert(!/septanda\.v6\.daily|cloud-leaderboard|SeptandaGame\./.test(page),'literary progress never imports original game state');
 assert(page.includes('persistSession:true,autoRefreshToken:true'));
 assert(!/<input[^>]*id="lit-consent"[^>]*checked/i.test(page),'marketing is never prechecked');
-assert.equal(page.match(/<script id=/g).length,6);assert(page.includes('index,follow'));
+assert.equal(page.match(/<script id=/g).length,9);assert(page.includes('index,follow'));
 const headers=await read('public/_headers');const {createHash}=await import('node:crypto');
 for(const [,code] of page.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g))assert(headers.includes('sha256-'+createHash('sha256').update(code).digest('base64')),'new page scripts allowed by CSP');
 console.log('Literary trial: 10 sourced excerpts; personal daily selection, no repeats, ambiguity, hints, score finality, storage and CSP isolation passed.');

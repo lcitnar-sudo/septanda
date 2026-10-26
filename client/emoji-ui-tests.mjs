@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';import vm from 'node:vm';import {readFile} from 'node:fs/promises';
+import * as game from '../emoji-game.mjs';
+const elements=new Map(),mem=new Map(),listeners=new Map();
+function el(id){if(!elements.has(id))elements.set(id,{id,value:'',hidden:false,textContent:'',innerHTML:'',attrs:{},events:{},addEventListener(k,f){this.events[k]=f;},setAttribute(k,v){this.attrs[k]=v;},getAttribute(k){return this.attrs[k];},focus(){},showModal(){this.open=true;}});return elements.get(id);}
+const document={getElementById:el,querySelector:()=>el('skip'),activeElement:null};
+const context=vm.createContext({document,console,Intl,Date,URL,crypto:globalThis.crypto,navigator:{clipboard:{async writeText(){}}},location:{hash:'#emoji',href:'https://example.test/#emoji'},history:{replaceState(){}},localStorage:{getItem:k=>mem.get(k)||null,setItem:(k,v)=>mem.set(k,v)},addEventListener(k,f){listeners.set(k,f);},setInterval(){},setTimeout(){return 1;},clearTimeout(){},SeptandaEmojiEngine:game.engine,SEPTANDA_EMOJI:game.data});
+const code=await readFile(new URL('./emoji.js',import.meta.url),'utf8');vm.runInContext(code,context);const G=context.SeptandaEmoji,E=game.engine;
+await G.setIdentity(null);const guestKey=E.KEY,guest=mem.get(guestKey),id=G.exportState().days[E.day()],p=game.data.items.find(p=>p.id===id);
+assert.equal(el('literary-view').hidden,true);assert.equal(el('emoji-content').hidden,false);assert.equal(el('emoji-form').hidden,false);
+el('emoji-answer').value=p.title;el('emoji-answer').events.input();await el('emoji-form').events.submit({preventDefault(){}});for(let i=0;i<8;i++)await new Promise(r=>setImmediate(r));
+assert.equal(G.exportState().rounds[id].status,'solved');assert.equal(el('emoji-form').hidden,true);assert(el('emoji-story').innerHTML.includes(p.title));const saved=mem.get(guestKey);
+await G.setIdentity(null);assert.equal(mem.get(guestKey),saved,'refresh retains solved bonus');
+const a=E.fresh('a'),b=E.fresh('b'),date='2026-10-26';E.assign(a,date,game.data.items);E.assign(b,date,game.data.items);
+context.SeptandaLiteratureCloud={async emojiCommand(){return {state:a,date,revision:1};}};
+await G.setIdentity('A');assert.equal(mem.get(guestKey),saved,'account never erases guest');assert.equal(el('emoji-content').hidden,false);
+let release;const gate=new Promise(r=>release=r);context.SeptandaLiteratureCloud.emojiCommand=async()=>{await gate;return {state:b,date,revision:1};};
+G.pause();const loading=G.setIdentity('B');assert.equal(el('emoji-content').hidden,true);assert.equal(el('emoji-answer').value,'');release();await loading;assert.equal(G.exportState().seed,'b');assert.equal(el('emoji-content').hidden,false);
+context.SeptandaLiteratureCloud.emojiCommand=async()=>{throw Error('offline');};G.pause();await G.setIdentity('C');assert.equal(el('emoji-content').hidden,true);assert.equal(el('emoji-retry').hidden,false,'failed account load remains covered');
+await G.setIdentity(null);assert.equal(G.exportState().rounds[id].status,'solved');
+console.log('Emoji UI: mode/deep-link switching, actual guest form/answer/refresh, account isolation, loading cover and failure recovery passed.');
