@@ -80,7 +80,6 @@
     $('award-note').textContent='Za uhodnutí teď '+(200-50*r.hints)+' literárních bodů';
     $('hint-button').textContent=r.hints===0?'První stopa · −50 z odměny':r.hints===1?'Druhá stopa · −50 z odměny':r.hints===2?'Čtyři autoři · −50 z odměny':'Všechny stopy jsou otevřené';
     $('hint-button').disabled=finished || r.hints===3;
-    $('hint-help').textContent=finished?'Příběh i prameny najdeš pod úryvkem.':'Body nepotřebuješ předem. Stopa sníží jen odměnu za toto čtení.';
     const hintCards=s.hints.slice(0,Math.min(2,r.hints)).map((h,i)=>'<li><strong>STOPA '+(i+1)+'</strong>'+esc(h)+'</li>');
     if(r.hints===3)hintCards.push('<li><strong>STOPA 3 · ČTYŘI AUTOŘI</strong>'+E.choices(s,state.seed,D.authors).map(a=>finished?'<p>'+esc(a.name)+'</p>':'<button type="button" class="choice" data-person="'+esc(a.id)+'">'+esc(a.name)+'</button>').join('')+'</li>');
     $('hints').innerHTML=hintCards.reverse().join('');
